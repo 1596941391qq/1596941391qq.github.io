@@ -5,7 +5,7 @@ permalink: /generative-ai-advertising-for-game/
 ---
 # generative AI advertising for game: Complete Guide 2026
 
-**Published:** 2026-02-28  
+**Published:** 2026-03-01  
 **Keywords:** generative AI advertising for game
 
 ---
