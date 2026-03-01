@@ -5,7 +5,7 @@ permalink: /ai-tiktok-video-generator-for-game/
 ---
 # AI tiktok video generator for game: Complete Guide 2026
 
-**Published:** 2026-02-28  
+**Published:** 2026-03-01  
 **Keywords:** AI tiktok video generator for game
 
 ---
