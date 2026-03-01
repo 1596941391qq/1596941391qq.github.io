@@ -5,7 +5,7 @@ permalink: /ai-game-advertising-video/
 ---
 # AI game advertising video: Complete Guide 2026
 
-**Published:** 2026-02-28  
+**Published:** 2026-03-01  
 **Keywords:** AI game advertising video
 
 ---
