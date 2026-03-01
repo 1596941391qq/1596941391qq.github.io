@@ -5,7 +5,7 @@ permalink: /generative-ai-advertising-for-app/
 ---
 # generative AI advertising for app: Complete Guide 2026
 
-**Published:** 2026-02-28  
+**Published:** 2026-03-01  
 **Keywords:** generative AI advertising for app
 
 ---
