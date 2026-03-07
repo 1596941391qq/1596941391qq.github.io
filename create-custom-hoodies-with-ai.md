@@ -5,7 +5,7 @@ permalink: /create-custom-hoodies-with-ai/
 ---
 # create custom hoodies with AI: Complete Guide 2026
 
-**Published:** 2026-03-05  
+**Published:** 2026-03-07  
 **Keywords:** create custom hoodies with AI
 
 ---
