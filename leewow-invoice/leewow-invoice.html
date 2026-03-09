@@ -1,0 +1,756 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO鎺掑悕璁¤垂鍗?- Leewow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", "Noto Sans SC", sans-serif;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .page-break {
+          page-break-after: always;
+        }
+        .keyword-card {
+          page-break-inside: avoid;
+        }
+        .checkbox-col {
+          display: none !important;
+        }
+        input[type="checkbox"] {
+          display: none !important;
+        }
+        .select-toolbar {
+          display: none !important;
+        }
+      }
+      .keyword-card {
+        transition: all 0.2s ease;
+      }
+      .keyword-card.unselected {
+        opacity: 0.4;
+        background: #f3f4f6 !important;
+      }
+      .keyword-card.unselected .rank-badge {
+        background: #9ca3af !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-4xl mx-auto my-8">
+      <div class="bg-white shadow-sm border border-gray-200">
+        <!-- Header -->
+        <div class="bg-slate-900 border-b border-gray-200">
+          <div class="px-8 py-6">
+            <div class="flex justify-between items-start">
+              <div>
+                <h1 class="text-2xl font-semibold text-white">SEO鎺掑悕璁¤垂鍗?/h1>
+                <p class="text-gray-400 text-sm mt-1">涓撳绮捐皟鐗?路 鎺掑悕杈炬爣鍚庝粯璐?/p>
+              </div>
+              <div class="text-right">
+                <p class="text-xs text-gray-500 uppercase tracking-wide">璁¤垂鍗曞彿</p>
+                <p class="text-base font-mono text-white mt-0.5">INV-MMIDZBA2-0YKEYK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Info -->
+        <div class="px-8 py-6 border-b border-gray-100">
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">鍝佺墝淇℃伅</p>
+              <p class="text-lg font-semibold text-gray-900">Leewow</p>
+              <p class="text-gray-500 text-sm mt-0.5">https://leewow.com</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">璁¤垂鍛ㄦ湡</p>
+              <p class="text-lg font-semibold text-gray-900">2026骞?鏈?/p>
+              <p class="text-gray-500 text-sm mt-0.5">2026-03-08</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selection Toolbar -->
+        <div class="select-toolbar px-8 py-3 bg-blue-50 border-b border-blue-100 no-print">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  id="selectAll"
+                  checked
+                  class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                />
+                <span class="text-sm font-medium text-gray-700">鍏ㄩ€?/span>
+              </label>
+              <span class="text-sm text-gray-500"
+                >宸查€?<span id="selectedCount" class="font-semibold text-blue-600">0</span> /
+                <span id="totalCount">0</span> 椤?/span
+              >
+            </div>
+            <button
+              onclick="printSelected()"
+              class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              馃枿锔?鎵撳嵃宸查€?
+            </button>
+          </div>
+        </div>
+
+        <!-- Keywords List -->
+        <div class="px-8 py-6 border-b border-gray-100">
+          <p class="text-sm font-medium text-gray-900 mb-4">鍏抽敭璇嶆帓鍚嶆槑缁?/p>
+
+          <div id="keywordsList">
+            <!-- Keyword Card 1 -->
+            <div id="card-0" class="keyword-card bg-gray-50 rounded-lg border border-gray-200 mb-4">
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked
+                      data-index="0"
+                      onchange="toggleKeyword(0)"
+                      class="no-print w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                    />
+                    <div>
+                      <p class="text-xs text-gray-500 uppercase tracking-wide">鍏抽敭璇?#1</p>
+                      <p class="text-lg font-semibold text-gray-900 mt-1">
+                        On-Demand Product Creation 2026
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="rank-badge inline-flex items-center px-3 py-1.5 rounded text-sm font-semibold bg-emerald-600 text-white"
+                    >
+                      Top 1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mb-3">
+                  <div>
+                    <p class="text-xs text-gray-500">璇嶇被鍨?/p>
+                    <p class="text-sm font-medium text-gray-900">闀垮熬璇?/p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">棰勪及鏈堟悳绱㈤噺</p>
+                    <p class="text-sm font-medium text-gray-900">3,200</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">鍗曚环</p>
+                    <p class="text-sm font-semibold text-gray-900">楼150</p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-200 rounded overflow-hidden bg-white">
+                  <img
+                    src="images/serp1-leewow-on-demand-product-creation-2026.png"
+                    alt="鎺掑悕鎴浘"
+                    class="w-full"
+                    style="max-height: 200px; object-fit: contain"
+                  />
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Google鏃犵棔妯″紡 路 2026-03-08</p>
+              </div>
+            </div>
+
+            <!-- Keyword Card 2 -->
+            <div id="card-1" class="keyword-card bg-gray-50 rounded-lg border border-gray-200 mb-4">
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked
+                      data-index="1"
+                      onchange="toggleKeyword(1)"
+                      class="no-print w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                    />
+                    <div>
+                      <p class="text-xs text-gray-500 uppercase tracking-wide">鍏抽敭璇?#2</p>
+                      <p class="text-lg font-semibold text-gray-900 mt-1">
+                        On-Demand Product Creation for beginners
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="rank-badge inline-flex items-center px-3 py-1.5 rounded text-sm font-semibold bg-emerald-600 text-white"
+                    >
+                      Top 1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mb-3">
+                  <div>
+                    <p class="text-xs text-gray-500">璇嶇被鍨?/p>
+                    <p class="text-sm font-medium text-gray-900">闀垮熬璇?/p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">棰勪及鏈堟悳绱㈤噺</p>
+                    <p class="text-sm font-medium text-gray-900">2,100</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">鍗曚环</p>
+                    <p class="text-sm font-semibold text-gray-900">楼150</p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-200 rounded overflow-hidden bg-white">
+                  <img
+                    src="images/serp1-leewow-on-demand-product-creation-for-beginners.png"
+                    alt="鎺掑悕鎴浘"
+                    class="w-full"
+                    style="max-height: 200px; object-fit: contain"
+                  />
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Google鏃犵棔妯″紡 路 2026-03-08</p>
+              </div>
+            </div>
+
+            <!-- Keyword Card 3 -->
+            <div id="card-2" class="keyword-card bg-gray-50 rounded-lg border border-gray-200 mb-4">
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked
+                      data-index="2"
+                      onchange="toggleKeyword(2)"
+                      class="no-print w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                    />
+                    <div>
+                      <p class="text-xs text-gray-500 uppercase tracking-wide">鍏抽敭璇?#3</p>
+                      <p class="text-lg font-semibold text-gray-900 mt-1">
+                        On-Demand Product Creation vs Product Creation Agent
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="rank-badge inline-flex items-center px-3 py-1.5 rounded text-sm font-semibold bg-emerald-600 text-white"
+                    >
+                      Top 1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mb-3">
+                  <div>
+                    <p class="text-xs text-gray-500">璇嶇被鍨?/p>
+                    <p class="text-sm font-medium text-gray-900">闀垮熬璇?/p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">棰勪及鏈堟悳绱㈤噺</p>
+                    <p class="text-sm font-medium text-gray-900">1,800</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">鍗曚环</p>
+                    <p class="text-sm font-semibold text-gray-900">楼150</p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-200 rounded overflow-hidden bg-white">
+                  <img
+                    src="images/serp1-leewow-on-demand-product-creation-vs-product-creation-agent.png"
+                    alt="鎺掑悕鎴浘"
+                    class="w-full"
+                    style="max-height: 200px; object-fit: contain"
+                  />
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Google鏃犵棔妯″紡 路 2026-03-08</p>
+              </div>
+            </div>
+
+            <!-- Keyword Card 4 -->
+            <div id="card-3" class="keyword-card bg-gray-50 rounded-lg border border-gray-200 mb-4">
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked
+                      data-index="3"
+                      onchange="toggleKeyword(3)"
+                      class="no-print w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                    />
+                    <div>
+                      <p class="text-xs text-gray-500 uppercase tracking-wide">鍏抽敭璇?#4</p>
+                      <p class="text-lg font-semibold text-gray-900 mt-1">Printful vs Leewow</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="rank-badge inline-flex items-center px-3 py-1.5 rounded text-sm font-semibold bg-emerald-600 text-white"
+                    >
+                      Top 1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mb-3">
+                  <div>
+                    <p class="text-xs text-gray-500">璇嶇被鍨?/p>
+                    <p class="text-sm font-medium text-gray-900">闀垮熬璇?/p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">棰勪及鏈堟悳绱㈤噺</p>
+                    <p class="text-sm font-medium text-gray-900">6,000</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">鍗曚环</p>
+                    <p class="text-sm font-semibold text-gray-900">楼150</p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-200 rounded overflow-hidden bg-white">
+                  <img
+                    src="images/serp1-leewow-printful-vs-leewow.png"
+                    alt="鎺掑悕鎴浘"
+                    class="w-full"
+                    style="max-height: 200px; object-fit: contain"
+                  />
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Google鏃犵棔妯″紡 路 2026-03-08</p>
+              </div>
+            </div>
+
+            <!-- Keyword Card 5 -->
+            <div id="card-4" class="keyword-card bg-gray-50 rounded-lg border border-gray-200 mb-4">
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked
+                      data-index="4"
+                      onchange="toggleKeyword(4)"
+                      class="no-print w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                    />
+                    <div>
+                      <p class="text-xs text-gray-500 uppercase tracking-wide">鍏抽敭璇?#5</p>
+                      <p class="text-lg font-semibold text-gray-900 mt-1">
+                        traditional product workflows vs AI product creation
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="rank-badge inline-flex items-center px-3 py-1.5 rounded text-sm font-semibold bg-emerald-600 text-white"
+                    >
+                      Top 1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mb-3">
+                  <div>
+                    <p class="text-xs text-gray-500">璇嶇被鍨?/p>
+                    <p class="text-sm font-medium text-gray-900">闀垮熬璇?/p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">棰勪及鏈堟悳绱㈤噺</p>
+                    <p class="text-sm font-medium text-gray-900">900</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">鍗曚环</p>
+                    <p class="text-sm font-semibold text-gray-900">楼150</p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-200 rounded overflow-hidden bg-white">
+                  <img
+                    src="images/serp1-leewow-traditional-product-workflows-vs-ai-product-creation.png"
+                    alt="鎺掑悕鎴浘"
+                    class="w-full"
+                    style="max-height: 200px; object-fit: contain"
+                  />
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Google鏃犵棔妯″紡 路 2026-03-08</p>
+              </div>
+            </div>
+
+            <!-- Keyword Card 6 -->
+            <div id="card-5" class="keyword-card bg-gray-50 rounded-lg border border-gray-200 mb-4">
+              <div class="p-4">
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked
+                      data-index="5"
+                      onchange="toggleKeyword(5)"
+                      class="no-print w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer"
+                    />
+                    <div>
+                      <p class="text-xs text-gray-500 uppercase tracking-wide">鍏抽敭璇?#6</p>
+                      <p class="text-lg font-semibold text-gray-900 mt-1">
+                        generative AI for physical products
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="rank-badge inline-flex items-center px-3 py-1.5 rounded text-sm font-semibold bg-emerald-600 text-white"
+                    >
+                      Top 1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mb-3">
+                  <div>
+                    <p class="text-xs text-gray-500">璇嶇被鍨?/p>
+                    <p class="text-sm font-medium text-gray-900">闀垮熬璇?/p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">棰勪及鏈堟悳绱㈤噺</p>
+                    <p class="text-sm font-medium text-gray-900">15,000</p>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-500">鍗曚环</p>
+                    <p class="text-sm font-semibold text-gray-900">楼150</p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-200 rounded overflow-hidden bg-white">
+                  <img
+                    src="images/serp1-leewow-generative-ai-for-physical-products.png"
+                    alt="鎺掑悕鎴浘"
+                    class="w-full"
+                    style="max-height: 200px; object-fit: contain"
+                  />
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Google鏃犵棔妯″紡 路 2026-03-08</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Table -->
+        <div class="px-8 py-6 border-b border-gray-100">
+          <p class="text-sm font-medium text-gray-900 mb-4">
+            璁¤垂姹囨€?<span class="text-gray-400 font-normal">(宸查€夊叧閿瘝)</span>
+          </p>
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th class="checkbox-col w-10 px-2 py-3"></th>
+                  <th
+                    class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wide"
+                  >
+                    鍏抽敭璇?
+                  </th>
+                  <th
+                    class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wide"
+                  >
+                    璇嶇被鍨?
+                  </th>
+                  <th
+                    class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wide"
+                  >
+                    鎺掑悕
+                  </th>
+                  <th
+                    class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wide"
+                  >
+                    鎼滅储閲?
+                  </th>
+                  <th
+                    class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wide"
+                  >
+                    浠锋牸
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="summaryBody" class="divide-y divide-gray-100"></tbody>
+              <tfoot class="bg-gray-50 border-t border-gray-200">
+                <tr>
+                  <td colspan="5" class="px-4 py-4 text-right text-sm font-medium text-gray-900">
+                    宸查€夋€昏
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-lg font-semibold text-blue-600"
+                    id="totalPrice"
+                  >
+                    楼0
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="px-8 py-4 text-right">
+          <p class="text-xs text-gray-500">鐩墠绱views(3/05-3/08) : 180</p>
+        </div>
+
+        <!-- Payment -->
+        <div class="px-8 py-6">
+          <p class="text-xs text-gray-500 uppercase tracking-wide mb-3">浠樻鏂瑰紡</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+              <p class="text-xs text-gray-500 mb-1">寰俊杞处</p>
+              <p class="font-mono text-sm text-gray-900">寰俊: 璇疯仈绯诲鏈嶈幏鍙?/p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+              <p class="text-xs text-gray-500 mb-1">閾惰杞处</p>
+              <p class="font-mono text-sm text-gray-900">閾惰: 璇疯仈绯诲鏈嶈幏鍙?/p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 mt-3 text-center">
+            浠樻鏃惰澶囨敞璁¤垂鍗曞彿: INV-MMIDZBA2-0YKEYK
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="px-8 py-4 text-center">
+        <p class="text-xs text-gray-400">
+          鏈璐瑰崟鍩轰簬 Google 鏃犵棔妯″紡鎴浘楠岃瘉 路 鎺掑悕鏁版嵁浠?Ahrefs/SEMrush 涓哄噯
+        </p>
+        <p class="text-xs text-gray-400 mt-1">
+          濡傛湁鐤戦棶璇疯仈绯诲鏈?| 纭浠樻鍚?4灏忔椂鍐呮洿鏂版帓鍚嶇洃鎺?
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // 鍏抽敭璇嶆暟鎹紙鐢盢ode.js濉厖锛?
+      const KEYWORDS_DATA = [
+        {
+          keyword: "On-Demand Product Creation 2026",
+          rank: 1,
+          volume: 3200,
+          kd: 0,
+          type: "longtail",
+          screenshot:
+            "E:\\ai-openclaw-skeletons-dev\\workspace\\serp-screenshot-inbox\\leewow\\serp1-leewow-on-demand-product-creation-2026.png",
+          defaultScreenshot:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IiM5Y2EzYWYiPuS7o+ihqOacrxRPT0dHRTwvdGV4dD48L3N2Zz4=",
+          date: "2026-03-08",
+        },
+        {
+          keyword: "On-Demand Product Creation for beginners",
+          rank: 1,
+          volume: 2100,
+          kd: 0,
+          type: "longtail",
+          screenshot:
+            "E:\\ai-openclaw-skeletons-dev\\workspace\\serp-screenshot-inbox\\leewow\\serp1-leewow-on-demand-product-creation-for-beginners.png",
+          defaultScreenshot:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IiM5Y2EzYWYiPuS7o+ihqOacrxRPT0dHRTwvdGV4dD48L3N2Zz4=",
+          date: "2026-03-08",
+        },
+        {
+          keyword: "On-Demand Product Creation vs Product Creation Agent",
+          rank: 1,
+          volume: 1800,
+          kd: 0,
+          type: "longtail",
+          screenshot:
+            "E:\\ai-openclaw-skeletons-dev\\workspace\\serp-screenshot-inbox\\leewow\\serp1-leewow-on-demand-product-creation-vs-product-creation-agent.png",
+          defaultScreenshot:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IiM5Y2EzYWYiPuS7o+ihqOacrxRPT0dHRTwvdGV4dD48L3N2Zz4=",
+          date: "2026-03-08",
+        },
+        {
+          keyword: "Printful vs Leewow",
+          rank: 1,
+          volume: 6000,
+          kd: 45,
+          type: "longtail",
+          screenshot:
+            "E:\\ai-openclaw-skeletons-dev\\workspace\\serp-screenshot-inbox\\leewow\\serp1-leewow-printful-vs-leewow.png",
+          defaultScreenshot:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IiM5Y2EzYWYiPuS7o+ihqOacrxRPT0dHRTwvdGV4dD48L3N2Zz4=",
+          date: "2026-03-08",
+        },
+        {
+          keyword: "traditional product workflows vs AI product creation",
+          rank: 1,
+          volume: 900,
+          kd: 0,
+          type: "longtail",
+          screenshot:
+            "E:\\ai-openclaw-skeletons-dev\\workspace\\serp-screenshot-inbox\\leewow\\serp1-leewow-traditional-product-workflows-vs-ai-product-creation.png",
+          defaultScreenshot:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IiM5Y2EzYWYiPuS7o+ihqOacrxRPT0dHRTwvdGV4dD48L3N2Zz4=",
+          date: "2026-03-08",
+        },
+        {
+          keyword: "generative AI for physical products",
+          rank: 1,
+          volume: 15000,
+          kd: 59,
+          type: "longtail",
+          screenshot:
+            "E:\\ai-openclaw-skeletons-dev\\workspace\\serp-screenshot-inbox\\leewow\\serp1-leewow-generative-ai-for-physical-products.png",
+          defaultScreenshot:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IiM5Y2EzYWYiPuS7o+ihqOacrxRPT0dHRTwvdGV4dD48L3N2Zz4=",
+          date: "2026-03-08",
+        },
+      ];
+
+      // 鐘舵€佺鐞?
+      const state = {
+        selected: new Set(KEYWORDS_DATA.map((_, i) => i)),
+        keywords: KEYWORDS_DATA,
+      };
+
+      // 浠锋牸璁＄畻
+      function getPrice(type, rank) {
+        const pricing = {
+          longtail: { top10: 30, top5: 90, top3: 120, top1: 150 },
+          competition: { top10: 75, top5: 150, top3: 225, top1: 150 },
+        };
+        const rankKey = rank <= 1 ? "top1" : rank <= 3 ? "top3" : rank <= 5 ? "top5" : "top10";
+        return pricing[type][rankKey];
+      }
+
+      // 鏇存柊UI
+      function updateUI() {
+        const selectedList = Array.from(state.selected).sort((a, b) => a - b);
+
+        // 鏇存柊璁℃暟
+        document.getElementById("selectedCount").textContent = selectedList.length;
+        document.getElementById("totalCount").textContent = state.keywords.length;
+
+        // 鏇存柊鍏ㄩ€夋鐘舵€?
+        const selectAll = document.getElementById("selectAll");
+        selectAll.checked = selectedList.length === state.keywords.length;
+        selectAll.indeterminate =
+          selectedList.length > 0 && selectedList.length < state.keywords.length;
+
+        // 鏇存柊鍗＄墖鏍峰紡
+        state.keywords.forEach((_, i) => {
+          const card = document.getElementById(`card-${i}`);
+          if (card) {
+            if (state.selected.has(i)) {
+              card.classList.remove("unselected");
+            } else {
+              card.classList.add("unselected");
+            }
+          }
+        });
+
+        // 鏇存柊姹囨€昏〃鏍?
+        updateSummaryTable(selectedList);
+
+        // 鏇存柊鎬讳环
+        const total = selectedList.reduce((sum, i) => {
+          const k = state.keywords[i];
+          return sum + getPrice(k.type, k.rank);
+        }, 0);
+        const totalVolume = selectedList.reduce((sum, i) => {
+          const k = state.keywords[i];
+          return sum + Number(k.volume.toString().replace(/,/g, ""));
+        }, 0);
+        document.getElementById("totalPrice").textContent = `楼${total}`;
+        document.getElementById("totalVolume").textContent = totalVolume.toLocaleString();
+      }
+
+      // 鏇存柊姹囨€昏〃鏍?
+      function updateSummaryTable(selectedList) {
+        const tbody = document.getElementById("summaryBody");
+        tbody.innerHTML = selectedList
+          .map((i) => {
+            const k = state.keywords[i];
+            const price = getPrice(k.type, k.rank);
+            const typeLabel = k.type === "longtail" ? "闀垮熬璇? : "闀垮熬璇?;
+            const typeClass =
+              k.type === "longtail" ? "bg-gray-100 text-gray-700" : "bg-red-50 text-red-700";
+            const rankDisplay = `Top ${k.rank}`;
+
+            return `
+                    <tr data-index="${i}">
+                        <td class="checkbox-col px-2 py-3">
+                            <input type="checkbox" checked
+                                data-index="${i}"
+                                onchange="toggleKeyword(${i})"
+                                class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer">
+                        </td>
+                        <td class="px-4 py-3">
+                            <p class="text-sm font-medium text-gray-900">${k.keyword}</p>
+                        </td>
+                        <td class="px-4 py-3 text-center">
+                            <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium ${typeClass}">${typeLabel}</span>
+                        </td>
+                        <td class="px-4 py-3 text-center">
+                            <span class="text-sm font-semibold text-emerald-600">${rankDisplay}</span>
+                        </td>
+                        <td class="px-4 py-3 text-center text-sm text-gray-600">${k.volume.toLocaleString()}</td>
+                        <td class="px-4 py-3 text-right text-sm font-mono font-semibold text-gray-900">楼${price}</td>
+                    </tr>
+                `;
+          })
+          .join("");
+      }
+
+      // 鍒囨崲鍏抽敭璇嶉€夋嫨
+      function toggleKeyword(index) {
+        if (state.selected.has(index)) {
+          state.selected.delete(index);
+        } else {
+          state.selected.add(index);
+        }
+        updateUI();
+      }
+
+      // 鍏ㄩ€?鍙栨秷鍏ㄩ€?
+      document.getElementById("selectAll").addEventListener("change", function () {
+        if (this.checked) {
+          state.keywords.forEach((_, i) => state.selected.add(i));
+        } else {
+          state.selected.clear();
+        }
+        updateUI();
+      });
+
+      // 鎵撳嵃宸查€夐」
+      function printSelected() {
+        if (state.selected.size === 0) {
+          alert("璇疯嚦灏戦€夋嫨涓€涓叧閿瘝");
+          return;
+        }
+
+        // 闅愯棌鏈€夐」
+        state.keywords.forEach((_, i) => {
+          const card = document.getElementById(`card-${i}`);
+          const row = document.querySelector(`tr[data-index="${i}"]`);
+          if (!state.selected.has(i)) {
+            if (card) card.style.display = "none";
+            if (row) row.style.display = "none";
+          }
+        });
+
+        // 鎵撳嵃
+        window.print();
+
+        // 鎭㈠鏄剧ず
+        state.keywords.forEach((_, i) => {
+          const card = document.getElementById(`card-${i}`);
+          const row = document.querySelector(`tr[data-index="${i}"]`);
+          if (card) card.style.display = "";
+          if (row) row.style.display = "";
+        });
+      }
+
+      // 鍒濆鍖?
+      updateUI();
+    </script>
+  </body>
+</html>
+
