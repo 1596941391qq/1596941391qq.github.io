@@ -5,7 +5,7 @@ permalink: /create-custom-t-shirts-with-ai/
 ---
 # create custom t-shirts with AI: Complete Guide 2026
 
-**Published:** 2026-03-07  
+**Published:** 2026-03-09  
 **Keywords:** create custom t-shirts with AI
 
 ---
