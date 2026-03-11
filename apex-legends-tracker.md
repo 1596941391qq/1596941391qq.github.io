@@ -5,7 +5,7 @@ permalink: /apex-legends-tracker/
 ---
 # apex legends tracker: Complete Guide 2026
 
-**Published:** 2026-03-09  
+**Published:** 2026-03-11  
 **Keywords:** apex legends tracker
 
 ---
