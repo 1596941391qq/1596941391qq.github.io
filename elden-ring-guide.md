@@ -5,7 +5,7 @@ permalink: /elden-ring-guide/
 ---
 # elden ring guide: Complete Guide 2026
 
-**Published:** 2026-03-09  
+**Published:** 2026-03-11  
 **Keywords:** elden ring guide
 
 ---
