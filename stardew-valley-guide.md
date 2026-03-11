@@ -5,7 +5,7 @@ permalink: /stardew-valley-guide/
 ---
 # stardew valley guide: Complete Guide 2026
 
-**Published:** 2026-03-09  
+**Published:** 2026-03-11  
 **Keywords:** stardew valley guide
 
 ---
