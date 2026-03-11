@@ -5,7 +5,7 @@ permalink: /pickleball-paddles-australia/
 ---
 # pickleball paddles australia: Complete Guide 2026
 
-**Published:** 2026-03-07  
+**Published:** 2026-03-11  
 **Keywords:** pickleball paddles australia
 
 ---
