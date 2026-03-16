@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -6,13 +6,10 @@
   <title>SEO Billing Statement - HakkoAI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap");
     body { font-family: "Inter", "Noto Sans SC", sans-serif; background: linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%); }
     .keyword-card.unselected { opacity: .38; filter: saturate(.75); }
-    @media print {
-      .no-print { display:none !important; }
-      .keyword-card { break-inside: avoid; page-break-inside: avoid; }
-    }
+    @media print { .no-print { display:none !important; } .keyword-card { break-inside: avoid; page-break-inside: avoid; } }
   </style>
 </head>
 <body class="min-h-screen text-slate-900">
@@ -27,23 +24,23 @@
           <div class="max-w-3xl">
             <p class="text-xs uppercase tracking-[0.32em] text-slate-400">SEO Billing Statement</p>
             <h1 class="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">SEO Billing Statement</h1>
-            <p class="mt-3 max-w-2xl text-sm leading-6 text-slate-300 md:text-base">This statement charges only for achieved Google ranking positions backed by screenshot evidence. Search-volume and KD-style metrics are intentionally excluded from the client-facing invoice.</p>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-slate-300 md:text-base">此账单仅对已达成的 Google 排名并附截图的关键词计费，不展示搜索量或 KD 等指标。</p>
           </div>
           <div class="grid gap-3 sm:grid-cols-2 lg:min-w-[420px] lg:grid-cols-3">
             <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.24em] text-slate-400">Brand</p>
               <p class="mt-2 text-lg font-semibold text-white">HakkoAI</p>
-              <p class="mt-1 text-xs text-slate-400">Client brand</p>
+              <p class="mt-1 text-xs text-slate-400">客户品牌</p>
             </div>
             <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
               <p class="text-[11px] uppercase tracking-[0.24em] text-slate-400">Period</p>
               <p class="mt-2 text-lg font-semibold text-white">2026年3月</p>
-              <p class="mt-1 text-xs text-slate-400">Statement date 2026-03-14</p>
+              <p class="mt-1 text-xs text-slate-400">结算日期 2026-03-14</p>
             </div>
             <div class="rounded-2xl border border-indigo-400/30 bg-indigo-500/10 p-4">
               <p class="text-[11px] uppercase tracking-[0.24em] text-indigo-200">Invoice ID</p>
               <p class="mt-2 break-all font-mono text-sm font-semibold text-white">INV-MMQK0F7N-UU7PHW</p>
-              <p class="mt-1 text-xs text-indigo-100/70">Invoice reference</p>
+              <p class="mt-1 text-xs text-indigo-100/70">账单编号</p>
             </div>
           </div>
         </div>
@@ -54,11 +51,11 @@
           </div>
           <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
             <p class="text-[11px] uppercase tracking-[0.24em] text-slate-400">Pricing Rule</p>
-            <p class="mt-2 text-sm font-medium text-slate-100">Charged by achieved ranking tier only</p>
+            <p class="mt-2 text-sm font-medium text-slate-100">仅对达标排名/截图计费</p>
           </div>
           <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
             <p class="text-[11px] uppercase tracking-[0.24em] text-slate-400">Verification</p>
-            <p class="mt-2 text-sm font-medium text-slate-100">SERP screenshot proof for each billed keyword</p>
+            <p class="mt-2 text-sm font-medium text-slate-100">每个关键词都有 SERP 截图证据</p>
           </div>
         </div>
       </div>
@@ -70,17 +67,17 @@
           <div class="flex flex-wrap items-center gap-3 md:gap-4">
             <label class="inline-flex cursor-pointer items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-2.5 shadow-sm">
               <input type="checkbox" id="selectAll" checked class="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500" />
-              <span class="text-sm font-medium text-slate-800">Select all</span>
+              <span class="text-sm font-medium text-slate-800">全选</span>
             </label>
             <div class="inline-flex items-center gap-2 rounded-2xl bg-indigo-50 px-4 py-2.5 text-sm text-slate-600">
-              <span>Selected</span>
+              <span>已选</span>
               <span id="selectedCount" class="font-semibold text-indigo-700">0</span>
               <span>/</span>
               <span id="totalCount" class="font-semibold text-slate-900">0</span>
-              <span>items</span>
+              <span>项</span>
             </div>
           </div>
-          <button onclick="printSelected()" class="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-medium text-white">Print selected</button>
+          <button onclick="printSelected()" class="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-medium text-white">打印已选</button>
         </div>
       </div>
 
@@ -88,10 +85,10 @@
         <section class="space-y-4">
           <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Line Items</p>
-              <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Keyword Ranking Details</h2>
+              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">关键词列表</p>
+              <h2 class="mt-2 text-2xl font-semibold tracking-tight text-slate-950">关键词排名明细</h2>
             </div>
-            <p class="hidden text-sm text-slate-500 md:block">Each card shows ranking, keyword type, billing rule, price, and screenshot proof.</p>
+            <p class="hidden text-sm text-slate-500 md:block">每张卡展示排名、词型、计费规则、价格和截图证据。</p>
           </div>
           <div id="keywordsList" class="space-y-3"></div>
         </section>
@@ -99,9 +96,9 @@
         <aside class="space-y-3">
           <div class="overflow-hidden rounded-[28px] border border-slate-200 bg-slate-950 text-white shadow-[0_20px_60px_rgba(15,23,42,0.16)]">
             <div class="border-b border-white/10 px-6 py-5">
-              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Selection Summary</p>
-              <h3 class="mt-2 text-xl font-semibold">Selection Summary</h3>
-              <p class="mt-1 text-sm text-slate-400">Review the selected billed keywords before sharing the statement.</p>
+              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">选择情况</p>
+              <h3 class="mt-2 text-xl font-semibold">选择情况</h3>
+              <p class="mt-1 text-sm text-slate-400">请确认已选关键词后再分享此账单。</p>
             </div>
             <div class="px-4 py-4 md:px-5">
               <div class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
@@ -109,17 +106,17 @@
                   <thead class="border-b border-white/10 bg-white/[0.03]">
                     <tr>
                       <th class="w-10 px-2 py-3"></th>
-                      <th class="px-4 py-3 text-left text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Keyword</th>
-                      <th class="px-4 py-3 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Type</th>
-                      <th class="px-4 py-3 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Rank</th>
-                      <th class="px-4 py-3 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Evidence</th>
-                      <th class="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">Price</th>
+                      <th class="px-4 py-3 text-left text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">关键词</th>
+                      <th class="px-4 py-3 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">词型</th>
+                      <th class="px-4 py-3 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">排名</th>
+                      <th class="px-4 py-3 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">证据</th>
+                      <th class="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">价格</th>
                     </tr>
                   </thead>
                   <tbody id="summaryBody" class="divide-y divide-white/10"></tbody>
                   <tfoot class="border-t border-white/10 bg-white/[0.03]">
                     <tr>
-                      <td colspan="5" class="px-4 py-4 text-right text-sm font-medium text-slate-300">Selected total</td>
+                      <td colspan="5" class="px-4 py-4 text-right text-sm font-medium text-slate-300">已选总计</td>
                       <td id="totalPrice" class="px-4 py-4 text-right text-2xl font-semibold text-indigo-300">¥0</td>
                     </tr>
                   </tfoot>
@@ -131,19 +128,19 @@
           <div class="rounded-[28px] border border-slate-200 bg-slate-50 p-5 md:p-6 shadow-sm">
             <div class="mb-4 flex items-center justify-between gap-3">
               <div>
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Payment</p>
-                <h3 class="mt-2 text-xl font-semibold text-slate-950">Payment</h3>
+                <p class="text-xs uppercase tracking-[0.24em] text-slate-400">支付方式</p>
+                <h3 class="mt-2 text-xl font-semibold text-slate-950">支付方式</h3>
               </div>
-              <div class="rounded-2xl bg-white px-3 py-2 text-xs text-slate-500 shadow-sm">Invoice ref INV-MMQK0F7N-UU7PHW</div>
+              <div class="rounded-2xl bg-white px-3 py-2 text-xs text-slate-500 shadow-sm">账单编号 INV-MMQK0F7N-UU7PHW</div>
             </div>
             <div class="space-y-3">
               <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <p class="text-xs uppercase tracking-[0.18em] text-slate-400">WeChat Transfer</p>
-                <p class="mt-2 break-all font-mono text-sm font-medium text-slate-900">Please confirm with your account manager</p>
+                <p class="text-xs uppercase tracking-[0.18em] text-slate-400">微信转账</p>
+                <p class="mt-2 break-all font-mono text-sm font-medium text-slate-900">请联系客户经理确认</p>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Bank Transfer</p>
-                <p class="mt-2 break-all font-mono text-sm font-medium text-slate-900">Please confirm with your account manager</p>
+                <p class="text-xs uppercase tracking-[0.18em] text-slate-400">银行转账</p>
+                <p class="mt-2 break-all font-mono text-sm font-medium text-slate-900">请联系客户经理确认</p>
               </div>
             </div>
           </div>
@@ -153,14 +150,78 @@
   </div>
 
   <script>
-    const KEYWORDS_DATA = [{"keyword":"valorant ai coach","rank":1,"type":"competition","screenshot":"images/serp1-hakkoai-valorant-ai-coach-2026.png","date":"2026-03-14"},{"keyword":"league of legends ai coach","rank":3,"type":"competition","screenshot":"images/serp3-hakkoai-league-of-legends-al-coach-2026.png","date":"2026-03-14"},{"keyword":"cs2 ai coach","rank":3,"type":"competition","screenshot":"images/serp3-hakkoai-cs2-ai-coach.png","date":"2026-03-14"},{"keyword":"cod warzone ai coach","rank":3,"type":"competition","screenshot":"images/serp3-hakkoai-cod-warzone-ai-coach.png","date":"2026-03-14"},{"keyword":"apex legends ai coach","rank":3,"type":"competition","screenshot":"images/serp3-hakkoai-apex-legends-ai-coach.png","date":"2026-03-14"},{"keyword":"ow2 ai coach","rank":4,"type":"competition","screenshot":"images/serp4-hakkoai-Overwatch-2-Al-Coach.png","date":"2026-03-14"},{"keyword":"dota2 ai mmr coach","rank":5,"type":"competition","screenshot":"images/serp5-hakkoai-dota2-ai-mmr-coach.png","date":"2026-03-14"},{"keyword":"genshin impact ai assistant","rank":5,"type":"competition","screenshot":"images/serp5-hakkoai-genshin-impact-ai-assistant.png","date":"2026-03-14"}];
+    const KEYWORDS_DATA = [
+    {
+        "keyword":  "valorant ai coach 2026",
+        "rank":  1,
+        "screenshot":  "images/serp1-hakkoai-valorant-ai-coach-2026.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "roblox ai coach",
+        "rank":  2,
+        "screenshot":  "images/serp2-hakkoai-Roblox-AI-Coach.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "league of legends al coach 2026",
+        "rank":  3,
+        "screenshot":  "images/serp3-hakkoai-league-of-legends-al-coach-2026.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "cs2 ai coach",
+        "rank":  3,
+        "screenshot":  "images/serp3-hakkoai-cs2-ai-coach.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "cod warzone ai coach",
+        "rank":  3,
+        "screenshot":  "images/serp3-hakkoai-cod-warzone-ai-coach.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "apex legends ai coach",
+        "rank":  3,
+        "screenshot":  "images/serp3-hakkoai-apex-legends-ai-coach.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "overwatch 2 al coach",
+        "rank":  4,
+        "screenshot":  "images/serp4-hakkoai-Overwatch-2-Al-Coach.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "dota2 ai mmr coach",
+        "rank":  5,
+        "screenshot":  "images/serp5-hakkoai-dota2-ai-mmr-coach.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    },
+    {
+        "keyword":  "genshin impact ai assistant",
+        "rank":  5,
+        "screenshot":  "images/serp5-hakkoai-genshin-impact-ai-assistant.png",
+        "type":  "longtail",
+        "date":  "2026-03-14"
+    }
+];
     const state = { selected: new Set(KEYWORDS_DATA.map((_, i) => i)), keywords: KEYWORDS_DATA };
     function getPrice(type, rank) {
       const pricing = { longtail: { top10: 30, top5: 90, top3: 120, top1: 150 }, competition: { top10: 75, top5: 150, top3: 225, top1: 300 } };
       const rankKey = rank <= 1 ? 'top1' : rank <= 3 ? 'top3' : rank <= 5 ? 'top5' : 'top10';
       return pricing[type][rankKey];
     }
-    function getTypeLabel(type) { return type === 'longtail' ? 'Long-tail' : 'Competition'; }
+    function getTypeLabel(type) { return type === 'longtail' ? '长尾词' : '竞品词'; }
     function renderCards() {
       const list = document.getElementById('keywordsList');
       list.innerHTML = state.keywords.map((k, i) => {
@@ -184,7 +245,7 @@
                 <div class="flex items-center gap-3 md:flex-col md:items-end">
                   <span class="inline-flex items-center rounded-full bg-emerald-500 px-3.5 py-1.5 text-sm font-semibold text-white shadow-sm">Top ${k.rank}</span>
                   <div class="rounded-2xl bg-slate-950 px-4 py-2 text-right text-white shadow-sm">
-                    <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Price</p>
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">价格</p>
                     <p class="mt-1 text-base font-semibold">¥${price}</p>
                   </div>
                 </div>
@@ -193,19 +254,19 @@
             <div class="px-5 py-5 md:px-6 md:py-6">
               <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                 <div class="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Keyword Type</p>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">词型</p>
                   <p class="mt-2 text-sm font-semibold text-slate-900">${typeLabel}</p>
                 </div>
                 <div class="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Evidence</p>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">证据</p>
                   <p class="mt-2 text-sm font-semibold text-slate-900">Screenshot attached</p>
                 </div>
                 <div class="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Billing Rule</p>
-                  <p class="mt-2 text-sm font-semibold text-slate-900">Charged by achieved ranking tier</p>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">计费规则</p>
+                  <p class="mt-2 text-sm font-semibold text-slate-900">按达到排名档位计费</p>
                 </div>
                 <div class="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">Checked Date</p>
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">检查日期</p>
                   <p class="mt-2 text-sm font-semibold text-slate-900">${k.date}</p>
                 </div>
               </div>
@@ -213,8 +274,8 @@
                 <img src="${k.screenshot}" alt="SERP screenshot" class="w-full bg-white" style="max-height: 300px; object-fit: contain;">
               </div>
               <div class="mt-3 flex items-center justify-between gap-3 text-xs text-slate-400">
-                <span>Google SERP screenshot proof</span>
-                <span>Checked on ${k.date}</span>
+                <span>Google SERP 截图证据</span>
+                <span>检查于 ${k.date}</span>
               </div>
             </div>
           </div>`;
@@ -251,7 +312,7 @@
       updateSummary();
     });
     function printSelected() {
-      if (state.selected.size === 0) { alert('Select at least one keyword before printing.'); return; }
+      if (state.selected.size === 0) { alert('请先勾选至少一个关键词再打印。'); return; }
       window.print();
     }
     renderCards();
@@ -259,3 +320,4 @@
   </script>
 </body>
 </html>
+
