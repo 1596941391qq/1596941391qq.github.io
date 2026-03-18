@@ -5,7 +5,7 @@ permalink: /lelo-sona-review/
 ---
 # lelo sona review: Complete Guide 2026
 
-**Published:** 2026-03-17  
+**Published:** 2026-03-18  
 **Keywords:** lelo sona review
 
 ---
