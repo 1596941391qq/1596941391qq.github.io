@@ -5,7 +5,7 @@ permalink: /udio-api/
 ---
 # udio api: Complete Guide 2026
 
-**Published:** 2026-03-12  
+**Published:** 2026-03-19  
 **Keywords:** udio api
 
 ---
