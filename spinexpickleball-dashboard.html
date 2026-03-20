@@ -240,10 +240,12 @@
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
     const processedData = rawData.map(d => {
-      const created = new Date(d.created_at);
+      const createdStr = d.created_at && d.created_at.trim() ? d.created_at : '2026-03-01T00:00:00';
+      const created = new Date(createdStr);
+      if (isNaN(created.getTime())) { return null; }
       const days = Math.max(1, Math.floor((today - created) / (1000 * 60 * 60 * 24)));
       return { ...d, days, viewsPerDay: (d.views / days).toFixed(1), date: created.toISOString().slice(0, 10) };
-    }).sort((a, b) => b.views - a.views);
+    }).filter(d => d !== null).sort((a, b) => b.views - a.views);
 
     const totalViews = processedData.reduce((sum, d) => sum + d.views, 0);
     const totalDays = processedData.reduce((sum, d) => sum + d.days, 0);
