@@ -5,7 +5,7 @@ permalink: /gemini3-1flash-image-8k/
 ---
 # gemini3.1flash image 8k: Complete Guide 2026
 
-**Published:** 2026-03-20  
+**Published:** 2026-03-21  
 **Keywords:** gemini3.1flash image 8k
 
 ---

@@ -5,7 +5,7 @@ permalink: /nanobanana2-portrait/
 ---
 # nanobanana2 portrait: Complete Guide 2026
 
-**Published:** 2026-03-20  
+**Published:** 2026-03-21  
 **Keywords:** nanobanana2 portrait
 
 ---

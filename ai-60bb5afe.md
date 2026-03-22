@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: "AI八字算命: Complete Guide 2026"
-permalink: /ai/
+permalink: /ai-60bb5afe/
 ---
 # AI八字算命: Complete Guide 2026
 
