@@ -5,7 +5,7 @@ permalink: /ideogram-api/
 ---
 # ideogram api: Complete Guide 2026
 
-**Published:** 2026-03-22  
+**Published:** 2026-03-23  
 **Keywords:** ideogram api
 
 ---
