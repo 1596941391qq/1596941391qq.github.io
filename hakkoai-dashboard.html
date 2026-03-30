@@ -250,7 +250,10 @@
     const totalViews = processedData.reduce((sum, d) => sum + d.views, 0);
     const totalDays = processedData.reduce((sum, d) => sum + d.days, 0);
     const avgDays = Math.round(totalDays / processedData.length) || 0;
-    const avgVPD = totalDays ? (totalViews / totalDays).toFixed(1) : 0;
+    // 正确算法：平均每篇文章的日均阅读 = 各文章(views/days)的平均值
+    const avgVPD = processedData.length > 0
+      ? (processedData.reduce((sum, d) => sum + (d.views / d.days), 0) / processedData.length).toFixed(1)
+      : 0;
     const maxViews = Math.max(...processedData.map(d => d.views), 0);
     const maxDays = Math.max(...processedData.map(d => d.days), 1);
 
