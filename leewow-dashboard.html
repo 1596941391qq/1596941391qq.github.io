@@ -38,7 +38,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-bottom: 28px;
     }
@@ -148,14 +148,6 @@
         <div class="stat-value" id="totalViews">-</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">平均发布天数</div>
-        <div class="stat-value" id="avgDays">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">日均阅读</div>
-        <div class="stat-value" id="avgViewsPerDay">-</div>
-      </div>
-      <div class="stat-card">
         <div class="stat-label">Top 1 阅读</div>
         <div class="stat-value highlight" id="topViews">-</div>
       </div>
@@ -220,9 +212,7 @@
             <th>#</th>
             <th>Keyword</th>
             <th>Published</th>
-            <th>Days</th>
             <th>Views</th>
-            <th>Views/Day</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -248,16 +238,15 @@
     }).filter(d => d !== null).sort((a, b) => b.views - a.views);
 
     const totalViews = processedData.reduce((sum, d) => sum + d.views, 0);
-    const totalDays = processedData.reduce((sum, d) => sum + d.days, 0);
-    const avgDays = Math.round(totalDays / processedData.length) || 0;
-    const avgVPD = totalDays ? (totalViews / totalDays).toFixed(1) : 0;
+    // 正确算法：平均每篇文章的日均阅读 = 各文章(views/days)的平均值
+    const avgVPD = processedData.length > 0
+      ? (processedData.reduce((sum, d) => sum + (d.views / d.days), 0) / processedData.length).toFixed(1)
+      : 0;
     const maxViews = Math.max(...processedData.map(d => d.views), 0);
     const maxDays = Math.max(...processedData.map(d => d.days), 1);
 
     document.getElementById('totalArticles').textContent = processedData.length;
     document.getElementById('totalViews').textContent = totalViews;
-    document.getElementById('avgDays').textContent = avgDays + 'd';
-    document.getElementById('avgViewsPerDay').textContent = avgVPD;
     document.getElementById('topViews').textContent = maxViews;
 
     const colors = ['#f472b6', '#a78bfa', '#818cf8', '#60a5fa', '#22d3ee', '#34d399', '#a3e635', '#fbbf24', '#fb923c', '#f87171'];
@@ -411,9 +400,7 @@
             <a class="keyword-link" href="${d.url}" target="_blank" title="${d.keyword}">${d.keyword}</a>
           </td>
           <td>${d.date}</td>
-          <td class="days-cell">${d.days}d</td>
           <td class="views-cell">${d.views}</td>
-          <td>${d.viewsPerDay}</td>
         </tr>
       `).join('');
     }

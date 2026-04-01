@@ -38,7 +38,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-bottom: 28px;
     }
@@ -148,14 +148,6 @@
         <div class="stat-value" id="totalViews">-</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">平均发布天数</div>
-        <div class="stat-value" id="avgDays">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">日均阅读</div>
-        <div class="stat-value" id="avgViewsPerDay">-</div>
-      </div>
-      <div class="stat-card">
         <div class="stat-label">Top 1 阅读</div>
         <div class="stat-value highlight" id="topViews">-</div>
       </div>
@@ -220,9 +212,7 @@
             <th>#</th>
             <th>Keyword</th>
             <th>Published</th>
-            <th>Days</th>
             <th>Views</th>
-            <th>Views/Day</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -235,7 +225,7 @@
     // 格式: { keyword, created_at, views, url }
     // created_at: ISO 日期字符串
     // url: UniFuncs 分享链接
-    const rawData = [{"keyword":"AI game advertising video","title":"","created_at":"2026-03-04T10:51:25.913Z","views":0,"url":"https://news.unifuncs.com/?sid=4a7b67d4-9ce1-4395-8d1f-6bfb9707cc6d"},{"keyword":"AI tiktok video generator for app","title":"","created_at":"2026-03-04T10:52:10.088Z","views":0,"url":"https://news.unifuncs.com/?sid=1bd8b240-0717-40e7-bd3f-08359919ce0c"},{"keyword":"AI tiktok video generator for game","title":"","created_at":"2026-03-04T10:52:01.672Z","views":0,"url":"https://news.unifuncs.com/?sid=17ad85eb-38be-4d64-aafb-687f95abe575"},{"keyword":"app promo video maker","title":"","created_at":"2026-03-04T10:51:53.405Z","views":0,"url":"https://news.unifuncs.com/?sid=99ed2c12-9b21-4c36-8d99-fc4ee1fffcdf"},{"keyword":"url to video for app","title":"","created_at":"2026-03-04T10:51:34.219Z","views":0,"url":"https://news.unifuncs.com/?sid=749e6ecd-6196-4d8b-ae43-336960a95053"},{"keyword":"apps to make promotional videos","title":"","created_at":"2026-03-01T14:40:12.768Z","views":0,"url":"https://news.unifuncs.com/?sid=c8376318-6beb-48e7-94b9-45ec7119cd16"},{"keyword":"generative AI advertising for app","title":"","created_at":"2026-03-01T14:38:06.312Z","views":0,"url":"https://news.unifuncs.com/?sid=086a6596-cf1d-47bc-a6a7-f7bc8fa51543"},{"keyword":"generative AI advertising for game","title":"","created_at":"2026-03-01T14:38:40.051Z","views":0,"url":"https://news.unifuncs.com/?sid=c85e8801-9af7-4fcd-8461-507174e4c132"},{"keyword":"promotional video maker for app","title":"","created_at":"2026-03-01T14:37:04.613Z","views":0,"url":"https://news.unifuncs.com/?sid=a78a130a-8409-4df5-87aa-2c1d4d0cb37a"},{"keyword":"promotional video maker for game","title":"","created_at":"2026-03-01T14:37:36.579Z","views":0,"url":"https://news.unifuncs.com/?sid=a005a756-7210-4930-aeca-35831e14666f"}];
+    const rawData = ;
 
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
@@ -248,16 +238,15 @@
     }).filter(d => d !== null).sort((a, b) => b.views - a.views);
 
     const totalViews = processedData.reduce((sum, d) => sum + d.views, 0);
-    const totalDays = processedData.reduce((sum, d) => sum + d.days, 0);
-    const avgDays = Math.round(totalDays / processedData.length) || 0;
-    const avgVPD = totalDays ? (totalViews / totalDays).toFixed(1) : 0;
+    // 正确算法：平均每篇文章的日均阅读 = 各文章(views/days)的平均值
+    const avgVPD = processedData.length > 0
+      ? (processedData.reduce((sum, d) => sum + (d.views / d.days), 0) / processedData.length).toFixed(1)
+      : 0;
     const maxViews = Math.max(...processedData.map(d => d.views), 0);
     const maxDays = Math.max(...processedData.map(d => d.days), 1);
 
     document.getElementById('totalArticles').textContent = processedData.length;
     document.getElementById('totalViews').textContent = totalViews;
-    document.getElementById('avgDays').textContent = avgDays + 'd';
-    document.getElementById('avgViewsPerDay').textContent = avgVPD;
     document.getElementById('topViews').textContent = maxViews;
 
     const colors = ['#f472b6', '#a78bfa', '#818cf8', '#60a5fa', '#22d3ee', '#34d399', '#a3e635', '#fbbf24', '#fb923c', '#f87171'];
@@ -411,9 +400,7 @@
             <a class="keyword-link" href="${d.url}" target="_blank" title="${d.keyword}">${d.keyword}</a>
           </td>
           <td>${d.date}</td>
-          <td class="days-cell">${d.days}d</td>
           <td class="views-cell">${d.views}</td>
-          <td>${d.viewsPerDay}</td>
         </tr>
       `).join('');
     }
