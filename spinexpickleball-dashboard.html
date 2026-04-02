@@ -38,7 +38,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-bottom: 28px;
     }
@@ -148,14 +148,6 @@
         <div class="stat-value" id="totalViews">-</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">平均发布天数</div>
-        <div class="stat-value" id="avgDays">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">日均阅读</div>
-        <div class="stat-value" id="avgViewsPerDay">-</div>
-      </div>
-      <div class="stat-card">
         <div class="stat-label">Top 1 阅读</div>
         <div class="stat-value highlight" id="topViews">-</div>
       </div>
@@ -220,9 +212,7 @@
             <th>#</th>
             <th>Keyword</th>
             <th>Published</th>
-            <th>Days</th>
             <th>Views</th>
-            <th>Views/Day</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -235,7 +225,7 @@
     // 格式: { keyword, created_at, views, url }
     // created_at: ISO 日期字符串
     // url: UniFuncs 分享链接
-    const rawData = [{"keyword":"pickleball ball","title":"","created_at":"2026-03-11T05:38:59.355Z","views":58,"url":"https://news.unifuncs.com/?sid=cf2ead04-8522-421a-b35e-8786a0b39091"},{"keyword":"pickleball bat","title":"","created_at":"2026-03-11T05:43:40.979Z","views":15,"url":"https://news.unifuncs.com/?sid=2a00d085-4b85-47ef-8439-1636d280d030"},{"keyword":"pickleball bats","title":"","created_at":"2026-03-11T05:48:32.511Z","views":17,"url":"https://news.unifuncs.com/?sid=081422de-b0d1-4ca6-8d94-ea4c2d5aff97"},{"keyword":"pickleball paddles","title":"","created_at":"2026-03-11T05:58:24.028Z","views":70,"url":"https://news.unifuncs.com/?sid=dfb2b96e-0163-487c-bb26-fe22fcd7576c"},{"keyword":"pickleball paddles australia","title":"","created_at":"2026-03-11T06:04:09.637Z","views":26,"url":"https://news.unifuncs.com/?sid=cde9ae05-5722-439d-b9bf-26050c482ae8"},{"keyword":"pickleball paddles for sale","title":"","created_at":"2026-03-07T08:12:57.959Z","views":19,"url":"https://news.unifuncs.com/?sid=588a8256-e894-4efe-8b05-527405747c86"},{"keyword":"pickleball racket","title":"","created_at":"2026-03-07T08:33:55.003Z","views":12,"url":"https://news.unifuncs.com/?sid=66ecf2fe-5238-45d4-9e65-25782eb192ed"},{"keyword":"pickleball rackets","title":"","created_at":"2026-03-07T08:16:25.522Z","views":9,"url":"https://news.unifuncs.com/?sid=198a171b-ee82-4ad3-a4f3-3166db5e7eab"},{"keyword":"pickleball racquet","title":"","created_at":"2026-03-07T08:20:28.537Z","views":10,"url":"https://news.unifuncs.com/?sid=a6c50834-ae49-4a05-814a-42f194d9b62a"},{"keyword":"pickleball racquets","title":"","created_at":"2026-03-07T08:06:12.220Z","views":14,"url":"https://news.unifuncs.com/?sid=d2f54e13-e7f6-4593-84c4-7c823d66aaea"},{"keyword":"Pickleball set","title":"","created_at":"2026-03-07T08:37:23.921Z","views":0,"url":"https://news.unifuncs.com/?sid=92a730b3-fcee-407a-be51-8689d683244e"}];
+    const rawData = [{"keyword":"pickleball ball","title":"","created_at":"2026-03-11T05:38:59.355Z","views":191,"url":"https://unifuncs.com/s/pfOtz6fy"},{"keyword":"pickleball bat","title":"","created_at":"2026-03-11T05:43:40.979Z","views":33,"url":"https://unifuncs.com/s/oNMpt1Tx"},{"keyword":"pickleball bats","title":"","created_at":"2026-03-11T05:48:32.511Z","views":32,"url":"https://unifuncs.com/s/xbWXRJD3"},{"keyword":"pickleball paddles","title":"","created_at":"2026-03-11T05:58:24.028Z","views":178,"url":"https://unifuncs.com/s/6BvOwL75"},{"keyword":"pickleball paddles australia","title":"","created_at":"2026-03-11T06:04:09.637Z","views":57,"url":"https://unifuncs.com/s/8CSawj6R"},{"keyword":"pickleball paddles for sale","title":"","created_at":"2026-03-07T08:12:57.959Z","views":19,"url":"https://unifuncs.com/s/CL4ht4mw"},{"keyword":"pickleball racket","title":"","created_at":"2026-03-07T08:33:55.003Z","views":12,"url":"https://unifuncs.com/s/vYRTLvy1"},{"keyword":"pickleball rackets","title":"","created_at":"2026-03-07T08:16:25.522Z","views":9,"url":"https://unifuncs.com/s/CfdVneJM"},{"keyword":"pickleball racquet","title":"","created_at":"2026-03-07T08:20:28.537Z","views":10,"url":"https://unifuncs.com/s/Dlhe7upH"},{"keyword":"pickleball racquets","title":"","created_at":"2026-03-07T08:06:12.220Z","views":14,"url":"https://unifuncs.com/s/5wYh5qFa"}];
 
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
@@ -248,16 +238,15 @@
     }).filter(d => d !== null).sort((a, b) => b.views - a.views);
 
     const totalViews = processedData.reduce((sum, d) => sum + d.views, 0);
-    const totalDays = processedData.reduce((sum, d) => sum + d.days, 0);
-    const avgDays = Math.round(totalDays / processedData.length) || 0;
-    const avgVPD = totalDays ? (totalViews / totalDays).toFixed(1) : 0;
+    // 正确算法：平均每篇文章的日均阅读 = 各文章(views/days)的平均值
+    const avgVPD = processedData.length > 0
+      ? (processedData.reduce((sum, d) => sum + (d.views / d.days), 0) / processedData.length).toFixed(1)
+      : 0;
     const maxViews = Math.max(...processedData.map(d => d.views), 0);
     const maxDays = Math.max(...processedData.map(d => d.days), 1);
 
     document.getElementById('totalArticles').textContent = processedData.length;
     document.getElementById('totalViews').textContent = totalViews;
-    document.getElementById('avgDays').textContent = avgDays + 'd';
-    document.getElementById('avgViewsPerDay').textContent = avgVPD;
     document.getElementById('topViews').textContent = maxViews;
 
     const colors = ['#f472b6', '#a78bfa', '#818cf8', '#60a5fa', '#22d3ee', '#34d399', '#a3e635', '#fbbf24', '#fb923c', '#f87171'];
@@ -411,9 +400,7 @@
             <a class="keyword-link" href="${d.url}" target="_blank" title="${d.keyword}">${d.keyword}</a>
           </td>
           <td>${d.date}</td>
-          <td class="days-cell">${d.days}d</td>
           <td class="views-cell">${d.views}</td>
-          <td>${d.viewsPerDay}</td>
         </tr>
       `).join('');
     }
