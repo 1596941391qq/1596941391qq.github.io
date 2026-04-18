@@ -3,295 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Backlink Opportunities - 5900+ Sites to Boost Your SEO</title>
-<meta name="description" content="Browse 5,900+ free backlink sources sorted by Domain Rating, tier, and difficulty. Find profile, directory, citation, and Web 2.0 link opportunities for your SEO strategy.">
+<title>外链导航 — 5900+ 免费外链提交站点</title>
+<meta name="description" content="收录 5900+ 个可免费获取外链的站点，按类型、层级、难度分类。涵盖目录、Profile、书签、论坛、Citation 等，助力 SEO 外链建设。">
 <style>
-:root{--bg:#fafafa;--surface:#fff;--surface2:#f5f5f5;--border:#e5e5e5;--text:#18181b;--text2:#52525b;--text3:#a1a1aa;--green:#16a34a;--green-bg:#f0fdf4;--blue:#2563eb;--blue-bg:#eff6ff;--orange:#ea580c;--orange-bg:#fff7ed;--red:#dc2626;--red-bg:#fef2f2;--purple:#9333ea;--purple-bg:#faf5ff;--cyan:#0891b2;--cyan-bg:#ecfeff}
+:root{--bg:#f4f5f9;--card:#fff;--border:#e8e8ec;--text:#222;--text2:#666;--text3:#999;--blue:#3b5998;--blue-bg:#eef2ff;--green:#1a7f37;--green-bg:#e6f9ed;--orange:#c2410c;--orange-bg:#fff5eb;--red:#c33;--red-bg:#fde8e8;--purple:#7c3aed;--purple-bg:#f3eeff;--tag:#f0f1f5}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
-a{color:var(--blue);text-decoration:none}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 
-/* Hero */
-.hero{text-align:center;padding:48px 20px 32px;background:linear-gradient(180deg,#f0f9ff 0%,var(--bg) 100%)}
-.hero h1{font-size:2rem;font-weight:800;color:var(--text);letter-spacing:-0.03em;margin-bottom:8px}
-.hero h1 em{font-style:normal;color:var(--blue)}
-.hero .tagline{color:var(--text2);font-size:1rem;max-width:600px;margin:0 auto 20px}
-.hero-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
-.hero-stat{text-align:center}
-.hero-stat .num{font-size:1.5rem;font-weight:800;color:var(--blue)}
-.hero-stat .lbl{font-size:0.75rem;color:var(--text3)}
+/* 顶栏 */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 16px}
+.topbar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.logo{font-size:1.1rem;font-weight:800;color:var(--text);white-space:nowrap}
+.logo span{color:var(--blue)}
+.search{flex:1;position:relative;max-width:480px}
+.search input{width:100%;padding:8px 12px 8px 32px;border:1px solid var(--border);border-radius:20px;font-size:.85rem;outline:none;background:var(--bg);transition:border .2s}
+.search input:focus{border-color:var(--blue);background:#fff}
+.search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:.8rem}
+.topbar-stats{font-size:.72rem;color:var(--text3);white-space:nowrap}
+.topbar-stats b{color:var(--blue)}
 
-/* Tier Explainer */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto 24px;padding:0 20px}
-.tier-card{padding:14px 16px;border-radius:10px;border:1px solid var(--border)}
-.tier-card h3{font-size:0.85rem;font-weight:700;margin-bottom:4px}
-.tier-card p{font-size:0.72rem;color:var(--text2);line-height:1.4}
-.tier-card.t1{background:var(--green-bg);border-color:#bbf7d0}
-.tier-card.t1 h3{color:var(--green)}
-.tier-card.t2{background:var(--blue-bg);border-color:#bfdbfe}
-.tier-card.t2 h3{color:var(--blue)}
-.tier-card.t3{background:var(--surface2);border-color:var(--border)}
-.tier-card.t3 h3{color:var(--text2)}
+/* 分类导航 */
+.nav-wrap{background:#fff;border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav-wrap::-webkit-scrollbar{display:none}
+.nav{max-width:1200px;margin:0 auto;display:flex;gap:4px;padding:8px 16px;white-space:nowrap}
+.nav-chip{padding:5px 14px;border-radius:16px;font-size:.78rem;color:var(--text2);background:var(--tag);border:none;cursor:pointer;transition:all .15s}
+.nav-chip:hover{background:var(--blue-bg);color:var(--blue)}
+.nav-chip.on{background:var(--blue);color:#fff}
 
-/* Toolbar */
-.toolbar{max-width:1600px;margin:0 auto;padding:0 20px 16px}
-.search-box{display:flex;gap:8px;margin-bottom:12px}
-.search-box input{flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:0.9rem;outline:none;background:var(--surface)}
-.search-box input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.1)}
-.search-box .count{display:flex;align-items:center;font-size:0.8rem;color:var(--text3);white-space:nowrap;padding:0 4px}
+/* 筛选条 */
+.filter-bar{max-width:1200px;margin:12px auto 0;padding:0 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.fsel{padding:4px 10px;border:1px solid var(--border);border-radius:6px;font-size:.72rem;color:var(--text2);background:#fff;outline:none;cursor:pointer}
+.fsel:focus{border-color:var(--blue)}
+.fsort{margin-left:auto;display:flex;gap:4px}
+.fsort button{padding:4px 10px;border:1px solid var(--border);border-radius:5px;font-size:.7rem;color:var(--text2);background:#fff;cursor:pointer}
+.fsort button:hover{border-color:var(--blue);color:var(--blue)}
+.fsort button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.export-btn{padding:4px 10px;border:1px solid var(--border);border-radius:5px;font-size:.7rem;color:var(--text2);background:#fff;cursor:pointer}
+.export-btn:hover{color:var(--green);border-color:var(--green)}
 
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.filter-chip{display:flex;align-items:center;gap:4px;padding:6px 12px;border:1px solid var(--border);border-radius:20px;font-size:0.75rem;color:var(--text2);background:var(--surface);cursor:pointer;transition:all 0.15s;user-select:none}
-.filter-chip:hover{border-color:var(--blue);color:var(--blue)}
-.filter-chip select{border:none;background:none;font-size:0.75rem;color:inherit;outline:none;cursor:pointer;-webkit-appearance:none}
-.filter-chip select option{direction:ltr}
+/* 卡片网格 */
+.main{max-width:1200px;margin:0 auto;padding:12px 16px 60px}
+.result-info{font-size:.72rem;color:var(--text3);margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;transition:box-shadow .15s,transform .15s;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 2px 12px rgba(0,0,0,.07);transform:translateY(-1px)}
+.c-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.c-icon{width:32px;height:32px;border-radius:8px;background:var(--tag);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--blue);flex-shrink:0;text-transform:uppercase}
+.c-info{flex:1;min-width:0}
+.c-name{font-size:.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-name a{color:var(--text);text-decoration:none}
+.c-name a:hover{color:var(--blue)}
+.c-url{font-size:.62rem;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-tags{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0}
+.ct{font-size:.6rem;padding:2px 6px;border-radius:3px;font-weight:500}
+.ct-type{background:var(--purple-bg);color:var(--purple)}
+.ct-t1{background:var(--green-bg);color:var(--green)}
+.ct-t2{background:var(--blue-bg);color:var(--blue)}
+.ct-t3{background:var(--tag);color:var(--text3)}
+.ct-df-y{background:var(--green-bg);color:var(--green)}
+.ct-df-n{background:var(--red-bg);color:var(--red)}
+.ct-df-m{background:var(--orange-bg);color:var(--orange)}
+.ct-df-u{background:var(--tag);color:var(--text3)}
+.ct-free{background:var(--green-bg);color:var(--green)}
+.ct-paid{background:var(--orange-bg);color:var(--orange)}
+.ct-lang{background:#e8f4fd;color:#0891b2}
+.c-desc{font-size:.72rem;color:var(--text2);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:auto}
+.c-ease{margin-top:6px;display:flex;align-items:center;gap:6px}
+.c-ease .eb{flex:1;height:3px;background:var(--tag);border-radius:2px;overflow:hidden}
+.c-ease .ef{height:100%;border-radius:2px}
+.ef.easy{background:var(--green)}.ef.mid{background:var(--orange)}.ef.hard{background:var(--red)}
+.c-ease .el{font-size:.55rem;color:var(--text3);min-width:36px}
 
-.sort-chips{display:flex;gap:6px;align-items:center;margin-bottom:16px;font-size:0.75rem;color:var(--text3)}
-.sort-chips span{margin-right:4px}
-.sbtn{padding:4px 10px;border:1px solid var(--border);border-radius:4px;background:none;font-size:0.7rem;color:var(--text2);cursor:pointer}
-.sbtn:hover{border-color:var(--blue)}
-.sbtn.on{background:var(--blue);color:#fff;border-color:var(--blue)}
-.export-link{margin-left:auto;color:var(--blue);font-size:0.75rem;cursor:pointer;border:none;background:none}
-.export-link:hover{text-decoration:underline}
-
-/* Grid */
-.grid{max-width:1600px;margin:0 auto;padding:0 20px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-.site-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:box-shadow 0.15s}
-.site-card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.08)}
-.sc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.sc-name{font-size:0.9rem;font-weight:600;color:var(--text)}
-.sc-dr{font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:10px}
-.dr-h{background:var(--green-bg);color:var(--green)}
-.dr-m{background:var(--orange-bg);color:var(--orange)}
-.dr-l{background:var(--surface2);color:var(--text3)}
-.dr-n{background:var(--surface2);color:var(--text3)}
-.sc-url{font-size:0.7rem;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
-.sc-url a{color:var(--blue)}
-.sc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-.stag{font-size:0.65rem;padding:2px 7px;border-radius:4px;font-weight:500}
-.stag-type{background:var(--purple-bg);color:var(--purple)}
-.stag-t1{background:var(--green-bg);color:var(--green)}
-.stag-t2{background:var(--blue-bg);color:var(--blue)}
-.stag-t3{background:var(--surface2);color:var(--text3)}
-.stag-df-y{background:var(--green-bg);color:var(--green)}
-.stag-df-n{background:var(--red-bg);color:var(--red)}
-.stag-df-m{background:var(--orange-bg);color:var(--orange)}
-.stag-df-u{background:var(--surface2);color:var(--text3)}
-.stag-free{background:var(--green-bg);color:var(--green)}
-.stag-paid{background:var(--orange-bg);color:var(--orange)}
-.stag-lang{background:var(--cyan-bg);color:var(--cyan)}
-.sc-desc{font-size:0.75rem;color:var(--text2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
-.sc-diff{display:flex;align-items:center;gap:6px;margin-top:6px}
-.sc-diff .bar-bg{flex:1;height:4px;background:var(--surface2);border-radius:2px;overflow:hidden}
-.sc-diff .bar-fg{height:100%;border-radius:2px}
-.sc-diff .bar-fg.easy{background:var(--green)}
-.sc-diff .bar-fg.mid{background:var(--orange)}
-.sc-diff .bar-fg.hard{background:var(--red)}
-.sc-diff .dlbl{font-size:0.6rem;color:var(--text3);min-width:42px}
-
-/* Footer */
-.ft{text-align:center;padding:20px;color:var(--text3);font-size:0.7rem;border-top:1px solid var(--border)}
-
-/* Pagination */
-.pager{display:flex;justify-content:center;align-items:center;gap:8px;padding:20px;max-width:1600px;margin:0 auto}
-.pager button{padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text2);font-size:0.8rem;cursor:pointer}
+/* 分页 */
+.pager{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:20px}
+.pager button{padding:8px 20px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text2);font-size:.82rem;cursor:pointer}
 .pager button:hover{border-color:var(--blue);color:var(--blue)}
-.pager button:disabled{opacity:0.3;cursor:default}
-.pager .pg-info{font-size:0.75rem;color:var(--text3)}
+.pager button:disabled{opacity:.3;cursor:default}
+.pager .pi{font-size:.75rem;color:var(--text3)}
 
+/* 页脚 */
+.foot{text-align:center;padding:20px 16px;color:var(--text3);font-size:.68rem;border-top:1px solid var(--border);background:#fff}
+
+/* 移动端 */
 @media(max-width:768px){
+  .topbar-inner{flex-wrap:wrap;gap:8px}
+  .search{order:3;max-width:100%;flex-basis:100%}
+  .topbar-stats{display:none}
+  .grid{grid-template-columns:1fr 1fr;gap:8px}
+  .card{padding:10px 12px}
+  .c-icon{width:28px;height:28px;font-size:.65rem}
+  .c-desc{-webkit-line-clamp:1}
+}
+@media(max-width:480px){
   .grid{grid-template-columns:1fr}
-  .tiers{grid-template-columns:1fr}
-  .hero h1{font-size:1.4rem}
-  .hero-stats{gap:16px}
-  .filters{gap:6px}
+  .filter-bar{gap:4px}
+  .fsort{margin-left:0;width:100%;justify-content:flex-start;overflow-x:auto}
+  .nav{padding:6px 12px}
 }
 </style>
 </head>
 <body>
 
-<div class="hero">
-  <h1>Free <em>Backlink</em> Opportunities</h1>
-  <p class="tagline">5,900+ verified sites where you can get a backlink — sorted by authority, difficulty, and type. No signup required to browse.</p>
-  <div class="hero-stats">
-    <div class="hero-stat"><div class="num" id="hTotal">-</div><div class="lbl">Sites</div></div>
-    <div class="hero-stat"><div class="num" id="hT1">-</div><div class="lbl">Tier 1 (High Authority)</div></div>
-    <div class="hero-stat"><div class="num" id="hDF">-</div><div class="lbl">Dofollow</div></div>
-    <div class="hero-stat"><div class="num" id="hFree">-</div><div class="lbl">100% Free</div></div>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">外链<span>导航</span></div>
+    <div class="search">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search" placeholder="搜索站点名称、域名或描述…">
+    </div>
+    <div class="topbar-stats">共 <b id="hTotal">-</b> 个站点 · Tier 1 <b id="hT1">-</b> · Dofollow <b id="hDF">-</b></div>
   </div>
 </div>
 
-<div class="tiers">
-  <div class="tier-card t1">
-    <h3>Tier 1 — High Authority</h3>
-    <p>.edu, .gov, high-DR citations and directories. The strongest backlinks you can get for free.</p>
-  </div>
-  <div class="tier-card t2">
-    <h3>Tier 2 — Medium Quality</h3>
-    <p>Web 2.0 platforms, forums, mid-DR directories. Solid everyday link sources.</p>
-  </div>
-  <div class="tier-card t3">
-    <h3>Tier 3 — Bulk Assets</h3>
-    <p>Bookmarks, profiles, low-DR sites. Use these to support your link pyramid base.</p>
-  </div>
-</div>
-
-<div class="toolbar">
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Search by name, domain, or description...">
-    <span class="count" id="count"></span>
-  </div>
-  <div class="filters">
-    <div class="filter-chip">Type <select id="fType"><option value="">All</option></select></div>
-    <div class="filter-chip">Tier <select id="fTier"><option value="">All</option><option>1</option><option>2</option><option>3</option></select></div>
-    <div class="filter-chip">DR <select id="fDR"><option value="">All</option><option value="90">90+</option><option value="70">70+</option><option value="50">50+</option><option value="30">30+</option></select></div>
-    <div class="filter-chip">Dofollow <select id="fDF"><option value="">All</option><option value="true">Yes</option><option value="likely_true">Likely Yes</option><option value="false">No</option></select></div>
-    <div class="filter-chip">Language <select id="fLang"><option value="">All</option></select></div>
-    <div class="filter-chip">Cost <select id="fCost"><option value="">All</option><option value="free">Free</option><option value="freemium">Freemium</option><option value="paid">Paid</option></select></div>
-  </div>
-  <div class="sort-chips">
-    <span>Sort by</span>
-    <button class="sbtn on" onclick="doSort('dr',this)">Authority ↓</button>
-    <button class="sbtn" onclick="doSort('diff',this)">Easiest First</button>
-    <button class="sbtn" onclick="doSort('name',this)">A-Z</button>
-    <button class="sbtn" onclick="doSort('tier',this)">Tier ↑</button>
-    <button class="export-link" onclick="exportCSV()">↓ Export CSV</button>
+<div class="nav-wrap">
+  <div class="nav" id="navBar">
+    <button class="nav-chip on" data-cat="">全部</button>
+    <button class="nav-chip" data-cat="directory">目录提交</button>
+    <button class="nav-chip" data-cat="profile">Profile</button>
+    <button class="nav-chip" data-cat="bookmark">书签</button>
+    <button class="nav-chip" data-cat="forum">论坛</button>
+    <button class="nav-chip" data-cat="citation">Citation</button>
+    <button class="nav-chip" data-cat="submission">投稿</button>
+    <button class="nav-chip" data-cat="social">社交</button>
+    <button class="nav-chip" data-cat="edu">.edu</button>
+    <button class="nav-chip" data-cat="gov">.gov</button>
   </div>
 </div>
 
-<div class="grid" id="grid"></div>
-<div class="pager" id="pager"></div>
-<div class="ft">Backlink Pool — Updated <span id="ftDate">-</span> — Data sourced and verified from 15+ SEO communities</div>
+<div class="filter-bar">
+  <select class="fsel" id="fTier"><option value="">所有层级</option><option value="1">Tier 1 高权威</option><option value="2">Tier 2 中等</option><option value="3">Tier 3 批量</option></select>
+  <select class="fsel" id="fDR"><option value="">所有DR</option><option value="90">DR 90+</option><option value="70">DR 70+</option><option value="50">DR 50+</option><option value="30">DR 30+</option></select>
+  <select class="fsel" id="fDF"><option value="">Dofollow</option><option value="true">是</option><option value="likely_true">可能是</option><option value="false">否</option></select>
+  <select class="fsel" id="fLang"><option value="">语言</option></select>
+  <select class="fsel" id="fCost"><option value="">费用</option><option value="free">免费</option><option value="freemium">免费增值</option><option value="paid">付费</option></select>
+  <div class="fsort">
+    <button class="on" onclick="doSort('dr',this)">权重 ↓</button>
+    <button onclick="doSort('diff',this)">最易 ↑</button>
+    <button onclick="doSort('name',this)">A-Z</button>
+  </div>
+  <button class="export-btn" onclick="exportCSV()">导出 CSV</button>
+</div>
+
+<div class="main">
+  <div class="result-info" id="count"></div>
+  <div class="grid" id="grid"></div>
+  <div class="pager" id="pager"></div>
+</div>
+
+<div class="foot">外链导航 — 收录 <span id="ftTotal">-</span> 个可提交站点 · 数据更新于 <span id="ftDate">-</span><br>链接金字塔：Tier 1（高权威实体页）→ Tier 2（Web 2.0/论坛/目录）→ Tier 3（书签/Profile 批量资产）</div>
 
 <script>
-let ALL=[], filtered=[], page=0, perPage=60, sortBy='dr';
+let ALL=[],filtered=[],page=0,PP=48,sortBy='dr';
 
 async function init(){
   try{
     let r;
     try{r=await fetch('data/backlink-data.json')}catch(e){}
-    if(!r||!r.ok) r=await fetch('../data/backlink-data.json');
-    if(!r.ok) throw r.status;
+    if(!r||!r.ok)r=await fetch('../data/backlink-data.json');
+    if(!r.ok)throw r.status;
     const j=await r.json();
     const raw=j.records||j;
     ALL=raw.filter(x=>!x.notes||!x.notes.startsWith('DEAD'));
     const m=j.meta||{};
     document.getElementById('hTotal').textContent=ALL.length.toLocaleString();
+    document.getElementById('ftTotal').textContent=ALL.length;
     document.getElementById('ftDate').textContent=m.generated||'-';
-    // hero stats
     document.getElementById('hT1').textContent=ALL.filter(x=>x.tier==='1').length.toLocaleString();
     document.getElementById('hDF').textContent=(ALL.filter(x=>x.dofollow==='true').length+ALL.filter(x=>x.dofollow==='likely_true').length).toLocaleString();
-    document.getElementById('hFree').textContent=ALL.filter(x=>!x.free_or_paid||x.free_or_paid==='free').length.toLocaleString();
-    // populate filter options
-    fill('fType',[...new Set(ALL.map(x=>x.type).filter(Boolean))].sort());
-    fill('fLang',[...new Set(ALL.map(x=>x.language).filter(Boolean))].sort());
+    fillSel('fLang',[...new Set(ALL.map(x=>x.language).filter(Boolean))].sort());
+    // nav click
+    document.querySelectorAll('.nav-chip').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.nav-chip').forEach(b=>b.classList.remove('on'));
+        btn.classList.add('on');
+        apply();
+      });
+    });
     apply();
   }catch(e){
-    document.getElementById('grid').innerHTML='<p style="padding:40px;text-align:center;color:#999">Failed to load. Run build script first.</p>';
+    document.getElementById('grid').innerHTML='<p style="padding:40px;text-align:center;color:#999">加载失败，请先运行构建脚本</p>';
   }
 }
 
-function fill(id,arr){
+function fillSel(id,arr){
   const el=document.getElementById(id);
   arr.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;el.appendChild(o)});
 }
 
 function apply(){
   const q=document.getElementById('search').value.toLowerCase();
-  const ft=document.getElementById('fType').value;
+  const nav=document.querySelector('.nav-chip.on')?.dataset.cat||'';
   const fti=document.getElementById('fTier').value;
   const fdr=document.getElementById('fDR').value;
   const fdf=document.getElementById('fDF').value;
   const fl=document.getElementById('fLang').value;
   const fc=document.getElementById('fCost').value;
   filtered=ALL.filter(r=>{
-    if(ft&&r.type!==ft) return false;
-    if(fti&&r.tier!==fti) return false;
-    if(fdf&&r.dofollow!==fdf) return false;
-    if(fl&&r.language!==fl) return false;
-    if(fc&&r.free_or_paid!==fc) return false;
+    if(nav&&r.type!==nav)return false;
+    if(fti&&r.tier!==fti)return false;
+    if(fdf&&r.dofollow!==fdf)return false;
+    if(fl&&r.language!==fl)return false;
+    if(fc&&r.free_or_paid!==fc)return false;
     if(fdr){const mn=parseInt(fdr);if(fdr==='0'){if(r.dr!=null&&r.dr>=30)return false}else{if(r.dr==null||r.dr<mn)return false}}
     if(q){const h=((r.name||'')+' '+(r.domain||'')+' '+(r.url||'')+' '+(r.desc||'')).toLowerCase();if(!h.includes(q))return false}
     return true;
   });
-  sort();
-  page=0;
-  document.getElementById('count').textContent=filtered.length+' sites';
+  dosort();page=0;
+  document.getElementById('count').textContent=`找到 ${filtered.length} 个站点`;
   render();
 }
 
-function sort(){
-  const d={dr:-1,diff:1,name:1,tier:1}[sortBy]||1;
+function dosort(){
+  const d={dr:-1,diff:1,name:1}[sortBy]||1;
   filtered.sort((a,b)=>{
     let va,vb;
     if(sortBy==='dr'){va=a.dr||0;vb=b.dr||0}
     else if(sortBy==='diff'){va=a.difficulty||0;vb=b.difficulty||0}
-    else if(sortBy==='name'){va=(a.name||'').toLowerCase();vb=(b.name||'').toLowerCase()}
-    else{va=parseInt(a.tier)||9;vb=parseInt(b.tier)||9}
+    else{va=(a.name||'').toLowerCase();vb=(b.name||'').toLowerCase()}
     return va<vb?-1*d:va>vb?1*d:0;
   });
 }
 
 function doSort(s,btn){
   sortBy=s;
-  document.querySelectorAll('.sbtn').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.fsort button').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
-  sort();page=0;render();
+  dosort();page=0;render();
 }
 
 function render(){
   const g=document.getElementById('grid');
-  const start=page*perPage;
-  const slice=filtered.slice(start,start+perPage);
-  g.innerHTML=slice.map(r=>{
+  const s=page*PP;
+  const sl=filtered.slice(s,s+PP);
+  g.innerHTML=sl.map(r=>{
     const dc=r.dr>=80?'dr-h':r.dr>=50?'dr-m':r.dr?'dr-l':'dr-n';
-    const tc=r.tier==='1'?'stag-t1':r.tier==='2'?'stag-t2':'stag-t3';
-    const dfc=r.dofollow==='true'?'stag-df-y':r.dofollow==='false'?'stag-df-n':r.dofollow==='likely_true'||r.dofollow==='likely_false'?'stag-df-m':'stag-df-u';
+    const tc=r.tier==='1'?'ct-t1':r.tier==='2'?'ct-t2':'ct-t3';
+    const dfc=r.dofollow==='true'?'ct-df-y':r.dofollow==='false'?'ct-df-n':r.dofollow==='likely_true'||r.dofollow==='likely_false'?'ct-df-m':'ct-df-u';
+    const dfLabel=r.dofollow==='true'?'Dofollow':r.dofollow==='false'?'Nofollow':r.dofollow==='likely_true'?'可能DF':r.dofollow==='likely_false'?'可能NF':'未知';
     const diff=r.difficulty||0;
     const bc=diff<=3?'easy':diff<=6?'mid':'hard';
-    const lang=r.language&&r.language!=='en'?'<span class="stag stag-lang">'+esc(r.language)+'</span>':'';
-    const cost=r.free_or_paid&&r.free_or_paid!=='free'?'<span class="stag stag-'+r.free_or_paid+'">'+esc(r.free_or_paid)+'</span>':'<span class="stag stag-free">free</span>';
-    const diffBar=diff?'<div class="sc-diff"><span class="dlbl">Ease '+(10-diff)+'/10</span><div class="bar-bg"><div class="bar-fg '+bc+'" style="width:'+((10-diff)*10)+'%"></div></div></div>':'';
-    return `<div class="site-card">
-      <div class="sc-head"><span class="sc-name">${esc(r.name||r.domain)}</span><span class="sc-dr ${dc}">${r.dr!=null?'DR '+r.dr:'N/A'}</span></div>
-      <div class="sc-url"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.url)}</a></div>
-      <div class="sc-tags">
-        <span class="stag stag-type">${esc(r.type)}</span>
-        <span class="stag ${tc}">Tier ${esc(r.tier)}</span>
-        <span class="stag ${dfc}">${r.dofollow==='true'?'Dofollow':r.dofollow==='false'?'Nofollow':r.dofollow==='likely_true'?'Likely DF':r.dofollow==='likely_false'?'Likely NF':'Unknown'}</span>
+    const lang=r.language&&r.language!=='en'?'<span class="ct ct-lang">'+esc(r.language)+'</span>':'';
+    const cost=r.free_or_paid&&r.free_or_paid!=='free'?'<span class="ct ct-'+r.free_or_paid+'">'+(r.free_or_paid==='freemium'?'免费增值':'付费')+'</span>':'<span class="ct ct-free">免费</span>';
+    const ease=diff?`<div class="c-ease"><span class="el">易用度 ${10-diff}/10</span><div class="eb"><div class="ef ${bc}" style="width:${(10-diff)*10}%"></div></div></div>`:'';
+    const icon=(r.name||'?')[0].toUpperCase();
+    return `<div class="card">
+      <div class="c-head">
+        <div class="c-icon">${icon}</div>
+        <div class="c-info">
+          <div class="c-name"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name||r.domain)}</a></div>
+          <div class="c-url">${esc(r.url)}</div>
+        </div>
+      </div>
+      <div class="c-tags">
+        <span class="ct ct-type">${esc(r.type)}</span>
+        <span class="ct ${tc}">T${esc(r.tier)}</span>
+        <span class="ct ${dfc}">${dfLabel}</span>
+        ${r.dr?`<span class="ct" style="background:var(--tag);color:var(--text2)">DR ${r.dr}</span>`:''}
         ${lang}${cost}
       </div>
-      ${r.desc?'<div class="sc-desc">'+esc(r.desc)+'</div>':''}
-      ${diffBar}
+      ${r.desc?'<div class="c-desc">'+esc(r.desc)+'</div>':''}
+      ${ease}
     </div>`;
   }).join('');
-  // pagination
-  const total=filtered.length;
-  const pages=Math.ceil(total/perPage);
+  const total=filtered.length,pages=Math.ceil(total/PP);
   const pg=document.getElementById('pager');
-  if(pages<=1){pg.innerHTML='';return;}
-  pg.innerHTML=`<button ${page===0?'disabled':''} onclick="goPage(${page-1})">← Prev</button>
-    <span class="pg-info">${start+1}–${Math.min(start+perPage,total)} of ${total}</span>
-    <button ${page>=pages-1?'disabled':''} onclick="goPage(${page+1})">Next →</button>`;
+  if(pages<=1){pg.innerHTML='';return}
+  pg.innerHTML=`<button ${page===0?'disabled':''} onclick="goPage(${page-1})">上一页</button>
+    <span class="pi">${s+1}–${Math.min(s+PP,total)} / ${total}</span>
+    <button ${page>=pages-1?'disabled':''} onclick="goPage(${page+1})">下一页</button>`;
 }
 
-function goPage(p){page=p;render();window.scrollTo({top:document.querySelector('.grid').offsetTop-20,behavior:'smooth'})}
+function goPage(p){page=p;render();window.scrollTo({top:document.querySelector('.main').offsetTop-60,behavior:'smooth'})}
 
 function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):''}
 
 function exportCSV(){
-  const h=['name','url','type','tier','dr','dofollow','difficulty','language','cost','description'];
-  const rows=filtered.map(r=>h.map(k=>{
-    const m={name:r.name,url:r.url,type:r.type,tier:r.tier,dr:r.dr,dofollow:r.dofollow,difficulty:r.difficulty,language:r.language,cost:r.free_or_paid,description:r.desc};
-    return '"'+String(m[k]||'').replace(/"/g,'""')+'"';
+  const h=['名称','网址','类型','层级','DR','Dofollow','难度','语言','费用','描述'];
+  const rows=filtered.map(r=>h.map((_,i)=>{
+    const m=[r.name,r.url,r.type,r.tier,r.dr,r.dofollow,r.difficulty,r.language,r.free_or_paid,r.desc];
+    return '"'+String(m[i]||'').replace(/"/g,'""')+'"';
   }).join(','));
   const csv='\uFEFF'+h.join(',')+'\n'+rows.join('\n');
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
-  a.download='backlinks-'+new Date().toISOString().slice(0,10)+'.csv';a.click();
+  a.download='外链导航-'+new Date().toISOString().slice(0,10)+'.csv';a.click();
 }
 
 document.getElementById('search').addEventListener('input',apply);
-['fType','fTier','fDR','fDF','fLang','fCost'].forEach(id=>document.getElementById(id).addEventListener('change',apply));
+['fTier','fDR','fDF','fLang','fCost'].forEach(id=>document.getElementById(id).addEventListener('change',apply));
 
 init();
 </script>
