@@ -3,358 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>外链资源池 | Backlink Pool</title>
+<title>Free Backlink Opportunities - 5900+ Sites to Boost Your SEO</title>
+<meta name="description" content="Browse 5,900+ free backlink sources sorted by Domain Rating, tier, and difficulty. Find profile, directory, citation, and Web 2.0 link opportunities for your SEO strategy.">
 <style>
-:root{--bg:#0a0a12;--surface:#12121e;--surface2:#1a1a2e;--border:rgba(255,255,255,0.06);--text:#e4e4e7;--text2:#a1a1aa;--text3:#71717a;--green:#22c55e;--blue:#3b82f6;--orange:#f59e0b;--red:#ef4444;--purple:#a855f7;--cyan:#06b6d4;--pink:#ec4899}
+:root{--bg:#fafafa;--surface:#fff;--surface2:#f5f5f5;--border:#e5e5e5;--text:#18181b;--text2:#52525b;--text3:#a1a1aa;--green:#16a34a;--green-bg:#f0fdf4;--blue:#2563eb;--blue-bg:#eff6ff;--orange:#ea580c;--orange-bg:#fff7ed;--red:#dc2626;--red-bg:#fef2f2;--purple:#9333ea;--purple-bg:#faf5ff;--cyan:#0891b2;--cyan-bg:#ecfeff}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
-.app{max-width:1800px;margin:0 auto;padding:16px 20px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:var(--blue);text-decoration:none}
 
-/* Header */
-.hdr{text-align:center;padding:20px 0 16px}
-.hdr h1{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--green),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.02em}
-.hdr .sub{color:var(--text3);font-size:0.75rem;margin-top:4px}
+/* Hero */
+.hero{text-align:center;padding:48px 20px 32px;background:linear-gradient(180deg,#f0f9ff 0%,var(--bg) 100%)}
+.hero h1{font-size:2rem;font-weight:800;color:var(--text);letter-spacing:-0.03em;margin-bottom:8px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .tagline{color:var(--text2);font-size:1rem;max-width:600px;margin:0 auto 20px}
+.hero-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:1.5rem;font-weight:800;color:var(--blue)}
+.hero-stat .lbl{font-size:0.75rem;color:var(--text3)}
 
-/* Tier Legend */
-.tier-legend{display:flex;justify-content:center;gap:20px;margin:10px 0;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:0.72rem;flex-wrap:wrap}
-.tier-legend .tl-item{display:flex;align-items:center;gap:6px;color:var(--text2)}
-.tier-legend .tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.tier-legend .tl-dot.t1{background:var(--green)}
-.tier-legend .tl-dot.t2{background:var(--blue)}
-.tier-legend .tl-dot.t3{background:var(--text3)}
-.tier-legend .tl-desc{color:var(--text3);font-size:0.65rem}
+/* Tier Explainer */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto 24px;padding:0 20px}
+.tier-card{padding:14px 16px;border-radius:10px;border:1px solid var(--border)}
+.tier-card h3{font-size:0.85rem;font-weight:700;margin-bottom:4px}
+.tier-card p{font-size:0.72rem;color:var(--text2);line-height:1.4}
+.tier-card.t1{background:var(--green-bg);border-color:#bbf7d0}
+.tier-card.t1 h3{color:var(--green)}
+.tier-card.t2{background:var(--blue-bg);border-color:#bfdbfe}
+.tier-card.t2 h3{color:var(--blue)}
+.tier-card.t3{background:var(--surface2);border-color:var(--border)}
+.tier-card.t3 h3{color:var(--text2)}
 
-/* Stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px;margin:12px 0 16px}
-.st{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 6px;text-align:center}
-.st-v{font-size:1.2rem;font-weight:700;color:var(--green)}
-.st-l{font-size:0.65rem;color:var(--text3);margin-top:2px}
+/* Toolbar */
+.toolbar{max-width:1600px;margin:0 auto;padding:0 20px 16px}
+.search-box{display:flex;gap:8px;margin-bottom:12px}
+.search-box input{flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:0.9rem;outline:none;background:var(--surface)}
+.search-box input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.1)}
+.search-box .count{display:flex;align-items:center;font-size:0.8rem;color:var(--text3);white-space:nowrap;padding:0 4px}
 
-/* Filters */
-.flt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;align-items:flex-end}
-.fg{display:flex;flex-direction:column;gap:3px}
-.fg label{font-size:0.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.05em}
-.fg select,.fg input{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:5px 8px;border-radius:6px;font-size:0.75rem;min-width:110px;outline:none}
-.fg select:focus,.fg input:focus{border-color:var(--blue)}
-.fg input{min-width:160px}
-.sort-bar{display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;font-size:0.7rem;color:var(--text3)}
-.sort-bar span{white-space:nowrap}
-.sort-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:3px 10px;border-radius:4px;cursor:pointer;font-size:0.7rem}
-.sort-btn:hover{border-color:var(--blue);color:var(--text)}
-.sort-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
-.result-count{margin-left:auto;color:var(--text2)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filter-chip{display:flex;align-items:center;gap:4px;padding:6px 12px;border:1px solid var(--border);border-radius:20px;font-size:0.75rem;color:var(--text2);background:var(--surface);cursor:pointer;transition:all 0.15s;user-select:none}
+.filter-chip:hover{border-color:var(--blue);color:var(--blue)}
+.filter-chip select{border:none;background:none;font-size:0.75rem;color:inherit;outline:none;cursor:pointer;-webkit-appearance:none}
+.filter-chip select option{direction:ltr}
 
-/* Grid container */
-.grid-wrap{position:relative;height:calc(100vh - 320px);overflow-y:auto;border-radius:10px}
-.grid-wrap::-webkit-scrollbar{width:6px}
-.grid-wrap::-webkit-scrollbar-track{background:transparent}
-.grid-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:3px}
-.grid-inner{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;padding:4px}
+.sort-chips{display:flex;gap:6px;align-items:center;margin-bottom:16px;font-size:0.75rem;color:var(--text3)}
+.sort-chips span{margin-right:4px}
+.sbtn{padding:4px 10px;border:1px solid var(--border);border-radius:4px;background:none;font-size:0.7rem;color:var(--text2);cursor:pointer}
+.sbtn:hover{border-color:var(--blue)}
+.sbtn.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.export-link{margin-left:auto;color:var(--blue);font-size:0.75rem;cursor:pointer;border:none;background:none}
+.export-link:hover{text-decoration:underline}
 
-/* Card */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;transition:border-color 0.15s}
-.card:hover{border-color:rgba(59,130,246,0.35)}
-.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
-.card-name{font-size:0.8rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:65%}
-.dr{font-size:0.7rem;font-weight:700;padding:2px 6px;border-radius:4px}
-.dr-high{background:rgba(34,197,94,0.15);color:var(--green)}
-.dr-mid{background:rgba(245,158,11,0.15);color:var(--orange)}
-.dr-low{background:rgba(239,68,68,0.15);color:var(--red)}
-.dr-na{background:rgba(113,113,122,0.1);color:var(--text3)}
-.card-url{font-size:0.6rem;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:6px}
-.card-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
-.tag{font-size:0.6rem;padding:2px 6px;border-radius:3px;white-space:nowrap}
-.tag-type{background:rgba(168,85,247,0.12);color:var(--purple)}
-.tag-tier{background:rgba(6,182,212,0.12);color:var(--cyan)}
-.tag-tier-1{background:rgba(34,197,94,0.15);color:var(--green)}
-.tag-tier-2{background:rgba(59,130,246,0.12);color:var(--blue)}
-.tag-tier-3{background:rgba(113,113,122,0.1);color:var(--text3)}
-.tag-df{font-weight:600}
-.tag-df-true{background:rgba(34,197,94,0.12);color:var(--green)}
-.tag-df-false{background:rgba(239,68,68,0.12);color:var(--red)}
-.tag-df-maybe{background:rgba(245,158,11,0.12);color:var(--orange)}
-.tag-df-unknown{background:rgba(113,113,122,0.08);color:var(--text3)}
-.tag-lang{background:rgba(168,85,247,0.08);color:var(--text2)}
-.tag-src{background:rgba(59,130,246,0.08);color:var(--text2)}
-.tag-paid{background:rgba(245,158,11,0.1);color:var(--orange)}
-.tag-free{background:rgba(34,197,94,0.08);color:var(--green)}
-.card-bar{display:flex;align-items:center;gap:6px;margin-top:2px}
-.bar-label{font-size:0.55rem;color:var(--text3);min-width:30px}
-.bar-track{flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden}
-.bar-fill{height:100%;border-radius:2px;transition:width 0.2s}
-.bar-fill-easy{background:var(--green)}
-.bar-fill-mid{background:var(--orange)}
-.bar-fill-hard{background:var(--red)}
-.card-desc{font-size:0.65rem;color:var(--text2);margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* Grid */
+.grid{max-width:1600px;margin:0 auto;padding:0 20px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.site-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:box-shadow 0.15s}
+.site-card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.sc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.sc-name{font-size:0.9rem;font-weight:600;color:var(--text)}
+.sc-dr{font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:10px}
+.dr-h{background:var(--green-bg);color:var(--green)}
+.dr-m{background:var(--orange-bg);color:var(--orange)}
+.dr-l{background:var(--surface2);color:var(--text3)}
+.dr-n{background:var(--surface2);color:var(--text3)}
+.sc-url{font-size:0.7rem;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
+.sc-url a{color:var(--blue)}
+.sc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.stag{font-size:0.65rem;padding:2px 7px;border-radius:4px;font-weight:500}
+.stag-type{background:var(--purple-bg);color:var(--purple)}
+.stag-t1{background:var(--green-bg);color:var(--green)}
+.stag-t2{background:var(--blue-bg);color:var(--blue)}
+.stag-t3{background:var(--surface2);color:var(--text3)}
+.stag-df-y{background:var(--green-bg);color:var(--green)}
+.stag-df-n{background:var(--red-bg);color:var(--red)}
+.stag-df-m{background:var(--orange-bg);color:var(--orange)}
+.stag-df-u{background:var(--surface2);color:var(--text3)}
+.stag-free{background:var(--green-bg);color:var(--green)}
+.stag-paid{background:var(--orange-bg);color:var(--orange)}
+.stag-lang{background:var(--cyan-bg);color:var(--cyan)}
+.sc-desc{font-size:0.75rem;color:var(--text2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.sc-diff{display:flex;align-items:center;gap:6px;margin-top:6px}
+.sc-diff .bar-bg{flex:1;height:4px;background:var(--surface2);border-radius:2px;overflow:hidden}
+.sc-diff .bar-fg{height:100%;border-radius:2px}
+.sc-diff .bar-fg.easy{background:var(--green)}
+.sc-diff .bar-fg.mid{background:var(--orange)}
+.sc-diff .bar-fg.hard{background:var(--red)}
+.sc-diff .dlbl{font-size:0.6rem;color:var(--text3);min-width:42px}
 
 /* Footer */
-.foot{text-align:center;padding:12px 0;color:var(--text3);font-size:0.65rem;border-top:1px solid var(--border);margin-top:12px}
+.ft{text-align:center;padding:20px;color:var(--text3);font-size:0.7rem;border-top:1px solid var(--border)}
 
-/* Loading */
-.loading{text-align:center;padding:60px;color:var(--text3);font-size:0.85rem}
-
-/* Export btn */
-.export-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text2);padding:5px 12px;border-radius:6px;font-size:0.7rem;cursor:pointer}
-.export-btn:hover{border-color:var(--green);color:var(--green)}
+/* Pagination */
+.pager{display:flex;justify-content:center;align-items:center;gap:8px;padding:20px;max-width:1600px;margin:0 auto}
+.pager button{padding:6px 14px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text2);font-size:0.8rem;cursor:pointer}
+.pager button:hover{border-color:var(--blue);color:var(--blue)}
+.pager button:disabled{opacity:0.3;cursor:default}
+.pager .pg-info{font-size:0.75rem;color:var(--text3)}
 
 @media(max-width:768px){
-  .grid-inner{grid-template-columns:1fr}
-  .flt{gap:6px}
-  .fg select,.fg input{min-width:80px}
-  .tier-legend{flex-direction:column;align-items:flex-start;gap:6px}
+  .grid{grid-template-columns:1fr}
+  .tiers{grid-template-columns:1fr}
+  .hero h1{font-size:1.4rem}
+  .hero-stats{gap:16px}
+  .filters{gap:6px}
 }
 </style>
 </head>
 <body>
-<div class="app">
-  <div class="hdr">
-    <h1>外链资源池 Backlink Pool</h1>
-    <div class="sub" id="sub">Loading...</div>
-  </div>
 
-  <div class="tier-legend">
-    <div class="tl-item"><span class="tl-dot t1"></span><strong>Tier 1</strong><span class="tl-desc">— 高权威实体页（.edu/.gov/高DR citation），最强链接权重</span></div>
-    <div class="tl-item"><span class="tl-dot t2"></span><strong>Tier 2</strong><span class="tl-desc">— 中等质量（Web 2.0、论坛、中DR目录），主力链接来源</span></div>
-    <div class="tl-item"><span class="tl-dot t3"></span><strong>Tier 3</strong><span class="tl-desc">— 批量资产（书签、低DR profile），用于链接金字塔底层支撑</span></div>
+<div class="hero">
+  <h1>Free <em>Backlink</em> Opportunities</h1>
+  <p class="tagline">5,900+ verified sites where you can get a backlink — sorted by authority, difficulty, and type. No signup required to browse.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num" id="hTotal">-</div><div class="lbl">Sites</div></div>
+    <div class="hero-stat"><div class="num" id="hT1">-</div><div class="lbl">Tier 1 (High Authority)</div></div>
+    <div class="hero-stat"><div class="num" id="hDF">-</div><div class="lbl">Dofollow</div></div>
+    <div class="hero-stat"><div class="num" id="hFree">-</div><div class="lbl">100% Free</div></div>
   </div>
-
-  <div class="stats" id="statsBar"></div>
-  <div class="flt" id="filters">
-    <div class="fg"><label>搜索</label><input type="text" id="fSearch" placeholder="域名 / URL / 描述..."></div>
-    <div class="fg"><label>Type</label><select id="fType"><option value="">全部</option></select></div>
-    <div class="fg"><label>Tier</label><select id="fTier"><option value="">全部</option><option>1</option><option>2</option><option>3</option></select></div>
-    <div class="fg"><label>DR</label><select id="fDR"><option value="">全部</option><option value="90">90+</option><option value="70">70+</option><option value="50">50+</option><option value="30">30+</option><option value="0">&lt;30</option></select></div>
-    <div class="fg"><label>Dofollow</label><select id="fDF"><option value="">全部</option><option>true</option><option>likely_true</option><option>false</option><option>likely_false</option><option>unknown</option></select></div>
-    <div class="fg"><label>Source</label><select id="fSrc"><option value="">全部</option></select></div>
-    <div class="fg"><label>Language</label><select id="fLang"><option value="">全部</option></select></div>
-    <div class="fg"><label>Cost</label><select id="fCost"><option value="">全部</option><option>free</option><option>paid</option><option>freemium</option></select></div>
-    <div class="fg"><label></label><button class="export-btn" onclick="exportCSV()">Export CSV</button></div>
-  </div>
-  <div class="sort-bar">
-    <span>Sort:</span>
-    <button class="sort-btn active" data-sort="dr" onclick="setSort('dr',this)">DR ↓</button>
-    <button class="sort-btn" data-sort="diff" onclick="setSort('diff',this)">Difficulty ↑</button>
-    <button class="sort-btn" data-sort="name" onclick="setSort('name',this)">Name A-Z</button>
-    <button class="sort-btn" data-sort="tier" onclick="setSort('tier',this)">Tier ↑</button>
-    <span class="result-count" id="resultCount"></span>
-  </div>
-  <div class="grid-wrap" id="gridWrap">
-    <div class="grid-inner" id="grid"></div>
-  </div>
-  <div class="foot">Backlink Pool | <span id="footInfo">-</span></div>
 </div>
 
+<div class="tiers">
+  <div class="tier-card t1">
+    <h3>Tier 1 — High Authority</h3>
+    <p>.edu, .gov, high-DR citations and directories. The strongest backlinks you can get for free.</p>
+  </div>
+  <div class="tier-card t2">
+    <h3>Tier 2 — Medium Quality</h3>
+    <p>Web 2.0 platforms, forums, mid-DR directories. Solid everyday link sources.</p>
+  </div>
+  <div class="tier-card t3">
+    <h3>Tier 3 — Bulk Assets</h3>
+    <p>Bookmarks, profiles, low-DR sites. Use these to support your link pyramid base.</p>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search by name, domain, or description...">
+    <span class="count" id="count"></span>
+  </div>
+  <div class="filters">
+    <div class="filter-chip">Type <select id="fType"><option value="">All</option></select></div>
+    <div class="filter-chip">Tier <select id="fTier"><option value="">All</option><option>1</option><option>2</option><option>3</option></select></div>
+    <div class="filter-chip">DR <select id="fDR"><option value="">All</option><option value="90">90+</option><option value="70">70+</option><option value="50">50+</option><option value="30">30+</option></select></div>
+    <div class="filter-chip">Dofollow <select id="fDF"><option value="">All</option><option value="true">Yes</option><option value="likely_true">Likely Yes</option><option value="false">No</option></select></div>
+    <div class="filter-chip">Language <select id="fLang"><option value="">All</option></select></div>
+    <div class="filter-chip">Cost <select id="fCost"><option value="">All</option><option value="free">Free</option><option value="freemium">Freemium</option><option value="paid">Paid</option></select></div>
+  </div>
+  <div class="sort-chips">
+    <span>Sort by</span>
+    <button class="sbtn on" onclick="doSort('dr',this)">Authority ↓</button>
+    <button class="sbtn" onclick="doSort('diff',this)">Easiest First</button>
+    <button class="sbtn" onclick="doSort('name',this)">A-Z</button>
+    <button class="sbtn" onclick="doSort('tier',this)">Tier ↑</button>
+    <button class="export-link" onclick="exportCSV()">↓ Export CSV</button>
+  </div>
+</div>
+
+<div class="grid" id="grid"></div>
+<div class="pager" id="pager"></div>
+<div class="ft">Backlink Pool — Updated <span id="ftDate">-</span> — Data sourced and verified from 15+ SEO communities</div>
+
 <script>
-let RAW = [];   // all records from JSON
-let ALL = [];   // alive records only (DEAD filtered out)
-let filtered = [];
-let currentSort = 'dr';
+let ALL=[], filtered=[], page=0, perPage=60, sortBy='dr';
 
-// --- Init ---
-async function init() {
-  try {
-    let res;
-    try { res = await fetch('data/backlink-data.json'); } catch(e) {}
-    if (!res || !res.ok) res = await fetch('../data/backlink-data.json');
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const json = await res.json();
-    RAW = json.records || json;
-    // Filter out DEAD records for public display
-    ALL = RAW.filter(r => !r.notes || !r.notes.startsWith('DEAD'));
-    const deadCount = RAW.length - ALL.length;
-    const meta = json.meta || {};
-    document.getElementById('sub').textContent = `${ALL.length} 可用域名（已排除 ${deadCount} 条不可达）| Updated: ${meta.generated || '-'}`;
-    document.getElementById('footInfo').textContent = `${ALL.length} alive / ${RAW.length} total`;
-    buildFilterOptions();
-    buildStats(meta.stats);
-    applyFilters();
-  } catch(e) {
-    document.getElementById('grid').innerHTML = '<div class="loading">Failed to load data: ' + e.message + '<br>Run: node build-backlink-html.mjs</div>';
+async function init(){
+  try{
+    let r;
+    try{r=await fetch('data/backlink-data.json')}catch(e){}
+    if(!r||!r.ok) r=await fetch('../data/backlink-data.json');
+    if(!r.ok) throw r.status;
+    const j=await r.json();
+    const raw=j.records||j;
+    ALL=raw.filter(x=>!x.notes||!x.notes.startsWith('DEAD'));
+    const m=j.meta||{};
+    document.getElementById('hTotal').textContent=ALL.length.toLocaleString();
+    document.getElementById('ftDate').textContent=m.generated||'-';
+    // hero stats
+    document.getElementById('hT1').textContent=ALL.filter(x=>x.tier==='1').length.toLocaleString();
+    document.getElementById('hDF').textContent=(ALL.filter(x=>x.dofollow==='true').length+ALL.filter(x=>x.dofollow==='likely_true').length).toLocaleString();
+    document.getElementById('hFree').textContent=ALL.filter(x=>!x.free_or_paid||x.free_or_paid==='free').length.toLocaleString();
+    // populate filter options
+    fill('fType',[...new Set(ALL.map(x=>x.type).filter(Boolean))].sort());
+    fill('fLang',[...new Set(ALL.map(x=>x.language).filter(Boolean))].sort());
+    apply();
+  }catch(e){
+    document.getElementById('grid').innerHTML='<p style="padding:40px;text-align:center;color:#999">Failed to load. Run build script first.</p>';
   }
 }
 
-function buildFilterOptions() {
-  const types = [...new Set(ALL.map(r => r.type).filter(Boolean))].sort();
-  const srcs = [...new Set(ALL.map(r => r.source).filter(Boolean))].sort();
-  const langs = [...new Set(ALL.map(r => r.language).filter(Boolean))].sort();
-  fillSelect('fType', types);
-  fillSelect('fSrc', srcs);
-  fillSelect('fLang', langs);
+function fill(id,arr){
+  const el=document.getElementById(id);
+  arr.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;el.appendChild(o)});
 }
 
-function fillSelect(id, opts) {
-  const el = document.getElementById(id);
-  for (const o of opts) {
-    const opt = document.createElement('option');
-    opt.value = o; opt.textContent = o;
-    el.appendChild(opt);
-  }
-}
-
-function buildStats(s) {
-  if (!s) return;
-  const bar = document.getElementById('statsBar');
-  const items = [
-    { v: ALL.length, l: '可用域名' },
-    { v: s.byTier['1'] || 0, l: 'Tier 1' },
-    { v: s.byTier['2'] || 0, l: 'Tier 2' },
-    { v: s.byTier['3'] || 0, l: 'Tier 3' },
-    { v: s.byDofollow['true'] || 0, l: 'Dofollow' },
-    { v: (s.byDofollow['true']||0)+(s.byDofollow['likely_true']||0), l: 'DF+Likely' },
-    { v: s.byDofollow['unknown'] || 0, l: 'DF Unknown' },
-    { v: Object.values(s.byType || {}).reduce((a,b)=>a+b,0) - (s.byType['bookmark']||0), l: '非书签' },
-  ];
-  bar.innerHTML = items.map(i => `<div class="st"><div class="st-v">${i.v}</div><div class="st-l">${i.l}</div></div>`).join('');
-}
-
-// --- Filtering ---
-function applyFilters() {
-  const search = document.getElementById('fSearch').value.toLowerCase();
-  const type = document.getElementById('fType').value;
-  const tier = document.getElementById('fTier').value;
-  const dr = document.getElementById('fDR').value;
-  const df = document.getElementById('fDF').value;
-  const src = document.getElementById('fSrc').value;
-  const lang = document.getElementById('fLang').value;
-  const cost = document.getElementById('fCost').value;
-
-  filtered = ALL.filter(r => {
-    if (type && r.type !== type) return false;
-    if (tier && r.tier !== tier) return false;
-    if (df && r.dofollow !== df) return false;
-    if (src && r.source !== src) return false;
-    if (lang && r.language !== lang) return false;
-    if (cost && r.free_or_paid !== cost) return false;
-    if (dr) {
-      const minDR = parseInt(dr);
-      if (dr === '0') { if (r.dr != null && r.dr >= 30) return false; }
-      else { if (r.dr == null || r.dr < minDR) return false; }
-    }
-    if (search) {
-      const hay = ((r.domain||'') + ' ' + (r.url||'') + ' ' + (r.name||'') + ' ' + (r.desc||'')).toLowerCase();
-      if (!hay.includes(search)) return false;
-    }
+function apply(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const ft=document.getElementById('fType').value;
+  const fti=document.getElementById('fTier').value;
+  const fdr=document.getElementById('fDR').value;
+  const fdf=document.getElementById('fDF').value;
+  const fl=document.getElementById('fLang').value;
+  const fc=document.getElementById('fCost').value;
+  filtered=ALL.filter(r=>{
+    if(ft&&r.type!==ft) return false;
+    if(fti&&r.tier!==fti) return false;
+    if(fdf&&r.dofollow!==fdf) return false;
+    if(fl&&r.language!==fl) return false;
+    if(fc&&r.free_or_paid!==fc) return false;
+    if(fdr){const mn=parseInt(fdr);if(fdr==='0'){if(r.dr!=null&&r.dr>=30)return false}else{if(r.dr==null||r.dr<mn)return false}}
+    if(q){const h=((r.name||'')+' '+(r.domain||'')+' '+(r.url||'')+' '+(r.desc||'')).toLowerCase();if(!h.includes(q))return false}
     return true;
   });
-
-  sortData();
-  document.getElementById('resultCount').textContent = filtered.length + ' / ' + ALL.length;
-  renderVisible();
+  sort();
+  page=0;
+  document.getElementById('count').textContent=filtered.length+' sites';
+  render();
 }
 
-// --- Sorting ---
-function sortData() {
-  const dir = { dr: -1, diff: 1, name: 1, tier: 1 }[currentSort] || 1;
-  filtered.sort((a, b) => {
-    let va, vb;
-    if (currentSort === 'dr') { va = a.dr || 0; vb = b.dr || 0; }
-    else if (currentSort === 'diff') { va = a.difficulty || 0; vb = b.difficulty || 0; }
-    else if (currentSort === 'name') { va = (a.name||'').toLowerCase(); vb = (b.name||'').toLowerCase(); }
-    else if (currentSort === 'tier') { va = parseInt(a.tier) || 9; vb = parseInt(b.tier) || 9; }
-    if (va < vb) return -1 * dir;
-    if (va > vb) return 1 * dir;
-    return 0;
+function sort(){
+  const d={dr:-1,diff:1,name:1,tier:1}[sortBy]||1;
+  filtered.sort((a,b)=>{
+    let va,vb;
+    if(sortBy==='dr'){va=a.dr||0;vb=b.dr||0}
+    else if(sortBy==='diff'){va=a.difficulty||0;vb=b.difficulty||0}
+    else if(sortBy==='name'){va=(a.name||'').toLowerCase();vb=(b.name||'').toLowerCase()}
+    else{va=parseInt(a.tier)||9;vb=parseInt(b.tier)||9}
+    return va<vb?-1*d:va>vb?1*d:0;
   });
 }
 
-function setSort(s, btn) {
-  currentSort = s;
-  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  sortData();
-  renderVisible();
+function doSort(s,btn){
+  sortBy=s;
+  document.querySelectorAll('.sbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  sort();page=0;render();
 }
 
-// --- Virtual Scroll Render ---
-const CARD_HEIGHT = 130;
-let lastStart = -1, lastEnd = -1;
-
-function renderVisible() {
-  const wrap = document.getElementById('gridWrap');
-  const grid = document.getElementById('grid');
-
-  const wrapW = wrap.clientWidth;
-  const cols = Math.max(1, Math.floor((wrapW + 8) / 288));
-  const rows = Math.ceil(filtered.length / cols);
-  const totalH = rows * (CARD_HEIGHT + 8);
-  grid.style.height = totalH + 'px';
-
-  const scrollTop = wrap.scrollTop;
-  const viewH = wrap.clientHeight;
-  const startRow = Math.max(0, Math.floor(scrollTop / (CARD_HEIGHT + 8)) - 2);
-  const endRow = Math.min(rows, Math.ceil((scrollTop + viewH) / (CARD_HEIGHT + 8)) + 2);
-  const startIdx = startRow * cols;
-  const endIdx = Math.min(filtered.length, endRow * cols);
-
-  if (startIdx === lastStart && endIdx === lastEnd) return;
-  lastStart = startIdx; lastEnd = endIdx;
-
-  let html = '';
-  for (let i = startIdx; i < endIdx; i++) {
-    const r = filtered[i];
-    const row = Math.floor(i / cols);
-    const col = i % cols;
-    const top = row * (CARD_HEIGHT + 8);
-    const left = col * (100 / cols);
-
-    const drClass = r.dr >= 80 ? 'dr-high' : r.dr >= 50 ? 'dr-mid' : r.dr ? 'dr-low' : 'dr-na';
-    const tierClass = r.tier === '1' ? 'tag-tier-1' : r.tier === '2' ? 'tag-tier-2' : 'tag-tier-3';
-
-    let dfClass = 'tag-df-unknown';
-    if (r.dofollow === 'true') dfClass = 'tag-df-true';
-    else if (r.dofollow === 'false') dfClass = 'tag-df-false';
-    else if (r.dofollow && r.dofollow.startsWith('likely')) dfClass = 'tag-df-maybe';
-
-    const diff = r.difficulty || 0;
-    const barClass = diff <= 3 ? 'bar-fill-easy' : diff <= 6 ? 'bar-fill-mid' : 'bar-fill-hard';
-
-    const costTag = r.free_or_paid ? `<span class="tag tag-${r.free_or_paid === 'free' ? 'free' : 'paid'}">${r.free_or_paid}</span>` : '';
-
-    html += `<div class="card" style="position:absolute;top:${top}px;left:${left}%;width:calc(${100/cols}% - 8px)">
-      <div class="card-top">
-        <span class="card-name" title="${esc(r.name)}">${esc(r.name || r.domain)}</span>
-        <span class="dr ${drClass}">${r.dr != null ? 'DR ' + r.dr : 'N/A'}</span>
+function render(){
+  const g=document.getElementById('grid');
+  const start=page*perPage;
+  const slice=filtered.slice(start,start+perPage);
+  g.innerHTML=slice.map(r=>{
+    const dc=r.dr>=80?'dr-h':r.dr>=50?'dr-m':r.dr?'dr-l':'dr-n';
+    const tc=r.tier==='1'?'stag-t1':r.tier==='2'?'stag-t2':'stag-t3';
+    const dfc=r.dofollow==='true'?'stag-df-y':r.dofollow==='false'?'stag-df-n':r.dofollow==='likely_true'||r.dofollow==='likely_false'?'stag-df-m':'stag-df-u';
+    const diff=r.difficulty||0;
+    const bc=diff<=3?'easy':diff<=6?'mid':'hard';
+    const lang=r.language&&r.language!=='en'?'<span class="stag stag-lang">'+esc(r.language)+'</span>':'';
+    const cost=r.free_or_paid&&r.free_or_paid!=='free'?'<span class="stag stag-'+r.free_or_paid+'">'+esc(r.free_or_paid)+'</span>':'<span class="stag stag-free">free</span>';
+    const diffBar=diff?'<div class="sc-diff"><span class="dlbl">Ease '+(10-diff)+'/10</span><div class="bar-bg"><div class="bar-fg '+bc+'" style="width:'+((10-diff)*10)+'%"></div></div></div>':'';
+    return `<div class="site-card">
+      <div class="sc-head"><span class="sc-name">${esc(r.name||r.domain)}</span><span class="sc-dr ${dc}">${r.dr!=null?'DR '+r.dr:'N/A'}</span></div>
+      <div class="sc-url"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.url)}</a></div>
+      <div class="sc-tags">
+        <span class="stag stag-type">${esc(r.type)}</span>
+        <span class="stag ${tc}">Tier ${esc(r.tier)}</span>
+        <span class="stag ${dfc}">${r.dofollow==='true'?'Dofollow':r.dofollow==='false'?'Nofollow':r.dofollow==='likely_true'?'Likely DF':r.dofollow==='likely_false'?'Likely NF':'Unknown'}</span>
+        ${lang}${cost}
       </div>
-      <div class="card-url" title="${esc(r.url)}">${esc(r.url)}</div>
-      <div class="card-tags">
-        <span class="tag tag-type">${esc(r.type)}</span>
-        <span class="tag ${tierClass}">T${esc(r.tier)}</span>
-        <span class="tag tag-df ${dfClass}">${esc(r.dofollow)}</span>
-        ${r.language && r.language !== 'en' ? '<span class="tag tag-lang">' + esc(r.language) + '</span>' : ''}
-        ${costTag}
-        ${r.source && r.source !== 'mixed' ? '<span class="tag tag-src">' + esc(r.source) + '</span>' : ''}
-      </div>
-      ${diff ? `<div class="card-bar"><span class="bar-label">Diff ${diff}</span><div class="bar-track"><div class="bar-fill ${barClass}" style="width:${diff*10}%"></div></div></div>` : ''}
-      ${r.desc ? '<div class="card-desc">' + esc(r.desc) + '</div>' : ''}
+      ${r.desc?'<div class="sc-desc">'+esc(r.desc)+'</div>':''}
+      ${diffBar}
     </div>`;
-  }
-  grid.innerHTML = html;
+  }).join('');
+  // pagination
+  const total=filtered.length;
+  const pages=Math.ceil(total/perPage);
+  const pg=document.getElementById('pager');
+  if(pages<=1){pg.innerHTML='';return;}
+  pg.innerHTML=`<button ${page===0?'disabled':''} onclick="goPage(${page-1})">← Prev</button>
+    <span class="pg-info">${start+1}–${Math.min(start+perPage,total)} of ${total}</span>
+    <button ${page>=pages-1?'disabled':''} onclick="goPage(${page+1})">Next →</button>`;
 }
 
-function esc(s) { if (!s) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function goPage(p){page=p;render();window.scrollTo({top:document.querySelector('.grid').offsetTop-20,behavior:'smooth'})}
 
-// --- Export ---
-function exportCSV() {
-  const header = ['domain','url','name','type','niche','dr','dofollow','difficulty','tier','free_or_paid','language','desc','source'];
-  const rows = filtered.map(r => header.map(h => {
-    const v = String(r[h] || '').replace(/"/g, '""');
-    return '"' + v + '"';
+function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):''}
+
+function exportCSV(){
+  const h=['name','url','type','tier','dr','dofollow','difficulty','language','cost','description'];
+  const rows=filtered.map(r=>h.map(k=>{
+    const m={name:r.name,url:r.url,type:r.type,tier:r.tier,dr:r.dr,dofollow:r.dofollow,difficulty:r.difficulty,language:r.language,cost:r.free_or_paid,description:r.desc};
+    return '"'+String(m[k]||'').replace(/"/g,'""')+'"';
   }).join(','));
-  const csv = '\uFEFF' + header.join(',') + '\n' + rows.join('\n');
-  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'backlink-pool-' + new Date().toISOString().slice(0,10) + '.csv';
-  a.click();
+  const csv='\uFEFF'+h.join(',')+'\n'+rows.join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+  a.download='backlinks-'+new Date().toISOString().slice(0,10)+'.csv';a.click();
 }
 
-// --- Events ---
-document.getElementById('fSearch').addEventListener('input', applyFilters);
-['fType','fTier','fDR','fDF','fSrc','fLang','fCost'].forEach(id => {
-  document.getElementById(id).addEventListener('change', applyFilters);
-});
-document.getElementById('gridWrap').addEventListener('scroll', () => { requestAnimationFrame(renderVisible); });
-window.addEventListener('resize', () => { lastStart = -1; renderVisible(); });
+document.getElementById('search').addEventListener('input',apply);
+['fType','fTier','fDR','fDF','fLang','fCost'].forEach(id=>document.getElementById(id).addEventListener('change',apply));
 
 init();
 </script>
