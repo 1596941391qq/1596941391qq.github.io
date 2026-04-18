@@ -15,6 +15,15 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .hdr h1{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--green),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.02em}
 .hdr .sub{color:var(--text3);font-size:0.75rem;margin-top:4px}
 
+/* Tier Legend */
+.tier-legend{display:flex;justify-content:center;gap:20px;margin:10px 0;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:0.72rem;flex-wrap:wrap}
+.tier-legend .tl-item{display:flex;align-items:center;gap:6px;color:var(--text2)}
+.tier-legend .tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.tier-legend .tl-dot.t1{background:var(--green)}
+.tier-legend .tl-dot.t2{background:var(--blue)}
+.tier-legend .tl-dot.t3{background:var(--text3)}
+.tier-legend .tl-desc{color:var(--text3);font-size:0.65rem}
+
 /* Stats */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px;margin:12px 0 16px}
 .st{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 6px;text-align:center}
@@ -36,7 +45,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .result-count{margin-left:auto;color:var(--text2)}
 
 /* Grid container */
-.grid-wrap{position:relative;height:calc(100vh - 280px);overflow-y:auto;border-radius:10px}
+.grid-wrap{position:relative;height:calc(100vh - 320px);overflow-y:auto;border-radius:10px}
 .grid-wrap::-webkit-scrollbar{width:6px}
 .grid-wrap::-webkit-scrollbar-track{background:transparent}
 .grid-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:3px}
@@ -45,7 +54,6 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 /* Card */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;transition:border-color 0.15s}
 .card:hover{border-color:rgba(59,130,246,0.35)}
-.card.dead{opacity:0.45}
 .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
 .card-name{font-size:0.8rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:65%}
 .dr{font-size:0.7rem;font-weight:700;padding:2px 6px;border-radius:4px}
@@ -78,7 +86,6 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .bar-fill-mid{background:var(--orange)}
 .bar-fill-hard{background:var(--red)}
 .card-desc{font-size:0.65rem;color:var(--text2);margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-status{font-size:0.6rem;margin-top:4px;color:var(--red)}
 
 /* Footer */
 .foot{text-align:center;padding:12px 0;color:var(--text3);font-size:0.65rem;border-top:1px solid var(--border);margin-top:12px}
@@ -94,6 +101,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   .grid-inner{grid-template-columns:1fr}
   .flt{gap:6px}
   .fg select,.fg input{min-width:80px}
+  .tier-legend{flex-direction:column;align-items:flex-start;gap:6px}
 }
 </style>
 </head>
@@ -103,6 +111,13 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     <h1>外链资源池 Backlink Pool</h1>
     <div class="sub" id="sub">Loading...</div>
   </div>
+
+  <div class="tier-legend">
+    <div class="tl-item"><span class="tl-dot t1"></span><strong>Tier 1</strong><span class="tl-desc">— 高权威实体页（.edu/.gov/高DR citation），最强链接权重</span></div>
+    <div class="tl-item"><span class="tl-dot t2"></span><strong>Tier 2</strong><span class="tl-desc">— 中等质量（Web 2.0、论坛、中DR目录），主力链接来源</span></div>
+    <div class="tl-item"><span class="tl-dot t3"></span><strong>Tier 3</strong><span class="tl-desc">— 批量资产（书签、低DR profile），用于链接金字塔底层支撑</span></div>
+  </div>
+
   <div class="stats" id="statsBar"></div>
   <div class="flt" id="filters">
     <div class="fg"><label>搜索</label><input type="text" id="fSearch" placeholder="域名 / URL / 描述..."></div>
@@ -113,7 +128,6 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     <div class="fg"><label>Source</label><select id="fSrc"><option value="">全部</option></select></div>
     <div class="fg"><label>Language</label><select id="fLang"><option value="">全部</option></select></div>
     <div class="fg"><label>Cost</label><select id="fCost"><option value="">全部</option><option>free</option><option>paid</option><option>freemium</option></select></div>
-    <div class="fg"><label>Dead</label><select id="fDead"><option value="">全部</option><option value="alive">仅存活</option><option value="dead">仅死站</option></select></div>
     <div class="fg"><label></label><button class="export-btn" onclick="exportCSV()">Export CSV</button></div>
   </div>
   <div class="sort-bar">
@@ -131,7 +145,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 </div>
 
 <script>
-let ALL = [];
+let RAW = [];   // all records from JSON
+let ALL = [];   // alive records only (DEAD filtered out)
 let filtered = [];
 let currentSort = 'dr';
 
@@ -143,10 +158,13 @@ async function init() {
     if (!res || !res.ok) res = await fetch('../data/backlink-data.json');
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const json = await res.json();
-    ALL = json.records || json;
+    RAW = json.records || json;
+    // Filter out DEAD records for public display
+    ALL = RAW.filter(r => !r.notes || !r.notes.startsWith('DEAD'));
+    const deadCount = RAW.length - ALL.length;
     const meta = json.meta || {};
-    document.getElementById('sub').textContent = `${meta.total || ALL.length} 独立域名 | Generated: ${meta.generated || '-'}`;
-    document.getElementById('footInfo').textContent = `Table: ${meta.table_id || '-'} | ${meta.total || ALL.length} records`;
+    document.getElementById('sub').textContent = `${ALL.length} 可用域名（已排除 ${deadCount} 条不可达）| Updated: ${meta.generated || '-'}`;
+    document.getElementById('footInfo').textContent = `${ALL.length} alive / ${RAW.length} total`;
     buildFilterOptions();
     buildStats(meta.stats);
     applyFilters();
@@ -177,14 +195,14 @@ function buildStats(s) {
   if (!s) return;
   const bar = document.getElementById('statsBar');
   const items = [
-    { v: s.total, l: 'Total' },
+    { v: ALL.length, l: '可用域名' },
     { v: s.byTier['1'] || 0, l: 'Tier 1' },
     { v: s.byTier['2'] || 0, l: 'Tier 2' },
     { v: s.byTier['3'] || 0, l: 'Tier 3' },
-    { v: s.alive || 0, l: 'Alive' },
-    { v: s.dead || 0, l: 'Dead' },
     { v: s.byDofollow['true'] || 0, l: 'Dofollow' },
     { v: (s.byDofollow['true']||0)+(s.byDofollow['likely_true']||0), l: 'DF+Likely' },
+    { v: s.byDofollow['unknown'] || 0, l: 'DF Unknown' },
+    { v: Object.values(s.byType || {}).reduce((a,b)=>a+b,0) - (s.byType['bookmark']||0), l: '非书签' },
   ];
   bar.innerHTML = items.map(i => `<div class="st"><div class="st-v">${i.v}</div><div class="st-l">${i.l}</div></div>`).join('');
 }
@@ -199,7 +217,6 @@ function applyFilters() {
   const src = document.getElementById('fSrc').value;
   const lang = document.getElementById('fLang').value;
   const cost = document.getElementById('fCost').value;
-  const dead = document.getElementById('fDead').value;
 
   filtered = ALL.filter(r => {
     if (type && r.type !== type) return false;
@@ -208,8 +225,6 @@ function applyFilters() {
     if (src && r.source !== src) return false;
     if (lang && r.language !== lang) return false;
     if (cost && r.free_or_paid !== cost) return false;
-    if (dead === 'alive' && r.notes && r.notes.startsWith('DEAD')) return false;
-    if (dead === 'dead' && !(r.notes && r.notes.startsWith('DEAD'))) return false;
     if (dr) {
       const minDR = parseInt(dr);
       if (dr === '0') { if (r.dr != null && r.dr >= 30) return false; }
@@ -251,16 +266,15 @@ function setSort(s, btn) {
 }
 
 // --- Virtual Scroll Render ---
-const CARD_HEIGHT = 130; // estimated px per card
+const CARD_HEIGHT = 130;
 let lastStart = -1, lastEnd = -1;
 
 function renderVisible() {
   const wrap = document.getElementById('gridWrap');
   const grid = document.getElementById('grid');
 
-  // Calculate how many columns
   const wrapW = wrap.clientWidth;
-  const cols = Math.max(1, Math.floor((wrapW + 8) / 288)); // 280 + 8 gap
+  const cols = Math.max(1, Math.floor((wrapW + 8) / 288));
   const rows = Math.ceil(filtered.length / cols);
   const totalH = rows * (CARD_HEIGHT + 8);
   grid.style.height = totalH + 'px';
@@ -275,7 +289,6 @@ function renderVisible() {
   if (startIdx === lastStart && endIdx === lastEnd) return;
   lastStart = startIdx; lastEnd = endIdx;
 
-  // Build cards
   let html = '';
   for (let i = startIdx; i < endIdx; i++) {
     const r = filtered[i];
@@ -284,7 +297,6 @@ function renderVisible() {
     const top = row * (CARD_HEIGHT + 8);
     const left = col * (100 / cols);
 
-    const isDead = r.notes && r.notes.startsWith('DEAD');
     const drClass = r.dr >= 80 ? 'dr-high' : r.dr >= 50 ? 'dr-mid' : r.dr ? 'dr-low' : 'dr-na';
     const tierClass = r.tier === '1' ? 'tag-tier-1' : r.tier === '2' ? 'tag-tier-2' : 'tag-tier-3';
 
@@ -298,7 +310,7 @@ function renderVisible() {
 
     const costTag = r.free_or_paid ? `<span class="tag tag-${r.free_or_paid === 'free' ? 'free' : 'paid'}">${r.free_or_paid}</span>` : '';
 
-    html += `<div class="card${isDead ? ' dead' : ''}" style="position:absolute;top:${top}px;left:${left}%;width:calc(${100/cols}% - 8px)">
+    html += `<div class="card" style="position:absolute;top:${top}px;left:${left}%;width:calc(${100/cols}% - 8px)">
       <div class="card-top">
         <span class="card-name" title="${esc(r.name)}">${esc(r.name || r.domain)}</span>
         <span class="dr ${drClass}">${r.dr != null ? 'DR ' + r.dr : 'N/A'}</span>
@@ -314,7 +326,6 @@ function renderVisible() {
       </div>
       ${diff ? `<div class="card-bar"><span class="bar-label">Diff ${diff}</span><div class="bar-track"><div class="bar-fill ${barClass}" style="width:${diff*10}%"></div></div></div>` : ''}
       ${r.desc ? '<div class="card-desc">' + esc(r.desc) + '</div>' : ''}
-      ${isDead ? '<div class="card-status">' + esc(r.notes) + '</div>' : ''}
     </div>`;
   }
   grid.innerHTML = html;
@@ -324,7 +335,7 @@ function esc(s) { if (!s) return ''; return String(s).replace(/&/g,'&amp;').repl
 
 // --- Export ---
 function exportCSV() {
-  const header = ['domain','url','name','type','niche','dr','dofollow','difficulty','tier','free_or_paid','language','requires_nap','desc','notes','source'];
+  const header = ['domain','url','name','type','niche','dr','dofollow','difficulty','tier','free_or_paid','language','desc','source'];
   const rows = filtered.map(r => header.map(h => {
     const v = String(r[h] || '').replace(/"/g, '""');
     return '"' + v + '"';
@@ -339,7 +350,7 @@ function exportCSV() {
 
 // --- Events ---
 document.getElementById('fSearch').addEventListener('input', applyFilters);
-['fType','fTier','fDR','fDF','fSrc','fLang','fCost','fDead'].forEach(id => {
+['fType','fTier','fDR','fDF','fSrc','fLang','fCost'].forEach(id => {
   document.getElementById(id).addEventListener('change', applyFilters);
 });
 document.getElementById('gridWrap').addEventListener('scroll', () => { requestAnimationFrame(renderVisible); });
