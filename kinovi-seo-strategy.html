@@ -273,38 +273,45 @@
     color:var(--accent);
     font-size:13px;
   }
-  .audit-grid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:16px;
+  .table-wrap{
     margin-top:18px;
-  }
-  .audit-block{
-    background:var(--panel);
     border:1px solid var(--line);
-    border-radius:22px;
-    padding:22px;
+    border-radius:24px;
+    overflow:hidden;
+    background:rgba(255,255,255,.76);
   }
-  .audit-block h3{margin-bottom:8px}
-  .audit-block ul{
-    padding-left:18px;
-    margin-top:10px;
+  .audit-ledger{
+    font-size:13px;
+    line-height:1.65;
   }
-  .audit-block li{
-    margin-bottom:8px;
-    color:#4b5966;
+  .audit-ledger th{
+    position:sticky;
+    top:0;
+    z-index:1;
+    background:#f5f0e8;
   }
-  .audit-block .status{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:6px 10px;
-    border-radius:999px;
-    margin-bottom:10px;
-    font-size:12px;
-    letter-spacing:.04em;
-    border:1px solid rgba(221,210,194,.86);
-    background:#fff;
+  .audit-ledger td{
+    background:rgba(255,253,249,.94);
+  }
+  .audit-ledger td:nth-child(1){
+    width:68px;
+    color:var(--soft);
+    font-variant-numeric:tabular-nums;
+  }
+  .audit-ledger td:nth-child(2){
+    width:170px;
+  }
+  .audit-ledger td:nth-child(4){
+    width:98px;
+    font-weight:600;
+  }
+  .status-good{color:var(--good)}
+  .status-warn{color:var(--warn)}
+  .status-bad{color:var(--bad)}
+  .status-muted{color:var(--muted)}
+  .audit-note{
+    margin-top:14px;
+    font-size:14px;
     color:var(--muted);
   }
   .line-block{
@@ -364,7 +371,7 @@
   @media (max-width:1160px){
     .layout{grid-template-columns:1fr}
     .rail{position:static}
-    .hero-grid,.grid-4,.grid-3,.cols,.audit-grid{grid-template-columns:1fr}
+    .hero-grid,.grid-4,.grid-3,.cols{grid-template-columns:1fr}
   }
   @media (max-width:780px){
     .shell{padding:14px}
@@ -442,31 +449,39 @@
       <section id="scores">
         <div class="label">Scorecard</div>
         <h2>评分与原因</h2>
-        <div class="grid-4">
-          <div class="card">
-            <div class="mini">整体可见性</div>
-            <div class="score warn">62</div>
-            <p>Google 能理解一部分站点结构，但不会把它当成一个内容供给充分的 AI 视频品牌。</p>
-            <div class="why">评分原因：页面数量和角色分工都偏薄。核心词、比较词、场景词、问题词还没有形成稳定覆盖，导致增长上限被内容规模卡住。</div>
-          </div>
-          <div class="card">
-            <div class="mini">技术底盘</div>
-            <div class="score good">73</div>
-            <p>底盘并不差，问题在于校验不完整、重点页策略不够锋利。</p>
-            <div class="why">评分原因：双域逻辑、canonical、robots、sitemap、跳转方向基本可用；但首页双 H1、Gallery 策略、Schema 覆盖、GSC 验证和重点页索引治理都还没做扎实。</div>
-          </div>
-          <div class="card">
-            <div class="mini">内容权威</div>
-            <div class="score bad">31</div>
-            <p>站内还没有长出“行业问题入口”的样子。</p>
-            <div class="why">评分原因：当前核心页少，平均内容厚度不足，缺少支柱页、比较页、案例页、实验页、资源页和下载页之间的结构联动。</div>
-          </div>
-          <div class="card">
-            <div class="mini">转化就绪度</div>
-            <div class="score bad">38</div>
-            <p>用户能看见产品，却不一定能顺畅完成判断和收口动作。</p>
-            <div class="why">评分原因：Pricing 页收口动作不够硬，信任信号不足，用户证言与第三方证据稀薄，Lead Magnet 和低门槛试用承接还没有搭成完整漏斗。</div>
-          </div>
+        <div class="box">
+          <table>
+            <tr>
+              <th>维度</th>
+              <th>分数</th>
+              <th>判断</th>
+              <th>原因</th>
+            </tr>
+            <tr>
+              <td><strong>整体可见性</strong></td>
+              <td class="status-warn">62</td>
+              <td>Google 能理解一部分站点结构，但还不会把它当成内容供给充分的 AI 视频品牌。</td>
+              <td>页面数量和角色分工都偏薄。核心词、比较词、场景词、问题词还没有形成稳定覆盖，增长上限被内容规模卡住。</td>
+            </tr>
+            <tr>
+              <td><strong>技术底盘</strong></td>
+              <td class="status-good">73</td>
+              <td>底盘并不差，问题在于校验不完整、重点页策略不够锋利。</td>
+              <td>双域逻辑、canonical、robots、sitemap、跳转方向基本可用；但首页 H1、Gallery 策略、Schema 覆盖、GSC 验证和重点页索引治理都还没做扎实。</td>
+            </tr>
+            <tr>
+              <td><strong>内容权威</strong></td>
+              <td class="status-bad">31</td>
+              <td>站内还没有长出真正的行业问题入口。</td>
+              <td>当前核心页少，平均内容厚度不足，缺少支柱页、比较页、案例页、实验页、资源页和下载页之间的结构联动。</td>
+            </tr>
+            <tr>
+              <td><strong>转化就绪度</strong></td>
+              <td class="status-bad">38</td>
+              <td>用户能看见产品，却不一定能顺畅完成判断和收口动作。</td>
+              <td>Pricing 页收口动作不够硬，信任信号不足，用户证言与第三方证据稀薄，Lead Magnet 和低门槛试用承接还没有搭成完整漏斗。</td>
+            </tr>
+          </table>
         </div>
       </section>
 
@@ -515,201 +530,151 @@
       <section id="audit">
         <div class="label">Audit Report</div>
         <h2>全面审计</h2>
-        <p>本轮审计按 16 个模块展开，覆盖 112 个检查点。目的不是堆术语，而是把“哪里真的影响增长”讲清楚，并把后续动作压回页面、结构、证据和转化四个层面。</p>
+        <p>这一部分按 16 个模块、112 个检查点完整展开。每一行都显示检查项、当前状态和说明，不再用几张摘要卡片代替审计本身。</p>
         <div class="audit-meta">
           <span class="audit-pill">16 个审计模块</span>
           <span class="audit-pill">112 个检查点</span>
           <span class="audit-pill">技术 / 内容 / 转化 / 站外一体判断</span>
           <span class="audit-pill">双域前提已对齐，不回退成单域口径</span>
         </div>
-        <div class="box">
-          <table>
+        <p class="audit-note">状态说明：`良好` 表示基础成立；`待优化` 表示已具备雏形但不够强；`待核验` 表示需要结合 GSC、日志或模板抽样继续确认；`风险` 表示已经明显影响增长；`待建设` 表示对应能力基本还没真正长出来。</p>
+        <div class="table-wrap">
+          <table class="audit-ledger">
             <tr>
+              <th>编号</th>
               <th>模块</th>
+              <th>检查点</th>
               <th>状态</th>
-              <th>核心判断</th>
-              <th>下一步动作</th>
+              <th>说明</th>
             </tr>
-            <tr>
-              <td><strong>01 抓取入口</strong></td>
-              <td class="good">可用</td>
-              <td>robots.txt 与 sitemap 基本存在，抓取入口没有根本性缺失。</td>
-              <td>补做实际抓取日志、重要页索引反馈和 GSC 校验。</td>
-            </tr>
-            <tr>
-              <td><strong>02 索引治理</strong></td>
-              <td class="warn">中等</td>
-              <td>重点页能否被收录、该不该收录的口径还不够硬，尤其是 Gallery 类资产。</td>
-              <td>明确索引白名单和 noindex 黑名单，避免高价值页被压制。</td>
-            </tr>
-            <tr>
-              <td><strong>03 Canonical / 双域映射</strong></td>
-              <td class="good">基本成立</td>
-              <td>双域策略前提成立，不应该再回到“修成单域”的旧路。</td>
-              <td>做路径级 canonical、308、og:url、Schema URL 一致性复核。</td>
-            </tr>
-            <tr>
-              <td><strong>04 跳转与状态码</strong></td>
-              <td class="warn">待核验</td>
-              <td>方向上没有明显错误，但还缺少完整的链路级验证。</td>
-              <td>把首页、比较页、场景页、定价页、文档页全跑一遍状态码和跳转链。</td>
-            </tr>
-            <tr>
-              <td><strong>05 SERP 片段</strong></td>
-              <td class="warn">偏弱</td>
-              <td>Title 基本有，Meta 和片段诱因还不够能打。</td>
-              <td>先重写首页、Pricing、比较页、功能页的标题与描述。</td>
-            </tr>
-            <tr>
-              <td><strong>06 标题与语义结构</strong></td>
-              <td class="bad">有硬伤</td>
-              <td>首页双 H1，个别重点页主命题不够稳定。</td>
-              <td>统一每页一个主命题，避免页面自己和自己竞争。</td>
-            </tr>
-            <tr>
-              <td><strong>07 页面角色分工</strong></td>
-              <td class="bad">不足</td>
-              <td>功能页、案例页、资源页、Docs、Gallery 之间分工不清。</td>
-              <td>按角色重写页面模板，避免每页都像产品介绍页。</td>
-            </tr>
-            <tr>
-              <td><strong>08 内容厚度与覆盖</strong></td>
-              <td class="bad">明显不足</td>
-              <td>站内页面体量太薄，覆盖深度远远不够。</td>
-              <td>启动支柱页、比较页、案例页、实验页、FAQ 页的内容扩建。</td>
-            </tr>
-            <tr>
-              <td><strong>09 信息架构</strong></td>
-              <td class="warn">可优化</td>
-              <td>用户能逛，但搜索系统未必能快速识别全站层级。</td>
-              <td>做清晰的 hub-and-spoke 结构，把首页权重分发出去。</td>
-            </tr>
-            <tr>
-              <td><strong>10 内链分发</strong></td>
-              <td class="warn">量有，质不够</td>
-              <td>现有内链更像导航层，不像策略层。</td>
-              <td>建立比较页 → 功能页 → Pricing，支柱页 → 集群页 → 案例页的定向路径。</td>
-            </tr>
-            <tr>
-              <td><strong>11 Schema 覆盖</strong></td>
-              <td class="warn">不完整</td>
-              <td>已有基础 Schema，但重点页还不够全。</td>
-              <td>补 SoftwareApplication、FAQPage、VideoObject、BreadcrumbList、HowTo 组合。</td>
-            </tr>
-            <tr>
-              <td><strong>12 媒体与图像 SEO</strong></td>
-              <td class="warn">待补强</td>
-              <td>图片和视频资产没有被当成搜索资产充分经营。</td>
-              <td>补 alt、尺寸、文件命名、caption 和可索引的媒体上下文。</td>
-            </tr>
-            <tr>
-              <td><strong>13 性能与 CWV</strong></td>
-              <td class="warn">待实测</td>
-              <td>站型决定了 LCP、INP、CLS 必须长期盯住。</td>
-              <td>补 Lighthouse 与真实用户数据，优先盯首页、Pricing、Gallery。</td>
-            </tr>
-            <tr>
-              <td><strong>14 转化与信任</strong></td>
-              <td class="bad">偏弱</td>
-              <td>说服链条没搭满，信任层太薄。</td>
-              <td>补第三方证据、用户证言、案例、风险解释和低门槛 CTA。</td>
-            </tr>
-            <tr>
-              <td><strong>15 AI Search Ready</strong></td>
-              <td class="warn">有基础</td>
-              <td>缺少大段可摘取答案、表格、结论块和限制说明。</td>
-              <td>让高价值页都具备 TL;DR、FAQ、对比表、步骤和结论块。</td>
-            </tr>
-            <tr>
-              <td><strong>16 站外证据层</strong></td>
-              <td class="bad">未成型</td>
-              <td>外链、提及、壳层、PR、社区扩散没有形成方法论。</td>
-              <td>以数据资产和比较资产为核心，启动第四条线。</td>
-            </tr>
-          </table>
-        </div>
+            <tr><td>001</td><td><strong>01 抓取入口</strong></td><td>robots.txt 可访问</td><td class="status-good">良好</td><td>robots 文件可被正常抓取，基础入口存在。</td></tr>
+            <tr><td>002</td><td><strong>01 抓取入口</strong></td><td>robots 是否阻断核心页面</td><td class="status-good">良好</td><td>未见核心产品与策略页面被默认封锁。</td></tr>
+            <tr><td>003</td><td><strong>01 抓取入口</strong></td><td>robots 是否误放测试路径</td><td class="status-muted">待核验</td><td>需确认预览页、测试页、参数页没有被放进抓取层。</td></tr>
+            <tr><td>004</td><td><strong>01 抓取入口</strong></td><td>sitemap.xml 可访问</td><td class="status-good">良好</td><td>站点地图入口存在，基础发现机制成立。</td></tr>
+            <tr><td>005</td><td><strong>01 抓取入口</strong></td><td>sitemap 是否含核心收口页</td><td class="status-warn">待优化</td><td>需核对比较页、案例页、资源页后续是否全部纳入。</td></tr>
+            <tr><td>006</td><td><strong>01 抓取入口</strong></td><td>Search Console 属性是否齐全</td><td class="status-muted">待核验</td><td>双域属性与站点地图提交情况需要补充验证。</td></tr>
+            <tr><td>007</td><td><strong>01 抓取入口</strong></td><td>抓取入口是否统一到正式域</td><td class="status-good">良好</td><td>方向上已按双域前提收口，没有明显反向信号。</td></tr>
 
-        <div class="audit-grid">
-          <div class="audit-block">
-            <div class="status">01 抓取入口 / 02 索引治理</div>
-            <h3>入口存在，但“该收什么、不该收什么”还没管到位</h3>
-            <p>抓取入口不算缺，但索引治理还没有进入精细阶段。尤其对双域站来说，搜索系统看到的必须是一套口径统一的白名单，而不是放任所有页面自己决定命运。</p>
-            <ul>
-              <li>检查点包括：robots 规则、sitemap 覆盖、重要页是否提交、GSC 属性是否齐全、低价值页是否误入索引。</li>
-              <li>当前重点：确认 Gallery 是否仍被 noindex 压制，确认 Docs、Pricing、Comparison、Case 页面是否都在索引策略内。</li>
-              <li>业务影响：高价值页如果长期不进索引，后面所有内容与外链动作都会被打折。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">03 Canonical / 04 状态码与跳转</div>
-            <h3>双域前提成立，但需要更硬的链路级校验</h3>
-            <p>这次不再回到“全站修成单域 canonical”的错误路数。双域已经是既定前提，第三条线的工作是把映射质量补完整，而不是推翻前提。</p>
-            <ul>
-              <li>检查点包括：canonical 指向、308 链路、http/https、www/non-www、一跳还是多跳、og:url、Schema URL 一致性。</li>
-              <li>当前重点：把首页、比较页、场景页、Pricing、Docs、Case、Gallery 全做路径级抽样。</li>
-              <li>业务影响：这里一旦打架，Google 会搞不清谁是最终收口页，链接权益也会被稀释。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">05 SERP 片段 / 06 标题结构</div>
-            <h3>页面在结果页里不够锋利，自己站内也有语义冲突</h3>
-            <p>现在的标题和描述更多是在“解释”，还不够会“拿点击”。同时首页双 H1 说明页面的主命题在代码层也没完全收住。</p>
-            <ul>
-              <li>检查点包括：Title 唯一性、长度、主关键词位置、Meta 的利益点、H1/H2 层级、是否有重复主命题。</li>
-              <li>当前重点：首页、Pricing、核心功能页、比较页模板要优先重写。</li>
-              <li>业务影响：片段弱会直接让排名和点击率脱钩，标题结构乱会让页面权重分散。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">07 页面角色 / 08 内容厚度</div>
-            <h3>最明显的问题不是“写得少”，而是“每页都没把自己的职责写明白”</h3>
-            <p>Kinovi 的主站、比较页、Gallery、案例页、文档页现在还没有形成明确分工，所以内容越少越弱，内容越多也未必越强。</p>
-            <ul>
-              <li>检查点包括：页面角色清晰度、主题覆盖层级、内容深度、比较表、案例、FAQ、实验结论、下载资产、用户疑虑解答。</li>
-              <li>当前重点：先建立比较页矩阵、支柱页体系、案例页模板、实验页模板。</li>
-              <li>业务影响：内容层级不清，会让后续的内链、外链、Schema 和转化都找不到锚点。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">09 信息架构 / 10 内链分发</div>
-            <h3>站内链接不算少，但还没有形成“把人推向决策”的分发系统</h3>
-            <p>现有链接更接近基础导航，不像一个会分配页面权重和用户注意力的增长系统。</p>
-            <ul>
-              <li>检查点包括：首页出链、分类与聚合页、上下游链接、锚文本、孤立页、站内相关推荐、面包屑、Footer 权重分发。</li>
-              <li>当前重点：做出支柱页 → 集群页 → 比较页 → Pricing 的主路径，以及案例页 → 功能页 → 注册页的辅助路径。</li>
-              <li>业务影响：没有内链系统，强页带不动弱页，弱页也抬不高强页的整体主题权威。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">11 Schema / 12 媒体资产</div>
-            <h3>结构化和媒体上下文都有基础，但都没有用到“拿结果”的程度</h3>
-            <p>AI 视频站的天然优势是有图、有视频、有流程、有结果。现在这些资产还没有被系统地写进搜索语言里。</p>
-            <ul>
-              <li>检查点包括：Organization、WebSite、SoftwareApplication、FAQPage、HowTo、VideoObject、BreadcrumbList、图像 alt、caption、文件命名、媒体 surrounding copy。</li>
-              <li>当前重点：Gallery、案例页、实验页和比较页要优先补 Schema 与媒体上下文。</li>
-              <li>业务影响：没有结构化和媒体语义，富结果、图片流量、视频引用和 AI 抽取都会吃亏。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">13 性能 / 14 转化与信任</div>
-            <h3>技术体验和商业体验都还在“够用”，离“赢”还有明显距离</h3>
-            <p>AI SaaS 站的转化不是靠一个按钮赢的，而是靠加载、解释、证据、案例和收口一起赢的。现在这条链还没接上。</p>
-            <ul>
-              <li>检查点包括：LCP、INP、CLS、图片尺寸、脚本负载、CTA 层级、按钮路径、用户证言、Logo Wall、第三方评价、风险说明、退款与试用解释。</li>
-              <li>当前重点：Pricing 页、首页和比较页的 CTA 与证据层同步加厚。</li>
-              <li>业务影响：即便流量进来了，如果说服链没搭好，注册和付费仍然起不来。</li>
-            </ul>
-          </div>
-          <div class="audit-block">
-            <div class="status">15 AI Search Ready / 16 站外证据层</div>
-            <h3>站内还不够“可摘取”，站外也还不够“可引用”</h3>
-            <p>真正能吃到 AI 引用红利的页面，通常都有一套很清晰的答案结构。真正能持续拿链接的品牌，通常都有别人愿意搬运的数据和表格。Kinovi 两头都还没做满。</p>
-            <ul>
-              <li>检查点包括：TL;DR、定义块、对比表、步骤块、FAQ、限制说明、实验结论、品牌提及、资源页外链、目录、播客、媒体提及、社区帖壳层。</li>
-              <li>当前重点：把高价值页写成“可直接被 ChatGPT / Claude / Perplexity 摘取”的结构，再用第四条线把这些资产推出去。</li>
-              <li>业务影响：没有可摘取结构和可传播资产，品牌很难在搜索和 AI 系统里形成二次放大。</li>
-            </ul>
-          </div>
+            <tr><td>008</td><td><strong>02 索引治理</strong></td><td>首页索引状态</td><td class="status-good">良好</td><td>首页具备进入索引层的基础条件。</td></tr>
+            <tr><td>009</td><td><strong>02 索引治理</strong></td><td>Pricing 页索引状态</td><td class="status-muted">待核验</td><td>需确认高意图页面是否稳定收录且未被降权。</td></tr>
+            <tr><td>010</td><td><strong>02 索引治理</strong></td><td>Gallery 聚合页索引策略</td><td class="status-bad">风险</td><td>Gallery 类资产疑似未被当成重点索引层经营。</td></tr>
+            <tr><td>011</td><td><strong>02 索引治理</strong></td><td>Docs / FAQ 页索引边界</td><td class="status-warn">待优化</td><td>需要区分可收录答案页与低价值帮助页。</td></tr>
+            <tr><td>012</td><td><strong>02 索引治理</strong></td><td>参数页与预览页索引风险</td><td class="status-muted">待核验</td><td>需避免低价值 URL 偷偷进入索引。</td></tr>
+            <tr><td>013</td><td><strong>02 索引治理</strong></td><td>noindex 使用是否精准</td><td class="status-warn">待优化</td><td>应建立白名单和黑名单，而不是零散配置。</td></tr>
+            <tr><td>014</td><td><strong>02 索引治理</strong></td><td>重点页是否有被排除信号</td><td class="status-muted">待核验</td><td>需结合 GSC 排除报告确认真实状态。</td></tr>
+
+            <tr><td>015</td><td><strong>03 Canonical 与双域映射</strong></td><td>首页 canonical 指向</td><td class="status-good">良好</td><td>当前口径与双域策略一致。</td></tr>
+            <tr><td>016</td><td><strong>03 Canonical 与双域映射</strong></td><td>功能页 canonical 指向</td><td class="status-muted">待核验</td><td>需抽样确认不存在个别页面回指错误。</td></tr>
+            <tr><td>017</td><td><strong>03 Canonical 与双域映射</strong></td><td>比较页 canonical 设计</td><td class="status-warn">待优化</td><td>后续新建比较页时需避免模板继承错误。</td></tr>
+            <tr><td>018</td><td><strong>03 Canonical 与双域映射</strong></td><td>Gallery / Case 页 canonical</td><td class="status-muted">待核验</td><td>证据型页面需要单独核对，避免互相吞并。</td></tr>
+            <tr><td>019</td><td><strong>03 Canonical 与双域映射</strong></td><td>og:url 与 canonical 一致性</td><td class="status-muted">待核验</td><td>社交 URL 与搜索 URL 口径需统一。</td></tr>
+            <tr><td>020</td><td><strong>03 Canonical 与双域映射</strong></td><td>Schema URL 与 canonical 一致性</td><td class="status-muted">待核验</td><td>结构化数据中的 URL 不应自我打架。</td></tr>
+            <tr><td>021</td><td><strong>03 Canonical 与双域映射</strong></td><td>双域角色定义是否稳定</td><td class="status-good">良好</td><td>策略前提已对齐，不应再回退成单域口径。</td></tr>
+
+            <tr><td>022</td><td><strong>04 状态码与跳转</strong></td><td>http 到 https 跳转</td><td class="status-muted">待核验</td><td>需做链路抽查，确认没有多跳或例外。</td></tr>
+            <tr><td>023</td><td><strong>04 状态码与跳转</strong></td><td>www 与 non-www 归一</td><td class="status-muted">待核验</td><td>需要确认全部统一到正式版本。</td></tr>
+            <tr><td>024</td><td><strong>04 状态码与跳转</strong></td><td>主域到收口域跳转</td><td class="status-muted">待核验</td><td>需逐类页面校验，不只看首页。</td></tr>
+            <tr><td>025</td><td><strong>04 状态码与跳转</strong></td><td>是否存在 302 代替 308/301</td><td class="status-muted">待核验</td><td>临时跳转会削弱权重收口质量。</td></tr>
+            <tr><td>026</td><td><strong>04 状态码与跳转</strong></td><td>是否存在多跳链</td><td class="status-warn">待优化</td><td>用户和爬虫都不应该走冗长路径。</td></tr>
+            <tr><td>027</td><td><strong>04 状态码与跳转</strong></td><td>4xx 页面治理</td><td class="status-muted">待核验</td><td>需要统一盘点失效链接与历史路径。</td></tr>
+            <tr><td>028</td><td><strong>04 状态码与跳转</strong></td><td>5xx 稳定性</td><td class="status-muted">待核验</td><td>尚缺真实监测数据支撑稳定性判断。</td></tr>
+
+            <tr><td>029</td><td><strong>05 SERP 片段</strong></td><td>首页 Title 竞争力</td><td class="status-warn">待优化</td><td>需要更像结果承诺，而不是泛介绍。</td></tr>
+            <tr><td>030</td><td><strong>05 SERP 片段</strong></td><td>首页 Meta Description</td><td class="status-warn">待优化</td><td>片段还可以更会拿点击。</td></tr>
+            <tr><td>031</td><td><strong>05 SERP 片段</strong></td><td>Pricing 页 Title</td><td class="status-warn">待优化</td><td>高意图页面需要更直接的价值判断。</td></tr>
+            <tr><td>032</td><td><strong>05 SERP 片段</strong></td><td>比较页模板片段</td><td class="status-warn">待优化</td><td>应预埋对比结论、适合谁和边界说明。</td></tr>
+            <tr><td>033</td><td><strong>05 SERP 片段</strong></td><td>品牌词片段一致性</td><td class="status-muted">待核验</td><td>需避免品牌词 SERP 里出现口径分裂。</td></tr>
+            <tr><td>034</td><td><strong>05 SERP 片段</strong></td><td>功能词片段诱因</td><td class="status-warn">待优化</td><td>应把速度、音频、一致性等卖点写进摘要。</td></tr>
+            <tr><td>035</td><td><strong>05 SERP 片段</strong></td><td>FAQ 富结果信号</td><td class="status-warn">待优化</td><td>高价值页应预留 FAQ 片段机会。</td></tr>
+
+            <tr><td>036</td><td><strong>06 标题与语义结构</strong></td><td>首页 H1 唯一性</td><td class="status-bad">风险</td><td>首页存在主命题冲突迹象，需要统一。</td></tr>
+            <tr><td>037</td><td><strong>06 标题与语义结构</strong></td><td>功能页 H1 是否单一</td><td class="status-muted">待核验</td><td>需确认每页只有一个主命题。</td></tr>
+            <tr><td>038</td><td><strong>06 标题与语义结构</strong></td><td>H2 是否承接搜索问题</td><td class="status-warn">待优化</td><td>当前层级更偏介绍，不够像回答问题。</td></tr>
+            <tr><td>039</td><td><strong>06 标题与语义结构</strong></td><td>比较页标题模板</td><td class="status-warn">待优化</td><td>要统一成可扩展且高点击的格式。</td></tr>
+            <tr><td>040</td><td><strong>06 标题与语义结构</strong></td><td>首段是否复述主命题</td><td class="status-warn">待优化</td><td>部分页面首段承接力度不够。</td></tr>
+            <tr><td>041</td><td><strong>06 标题与语义结构</strong></td><td>语义层级是否清晰</td><td class="status-muted">待核验</td><td>需防止为视觉而牺牲页面结构。</td></tr>
+            <tr><td>042</td><td><strong>06 标题与语义结构</strong></td><td>页面是否存在主命题漂移</td><td class="status-warn">待优化</td><td>个别页面同时讲太多事，会削弱相关性。</td></tr>
+
+            <tr><td>043</td><td><strong>07 页面角色分工</strong></td><td>首页角色定义</td><td class="status-warn">待优化</td><td>需要兼顾品牌解释、权重分发与转化引导。</td></tr>
+            <tr><td>044</td><td><strong>07 页面角色分工</strong></td><td>Pricing 页角色定义</td><td class="status-warn">待优化</td><td>现在更像价格说明，不像成交页。</td></tr>
+            <tr><td>045</td><td><strong>07 页面角色分工</strong></td><td>Gallery 页角色定义</td><td class="status-bad">风险</td><td>证据型页面还没有完全发挥搜索价值。</td></tr>
+            <tr><td>046</td><td><strong>07 页面角色分工</strong></td><td>Case Study 页角色定义</td><td class="status-warn">待优化</td><td>案例应承担说服与长尾流量双重职责。</td></tr>
+            <tr><td>047</td><td><strong>07 页面角色分工</strong></td><td>Docs 页角色定义</td><td class="status-warn">待优化</td><td>需区分开发者答案页与低价值帮助页。</td></tr>
+            <tr><td>048</td><td><strong>07 页面角色分工</strong></td><td>Comparison 页角色定义</td><td class="status-warn">待优化</td><td>比较页应是截流页，不是泛介绍页。</td></tr>
+            <tr><td>049</td><td><strong>07 页面角色分工</strong></td><td>Resource 页角色定义</td><td class="status-muted">待建设</td><td>模板包、清单包、成本表等资源位还不够成型。</td></tr>
+
+            <tr><td>050</td><td><strong>08 内容厚度与覆盖</strong></td><td>核心页数量</td><td class="status-bad">风险</td><td>当前核心可打页面数量明显偏少。</td></tr>
+            <tr><td>051</td><td><strong>08 内容厚度与覆盖</strong></td><td>平均内容厚度</td><td class="status-bad">风险</td><td>约 676 词不足以支撑高竞争赛道。</td></tr>
+            <tr><td>052</td><td><strong>08 内容厚度与覆盖</strong></td><td>行业问题覆盖</td><td class="status-warn">待优化</td><td>很多用户会搜的问题还没有对应页面。</td></tr>
+            <tr><td>053</td><td><strong>08 内容厚度与覆盖</strong></td><td>比较主题覆盖</td><td class="status-warn">待优化</td><td>竞品矩阵还没有铺开。</td></tr>
+            <tr><td>054</td><td><strong>08 内容厚度与覆盖</strong></td><td>案例与实验覆盖</td><td class="status-bad">风险</td><td>最能证明产品力的内容层太薄。</td></tr>
+            <tr><td>055</td><td><strong>08 内容厚度与覆盖</strong></td><td>FAQ 与疑虑覆盖</td><td class="status-warn">待优化</td><td>常见反对意见还没有系统接住。</td></tr>
+            <tr><td>056</td><td><strong>08 内容厚度与覆盖</strong></td><td>下载与资源覆盖</td><td class="status-muted">待建设</td><td>可转化的资源型页面明显不足。</td></tr>
+
+            <tr><td>057</td><td><strong>09 信息架构</strong></td><td>首页到一级主题路径</td><td class="status-warn">待优化</td><td>首页需要更清晰地把权重送到核心主题。</td></tr>
+            <tr><td>058</td><td><strong>09 信息架构</strong></td><td>支柱页层级</td><td class="status-muted">待建设</td><td>当前尚未形成稳定的 hub-and-spoke 结构。</td></tr>
+            <tr><td>059</td><td><strong>09 信息架构</strong></td><td>集群页挂载关系</td><td class="status-muted">待建设</td><td>后续扩内容时必须先定义父子关系。</td></tr>
+            <tr><td>060</td><td><strong>09 信息架构</strong></td><td>比较页在站内的位置</td><td class="status-warn">待优化</td><td>要让高意图页面更容易被发现与继承权重。</td></tr>
+            <tr><td>061</td><td><strong>09 信息架构</strong></td><td>案例页归档方式</td><td class="status-warn">待优化</td><td>案例最好可按场景、风格、行业聚合。</td></tr>
+            <tr><td>062</td><td><strong>09 信息架构</strong></td><td>Docs 与营销页边界</td><td class="status-warn">待优化</td><td>开发者内容和营销内容不应混成一团。</td></tr>
+            <tr><td>063</td><td><strong>09 信息架构</strong></td><td>导航与 footer 分发</td><td class="status-warn">待优化</td><td>现有分发更偏基础导航，策略性还不够。</td></tr>
+
+            <tr><td>064</td><td><strong>10 内链分发</strong></td><td>首页出链策略</td><td class="status-warn">待优化</td><td>需要更明确地把强权重送给核心增长页。</td></tr>
+            <tr><td>065</td><td><strong>10 内链分发</strong></td><td>支柱页到集群页链接</td><td class="status-muted">待建设</td><td>后续内容系统的骨架还未搭起。</td></tr>
+            <tr><td>066</td><td><strong>10 内链分发</strong></td><td>集群页回链支柱页</td><td class="status-muted">待建设</td><td>需要建立主题闭环。</td></tr>
+            <tr><td>067</td><td><strong>10 内链分发</strong></td><td>比较页到 Pricing</td><td class="status-warn">待优化</td><td>高意图路径必须更短更硬。</td></tr>
+            <tr><td>068</td><td><strong>10 内链分发</strong></td><td>案例页到功能页</td><td class="status-warn">待优化</td><td>案例应承担产品解释和转化助攻。</td></tr>
+            <tr><td>069</td><td><strong>10 内链分发</strong></td><td>锚文本语义</td><td class="status-muted">待核验</td><td>要避免全站都用品牌化空锚文本。</td></tr>
+            <tr><td>070</td><td><strong>10 内链分发</strong></td><td>孤立页风险</td><td class="status-muted">待核验</td><td>随着页面扩容必须同步做 orphan 检查。</td></tr>
+
+            <tr><td>071</td><td><strong>11 Schema 覆盖</strong></td><td>Organization Schema</td><td class="status-good">良好</td><td>品牌级结构化基础可用。</td></tr>
+            <tr><td>072</td><td><strong>11 Schema 覆盖</strong></td><td>WebSite Schema</td><td class="status-good">良好</td><td>站点级实体信号存在。</td></tr>
+            <tr><td>073</td><td><strong>11 Schema 覆盖</strong></td><td>SoftwareApplication Schema</td><td class="status-warn">待优化</td><td>应覆盖核心产品与关键功能页。</td></tr>
+            <tr><td>074</td><td><strong>11 Schema 覆盖</strong></td><td>FAQPage Schema</td><td class="status-warn">待优化</td><td>高价值页 FAQ 还不够系统。</td></tr>
+            <tr><td>075</td><td><strong>11 Schema 覆盖</strong></td><td>HowTo Schema</td><td class="status-muted">待建设</td><td>教程型页面后续可引入。</td></tr>
+            <tr><td>076</td><td><strong>11 Schema 覆盖</strong></td><td>VideoObject Schema</td><td class="status-warn">待优化</td><td>案例与展示内容很适合吃这一层。</td></tr>
+            <tr><td>077</td><td><strong>11 Schema 覆盖</strong></td><td>BreadcrumbList Schema</td><td class="status-warn">待优化</td><td>信息架构清晰后要同步补齐。</td></tr>
+
+            <tr><td>078</td><td><strong>12 媒体与图像 SEO</strong></td><td>图片 alt 文本</td><td class="status-warn">待优化</td><td>应把场景、结果与关键词写进 alt。</td></tr>
+            <tr><td>079</td><td><strong>12 媒体与图像 SEO</strong></td><td>图片尺寸声明</td><td class="status-muted">待核验</td><td>需要避免布局抖动和无效加载。</td></tr>
+            <tr><td>080</td><td><strong>12 媒体与图像 SEO</strong></td><td>图片文件命名</td><td class="status-warn">待优化</td><td>媒体命名不应浪费搜索语义。</td></tr>
+            <tr><td>081</td><td><strong>12 媒体与图像 SEO</strong></td><td>视频封面与 caption</td><td class="status-warn">待优化</td><td>案例与演示视频上下文可再加厚。</td></tr>
+            <tr><td>082</td><td><strong>12 媒体与图像 SEO</strong></td><td>懒加载策略</td><td class="status-muted">待核验</td><td>要在性能和可见性之间拿平衡。</td></tr>
+            <tr><td>083</td><td><strong>12 媒体与图像 SEO</strong></td><td>媒体周边说明文字</td><td class="status-warn">待优化</td><td>不能只有媒体，没有结论与解释。</td></tr>
+            <tr><td>084</td><td><strong>12 媒体与图像 SEO</strong></td><td>Gallery 资产可索引性</td><td class="status-bad">风险</td><td>最强证据资产当前没有完全放开。</td></tr>
+
+            <tr><td>085</td><td><strong>13 性能与 CWV</strong></td><td>首页 LCP 风险</td><td class="status-muted">待核验</td><td>英雄区与媒体资源可能拉高首屏负担。</td></tr>
+            <tr><td>086</td><td><strong>13 性能与 CWV</strong></td><td>Pricing 页 LCP 风险</td><td class="status-muted">待核验</td><td>高意图页必须更快进入可交互状态。</td></tr>
+            <tr><td>087</td><td><strong>13 性能与 CWV</strong></td><td>INP 风险</td><td class="status-muted">待核验</td><td>交互脚本与动画需要真实测试数据。</td></tr>
+            <tr><td>088</td><td><strong>13 性能与 CWV</strong></td><td>CLS 风险</td><td class="status-muted">待核验</td><td>媒体尺寸与异步模块需重点检查。</td></tr>
+            <tr><td>089</td><td><strong>13 性能与 CWV</strong></td><td>脚本体积</td><td class="status-muted">待核验</td><td>需确认是否存在可删减的前端负担。</td></tr>
+            <tr><td>090</td><td><strong>13 性能与 CWV</strong></td><td>图片压缩与格式</td><td class="status-warn">待优化</td><td>优先确认 WebP/AVIF 与响应式输出。</td></tr>
+            <tr><td>091</td><td><strong>13 性能与 CWV</strong></td><td>移动端体验</td><td class="status-muted">待核验</td><td>移动端性能与可读性都需要实测。</td></tr>
+
+            <tr><td>092</td><td><strong>14 转化与信任</strong></td><td>首页 CTA 强度</td><td class="status-warn">待优化</td><td>首屏需要更清晰的试用与价值承诺。</td></tr>
+            <tr><td>093</td><td><strong>14 转化与信任</strong></td><td>Pricing CTA 强度</td><td class="status-bad">风险</td><td>最靠近成交的一页仍然不够会收口。</td></tr>
+            <tr><td>094</td><td><strong>14 转化与信任</strong></td><td>试用门槛解释</td><td class="status-warn">待优化</td><td>额度、限制、升级路径需要说透。</td></tr>
+            <tr><td>095</td><td><strong>14 转化与信任</strong></td><td>用户证言数量</td><td class="status-bad">风险</td><td>真实反馈层明显偏薄。</td></tr>
+            <tr><td>096</td><td><strong>14 转化与信任</strong></td><td>第三方 Logo / 提及</td><td class="status-warn">待优化</td><td>信任模块还不够厚。</td></tr>
+            <tr><td>097</td><td><strong>14 转化与信任</strong></td><td>案例证明力</td><td class="status-warn">待优化</td><td>需要更多真实输入、输出、结果块。</td></tr>
+            <tr><td>098</td><td><strong>14 转化与信任</strong></td><td>风险与边界说明</td><td class="status-warn">待优化</td><td>越接近成交，越该主动解释不适合谁。</td></tr>
+
+            <tr><td>099</td><td><strong>15 AI Search Ready</strong></td><td>TL;DR 摘要块</td><td class="status-warn">待优化</td><td>高价值页应先给可摘取结论。</td></tr>
+            <tr><td>100</td><td><strong>15 AI Search Ready</strong></td><td>定义块</td><td class="status-warn">待优化</td><td>术语和产品差异点应有短答案版本。</td></tr>
+            <tr><td>101</td><td><strong>15 AI Search Ready</strong></td><td>对比表</td><td class="status-warn">待优化</td><td>AI 系统和用户都偏爱结构化比较。</td></tr>
+            <tr><td>102</td><td><strong>15 AI Search Ready</strong></td><td>步骤块</td><td class="status-muted">待建设</td><td>教程与工作流页应具备分步结构。</td></tr>
+            <tr><td>103</td><td><strong>15 AI Search Ready</strong></td><td>FAQ 答案块</td><td class="status-warn">待优化</td><td>回答型内容越多，越容易被抽取。</td></tr>
+            <tr><td>104</td><td><strong>15 AI Search Ready</strong></td><td>限制说明块</td><td class="status-warn">待优化</td><td>真实边界能提升可信度与引用率。</td></tr>
+            <tr><td>105</td><td><strong>15 AI Search Ready</strong></td><td>结论块可引用性</td><td class="status-warn">待优化</td><td>每页都应有一句可被直接转述的判断。</td></tr>
+
+            <tr><td>106</td><td><strong>16 站外证据层</strong></td><td>品牌提及监测</td><td class="status-muted">待建设</td><td>需要建立提及回收与链接回收机制。</td></tr>
+            <tr><td>107</td><td><strong>16 站外证据层</strong></td><td>竞品反链截流</td><td class="status-muted">待建设</td><td>第四条线的核心动作还未成型。</td></tr>
+            <tr><td>108</td><td><strong>16 站外证据层</strong></td><td>Broken Link Building</td><td class="status-muted">待建设</td><td>资源型内容准备好后可直接开打。</td></tr>
+            <tr><td>109</td><td><strong>16 站外证据层</strong></td><td>资源页外联</td><td class="status-muted">待建设</td><td>模板包、成本表、基准测试都可外推。</td></tr>
+            <tr><td>110</td><td><strong>16 站外证据层</strong></td><td>目录与导航站</td><td class="status-warn">待优化</td><td>应建立品牌壳层与基础引用层。</td></tr>
+            <tr><td>111</td><td><strong>16 站外证据层</strong></td><td>播客 / Newsletter / 社区</td><td class="status-muted">待建设</td><td>站外放大还没有形成节奏。</td></tr>
+            <tr><td>112</td><td><strong>16 站外证据层</strong></td><td>可链接资产储备</td><td class="status-bad">风险</td><td>没有足够多别人愿意引用的硬材料。</td></tr>
+          </table>
         </div>
       </section>
 
