@@ -188,8 +188,8 @@
     <main class="page">
       <header class="hero">
         <div class="eyebrow">SEO Strategy / Dual-Domain Audit</div>
-        <h1>kinovi.ai 已经有了能打的产品卖点，站内表达和内容规模还没有长成配得上这套卖点的样子。</h1>
-        <p class="lead">这份策略把前提锁定为双域收敛架构成立，再围绕这个前提展开审计、修复、扩展和增长。该保留的内容不删，该纠正的冲突点直接纠正，该补齐的规格和路线图一次写完整。</p>
+        <h1>kinovi.ai SEO 审计与四线增长策略</h1>
+        <p class="lead">先把站看清，再决定往哪打。这份交付把技术审计、修复优先级、四线策略、内容增长和转化建议压在同一套逻辑里，目标很直接：让流量、理解和注册开始接上。</p>
         <div class="hero-grid">
           <div class="hero-card">
             <div class="mini">核心判断</div>
@@ -326,6 +326,87 @@
           </table>
         </div>
 
+        <div class="grid-2" style="margin-top:18px">
+          <div class="card">
+            <div class="mini">审计层 1：抓取与索引</div>
+            <p>这一层回答的不是“文件有没有”，而是 Google 到底在不在看、看到了什么、有没有看错地方。对双域站来说，这一层尤其重要，因为任何一处收口不一致，都会把后面的判断带偏。</p>
+            <ul class="list">
+              <li>robots.txt 是否只拦该拦的路径</li>
+              <li>sitemap 是否覆盖核心页、是否遗漏高价值页</li>
+              <li>双域 Search Console 属性是否齐全</li>
+              <li>canonical、308、og:url、schema url 是否同口径</li>
+              <li>参数页、预览页、测试页有没有偷偷进入索引层</li>
+              <li>Gallery / Pricing / Docs 这类高价值页是否被稳定抓取</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="mini">审计层 2：页面可理解性</div>
+            <p>搜索引擎不怕你页面少，怕的是它看不懂你页面在讲什么。标题、H1、摘要、表格、FAQ、schema 这些东西，本质上都在做同一件事：把页面主命题钉死。</p>
+            <ul class="list">
+              <li>每页是否只有一个足够清晰的主命题</li>
+              <li>Title / Meta / H1 / 首段是否互相支持，而不是互相拉扯</li>
+              <li>Gallery 是否具备可索引的文字层，不只是视觉层</li>
+              <li>比较页是否有一眼能看懂的结论与参数表</li>
+              <li>功能页是否把“功能”翻译成“结果”</li>
+              <li>Docs 是否只是文档入口，还是能承接开发者搜索意图</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:16px">
+          <div class="card">
+            <div class="mini">审计层 3：技术健康度</div>
+            <p>这一层决定的是页面能不能稳。页面慢、跳转乱、媒体尺寸飘、交互拖，最后掉的不是一个 Lighthouse 分，而是用户对产品的耐心。</p>
+            <ul class="list">
+              <li>首屏大图 / 视频是否拖累 LCP</li>
+              <li>前端 bundle 与交互脚本是否拖累 INP</li>
+              <li>图片尺寸、骨架和动态模块是否拖累 CLS</li>
+              <li>是否存在无意义跳转链与状态码噪音</li>
+              <li>移动端首屏、按钮触达和滚动体验是否稳定</li>
+              <li>图片格式、懒加载、缓存策略是否合理</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="mini">审计层 4：信息架构与内链</div>
+            <p>内链不是把链接数量堆上去就结束。站内链接真正该做的是分发判断力，把权重、上下文和下一步动作推到最该去的页面上。</p>
+            <ul class="list">
+              <li>首页是否把权重推向核心功能页、比较页、Pricing</li>
+              <li>Blog、功能页、案例页之间有没有三角联动</li>
+              <li>高流量页是否有清晰的导出路径，不让用户读完就走</li>
+              <li>是否存在孤立页、弱入口页、被埋太深的高价值页</li>
+              <li>锚文本是否有语义，还是一堆“learn more”空词</li>
+              <li>导流页与主站之间是否形成可追踪的承接链路</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:16px">
+          <div class="card">
+            <div class="mini">审计层 5：SERP 展现与点击率</div>
+            <p>有排名但点不进去，和没有排名差不了太多。很多站看起来“技术没问题”，其实死在搜索结果页那一屏。</p>
+            <ul class="list">
+              <li>Title 是否有结果感，而不是空洞产品名堆叠</li>
+              <li>Meta Description 是否能解释价值并给 CTA</li>
+              <li>FAQ Schema / Breadcrumb / Review 信号是否可见</li>
+              <li>品牌词与比较词是否具备更强的 SERP 占位潜力</li>
+              <li>哪些页面排名可以，但 CTR 明显偏低</li>
+              <li>哪些页面值得做更激进的标题实验</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="mini">审计层 6：AI Search Ready</div>
+            <p>这一层是传统审计常常漏掉的。AI 系统要的不只是“你有内容”，它要的是能被快速抽取的答案单元：简洁首段、参数表、FAQ、定义句、边界说明、案例结论。</p>
+            <ul class="list">
+              <li>核心页首段是否能直接回答用户问题</li>
+              <li>页面有没有表格、步骤、定义和比较段</li>
+              <li>FAQ 是否覆盖真实问题，而不是客服腔废话</li>
+              <li>案例页是否有参数、结果和一句结论</li>
+              <li>站内是否允许主流 AI crawler 正常访问</li>
+              <li>哪些页面更适合做 AI 引用型资产</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="grid-3" style="margin-top:18px">
           <div class="card">
             <div class="mini">双域校验项</div>
@@ -354,6 +435,10 @@
               <li>移动端触达和滚动深度都要测</li>
             </ul>
           </div>
+        </div>
+        <div class="card" style="margin-top:18px">
+          <div class="mini">为什么把审计写这么细</div>
+          <p>普通客户需要看懂问题到底伤在哪里，专业一点的人会直接追问：你有没有把 crawling、rendering、schema、internal links、CTR、AI 搜索这几层拆开看。审计写少了，客户会觉得空；写浅了，懂行的人会觉得你没看进去。Kinovi 这份交付要撑住这两头，所以审计不能只停在“常见 SEO 检查项”那一层。</p>
         </div>
       </section>
 
