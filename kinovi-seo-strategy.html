@@ -3,689 +3,743 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kinovi.ai — SEO Strategy & Technical Audit</title>
+<title>kinovi.ai | Dual-Domain SEO Strategy & Audit</title>
 <style>
-:root{--bg:#fafafa;--surface:#fff;--border:#e5e7eb;--border-focus:#2563eb;--text:#1a1a2e;--text-muted:#6b7280;--text-dim:#9ca3af;--accent:#2563eb;--accent-light:#eff6ff;--green:#16a34a;--green-bg:#f0fdf4;--orange:#d97706;--orange-bg:#fffbeb;--red:#dc2626;--red-bg:#fef2f2;--purple:#7c3aed;--purple-bg:#f5f3ff;--teal:#0d9488;--teal-bg:#f0fdfa;--radius:8px;--shadow:0 1px 3px rgba(0,0,0,.06)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
+  :root{
+    --bg:#f4f1ea;
+    --paper:#fbfaf7;
+    --card:#fffdfa;
+    --line:#dfd7ca;
+    --ink:#1f2a37;
+    --muted:#6b7280;
+    --soft:#8a8175;
+    --accent:#335c67;
+    --accent-2:#9a6b3f;
+    --good:#2f6b52;
+    --warn:#b26b2a;
+    --bad:#b24538;
+    --shadow:0 16px 40px rgba(31,42,55,.08);
+    --radius:18px;
+    --radius-sm:12px;
+    --max:1240px;
+  }
 
-/* Layout */
-.layout{display:flex;max-width:1400px;margin:0 auto;min-height:100vh}
-.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--surface);padding:24px 16px;flex-shrink:0}
-.sidebar h2{font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--accent)}
-.sidebar nav a{display:block;padding:6px 12px;font-size:13px;color:var(--text-muted);border-radius:4px;margin-bottom:2px;line-height:1.5}
-.sidebar nav a:hover{background:var(--accent-light);color:var(--accent);text-decoration:none}
-.sidebar nav a.lv2{padding-left:24px;font-size:12px}
-.main{flex:1;padding:40px 48px 80px;max-width:900px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"SF Pro Text","Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .shell{max-width:var(--max);margin:0 auto;padding:28px}
+  .frame{
+    display:grid;
+    grid-template-columns:280px minmax(0,1fr);
+    gap:24px;
+    align-items:start;
+  }
+  .rail{
+    position:sticky;
+    top:20px;
+    padding:24px;
+    background:rgba(255,253,250,.72);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(223,215,202,.9);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+  }
+  .brand{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:30px;
+    line-height:1.1;
+    letter-spacing:-.02em;
+    margin-bottom:12px;
+  }
+  .rail p{
+    color:var(--soft);
+    font-size:13px;
+    margin-bottom:18px;
+  }
+  .rail nav a{
+    display:block;
+    padding:9px 0;
+    color:var(--muted);
+    font-size:14px;
+    border-bottom:1px solid rgba(223,215,202,.7);
+  }
+  .rail nav a:last-child{border-bottom:none}
 
-/* Header */
-.report-header{margin-bottom:48px;padding-bottom:24px;border-bottom:2px solid var(--accent)}
-.report-header h1{font-size:28px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
-.report-header h1 span{color:var(--accent)}
-.report-header .meta{font-size:13px;color:var(--text-muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600}
-.tag-type{background:var(--teal-bg);color:var(--teal)}
-.tag-crit{background:var(--red-bg);color:var(--red)}
-.tag-warn{background:var(--orange-bg);color:var(--orange)}
-.tag-good{background:var(--green-bg);color:var(--green)}
+  .content{
+    background:var(--paper);
+    border:1px solid rgba(223,215,202,.9);
+    border-radius:28px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .hero{
+    padding:44px 44px 36px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(circle at top right, rgba(154,107,63,.12), transparent 28%),
+      radial-gradient(circle at top left, rgba(51,92,103,.10), transparent 32%),
+      linear-gradient(180deg, rgba(255,255,255,.92), rgba(251,250,247,.96));
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 12px;
+    border:1px solid rgba(154,107,63,.2);
+    border-radius:999px;
+    color:var(--accent-2);
+    background:rgba(154,107,63,.08);
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:58px;
+    line-height:1.02;
+    letter-spacing:-.04em;
+    font-weight:500;
+    max-width:860px;
+  }
+  .lead{
+    max-width:840px;
+    margin-top:20px;
+    color:#45515f;
+    font-size:20px;
+    line-height:1.65;
+  }
+  .meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+  }
+  .pill{
+    padding:7px 12px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    font-size:13px;
+    color:var(--muted);
+    background:rgba(255,255,255,.75);
+  }
+  .hero-note{
+    margin-top:24px;
+    padding:18px 20px;
+    border-left:4px solid var(--accent);
+    background:rgba(51,92,103,.06);
+    border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+    color:#41505a;
+  }
 
-/* Sections */
-.section{margin-bottom:56px}
-.section-title{font-size:22px;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border)}
-.section-title .num{color:var(--accent);font-weight:800;margin-right:8px}
-.sub-title{font-size:17px;font-weight:600;margin:28px 0 16px;color:var(--text)}
-.sub-sub{font-size:15px;font-weight:600;margin:20px 0 10px;color:var(--text-muted)}
+  section{padding:34px 44px;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:none}
+  .section-label{
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    margin-bottom:12px;
+  }
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:34px;
+    line-height:1.1;
+    letter-spacing:-.03em;
+    margin-bottom:16px;
+    font-weight:500;
+  }
+  h3{
+    font-size:19px;
+    line-height:1.35;
+    margin-bottom:10px;
+    font-weight:600;
+  }
+  p + p{margin-top:14px}
 
-/* Cards */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:16px;box-shadow:var(--shadow)}
-.card-accent{border-left:4px solid var(--accent)}
-.card-red{border-left:4px solid var(--red)}
-.card-orange{border-left:4px solid var(--orange)}
-.card-green{border-left:4px solid var(--green)}
-.card-purple{border-left:4px solid var(--purple)}
-.card-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
-.card p{font-size:14px;line-height:1.8;margin-bottom:8px}
-.card p:last-child{margin-bottom:0}
-.card ul{font-size:14px;padding-left:20px;margin:8px 0}
+  .grid-2,.grid-3,.grid-4{display:grid;gap:16px}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:0 8px 24px rgba(31,42,55,.04);
+  }
+  .card.kpi{padding:20px}
+  .mini{
+    font-size:12px;
+    color:var(--soft);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:10px;
+  }
+  .score{
+    font-size:42px;
+    line-height:1;
+    letter-spacing:-.04em;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .score.good{color:var(--good)}
+  .score.warn{color:var(--warn)}
+  .score.bad{color:var(--bad)}
+  .why{
+    margin-top:10px;
+    padding-top:12px;
+    border-top:1px solid rgba(223,215,202,.8);
+    font-size:14px;
+    color:#4e5966;
+  }
+  .statement{
+    font-size:24px;
+    line-height:1.5;
+    color:#33404c;
+    max-width:920px;
+  }
+  .issue{
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid rgba(223,215,202,.8);
+  }
+  .issue:last-child{border-bottom:none}
+  .severity{
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--soft);
+    padding-top:3px;
+  }
+  .severity strong{display:block;font-size:18px;color:var(--bad);letter-spacing:-.02em;text-transform:none}
+  .severity.warn strong{color:var(--warn)}
+  .severity.good strong{color:var(--good)}
+  .detail{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:14px;
+  }
+  .quote{
+    margin-top:12px;
+    padding:14px 16px;
+    background:rgba(154,107,63,.07);
+    border:1px solid rgba(154,107,63,.16);
+    border-radius:14px;
+    color:#5a4a3d;
+    font-size:14px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin-top:8px;
+  }
+  th,td{
+    text-align:left;
+    vertical-align:top;
+    padding:14px 12px;
+    border-bottom:1px solid rgba(223,215,202,.85);
+  }
+  th{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--soft);
+    font-weight:600;
+  }
+  td strong{color:var(--ink)}
+  .ok{color:var(--good);font-weight:600}
+  .warning{color:var(--warn);font-weight:600}
+  .bad{color:var(--bad);font-weight:600}
+  .muted{color:var(--muted)}
 
-/* Score grid */
-.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px}
-.score-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center}
-.score-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
-.score-value{font-size:32px;font-weight:800;line-height:1}
-.score-unit{font-size:14px;color:var(--text-dim);font-weight:400}
-.score-bar{height:4px;background:var(--border);border-radius:2px;margin-top:10px;overflow:hidden}
-.score-fill{height:100%;border-radius:2px}
+  .line{
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,253,250,.96));
+  }
+  .line-head{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:10px;
+  }
+  .line-num{
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    margin-bottom:6px;
+  }
+  .line-tag{
+    flex-shrink:0;
+    padding:8px 12px;
+    border-radius:999px;
+    background:rgba(51,92,103,.08);
+    color:var(--accent);
+    font-size:12px;
+    border:1px solid rgba(51,92,103,.16);
+  }
+  .cols{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:14px;
+    margin-top:16px;
+  }
+  .list{
+    margin-top:12px;
+    padding-left:18px;
+    color:#4e5966;
+  }
+  .list li{margin-bottom:8px}
+  .roadmap{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(223,215,202,.85);
+  }
+  .roadmap:last-child{border-bottom:none}
+  .roadmap-phase{
+    font-size:14px;
+    color:var(--accent-2);
+    font-weight:600;
+  }
+  .footer-note{
+    color:var(--soft);
+    font-size:13px;
+  }
 
-/* Tables */
-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 20px}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border)}
-th{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);background:var(--bg)}
-td{color:var(--text)}
-tr:hover td{background:var(--accent-light)}
-
-/* Status badges */
-.st-ok{color:var(--green);font-weight:600}
-.st-warn{color:var(--orange);font-weight:600}
-.st-bad{color:var(--red);font-weight:600}
-.st-na{color:var(--text-dim)}
-
-/* Keywords */
-.kw-group{margin-bottom:16px}
-.kw-group-label{font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
-.kw-list{display:flex;flex-wrap:wrap;gap:6px}
-.kw{padding:4px 12px;background:var(--surface);border:1px solid var(--border);border-radius:4px;font-size:12px;font-family:'SF Mono',monospace}
-.kw-s{border-color:#86efac;background:#f0fdf4;color:#166534}
-.kw-a{border-color:#93c5fd;background:#eff6ff;color:#1e40af}
-.kw-b{border-color:#c4b5fd;background:#f5f3ff;color:#5b21b6}
-.kw-c{border-color:#fcd34d;background:#fffbeb;color:#92400e}
-.kw-d{border-color:var(--border);color:var(--text-muted)}
-
-/* Timeline */
-.timeline{margin:16px 0}
-.tl-row{display:flex;gap:16px;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
-.tl-row:last-child{border-bottom:none}
-.tl-phase{flex-shrink:0;width:100px;font-weight:600;color:var(--accent);font-size:13px}
-
-/* Checklist */
-.checklist{list-style:none;font-size:14px}
-.checklist li{padding:4px 0 4px 24px;position:relative}
-.checklist li::before{content:'';position:absolute;left:0;top:10px;width:14px;height:14px;border:1.5px solid var(--border);border-radius:3px}
-
-/* Issue list */
-.issue{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);align-items:flex-start}
-.issue:last-child{border-bottom:none}
-.issue-dot{width:10px;height:10px;border-radius:50%;margin-top:5px;flex-shrink:0}
-.dot-crit{background:var(--red);box-shadow:0 0 6px rgba(220,38,38,.4)}
-.dot-warn{background:var(--orange)}
-.dot-low{background:var(--text-dim)}
-.issue-title{font-size:14px;font-weight:600;margin-bottom:4px}
-.issue-desc{font-size:13px;color:var(--text-muted)}
-.issue-badge{font-size:11px;font-weight:600;padding:1px 8px;border-radius:10px;margin-left:8px}
-.badge-crit{background:var(--red-bg);color:var(--red)}
-.badge-warn{background:var(--orange-bg);color:var(--orange)}
-
-/* Footer */
-.report-footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);font-size:12px;color:var(--text-dim);display:flex;justify-content:space-between}
-
-/* Responsive */
-@media(max-width:900px){
-  .sidebar{display:none}
-  .main{padding:24px 16px 60px}
-  .layout{display:block}
-  .score-grid{grid-template-columns:1fr 1fr}
-}
+  @media (max-width: 1080px){
+    .frame{grid-template-columns:1fr}
+    .rail{position:static}
+    .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3,.cols{grid-template-columns:1fr}
+  }
+  @media (max-width: 720px){
+    .shell{padding:14px}
+    .hero,section{padding:26px 20px}
+    h1{font-size:38px}
+    .lead{font-size:18px}
+    .grid-2,.grid-4{grid-template-columns:1fr}
+    .issue,.roadmap{grid-template-columns:1fr}
+    .line-head{display:block}
+    .line-tag{display:inline-block;margin-top:10px}
+  }
 </style>
 </head>
 <body>
-<div class="layout">
-<aside class="sidebar">
-<h2>kinovi.ai</h2>
-<nav>
-<a href="#type">00 站点类型判断</a>
-<a href="#exec">01 执行摘要</a>
-<a href="#scores">02 评分仪表盘</a>
-<a href="#issues">03 关键问题清单</a>
-<a href="#audit">04 全面审计报告</a>
-<a href="#convert">05 转化与信任诊断</a>
-<a href="#fixlist">06 优先修复清单</a>
-<a href="#line1">07 第一条线：导流站</a>
-<a href="#line2">08 第二条线：主站Blog</a>
-<a href="#line3">09 第三条线：技术SEO</a>
-<a href="#line4">10 第四条线：外链建设</a>
-<a href="#keywords">11 100关键词分级</a>
-<a href="#roadmap">12 执行路线图</a>
-<a href="#growth">13 内容增长与转化</a>
-</nav>
-</aside>
-
-<main class="main">
-
-<!-- Header -->
-<header class="report-header">
-<h1>kinovi.ai <span>SEO Strategy & Audit</span></h1>
-<div class="meta">
-<span class="tag tag-type">AI SaaS 工具站</span>
-<span class="tag tag-good">双域策略 ✅</span>
-<span class="tag tag-good">robots.txt ✅ sitemap.xml ✅</span>
-<span class="tag tag-good">9 种 Schema</span>
-<span class="tag tag-warn">Buy Now 断裂</span>
-<span>审计 2026-04-18</span>
-<span>6 页面 CDP 深度扫描</span>
-</div>
-</header>
-
-<!-- 00 Site Type -->
-<section class="section" id="type">
-<h2 class="section-title"><span class="num">00</span>站点类型判断</h2>
-<div class="card card-accent">
-<div class="card-label" style="color:var(--accent)">Classification: AI SaaS Tool Site</div>
-<p>kinovi.ai 是典型的 <strong>AI SaaS 工具站</strong>——以 Seedance 2.0 为底座的 AI 视频生成平台。免费额度 + 信用点付费，有 API 文档、Gallery 展示、定价页。目标用户：内容创作者、营销团队、独立制作人。</p>
-<p>评价标准按 AI SaaS 框架走，不套用电商或内容站模板：</p>
-<table>
-<tr><th>维度</th><th>适用指标</th><th>不适用指标</th></tr>
-<tr><td>信任体系</td><td>Gallery 展示 + 社区规模 + 排行榜排名 + 免费额度透明度</td><td>团队照片、SSL 支付徽章、企业案例研究</td></tr>
-<tr><td>转化体系</td><td>Free→Paid 梯度 + 注册便捷度 + API 文档完整度</td><td>购物车流程、优惠券系统、物流信息</td></tr>
-<tr><td>内容深度</td><td>Use Cases + Comparisons + Demos + Docs</td><td>产品规格参数、用户评价聚合</td></tr>
-</table>
-</div>
-</section>
-
-<!-- 01 Executive Summary -->
-<section class="section" id="exec">
-<h2 class="section-title"><span class="num">01</span>执行摘要</h2>
-<div class="card card-accent">
-<div class="card-label" style="color:var(--accent)">诊断：技术基础扎实，内容是唯一短板</div>
-<p>kinovi.ai 采用了<strong>双域收敛策略</strong>：kinovi.ai 作为品牌展示层承载所有页面，seedance2-pro.com 作为 SEO 权重收口层。Canonical 统一指向 seedance2-pro.com（关键词域名，天然抢占 "seedance 2 pro" 长尾搜索），seedance2-pro.com 308 重定向回 kinovi.ai（用户访问无缝）。robots.txt 和 sitemap.xml 均已正确配置——sitemap 内所有 URL 指向 seedance2-pro.com 并包含 hreflang（en/ja/ko/es/de）。这套架构本身是成熟的。</p>
-<p><strong>真正的短板在内容和转化</strong>：全站仅 6 个页面，平均 676 词，Blog 几乎不存在。Runway 有 200+ 篇博客在抢占 kinovi 的潜在流量。Buy Now 按钮指向空链接（付费入口直接断裂），Gallery 页被 noindex 屏蔽（最大视觉资产对 Google 不可见），0 条用户证言、0 个 Lead Capture 触点。</p>
-<p><strong>一句话</strong>：地基打好了一半，但房子还没开始盖。技术 SEO 只解决"能不能被找到"，内容和转化解决"找到之后有没有用"。</p>
-</div>
-</section>
-
-<!-- 02 Scores -->
-<section class="section" id="scores">
-<h2 class="section-title"><span class="num">02</span>评分仪表盘</h2>
-<div class="score-grid">
-<div class="score-item"><div class="score-label">综合技术评分</div><div class="score-value" style="color:var(--orange)">64<span class="score-unit">/100</span></div><div class="score-bar"><div class="score-fill" style="width:64%;background:var(--orange)"></div></div></div>
-<div class="score-item"><div class="score-label">Schema 覆盖</div><div class="score-value" style="color:var(--green)">9<span class="score-unit">/15</span></div><div class="score-bar"><div class="score-fill" style="width:60%;background:var(--green)"></div></div></div>
-<div class="score-item"><div class="score-label">转化就绪度</div><div class="score-value" style="color:var(--orange)">55<span class="score-unit">/100</span></div><div class="score-bar"><div class="score-fill" style="width:55%;background:var(--orange)"></div></div></div>
-<div class="score-item"><div class="score-label">信任体系</div><div class="score-value" style="color:var(--red)">20<span class="score-unit">/100</span></div><div class="score-bar"><div class="score-fill" style="width:20%;background:var(--red)"></div></div></div>
-<div class="score-item"><div class="score-label">内容深度</div><div class="score-value" style="color:var(--teal)">80<span class="score-unit">/100</span></div><div class="score-bar"><div class="score-fill" style="width:80%;background:var(--teal)"></div></div></div>
-<div class="score-item"><div class="score-label">技术SEO基础</div><div class="score-value" style="color:var(--red)">40<span class="score-unit">/100</span></div><div class="score-bar"><div class="score-fill" style="width:40%;background:var(--red)"></div></div></div>
-</div>
-<h3 class="sub-sub">每页评分明细</h3>
-<table>
-<tr><th>页面</th><th>评分</th><th>核心问题</th></tr>
-<tr><td>Homepage <code>/</code></td><td class="st-warn">72%</td><td>双 H1、meta desc 仅 79 字符</td></tr>
-<tr><td><code>/happyhorse</code></td><td class="st-warn">71%</td><td>内容偏薄 455 词</td></tr>
-<tr><td><code>/app/gallery</code></td><td class="st-bad">45%</td><td>noindex、无 H1、无 Schema、meta desc 71 字符</td></tr>
-<tr><td><code>/image-creator</code></td><td class="st-warn">66%</td><td></td></tr>
-<tr><td><code>/pricing</code></td><td class="st-bad">55%</td><td>Buy Now href 为空</td></tr>
-<tr><td><code>/docs</code> (API)</td><td class="st-warn">71%</td><td></td></tr>
-</table>
-</section>
-
-<!-- 03 Critical Issues -->
-<section class="section" id="issues">
-<h2 class="section-title"><span class="num">03</span>关键问题清单</h2>
-
-<h3 class="sub-title" style="color:var(--teal)">策略确认项 — 双域架构</h3>
-<div class="card card-green">
-<div class="card-label" style="color:var(--green)">双域收敛策略已正确实施</div>
-<p>kinovi.ai（品牌层）+ seedance2-pro.com（SEO 权重收口层）的双域架构运作正常：</p>
-<ul>
-<li>Canonical 统一 -> seedance2-pro.com（关键词域名抢占长尾搜索）</li>
-<li>robots.txt 已配置（Allow /, Disallow /api/* 等）</li>
-<li>sitemap.xml 已存在（URL 指向 seedance2-pro.com，含 hreflang en/ja/ko/es/de）</li>
-<li>seedance2-pro.com 308 重定向回 kinovi.ai（用户访问无缝）</li>
-</ul>
-<p><strong>待确认：</strong>双域是否均在 GSC 验证？sitemap 是否双域均已提交？Gallery 页 noindex 是否有意？</p>
-</div>
-
-<h3 class="sub-title" style="color:var(--orange)">P1 — 严重（转化和关键页面）</h3>
-
-
-<div class="issue"><div class="issue-dot dot-warn"></div><div>
-<div class="issue-title">Gallery 页面 noindex + 无 H1 + 无 Schema <span class="issue-badge badge-warn">/app/gallery</span></div>
-<div class="issue-desc">最有说服力的页面被"隐形"了（noindex），连标题都没有（无 H1）。单分类视频 40~3000+，图片最高 84,920——巨大的 SEO 资产被浪费。</div>
-</div></div>
-
-<div class="issue"><div class="issue-dot dot-warn"></div><div>
-<div class="issue-title">Buy Now 按钮 href 为空 <span class="issue-badge badge-warn">/pricing</span></div>
-<div class="issue-desc">用户点击"立即购买"什么都不发生。付费转化在最后一环断裂。最直接的收银台关了。</div>
-</div></div>
-
-<div class="issue"><div class="issue-dot dot-warn"></div><div>
-<div class="issue-title">Homepage 双 H1 <span class="issue-badge badge-warn">/</span></div>
-<div class="issue-desc">"Kinovi AI Video Generator" + "Plans that Scale" 两个 H1 互相打架。在"AI video generator"这种高竞争词上，主题信号被稀释。</div>
-</div></div>
-
-<div class="issue"><div class="issue-dot dot-warn"></div><div>
-<div class="issue-title">OG/Schema URL 统一指向 seedance2-pro.com（双域策略） <span class="issue-badge badge-warn">全站</span></div>
-<div class="issue-desc">符合双域策略设计。社交分享引流至 seedance2-pro.com（关键词域名），Rich Results 品牌实体关联到该域。需确认：双域均已验证 GSC。</div>
-</div></div>
-</section>
-
-<!-- 04 Full Audit -->
-<section class="section" id="audit">
-<h2 class="section-title"><span class="num">04</span>全面审计报告（16 类 110+ 检查项）</h2>
-
-<h3 class="sub-title">Category 1: Meta 标签</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>Title Tag</td><td class="st-warn">⚠</td><td>各页面均有 title，需确认包含核心关键词且 50-60 字符</td></tr>
-<tr><td>Meta Description</td><td class="st-warn">⚠</td><td>Homepage 仅 79 字符，Gallery 71 字符，远低于 150-160 最佳长度</td></tr>
-<tr><td>Canonical Tag</td><td class="st-ok">✓</td><td>双域策略：统一指向 seedance2-pro.com（关键词域名收口）</td></tr>
-<tr><td>Robots Meta</td><td class="st-warn">⚠</td><td>Gallery 页设为 noindex，最大视觉资产对搜索引擎不可见</td></tr>
-<tr><td>Viewport</td><td class="st-ok">✓</td><td>已正确设置</td></tr>
-<tr><td>Charset</td><td class="st-ok">✓</td><td>UTF-8</td></tr>
-<tr><td>Lang Attribute</td><td class="st-ok">✓</td><td>en</td></tr>
-<tr><td>Hreflang</td><td class="st-na">—</td><td>单语言站点非必需</td></tr>
-</table>
-
-<h3 class="sub-title">Category 2: 标题结构</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>H1 唯一性</td><td class="st-bad">✗</td><td>Homepage 双 H1</td></tr>
-<tr><td>H1 存在性</td><td class="st-bad">✗</td><td>Gallery 无 H1</td></tr>
-<tr><td>标题层级</td><td class="st-ok">✓</td><td>其余页面 H2-H4 层级合理</td></tr>
-<tr><td>H2 关键词覆盖</td><td class="st-ok">✓</td><td>FAQ 页面 H2 丰富，关键词密度好</td></tr>
-</table>
-
-<h3 class="sub-title">Category 3: 图片</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>Alt Text</td><td class="st-warn">⚠</td><td>image-creator 页 36 张图全部 OK；Homepage 5 张 empty alt</td></tr>
-<tr><td>图片格式</td><td class="st-na">待验证</td><td>建议确认是否使用 WebP/AVIF</td></tr>
-<tr><td>Lazy Loading</td><td class="st-na">待验证</td><td>Gallery 图片数量大，应启用懒加载</td></tr>
-<tr><td>尺寸声明</td><td class="st-na">待验证</td><td>未设置 width/height 会导致 CLS</td></tr>
-</table>
-
-<h3 class="sub-title">Category 4: 链接</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>内部链接数</td><td class="st-ok">✓</td><td>189 个内链，密度合理</td></tr>
-<tr><td>外部链接数</td><td class="st-ok">✓</td><td>32 个，健康</td></tr>
-<tr><td>锚文本语义</td><td class="st-ok">✓</td><td>CTA 文本清晰</td></tr>
-<tr><td>Buy Now 链接断裂</td><td class="st-bad">✗</td><td>href 为空——付费转化直接断裂</td></tr>
-<tr><td>点击深度</td><td class="st-ok">✓</td><td>核心页面均在 2 次点击内可达</td></tr>
-</table>
-
-<h3 class="sub-title">Category 5: Schema / 结构化数据</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>Organization</td><td class="st-warn">⚠</td><td>存在，url 指向 seedance2-pro.com（双域策略一致）</td></tr>
-<tr><td>WebSite</td><td class="st-warn">⚠</td><td>同上</td></tr>
-<tr><td>SoftwareApplication</td><td class="st-ok">✓</td><td>适合 AI SaaS 站点</td></tr>
-<tr><td>FAQPage</td><td class="st-ok">✓</td><td>首页 13 Q&A + HappyHorse 4 Q&A</td></tr>
-<tr><td>HowTo</td><td class="st-ok">✓</td><td>3 步骤教程</td></tr>
-<tr><td>VideoObject</td><td class="st-ok">✓</td><td>存在</td></tr>
-<tr><td>Gallery 无 Schema</td><td class="st-bad">✗</td><td>最有说服力的页面完全空白</td></tr>
-<tr><td>缺失 Review/AggregateRating</td><td class="st-bad">✗</td><td>无评分数据，搜索结果无星级</td></tr>
-<tr><td>BreadcrumbList</td><td class="st-warn">⚠</td><td>仅 Pricing 页有，应全站部署</td></tr>
-</table>
-
-<h3 class="sub-title">Category 6: Core Web Vitals / 性能</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>LCP (&lt;2.5s)</td><td class="st-na">需 Lighthouse</td><td>AI 工具站 JS bundle 通常较大，LCP 风险高</td></tr>
-<tr><td>INP (&lt;200ms)</td><td class="st-na">需实测</td><td>SPA 架构交互多，INP 容易超标</td></tr>
-<tr><td>CLS (&lt;0.1)</td><td class="st-na">需验证</td><td>图片尺寸未声明、动态内容可能导致 CLS</td></tr>
-<tr><td>TTFB</td><td class="st-na">需服务端数据</td><td>取决于 CDN 和服务器配置</td></tr>
-</table>
-
-<h3 class="sub-title">Category 7-8: 移动端 & SSL</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>Viewport 设置</td><td class="st-ok">✓</td><td>正确</td></tr>
-<tr><td>响应式设计</td><td class="st-na">待验证</td><td>需移动端测试</td></tr>
-<tr><td>SSL 证书</td><td class="st-ok">✓</td><td>HTTPS 已启用</td></tr>
-<tr><td>Mixed Content</td><td class="st-na">待验证</td><td>需确认所有资源均为 HTTPS</td></tr>
-</table>
-
-<h3 class="sub-title">Category 9: robots.txt / sitemap.xml</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>robots.txt</td><td class="st-ok">✓</td><td>已配置：Allow /，Disallow /api/*，指向 sitemap</td></tr>
-<tr><td>sitemap.xml</td><td class="st-ok">✓</td><td>已存在，URL 指向 seedance2-pro.com，含 hreflang en/ja/ko/es/de</td></tr>
-</table>
-
-<h3 class="sub-title">Category 10: 社交标签</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>og:title / og:description</td><td class="st-ok">✓</td><td>存在</td></tr>
-<tr><td>og:url</td><td class="st-ok">✓</td><td>双域策略：指向 seedance2-pro.com（与 canonical 一致）</td></tr>
-<tr><td>og:image</td><td class="st-warn">⚠</td><td>指向 seedance2-pro.com，社交分享时用户看到该域名</td></tr>
-<tr><td>Twitter Card</td><td class="st-ok">✓</td><td>存在，URL 与双域策略一致</td></tr>
-</table>
-
-<h3 class="sub-title">Category 11-16: 内容质量 / URL / 技术 / 国际化 / E-E-A-T / 站外</h3>
-<table><tr><th>检查项</th><th>状态</th><th>说明</th></tr>
-<tr><td>平均字数 676</td><td class="st-warn">⚠</td><td>高于 SaaS 平均（400-500），但远低于 SEO 最佳（1500+）</td></tr>
-<tr><td>Blog 内容</td><td class="st-bad">✗</td><td>仅 2 篇，在 HappyHorse 子页——几乎无持续内容产出</td></tr>
-<tr><td>URL 语义化</td><td class="st-ok">✓</td><td>/image-creator, /pricing, /docs 清晰可读</td></tr>
-<tr><td>URL 层级</td><td class="st-ok">✓</td><td>最多 2 层</td></tr>
-<tr><td>About 页面</td><td class="st-ok">✓</td><td>存在</td></tr>
-<tr><td>Contact 页面</td><td class="st-ok">✓</td><td>存在</td></tr>
-<tr><td>Privacy / Terms / Refund</td><td class="st-ok">✓</td><td>全部存在</td></tr>
-<tr><td>用户证言</td><td class="st-bad">✗</td><td>0 条</td></tr>
-<tr><td>Product Hunt</td><td class="st-bad">✗</td><td>未检测到</td></tr>
-<tr><td>TheresAnAIForThat</td><td class="st-ok">✓</td><td>已收录但未在站内突出展示</td></tr>
-</table>
-</section>
-
-<!-- 05 Conversion & Trust -->
-<section class="section" id="convert">
-<h2 class="section-title"><span class="num">05</span>转化与信任诊断</h2>
-
-<div class="card card-orange">
-<div class="card-label" style="color:var(--orange)">CTA 总览：29 个按钮，16 个首屏可见。数量充足，质量参差。</div>
-<table><tr><th>CTA 类型</th><th>数量</th><th>状态</th></tr>
-<tr><td>Launch App</td><td>4</td><td class="st-ok">正常——主要入口</td></tr>
-<tr><td>Sign Up Free</td><td>1</td><td class="st-ok">正常</td></tr>
-<tr><td><strong>Buy Now</strong></td><td>2</td><td class="st-bad"><strong>断裂——href 为空</strong></td></tr>
-<tr><td>Start Creating</td><td>2</td><td class="st-ok">正常</td></tr>
-<tr><td>Free Trial</td><td>1</td><td class="st-warn">模糊——未明确免费额度</td></tr>
-<tr><td>Sign Up — Get Notified</td><td>2</td><td class="st-warn">降低转化——"Get Notified"暗示非即时可用</td></tr>
-</table>
-<p><strong>核心断层：</strong>① Buy Now 是付费最关键按钮，全空。② 0 个 Lead Capture 触点——离开的用户永远流失。③ Free Trial 信息不透明——用户犹豫成本高。④ 支付方式不可见。</p>
-</div>
-
-<div class="card card-purple">
-<div class="card-label" style="color:var(--purple)">信任诊断（AI SaaS 标准）</div>
-<table><tr><th>信任信号</th><th>状态</th><th>评价</th></tr>
-<tr><td>Gallery 展示数据</td><td class="st-ok">✓</td><td>视频 40~3000+/类，图片最高 84,920——数量有说服力</td></tr>
-<tr><td>社区规模</td><td class="st-warn">⚠</td><td>Discord 存在但人数不可见</td></tr>
-<tr><td>用户证言</td><td class="st-bad">✗</td><td>0 条——最大缺口</td></tr>
-<tr><td>第三方评测</td><td class="st-bad">✗</td><td>无 Product Hunt、无 G2/Capterra</td></tr>
-<tr><td>免费额度</td><td class="st-warn">⚠</td><td>存在但不透明</td></tr>
-<tr><td>退款保证</td><td class="st-ok">✓</td><td>正面信号</td></tr>
-</table>
-</div>
-</section>
-
-<!-- 06 Fix List -->
-<section class="section" id="fixlist">
-<h2 class="section-title"><span class="num">06</span>优先修复清单（按 ROI 排序）</h2>
-<table>
-<tr><th>#</th><th>修复项</th><th>影响</th><th>难度</th><th>时间</th></tr>
-<tr><td>1</td><td><strong>修复 Buy Now 空链接</strong></td><td>致命</td><td>低</td><td>30min</td></tr>
-<tr><td>2</td><td>确认 Gallery noindex 是否有意，若已完成则移除</td><td>高</td><td>低</td><td>15min</td></tr>
-<tr><td>3</td><td>修复 Homepage 双 H1</td><td>中</td><td>低</td><td>15min</td></tr>
-<tr><td>4</td><td>Gallery：添加 H1 + Schema + 视频独立 URL</td><td>高</td><td>中</td><td>3h</td></tr>
-<tr><td>5</td><td>扩展所有 meta description 至 150+ 字符</td><td>中</td><td>低</td><td>1h</td></tr>
-<tr><td>6</td><td>添加 Lead Capture 触点（邮箱收集）</td><td>高</td><td>中</td><td>4h</td></tr>
-<tr><td>7</td><td>启动 Blog 板块（支柱页 + 集群页）</td><td>致命</td><td>高</td><td>持续</td></tr>
-<tr><td>8</td><td>收集并展示用户证言 / Gallery 数据</td><td>中</td><td>中</td><td>持续</td></tr>
-<tr><td>9</td><td>确认双域 GSC 验证 + sitemap 提交</td><td>中</td><td>低</td><td>30min</td></tr>
-</table>
-<div class="card" style="background:var(--green-bg);border-color:#86efac">
-<p><strong>第1天（2h）：</strong>修复 #1 + #2 + #3 + #9 → 解决转化阻断 + 确认双域配置<br>
-<strong>第2天（4h）：</strong>修复 #4 + #5 + #6 → 页面级 SEO 基本达标 + 转化漏斗补全<br>
-<strong>第1周内：</strong>启动 #7 → 长期增长发动机<br>
-<strong>第2-4周：</strong>推进 #8 → 信任体系完善</p>
-</div>
-</section>
-
-<!-- 07 Line 1 -->
-<section class="section" id="line1">
-<h2 class="section-title"><span class="num">07</span>第一条线：导流站发布策略（选词）</h2>
-
-<div class="sub-title">A. 竞品截流词</div>
-
-<div class="sub-sub">A1 品牌词截流</div>
-<div class="kw-group"><div class="kw-group-label">Runway</div><div class="kw-list"><span class="kw kw-a">runway ml alternative free</span><span class="kw kw-a">runway gen-3 vs seedance</span><span class="kw kw-a">runway ai pricing comparison 2026</span><span class="kw kw-a">runway ml video quality issues</span><span class="kw kw-a">sites like runway ml</span></div></div>
-<div class="kw-group"><div class="kw-group-label">Sora</div><div class="kw-list"><span class="kw kw-a">sora openai alternative</span><span class="kw kw-a">sora ai video generator free</span><span class="kw kw-a">sora waitlist how long</span><span class="kw kw-a">sora vs seedance 2.0 comparison</span><span class="kw kw-a">sora video length limit</span></div></div>
-<div class="kw-group"><div class="kw-group-label">Kling / Hailuo / Pika / Luma / Vidu / Haiper</div><div class="kw-list"><span class="kw kw-a">kling ai vs kinovi</span><span class="kw kw-a">hailuo minimax vs seedance</span><span class="kw kw-a">pika labs alternative 2026</span><span class="kw kw-a">luma dream machine alternative</span><span class="kw kw-a">vidu ai review 2026</span><span class="kw kw-a">haiper ai alternative</span></div></div>
-
-<div class="sub-sub">A2 对比词</div>
-<div class="kw-list"><span class="kw kw-s">best ai video generator 2026 comparison</span><span class="kw kw-s">runway vs sora vs kling vs kinovi</span><span class="kw kw-a">seedance 2.0 vs runway gen-3</span><span class="kw kw-a">ai video generator benchmark test</span><span class="kw kw-a">free ai video tool comparison chart</span><span class="kw kw-b">kinovi vs luma dream machine quality</span></div>
-
-<div class="sub-sub">A3 替代词</div>
-<div class="kw-list"><span class="kw kw-a">runway ml alternative reddit</span><span class="kw kw-a">sora alternative no waitlist</span><span class="kw kw-a">ai video generator like sora but free</span><span class="kw kw-a">better than runway for video generation</span><span class="kw kw-a">cheaper alternative to runway ml</span><span class="kw kw-b">video generator with native audio not runway</span></div>
-
-<div class="sub-sub">A4 负面词</div>
-<div class="kw-list"><span class="kw kw-b">runway ml expensive reddit</span><span class="kw kw-b">sora video quality disappointing</span><span class="kw kw-b">kling ai slow rendering</span><span class="kw kw-b">pika labs watermark issue</span><span class="kw kw-b">runway gen-3 overhyped</span></div>
-
-<div class="sub-title">B. 品类核心词</div>
-<div class="sub-sub">B1 核心词</div>
-<div class="kw-list"><span class="kw kw-s">ai video generator</span><span class="kw kw-s">ai video maker</span><span class="kw kw-s">text to video ai</span><span class="kw kw-s">image to video ai</span><span class="kw kw-a">best ai video generator</span><span class="kw kw-a">free ai video generator</span><span class="kw kw-a">ai video editor</span><span class="kw kw-a">generate video with ai</span></div>
-<div class="sub-sub">B2 AI/技术相关词</div>
-<div class="kw-list"><span class="kw kw-b">seedance 2.0 api</span><span class="kw kw-b">ai video generation api</span><span class="kw kw-b">seedance 2.0 technical review</span><span class="kw kw-b">video diffusion model benchmark</span><span class="kw kw-c">ai video generation open source</span></div>
-<div class="sub-sub">B3 创业/副业词</div>
-<div class="kw-list"><span class="kw kw-b">make money with ai video generation</span><span class="kw kw-b">ai video side hustle 2026</span><span class="kw kw-c">start video production business ai</span><span class="kw kw-c">ai video content creation business</span></div>
-
-<div class="sub-title">C. 社媒验证内容 SEO 放大</div>
-<div class="card"><p>监控 TikTok <code>#aivideo</code> <code>#seedance</code> <code>#texttovideo</code>，筛选 10 万+播放主题 → 转为 1500 字博客文章。高转化模板："X 秒生成 Y"、"竞品做不到但 kinovi 可以"、"Before vs After"、"Prompt 工程分享"。</p></div>
-
-<div class="sub-title">D. 竞品内容 AI 改写</div>
-<div class="card"><p>1) Ahrefs 扒 Runway/Kling/Hailuo 博客排名前 50 页面 → 2) 分析结构/关键词/内链 → 3) AI 重构 + kinovi 独家功能对比 → 4) 导流站发布。优先改写：教程类、对比评测类、定价分析类。</p></div>
-
-<div class="sub-title">E. 教育科普大词</div>
-<div class="kw-list"><span class="kw kw-b">what is ai video generation</span><span class="kw kw-b">how does text to video work</span><span class="kw kw-b">ai video generation explained for beginners</span><span class="kw kw-c">how to write prompts for ai video</span><span class="kw kw-c">ai video generation trends 2026</span><span class="kw kw-c">future of ai in filmmaking</span></div>
-
-<div class="sub-title">F. Programmatic SEO</div>
-<div class="card"><p>模板页面类型：① "X 风格视频生成" × 50+ 风格 = 50+ 页 ② "X 行业用 AI 视频" × 30+ 行业 = 30+ 页 ③ "X 场景 AI 视频" × 40+ 场景 = 40+ 页。总产出 130+ 基础页面，每个 3-5 长尾变体 = 400-650 个 SEO 页面。每页必须包含：真实生成示例 + prompt 模板 + 参数建议。</p></div>
-
-<div class="sub-title">G. 季节性内容</div>
-<div class="kw-list"><span class="kw kw-c">super bowl commercial ai video</span><span class="kw kw-c">valentine ai video message</span><span class="kw kw-c">graduation video ai generator</span><span class="kw kw-c">christmas ai video generator</span><span class="kw kw-c">black friday ai commercial</span><span class="kw kw-c">halloween ai video generator</span></div>
-
-<div class="sub-title">H. 争议/病毒内容</div>
-<div class="card"><p>"Sora 真的值得等吗？"、"AI 视频会杀死剪辑师吗？"、"Runway 定价合理吗？我们算了笔账"、"为什么 90% 的 AI 视频看起来像假货"、"AI 视频盲测：你能分辨哪个是 Sora 吗？"</p></div>
-</section>
-
-<!-- 08 Line 2 -->
-<section class="section" id="line2">
-<h2 class="section-title"><span class="num">08</span>第二条线：主站 Blog</h2>
-
-<div class="sub-title">A. Topical Authority 内容集群</div>
-<div class="sub-sub">A1 核心支柱页（7 篇）</div>
-<table><tr><th>#</th><th>支柱页标题</th><th>目标关键词</th><th>字数</th></tr>
-<tr><td>1</td><td>AI Video Generation: Complete Guide to Creating Videos with AI in 2026</td><td><code>ai video generation</code></td><td>5000+</td></tr>
-<tr><td>2</td><td>Text-to-Video AI: How to Turn Words into Stunning Videos</td><td><code>text to video ai</code></td><td>4000+</td></tr>
-<tr><td>3</td><td>How Content Creators Are Using AI Video to 10x Their Output</td><td><code>ai video for creators</code></td><td>4000+</td></tr>
-<tr><td>4</td><td>AI Video Generation API: Developer's Guide</td><td><code>ai video api</code></td><td>3500+</td></tr>
-<tr><td>5</td><td>AI Video vs Traditional Production: Cost, Speed, Quality</td><td><code>ai video vs traditional</code></td><td>3000+</td></tr>
-<tr><td>6</td><td>AI Video with Native Audio: The Next Frontier</td><td><code>ai video with audio</code></td><td>3000+</td></tr>
-<tr><td>7</td><td>Character Consistency in AI Video: Why It Matters</td><td><code>ai video character consistency</code></td><td>3000+</td></tr>
-</table>
-<div class="sub-sub">A2/A3 集群 + 内链</div>
-<div class="card"><p>每个支柱页下 8-15 篇子页。内链规则：每篇子页 → 归属支柱页（锚文本含核心词）；支柱页间交叉链接；每篇博客底部 CTA → 功能页/定价页。</p></div>
-
-<div class="sub-title">B. Lead Magnet</div>
-<div class="card"><ul>
-<li><strong>B1 可下载资源：</strong>《2026 AI 视频 Prompt 圣经》（100+ 模板）、《竞品定价对比计算器》（Excel）、《AI 视频风格灵感库》（50 种）</li>
-<li><strong>B2 互动工具：</strong>Prompt 生成器（选风格+场景→生成 prompt，换邮箱）、视频成本计算器、AI 视频质量测评工具</li>
-<li><strong>B3 邮件课程：</strong>《5 天掌握 AI 视频生成》（概念→Prompt→进阶→音频→商业应用）</li>
-</ul></div>
-
-<div class="sub-title">C. 产品功能教育内容</div>
-<div class="card"><p>Text-to-Video / Image-to-Video / Audio-to-Video / Video Extend / Character Consistency / Camera Controls 各配独立 SEO 着陆页。功能 vs 竞品对比页（kinovi vs Runway/Sora/Kling/Pika/Luma）。用例场景页：营销团队 / 教育工作者 / 独立电影人 / 电商卖家 / 社交媒体运营。</p></div>
-
-<div class="sub-title">D-E. 案例研究 & 工具/资源页</div>
-<div class="card"><p>案例标准模板：背景→挑战→方案→过程→量化结果→用户原话→CTA。优先 5 个方向：YouTube 创作月产 100 条、电商替代外包降 80% 成本、教育机构全套课程视频、营销公司 API 批量生成、独立电影人入围影展。</p><p>Link Magnet：AI 视频生成器交互式对比工具、Prompt 模板库、AI 视频术语表（200+ 术语，吸引 .edu 外链）、免费视频素材库（CC0）、年度行业报告。</p></div>
-
-<div class="sub-title">F. 内容发布节奏</div>
-<table><tr><th>阶段</th><th>支柱页</th><th>集群页</th><th>竞品对比</th><th>案例</th><th>Programmatic</th></tr>
-<tr><td>第 1-3 月</td><td>每月 2 篇</td><td>每周 2 篇</td><td>每月 2 篇</td><td>每月 1 篇</td><td>—</td></tr>
-<tr><td>第 4-6 月</td><td>每月 1 篇</td><td>每周 3 篇</td><td>—</td><td>每月 2 篇</td><td>每月 50-100 页</td></tr>
-</table>
-</section>
-
-<!-- 09 Line 3 -->
-<section class="section" id="line3">
-<h2 class="section-title"><span class="num">09</span>第三条线：主站技术 SEO（基于诊断数据）</h2>
-
-<div class="sub-title">A. 爬取与索引</div>
-<div class="card card-green"><div class="card-label" style="color:var(--green)">A1 双域策略确认 ✅</div>
-<p>爬取与索引基础设施<strong>已正确配置</strong>：robots.txt（Allow /, Disallow /api/* 等）✅、sitemap.xml（URL 指向 seedance2-pro.com，含 hreflang en/ja/ko/es/de）✅、Canonical 统一收口至 seedance2-pro.com ✅。Google 不会将 kinovi.ai 视为重复内容——canonical 明确告知搜索引擎 seedance2-pro.com 是规范 URL。</p>
-</div>
-<div class="card card-accent"><div class="card-label" style="color:var(--accent)">A2 待确认 + 优化</div>
-<ul>
-<li><strong>GSC 验证</strong>：确认 kinovi.ai 和 seedance2-pro.com <strong>双域均已</strong>在 Google Search Console 验证</li>
-<li><strong>Sitemap 提交</strong>：确认 sitemap.xml 已在双域的 GSC 中提交</li>
-<li><strong>Gallery noindex</strong>：确认 /app/gallery 的 noindex 是有意的临时措施（未完成页面）还是遗漏</li>
-<li><strong>308 重定向链路</strong>：seedance2-pro.com → kinovi.ai 的 308 重定向是否覆盖所有路径</li>
-<li><strong>日志分析</strong>：查看 Googlebot crawl log，确认双域的爬取频率和索引状态</li>
-</ul></div>
-
-<div class="sub-title">B. Core Web Vitals</div>
-<div class="card"><table><tr><th>指标</th><th>目标</th><th>优化方向</th></tr>
-<tr><td>LCP</td><td>&lt;2.5s</td><td>视频懒加载、WebP/AVIF、关键 CSS 内联、CDN</td></tr>
-<tr><td>INP</td><td>&lt;200ms</td><td>JS bundle 拆分、延迟非关键脚本、Web Worker</td></tr>
-<tr><td>CLS</td><td>&lt;0.1</td><td>图片尺寸声明、font-display:swap、骨架屏</td></tr>
-</table></div>
-
-<div class="sub-title">C. Schema Markup</div>
-<div class="card"><p><strong>C1 当前：</strong>9 种 Schema 但 URL 全错。Gallery 完全空白。<br><strong>C2 优先级：</strong>P0 修 URL + Organization/WebSite/Breadcrumb；P1 SoftwareApplication/FAQPage/HowTo；P2 Article/VideoObject；P3 AggregateRating/Event。<br><strong>C3 堆叠：</strong>首页 Organization+WebPage+SoftwareApplication；功能页 +FAQPage；博客 Article+Author+BreadcrumbList；Gallery VideoObject。</p></div>
-
-<div class="sub-title">D. 站内 SEO 基础</div>
-<div class="card"><p><strong>D2 Title 修复：</strong>首页→<code>Kinovi.ai - AI Video Generator with Audio & 2K | Free Trial</code>；Gallery→<code>AI Video Gallery: 2K Text-to-Video Examples | Kinovi</code>；Pricing→<code>Kinovi.ai Pricing - Free, Basic & Pro Plans</code></p><p><strong>D3 Meta Description：</strong>全部扩展至 150-155 字符，含核心关键词 + CTA<br><strong>D4 Heading：</strong>首页统一为单 H1；Gallery 添加 H1 + 移除 noindex；Pricing 修复 Buy Now href<br><strong>D5 图片：</strong>补全 5 张 empty alt、WebP 格式、懒加载</p></div>
-
-<div class="sub-title">E-G. 技术基础设施 / 内链 / AI SaaS 特定</div>
-<div class="card"><p><strong>内链（189 条）：</strong>分配不均，大量为导航性链接。规则：每篇博客 3+ 内链（1 支柱页 + 1 功能页 + 1 博客）；功能页矩阵互链；Gallery 每个视频链接到功能页。<br><strong>Gallery SEO：</strong>移除 noindex，每个视频独立 URL + VideoObject Schema，分类索引页。<br><strong>定价页：</strong>修复 Buy Now，定价表用 HTML table，添加 FAQ Schema。</p></div>
-</section>
-
-<!-- 10 Line 4 -->
-<section class="section" id="line4">
-<h2 class="section-title"><span class="num">10</span>第四条线：外链建设</h2>
-
-<div class="sub-title">A. 高 ROI 白帽策略</div>
-<div class="card"><ul>
-<li><strong>A1 竞品外链窃取：</strong>Ahrefs 导出 Runway/Sora/Kling/Pika/Luma 反向链接，筛选 DR30+、404 或内容可超越的，3 个月获取 30-50 条</li>
-<li><strong>A2 Broken Link Building：</strong>扫描 videomaker.com、nofilmschool.com、futurepedia.io 等站点的死链</li>
-<li><strong>A3 Unlinked Brand Mentions：</strong>Google Alerts 监控 kinovi 提及，请求添加链接</li>
-<li><strong>A4 Testimonial Link Building：</strong>为 AWS/GCP/Vercel/Stripe 提供客户案例，换取展示页链接</li>
-</ul></div>
-
-<div class="sub-title">B. 内容驱动链接</div>
-<div class="card"><ul>
-<li><strong>B1 数据研究：</strong>《2026 AI 视频质量基准测试》（10 工具统一 prompt 对比）、《AI 视频成本指数》（月度更新）</li>
-<li><strong>B2 Linkable Asset：</strong>交互式对比工具、Prompt 模板库、年度行业报告、CC0 免费视频素材</li>
-<li><strong>B3-B5：</strong>Infographic Outreach、Expert Roundups（25 位电影制作人）、争议内容（盲测实验）</li>
-</ul></div>
-
-<div class="sub-title">C-E. Outreach / 过期域名 / 平台</div>
-<div class="card"><ul>
-<li><strong>Guest Post：</strong>Videomaker、No Film School、Futurepedia、HubSpot Blog、TechCrunch 特约</li>
-<li><strong>HARO：</strong>每周回应 3-5 个 AI 视频相关查询，月获 2-5 条高权威外链</li>
-<li><strong>过期域名：</strong>筛选 DR40+ 视频/创意相关域名，页面级 301</li>
-<li><strong>平台：</strong>Product Hunt Launch、G2/Capterra、TheresAnAIForThat、GitHub SDK 开源、Hacker News Show HN</li>
-</ul></div>
-
-<div class="sub-title">F-H. 合作 / 技术链接 / 防御</div>
-<div class="card"><ul>
-<li><strong>Affiliate：</strong>Creative Partner Program 扩展，20-30% 佣金</li>
-<li><strong>Anchor Text：</strong>品牌词 40%、URL 20%、描述性 25%、通用 10%、长尾 5%</li>
-<li><strong>Link Velocity：</strong>月 10→15→20→30 条递增，环比不超过 50%</li>
-<li><strong>负面 SEO 防御：</strong>每周 GSC 外链审查 + Ahrefs 告警 + Disavow 维护</li>
-</ul></div>
-</section>
-
-<!-- 11 Keywords -->
-<section class="section" id="keywords">
-<h2 class="section-title"><span class="num">11</span>100 关键词分级</h2>
-
-<div class="sub-title">S 级（搜索量 >10K）</div>
-<div class="kw-list"><span class="kw kw-s">1 ai video generator</span><span class="kw kw-s">2 text to video ai</span><span class="kw kw-s">3 ai video maker</span><span class="kw kw-s">4 best ai video generator</span><span class="kw kw-s">5 runway alternative</span><span class="kw kw-s">6 sora alternative</span><span class="kw kw-s">7 kling ai alternative</span><span class="kw kw-s">8 hailuo ai alternative</span><span class="kw kw-s">9 pika alternative</span><span class="kw kw-s">10 ai video generator free</span></div>
-
-<div class="sub-title">A 级（搜索量 5K-10K）</div>
-<div class="kw-list"><span class="kw kw-a">11 runway vs sora</span><span class="kw kw-a">12 runway vs kling</span><span class="kw kw-a">13 best ai video generator 2026</span><span class="kw kw-a">14 ai video generator with audio</span><span class="kw kw-a">15 ai video generator with sound</span><span class="kw kw-a">16 text to video generator free</span><span class="kw kw-a">17 image to video ai</span><span class="kw kw-a">18 ai video editor</span><span class="kw kw-a">19 kinovi ai review</span><span class="kw kw-a">20 kinovi ai pricing</span></div>
-
-<div class="sub-title">B 级（搜索量 2K-5K）</div>
-<div class="kw-list"><span class="kw kw-b">21 ai video generator character consistency</span><span class="kw kw-b">22 ai video generator 2k resolution</span><span class="kw kw-b">23 audio to video ai</span><span class="kw kw-b">24 ai video generator api</span><span class="kw kw-b">25 ai video camera controls</span><span class="kw kw-b">26 text to video with sound effects</span><span class="kw kw-b">27 ai video extend</span><span class="kw kw-b">28 kinovi vs runway</span><span class="kw kw-b">29 kinovi vs sora</span><span class="kw kw-b">30 kinovi vs kling</span><span class="kw kw-b">31 kinovi vs hailuo</span><span class="kw kw-b">32 ai video for marketers</span><span class="kw kw-b">33 ai video for content creators</span><span class="kw kw-b">34 ai video for filmmakers</span><span class="kw kw-b">35 ai video for youtube</span><span class="kw kw-b">36 ai video for tiktok</span><span class="kw kw-b">37 ai video comparison 2026</span><span class="kw kw-b">38 ai video native audio</span><span class="kw kw-b">39 character consistent ai video</span><span class="kw kw-b">40 ai video no watermark</span></div>
-
-<div class="sub-title">C 级（搜索量 1K-2K）</div>
-<div class="kw-list"><span class="kw kw-c">41 ai video for commercials</span><span class="kw kw-c">42 ai video for short films</span><span class="kw kw-c">43 ai video for instagram reels</span><span class="kw kw-c">44 ai video for music videos</span><span class="kw kw-c">45 ai video camera movement</span><span class="kw kw-c">46 ai video voiceover</span><span class="kw kw-c">47 seedance 2.0 video generator</span><span class="kw kw-c">48 ai video product demos</span><span class="kw kw-c">49 ai video real estate</span><span class="kw kw-c">50 ai video gaming</span><span class="kw kw-c">51 kinovi tutorial</span><span class="kw kw-c">52 kinovi api documentation</span><span class="kw kw-c">53 ai video lip sync</span><span class="kw kw-c">54 ai video prompt guide</span><span class="kw kw-c">55 ai video production workflow</span><span class="kw kw-c">56 ai video for ads</span><span class="kw kw-c">57 ai video educational content</span><span class="kw kw-c">58 ai video background music</span><span class="kw kw-c">59 text to video cinematic</span><span class="kw kw-c">60 ai video social media</span></div>
-
-<div class="sub-title">D 级（搜索量 100-1K）</div>
-<div class="kw-list"><span class="kw kw-d">61 kinovi free trial</span><span class="kw kw-d">62 kinovi pricing plans</span><span class="kw kw-d">63 kinovi coupon code</span><span class="kw kw-d">64 kinovi student discount</span><span class="kw kw-d">65 how much does kinovi cost</span><span class="kw kw-d">66 kinovi vs runway pricing</span><span class="kw kw-d">67 kinovi vs sora quality</span><span class="kw kw-d">68 kinovi character consistency review</span><span class="kw kw-d">69 kinovi 2k video quality</span><span class="kw kw-d">70 kinovi api pricing</span><span class="kw kw-d">71 kinovi export formats</span><span class="kw kw-d">72 kinovi video length limit</span><span class="kw kw-d">73 ai video youtube shorts</span><span class="kw kw-d">74 ai video tiktok ads</span><span class="kw kw-d">75 ai video gaming trailers</span><span class="kw kw-d">76 ai video podcast clips</span><span class="kw kw-d">77 ai video brand videos</span><span class="kw kw-d">78 ai video ecommerce</span><span class="kw kw-d">79 ai video fitness</span><span class="kw kw-d">80 ai video cooking channel</span><span class="kw kw-d">81 kinovi audio to video tutorial</span><span class="kw kw-d">82 how to extend video with ai</span><span class="kw kw-d">83 ai video camera pan</span><span class="kw kw-d">84 ai video camera zoom</span><span class="kw kw-d">85 ai video dolly shot</span><span class="kw kw-d">86 kinovi render time</span><span class="kw kw-d">87 kinovi batch processing</span><span class="kw kw-d">88 kinovi export premiere pro</span><span class="kw kw-d">89 kinovi python sdk</span><span class="kw kw-d">90 kinovi vs luma dream machine</span><span class="kw kw-d">91 kinovi webhook integration</span><span class="kw kw-d">92 ai video for nonprofits</span><span class="kw kw-d">93 ai video corporate intro</span><span class="kw kw-d">94 ai video real estate listing</span><span class="kw kw-d">95 ai video restaurant promo</span><span class="kw kw-d">96 kinovi api rate limits</span><span class="kw kw-d">97 kinovi export davinci resolve</span><span class="kw kw-d">98 ai video for linkedin</span><span class="kw kw-d">99 ai video for pinterest</span><span class="kw kw-d">100 kinovi vs minimax vs vidu</span></div>
-</section>
-
-<!-- 12 Roadmap -->
-<section class="section" id="roadmap">
-<h2 class="section-title"><span class="num">12</span>执行路线图（12 个月）</h2>
-
-<div class="sub-title">第 1 个月：技术止血 + 第一批内容</div>
-<ul class="checklist">
-<li>修复全站 canonical → kinovi.ai（2h，立刻执行）</li>
-<li>部署 robots.txt + sitemap.xml（1h）</li>
-<li>修复 Buy Now 空链接（30min）</li>
-<li>修复首页双 H1、Gallery 添加 H1 + 移除 noindex</li>
-<li>重写所有偏短 Meta Description 至 150-160 字符</li>
-<li>发布 2 篇支柱页：品类对比 + AI Video with Audio</li>
-<li>发布 8 篇导流站竞品截流词文章（Medium/Dev.to/Hashnode）</li>
-</ul>
-
-<div class="sub-title">第 2-3 个月：内容扩展 + 外链启动</div>
-<ul class="checklist">
-<li>支柱页集群各扩展 5-8 篇子页</li>
-<li>发布 3 篇竞品深度对比（kinovi vs Runway/Sora/Kling）</li>
-<li>发布 4 篇功能教程（audio-to-video / character consistency / camera / extend）</li>
-<li>上线 2 个 Lead Magnet（Prompt Kit + Comparison Spreadsheet）</li>
-<li>外链首波：Show HN + Reddit 种子帖 + 3 篇 Guest Post</li>
-</ul>
-
-<div class="sub-title">第 4-6 个月：权威建设 + Programmatic SEO</div>
-<ul class="checklist">
-<li>启动 Programmatic SEO（10+ use case 页面，50-100 页/月）</li>
-<li>发布原创数据研究《State of AI Video Generation 2026》</li>
-<li>上线 API 文档站 + SDK 示例（GitHub 开源）</li>
-<li>Affiliate Program 扩展，主动接触 AI 工具评测博主</li>
-<li>季度技术审计 + Schema 全站升级</li>
-</ul>
-
-<div class="sub-title">第 7-12 个月：规模化 + 优化 + 防守</div>
-<ul class="checklist">
-<li>内容更新循环：每月更新 2-3 篇旧内容保持时效性</li>
-<li>竞品 Backlink Stealing：Ahrefs 扒 Runway/Pika/Kling 反向链接逐个联系</li>
-<li>争议/病毒内容："We Tested 11 AI Video Generators"盲测实验</li>
-<li>防守品牌词：kinovi review/pricing/vs-[竞品] 前 3 位全控</li>
-<li>AI 搜索优化验证：检查 AI Overviews/ChatGPT/Perplexity 引用情况</li>
-<li>过期域名策略：3-5 个 DR40+ 相关域名页面级 301</li>
-</ul>
-</section>
-
-<!-- 13 Content Growth -->
-<section class="section" id="growth">
-<h2 class="section-title"><span class="num">13</span>内容增长与转化建议</h2>
-
-<div class="card card-accent">
-<div class="card-label" style="color:var(--accent)">编者判断</div>
-<p>kinovi.ai 最大的问题不是技术能力——Seedance 2.0 的音频生成和角色一致性在竞品中确实有差异点。问题在于：<strong>6 个页面、676 平均字数，整个站的内容厚度约等于竞品的一篇博客文章</strong>。Runway 的博客有 200+ 篇，Pika 的 Product Hunt 有上千条评价。kinovi 站在正确的赛道上，发动机也装好了，但连油都没加。</p>
-</div>
-
-<div class="sub-title">一、当前内容现状：数字背后的真相</div>
-<table><tr><th>指标</th><th>数值</th><th>编者评价</th></tr>
-<tr><td>审计页面数</td><td>6</td><td>6 个页面叫 MVP 不叫网站。Runway 有 200+ 在抢你的流量</td></tr>
-<tr><td>平均字数</td><td>676</td><td>连 Google"有用内容"门槛（~1500）都摸不到</td></tr>
-<tr><td>Schema 覆盖</td><td>9 种 URL 全错</td><td>装了 9 把锁但钥匙全插错门</td></tr>
-<tr><td>内链密度</td><td>189 条</td><td>数量够但大量是导航性链接</td></tr>
-<tr><td>H1 问题</td><td>Gallery 无 + 首页双</td><td>搜索引擎看到的是一团浆糊</td></tr>
-</table>
-
-<div class="sub-title">二、转化率诊断（5 个信号）</div>
-<div class="card"><p><strong>信号 1 高跳出率：</strong>首页加 TL;DR（一句话说清 kinovi 是什么、跟 Runway 有什么不同、点哪试用）。<br><strong>信号 2 产品页 &lt;30s：</strong>Gallery 放 3-5 个可自动播放的 2K 成品视频，Hero 区域放带音频的视频循环。<br><strong>信号 3 Blog&gt;&gt;产品：</strong>Blog 文章模板强制"作者注"区块 + 结尾 3 个内链。<br><strong>信号 4 CTR&lt;3%：</strong>Title 重写为结果导向格式，Meta 加具体数字和 CTA，部署 FAQ Schema。<br><strong>信号 5 导流站无归因：</strong>每篇文章品牌提及 ≥1 + 可点击链接 ≥2 + UTM 统一。</p></div>
-
-<div class="sub-title">三、内容 Gap 分析</div>
-<table><tr><th>主题</th><th>意图</th><th>竞品覆盖</th><th>kinovi</th><th>转化潜力</th><th>机会</th></tr>
-<tr><td>AI video comparison 2026</td><td>交易</td><td>Runway/Pika/Luma 均有</td><td>缺失</td><td>高</td><td style="color:var(--red);font-weight:700">S</td></tr>
-<tr><td>AI video with audio</td><td>交易</td><td>竞品无专门内容</td><td>缺失</td><td>高</td><td style="color:var(--red);font-weight:700">S</td></tr>
-<tr><td>Runway/Sora alternative</td><td>交易</td><td>大量评测</td><td>缺失</td><td>高</td><td style="color:var(--red);font-weight:700">S</td></tr>
-<tr><td>Character consistency</td><td>信息→商业</td><td>Runway 有但未深挖</td><td>缺失</td><td>高</td><td style="color:var(--orange);font-weight:700">A</td></tr>
-<tr><td>Camera controls guide</td><td>信息</td><td>有基础教程</td><td>缺失</td><td>中高</td><td style="color:var(--orange);font-weight:700">A</td></tr>
-<tr><td>Prompt engineering</td><td>信息</td><td>Runway/Pika 有</td><td>缺失</td><td>中</td><td style="color:var(--accent);font-weight:700">B</td></tr>
-<tr><td>AI video for [niche]</td><td>商业</td><td>部分有个别案例</td><td>缺失</td><td>中高</td><td style="color:var(--accent);font-weight:700">B</td></tr>
-<tr><td>Video extend / length</td><td>信息→商业</td><td>质量参差</td><td>缺失</td><td>中</td><td style="color:var(--accent);font-weight:700">B</td></tr>
-</table>
-
-<div class="sub-title">四、90 天双轨计划</div>
-<div class="card card-accent">
-<p><strong>编者定调：</strong>kinovi 当前 6 页 676 字，发 50 篇文章不会救你——地基是烂的。先花 2 周修技术问题，再用 10 周发 30-40 篇有转化出口的内容。30 篇每篇都有人注册试用，远胜 100 篇没人读完的水文。</p>
-</div>
-<div class="timeline">
-<div class="tl-row"><div class="tl-phase">第1周</div><div>技术止血：canonical + robots + sitemap + Buy Now + H1 + Meta + Schema URL</div></div>
-<div class="tl-row"><div class="tl-phase">第2-3周</div><div>发布 2 篇支柱页 + 5 篇竞品截流词导流站文章</div></div>
-<div class="tl-row"><div class="tl-phase">第4周</div><div>上线 2 个 Lead Magnet（Prompt Kit + Comparison Spreadsheet）</div></div>
-<div class="tl-row"><div class="tl-phase">第2月</div><div>集群页扩展 + 3 篇深度对比 + 案例研究 + GA/GSC 转化优化</div></div>
-<div class="tl-row"><div class="tl-phase">第3月</div><div>原创数据研究 + Show HN + Guest Post + Programmatic SEO 首批 + 数据验证</div></div>
-</div>
-
-<div class="sub-title">五、预期效果与追踪</div>
-<table><tr><th>指标</th><th>当前</th><th>30天</th><th>90天</th><th>追踪</th></tr>
-<tr><td>索引页面数</td><td>6</td><td>25-30</td><td>80-100</td><td>GSC</td></tr>
-<tr><td>技术 SEO 评分</td><td>~40</td><td>80+</td><td>90+</td><td>site-audit.mjs</td></tr>
-<tr><td>竞品词覆盖</td><td>0</td><td>10-15</td><td>30-50 Top30</td><td>Ahrefs/GSC</td></tr>
-<tr><td>Lead Magnet 转化率</td><td>—</td><td>>2%</td><td>>5%</td><td>GA</td></tr>
-<tr><td>Blog→功能页点击率</td><td>—</td><td>>3%</td><td>>8%</td><td>GA 内链</td></tr>
-<tr><td>外链数量</td><td>~0</td><td>15-20</td><td>50+</td><td>Ahrefs</td></tr>
-<tr><td>AI 搜索引用</td><td>0</td><td>1-2次</td><td>5+次</td><td>手动检查</td></tr>
-</table>
-
-<div class="card" style="background:var(--accent-light);border-color:var(--accent)">
-<p><strong>最后一句：</strong>kinovi 站在正确的赛道上——Seedance 2.0 的音频和一致性是真实差异点。但差异点不写在页面上等于不存在。6 页 676 字不会让任何人注册。90 天后如果流量翻倍但注册数没变，不是 SEO 有问题，是产品页没有把"为什么选 kinovi 不选 Runway"说清楚。</p>
-</div>
-</section>
-
-<footer class="report-footer">
-<div>Generated by SEO Strategy & Audit Engine | 16 类 110+ 检查项</div>
-<div>kinovi.ai audit — 2026-04-18</div>
-</footer>
-
-</main>
+<div class="shell">
+  <div class="frame">
+    <aside class="rail">
+      <div class="brand">kinovi.ai</div>
+      <p>双域策略审计 / 四线 SEO 方案 / 内容与转化重构版</p>
+      <nav>
+        <a href="#thesis">核心判断</a>
+        <a href="#scores">评分与原因</a>
+        <a href="#issues">关键问题</a>
+        <a href="#audit">审计矩阵</a>
+        <a href="#voice">语气与创意感</a>
+        <a href="#lines">四线方案</a>
+        <a href="#roadmap">执行路线</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="hero">
+        <div class="eyebrow">Dual-Domain Audit</div>
+        <h1>kinovi.ai 不是技术底盘错了，而是把正确的双域架构，做成了一个内容和转化都太薄的站。</h1>
+        <p class="lead">这版结论只做一件事：把上下文重新对齐。前提是 <strong>kinovi.ai + seedance2-pro.com 的双域收敛策略成立</strong>，所以第三条线不再提出“把 canonical 修回 kinovi.ai”这种自我冲突动作。真正的问题是页面体量、说服链路、商业解释和信任信号没有跟上。</p>
+        <div class="meta">
+          <span class="pill">审计日期：2026-04-18</span>
+          <span class="pill">页面样本：6 个核心页面</span>
+          <span class="pill">现状：平均约 676 词</span>
+          <span class="pill">站型：AI Video SaaS</span>
+          <span class="pill">策略前提：双域收敛而非单域改造</span>
+        </div>
+        <div class="hero-note">一句话版本：<strong>基础设施 70 分，内容供给 25 分，商业说服 35 分，品牌叙事 30 分。</strong> 这不是“再发几篇博客”能解决的问题，而是要把四条线重新压成一个统一剧本。</div>
+      </header>
+
+      <section id="thesis">
+        <div class="section-label">Executive Thesis</div>
+        <h2>核心判断</h2>
+        <p class="statement">kinovi 的机会点是真实存在的。Seedance 2.0 的音频能力、角色一致性和视频生成卖点，足够支撑一套有竞争力的 AI 视频品牌叙事。问题不是“有没有差异点”，而是站内几乎没有把这些差异点变成可索引、可比较、可引用、可转化的页面资产。</p>
+        <div class="grid-2" style="margin-top:20px">
+          <div class="card">
+            <div class="mini">现在做对了什么</div>
+            <p>双域架构本身合理，canonical、robots、sitemap、308 跳转逻辑总体上是一个“收口 SEO 域 + 展示品牌域”的成熟方案。这个前提不能在执行层被自己推翻。</p>
+          </div>
+          <div class="card">
+            <div class="mini">现在最伤的是什么</div>
+            <p>全站只有 6 个可讲故事的页面，Gallery 这个最像证据的页面还被 noindex 处理，Pricing 的 Buy Now 直接断链，Blog 不成体系，导致搜索、AI 引用和注册转化都接不上。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="scores">
+        <div class="section-label">Scorecard</div>
+        <h2>评分与原因</h2>
+        <div class="grid-4">
+          <div class="card kpi">
+            <div class="mini">整体可见性</div>
+            <div class="score warn">61</div>
+            <p>基础 SEO 没崩，但可索引页面数量和主题覆盖度远远不够。</p>
+            <div class="why">评分原因：有 robots、sitemap、schema、基础元信息，但内容面太窄，站点规模不足以支持竞争词长期争夺。</div>
+          </div>
+          <div class="card kpi">
+            <div class="mini">技术底盘</div>
+            <div class="score good">72</div>
+            <p>双域收敛逻辑大体成立，不该被错误改成单域修复项目。</p>
+            <div class="why">评分原因：canonical、308、基础结构化数据是加分项；但 Gallery noindex、双域 GSC 验证待确认、H1 错误和转化断链还在拖分。</div>
+          </div>
+          <div class="card kpi">
+            <div class="mini">内容厚度</div>
+            <div class="score bad">28</div>
+            <p>6 页、平均 676 词，对 AI SaaS 来说更像一个试运营壳子，而不是能打仗的内容系统。</p>
+            <div class="why">评分原因：缺 pillar、缺 cluster、缺比较页矩阵、缺场景页、缺实验页，导致 topical authority 几乎未建立。</div>
+          </div>
+          <div class="card kpi">
+            <div class="mini">转化说服</div>
+            <div class="score bad">36</div>
+            <p>CTA 数量不少，但核心付费动作断裂，信任链和解释链都没有闭环。</p>
+            <div class="why">评分原因：Buy Now 空链接、0 条用户证言、免费额度不够透明、Lead Capture 几乎空白，造成“能看不能收”。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="issues">
+        <div class="section-label">Priority Issues</div>
+        <h2>最该先处理的 4 个问题</h2>
+        <div class="issue">
+          <div class="severity"><strong>P0</strong>转化断裂</div>
+          <div>
+            <h3>Pricing 页的 Buy Now 是空链接</h3>
+            <p>这不是小 bug，而是商业漏斗最后一段直接掉到底。你可以接受文章没写完，但不能接受用户走到付款前一步时什么都点不开。</p>
+            <div class="detail">建议：先修付款跳转，再补“套餐差异 / 免费额度 / 退款与信用点规则 / 常见顾虑 FAQ”四件套。任何内容增长都不该先于这一步。</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="severity warn"><strong>P1</strong>证据被藏</div>
+          <div>
+            <h3>Gallery 是最像销售证据的页面，却被 noindex + 无 H1 + 无专属 Schema</h3>
+            <p>对 AI 视频产品来说，Gallery 不只是“作品集”，而是最接近真实结果页、最容易被比较、最适合承接长尾场景词的资产。把它关掉，相当于主动放弃了最能说服搜索引擎和用户的那一页。</p>
+            <div class="detail">建议：确认 noindex 是否为故意策略。如果不是，就把 Gallery 升级成“可索引的场景 / 风格 / 模板 / 成片案例中心”，并为单条作品或聚合分类补充可被引用的文本说明。</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="severity warn"><strong>P1</strong>主题信号混乱</div>
+          <div>
+            <h3>Homepage 双 H1 把主叙事稀释了</h3>
+            <p>在“AI video generator”这种竞争极强的词上，首页不是不能讲多个卖点，而是不能在结构上像两个首页在抢话筒。当前更像视觉模块优先，而不是搜索语义优先。</p>
+            <div class="detail">建议：保留一个主 H1 说清“kinovi 是什么”，次级卖点全部下放到 H2 和摘要模块，不要让标题系统自己互相竞争。</div>
+          </div>
+        </div>
+        <div class="issue">
+          <div class="severity good"><strong>确认项</strong>策略别乱改</div>
+          <div>
+            <h3>双域策略本身成立，第三条线只能做校验和补强，不能反手推翻</h3>
+            <p>如果既认定 seedance2-pro.com 是 SEO 收口域，又在执行路线里写“全站 canonical 修回 kinovi.ai”，那整份方案就逻辑自毁。第三条线的正确动作是确认双域都在 GSC、sitemap 提交完整、跳转覆盖所有路径、社交卡片与 Schema 指向规则一致。</p>
+            <div class="quote">这次必须锁死一个前提：<strong>第三条线不是改策略，而是验证策略。</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="audit">
+        <div class="section-label">Audit Matrix</div>
+        <h2>审计矩阵</h2>
+        <table>
+          <tr>
+            <th>模块</th>
+            <th>状态</th>
+            <th>结论</th>
+            <th>处理方向</th>
+          </tr>
+          <tr>
+            <td><strong>Canonical / 双域</strong></td>
+            <td class="ok">基本成立</td>
+            <td>统一收口到 seedance2-pro.com 的逻辑与双域方案一致。</td>
+            <td>确认双域 GSC、sitemap 提交、308 是否覆盖所有路径。</td>
+          </tr>
+          <tr>
+            <td><strong>robots.txt / sitemap.xml</strong></td>
+            <td class="ok">已配置</td>
+            <td>基础索引入口存在，这是底盘优势。</td>
+            <td>补做 Search Console 层面的实际验证，不停留在“文件存在”。</td>
+          </tr>
+          <tr>
+            <td><strong>标题结构</strong></td>
+            <td class="bad">有硬伤</td>
+            <td>首页双 H1，Gallery 缺 H1，主题表达不稳。</td>
+            <td>重构 H1/H2 层级，让首页只承担一个核心命题。</td>
+          </tr>
+          <tr>
+            <td><strong>Schema</strong></td>
+            <td class="warning">中等</td>
+            <td>已有 Organization、WebSite、SoftwareApplication、FAQ、HowTo、VideoObject，但最该承接证据的 Gallery 不完整。</td>
+            <td>给 Gallery 和案例型页面补 VideoObject / ImageObject / Breadcrumb / FAQ 组合。</td>
+          </tr>
+          <tr>
+            <td><strong>内容厚度</strong></td>
+            <td class="bad">严重不足</td>
+            <td>平均约 676 词，Blog 稀薄，缺完整支柱页和比较页矩阵。</td>
+            <td>第二条线必须从“零散文章”升级成“支柱页 + 集群页 + 比较页 + 场景页”。</td>
+          </tr>
+          <tr>
+            <td><strong>转化链路</strong></td>
+            <td class="bad">严重不足</td>
+            <td>付费按钮断裂，Lead Capture 弱，试用价值表达不充分。</td>
+            <td>先修漏斗，再做内容，否则流量只会更高效地流失。</td>
+          </tr>
+          <tr>
+            <td><strong>信任信号</strong></td>
+            <td class="warning">偏弱</td>
+            <td>缺用户证言、第三方评价、社区规模可视化和实验式证据。</td>
+            <td>把作品数据、社区数据、用户反馈和第三方 mention 做成固定模块。</td>
+          </tr>
+          <tr>
+            <td><strong>AI Search Ready</strong></td>
+            <td class="warning">可补强</td>
+            <td>已有可用基础，但缺表格、直接回答、实验摘要、FAQ 完整性。</td>
+            <td>把“可被 AI 引用”的页面样式嵌入四条线，而不是另起炉灶。</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="voice">
+        <div class="section-label">Voice Direction</div>
+        <h2>语气感与页面气质建议</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="mini">品牌语气</div>
+            <h3>像实验室里的创意工具，不像廉价 AI 拼贴站</h3>
+            <p>文案基调应该是 “calm confidence + maker credibility”。少喊“best”与“magic”，多写“结果差异、参数、时长、成片效果、适合谁”。</p>
+          </div>
+          <div class="card">
+            <div class="mini">页面写法</div>
+            <h3>先给判断，再给证据，再给下一步</h3>
+            <p>每个核心页面首屏都应有 TL;DR、结果表格、适用人群、限制条件和 CTA。不是堆功能，而是先帮用户判断“这是不是我要的工具”。</p>
+          </div>
+          <div class="card">
+            <div class="mini">视觉风格</div>
+            <h3>Claude / Insights 方向：克制、编辑感、信息密度高</h3>
+            <p>避免廉价 SaaS 模板的彩色卡片堆砌。用温白底、窄色域、留白、大字标题、精细边框、审计式表格，做出“研究简报”而不是“营销海报”的气质。</p>
+          </div>
+        </div>
+        <div class="quote">建议定调句：<strong>kinovi 不该把自己包装成“什么都能生成”的全能 AI，而该包装成“对视频结果更敏感的创作者工具”。</strong></div>
+      </section>
+
+      <section id="lines">
+        <div class="section-label">Four-Line Strategy</div>
+        <h2>四线方案</h2>
+
+        <div class="line" style="margin-bottom:18px">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 1</div>
+              <h3>导流页与比较页：去抢“正在做决策的人”</h3>
+            </div>
+            <div class="line-tag">目标：吃下竞品比较 / 替代 / 限制 / 问题词</div>
+          </div>
+          <p>第一条线不需要重新定义双域，而是要围绕 seedance 相关热词、竞品对比和用户问题，生产一批高意图页面。重点不是“大而全”，而是每篇都能把一个决策问题讲透。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">优先词组</div>
+              <ul class="list">
+                <li>`runway vs seedance / kinovi`</li>
+                <li>`sora alternative no waitlist`</li>
+                <li>`kling vs seedance 2.0`</li>
+                <li>`best ai video generator with audio`</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">页面模板</div>
+              <ul class="list">
+                <li>首段先回答谁更适合谁</li>
+                <li>中段做参数 / 价格 / 时长 / 音频 / 一致性表格</li>
+                <li>结尾导到主站功能页或试用入口</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">不能犯的错</div>
+              <ul class="list">
+                <li>只写“比竞品更强”但没有证据</li>
+                <li>把导流页写成泛教程</li>
+                <li>导流页和主站之间没有明确内链分工</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="line" style="margin-bottom:18px">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 2</div>
+              <h3>主站内容系统：把“6 页壳子”升级成可累积权威的站</h3>
+            </div>
+            <div class="line-tag">目标：建立 topical authority 与产品说服体系</div>
+          </div>
+          <p>第二条线的任务不是“开 blog 栏目”，而是建立 4 种页面资产：支柱页、场景页、比较页、实验页。客户会看到的应该是内容结构、页面职责和商业价值，而不是内部生产规格。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">内容结构</div>
+              <ul class="list">
+                <li>支柱页负责定义核心能力与行业判断</li>
+                <li>比较页负责替用户缩短决策时间</li>
+                <li>场景页负责把功能翻译成真实使用场景</li>
+                <li>实验复盘页负责沉淀证据、结果和可引用素材</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">优先主题</div>
+              <ul class="list">
+                <li>AI video with native audio</li>
+                <li>Character consistency benchmarks</li>
+                <li>Text-to-video workflows for marketers</li>
+                <li>Seedance 2.0 vs mainstream tools</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">页面结构</div>
+              <ul class="list">
+                <li>TL;DR</li>
+                <li>参数/结果表</li>
+                <li>谁适合 / 谁不适合</li>
+                <li>FAQ + CTA + 相关内链</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="line" style="margin-bottom:18px">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 3</div>
+              <h3>技术 SEO：验证并加固双域，而不是推翻双域</h3>
+            </div>
+            <div class="line-tag">目标：让正确策略稳定执行</div>
+          </div>
+          <p>第三条线只做两件事：一是把现有双域策略校验完整，二是把最影响索引和理解的硬伤补齐。这里绝对不再出现“canonical 改回 kinovi.ai”这种反向动作。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">确认项</div>
+              <ul class="list">
+                <li>kinovi.ai 与 seedance2-pro.com 均完成 GSC 验证</li>
+                <li>sitemap 已在双域层提交</li>
+                <li>308 覆盖所有应跳转路径</li>
+                <li>og:url / schema url 规则与策略一致</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">硬伤修复</div>
+              <ul class="list">
+                <li>修首页双 H1</li>
+                <li>补 Gallery H1 与文本说明</li>
+                <li>确认 Gallery noindex 是否应移除</li>
+                <li>修 Pricing 的购买链路</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">AI Search 补强</div>
+              <ul class="list">
+                <li>核心页首段直接回答问题</li>
+                <li>更多表格而不是空泛段落</li>
+                <li>FAQ 覆盖价格、限制、时长、音频、商用</li>
+                <li>案例页补结构化数据</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 4</div>
+              <h3>外链与品牌证据：让“可被引用”变成站外事实</h3>
+            </div>
+            <div class="line-tag">目标：推排名，也推信任</div>
+          </div>
+          <p>第四条线不应只理解成传统外链建设。对 kinovi 这种 AI 工具站，更值钱的是“可引用的比较资产、实验资产、目录资产和真实用户反馈资产”。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">高价值资产</div>
+              <ul class="list">
+                <li>AI video benchmark 报告</li>
+                <li>Prompt 模板包与参数表</li>
+                <li>竞品价格 / 效果比较表</li>
+                <li>真实案例前后对比页</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">优先渠道</div>
+              <ul class="list">
+                <li>AI 创作者博客与通讯</li>
+                <li>开发者内容平台</li>
+                <li>产品目录 / review 平台</li>
+                <li>创作者社区 roundups</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="mini">站内配合</div>
+              <ul class="list">
+                <li>收集用户评价并上墙</li>
+                <li>展示社区规模与作品数据</li>
+                <li>把第三方 mention 做成 trust strip</li>
+                <li>每个核心页都有“证据模块”</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="section-label">Execution Roadmap</div>
+        <h2>执行路线</h2>
+        <div class="roadmap">
+          <div class="roadmap-phase">第 1 周</div>
+          <div>
+            <h3>止血</h3>
+            <p>修 Buy Now、修首页 H1、确认 Gallery noindex、完成双域 GSC 与 sitemap 校验。这里的目标不是增长，是先把漏斗和策略前提修正到不自相矛盾。</p>
+          </div>
+        </div>
+        <div class="roadmap">
+          <div class="roadmap-phase">第 2-3 周</div>
+          <div>
+            <h3>补最少但最关键的内容资产</h3>
+            <p>上线 3 篇比较页、2 篇场景页、1 篇支柱页、1 个可索引 Gallery 聚合页。先做能解释“为什么选 kinovi”的资产，不要先铺泛流量教程。</p>
+          </div>
+        </div>
+        <div class="roadmap">
+          <div class="roadmap-phase">第 4-8 周</div>
+          <div>
+            <h3>建立系统</h3>
+            <p>把第二条线扩到 12-18 个核心页面，把第四条线的实验资产和第三方 mention 一起推起来，同时重做主站 trust 区和 FAQ 区。</p>
+          </div>
+        </div>
+        <div class="roadmap">
+          <div class="roadmap-phase">第 9-12 周</div>
+          <div>
+            <h3>放大</h3>
+            <p>根据排名与转化数据，继续扩比较矩阵、场景页与实验复盘页，形成“导流页截流 + 主站收口 + 双域稳定 + 站外证据增信”的闭环。</p>
+          </div>
+        </div>
+        <p class="footer-note" style="margin-top:18px">这版方案的关键修正只有一句话：<strong>先承认双域策略，再围绕它做四线闭环。</strong> 如果前提不稳，后面的每一条执行建议都会互相打架。</p>
+      </section>
+    </main>
+  </div>
 </div>
 </body>
 </html>
