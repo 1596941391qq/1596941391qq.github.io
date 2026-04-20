@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>weichaking CRM</title>
+<meta name="theme-color" content="#f8f9fb">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{
+  --bg:#f8f9fb;--surface:#ffffff;--surface2:#f1f3f5;
+  --border:#e2e5ea;--border-hi:rgba(232,69,107,.35);
+  --accent:#e8456b;--accent-dim:rgba(232,69,107,.1);
+  --green:#059669;--green-dim:rgba(5,150,105,.1);
+  --blue:#2563eb;--blue-dim:rgba(37,99,235,.1);
+  --yellow:#d97706;--yellow-dim:rgba(217,119,6,.1);
+  --text:#1a1d23;--text2:#5f6577;--text3:#9ca3b4;
+  --radius:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{cursor:pointer;font:inherit;color:inherit;border:none;background:none}
+input,textarea,select{font:inherit;color:var(--text);background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;width:100%}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:60px}
+
+/* Shell */
+.app{display:flex;flex-direction:column;height:100vh;max-height:100vh}
+.topbar{display:flex;align-items:center;gap:16px;padding:12px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.logo{font-size:18px;font-weight:800;letter-spacing:3px;color:var(--accent)}
+.logo span{color:var(--text3);font-weight:400;font-size:12px;letter-spacing:1px;margin-left:10px}
+.tabs{display:flex;gap:4px;margin-left:auto}
+.tab{padding:6px 16px;border-radius:6px;font-size:13px;font-weight:600;color:var(--text2);transition:.15s}
+.tab:hover{color:var(--text);background:var(--surface)}
+.tab.active{color:var(--accent);background:var(--accent-dim)}
+.icon-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:6px;color:var(--text2);font-size:18px;transition:.15s}
+.icon-btn:hover{background:var(--surface);color:var(--text)}
+
+/* Stats Bar */
+.stats-bar{display:flex;gap:12px;padding:12px 20px;border-bottom:1px solid var(--border);flex-shrink:0;overflow-x:auto}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:10px 16px;min-width:120px;flex-shrink:0}
+.stat-val{font-size:22px;font-weight:700;line-height:1}
+.stat-label{font-size:11px;color:var(--text3);margin-top:4px;letter-spacing:.3px}
+.stat-val.accent{color:var(--accent)}
+.stat-val.green{color:var(--green)}
+.stat-val.blue{color:var(--blue)}
+
+/* Kanban */
+.kanban-wrap{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.kanban-toolbar{display:flex;align-items:center;gap:10px;padding:10px 20px;flex-shrink:0}
+.kanban-toolbar input{max-width:280px;font-size:13px}
+.btn{padding:7px 16px;border-radius:6px;font-size:13px;font-weight:600;transition:.15s;white-space:nowrap}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{filter:brightness(1.1)}
+.btn-ghost{color:var(--text2);border:1px solid var(--border)}
+.btn-ghost:hover{color:var(--text);border-color:var(--text3)}
+.kanban{display:flex;gap:12px;padding:0 20px 20px;flex:1;overflow-x:auto;overflow-y:hidden}
+.column{min-width:260px;max-width:320px;flex:1;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.col-header{padding:14px 16px 10px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.col-count{background:var(--surface2);border-radius:10px;padding:1px 8px;font-size:11px;color:var(--text2);font-weight:600}
+.col-body{flex:1;overflow-y:auto;padding:4px 8px 8px;display:flex;flex-direction:column;gap:6px}
+.col-body.drag-over{background:var(--accent-dim)}
+
+/* Card */
+.card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;cursor:grab;transition:border-color .15s,transform .1s}
+.card:hover{border-color:var(--text3)}
+.card.dragging{opacity:.5;transform:rotate(2deg)}
+.card-title{font-size:14px;font-weight:700;margin-bottom:4px;line-height:1.3}
+.card-sub{font-size:12px;color:var(--text2);line-height:1.4}
+.card-badges{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+.badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;letter-spacing:.3px}
+.badge-a{background:var(--green-dim);color:var(--green)}
+.badge-b{background:var(--blue-dim);color:var(--blue)}
+.badge-c{background:var(--yellow-dim);color:var(--yellow)}
+.badge-d{background:var(--surface2);color:var(--text3)}
+.badge-phone{background:var(--accent-dim);color:var(--accent)}
+.badge-pri-high{background:rgba(239,68,68,.1);color:#dc2626}
+.badge-pri-med{background:var(--yellow-dim);color:var(--yellow)}
+.badge-pri-low{background:var(--green-dim);color:var(--green)}
+.card-phone{font-size:11px;color:var(--accent);margin-top:6px;font-weight:600}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .2s}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{background:#fff;border:1px solid var(--border);border-radius:12px;width:100%;max-width:560px;max-height:85vh;overflow-y:auto;padding:24px;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.modal h2{font-size:18px;font-weight:700;margin-bottom:16px}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.modal-grid .full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:4px}
+.field label{font-size:11px;font-weight:600;color:var(--text3);letter-spacing:.3px;text-transform:uppercase}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:20px}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--border);margin:12px 0 0 12px;padding-left:16px}
+.tl-item{position:relative;padding-bottom:12px}
+.tl-item::before{content:'';position:absolute;left:-21px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid #fff}
+.tl-date{font-size:10px;color:var(--text3)}
+.tl-text{font-size:12px;color:var(--text2);line-height:1.5}
+
+/* Settings */
+.settings-section{margin-bottom:20px}
+.settings-section h3{font-size:14px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.settings-section p{font-size:12px;color:var(--text2);margin-bottom:8px;line-height:1.5}
+
+/* Funnel */
+.funnel{display:flex;flex-direction:column;gap:2px;margin-top:12px}
+.funnel-bar{display:flex;align-items:center;gap:8px;font-size:12px}
+.funnel-fill{height:20px;border-radius:3px;transition:width .3s}
+.funnel-label{min-width:70px;color:var(--text2);font-size:11px;text-align:right}
+
+/* Sync status */
+.sync-status{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:4px}
+.sync-status.unsynced{color:var(--yellow)}
+
+/* Empty state */
+.empty{text-align:center;padding:40px 20px;color:var(--text3);font-size:13px}
+
+/* Responsive */
+@media(max-width:768px){
+  .topbar{padding:10px 12px}
+  .tabs .tab{padding:5px 10px;font-size:12px}
+  .kanban{padding:0 8px 8px}
+  .column{min-width:220px}
+  .stats-bar{padding:8px 12px}
+  .stat{padding:8px 12px;min-width:100px}
+  .modal{max-width:100%;padding:16px}
+  .modal-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="logo">weichaking<span>CRM</span></div>
+    <div class="tabs">
+      <button class="tab active" data-view="customers">客户管理</button>
+      <button class="tab" data-view="tasks">任务管理</button>
+    </div>
+    <button class="icon-btn" onclick="CRM.ui.openSettings()" title="设置">⚙</button>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar" id="statsBar"></div>
+
+  <!-- Main Content -->
+  <div class="kanban-wrap">
+    <div class="kanban-toolbar" id="toolbar"></div>
+    <div class="kanban" id="kanban"></div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)CRM.ui.closeModal()">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// Section 1: Config & Constants
+// ═══════════════════════════════════════════
+const CRM = { ui:{}, api:{}, state:{}, data:{} };
+const STAGES = ['意向客户','试水期','正式期','暂停/流失'];
+const TASK_STATUS = ['todo','in-progress','finish','review'];
+const TASK_LABELS = {'todo':'Todo','in-progress':'In Progress','finish':'Finish','review':'Review'};
+const SEGMENTS = ['A','B','C','D'];
+const PRIORITIES = ['high','medium','low'];
+
+// ═══════════════════════════════════════════
+// Section 2: State Manager
+// ═══════════════════════════════════════════
+CRM.state = {
+  data: null,
+  currentView: 'customers',
+  searchQuery: '',
+  writeQueue: [],
+  writeTimer: null,
+  syncStatus: 'synced',
+
+  defaultData() {
+    return { meta:{ lastUpdated: new Date().toISOString(), version:1 }, customers:[], tasks:[] };
+  },
+
+  load() {
+    const cached = localStorage.getItem('crm_cache');
+    this.data = cached ? JSON.parse(cached) : this.defaultData();
+    CRM.api.fetch().then(remote => {
+      if (remote) {
+        if (!remote.meta) remote.meta = { lastUpdated: new Date().toISOString(), version:1 };
+        if (!remote.tasks) remote.tasks = [];
+        this.data = remote;
+        localStorage.setItem('crm_cache', JSON.stringify(this.data));
+        CRM.ui.render();
+      }
+    }).catch(() => {
+      console.log('Using cached data');
+    });
+  },
+
+  save() {
+    this.data.meta.lastUpdated = new Date().toISOString();
+    localStorage.setItem('crm_cache', JSON.stringify(this.data));
+    this.queueWrite();
+    CRM.ui.render();
+  },
+
+  queueWrite() {
+    this.syncStatus = 'unsynced';
+    CRM.ui.updateSyncStatus();
+    clearTimeout(this.writeTimer);
+    this.writeTimer = setTimeout(() => {
+      CRM.api.push(this.data).then(() => {
+        this.syncStatus = 'synced';
+        CRM.ui.updateSyncStatus();
+      }).catch(err => {
+        console.error('Save failed:', err);
+        this.syncStatus = 'error';
+        CRM.ui.updateSyncStatus();
+      });
+    }, 1000);
+  },
+
+  // Customer CRUD
+  addCustomer(c) {
+    c.id = 'cust_' + Date.now();
+    c.createdAt = new Date().toISOString();
+    c.updatedAt = new Date().toISOString();
+    c.stage = c.stage || '意向客户';
+    c.segment = c.segment || 'B';
+    c.activities = c.activities || [];
+    this.data.customers.push(c);
+    this.save();
+  },
+  updateCustomer(id, updates) {
+    const c = this.data.customers.find(x => x.id === id);
+    if (!c) return;
+    const oldStage = c.stage;
+    Object.assign(c, updates, { updatedAt: new Date().toISOString() });
+    if (updates.stage && updates.stage !== oldStage) {
+      c.activities = c.activities || [];
+      c.activities.unshift({ date: new Date().toISOString(), text: `阶段变更: ${oldStage} → ${updates.stage}` });
+    }
+    this.save();
+  },
+  deleteCustomer(id) {
+    this.data.customers = this.data.customers.filter(x => x.id !== id);
+    this.data.tasks = this.data.tasks.filter(t => t.customerId !== id);
+    this.save();
+  },
+  getCustomer(id) { return this.data.customers.find(x => x.id === id); },
+
+  addActivity(custId, text) {
+    const c = this.getCustomer(custId);
+    if (!c) return;
+    c.activities = c.activities || [];
+    c.activities.unshift({ date: new Date().toISOString(), text });
+    c.updatedAt = new Date().toISOString();
+    this.save();
+  },
+
+  // Task CRUD
+  addTask(t) {
+    t.id = 'task_' + Date.now();
+    t.createdAt = new Date().toISOString();
+    t.status = t.status || 'todo';
+    t.priority = t.priority || 'medium';
+    this.data.tasks.push(t);
+    this.save();
+  },
+  updateTask(id, updates) {
+    const t = this.data.tasks.find(x => x.id === id);
+    if (!t) return;
+    Object.assign(t, updates);
+    this.save();
+  },
+  deleteTask(id) {
+    this.data.tasks = this.data.tasks.filter(x => x.id !== id);
+    this.save();
+  },
+
+  // Stats
+  getStats() {
+    const cs = this.data.customers;
+    const ts = this.data.tasks;
+    const now = new Date();
+    const weekAgo = new Date(now - 7*86400000);
+    const stageCounts = {};
+    STAGES.forEach(s => stageCounts[s] = 0);
+    cs.forEach(c => { stageCounts[c.stage] = (stageCounts[c.stage]||0) + 1; });
+    const today = now.toISOString().slice(0,10);
+    const appointments = cs.filter(c => c.phoneAppointment && c.phoneAppointment.slice(0,10) === today);
+    const overdue = ts.filter(t => t.dueDate && t.dueDate < today && t.status !== 'review');
+    const newThisWeek = cs.filter(c => new Date(c.createdAt) >= weekAgo).length;
+    return { total: cs.length, stageCounts, appointments, overdue, newThisWeek, taskByStatus: TASK_STATUS.reduce((a,s)=>{a[s]=ts.filter(t=>t.status===s).length;return a},{}) };
+  }
+};
+
+// ═══════════════════════════════════════════
+// Section 3: jsonbin.io Adapter
+// ═══════════════════════════════════════════
+CRM.api = {
+  MASTER_KEY: '$2a$10$rrgPsWpOrAxvSDxcFE9ZwuXN86bcZs1bozxCOQl1CracmhB/iqJIy',
+  ACCESS_KEY: '$2a$10$FEg1GPK1vKxdk1DXMMLJsu1Id4dw5GHkgjhzYrAz.EmUSimEktHJq',
+  baseUrl: 'https://api.jsonbin.io/v3',
+
+  getBinId() { return localStorage.getItem('crm_jsonbin_id') || ''; },
+  setBinId(id) { localStorage.setItem('crm_jsonbin_id', id); },
+
+  async fetch() {
+    const id = this.getBinId();
+    if (!id) return null;
+    try {
+      const r = await fetch(`${this.baseUrl}/bins/${id}/latest`, {
+        headers:{ 'X-Master-Key': this.MASTER_KEY, 'X-Access-Key': this.ACCESS_KEY }
+      });
+      if (!r.ok) throw new Error(r.status);
+      const j = await r.json();
+      return j.record;
+    } catch(e) { console.error('Fetch error:', e); return null; }
+  },
+
+  async push(data) {
+    const id = this.getBinId();
+    if (!id) return this.createBin(data);
+    const r = await fetch(`${this.baseUrl}/bins/${id}`, {
+      method:'PUT',
+      headers:{ 'Content-Type':'application/json', 'X-Master-Key': this.MASTER_KEY, 'X-Access-Key': this.ACCESS_KEY },
+      body: JSON.stringify(data)
+    });
+    if (!r.ok) throw new Error('Push failed: ' + r.status);
+  },
+
+  async createBin(data) {
+    const r = await fetch(`${this.baseUrl}/bins`, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json', 'X-Master-Key': this.MASTER_KEY, 'X-Access-Key': this.ACCESS_KEY, 'X-Bin-Private':'true' },
+      body: JSON.stringify(data)
+    });
+    if (!r.ok) throw new Error('Create bin failed: ' + r.status);
+    const j = await r.json();
+    const newId = j.metadata?.id;
+    if (newId) { this.setBinId(newId); }
+    return newId;
+  }
+};
+
+// ═══════════════════════════════════════════
+// Section 4: Customer Module
+// ═══════════════════════════════════════════
+CRM.data.customerColumns = () => STAGES;
+
+CRM.data.renderCustomerCard = (c) => {
+  const segClass = 'badge-' + c.segment.toLowerCase();
+  const phoneStr = c.phoneAppointment ? new Date(c.phoneAppointment).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+  return `<div class="card" draggable="true" data-id="${c.id}" data-type="customer">
+    <div class="card-title">${esc(c.company||c.name)}</div>
+    <div class="card-sub">${esc(c.name)}${c.website?' · '+esc(c.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'')):''}</div>
+    ${phoneStr ? `<div class="card-phone">📞 ${phoneStr}</div>` : ''}
+    <div class="card-badges">
+      <span class="badge ${segClass}">${c.segment}类</span>
+      ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+    </div>
+  </div>`;
+};
+
+// ═══════════════════════════════════════════
+// Section 5: Task Module
+// ═══════════════════════════════════════════
+CRM.data.renderTaskCard = (t) => {
+  const priClass = {high:'badge-pri-high',medium:'badge-pri-med',low:'badge-pri-low'}[t.priority]||'';
+  const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
+  const dueStr = t.dueDate ? (t.dueDate < new Date().toISOString().slice(0,10) ? '⚠ '+t.dueDate : t.dueDate) : '';
+  return `<div class="card" draggable="true" data-id="${t.id}" data-type="task">
+    <div class="card-title">${esc(t.title)}</div>
+    ${cust ? `<div class="card-sub">客户: ${esc(cust.company||cust.name)}</div>` : ''}
+    ${dueStr ? `<div class="card-sub" style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'var(--accent)':'var(--text3)'}">${dueStr}</div>` : ''}
+    <div class="card-badges">
+      <span class="badge ${priClass}">${{high:'紧急',medium:'普通',low:'低'}[t.priority]||'普通'}</span>
+    </div>
+  </div>`;
+};
+
+// ═══════════════════════════════════════════
+// Section 6: UI Shell
+// ═══════════════════════════════════════════
+CRM.ui = {
+  render() {
+    this.renderStats();
+    this.renderToolbar();
+    this.renderKanban();
+    this.checkAppointments();
+  },
+
+  renderStats() {
+    const s = CRM.state.getStats();
+    const bar = document.getElementById('statsBar');
+    if (CRM.state.currentView === 'customers') {
+      bar.innerHTML = `
+        <div class="stat"><div class="stat-val accent">${s.total}</div><div class="stat-label">客户总数</div></div>
+        <div class="stat"><div class="stat-val green">+${s.newThisWeek}</div><div class="stat-label">本周新增</div></div>
+        <div class="stat"><div class="stat-val blue">${s.stageCounts['意向客户']||0}</div><div class="stat-label">意向客户</div></div>
+        <div class="stat"><div class="stat-val">${s.stageCounts['试水期']||0}</div><div class="stat-label">试水期</div></div>
+        <div class="stat"><div class="stat-val">${s.stageCounts['正式期']||0}</div><div class="stat-label">正式期</div></div>
+        <div class="stat"><div class="stat-val accent">${s.appointments.length}</div><div class="stat-label">今日电话</div></div>
+        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
+          ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
+        </div>`;
+    } else {
+      bar.innerHTML = `
+        <div class="stat"><div class="stat-val accent">${CRM.state.data.tasks.length}</div><div class="stat-label">任务总数</div></div>
+        <div class="stat"><div class="stat-val" style="color:#ef4444">${s.overdue.length}</div><div class="stat-label">已逾期</div></div>
+        <div class="stat"><div class="stat-val blue">${s.taskByStatus['todo']||0}</div><div class="stat-label">Todo</div></div>
+        <div class="stat"><div class="stat-val">${s.taskByStatus['in-progress']||0}</div><div class="stat-label">In Progress</div></div>
+        <div class="stat"><div class="stat-val green">${s.taskByStatus['finish']||0}</div><div class="stat-label">Finish</div></div>
+        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
+          ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
+        </div>`;
+    }
+  },
+
+  renderToolbar() {
+    const tb = document.getElementById('toolbar');
+    if (CRM.state.currentView === 'customers') {
+      tb.innerHTML = `<input type="text" placeholder="搜索客户..." value="${esc(CRM.state.searchQuery)}" oninput="CRM.state.searchQuery=this.value;CRM.ui.renderKanban()">
+        <button class="btn btn-accent" onclick="CRM.ui.openCustomerForm()">+ 添加客户</button>
+        <button class="btn btn-ghost" onclick="CRM.ui.exportJSON()">导出</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('importFile').click()">导入</button>
+        <input type="file" id="importFile" accept=".json" style="display:none" onchange="CRM.ui.importJSON(event)">`;
+    } else {
+      tb.innerHTML = `<input type="text" placeholder="搜索任务..." value="${esc(CRM.state.searchQuery)}" oninput="CRM.state.searchQuery=this.value;CRM.ui.renderKanban()">
+        <button class="btn btn-accent" onclick="CRM.ui.openTaskForm()">+ 添加任务</button>`;
+    }
+  },
+
+  renderKanban() {
+    const kb = document.getElementById('kanban');
+    const q = CRM.state.searchQuery.toLowerCase();
+    if (CRM.state.currentView === 'customers') {
+      const cols = STAGES;
+      kb.innerHTML = cols.map(stage => {
+        let cards = CRM.state.data.customers.filter(c => c.stage === stage);
+        if (q) cards = cards.filter(c => (c.company+c.name+c.contact+(c.services||[]).join('')).toLowerCase().includes(q));
+        return `<div class="column" data-stage="${stage}" ondragover="CRM.ui.onDragOver(event)" ondrop="CRM.ui.onDrop(event,'customer')" ondragleave="CRM.ui.onDragLeave(event)">
+          <div class="col-header"><span>${stage}</span><span class="col-count">${cards.length}</span></div>
+          <div class="col-body">${cards.length ? cards.map(c => CRM.data.renderCustomerCard(c)).join('') : '<div class="empty">暂无客户</div>'}</div>
+        </div>`;
+      }).join('');
+    } else {
+      kb.innerHTML = TASK_STATUS.map(status => {
+        let cards = CRM.state.data.tasks.filter(t => t.status === status);
+        if (q) cards = cards.filter(t => t.title.toLowerCase().includes(q));
+        return `<div class="column" data-stage="${status}" ondragover="CRM.ui.onDragOver(event)" ondrop="CRM.ui.onDrop(event,'task')" ondragleave="CRM.ui.onDragLeave(event)">
+          <div class="col-header"><span>${TASK_LABELS[status]}</span><span class="col-count">${cards.length}</span></div>
+          <div class="col-body">${cards.length ? cards.map(t => CRM.data.renderTaskCard(t)).join('') : '<div class="empty">暂无任务</div>'}</div>
+        </div>`;
+      }).join('');
+    }
+    // Bind drag events on cards
+    kb.querySelectorAll('.card[draggable]').forEach(card => {
+      card.addEventListener('dragstart', CRM.ui.onDragStart);
+      card.addEventListener('dragend', CRM.ui.onDragEnd);
+      card.addEventListener('click', () => {
+        const type = card.dataset.type;
+        const id = card.dataset.id;
+        if (type === 'customer') CRM.ui.openCustomerDetail(id);
+        else CRM.ui.openTaskDetail(id);
+      });
+    });
+  },
+
+  // Drag & Drop
+  _dragData: null,
+  onDragStart(e) {
+    const card = e.target.closest('.card');
+    CRM.ui._dragData = { id: card.dataset.id, type: card.dataset.type };
+    card.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+  },
+  onDragEnd(e) { e.target.classList.remove('dragging'); },
+  onDragOver(e) { e.preventDefault(); e.currentTarget.querySelector('.col-body').classList.add('drag-over'); },
+  onDragLeave(e) { e.currentTarget.querySelector('.col-body').classList.remove('drag-over'); },
+  onDrop(e, type) {
+    e.preventDefault();
+    e.currentTarget.querySelector('.col-body').classList.remove('drag-over');
+    const newStage = e.currentTarget.dataset.stage;
+    const { id, type: srcType } = CRM.ui._dragData || {};
+    if (!id || srcType !== type) return;
+    if (type === 'customer') CRM.state.updateCustomer(id, { stage: newStage });
+    else CRM.state.updateTask(id, { status: newStage });
+  },
+
+  // Customer Form
+  openCustomerForm(existing) {
+    const c = existing || { name:'', company:'', website:'', contact:'', segment:'B', stage:'意向客户', services:[], phoneAppointment:'', phoneAppointmentNote:'', notes:'' };
+    const isEdit = !!existing;
+    document.getElementById('modalContent').innerHTML = `
+      <h2>${isEdit?'编辑':'添加'}客户</h2>
+      <div class="modal-grid">
+        <div class="field"><label>联系人</label><input id="f_name" value="${esc(c.name)}"></div>
+        <div class="field"><label>公司</label><input id="f_company" value="${esc(c.company)}"></div>
+        <div class="field"><label>网站</label><input id="f_website" value="${esc(c.website)}" placeholder="https://"></div>
+        <div class="field"><label>联系方式</label><input id="f_contact" value="${esc(c.contact)}" placeholder="微信: xxx"></div>
+        <div class="field"><label>分级</label><select id="f_segment">${SEGMENTS.map(s=>`<option ${c.segment===s?'selected':''}>${s}</option>`).join('')}</select></div>
+        <div class="field"><label>阶段</label><select id="f_stage">${STAGES.map(s=>`<option ${c.stage===s?'selected':''}>${s}</option>`).join('')}</select></div>
+        <div class="field"><label>电话预约</label><input id="f_phone" type="datetime-local" value="${c.phoneAppointment?c.phoneAppointment.slice(0,16):''}"></div>
+        <div class="field"><label>预约备注</label><input id="f_phoneNote" value="${esc(c.phoneAppointmentNote)}"></div>
+        <div class="field full"><label>服务</label><input id="f_services" value="${esc((c.services||[]).join(', '))}" placeholder="用逗号分隔"></div>
+        <div class="field full"><label>备注</label><textarea id="f_notes">${esc(c.notes)}</textarea></div>
+      </div>
+      <div class="modal-actions">
+        ${isEdit?`<button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteCustomer('${c.id}');CRM.ui.closeModal()}">删除</button>`:''}
+        <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">取消</button>
+        <button class="btn btn-accent" onclick="CRM.ui.saveCustomer('${c.id||''}')">保存</button>
+      </div>`;
+    this.openModal();
+  },
+
+  saveCustomer(id) {
+    const d = {
+      name: document.getElementById('f_name').value.trim(),
+      company: document.getElementById('f_company').value.trim(),
+      website: document.getElementById('f_website').value.trim(),
+      contact: document.getElementById('f_contact').value.trim(),
+      segment: document.getElementById('f_segment').value,
+      stage: document.getElementById('f_stage').value,
+      phoneAppointment: document.getElementById('f_phone').value ? document.getElementById('f_phone').value+':00+08:00' : '',
+      phoneAppointmentNote: document.getElementById('f_phoneNote').value.trim(),
+      services: document.getElementById('f_services').value.split(',').map(s=>s.trim()).filter(Boolean),
+      notes: document.getElementById('f_notes').value.trim()
+    };
+    if (!d.name && !d.company) return alert('至少填写联系人或公司名');
+    if (id) {
+      CRM.state.updateCustomer(id, d);
+      CRM.state.addActivity(id, '更新了客户信息');
+    } else {
+      CRM.state.addCustomer(d);
+    }
+    this.closeModal();
+  },
+
+  openCustomerDetail(id) {
+    const c = CRM.state.getCustomer(id);
+    if (!c) return;
+    const acts = (c.activities||[]).slice(0, 20);
+    document.getElementById('modalContent').innerHTML = `
+      <h2 style="display:flex;align-items:center;gap:8px">${esc(c.company||c.name)}
+        <span class="badge badge-${c.segment.toLowerCase()}">${c.segment}类</span>
+        <span class="badge" style="background:var(--accent-dim);color:var(--accent)">${c.stage}</span>
+      </h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:13px;color:var(--text2);margin-bottom:16px">
+        ${c.name?`<div>联系人: ${esc(c.name)}</div>`:''}
+        ${c.website?`<div>网站: ${esc(c.website)}</div>`:''}
+        ${c.contact?`<div>联系: ${esc(c.contact)}</div>`:''}
+        ${c.phoneAppointment?`<div>📞 ${new Date(c.phoneAppointment).toLocaleString('zh-CN')}</div>`:''}
+        ${(c.services||[]).length?`<div>服务: ${c.services.map(s=>esc(s)).join(', ')}</div>`:''}
+      </div>
+      ${c.notes?`<div style="font-size:13px;color:var(--text2);padding:12px;background:var(--surface);border-radius:6px;margin-bottom:16px">${esc(c.notes)}</div>`:''}
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <h3 style="font-size:14px">活动时间线</h3>
+        <button class="btn btn-ghost" style="font-size:11px;padding:4px 10px" onclick="CRM.ui.addActivityPrompt('${c.id}')">+ 添加记录</button>
+      </div>
+      ${acts.length ? `<div class="timeline">${acts.map(a=>`<div class="tl-item"><div class="tl-date">${new Date(a.date).toLocaleString('zh-CN')}</div><div class="tl-text">${esc(a.text)}</div></div>`).join('')}</div>` : '<div class="empty">暂无活动记录</div>'}
+      <div class="modal-actions">
+        <button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteCustomer('${c.id}');CRM.ui.closeModal()}">删除</button>
+        <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">关闭</button>
+        <button class="btn btn-accent" onclick="CRM.ui.openCustomerForm(CRM.state.getCustomer('${c.id}'))">编辑</button>
+      </div>`;
+    this.openModal();
+  },
+
+  addActivityPrompt(custId) {
+    const text = prompt('添加活动记录:');
+    if (text && text.trim()) {
+      CRM.state.addActivity(custId, text.trim());
+      this.openCustomerDetail(custId);
+    }
+  },
+
+  // Task Forms
+  openTaskForm(existing) {
+    const t = existing || { title:'', customerId:'', priority:'medium', status:'todo', dueDate:'' };
+    const isEdit = !!existing;
+    const custs = CRM.state.data.customers;
+    document.getElementById('modalContent').innerHTML = `
+      <h2>${isEdit?'编辑':'添加'}任务</h2>
+      <div class="modal-grid">
+        <div class="field full"><label>标题</label><input id="tf_title" value="${esc(t.title)}"></div>
+        <div class="field"><label>关联客户</label><select id="tf_cust"><option value="">-- 无 --</option>${custs.map(c=>`<option value="${c.id}" ${t.customerId===c.id?'selected':''}>${esc(c.company||c.name)}</option>`).join('')}</select></div>
+        <div class="field"><label>优先级</label><select id="tf_pri">${PRIORITIES.map(p=>`<option ${t.priority===p?'selected':''}>${p}</option>`).join('')}</select></div>
+        <div class="field"><label>状态</label><select id="tf_status">${TASK_STATUS.map(s=>`<option value="${s}" ${t.status===s?'selected':''}>${TASK_LABELS[s]}</option>`).join('')}</select></div>
+        <div class="field"><label>截止日期</label><input id="tf_due" type="date" value="${t.dueDate||''}"></div>
+      </div>
+      <div class="modal-actions">
+        ${isEdit?`<button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteTask('${t.id}');CRM.ui.closeModal()}">删除</button>`:''}
+        <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">取消</button>
+        <button class="btn btn-accent" onclick="CRM.ui.saveTask('${t.id||''}')">保存</button>
+      </div>`;
+    this.openModal();
+  },
+
+  saveTask(id) {
+    const d = {
+      title: document.getElementById('tf_title').value.trim(),
+      customerId: document.getElementById('tf_cust').value,
+      priority: document.getElementById('tf_pri').value,
+      status: document.getElementById('tf_status').value,
+      dueDate: document.getElementById('tf_due').value
+    };
+    if (!d.title) return alert('请填写标题');
+    if (id) CRM.state.updateTask(id, d);
+    else CRM.state.addTask(d);
+    this.closeModal();
+  },
+
+  openTaskDetail(id) { this.openTaskForm(CRM.state.data.tasks.find(t=>t.id===id)); },
+
+  // Settings
+  openSettings() {
+    document.getElementById('modalContent').innerHTML = `
+      <h2>设置</h2>
+      <div class="settings-section">
+        <h3>jsonbin.io 配置</h3>
+        <p>API Key 和 Bin ID 用于云端同步数据。首次使用只需填写 API Key，系统会自动创建 Bin。</p>
+        <div class="field" style="margin-bottom:8px"><label>API Key (X-Master-Key)</label><input id="s_key" type="password" value="${esc(CRM.api.getKey())}"></div>
+        <div class="field" style="margin-bottom:8px"><label>Bin ID (留空自动创建)</label><input id="s_bin" value="${esc(CRM.api.getBinId())}"></div>
+        <button class="btn btn-accent" onclick="CRM.ui.saveSettings()">保存</button>
+      </div>
+      <div class="settings-section">
+        <h3>数据管理</h3>
+        <button class="btn btn-ghost" onclick="CRM.ui.exportJSON()" style="margin-right:8px">导出 JSON</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('importFile2').click()">导入 JSON</button>
+        <input type="file" id="importFile2" accept=".json" style="display:none" onchange="CRM.ui.importJSON(event)">
+      </div>
+      <div class="modal-actions"><button class="btn btn-ghost" onclick="CRM.ui.closeModal()">关闭</button></div>`;
+    this.openModal();
+  },
+
+  saveSettings() {
+    CRM.api.setKey(document.getElementById('s_key').value.trim());
+    CRM.api.setBinId(document.getElementById('s_bin').value.trim());
+    this.closeModal();
+    CRM.state.load();
+  },
+
+  // Export / Import
+  exportJSON() {
+    const blob = new Blob([JSON.stringify(CRM.state.data, null, 2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `crm-backup-${new Date().toISOString().slice(0,10)}.json`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  },
+
+  importJSON(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        if (!data.customers) throw new Error('Invalid format');
+        if (confirm(`导入 ${data.customers.length} 个客户和 ${data.tasks?.length||0} 个任务？当前数据将被覆盖。`)) {
+          CRM.state.data = data;
+          CRM.state.save();
+        }
+      } catch(err) { alert('导入失败: ' + err.message); }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  },
+
+  // Notifications
+  checkAppointments() {
+    if (!('Notification' in window)) return;
+    if (Notification.permission === 'default') Notification.requestPermission();
+    const now = new Date();
+    CRM.state.data.customers.forEach(c => {
+      if (!c.phoneAppointment) return;
+      const apt = new Date(c.phoneAppointment);
+      const diff = apt - now;
+      if (diff > 0 && diff < 30*60*1000) { // 30 min
+        if (Notification.permission === 'granted') {
+          new Notification(`📞 电话预约提醒`, { body: `${c.company||c.name} — ${apt.toLocaleTimeString('zh-CN')}`, tag: c.id });
+        }
+      }
+    });
+  },
+
+  // Sync status
+  updateSyncStatus() {
+    const el = document.getElementById('syncStatus');
+    if (!el) return;
+    el.className = 'sync-status ' + (CRM.state.syncStatus==='synced'?'':'unsynced');
+    el.textContent = CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败';
+  },
+
+  // Modal helpers
+  openModal() { document.getElementById('modalOverlay').classList.add('open'); },
+  closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+};
+
+// ═══════════════════════════════════════════
+// Section 7: Init
+// ═══════════════════════════════════════════
+function esc(s) { if (!s) return ''; const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    CRM.state.currentView = tab.dataset.view;
+    CRM.state.searchQuery = '';
+    CRM.ui.render();
+  });
+});
+
+// Keyboard shortcut
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') CRM.ui.closeModal();
+  if (e.ctrlKey && e.key === 'k') { e.preventDefault(); document.querySelector('.kanban-toolbar input')?.focus(); }
+});
+
+// Notification check every 5 min
+setInterval(() => CRM.ui.checkAppointments(), 300000);
+
+// Boot
+CRM.state.load();
+
+// Service Worker
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
+</script>
+</body>
+</html>

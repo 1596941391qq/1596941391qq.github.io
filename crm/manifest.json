@@ -1,0 +1,10 @@
+{
+  "name": "weichaking CRM",
+  "short_name": "CRM",
+  "start_url": "/crm/",
+  "display": "standalone",
+  "background_color": "#06030b",
+  "theme_color": "#06030b",
+  "description": "SEO RaaS 客户与任务管理看板",
+  "icons": []
+}

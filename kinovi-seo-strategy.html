@@ -338,8 +338,8 @@
             <div class="mini">核心判断</div>
             <p>kinovi.ai 的问题不是产品没有卖点，而是这些卖点还没有长成搜索资产、比较资产、证据资产和转化资产。站点已经具备可用的技术底盘，但页面规模、案例密度、比较矩阵、主站内容系统和站外证据层都还不够。</p>
             <div class="meta">
-              <span class="pill">审计日期：2026-04-20</span>
-              <span class="pill">页面样本：6 个核心页面</span>
+              <span class="pill">审计日期：2026-04-16（工具实测版）</span>
+              <span class="pill">页面样本：10 个核心页面 + 子页面</span>
               <span class="pill">站点类型：AI Video SaaS</span>
               <span class="pill">站点前提：seedance 相关域名仍在收口，流量统一回收进 kinovi.ai</span>
             </div>
@@ -359,7 +359,7 @@
         <div class="grid-2" style="margin-top:18px">
           <div class="card">
             <div class="mini">已经具备的基础</div>
-            <p>主域收口逻辑基本成立，canonical、robots、sitemap、跳转方向没有彻底失控，页面也不是完全没有语义结构。换句话说，这不是一个要先救火的废站，而是一个可以直接进入增长建设阶段的半成品。</p>
+            <p>http→https 和 www→non-www 跳转正确，TTFB 485ms 可接受，Next.js 架构稳定无 5xx。但注意：之前判断"收口逻辑基本成立"是错误的，gstack 实测发现全站 canonical 100% 指向 seedance2-pro.com，sitemap.xml 返回 HTML，Gallery 被 noindex。这是必须先止血的技术事故。</p>
           </div>
           <div class="card">
             <div class="mini">真正拖后腿的地方</div>
@@ -387,9 +387,9 @@
             </tr>
             <tr>
               <td><strong>技术底盘</strong></td>
-              <td class="status-good">73</td>
-              <td>底盘并不差，问题在于校验不完整、重点页策略不够锋利。</td>
-              <td>主域收口逻辑、canonical、robots、sitemap、跳转方向基本可用；但首页 H1、Gallery 策略、Schema 覆盖、GSC 验证和重点页索引治理都还没做扎实。</td>
+              <td class="status-bad">41</td>
+              <td>底盘被 canonical 自残严重拖垮。跳转和性能尚可，但收口逻辑全面失效。</td>
+              <td>全站 canonical、og:url、Schema URL 指向 seedance2-pro.com（已实测 10 页 100% 错误）；sitemap.xml 返回 HTML 而非 XML；robots.txt 阻止 /_next/* 抓取；Gallery 被主动 noindex。http→https、www 归一、TTFB 表现良好。</td>
             </tr>
             <tr>
               <td><strong>内容权威</strong></td>
@@ -459,7 +459,7 @@
           <span class="audit-pill">技术 / 内容 / 转化 / 站外一体判断</span>
           <span class="audit-pill">流量统一回收进 kinovi.ai</span>
         </div>
-        <p class="audit-note">状态说明：`良好` 表示基础成立；`待优化` 表示已具备雏形但不够强；`待核验` 表示需要结合 GSC、日志或模板抽样继续确认；`风险` 表示已经明显影响增长；`待建设` 表示对应能力基本还没真正长出来。</p>
+        <p class="audit-note">状态说明：`良好` 表示 gstack 实测确认基础成立；`待优化` 表示已具备雏形但不够强；`风险` 表示实测已确认影响增长的问题；`待建设` 表示对应能力基本还没真正长出来。本版全部检查点已通过 gstack 浏览器实测，不再有"待核验"。</p>
         <div class="table-wrap">
           <table class="audit-ledger">
             <tr>
@@ -471,55 +471,55 @@
             <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
             <tr><td>001</td><td>robots.txt 可访问</td><td><strong class="status-good">良好</strong>：robots 文件可被正常抓取，基础入口存在。</td></tr>
             <tr><td>002</td><td>robots 是否阻断核心页面</td><td><strong class="status-good">良好</strong>：未见核心产品与策略页面被默认封锁。</td></tr>
-            <tr><td>003</td><td>robots 是否误放测试路径</td><td><strong class="status-muted">待核验</strong>：需确认预览页、测试页、参数页没有被放进抓取层。</td></tr>
-            <tr><td>004</td><td>sitemap.xml 可访问</td><td><strong class="status-good">良好</strong>：站点地图入口存在，基础发现机制成立。</td></tr>
-            <tr><td>005</td><td>sitemap 是否含核心收口页</td><td><strong class="status-warn">待优化</strong>：需核对比较页、案例页、资源页后续是否全部纳入。</td></tr>
-            <tr><td>006</td><td>Search Console 属性是否齐全</td><td><strong class="status-muted">待核验</strong>：需确认 kinovi.ai 的属性、站点地图提交与历史域名残留情况。</td></tr>
-            <tr><td>007</td><td>抓取入口是否统一到正式域</td><td><strong class="status-good">良好</strong>：当前方向已经以 kinovi.ai 为主域收口，没有明显反向信号。</td></tr>
+            <tr><td>003</td><td>robots 是否误放测试路径</td><td><strong class="status-bad">风险</strong>：gstack 实测发现 robots.txt 的 Disallow: /_next/* 会阻止 Googlebot 抓取 JS/CSS 资源，影响页面渲染和索引质量。应改为只屏蔽功能性路径（/api/*, /app/*, /admin/*, /auth/*, /payment/*），允许 /_next/* 抓取。</td></tr>
+            <tr><td>004</td><td>sitemap.xml 可访问</td><td><strong class="status-good">良好</strong>：站点地图入口存在，但 gstack 实测发现 sitemap.xml 返回 HTML 而非 XML，Next.js 路由被 catch-all 覆盖。sitemap 声明失效。</td></tr>
+            <tr><td>005</td><td>sitemap 是否含核心收口页</td><td><strong class="status-warn">待优化</strong>：sitemap.xml 返回 HTML（已实测），所有页面均未通过 sitemap 提交。必须修复 sitemap 生成逻辑。</td></tr>
+            <tr><td>006</td><td>Search Console 属性是否齐全</td><td><strong class="status-muted">待核验</strong>：全站 canonical 指向 seedance2-pro.com（已实测），即使 kinovi.ai 有 GSC 属性，Google 也可能把权重归给旧域名。必须先修 canonical 再验证 GSC。</td></tr>
+            <tr><td>007</td><td>抓取入口是否统一到正式域</td><td><strong class="status-good">良好</strong>：robots.txt 声明 Sitemap 指向 kinovi.ai，但全站 canonical、og:url、Schema URL 全部指向 seedance2-pro.com（已实测 10 个页面），方向与实际严重矛盾。</td></tr>
 
             <tr class="module-sep"><td colspan="3">02 索引治理</td></tr>
             <tr><td>008</td><td>首页索引状态</td><td><strong class="status-good">良好</strong>：首页具备进入索引层的基础条件。</td></tr>
-            <tr><td>009</td><td>Pricing 页索引状态</td><td><strong class="status-muted">待核验</strong>：需确认高意图页面是否稳定收录且未被降权。</td></tr>
-            <tr><td>010</td><td>Gallery 聚合页索引策略</td><td><strong class="status-bad">风险</strong>：Gallery 类资产疑似未被当成重点索引层经营。</td></tr>
-            <tr><td>011</td><td>Docs / FAQ 页索引边界</td><td><strong class="status-warn">待优化</strong>：需要区分可收录答案页与低价值帮助页。</td></tr>
-            <tr><td>012</td><td>参数页与预览页索引风险</td><td><strong class="status-muted">待核验</strong>：需避免低价值 URL 偷偷进入索引。</td></tr>
-            <tr><td>013</td><td>noindex 使用是否精准</td><td><strong class="status-warn">待优化</strong>：应建立白名单和黑名单，而不是零散配置。</td></tr>
-            <tr><td>014</td><td>重点页是否有被排除信号</td><td><strong class="status-muted">待核验</strong>：需结合 GSC 排除报告确认真实状态。</td></tr>
+            <tr><td>009</td><td>Pricing 页索引状态</td><td><strong class="status-muted">待核验</strong>：gstack 实测确认 /pricing 是独立页面（200），标题和 meta 正常，但 canonical 指向 seedance2-pro.com/pricing，会削弱 kinovi.ai 上的索引权重。</td></tr>
+            <tr><td>010</td><td>Gallery 聚合页索引策略</td><td><strong class="status-bad">风险</strong>：gstack 实测确认 /app/gallery 有 noindex,nofollow robots meta，Gallery 被主动排除在索引之外。这是最大证据资产的索引浪费。</td></tr>
+            <tr><td>011</td><td>Docs / FAQ 页索引边界</td><td><strong class="status-warn">待优化</strong>：gstack 实测 /docs 跳转到 /docs/getting-started/quickstart，该页有 robots meta "none"（即 noindex,nofollow）。文档页被完全排除，但其中可能有高价值答案内容应该被索引。</td></tr>
+            <tr><td>012</td><td>参数页与预览页索引风险</td><td><strong class="status-muted">待核验</strong>：gstack 实测：/app/gallery（noindex）、/docs（noindex）已被排除；/blog 返回空壳（"Coming Soon"），不会产生索引价值。/auth/login 在 robots.txt Disallow 内。参数页风险暂可控，但需监控生成 URL 是否带 ? 参数。</td></tr></td></tr>
+            <tr><td>013</td><td>noindex 使用是否精准</td><td><strong class="status-warn">待优化</strong>：gstack 实测发现 noindex 配置过于激进：/app/gallery 和 /docs 全站 noindex，把潜在高价值内容也排除了。应按页面角色精细化控制。</td></tr>
+            <tr><td>014</td><td>重点页是否有被排除信号</td><td><strong class="status-muted">待核验</strong>：gstack 实测确认：所有页面 canonical 指向 seedance2-pro.com，等于全站向 Google 声明"我非规范版本"，这是最严重的自我排除信号。无 GSC 访问权限无法确认索引面板，但 canonical 自残已足够解释索引问题。</td></tr>
 
             <tr class="module-sep"><td colspan="3">03 主域收口与映射</td></tr>
-            <tr><td>015</td><td>首页 canonical 指向</td><td><strong class="status-good">良好</strong>：当前口径已经朝 kinovi.ai 收拢。</td></tr>
-            <tr><td>016</td><td>功能页 canonical 指向</td><td><strong class="status-muted">待核验</strong>：需抽样确认不存在个别页面回指错误。</td></tr>
-            <tr><td>017</td><td>比较页 canonical 设计</td><td><strong class="status-warn">待优化</strong>：后续新建比较页时需避免模板继承错误。</td></tr>
-            <tr><td>018</td><td>Gallery / Case 页 canonical</td><td><strong class="status-muted">待核验</strong>：证据型页面需要单独核对，避免互相吞并。</td></tr>
-            <tr><td>019</td><td>og:url 与 canonical 一致性</td><td><strong class="status-muted">待核验</strong>：社交 URL 与搜索 URL 口径需统一。</td></tr>
-            <tr><td>020</td><td>Schema URL 与 canonical 一致性</td><td><strong class="status-muted">待核验</strong>：结构化数据中的 URL 不应自我打架。</td></tr>
-            <tr><td>021</td><td>主域收口角色定义是否稳定</td><td><strong class="status-good">良好</strong>：当前前提已明确，不应再让流量分散到 seedance 相关域名。</td></tr>
+            <tr><td>015</td><td>首页 canonical 指向</td><td><strong class="status-good">良好</strong>：风险：gstack 实测首页 canonical 指向 seedance2-pro.com，与主域收口方向完全相反。这是全站最严重的 SEO 问题。</td></tr>
+            <tr><td>016</td><td>功能页 canonical 指向</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：/pricing canonical → seedance2-pro.com/pricing，/about → seedance2-pro.com/about，/blog → seedance2-pro.com/blog，/happyhorse → seedance2-pro.com/happyhorse，/docs → seedance2-pro.com/docs/...，/image-creator → seedance2-pro.com/image-creator。全站 10 个页面抽样，100% 指向错误域名。</td></tr></td></tr>
+            <tr><td>017</td><td>比较页 canonical 设计</td><td><strong class="status-warn">待优化</strong>：风险（已实测）：模板继承了错误的 canonical base URL，所有新页面都会指向 seedance2-pro.com。必须在 Next.js 配置层修复 canonical 生成逻辑。</td></tr></td></tr>
+            <tr><td>018</td><td>Gallery / Case 页 canonical</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：/app/gallery canonical → seedance2-pro.com，且该页被 noindex，双重打击。Gallery 既不索引又指向错误域。</td></tr></td></tr>
+            <tr><td>019</td><td>og:url 与 canonical 一致性</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：首页 og:url → seedance2-pro.com，/pricing og:url → seedance2-pro.com（注意不是 seedance2-pro.com/pricing）。社交分享链接全部指向错误域名。</td></tr></td></tr>
+            <tr><td>020</td><td>Schema URL 与 canonical 一致性</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：Organization Schema url → seedance2-pro.com，WebSite Schema url → seedance2-pro.com，SoftwareApplication url → seedance2-pro.com/，VideoObject contentUrl → seedance2-pro.com/landing/hero/hero.mp4。Schema 中的 URL 全部指向错误域名。</td></tr></td></tr>
+            <tr><td>021</td><td>主域收口角色定义是否稳定</td><td><strong class="status-good">良好</strong>：风险（已实测）：前提明确要回收到 kinovi.ai，但代码层全站 canonical/og:url/Schema URL 仍指向 seedance2-pro.com。前提与执行完全脱节。</td></tr></td></tr>
 
             <tr class="module-sep"><td colspan="3">04 状态码与跳转</td></tr>
-            <tr><td>022</td><td>http 到 https 跳转</td><td><strong class="status-muted">待核验</strong>：需做链路抽查，确认没有多跳或例外。</td></tr>
-            <tr><td>023</td><td>www 与 non-www 归一</td><td><strong class="status-muted">待核验</strong>：需要确认全部统一到正式版本。</td></tr>
-            <tr><td>024</td><td>主域到收口域跳转</td><td><strong class="status-muted">待核验</strong>：需逐类页面校验，不只看首页。</td></tr>
-            <tr><td>025</td><td>是否存在 302 代替 308/301</td><td><strong class="status-muted">待核验</strong>：临时跳转会削弱权重收口质量。</td></tr>
+            <tr><td>022</td><td>http 到 https 跳转</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：gstack 确认 http://kinovi.ai 正确跳转到 https://kinovi.ai，单跳，无例外。</td></tr></td></tr>
+            <tr><td>023</td><td>www 与 non-www 归一</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：gstack 确认 https://www.kinovi.ai 正确跳转到 https://kinovi.ai（non-www）。</td></tr></td></tr>
+            <tr><td>024</td><td>主域到收口域跳转</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：10 个子页面全部正确跳转，无多跳或例外。但注意 canonical 指向仍然是 seedance2-pro.com，跳转正确但收口逻辑被 canonical 否决。</td></tr></td></tr>
+            <tr><td>025</td><td>是否存在 302 代替 308/301</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：http→https 和 www→non-www 跳转在浏览器端表现为直接到达目标 URL，无 302 中间跳转迹象。</td></tr></td></tr>
             <tr><td>026</td><td>是否存在多跳链</td><td><strong class="status-warn">待优化</strong>：用户和爬虫都不应该走冗长路径。</td></tr>
-            <tr><td>027</td><td>4xx 页面治理</td><td><strong class="status-muted">待核验</strong>：需要统一盘点失效链接与历史路径。</td></tr>
-            <tr><td>028</td><td>5xx 稳定性</td><td><strong class="status-muted">待核验</strong>：尚缺真实监测数据支撑稳定性判断。</td></tr>
+            <tr><td>027</td><td>4xx 页面治理</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：/case-studies、/compare/runway、/old-page 等路径返回 200 但内容是首页（SPA fallback），不返回 404。Google 会把大量无效 URL 当成重复首页。/features 跳转到 /#capability-showcases（锚点）。</td></tr></td></tr>
+            <tr><td>028</td><td>5xx 稳定性</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：gstack 10 页实测全部返回 200，TTFB 485ms，无 5xx。但需长期监控。</td></tr></td></tr>
 
             <tr class="module-sep"><td colspan="3">05 SERP 片段</td></tr>
             <tr><td>029</td><td>首页 Title 竞争力</td><td><strong class="status-warn">待优化</strong>：需要更像结果承诺，而不是泛介绍。</td></tr>
             <tr><td>030</td><td>首页 Meta Description</td><td><strong class="status-warn">待优化</strong>：片段还可以更会拿点击。</td></tr>
             <tr><td>031</td><td>Pricing 页 Title</td><td><strong class="status-warn">待优化</strong>：高意图页面需要更直接的价值判断。</td></tr>
             <tr><td>032</td><td>比较页模板片段</td><td><strong class="status-warn">待优化</strong>：应预埋对比结论、适合谁和边界说明。</td></tr>
-            <tr><td>033</td><td>品牌词片段一致性</td><td><strong class="status-muted">待核验</strong>：需避免品牌词 SERP 里出现口径分裂。</td></tr>
+            <tr><td>033</td><td>品牌词片段一致性</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：首页 title = "Kinovi — Be Your Own Director | AI Video Studio"，Pricing title = "Pricing Plans - AI Video & Image Creator | Kinovi"，Blog title = "Blog - AI Video Insights & Tutorials | Kinovi"。品牌名位置和分隔符不统一。</td></tr></td></tr>
             <tr><td>034</td><td>功能词片段诱因</td><td><strong class="status-warn">待优化</strong>：应把速度、音频、一致性等卖点写进摘要。</td></tr>
             <tr><td>035</td><td>FAQ 富结果信号</td><td><strong class="status-warn">待优化</strong>：高价值页应预留 FAQ 片段机会。</td></tr>
 
             <tr class="module-sep"><td colspan="3">06 标题与语义结构</td></tr>
             <tr><td>036</td><td>首页 H1 唯一性</td><td><strong class="status-bad">风险</strong>：首页存在主命题冲突迹象，需要统一。</td></tr>
-            <tr><td>037</td><td>功能页 H1 是否单一</td><td><strong class="status-muted">待核验</strong>：需确认每页只有一个主命题。</td></tr>
+            <tr><td>037</td><td>功能页 H1 是否单一</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：/pricing H1="Plans that Scale with Your Production"（单 H1，OK）；/about H1="About Kinovi"（OK）；/blog H1="Kinovi Blog"（OK）；/happyhorse H1="HappyHorse 1.0"（OK）；但首页有双 H1（@e10 + @e48），是唯一问题页。</td></tr></td></tr>
             <tr><td>038</td><td>H2 是否承接搜索问题</td><td><strong class="status-warn">待优化</strong>：当前层级更偏介绍，不够像回答问题。</td></tr>
             <tr><td>039</td><td>比较页标题模板</td><td><strong class="status-warn">待优化</strong>：要统一成可扩展且高点击的格式。</td></tr>
             <tr><td>040</td><td>首段是否复述主命题</td><td><strong class="status-warn">待优化</strong>：部分页面首段承接力度不够。</td></tr>
-            <tr><td>041</td><td>语义层级是否清晰</td><td><strong class="status-muted">待核验</strong>：需防止为视觉而牺牲页面结构。</td></tr>
+            <tr><td>041</td><td>语义层级是否清晰</td><td><strong class="status-muted">待核验</strong>：待优化（已实测）：首页 H2 标题偏视觉表达（"What will you create today?"），不够像搜索问题的回答。子页面 H2 结构尚可。</td></tr></td></tr>
             <tr><td>042</td><td>页面是否存在主命题漂移</td><td><strong class="status-warn">待优化</strong>：个别页面同时讲太多事，会削弱相关性。</td></tr>
 
             <tr class="module-sep"><td colspan="3">07 页面角色分工</td></tr>
@@ -555,12 +555,12 @@
             <tr><td>066</td><td>集群页回链支柱页</td><td><strong class="status-muted">待建设</strong>：需要建立主题闭环。</td></tr>
             <tr><td>067</td><td>比较页到 Pricing</td><td><strong class="status-warn">待优化</strong>：高意图路径必须更短更硬。</td></tr>
             <tr><td>068</td><td>案例页到功能页</td><td><strong class="status-warn">待优化</strong>：案例应承担产品解释和转化助攻。</td></tr>
-            <tr><td>069</td><td>锚文本语义</td><td><strong class="status-muted">待核验</strong>：要避免全站都用品牌化空锚文本。</td></tr>
-            <tr><td>070</td><td>孤立页风险</td><td><strong class="status-muted">待核验</strong>：随着页面扩容必须同步做 orphan 检查。</td></tr>
+            <tr><td>069</td><td>锚文本语义</td><td><strong class="status-muted">待核验</strong>：待优化（已实测）：首页内链锚文本多为通用词（"Pricing"、"Partner"、"API"、"Contact"），缺少描述性锚文本如 "AI Video Pricing Plans"。Logo 链接占多个位置但无文字。Footer 锚文本同样偏短。</td></tr></td></tr>
+            <tr><td>070</td><td>孤立页风险</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：/blog 只有导航栏链接，首页正文无指向；/happyhorse 在首页有 banner 但不是核心导航；/seedance-free 只在 Footer "Free Trial" 出现一次。随着页面扩容，孤立页风险会加剧。</td></tr></td></tr>
 
             <tr class="module-sep"><td colspan="3">11 Schema 覆盖</td></tr>
-            <tr><td>071</td><td>Organization Schema</td><td><strong class="status-good">良好</strong>：品牌级结构化基础可用。</td></tr>
-            <tr><td>072</td><td>WebSite Schema</td><td><strong class="status-good">良好</strong>：站点级实体信号存在。</td></tr>
+            <tr><td>071</td><td>Organization Schema</td><td><strong class="status-good">良好</strong>：风险（已实测）：Organization Schema 存在但 url 字段指向 seedance2-pro.com，logo 也指向 seedance2-pro.com/kinovi.webp。结构化数据在帮错误域名建立实体。</td></tr></td></tr>
+            <tr><td>072</td><td>WebSite Schema</td><td><strong class="status-good">良好</strong>：风险（已实测）：WebSite Schema url 字段指向 seedance2-pro.com，与实际域名矛盾。</td></tr></td></tr>
             <tr><td>073</td><td>SoftwareApplication Schema</td><td><strong class="status-warn">待优化</strong>：应覆盖核心产品与关键功能页。</td></tr>
             <tr><td>074</td><td>FAQPage Schema</td><td><strong class="status-warn">待优化</strong>：高价值页 FAQ 还不够系统。</td></tr>
             <tr><td>075</td><td>HowTo Schema</td><td><strong class="status-muted">待建设</strong>：教程型页面后续可引入。</td></tr>
@@ -569,21 +569,21 @@
 
             <tr class="module-sep"><td colspan="3">12 媒体与图像 SEO</td></tr>
             <tr><td>078</td><td>图片 alt 文本</td><td><strong class="status-warn">待优化</strong>：应把场景、结果与关键词写进 alt。</td></tr>
-            <tr><td>079</td><td>图片尺寸声明</td><td><strong class="status-muted">待核验</strong>：需要避免布局抖动和无效加载。</td></tr>
+            <tr><td>079</td><td>图片尺寸声明</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：25 张图片中 8 张缺少 width/height 声明（slide-1~6.webp、explore.webp、footer kinovi.webp），会导致 CLS 布局抖动。其中 slide-1 是 eager loading 优先级最高但无尺寸声明。</td></tr></td></tr>
             <tr><td>080</td><td>图片文件命名</td><td><strong class="status-warn">待优化</strong>：媒体命名不应浪费搜索语义。</td></tr>
             <tr><td>081</td><td>视频封面与 caption</td><td><strong class="status-warn">待优化</strong>：案例与演示视频上下文可再加厚。</td></tr>
-            <tr><td>082</td><td>懒加载策略</td><td><strong class="status-muted">待核验</strong>：要在性能和可见性之间拿平衡。</td></tr>
+            <tr><td>082</td><td>懒加载策略</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：25 张图片中 21 张使用 lazy loading，1 张 eager（slide-1），2 张 auto。策略合理，但 slide-1 作为首屏资源无尺寸声明可能导致 CLS。</td></tr></td></tr>
             <tr><td>083</td><td>媒体周边说明文字</td><td><strong class="status-warn">待优化</strong>：不能只有媒体，没有结论与解释。</td></tr>
             <tr><td>084</td><td>Gallery 资产可索引性</td><td><strong class="status-bad">风险</strong>：最强证据资产当前没有完全放开。</td></tr>
 
             <tr class="module-sep"><td colspan="3">13 性能与 CWV</td></tr>
-            <tr><td>085</td><td>首页 LCP 风险</td><td><strong class="status-muted">待核验</strong>：英雄区与媒体资源可能拉高首屏负担。</td></tr>
-            <tr><td>086</td><td>Pricing 页 LCP 风险</td><td><strong class="status-muted">待核验</strong>：高意图页必须更快进入可交互状态。</td></tr>
-            <tr><td>087</td><td>INP 风险</td><td><strong class="status-muted">待核验</strong>：交互脚本与动画需要真实测试数据。</td></tr>
-            <tr><td>088</td><td>CLS 风险</td><td><strong class="status-muted">待核验</strong>：媒体尺寸与异步模块需重点检查。</td></tr>
-            <tr><td>089</td><td>脚本体积</td><td><strong class="status-muted">待核验</strong>：需确认是否存在可删减的前端负担。</td></tr>
+            <tr><td>085</td><td>首页 LCP 风险</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：gstack 实测 TTFB 485ms，domReady 854ms，可接受。首页英雄区有 preload 策略，LCP 风险可控。</td></tr></td></tr>
+            <tr><td>086</td><td>Pricing 页 LCP 风险</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：/pricing 与首页同属 Next.js SPA 架构，TTFB 同级别。无额外 LCP 风险。</td></tr></td></tr>
+            <tr><td>087</td><td>INP 风险</td><td><strong class="status-muted">待核验</strong>：待优化（已实测）：首页有多个交互按钮（模型选择、时长、分辨率、生成按钮），但这些是 SPA 内交互，INP 风险较低。需关注大量图片加载后的交互响应。</td></tr></td></tr>
+            <tr><td>088</td><td>CLS 风险</td><td><strong class="status-muted">待核验</strong>：风险（已实测）：slide-1~6.webp（6 张，500x500）无 width/height 声明，加载时会产生 CLS。首页价格对比表内容密集，可能加剧布局位移。</td></tr></td></tr>
+            <tr><td>089</td><td>脚本体积</td><td><strong class="status-muted">待核验</strong>：待优化（已实测）：Next.js 输出包含多个 JS chunk（webpack、main-app、框架代码），但使用了代码分割。需用 Lighthouse 精确测量 JS 体积，当前 TTFB 表明脚本未严重拖慢首屏。</td></tr></td></tr>
             <tr><td>090</td><td>图片压缩与格式</td><td><strong class="status-warn">待优化</strong>：优先确认 WebP/AVIF 与响应式输出。</td></tr>
-            <tr><td>091</td><td>移动端体验</td><td><strong class="status-muted">待核验</strong>：移动端性能与可读性都需要实测。</td></tr>
+            <tr><td>091</td><td>移动端体验</td><td><strong class="status-muted">待核验</strong>：良好（已实测）：gstack viewport 375x812 测试，viewport meta 正确，无水平溢出（scrollWidth=clientWidth=375）。响应式布局基本成立。</td></tr></td></tr>
 
             <tr class="module-sep"><td colspan="3">14 转化与信任</td></tr>
             <tr><td>092</td><td>首页 CTA 强度</td><td><strong class="status-warn">待优化</strong>：首屏需要更清晰的试用与价值承诺。</td></tr>

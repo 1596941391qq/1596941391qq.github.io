@@ -1,0 +1,1031 @@
+{
+  "brand": "arousen",
+  "website": "https://arousen.com",
+  "generatedAt": "2026-04-20T14:07:03.373Z",
+  "taxonomyVersion": 2,
+  "summary": {
+    "keywordCount": 30,
+    "liveQueryCount": 5,
+    "highPriorityCount": 26,
+    "notRecommendedCount": 10
+  },
+  "intentDistribution": [
+    {
+      "intentLabel": "商业调查",
+      "count": 11
+    },
+    {
+      "intentLabel": "评测判断",
+      "count": 8
+    },
+    {
+      "intentLabel": "问题解决",
+      "count": 5
+    },
+    {
+      "intentLabel": "功能型商业词",
+      "count": 3
+    },
+    {
+      "intentLabel": "竞品拦截",
+      "count": 2
+    },
+    {
+      "intentLabel": "顾虑消除",
+      "count": 1
+    }
+  ],
+  "funnelDistribution": [
+    {
+      "funnel": "mid",
+      "count": 15
+    },
+    {
+      "funnel": "bottom",
+      "count": 10
+    },
+    {
+      "funnel": "top",
+      "count": 5
+    }
+  ],
+  "topOpportunities": [
+    {
+      "keyword": "womanizer vs satisfyer",
+      "priority": "P0",
+      "intent": "竞品拦截",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 98,
+      "liveSignalScore": 74,
+      "semrushVolume": 170,
+      "brandFitness": "low",
+      "contentFormat": "comparison_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best vibrators",
+      "priority": "P0",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 12100,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "lovense alternative",
+      "priority": "P1",
+      "intent": "竞品拦截",
+      "secondaryIntents": [
+        "品牌防御",
+        "替代品搜索"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 98,
+      "liveSignalScore": 27,
+      "semrushVolume": 90,
+      "brandFitness": "low",
+      "contentFormat": "comparison_page",
+      "strategyLine": "category_capture"
+    },
+    {
+      "keyword": "lovense review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 39,
+      "semrushVolume": 320,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "lovense lush 3 review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 39,
+      "semrushVolume": 110,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "satisfyer pro 2 review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 25,
+      "semrushVolume": 320,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "satisfyer review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 25,
+      "semrushVolume": 170,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "womanizer review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 25,
+      "semrushVolume": 140,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "lelo sona review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 20,
+      "semrushVolume": 110,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "lelo review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 20,
+      "semrushVolume": 110,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "we-vibe chorus review",
+      "priority": "P1",
+      "intent": "评测判断",
+      "secondaryIntents": [
+        "品牌防御"
+      ],
+      "funnel": "bottom",
+      "conversionDistance": "near",
+      "commercialScore": 93,
+      "liveSignalScore": 20,
+      "semrushVolume": 90,
+      "brandFitness": "low",
+      "contentFormat": "review_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best vibrator for couples",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 88,
+      "liveSignalScore": 40,
+      "semrushVolume": 590,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best vibrator for beginners",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 88,
+      "liveSignalScore": 40,
+      "semrushVolume": 210,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best rabbit vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 720,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best bullet vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 590,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best wand vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 480,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best g spot vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 390,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best couples vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 260,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best remote control vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 210,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best quiet vibrators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 80,
+      "semrushVolume": 170,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best clitoral stimulators",
+      "priority": "P1",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 40,
+      "semrushVolume": 260,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "remote control vibrators",
+      "priority": "P1",
+      "intent": "功能型商业词",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 78,
+      "liveSignalScore": 40,
+      "semrushVolume": 1300,
+      "brandFitness": "medium",
+      "contentFormat": "category_page",
+      "strategyLine": "category_capture"
+    },
+    {
+      "keyword": "discreet vibrators",
+      "priority": "P1",
+      "intent": "功能型商业词",
+      "secondaryIntents": [
+        "场景需求"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 78,
+      "liveSignalScore": 40,
+      "semrushVolume": 720,
+      "brandFitness": "medium",
+      "contentFormat": "category_page",
+      "strategyLine": "category_capture"
+    },
+    {
+      "keyword": "what is a rabbit vibrator",
+      "priority": "P1",
+      "intent": "功能型商业词",
+      "secondaryIntents": [
+        "教育科普"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 78,
+      "liveSignalScore": 32,
+      "semrushVolume": 260,
+      "brandFitness": "medium",
+      "contentFormat": "category_page",
+      "strategyLine": "education_research"
+    },
+    {
+      "keyword": "how to use a vibrator",
+      "priority": "P1",
+      "intent": "问题解决",
+      "secondaryIntents": [
+        "使用教程"
+      ],
+      "funnel": "top",
+      "conversionDistance": "mid-far",
+      "commercialScore": 58,
+      "liveSignalScore": 80,
+      "semrushVolume": 5400,
+      "brandFitness": "medium",
+      "contentFormat": "guide_page",
+      "strategyLine": "education_research"
+    },
+    {
+      "keyword": "how to use a vibrator during sex",
+      "priority": "P1",
+      "intent": "问题解决",
+      "secondaryIntents": [
+        "使用教程"
+      ],
+      "funnel": "top",
+      "conversionDistance": "mid-far",
+      "commercialScore": 58,
+      "liveSignalScore": 80,
+      "semrushVolume": 260,
+      "brandFitness": "medium",
+      "contentFormat": "guide_page",
+      "strategyLine": "education_research"
+    },
+    {
+      "keyword": "can vibrators cause nerve damage",
+      "priority": "P2",
+      "intent": "顾虑消除",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid-far",
+      "commercialScore": 68,
+      "liveSignalScore": 40,
+      "semrushVolume": 110,
+      "brandFitness": "medium",
+      "contentFormat": "guide_page",
+      "strategyLine": "category_capture"
+    },
+    {
+      "keyword": "how to clean a vibrator",
+      "priority": "P2",
+      "intent": "问题解决",
+      "secondaryIntents": [
+        "购后支持"
+      ],
+      "funnel": "top",
+      "conversionDistance": "mid-far",
+      "commercialScore": 58,
+      "liveSignalScore": 64,
+      "semrushVolume": 110,
+      "brandFitness": "medium",
+      "contentFormat": "guide_page",
+      "strategyLine": "education_research"
+    },
+    {
+      "keyword": "how to choose a vibrator",
+      "priority": "P2",
+      "intent": "问题解决",
+      "secondaryIntents": [],
+      "funnel": "top",
+      "conversionDistance": "mid-far",
+      "commercialScore": 58,
+      "liveSignalScore": 64,
+      "semrushVolume": 70,
+      "brandFitness": "medium",
+      "contentFormat": "guide_page",
+      "strategyLine": "education_research"
+    },
+    {
+      "keyword": "how to sanitize sex toys",
+      "priority": "P2",
+      "intent": "问题解决",
+      "secondaryIntents": [
+        "购后支持"
+      ],
+      "funnel": "top",
+      "conversionDistance": "mid-far",
+      "commercialScore": 58,
+      "liveSignalScore": 32,
+      "semrushVolume": 110,
+      "brandFitness": "medium",
+      "contentFormat": "guide_page",
+      "strategyLine": "education_research"
+    }
+  ],
+  "notRecommended": [
+    {
+      "keyword": "lovense review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "satisfyer pro 2 review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "womanizer vs satisfyer",
+      "intent": "竞品拦截",
+      "brandFitness": "low",
+      "commercialScore": 98,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "satisfyer review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "womanizer review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "lelo sona review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "lovense lush 3 review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "lelo review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "lovense alternative",
+      "intent": "竞品拦截",
+      "brandFitness": "low",
+      "commercialScore": 98,
+      "reason": "low_brand_fitness"
+    },
+    {
+      "keyword": "we-vibe chorus review",
+      "intent": "评测判断",
+      "brandFitness": "low",
+      "commercialScore": 93,
+      "reason": "low_brand_fitness"
+    }
+  ],
+  "liveSignals": [
+    {
+      "query": "womanizer vs satisfyer",
+      "liveSignalScore": 74,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "Womanizer vs Lem? can’t decide which one to get",
+            "subreddit": "SexOver_30",
+            "score": 8,
+            "painPoints": [],
+            "buyingSignals": [
+              "seeking_recommendation",
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "A young woman from the Third World describes her experiences with catcalling and sexual harassment as a child in her home-country vs. the West.",
+            "subreddit": "TikTokCringe",
+            "score": 11366,
+            "painPoints": [],
+            "buyingSignals": [
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "Why are debates focused on having kids or the \"birth rate\" always focused on what the woman needs to give up vs the men?",
+            "subreddit": "NoStupidQuestions",
+            "score": 7769,
+            "painPoints": [],
+            "buyingSignals": [
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "TeamCaptain vs Invisible Woman; a simple breakdown of damage dealt, effective Health Points, and a touch on cooldown management [video included]",
+            "subreddit": "marvelrivals",
+            "score": 2572,
+            "painPoints": [],
+            "buyingSignals": [
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "We had 100 men vs 1 Gorilla now we need 1 beast of a man vs 100 woman",
+            "subreddit": "powerscales",
+            "score": 16017,
+            "painPoints": [],
+            "buyingSignals": [
+              "comparison_shopping"
+            ]
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "items": [
+          {
+            "source": "news",
+            "title": "Womanizer - Seksualitet - Kvinneguiden Forum",
+            "link": "https://forum.kvinneguiden.no/topic/1299702-womanizer/",
+            "content": "Aug 7, 2019&ensp;&#0183;&ensp;Hei jenter. Jeg har sett p&#229; Womanizer en stund og bestemt meg for &#229; pr&#248;ve en. Men alle tr&#229;der jeg finner er gamle. Det ser ut som at valgene er Classic, Starlet, Liberty og Premium. Jeg …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "Womanizer (voksent leket&#248;y) n&#229;r en har mensen",
+            "link": "https://forum.kvinneguiden.no/topic/1889668-womanizer-voksent-leket%C3%B8y-n%C3%A5r-en-har-mensen/",
+            "content": "Feb 7, 2026&ensp;&#0183;&ensp;Jeg kj&#248;pte en Womanizer for en liten stund tilbake. Syklusen min er litt ustabil s&#229; jeg har ikke hatt mensen mens jeg har hatt den. Jeg tenker jo det blir s&#248;l og s&#229;nn n&#229;r den brukes under …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "Tinder og sex - Singelliv og dating - Kvinneguiden Forum",
+            "link": "https://forum.kvinneguiden.no/topic/1884061-tinder-og-sex/",
+            "content": "Dec 27, 2025&ensp;&#0183;&ensp;Nei, kj&#230;re vene! Kj&#248;p en womanizer eller noe f&#248;r du inviterer en fremmed mann hjem for sex med barna i hus! Singel og 100% alene med barn her. Sexglad jeg og – men der g&#229;r det en solid …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "womanizer lading hjelp - Seksualitet - Kvinneguiden Forum",
+            "link": "https://forum.kvinneguiden.no/topic/1497123-womanizer-lading-hjelp/",
+            "content": "Jul 19, 2021&ensp;&#0183;&ensp;Den skal lyse n&#229;r den lader. Jeg tar bare ut kabelen til iphone og plugger womanizer laderen i den &#171;boksen&#187;.. lader rimelig raskt",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "Womanizer - Seksualitet - Kvinneguiden Forum",
+            "link": "https://forum.kvinneguiden.no/topic/1390427-womanizer/",
+            "content": "Jul 14, 2020&ensp;&#0183;&ensp;Skrev under feil tema - s&#229; pr&#248;ver igjen her. Jeg har bestilt en womanizer liberty og lurte p&#229; om noen har erfaring med &#229; bruke denne i badekar? Det sto at den var vanntett, men blir alltid litt …",
+            "freshnessScore": 50
+          }
+        ]
+      }
+    },
+    {
+      "query": "lovense alternative",
+      "liveSignalScore": 27,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "Lovense Lush Alternatives?",
+            "subreddit": "CamGirlProblems",
+            "score": 1,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "Anyone else have issues with Lovense and their Chatbox? We can't get Stripchat to work in the chatbox but Chaturbate seems to be fine. Anyone experience this problem? We're using Windows 10. Is there a better alternative to Stream Master because this isn't he only issue with their software.",
+            "subreddit": "CamGirlProblems",
+            "score": 1,
+            "painPoints": [],
+            "buyingSignals": [
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "Question lush",
+            "subreddit": "CamGirlProblems",
+            "score": 8,
+            "painPoints": [],
+            "buyingSignals": [
+              "purchase_mention"
+            ]
+          },
+          {
+            "title": "For the brazilian ladies with Lovense delivery issues, I just got a new email",
+            "subreddit": "CamGirlProblems",
+            "score": 3,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "Thinking about gamming on stream, any way to look at the chat without a second monitor?",
+            "subreddit": "CamGirlProblems",
+            "score": 3,
+            "painPoints": [],
+            "buyingSignals": [
+              "considering"
+            ]
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 0,
+        "ok": true,
+        "error": "",
+        "items": []
+      }
+    },
+    {
+      "query": "lovense review",
+      "liveSignalScore": 39,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "Lovense mini/portable fuck machine reviews??",
+            "subreddit": "CamGirlProblems",
+            "score": 2,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+            "subreddit": "Python",
+            "score": 9,
+            "painPoints": [
+              "battery_issue",
+              "discretion_issue"
+            ],
+            "buyingSignals": []
+          },
+          {
+            "title": "Advice please!!",
+            "subreddit": "CamGirlProblems",
+            "score": 7,
+            "painPoints": [],
+            "buyingSignals": [
+              "seeking_recommendation",
+              "price_sensitivity"
+            ]
+          },
+          {
+            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+            "subreddit": "SideProject",
+            "score": 1,
+            "painPoints": [],
+            "buyingSignals": [
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "interactive toys recommendations",
+            "subreddit": "CamGirlProblems",
+            "score": 3,
+            "painPoints": [],
+            "buyingSignals": []
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 0,
+        "ok": true,
+        "error": "",
+        "items": []
+      }
+    },
+    {
+      "query": "best vibrators",
+      "liveSignalScore": 80,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "Best vibrator",
+            "subreddit": "TwoXChromosomes",
+            "score": 0,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "What’s the best vibrator for beginners?",
+            "subreddit": "sexeducation",
+            "score": 2,
+            "painPoints": [],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "seeking_recommendation"
+            ]
+          },
+          {
+            "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
+            "subreddit": "Construction",
+            "score": 1496,
+            "painPoints": [],
+            "buyingSignals": [
+              "seeking_recommendation"
+            ]
+          },
+          {
+            "title": "Newey's Caught You All Sleeping.",
+            "subreddit": "formula1",
+            "score": 9944,
+            "painPoints": [
+              "fit_comfort",
+              "battery_issue",
+              "usability_issue",
+              "discretion_issue"
+            ],
+            "buyingSignals": [
+              "comparison_shopping",
+              "price_sensitivity"
+            ]
+          },
+          {
+            "title": "my (23f) boyfriend (24m) keeps accidentally calling me his best friends name during sex",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 8915,
+            "painPoints": [
+              "buyer_remorse",
+              "quality_issue",
+              "fit_comfort",
+              "discretion_issue"
+            ],
+            "buyingSignals": [
+              "gift_intent"
+            ]
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "items": [
+          {
+            "source": "news",
+            "title": "5 月 1 日合肥 BEST 装置提前两个月启动总装，其基于 EAST ...",
+            "link": "https://www.zhihu.com/question/1901647000308552628",
+            "content": "May 4, 2025&ensp;&#0183;&ensp;5月1日，合肥紧凑型聚变能实验装置（BEST）项目工程总装工作比原计划提前两个月，在聚变堆主机关键系统综…",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "中国 BEST 核聚变装置主机开建，2030 年有望发电，核聚变 ...",
+            "link": "https://www.zhihu.com/question/1956806717900809294",
+            "content": "Sep 28, 2006&ensp;&#0183;&ensp;中国BEST，中文名“夸父启明\"。全称是：紧凑型燃烧等离子体聚变能综合研究系统。 这套可控核聚变技术就是借鉴太阳发光发热的原理，让氢的同位素氘和氚结合，从而持续稳定释放出巨 …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "英文信件最后「Cheers、Sincerely、Regards、Best Wishes ...",
+            "link": "https://www.zhihu.com/question/20822713",
+            "content": "Best or Best Wishes Casual or Business casual. A polite way to end the letter. Can be used between friends or strangers. Sincerely or Sincerely Yours or Yours Sincerely Casual, Business casual or …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "中国「人造太阳」BEST 预计 2027 年竣工，作为人类首个 ...",
+            "link": "https://www.zhihu.com/question/1966154271436310227",
+            "content": "Oct 27, 2025&ensp;&#0183;&ensp;我认为 BEST 是 实验装置 而非“聚变发电装置”，强行接入电网的话，BEST 的电价会很难看，而且其电价在预计 20 年的工作寿命范围内无法有效降低。 当然，“人类历史上首个实现聚变发 …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "邮件中best regards如何使用 - 百度知道",
+            "link": "https://zhidao.baidu.com/question/1971362416815298340.html",
+            "content": "Oct 26, 2024&ensp;&#0183;&ensp;邮件中best regards如何使用使用场景广泛，包括商务、个人以及感谢信等。一般置于邮件末尾，紧接正文的最后行。Best regards 后紧跟逗号，随后附上您的名字或昵称。还有其他类似表 …",
+            "freshnessScore": 50
+          }
+        ]
+      }
+    },
+    {
+      "query": "how to use a vibrator",
+      "liveSignalScore": 80,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "I bought a vibrator and idk how to use it",
+            "subreddit": "WomensHealth",
+            "score": 4,
+            "painPoints": [],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "price_sensitivity"
+            ]
+          },
+          {
+            "title": "How do i use a vibrator?",
+            "subreddit": "WomensHealth",
+            "score": 13,
+            "painPoints": [],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering"
+            ]
+          },
+          {
+            "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 4148,
+            "painPoints": [
+              "buyer_remorse",
+              "quality_issue",
+              "usability_issue"
+            ],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "seeking_recommendation",
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 4195,
+            "painPoints": [
+              "buyer_remorse",
+              "quality_issue",
+              "fit_comfort",
+              "usability_issue"
+            ],
+            "buyingSignals": [
+              "seeking_recommendation",
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "Happy 20 years sober to Patrick Fabian",
+            "subreddit": "betterCallSaul",
+            "score": 12887,
+            "painPoints": [],
+            "buyingSignals": []
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "items": [
+          {
+            "source": "news",
+            "title": "use of与use的区别 - 百度知道",
+            "link": "https://zhidao.baidu.com/question/1123040662991287979.html",
+            "content": "Jul 15, 2024&ensp;&#0183;&ensp;use of与use的区别 use是动词，意思是“用” 如：We use video for teaching. 我们用录像进行教学. use of 的use 是名词，后面接of介词 如： He gave me the use of his bike. 他让我使用他的 …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "use的用法_百度知道",
+            "link": "https://zhidao.baidu.com/question/1605600594734726907.html",
+            "content": "Dec 21, 2022&ensp;&#0183;&ensp;use的用法 1、use是及物动词,接名词、代词作宾语。也可接由as短语或动词不定式充当补足语的复合宾语。use偶尔可接人作宾语,意为“利用某人”,即把某人作为手段或工具。 2、used to仅用 …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "use的名词，形容词，副词和反义词的形式是什么_百度知道",
+            "link": "https://zhidao.baidu.com/question/541616423.html",
+            "content": "Oct 6, 2019&ensp;&#0183;&ensp;use的名词：usage； 形容词：useful； 副词：usefully； 反义词：useless。 单词解释： 1、usage 英 ['juːsɪdʒ] 美 ['jusɪdʒ] n. 使用；用法；惯例 2、useful 英 ['juːsfʊl; -f (ə)l] 美 ['jusfl] adj. 有 …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "use for , use to , use as 都是什么意思区分_百度知道",
+            "link": "https://zhidao.baidu.com/question/562094473.html",
+            "content": "Jul 9, 2019&ensp;&#0183;&ensp;三、侧重点不同 1.use for侧重点：是（某物）的直接效用,没有“阴谋策划（这样说不很恰当,但便于你理解）。 2.use to侧重点：强调利用手段达到目的，是有计划，有意识的。 3.use as侧重 …",
+            "freshnessScore": 50
+          },
+          {
+            "source": "news",
+            "title": "use和usage的区别是什么？_百度知道",
+            "link": "https://zhidao.baidu.com/question/436172552929350332.html",
+            "content": "Aug 29, 2023&ensp;&#0183;&ensp;Use和usage都是表示“使用”的词汇，但它们有明显的不同点。 Use是一个动词或名词，表示使用某物或某人。在动词的情况下，它是用来描述某物或某人在某种程度上利用或运用某物或某人 …",
+            "freshnessScore": 50
+          }
+        ]
+      }
+    }
+  ]
+}
