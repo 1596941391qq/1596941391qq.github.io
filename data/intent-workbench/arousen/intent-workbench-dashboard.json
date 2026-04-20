@@ -1,71 +1,48 @@
 {
   "brand": "arousen",
   "website": "https://arousen.com",
-  "generatedAt": "2026-04-20T14:07:03.373Z",
+  "generatedAt": "2026-04-20T18:28:05.070Z",
   "taxonomyVersion": 2,
+  "llmEnabled": true,
   "summary": {
-    "keywordCount": 30,
-    "liveQueryCount": 5,
-    "highPriorityCount": 26,
-    "notRecommendedCount": 10
+    "keywordCount": 10,
+    "liveQueryCount": 7,
+    "highPriorityCount": 10,
+    "notRecommendedCount": 1
   },
   "intentDistribution": [
     {
       "intentLabel": "商业调查",
-      "count": 11
-    },
-    {
-      "intentLabel": "评测判断",
-      "count": 8
-    },
-    {
-      "intentLabel": "问题解决",
-      "count": 5
+      "count": 6
     },
     {
       "intentLabel": "功能型商业词",
-      "count": 3
-    },
-    {
-      "intentLabel": "竞品拦截",
       "count": 2
     },
     {
-      "intentLabel": "顾虑消除",
+      "intentLabel": "问题解决",
+      "count": 1
+    },
+    {
+      "intentLabel": "评测判断",
       "count": 1
     }
   ],
   "funnelDistribution": [
     {
       "funnel": "mid",
-      "count": 15
-    },
-    {
-      "funnel": "bottom",
-      "count": 10
+      "count": 8
     },
     {
       "funnel": "top",
-      "count": 5
+      "count": 1
+    },
+    {
+      "funnel": "bottom",
+      "count": 1
     }
   ],
   "topOpportunities": [
-    {
-      "keyword": "womanizer vs satisfyer",
-      "priority": "P0",
-      "intent": "竞品拦截",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 98,
-      "liveSignalScore": 74,
-      "semrushVolume": 170,
-      "brandFitness": "low",
-      "contentFormat": "comparison_page",
-      "strategyLine": "neutral_review"
-    },
     {
       "keyword": "best vibrators",
       "priority": "P0",
@@ -81,23 +58,6 @@
       "strategyLine": "neutral_review"
     },
     {
-      "keyword": "lovense alternative",
-      "priority": "P1",
-      "intent": "竞品拦截",
-      "secondaryIntents": [
-        "品牌防御",
-        "替代品搜索"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 98,
-      "liveSignalScore": 27,
-      "semrushVolume": 90,
-      "brandFitness": "low",
-      "contentFormat": "comparison_page",
-      "strategyLine": "category_capture"
-    },
-    {
       "keyword": "lovense review",
       "priority": "P1",
       "intent": "评测判断",
@@ -107,120 +67,8 @@
       "funnel": "bottom",
       "conversionDistance": "near",
       "commercialScore": 93,
-      "liveSignalScore": 39,
+      "liveSignalScore": 34,
       "semrushVolume": 320,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "lovense lush 3 review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 39,
-      "semrushVolume": 110,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "satisfyer pro 2 review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 25,
-      "semrushVolume": 320,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "satisfyer review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 25,
-      "semrushVolume": 170,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "womanizer review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 25,
-      "semrushVolume": 140,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "lelo sona review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 20,
-      "semrushVolume": 110,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "lelo review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 20,
-      "semrushVolume": 110,
-      "brandFitness": "low",
-      "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "we-vibe chorus review",
-      "priority": "P1",
-      "intent": "评测判断",
-      "secondaryIntents": [
-        "品牌防御"
-      ],
-      "funnel": "bottom",
-      "conversionDistance": "near",
-      "commercialScore": 93,
-      "liveSignalScore": 20,
-      "semrushVolume": 90,
       "brandFitness": "low",
       "contentFormat": "review_page",
       "strategyLine": "neutral_review"
@@ -233,22 +81,8 @@
       "funnel": "mid",
       "conversionDistance": "mid",
       "commercialScore": 88,
-      "liveSignalScore": 40,
+      "liveSignalScore": 60,
       "semrushVolume": 590,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best vibrator for beginners",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 88,
-      "liveSignalScore": 40,
-      "semrushVolume": 210,
       "brandFitness": "medium",
       "contentFormat": "bestof_page",
       "strategyLine": "neutral_review"
@@ -316,68 +150,6 @@
       "strategyLine": "neutral_review"
     },
     {
-      "keyword": "best couples vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [
-        "功能型商业词"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 260,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best remote control vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [
-        "功能型商业词"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 210,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best quiet vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [
-        "功能型商业词"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 170,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best clitoral stimulators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 40,
-      "semrushVolume": 260,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
       "keyword": "remote control vibrators",
       "priority": "P1",
       "intent": "功能型商业词",
@@ -408,22 +180,6 @@
       "strategyLine": "category_capture"
     },
     {
-      "keyword": "what is a rabbit vibrator",
-      "priority": "P1",
-      "intent": "功能型商业词",
-      "secondaryIntents": [
-        "教育科普"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 78,
-      "liveSignalScore": 32,
-      "semrushVolume": 260,
-      "brandFitness": "medium",
-      "contentFormat": "category_page",
-      "strategyLine": "education_research"
-    },
-    {
       "keyword": "how to use a vibrator",
       "priority": "P1",
       "intent": "问题解决",
@@ -438,82 +194,6 @@
       "brandFitness": "medium",
       "contentFormat": "guide_page",
       "strategyLine": "education_research"
-    },
-    {
-      "keyword": "how to use a vibrator during sex",
-      "priority": "P1",
-      "intent": "问题解决",
-      "secondaryIntents": [
-        "使用教程"
-      ],
-      "funnel": "top",
-      "conversionDistance": "mid-far",
-      "commercialScore": 58,
-      "liveSignalScore": 80,
-      "semrushVolume": 260,
-      "brandFitness": "medium",
-      "contentFormat": "guide_page",
-      "strategyLine": "education_research"
-    },
-    {
-      "keyword": "can vibrators cause nerve damage",
-      "priority": "P2",
-      "intent": "顾虑消除",
-      "secondaryIntents": [],
-      "funnel": "mid",
-      "conversionDistance": "mid-far",
-      "commercialScore": 68,
-      "liveSignalScore": 40,
-      "semrushVolume": 110,
-      "brandFitness": "medium",
-      "contentFormat": "guide_page",
-      "strategyLine": "category_capture"
-    },
-    {
-      "keyword": "how to clean a vibrator",
-      "priority": "P2",
-      "intent": "问题解决",
-      "secondaryIntents": [
-        "购后支持"
-      ],
-      "funnel": "top",
-      "conversionDistance": "mid-far",
-      "commercialScore": 58,
-      "liveSignalScore": 64,
-      "semrushVolume": 110,
-      "brandFitness": "medium",
-      "contentFormat": "guide_page",
-      "strategyLine": "education_research"
-    },
-    {
-      "keyword": "how to choose a vibrator",
-      "priority": "P2",
-      "intent": "问题解决",
-      "secondaryIntents": [],
-      "funnel": "top",
-      "conversionDistance": "mid-far",
-      "commercialScore": 58,
-      "liveSignalScore": 64,
-      "semrushVolume": 70,
-      "brandFitness": "medium",
-      "contentFormat": "guide_page",
-      "strategyLine": "education_research"
-    },
-    {
-      "keyword": "how to sanitize sex toys",
-      "priority": "P2",
-      "intent": "问题解决",
-      "secondaryIntents": [
-        "购后支持"
-      ],
-      "funnel": "top",
-      "conversionDistance": "mid-far",
-      "commercialScore": 58,
-      "liveSignalScore": 32,
-      "semrushVolume": 110,
-      "brandFitness": "medium",
-      "contentFormat": "guide_page",
-      "strategyLine": "education_research"
     }
   ],
   "notRecommended": [
@@ -523,232 +203,149 @@
       "brandFitness": "low",
       "commercialScore": 93,
       "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "satisfyer pro 2 review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "womanizer vs satisfyer",
-      "intent": "竞品拦截",
-      "brandFitness": "low",
-      "commercialScore": 98,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "satisfyer review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "womanizer review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "lelo sona review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "lovense lush 3 review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "lelo review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "lovense alternative",
-      "intent": "竞品拦截",
-      "brandFitness": "low",
-      "commercialScore": 98,
-      "reason": "low_brand_fitness"
-    },
-    {
-      "keyword": "we-vibe chorus review",
-      "intent": "评测判断",
-      "brandFitness": "low",
-      "commercialScore": 93,
-      "reason": "low_brand_fitness"
     }
   ],
+  "llmResearch": {
+    "available": true,
+    "classification": {
+      "primaryIntent": "review",
+      "searchQueries": [
+        "Lovense product review",
+        "Lovense vs competitors"
+      ]
+    },
+    "iterations": 3,
+    "extractedFacts": []
+  },
   "liveSignals": [
     {
-      "query": "womanizer vs satisfyer",
-      "liveSignalScore": 74,
+      "query": "Lovense product review",
+      "liveSignalScore": 24,
       "reddit": {
         "count": 5,
         "ok": true,
         "error": "",
         "topDiscussions": [
           {
-            "title": "Womanizer vs Lem? can’t decide which one to get",
-            "subreddit": "SexOver_30",
-            "score": 8,
+            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+            "subreddit": "Python",
+            "score": 12,
+            "painPoints": [
+              "battery_issue",
+              "discretion_issue"
+            ],
+            "buyingSignals": []
+          },
+          {
+            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+            "subreddit": "SideProject",
+            "score": 1,
             "painPoints": [],
             "buyingSignals": [
-              "seeking_recommendation",
-              "comparison_shopping"
+              "gift_intent"
             ]
           },
           {
-            "title": "A young woman from the Third World describes her experiences with catcalling and sexual harassment as a child in her home-country vs. the West.",
-            "subreddit": "TikTokCringe",
-            "score": 11366,
+            "title": "[IGN; 9/10] Netflix's 'One Piece' Season 2 Review: With grand production design, exquisite costuming, and stunning VFX work, and the most adorable reindeer doctor, this live-action manga adaptation is nothing short of a miracle",
+            "subreddit": "television",
+            "score": 2853,
             "painPoints": [],
-            "buyingSignals": [
-              "comparison_shopping"
-            ]
+            "buyingSignals": []
           },
           {
-            "title": "Why are debates focused on having kids or the \"birth rate\" always focused on what the woman needs to give up vs the men?",
-            "subreddit": "NoStupidQuestions",
-            "score": 7769,
+            "title": "[WON] There is belief among those in WWE that after all the hype, Wrestlepalooza was a failure for a first show on ESPN. Paul Levesque reacted to the negative reviews on Wrestlepalooza during a production meeting, saying, “We work them (the fans). They don’t work us.\"",
+            "subreddit": "SquaredCircle",
+            "score": 1917,
             "painPoints": [],
-            "buyingSignals": [
-              "comparison_shopping"
-            ]
+            "buyingSignals": []
           },
           {
-            "title": "TeamCaptain vs Invisible Woman; a simple breakdown of damage dealt, effective Health Points, and a touch on cooldown management [video included]",
-            "subreddit": "marvelrivals",
-            "score": 2572,
+            "title": "World in $1.5tn ‘plastics crisis’ hitting health from infancy to old age, report warns. Plastic production has increased more than 200 times since 1950 and hits health at every stage from extraction to disposal, says review in the Lancet.",
+            "subreddit": "science",
+            "score": 5151,
             "painPoints": [],
-            "buyingSignals": [
-              "comparison_shopping"
-            ]
-          },
-          {
-            "title": "We had 100 men vs 1 Gorilla now we need 1 beast of a man vs 100 woman",
-            "subreddit": "powerscales",
-            "score": 16017,
-            "painPoints": [],
-            "buyingSignals": [
-              "comparison_shopping"
-            ]
+            "buyingSignals": []
           }
         ]
       },
       "googleNews": {
-        "count": 5,
-        "ok": true,
-        "error": "",
-        "items": [
-          {
-            "source": "news",
-            "title": "Womanizer - Seksualitet - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1299702-womanizer/",
-            "content": "Aug 7, 2019&ensp;&#0183;&ensp;Hei jenter. Jeg har sett p&#229; Womanizer en stund og bestemt meg for &#229; pr&#248;ve en. Men alle tr&#229;der jeg finner er gamle. Det ser ut som at valgene er Classic, Starlet, Liberty og Premium. Jeg …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Womanizer (voksent leket&#248;y) n&#229;r en har mensen",
-            "link": "https://forum.kvinneguiden.no/topic/1889668-womanizer-voksent-leket%C3%B8y-n%C3%A5r-en-har-mensen/",
-            "content": "Feb 7, 2026&ensp;&#0183;&ensp;Jeg kj&#248;pte en Womanizer for en liten stund tilbake. Syklusen min er litt ustabil s&#229; jeg har ikke hatt mensen mens jeg har hatt den. Jeg tenker jo det blir s&#248;l og s&#229;nn n&#229;r den brukes under …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Tinder og sex - Singelliv og dating - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1884061-tinder-og-sex/",
-            "content": "Dec 27, 2025&ensp;&#0183;&ensp;Nei, kj&#230;re vene! Kj&#248;p en womanizer eller noe f&#248;r du inviterer en fremmed mann hjem for sex med barna i hus! Singel og 100% alene med barn her. Sexglad jeg og – men der g&#229;r det en solid …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "womanizer lading hjelp - Seksualitet - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1497123-womanizer-lading-hjelp/",
-            "content": "Jul 19, 2021&ensp;&#0183;&ensp;Den skal lyse n&#229;r den lader. Jeg tar bare ut kabelen til iphone og plugger womanizer laderen i den &#171;boksen&#187;.. lader rimelig raskt",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Womanizer - Seksualitet - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1390427-womanizer/",
-            "content": "Jul 14, 2020&ensp;&#0183;&ensp;Skrev under feil tema - s&#229; pr&#248;ver igjen her. Jeg har bestilt en womanizer liberty og lurte p&#229; om noen har erfaring med &#229; bruke denne i badekar? Det sto at den var vanntett, men blir alltid litt …",
-            "freshnessScore": 50
-          }
-        ]
+        "count": 0,
+        "ok": false,
+        "error": "no_results",
+        "items": []
       }
     },
     {
-      "query": "lovense alternative",
-      "liveSignalScore": 27,
+      "query": "Lovense vs competitors",
+      "liveSignalScore": 51,
       "reddit": {
         "count": 5,
         "ok": true,
         "error": "",
         "topDiscussions": [
           {
-            "title": "Lovense Lush Alternatives?",
-            "subreddit": "CamGirlProblems",
-            "score": 1,
-            "painPoints": [],
-            "buyingSignals": []
-          },
-          {
-            "title": "Anyone else have issues with Lovense and their Chatbox? We can't get Stripchat to work in the chatbox but Chaturbate seems to be fine. Anyone experience this problem? We're using Windows 10. Is there a better alternative to Stream Master because this isn't he only issue with their software.",
-            "subreddit": "CamGirlProblems",
-            "score": 1,
+            "title": "Jeremy Lin: “Its been the honor of a lifetime to compete vs the fiercest competitors under the brightest lights…to challenge what the world thought was possible for someone who looks like me.…I’ll forever be the kid who felt fully alive everytime I touched a basketball”",
+            "subreddit": "nba",
+            "score": 4428,
             "painPoints": [],
             "buyingSignals": [
               "comparison_shopping"
             ]
           },
           {
-            "title": "Question lush",
-            "subreddit": "CamGirlProblems",
-            "score": 8,
+            "title": "G80 M3 vs New RS5. True competitors.",
+            "subreddit": "BMW",
+            "score": 894,
             "painPoints": [],
             "buyingSignals": [
-              "purchase_mention"
+              "comparison_shopping"
             ]
           },
           {
-            "title": "For the brazilian ladies with Lovense delivery issues, I just got a new email",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "painPoints": [],
-            "buyingSignals": []
+            "title": "AITA for proving to my boyfriend the “nerds” never cared about the “popular” kids in high school?",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 6480,
+            "painPoints": [
+              "buyer_remorse",
+              "usability_issue"
+            ],
+            "buyingSignals": [
+              "comparison_shopping",
+              "gift_intent"
+            ]
           },
           {
-            "title": "Thinking about gamming on stream, any way to look at the chat without a second monitor?",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
+            "title": "Tesla reports disappointing quarterly results as automotive revenue plunges 20%",
+            "subreddit": "stocks",
+            "score": 13947,
+            "painPoints": [
+              "battery_issue"
+            ],
+            "buyingSignals": [
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "Unironically see zero reason to remove the mode at this point",
+            "subreddit": "marvelrivals",
+            "score": 3580,
             "painPoints": [],
             "buyingSignals": [
-              "considering"
+              "comparison_shopping"
             ]
           }
         ]
       },
       "googleNews": {
         "count": 0,
-        "ok": true,
-        "error": "",
+        "ok": false,
+        "error": "no_results",
         "items": []
       }
     },
     {
       "query": "lovense review",
-      "liveSignalScore": 39,
+      "liveSignalScore": 34,
       "reddit": {
         "count": 5,
         "ok": true,
@@ -764,7 +361,7 @@
           {
             "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
             "subreddit": "Python",
-            "score": 9,
+            "score": 11,
             "painPoints": [
               "battery_issue",
               "discretion_issue"
@@ -774,7 +371,7 @@
           {
             "title": "Advice please!!",
             "subreddit": "CamGirlProblems",
-            "score": 7,
+            "score": 5,
             "painPoints": [],
             "buyingSignals": [
               "seeking_recommendation",
@@ -801,6 +398,150 @@
       },
       "googleNews": {
         "count": 0,
+        "ok": false,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "lovense review",
+      "liveSignalScore": 34,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "Lovense mini/portable fuck machine reviews??",
+            "subreddit": "CamGirlProblems",
+            "score": 2,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+            "subreddit": "Python",
+            "score": 7,
+            "painPoints": [
+              "battery_issue",
+              "discretion_issue"
+            ],
+            "buyingSignals": []
+          },
+          {
+            "title": "Advice please!!",
+            "subreddit": "CamGirlProblems",
+            "score": 6,
+            "painPoints": [],
+            "buyingSignals": [
+              "seeking_recommendation",
+              "price_sensitivity"
+            ]
+          },
+          {
+            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+            "subreddit": "SideProject",
+            "score": 1,
+            "painPoints": [],
+            "buyingSignals": [
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "interactive toys recommendations",
+            "subreddit": "CamGirlProblems",
+            "score": 3,
+            "painPoints": [],
+            "buyingSignals": []
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 0,
+        "ok": false,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "best vibrator for couples",
+      "liveSignalScore": 60,
+      "reddit": {
+        "count": 5,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
+          {
+            "title": "What’s the best couple vibrators for newbies? Seeking tips from experienced couples",
+            "subreddit": "Marriage",
+            "score": 10,
+            "painPoints": [
+              "usability_issue"
+            ],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "Best vibrator for newly weds",
+            "subreddit": "ldssexuality",
+            "score": 30,
+            "painPoints": [],
+            "buyingSignals": [
+              "purchase_mention",
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 4152,
+            "painPoints": [
+              "buyer_remorse",
+              "quality_issue",
+              "usability_issue"
+            ],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "seeking_recommendation",
+              "comparison_shopping"
+            ]
+          },
+          {
+            "title": "AITA for changing Christmas plans with a newborn over a guest being unvaccinated?",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 1941,
+            "painPoints": [
+              "fit_comfort",
+              "trust_issue",
+              "usability_issue"
+            ],
+            "buyingSignals": [
+              "seeking_recommendation",
+              "value_assessment",
+              "price_sensitivity",
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "A year in review - Everything changed.",
+            "subreddit": "NevilleGoddard",
+            "score": 1344,
+            "painPoints": [
+              "trust_issue"
+            ],
+            "buyingSignals": [
+              "value_assessment",
+              "gift_intent"
+            ]
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 0,
         "ok": true,
         "error": "",
         "items": []
@@ -817,7 +558,7 @@
           {
             "title": "Best vibrator",
             "subreddit": "TwoXChromosomes",
-            "score": 0,
+            "score": 1,
             "painPoints": [],
             "buyingSignals": []
           },
@@ -835,7 +576,7 @@
           {
             "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
             "subreddit": "Construction",
-            "score": 1496,
+            "score": 1503,
             "painPoints": [],
             "buyingSignals": [
               "seeking_recommendation"
@@ -844,7 +585,7 @@
           {
             "title": "Newey's Caught You All Sleeping.",
             "subreddit": "formula1",
-            "score": 9944,
+            "score": 10019,
             "painPoints": [
               "fit_comfort",
               "battery_issue",
@@ -859,7 +600,7 @@
           {
             "title": "my (23f) boyfriend (24m) keeps accidentally calling me his best friends name during sex",
             "subreddit": "BestofRedditorUpdates",
-            "score": 8915,
+            "score": 8920,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -926,7 +667,7 @@
           {
             "title": "I bought a vibrator and idk how to use it",
             "subreddit": "WomensHealth",
-            "score": 4,
+            "score": 3,
             "painPoints": [],
             "buyingSignals": [
               "purchase_mention",
@@ -937,7 +678,7 @@
           {
             "title": "How do i use a vibrator?",
             "subreddit": "WomensHealth",
-            "score": 13,
+            "score": 12,
             "painPoints": [],
             "buyingSignals": [
               "purchase_mention",
@@ -947,7 +688,7 @@
           {
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4148,
+            "score": 4143,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -963,7 +704,7 @@
           {
             "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4195,
+            "score": 4193,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -978,7 +719,7 @@
           {
             "title": "Happy 20 years sober to Patrick Fabian",
             "subreddit": "betterCallSaul",
-            "score": 12887,
+            "score": 12879,
             "painPoints": [],
             "buyingSignals": []
           }
@@ -998,30 +739,30 @@
           },
           {
             "source": "news",
-            "title": "use的用法_百度知道",
-            "link": "https://zhidao.baidu.com/question/1605600594734726907.html",
-            "content": "Dec 21, 2022&ensp;&#0183;&ensp;use的用法 1、use是及物动词,接名词、代词作宾语。也可接由as短语或动词不定式充当补足语的复合宾语。use偶尔可接人作宾语,意为“利用某人”,即把某人作为手段或工具。 2、used to仅用 …",
+            "title": "Use automatic captioning - YouTube Help - Google Help",
+            "link": "https://support.google.com/youtube/answer/6373554?hl=en",
+            "content": "YouTube can use speech recognition technology to automatically create captions for your videos. Note: These automatic captions are generated by machine learning algorithms, so the quality of the …",
             "freshnessScore": 50
           },
           {
             "source": "news",
-            "title": "use的名词，形容词，副词和反义词的形式是什么_百度知道",
-            "link": "https://zhidao.baidu.com/question/541616423.html",
-            "content": "Oct 6, 2019&ensp;&#0183;&ensp;use的名词：usage； 形容词：useful； 副词：usefully； 反义词：useless。 单词解释： 1、usage 英 ['juːsɪdʒ] 美 ['jusɪdʒ] n. 使用；用法；惯例 2、useful 英 ['juːsfʊl; -f (ə)l] 美 ['jusfl] adj. 有 …",
+            "title": "Use Keyword Planner - Google Ads Help",
+            "link": "https://support.google.com/google-ads/answer/7337243?hl=en",
+            "content": "Keyword Planner helps you research keywords for your Search campaigns. You can use this free tool to discover new keywords related to your business and see estimates of the searches they receive and …",
             "freshnessScore": 50
           },
           {
             "source": "news",
-            "title": "use for , use to , use as 都是什么意思区分_百度知道",
-            "link": "https://zhidao.baidu.com/question/562094473.html",
-            "content": "Jul 9, 2019&ensp;&#0183;&ensp;三、侧重点不同 1.use for侧重点：是（某物）的直接效用,没有“阴谋策划（这样说不很恰当,但便于你理解）。 2.use to侧重点：强调利用手段达到目的，是有计划，有意识的。 3.use as侧重 …",
+            "title": "Use another email to sign in to your Google Account",
+            "link": "https://support.google.com/accounts/answer/176347?hl=en&amp;co=GENIE.Platform%3DDesktop",
+            "content": "Google Ads: If you use your other email to use Google Ads, both your Gmail and other email address show up. Remove your email address from someone else’s Google Account If someone accidentally …",
             "freshnessScore": 50
           },
           {
             "source": "news",
-            "title": "use和usage的区别是什么？_百度知道",
-            "link": "https://zhidao.baidu.com/question/436172552929350332.html",
-            "content": "Aug 29, 2023&ensp;&#0183;&ensp;Use和usage都是表示“使用”的词汇，但它们有明显的不同点。 Use是一个动词或名词，表示使用某物或某人。在动词的情况下，它是用来描述某物或某人在某种程度上利用或运用某物或某人 …",
+            "title": "Use music and sound effects from the Audio Library",
+            "link": "https://support.google.com/youtube/answer/3376882?hl=en",
+            "content": "In the Audio Library in YouTube Studio, you can find royalty-free production music and sound effects to use in your videos. Music and sound effects from the YouTube Audio Library&n",
             "freshnessScore": 50
           }
         ]

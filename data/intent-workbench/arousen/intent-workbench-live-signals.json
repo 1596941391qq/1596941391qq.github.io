@@ -1,419 +1,356 @@
 {
   "brand": "arousen",
-  "generatedAt": "2026-04-20T14:07:03.373Z",
+  "generatedAt": "2026-04-20T18:28:05.070Z",
   "liveSignals": [
     {
-      "query": "womanizer vs satisfyer",
+      "query": "Lovense product review",
+      "liveSignalScore": 24,
       "reddit": {
-        "source": "reddit",
         "ok": true,
-        "mode": "direct_api",
         "count": 5,
-        "items": [
-          {
-            "title": "Womanizer vs Lem? can’t decide which one to get",
-            "link": "https://reddit.com/r/SexOver_30/comments/1owyvsi/womanizer_vs_lem_cant_decide_which_one_to_get/",
-            "subreddit": "SexOver_30",
-            "score": 8,
-            "numComments": 23,
-            "publishedAt": "2025-11-14T15:04:27.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "seeking_recommendation",
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "womanizer"
-            ],
-            "content": "**update-** after sitting with it for a bit, I just went ahead and grabbed the Lem from **Hello Nancy**. felt like the better fit for what I was looking for, especially with the softer, more adjustable vibe to it. anyway, thanks for letting me ramble here, appreciate the space to think out loud lol\n\nso i’ve been debating between getting a Womanizer or Lem and i’m just stuck. i’m at the point in my 30s where i’d rather buy something once that actually fits my body and preferences instead of playi"
-          },
-          {
-            "title": "A young woman from the Third World describes her experiences with catcalling and sexual harassment as a child in her home-country vs. the West.",
-            "link": "https://reddit.com/r/TikTokCringe/comments/1p1pb38/a_young_woman_from_the_third_world_describes_her/",
-            "subreddit": "TikTokCringe",
-            "score": 11366,
-            "numComments": 1612,
-            "publishedAt": "2025-11-20T00:49:11.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "Cou"
-          },
-          {
-            "title": "Why are debates focused on having kids or the \"birth rate\" always focused on what the woman needs to give up vs the men?",
-            "link": "https://reddit.com/r/NoStupidQuestions/comments/1lwfwmr/why_are_debates_focused_on_having_kids_or_the/",
-            "subreddit": "NoStupidQuestions",
-            "score": 7769,
-            "numComments": 2567,
-            "publishedAt": "2025-07-10T15:39:05.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "To be fair, I am not sure how many of these debates are actual debates or just bad face X arguments... but it seems whenever discussion about kids/birth rate/etc comes up, there is discourse about women working/going to college/graduate school. There is never really a discussion about how men need to make sacrifices in their careers, education, or delay going to graduate school. "
-          },
-          {
-            "title": "TeamCaptain vs Invisible Woman; a simple breakdown of damage dealt, effective Health Points, and a touch on cooldown management [video included]",
-            "link": "https://reddit.com/r/marvelrivals/comments/1py6spi/teamcaptain_vs_invisible_woman_a_simple_breakdown/",
-            "subreddit": "marvelrivals",
-            "score": 2572,
-            "numComments": 1783,
-            "publishedAt": "2025-12-29T00:04:11.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "TeamCaptain (Thor) is facing against an Invisible Woman in this clip. Everybody has been going rampant over this, yada yada yada. What I’m here to do is not add fuel to the fire, but instead, I aim to breakdown the damage dealt by TeamCaptain and calculate the effective HP of the Invisible Woman in question.\n\nWith that, the damage calculations, as I said:\n\n\\- Rune Impact (85)\n\n\\- Uncharged Dash (40)\n\n\\- Hammer Throw (45)\n\n\\- Hammer Bash (45)\n\n\\- Rune Spell Field (40)\n\n\\- Hammer Bash (45)\n\n\\- Ham"
-          },
-          {
-            "title": "We had 100 men vs 1 Gorilla now we need 1 beast of a man vs 100 woman",
-            "link": "https://reddit.com/r/powerscales/comments/1kekrlk/we_had_100_men_vs_1_gorilla_now_we_need_1_beast/",
-            "subreddit": "powerscales",
-            "score": 16017,
-            "numComments": 1067,
-            "publishedAt": "2025-05-04T14:13:22.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "This security guy clears the room full of angry woman with nothing but power and rage"
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+              "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
+              "subreddit": "Python",
+              "score": 12,
+              "buyingSignals": [],
+              "painPoints": [
+                "battery_issue",
+                "discretion_issue"
+              ],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+              "link": "https://reddit.com/r/SideProject/comments/1s0n7qv/6_months_40_downloads_0_in_revenue_apple_matched/",
+              "subreddit": "SideProject",
+              "score": 1,
+              "buyingSignals": [
+                "gift_intent"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "[IGN; 9/10] Netflix's 'One Piece' Season 2 Review: With grand production design, exquisite costuming, and stunning VFX work, and the most adorable reindeer doctor, this live-action manga adaptation is nothing short of a miracle",
+              "link": "https://reddit.com/r/television/comments/1rpuc7v/ign_910_netflixs_one_piece_season_2_review_with/",
+              "subreddit": "television",
+              "score": 2853,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "[WON] There is belief among those in WWE that after all the hype, Wrestlepalooza was a failure for a first show on ESPN. Paul Levesque reacted to the negative reviews on Wrestlepalooza during a production meeting, saying, “We work them (the fans). They don’t work us.\"",
+              "link": "https://reddit.com/r/SquaredCircle/comments/1o93nt4/won_there_is_belief_among_those_in_wwe_that_after/",
+              "subreddit": "SquaredCircle",
+              "score": 1917,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "World in $1.5tn ‘plastics crisis’ hitting health from infancy to old age, report warns. Plastic production has increased more than 200 times since 1950 and hits health at every stage from extraction to disposal, says review in the Lancet.",
+              "link": "https://reddit.com/r/science/comments/1mh52gm/world_in_15tn_plastics_crisis_hitting_health_from/",
+              "subreddit": "science",
+              "score": 5151,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 1,
+            "totalPainPoints": 2,
+            "competitorMentions": [
+              "lovense"
+            ]
           }
-        ],
-        "topDiscussions": [
-          {
-            "title": "Womanizer vs Lem? can’t decide which one to get",
-            "link": "https://reddit.com/r/SexOver_30/comments/1owyvsi/womanizer_vs_lem_cant_decide_which_one_to_get/",
-            "subreddit": "SexOver_30",
-            "score": 8,
-            "numComments": 23,
-            "publishedAt": "2025-11-14T15:04:27.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "seeking_recommendation",
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "womanizer"
-            ],
-            "content": "**update-** after sitting with it for a bit, I just went ahead and grabbed the Lem from **Hello Nancy**. felt like the better fit for what I was looking for, especially with the softer, more adjustable vibe to it. anyway, thanks for letting me ramble here, appreciate the space to think out loud lol\n\nso i’ve been debating between getting a Womanizer or Lem and i’m just stuck. i’m at the point in my 30s where i’d rather buy something once that actually fits my body and preferences instead of playi"
-          },
-          {
-            "title": "A young woman from the Third World describes her experiences with catcalling and sexual harassment as a child in her home-country vs. the West.",
-            "link": "https://reddit.com/r/TikTokCringe/comments/1p1pb38/a_young_woman_from_the_third_world_describes_her/",
-            "subreddit": "TikTokCringe",
-            "score": 11366,
-            "numComments": 1612,
-            "publishedAt": "2025-11-20T00:49:11.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "Cou"
-          },
-          {
-            "title": "Why are debates focused on having kids or the \"birth rate\" always focused on what the woman needs to give up vs the men?",
-            "link": "https://reddit.com/r/NoStupidQuestions/comments/1lwfwmr/why_are_debates_focused_on_having_kids_or_the/",
-            "subreddit": "NoStupidQuestions",
-            "score": 7769,
-            "numComments": 2567,
-            "publishedAt": "2025-07-10T15:39:05.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "To be fair, I am not sure how many of these debates are actual debates or just bad face X arguments... but it seems whenever discussion about kids/birth rate/etc comes up, there is discourse about women working/going to college/graduate school. There is never really a discussion about how men need to make sacrifices in their careers, education, or delay going to graduate school. "
-          },
-          {
-            "title": "TeamCaptain vs Invisible Woman; a simple breakdown of damage dealt, effective Health Points, and a touch on cooldown management [video included]",
-            "link": "https://reddit.com/r/marvelrivals/comments/1py6spi/teamcaptain_vs_invisible_woman_a_simple_breakdown/",
-            "subreddit": "marvelrivals",
-            "score": 2572,
-            "numComments": 1783,
-            "publishedAt": "2025-12-29T00:04:11.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "TeamCaptain (Thor) is facing against an Invisible Woman in this clip. Everybody has been going rampant over this, yada yada yada. What I’m here to do is not add fuel to the fire, but instead, I aim to breakdown the damage dealt by TeamCaptain and calculate the effective HP of the Invisible Woman in question.\n\nWith that, the damage calculations, as I said:\n\n\\- Rune Impact (85)\n\n\\- Uncharged Dash (40)\n\n\\- Hammer Throw (45)\n\n\\- Hammer Bash (45)\n\n\\- Rune Spell Field (40)\n\n\\- Hammer Bash (45)\n\n\\- Ham"
-          },
-          {
-            "title": "We had 100 men vs 1 Gorilla now we need 1 beast of a man vs 100 woman",
-            "link": "https://reddit.com/r/powerscales/comments/1kekrlk/we_had_100_men_vs_1_gorilla_now_we_need_1_beast/",
-            "subreddit": "powerscales",
-            "score": 16017,
-            "numComments": 1067,
-            "publishedAt": "2025-05-04T14:13:22.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [],
-            "content": "This security guy clears the room full of angry woman with nothing but power and rage"
-          }
-        ],
-        "aggregatedSignals": {
-          "totalBuyingSignals": 6,
-          "totalPainPoints": 0,
-          "competitorMentions": [
-            "womanizer"
-          ]
         }
       },
       "googleNews": {
-        "source": "news",
-        "ok": true,
-        "mode": "bing_scraper",
-        "count": 5,
-        "items": [
-          {
-            "source": "news",
-            "title": "Womanizer - Seksualitet - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1299702-womanizer/",
-            "content": "Aug 7, 2019&ensp;&#0183;&ensp;Hei jenter. Jeg har sett p&#229; Womanizer en stund og bestemt meg for &#229; pr&#248;ve en. Men alle tr&#229;der jeg finner er gamle. Det ser ut som at valgene er Classic, Starlet, Liberty og Premium. Jeg …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Womanizer (voksent leket&#248;y) n&#229;r en har mensen",
-            "link": "https://forum.kvinneguiden.no/topic/1889668-womanizer-voksent-leket%C3%B8y-n%C3%A5r-en-har-mensen/",
-            "content": "Feb 7, 2026&ensp;&#0183;&ensp;Jeg kj&#248;pte en Womanizer for en liten stund tilbake. Syklusen min er litt ustabil s&#229; jeg har ikke hatt mensen mens jeg har hatt den. Jeg tenker jo det blir s&#248;l og s&#229;nn n&#229;r den brukes under …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Tinder og sex - Singelliv og dating - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1884061-tinder-og-sex/",
-            "content": "Dec 27, 2025&ensp;&#0183;&ensp;Nei, kj&#230;re vene! Kj&#248;p en womanizer eller noe f&#248;r du inviterer en fremmed mann hjem for sex med barna i hus! Singel og 100% alene med barn her. Sexglad jeg og – men der g&#229;r det en solid …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "womanizer lading hjelp - Seksualitet - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1497123-womanizer-lading-hjelp/",
-            "content": "Jul 19, 2021&ensp;&#0183;&ensp;Den skal lyse n&#229;r den lader. Jeg tar bare ut kabelen til iphone og plugger womanizer laderen i den &#171;boksen&#187;.. lader rimelig raskt",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Womanizer - Seksualitet - Kvinneguiden Forum",
-            "link": "https://forum.kvinneguiden.no/topic/1390427-womanizer/",
-            "content": "Jul 14, 2020&ensp;&#0183;&ensp;Skrev under feil tema - s&#229; pr&#248;ver igjen her. Jeg har bestilt en womanizer liberty og lurte p&#229; om noen har erfaring med &#229; bruke denne i badekar? Det sto at den var vanntett, men blir alltid litt …",
-            "freshnessScore": 50
-          }
-        ]
-      },
-      "liveSignalScore": 74
+        "ok": false,
+        "count": 0,
+        "error": "no_results",
+        "items": []
+      }
     },
     {
-      "query": "lovense alternative",
+      "query": "Lovense vs competitors",
+      "liveSignalScore": 51,
       "reddit": {
-        "source": "reddit",
         "ok": true,
-        "mode": "direct_api",
         "count": 5,
-        "items": [
-          {
-            "title": "Lovense Lush Alternatives?",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1o01m25/lovense_lush_alternatives/",
-            "subreddit": "CamGirlProblems",
-            "score": 1,
-            "numComments": 5,
-            "publishedAt": "2025-10-07T01:31:03.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hey everyone, I've been using the Lush 4 but every few months I run into issues where it disconnects during my stream which is very annoying! I've already had a replacement from Lovense but my replacement is also having the same issue:(\n\nI'm getting the feeling that they're just not very 'sturdy'! Does anyone have recommendations for a different brand/toy that I can use instead, that does the same thing, and won't disconnect during my live?\n\nAlternatively, any tips for how to improve connectivit"
-          },
-          {
-            "title": "Anyone else have issues with Lovense and their Chatbox? We can't get Stripchat to work in the chatbox but Chaturbate seems to be fine. Anyone experience this problem? We're using Windows 10. Is there a better alternative to Stream Master because this isn't he only issue with their software.",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1kydw1f/anyone_else_have_issues_with_lovense_and_their/",
-            "subreddit": "CamGirlProblems",
-            "score": 1,
-            "numComments": 1,
-            "publishedAt": "2025-05-29T15:35:47.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Thanks so much!"
-          },
-          {
-            "title": "Question lush",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1rt3rf5/question_lush/",
-            "subreddit": "CamGirlProblems",
-            "score": 8,
-            "numComments": 20,
-            "publishedAt": "2026-03-13T23:44:29.000Z",
-            "freshnessScore": 35,
-            "buyingSignals": [
-              "purchase_mention"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "I bought a Lush directly from the Lovense website and have been waiting for it to be shipped for 2 weeks. I sent an email requesting the tracking code and this was the response:\n\nMy question is: Is there any interactive toy similar to Lush that can be used in live streaming? (It's not available on Amazon in my country either.)"
-          },
-          {
-            "title": "For the brazilian ladies with Lovense delivery issues, I just got a new email",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1rw1upk/for_the_brazilian_ladies_with_lovense_delivery/",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "numComments": 2,
-            "publishedAt": "2026-03-17T09:34:43.000Z",
-            "freshnessScore": 35,
-            "buyingSignals": [],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Since I had to repurchase my fuck machine on amazon for double the price they were very nice about sending me a free lush 4 when things went back to normal. Seems like it hasn't gotten back to normal but they are trying a new courie, I do have the feeling that they won't cover the taxes but since in my case it will be a free new toy I am willing to test it. I will let you gals know how it goes."
-          },
-          {
-            "title": "Thinking about gamming on stream, any way to look at the chat without a second monitor?",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1r27rzr/thinking_about_gamming_on_stream_any_way_to_look/",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "numComments": 5,
-            "publishedAt": "2026-02-11T19:57:01.000Z",
-            "freshnessScore": 35,
-            "buyingSignals": [
-              "considering"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "I've been thinking about streaming video games in my room (probably League of Legends). I do multistreaming on SC and CB, and my setup consists of OBS and the Lovense Chatbox. Is there any way to view both chats on my phone or over the game?\n\n\n\nI'd also like to ask about alternatives to Chatbox. I kinda hate it, it lags sometimes, i can't write pms, but when it works well, it's wonderful.\n\n\n\nI'd like to add that I just recently started camming and this subreddit has been a huge help &lt;3"
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "Jeremy Lin: “Its been the honor of a lifetime to compete vs the fiercest competitors under the brightest lights…to challenge what the world thought was possible for someone who looks like me.…I’ll forever be the kid who felt fully alive everytime I touched a basketball”",
+              "link": "https://reddit.com/r/nba/comments/1n4ij7v/jeremy_lin_its_been_the_honor_of_a_lifetime_to/",
+              "subreddit": "nba",
+              "score": 4428,
+              "buyingSignals": [
+                "comparison_shopping"
+              ],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "G80 M3 vs New RS5. True competitors.",
+              "link": "https://reddit.com/r/BMW/comments/1r7dod1/g80_m3_vs_new_rs5_true_competitors/",
+              "subreddit": "BMW",
+              "score": 894,
+              "buyingSignals": [
+                "comparison_shopping"
+              ],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "AITA for proving to my boyfriend the “nerds” never cared about the “popular” kids in high school?",
+              "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1oleljj/aita_for_proving_to_my_boyfriend_the_nerds_never/",
+              "subreddit": "BestofRedditorUpdates",
+              "score": 6480,
+              "buyingSignals": [
+                "comparison_shopping",
+                "gift_intent"
+              ],
+              "painPoints": [
+                "buyer_remorse",
+                "usability_issue"
+              ],
+              "competitors": []
+            },
+            {
+              "title": "Tesla reports disappointing quarterly results as automotive revenue plunges 20%",
+              "link": "https://reddit.com/r/stocks/comments/1k5g9yj/tesla_reports_disappointing_quarterly_results_as/",
+              "subreddit": "stocks",
+              "score": 13947,
+              "buyingSignals": [
+                "comparison_shopping"
+              ],
+              "painPoints": [
+                "battery_issue"
+              ],
+              "competitors": []
+            },
+            {
+              "title": "Unironically see zero reason to remove the mode at this point",
+              "link": "https://reddit.com/r/marvelrivals/comments/1q688oa/unironically_see_zero_reason_to_remove_the_mode/",
+              "subreddit": "marvelrivals",
+              "score": 3580,
+              "buyingSignals": [
+                "comparison_shopping"
+              ],
+              "painPoints": [],
+              "competitors": []
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 6,
+            "totalPainPoints": 3,
+            "competitorMentions": []
           }
-        ],
-        "topDiscussions": [
-          {
-            "title": "Lovense Lush Alternatives?",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1o01m25/lovense_lush_alternatives/",
-            "subreddit": "CamGirlProblems",
-            "score": 1,
-            "numComments": 5,
-            "publishedAt": "2025-10-07T01:31:03.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hey everyone, I've been using the Lush 4 but every few months I run into issues where it disconnects during my stream which is very annoying! I've already had a replacement from Lovense but my replacement is also having the same issue:(\n\nI'm getting the feeling that they're just not very 'sturdy'! Does anyone have recommendations for a different brand/toy that I can use instead, that does the same thing, and won't disconnect during my live?\n\nAlternatively, any tips for how to improve connectivit"
-          },
-          {
-            "title": "Anyone else have issues with Lovense and their Chatbox? We can't get Stripchat to work in the chatbox but Chaturbate seems to be fine. Anyone experience this problem? We're using Windows 10. Is there a better alternative to Stream Master because this isn't he only issue with their software.",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1kydw1f/anyone_else_have_issues_with_lovense_and_their/",
-            "subreddit": "CamGirlProblems",
-            "score": 1,
-            "numComments": 1,
-            "publishedAt": "2025-05-29T15:35:47.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [
-              "comparison_shopping"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Thanks so much!"
-          },
-          {
-            "title": "Question lush",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1rt3rf5/question_lush/",
-            "subreddit": "CamGirlProblems",
-            "score": 8,
-            "numComments": 20,
-            "publishedAt": "2026-03-13T23:44:29.000Z",
-            "freshnessScore": 35,
-            "buyingSignals": [
-              "purchase_mention"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "I bought a Lush directly from the Lovense website and have been waiting for it to be shipped for 2 weeks. I sent an email requesting the tracking code and this was the response:\n\nMy question is: Is there any interactive toy similar to Lush that can be used in live streaming? (It's not available on Amazon in my country either.)"
-          },
-          {
-            "title": "For the brazilian ladies with Lovense delivery issues, I just got a new email",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1rw1upk/for_the_brazilian_ladies_with_lovense_delivery/",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "numComments": 2,
-            "publishedAt": "2026-03-17T09:34:43.000Z",
-            "freshnessScore": 35,
-            "buyingSignals": [],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Since I had to repurchase my fuck machine on amazon for double the price they were very nice about sending me a free lush 4 when things went back to normal. Seems like it hasn't gotten back to normal but they are trying a new courie, I do have the feeling that they won't cover the taxes but since in my case it will be a free new toy I am willing to test it. I will let you gals know how it goes."
-          },
-          {
-            "title": "Thinking about gamming on stream, any way to look at the chat without a second monitor?",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1r27rzr/thinking_about_gamming_on_stream_any_way_to_look/",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "numComments": 5,
-            "publishedAt": "2026-02-11T19:57:01.000Z",
-            "freshnessScore": 35,
-            "buyingSignals": [
-              "considering"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "I've been thinking about streaming video games in my room (probably League of Legends). I do multistreaming on SC and CB, and my setup consists of OBS and the Lovense Chatbox. Is there any way to view both chats on my phone or over the game?\n\n\n\nI'd also like to ask about alternatives to Chatbox. I kinda hate it, it lags sometimes, i can't write pms, but when it works well, it's wonderful.\n\n\n\nI'd like to add that I just recently started camming and this subreddit has been a huge help &lt;3"
-          }
-        ],
-        "aggregatedSignals": {
-          "totalBuyingSignals": 3,
-          "totalPainPoints": 0,
-          "competitorMentions": [
-            "lovense"
-          ]
         }
       },
       "googleNews": {
-        "source": "news",
-        "ok": true,
-        "mode": "bing_scraper",
+        "ok": false,
         "count": 0,
+        "error": "no_results",
         "items": []
-      },
-      "liveSignalScore": 27
+      }
     },
     {
       "query": "lovense review",
+      "liveSignalScore": 34,
+      "reddit": {
+        "ok": true,
+        "count": 5,
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "Lovense mini/portable fuck machine reviews??",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1q1vxjy/lovense_miniportable_fuck_machine_reviews/",
+              "subreddit": "CamGirlProblems",
+              "score": 2,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+              "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
+              "subreddit": "Python",
+              "score": 11,
+              "buyingSignals": [],
+              "painPoints": [
+                "battery_issue",
+                "discretion_issue"
+              ],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "Advice please!!",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1s44eu1/advice_please/",
+              "subreddit": "CamGirlProblems",
+              "score": 5,
+              "buyingSignals": [
+                "seeking_recommendation",
+                "price_sensitivity"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+              "link": "https://reddit.com/r/SideProject/comments/1s0n7qv/6_months_40_downloads_0_in_revenue_apple_matched/",
+              "subreddit": "SideProject",
+              "score": 1,
+              "buyingSignals": [
+                "gift_intent"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "interactive toys recommendations",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1skg5ok/interactive_toys_recommendations/",
+              "subreddit": "CamGirlProblems",
+              "score": 3,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 3,
+            "totalPainPoints": 2,
+            "competitorMentions": [
+              "lovense"
+            ]
+          }
+        }
+      },
+      "googleNews": {
+        "ok": false,
+        "count": 0,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "lovense review",
+      "liveSignalScore": 34,
+      "reddit": {
+        "ok": true,
+        "count": 5,
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "Lovense mini/portable fuck machine reviews??",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1q1vxjy/lovense_miniportable_fuck_machine_reviews/",
+              "subreddit": "CamGirlProblems",
+              "score": 2,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+              "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
+              "subreddit": "Python",
+              "score": 7,
+              "buyingSignals": [],
+              "painPoints": [
+                "battery_issue",
+                "discretion_issue"
+              ],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "Advice please!!",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1s44eu1/advice_please/",
+              "subreddit": "CamGirlProblems",
+              "score": 6,
+              "buyingSignals": [
+                "seeking_recommendation",
+                "price_sensitivity"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+              "link": "https://reddit.com/r/SideProject/comments/1s0n7qv/6_months_40_downloads_0_in_revenue_apple_matched/",
+              "subreddit": "SideProject",
+              "score": 1,
+              "buyingSignals": [
+                "gift_intent"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "interactive toys recommendations",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1skg5ok/interactive_toys_recommendations/",
+              "subreddit": "CamGirlProblems",
+              "score": 3,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 3,
+            "totalPainPoints": 2,
+            "competitorMentions": [
+              "lovense"
+            ]
+          }
+        }
+      },
+      "googleNews": {
+        "ok": false,
+        "count": 0,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "best vibrator for couples",
       "reddit": {
         "source": "reddit",
         "ok": true,
@@ -421,176 +358,206 @@
         "count": 5,
         "items": [
           {
-            "title": "Lovense mini/portable fuck machine reviews??",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1q1vxjy/lovense_miniportable_fuck_machine_reviews/",
-            "subreddit": "CamGirlProblems",
-            "score": 2,
-            "numComments": 4,
-            "publishedAt": "2026-01-02T11:07:44.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hi! Saw the new Lovense mini / portable fuck machine it’s called, in the spicy shops when I went a few days ago! I’m so tempted to get it, but first I’d like to hear if it worked well , any reviews or tips on using it? I’d be so happy to hear from you all on this! I’m worried that it won’t be stable, because it’s mini/portable… should I perhaps just get the proper big Lovense fuck machine instead? \n\nBut I’m more leaning to the mini portable one first as I’ve never had one and can then take it wi"
-          },
-          {
-            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
-            "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
-            "subreddit": "Python",
-            "score": 9,
-            "numComments": 23,
-            "publishedAt": "2026-03-20T20:22:07.000Z",
+            "title": "What’s the best couple vibrators for newbies? Seeking tips from experienced couples",
+            "link": "https://reddit.com/r/Marriage/comments/1r3cyhi/whats_the_best_couple_vibrators_for_newbies/",
+            "subreddit": "Marriage",
+            "score": 10,
+            "numComments": 22,
+            "publishedAt": "2026-02-13T02:20:43.000Z",
             "freshnessScore": 35,
-            "buyingSignals": [],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "gift_intent"
+            ],
             "painPoints": [
-              "battery_issue",
-              "discretion_issue"
+              "usability_issue"
             ],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hey r/Python! 👋\n\n**What My Project Does**\n\nI recently built **lovensepy**, a fully typed Python wrapper for controlling Lovense devices (yes, *those* smart toys). \n\nI originally posted this to a general self-hosting subreddit and got downvoted to oblivion because they didn't really need a Python SDK. So I’m bringing it to people who might actually appreciate the architecture, the tech stack, and the code behind it. 😂\n\nThere are a few existing scripts out there, but most of them use synchronous"
+            "competitors": [],
+            "content": "My partner and I are thinking about getting a couples vibrator to try something new. We’re total beginners when it comes to these kinds of toys, and honestly, I’m not sure where to even start.\n\nFor anyone who’s been using them, what’s a good one to try for people who are pretty new to this? We’re not looking for anything too complicated, just something to make things a little more fun and help us feel more connected.\n\nI’ve read that some are better for couples who are more experienced, but we’re"
           },
           {
-            "title": "Advice please!!",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1s44eu1/advice_please/",
-            "subreddit": "CamGirlProblems",
-            "score": 7,
-            "numComments": 10,
-            "publishedAt": "2026-03-26T11:05:57.000Z",
-            "freshnessScore": 60,
+            "title": "Best vibrator for newly weds",
+            "link": "https://reddit.com/r/ldssexuality/comments/1o8lxvh/best_vibrator_for_newly_weds/",
+            "subreddit": "ldssexuality",
+            "score": 30,
+            "numComments": 37,
+            "publishedAt": "2025-10-16T23:39:23.000Z",
+            "freshnessScore": 15,
             "buyingSignals": [
-              "seeking_recommendation",
-              "price_sensitivity"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hey everyone,\n\nLooking for some advice pretty please on how I can level up my earnings. (I will be one year on SC in May)\n\nI stream on SC, do relatively well, UK girl, currently ranked 600 on the site with 52k favourites. I average $100/$150 per hour but I feel I can’t get past this number. \n\nI have a HD camera, ring lights, fibre internet &amp; Lovense toys. My private/exclusive is set to 90 tokens per min with a rating of 4.9/5 overall and 55 positive reviews. My tip menu is affordable too (im"
-          },
-          {
-            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
-            "link": "https://reddit.com/r/SideProject/comments/1s0n7qv/6_months_40_downloads_0_in_revenue_apple_matched/",
-            "subreddit": "SideProject",
-            "score": 1,
-            "numComments": 6,
-            "publishedAt": "2026-03-22T14:35:24.000Z",
-            "freshnessScore": 60,
-            "buyingSignals": [
+              "purchase_mention",
               "gift_intent"
             ],
             "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "I gave my girlfriend a blender for Valentine's Day once. That's the origin story. I figured if I'm this bad at picking gifts, maybe I should build an AI that's better at it than me.\n\nSo I spent six months building Aril. You create a profile for someone (their hobbies, style, favorite brands, the stuff they actually care about), and the AI recommends specific gifts with a confidence score. Like, you tell it your mom loves gardening and hates clutter, it suggests a handmade ceramic herb kit, 92% m"
+            "competitors": [],
+            "content": "Husband last night while having sex bashfully brought up getting a vibrator to start exploring that together. I was thrilled. I bought one a few months before getting married to explore my own body, but have never told him about it/felt the need to bring it up. \n\n  \nWould love to take any suggestions of couple vibrators we can use together. We would only buy from amazon, no walk in stores in Utah, we would die, lol. He left it as my responsibility to buy a few."
           },
           {
-            "title": "interactive toys recommendations",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1skg5ok/interactive_toys_recommendations/",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "numComments": 2,
-            "publishedAt": "2026-04-13T16:35:01.000Z",
-            "freshnessScore": 80,
-            "buyingSignals": [],
-            "painPoints": [],
+            "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
+            "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 4152,
+            "numComments": 786,
+            "publishedAt": "2026-04-06T04:00:07.000Z",
+            "freshnessScore": 60,
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "seeking_recommendation",
+              "comparison_shopping"
+            ],
+            "painPoints": [
+              "buyer_remorse",
+              "quality_issue",
+              "usability_issue"
+            ],
             "competitors": [],
-            "content": "Im on SM, and been using lush 3 mostly but im tired cuz isnt durable and got damage so easily even when i treat it with care lol SO... im looking for new toys options, i just buy the ambi for like a 2nd interactive toy but i would like any suggestions and that can be more sturdy so it can last.. "
+            "content": "**I am NOT OOP, OOP is u/Logrolling_In_ON**\n\n**Originally posted to r/TrueOffMyChest**\n\n**Previous BoRUs: [#1](https://www.reddit.com/r/BestofRedditorUpdates/s/hHbWANzKpB), [#2](https://www.reddit.com/r/BestofRedditorUpdates/s/bEtlSQRylJ)**\n\n**[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much**\n\n**NEW UPDATE MARKED WITH** ----\n\n**Editor’s note: due to the lengths of the posts, I have made TL; DRs for the older posts prior to the latest n"
+          },
+          {
+            "title": "AITA for changing Christmas plans with a newborn over a guest being unvaccinated?",
+            "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1r60ipe/aita_for_changing_christmas_plans_with_a_newborn/",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 1941,
+            "numComments": 382,
+            "publishedAt": "2026-02-16T05:00:05.000Z",
+            "freshnessScore": 35,
+            "buyingSignals": [
+              "seeking_recommendation",
+              "value_assessment",
+              "price_sensitivity",
+              "gift_intent"
+            ],
+            "painPoints": [
+              "fit_comfort",
+              "trust_issue",
+              "usability_issue"
+            ],
+            "competitors": [],
+            "content": "**I am NOT OOP, OOP is u/Background_Tap_3326**\n\n**Originally posted to r/AITAH**\n\n**AITA for changing Christmas plans with a newborn over a guest being unvaccinated?**\n\n**Trigger Warnings:** &gt;!mentions death of an infant, postpartum anxiety, anti-vax!&lt;\n\n**Mood Spoilers:** &gt;!frustrating, sad!&lt;\n\n\\----\n\n[Original Post](https://www.reddit.com/r/AITAH/s/nc9b0UuEOG): **November 17, 2025**\n\nHi everyone, I’m still reeling from this and the sleep deprivation isn’t helping, so wanting another "
+          },
+          {
+            "title": "A year in review - Everything changed.",
+            "link": "https://reddit.com/r/NevilleGoddard/comments/1rffx3y/a_year_in_review_everything_changed/",
+            "subreddit": "NevilleGoddard",
+            "score": 1344,
+            "numComments": 368,
+            "publishedAt": "2026-02-26T17:09:17.000Z",
+            "freshnessScore": 35,
+            "buyingSignals": [
+              "value_assessment",
+              "gift_intent"
+            ],
+            "painPoints": [
+              "trust_issue"
+            ],
+            "competitors": [],
+            "content": "First off, I'll list out how I operate now based on what I've learned from Neville's teachings -\n\n1. Imagination is reality. Whatever I imagine myself to be and remain faithful to only that, will always reflect back to me in different shapes and forms.\n2. Whatever I imagine is really happening the moment I am in it. Not in the future, not in the past and not even in the present.\n3. There is no clock in my imagination. There are no seconds, minutes, hours, days or years in my imagination. There's"
           }
         ],
         "topDiscussions": [
           {
-            "title": "Lovense mini/portable fuck machine reviews??",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1q1vxjy/lovense_miniportable_fuck_machine_reviews/",
-            "subreddit": "CamGirlProblems",
-            "score": 2,
-            "numComments": 4,
-            "publishedAt": "2026-01-02T11:07:44.000Z",
-            "freshnessScore": 15,
-            "buyingSignals": [],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hi! Saw the new Lovense mini / portable fuck machine it’s called, in the spicy shops when I went a few days ago! I’m so tempted to get it, but first I’d like to hear if it worked well , any reviews or tips on using it? I’d be so happy to hear from you all on this! I’m worried that it won’t be stable, because it’s mini/portable… should I perhaps just get the proper big Lovense fuck machine instead? \n\nBut I’m more leaning to the mini portable one first as I’ve never had one and can then take it wi"
-          },
-          {
-            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
-            "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
-            "subreddit": "Python",
-            "score": 9,
-            "numComments": 23,
-            "publishedAt": "2026-03-20T20:22:07.000Z",
+            "title": "What’s the best couple vibrators for newbies? Seeking tips from experienced couples",
+            "link": "https://reddit.com/r/Marriage/comments/1r3cyhi/whats_the_best_couple_vibrators_for_newbies/",
+            "subreddit": "Marriage",
+            "score": 10,
+            "numComments": 22,
+            "publishedAt": "2026-02-13T02:20:43.000Z",
             "freshnessScore": 35,
-            "buyingSignals": [],
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "gift_intent"
+            ],
             "painPoints": [
-              "battery_issue",
-              "discretion_issue"
+              "usability_issue"
             ],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hey r/Python! 👋\n\n**What My Project Does**\n\nI recently built **lovensepy**, a fully typed Python wrapper for controlling Lovense devices (yes, *those* smart toys). \n\nI originally posted this to a general self-hosting subreddit and got downvoted to oblivion because they didn't really need a Python SDK. So I’m bringing it to people who might actually appreciate the architecture, the tech stack, and the code behind it. 😂\n\nThere are a few existing scripts out there, but most of them use synchronous"
+            "competitors": [],
+            "content": "My partner and I are thinking about getting a couples vibrator to try something new. We’re total beginners when it comes to these kinds of toys, and honestly, I’m not sure where to even start.\n\nFor anyone who’s been using them, what’s a good one to try for people who are pretty new to this? We’re not looking for anything too complicated, just something to make things a little more fun and help us feel more connected.\n\nI’ve read that some are better for couples who are more experienced, but we’re"
           },
           {
-            "title": "Advice please!!",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1s44eu1/advice_please/",
-            "subreddit": "CamGirlProblems",
-            "score": 7,
-            "numComments": 10,
-            "publishedAt": "2026-03-26T11:05:57.000Z",
-            "freshnessScore": 60,
+            "title": "Best vibrator for newly weds",
+            "link": "https://reddit.com/r/ldssexuality/comments/1o8lxvh/best_vibrator_for_newly_weds/",
+            "subreddit": "ldssexuality",
+            "score": 30,
+            "numComments": 37,
+            "publishedAt": "2025-10-16T23:39:23.000Z",
+            "freshnessScore": 15,
             "buyingSignals": [
-              "seeking_recommendation",
-              "price_sensitivity"
-            ],
-            "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "Hey everyone,\n\nLooking for some advice pretty please on how I can level up my earnings. (I will be one year on SC in May)\n\nI stream on SC, do relatively well, UK girl, currently ranked 600 on the site with 52k favourites. I average $100/$150 per hour but I feel I can’t get past this number. \n\nI have a HD camera, ring lights, fibre internet &amp; Lovense toys. My private/exclusive is set to 90 tokens per min with a rating of 4.9/5 overall and 55 positive reviews. My tip menu is affordable too (im"
-          },
-          {
-            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
-            "link": "https://reddit.com/r/SideProject/comments/1s0n7qv/6_months_40_downloads_0_in_revenue_apple_matched/",
-            "subreddit": "SideProject",
-            "score": 1,
-            "numComments": 6,
-            "publishedAt": "2026-03-22T14:35:24.000Z",
-            "freshnessScore": 60,
-            "buyingSignals": [
+              "purchase_mention",
               "gift_intent"
             ],
             "painPoints": [],
-            "competitors": [
-              "lovense"
-            ],
-            "content": "I gave my girlfriend a blender for Valentine's Day once. That's the origin story. I figured if I'm this bad at picking gifts, maybe I should build an AI that's better at it than me.\n\nSo I spent six months building Aril. You create a profile for someone (their hobbies, style, favorite brands, the stuff they actually care about), and the AI recommends specific gifts with a confidence score. Like, you tell it your mom loves gardening and hates clutter, it suggests a handmade ceramic herb kit, 92% m"
+            "competitors": [],
+            "content": "Husband last night while having sex bashfully brought up getting a vibrator to start exploring that together. I was thrilled. I bought one a few months before getting married to explore my own body, but have never told him about it/felt the need to bring it up. \n\n  \nWould love to take any suggestions of couple vibrators we can use together. We would only buy from amazon, no walk in stores in Utah, we would die, lol. He left it as my responsibility to buy a few."
           },
           {
-            "title": "interactive toys recommendations",
-            "link": "https://reddit.com/r/CamGirlProblems/comments/1skg5ok/interactive_toys_recommendations/",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "numComments": 2,
-            "publishedAt": "2026-04-13T16:35:01.000Z",
-            "freshnessScore": 80,
-            "buyingSignals": [],
-            "painPoints": [],
+            "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
+            "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 4152,
+            "numComments": 786,
+            "publishedAt": "2026-04-06T04:00:07.000Z",
+            "freshnessScore": 60,
+            "buyingSignals": [
+              "purchase_mention",
+              "considering",
+              "seeking_recommendation",
+              "comparison_shopping"
+            ],
+            "painPoints": [
+              "buyer_remorse",
+              "quality_issue",
+              "usability_issue"
+            ],
             "competitors": [],
-            "content": "Im on SM, and been using lush 3 mostly but im tired cuz isnt durable and got damage so easily even when i treat it with care lol SO... im looking for new toys options, i just buy the ambi for like a 2nd interactive toy but i would like any suggestions and that can be more sturdy so it can last.. "
+            "content": "**I am NOT OOP, OOP is u/Logrolling_In_ON**\n\n**Originally posted to r/TrueOffMyChest**\n\n**Previous BoRUs: [#1](https://www.reddit.com/r/BestofRedditorUpdates/s/hHbWANzKpB), [#2](https://www.reddit.com/r/BestofRedditorUpdates/s/bEtlSQRylJ)**\n\n**[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much**\n\n**NEW UPDATE MARKED WITH** ----\n\n**Editor’s note: due to the lengths of the posts, I have made TL; DRs for the older posts prior to the latest n"
+          },
+          {
+            "title": "AITA for changing Christmas plans with a newborn over a guest being unvaccinated?",
+            "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1r60ipe/aita_for_changing_christmas_plans_with_a_newborn/",
+            "subreddit": "BestofRedditorUpdates",
+            "score": 1941,
+            "numComments": 382,
+            "publishedAt": "2026-02-16T05:00:05.000Z",
+            "freshnessScore": 35,
+            "buyingSignals": [
+              "seeking_recommendation",
+              "value_assessment",
+              "price_sensitivity",
+              "gift_intent"
+            ],
+            "painPoints": [
+              "fit_comfort",
+              "trust_issue",
+              "usability_issue"
+            ],
+            "competitors": [],
+            "content": "**I am NOT OOP, OOP is u/Background_Tap_3326**\n\n**Originally posted to r/AITAH**\n\n**AITA for changing Christmas plans with a newborn over a guest being unvaccinated?**\n\n**Trigger Warnings:** &gt;!mentions death of an infant, postpartum anxiety, anti-vax!&lt;\n\n**Mood Spoilers:** &gt;!frustrating, sad!&lt;\n\n\\----\n\n[Original Post](https://www.reddit.com/r/AITAH/s/nc9b0UuEOG): **November 17, 2025**\n\nHi everyone, I’m still reeling from this and the sleep deprivation isn’t helping, so wanting another "
+          },
+          {
+            "title": "A year in review - Everything changed.",
+            "link": "https://reddit.com/r/NevilleGoddard/comments/1rffx3y/a_year_in_review_everything_changed/",
+            "subreddit": "NevilleGoddard",
+            "score": 1344,
+            "numComments": 368,
+            "publishedAt": "2026-02-26T17:09:17.000Z",
+            "freshnessScore": 35,
+            "buyingSignals": [
+              "value_assessment",
+              "gift_intent"
+            ],
+            "painPoints": [
+              "trust_issue"
+            ],
+            "competitors": [],
+            "content": "First off, I'll list out how I operate now based on what I've learned from Neville's teachings -\n\n1. Imagination is reality. Whatever I imagine myself to be and remain faithful to only that, will always reflect back to me in different shapes and forms.\n2. Whatever I imagine is really happening the moment I am in it. Not in the future, not in the past and not even in the present.\n3. There is no clock in my imagination. There are no seconds, minutes, hours, days or years in my imagination. There's"
           }
         ],
         "aggregatedSignals": {
-          "totalBuyingSignals": 3,
-          "totalPainPoints": 2,
-          "competitorMentions": [
-            "lovense"
-          ]
+          "totalBuyingSignals": 15,
+          "totalPainPoints": 8,
+          "competitorMentions": []
         }
       },
       "googleNews": {
@@ -600,7 +567,7 @@
         "count": 0,
         "items": []
       },
-      "liveSignalScore": 39
+      "liveSignalScore": 60
     },
     {
       "query": "best vibrators",
@@ -614,7 +581,7 @@
             "title": "Best vibrator",
             "link": "https://reddit.com/r/TwoXChromosomes/comments/1q7x4ix/best_vibrator/",
             "subreddit": "TwoXChromosomes",
-            "score": 0,
+            "score": 1,
             "numComments": 17,
             "publishedAt": "2026-01-09T03:19:21.000Z",
             "freshnessScore": 15,
@@ -644,7 +611,7 @@
             "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
             "link": "https://reddit.com/r/Construction/comments/1rzd0nr/looking_for_the_best_antivibration_gloves_any/",
             "subreddit": "Construction",
-            "score": 1496,
+            "score": 1503,
             "numComments": 651,
             "publishedAt": "2026-03-21T00:18:04.000Z",
             "freshnessScore": 35,
@@ -659,8 +626,8 @@
             "title": "Newey's Caught You All Sleeping.",
             "link": "https://reddit.com/r/formula1/comments/1rnlcig/neweys_caught_you_all_sleeping/",
             "subreddit": "formula1",
-            "score": 9944,
-            "numComments": 1054,
+            "score": 10019,
+            "numComments": 1063,
             "publishedAt": "2026-03-07T21:04:42.000Z",
             "freshnessScore": 35,
             "buyingSignals": [
@@ -680,7 +647,7 @@
             "title": "my (23f) boyfriend (24m) keeps accidentally calling me his best friends name during sex",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1s3drt0/my_23f_boyfriend_24m_keeps_accidentally_calling/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 8915,
+            "score": 8920,
             "numComments": 882,
             "publishedAt": "2026-03-25T15:21:23.000Z",
             "freshnessScore": 60,
@@ -702,7 +669,7 @@
             "title": "Best vibrator",
             "link": "https://reddit.com/r/TwoXChromosomes/comments/1q7x4ix/best_vibrator/",
             "subreddit": "TwoXChromosomes",
-            "score": 0,
+            "score": 1,
             "numComments": 17,
             "publishedAt": "2026-01-09T03:19:21.000Z",
             "freshnessScore": 15,
@@ -732,7 +699,7 @@
             "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
             "link": "https://reddit.com/r/Construction/comments/1rzd0nr/looking_for_the_best_antivibration_gloves_any/",
             "subreddit": "Construction",
-            "score": 1496,
+            "score": 1503,
             "numComments": 651,
             "publishedAt": "2026-03-21T00:18:04.000Z",
             "freshnessScore": 35,
@@ -747,8 +714,8 @@
             "title": "Newey's Caught You All Sleeping.",
             "link": "https://reddit.com/r/formula1/comments/1rnlcig/neweys_caught_you_all_sleeping/",
             "subreddit": "formula1",
-            "score": 9944,
-            "numComments": 1054,
+            "score": 10019,
+            "numComments": 1063,
             "publishedAt": "2026-03-07T21:04:42.000Z",
             "freshnessScore": 35,
             "buyingSignals": [
@@ -768,7 +735,7 @@
             "title": "my (23f) boyfriend (24m) keeps accidentally calling me his best friends name during sex",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1s3drt0/my_23f_boyfriend_24m_keeps_accidentally_calling/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 8915,
+            "score": 8920,
             "numComments": 882,
             "publishedAt": "2026-03-25T15:21:23.000Z",
             "freshnessScore": 60,
@@ -848,7 +815,7 @@
             "title": "I bought a vibrator and idk how to use it",
             "link": "https://reddit.com/r/WomensHealth/comments/1q05axs/i_bought_a_vibrator_and_idk_how_to_use_it/",
             "subreddit": "WomensHealth",
-            "score": 4,
+            "score": 3,
             "numComments": 16,
             "publishedAt": "2025-12-31T05:46:28.000Z",
             "freshnessScore": 15,
@@ -865,7 +832,7 @@
             "title": "How do i use a vibrator?",
             "link": "https://reddit.com/r/WomensHealth/comments/1orx54d/how_do_i_use_a_vibrator/",
             "subreddit": "WomensHealth",
-            "score": 13,
+            "score": 12,
             "numComments": 13,
             "publishedAt": "2025-11-08T18:46:29.000Z",
             "freshnessScore": 15,
@@ -881,7 +848,7 @@
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4148,
+            "score": 4143,
             "numComments": 786,
             "publishedAt": "2026-04-06T04:00:07.000Z",
             "freshnessScore": 60,
@@ -903,7 +870,7 @@
             "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1raiaxm/i_think_my_sister_just_ruined_our_dads_engagement/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4195,
+            "score": 4193,
             "numComments": 917,
             "publishedAt": "2026-02-21T05:02:06.000Z",
             "freshnessScore": 35,
@@ -924,7 +891,7 @@
             "title": "Happy 20 years sober to Patrick Fabian",
             "link": "https://reddit.com/r/betterCallSaul/comments/1s5cubv/happy_20_years_sober_to_patrick_fabian/",
             "subreddit": "betterCallSaul",
-            "score": 12887,
+            "score": 12879,
             "numComments": 238,
             "publishedAt": "2026-03-27T18:44:12.000Z",
             "freshnessScore": 60,
@@ -939,7 +906,7 @@
             "title": "I bought a vibrator and idk how to use it",
             "link": "https://reddit.com/r/WomensHealth/comments/1q05axs/i_bought_a_vibrator_and_idk_how_to_use_it/",
             "subreddit": "WomensHealth",
-            "score": 4,
+            "score": 3,
             "numComments": 16,
             "publishedAt": "2025-12-31T05:46:28.000Z",
             "freshnessScore": 15,
@@ -956,7 +923,7 @@
             "title": "How do i use a vibrator?",
             "link": "https://reddit.com/r/WomensHealth/comments/1orx54d/how_do_i_use_a_vibrator/",
             "subreddit": "WomensHealth",
-            "score": 13,
+            "score": 12,
             "numComments": 13,
             "publishedAt": "2025-11-08T18:46:29.000Z",
             "freshnessScore": 15,
@@ -972,7 +939,7 @@
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4148,
+            "score": 4143,
             "numComments": 786,
             "publishedAt": "2026-04-06T04:00:07.000Z",
             "freshnessScore": 60,
@@ -994,7 +961,7 @@
             "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1raiaxm/i_think_my_sister_just_ruined_our_dads_engagement/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4195,
+            "score": 4193,
             "numComments": 917,
             "publishedAt": "2026-02-21T05:02:06.000Z",
             "freshnessScore": 35,
@@ -1015,7 +982,7 @@
             "title": "Happy 20 years sober to Patrick Fabian",
             "link": "https://reddit.com/r/betterCallSaul/comments/1s5cubv/happy_20_years_sober_to_patrick_fabian/",
             "subreddit": "betterCallSaul",
-            "score": 12887,
+            "score": 12879,
             "numComments": 238,
             "publishedAt": "2026-03-27T18:44:12.000Z",
             "freshnessScore": 60,
@@ -1046,30 +1013,30 @@
           },
           {
             "source": "news",
-            "title": "use的用法_百度知道",
-            "link": "https://zhidao.baidu.com/question/1605600594734726907.html",
-            "content": "Dec 21, 2022&ensp;&#0183;&ensp;use的用法 1、use是及物动词,接名词、代词作宾语。也可接由as短语或动词不定式充当补足语的复合宾语。use偶尔可接人作宾语,意为“利用某人”,即把某人作为手段或工具。 2、used to仅用 …",
+            "title": "Use automatic captioning - YouTube Help - Google Help",
+            "link": "https://support.google.com/youtube/answer/6373554?hl=en",
+            "content": "YouTube can use speech recognition technology to automatically create captions for your videos. Note: These automatic captions are generated by machine learning algorithms, so the quality of the …",
             "freshnessScore": 50
           },
           {
             "source": "news",
-            "title": "use的名词，形容词，副词和反义词的形式是什么_百度知道",
-            "link": "https://zhidao.baidu.com/question/541616423.html",
-            "content": "Oct 6, 2019&ensp;&#0183;&ensp;use的名词：usage； 形容词：useful； 副词：usefully； 反义词：useless。 单词解释： 1、usage 英 ['juːsɪdʒ] 美 ['jusɪdʒ] n. 使用；用法；惯例 2、useful 英 ['juːsfʊl; -f (ə)l] 美 ['jusfl] adj. 有 …",
+            "title": "Use Keyword Planner - Google Ads Help",
+            "link": "https://support.google.com/google-ads/answer/7337243?hl=en",
+            "content": "Keyword Planner helps you research keywords for your Search campaigns. You can use this free tool to discover new keywords related to your business and see estimates of the searches they receive and …",
             "freshnessScore": 50
           },
           {
             "source": "news",
-            "title": "use for , use to , use as 都是什么意思区分_百度知道",
-            "link": "https://zhidao.baidu.com/question/562094473.html",
-            "content": "Jul 9, 2019&ensp;&#0183;&ensp;三、侧重点不同 1.use for侧重点：是（某物）的直接效用,没有“阴谋策划（这样说不很恰当,但便于你理解）。 2.use to侧重点：强调利用手段达到目的，是有计划，有意识的。 3.use as侧重 …",
+            "title": "Use another email to sign in to your Google Account",
+            "link": "https://support.google.com/accounts/answer/176347?hl=en&amp;co=GENIE.Platform%3DDesktop",
+            "content": "Google Ads: If you use your other email to use Google Ads, both your Gmail and other email address show up. Remove your email address from someone else’s Google Account If someone accidentally …",
             "freshnessScore": 50
           },
           {
             "source": "news",
-            "title": "use和usage的区别是什么？_百度知道",
-            "link": "https://zhidao.baidu.com/question/436172552929350332.html",
-            "content": "Aug 29, 2023&ensp;&#0183;&ensp;Use和usage都是表示“使用”的词汇，但它们有明显的不同点。 Use是一个动词或名词，表示使用某物或某人。在动词的情况下，它是用来描述某物或某人在某种程度上利用或运用某物或某人 …",
+            "title": "Use music and sound effects from the Audio Library",
+            "link": "https://support.google.com/youtube/answer/3376882?hl=en",
+            "content": "In the Audio Library in YouTube Studio, you can find royalty-free production music and sound effects to use in your videos. Music and sound effects from the YouTube Audio Library&n",
             "freshnessScore": 50
           }
         ]

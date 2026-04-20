@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>weichaking CRM</title>
 <meta name="theme-color" content="#f8f9fb">
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="./manifest.json">
 <style>
 :root{
   --bg:#f8f9fb;--surface:#ffffff;--surface2:#f1f3f5;
@@ -176,9 +176,30 @@ CRM.state = {
   writeQueue: [],
   writeTimer: null,
   syncStatus: 'synced',
+  _remoteLoaded: false,
 
   defaultData() {
     return { meta:{ lastUpdated: new Date().toISOString(), version:1 }, customers:[], tasks:[] };
+  },
+
+  // Merge remote data into local: take union by ID, newer updatedAt wins
+  _merge(remote, local) {
+    const mergeArrays = (a, b) => {
+      const map = new Map();
+      a.forEach(item => map.set(item.id, item));
+      b.forEach(item => {
+        const ex = map.get(item.id);
+        if (!ex || new Date(item.updatedAt||item.createdAt||0) > new Date(ex.updatedAt||ex.createdAt||0)) {
+          map.set(item.id, item);
+        }
+      });
+      return Array.from(map.values());
+    };
+    return {
+      meta: { ...remote.meta, lastUpdated: new Date().toISOString() },
+      customers: mergeArrays(remote.customers||[], local.customers||[]),
+      tasks: mergeArrays(remote.tasks||[], local.tasks||[])
+    };
   },
 
   load() {
@@ -189,17 +210,23 @@ CRM.state = {
       if (remote) {
         if (!remote.meta) remote.meta = { lastUpdated: new Date().toISOString(), version:1 };
         if (!remote.tasks) remote.tasks = [];
-        this.data = remote;
+        // Merge instead of overwrite: local changes won't be lost
+        this.data = this._merge(remote, this.data);
         localStorage.setItem('crm_cache', JSON.stringify(this.data));
         CRM.ui.render();
       }
+      this._remoteLoaded = true;
     }).catch(() => {
+      this._remoteLoaded = true;
       console.log('Using cached data');
     });
   },
 
   save() {
     this.data.meta.lastUpdated = new Date().toISOString();
+    // Backup previous state before overwriting
+    const prev = localStorage.getItem('crm_cache');
+    if (prev) localStorage.setItem('crm_cache_backup', prev);
     localStorage.setItem('crm_cache', JSON.stringify(this.data));
     this.queueWrite();
     CRM.ui.render();
@@ -702,7 +729,7 @@ setInterval(() => CRM.ui.checkAppointments(), 300000);
 CRM.state.load();
 
 // Service Worker
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script>
 </body>
 </html>

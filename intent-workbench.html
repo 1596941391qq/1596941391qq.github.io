@@ -443,6 +443,48 @@
       }).join('');
     }
 
+    function renderLLMResearch(payload) {
+      const research = payload.llmResearch;
+      if (!research) {
+        els.llmStatus.textContent = payload.llmEnabled ? 'LLM 已启用但无研究结果。' : 'LLM 未启用（需配置 LLM_API_KEY）。';
+        els.llmClassification.innerHTML = '';
+        els.llmFacts.innerHTML = '';
+        return;
+      }
+      if (!research.available) {
+        els.llmStatus.textContent = 'LLM 不可用。设置 LLM_API_KEY 环境变量后重启服务。';
+        els.llmClassification.innerHTML = '';
+        els.llmFacts.innerHTML = '';
+        return;
+      }
+      els.llmStatus.textContent = `LLM 已启用 | 研究迭代: ${research.iterations || 0} 轮`;
+      if (research.classification) {
+        const c = research.classification;
+        els.llmClassification.innerHTML = `
+          <div class="pill">Intent: ${c.primaryIntent || '-'}</div>
+          ${(c.searchQueries || []).map(q => `<span class="pill">${q}</span>`).join('')}
+        `;
+      } else {
+        els.llmClassification.innerHTML = '<span class="muted">无分类数据</span>';
+      }
+      const facts = research.extractedFacts || [];
+      if (facts.length === 0) {
+        els.llmFacts.innerHTML = '<div class="signal"><p class="muted">未提取到事实。</p></div>';
+        return;
+      }
+      const typeColors = {
+        buying_signal: 'var(--ok)', pain_point: 'var(--accent)', price: 'var(--warn)',
+        trend: '#5a3db5', preference: '#2a7a9b', comparison: '#555',
+      };
+      els.llmFacts.innerHTML = facts.map(f => `
+        <div class="signal">
+          <span class="pill" style="color:${typeColors[f.type] || 'var(--muted)'}">${f.type}</span>
+          <p style="margin:6px 0 0;">${f.fact || f.snippet || ''}</p>
+          ${f.source ? `<p class="muted" style="font-size:12px;margin-top:4px;">${f.source}</p>` : ''}
+        </div>
+      `).join('');
+    }
+
     async function loadDashboard() {
       const brand = els.brandSelect.value;
       const path = getDataPath(brand);
@@ -456,13 +498,17 @@
         renderIntents(payload);
         renderOpportunities(payload);
         renderSignals(payload);
-        els.status.textContent = `已加载 ${brand}，生成时间 ${payload.generatedAt || 'unknown'}`;
+        renderLLMResearch(payload);
+        els.status.textContent = `已加载 ${brand}，生成时间 ${payload.generatedAt || 'unknown'}${payload.llmEnabled ? ' (LLM)' : ''}`;
       } catch (error) {
         els.status.textContent = `加载失败：${error.message}`;
         els.summaryStats.innerHTML = '';
         els.intentPills.innerHTML = '<span class="muted">没有可展示的数据。</span>';
         els.opportunityRows.innerHTML = '<tr><td colspan="8" class="muted">没有可展示的数据。</td></tr>';
         els.signals.innerHTML = '<div class="signal"><p class="muted">没有可展示的数据。</p></div>';
+        els.llmStatus.textContent = '加载失败。';
+        els.llmClassification.innerHTML = '';
+        els.llmFacts.innerHTML = '';
       }
     }
 
