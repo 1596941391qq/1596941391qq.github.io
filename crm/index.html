@@ -184,6 +184,7 @@ CRM.state = {
   load() {
     const cached = localStorage.getItem('crm_cache');
     this.data = cached ? JSON.parse(cached) : this.defaultData();
+    CRM.ui.render();
     CRM.api.fetch().then(remote => {
       if (remote) {
         if (!remote.meta) remote.meta = { lastUpdated: new Date().toISOString(), version:1 };
@@ -619,14 +620,8 @@ CRM.ui = {
     document.getElementById('modalContent').innerHTML = `
       <h2>设置</h2>
       <div class="settings-section">
-        <h3>jsonbin.io 配置</h3>
-        <p>API Key 和 Bin ID 用于云端同步数据。首次使用只需填写 API Key，系统会自动创建 Bin。</p>
-        <div class="field" style="margin-bottom:8px"><label>API Key (X-Master-Key)</label><input id="s_key" type="password" value="${esc(CRM.api.getKey())}"></div>
-        <div class="field" style="margin-bottom:8px"><label>Bin ID (留空自动创建)</label><input id="s_bin" value="${esc(CRM.api.getBinId())}"></div>
-        <button class="btn btn-accent" onclick="CRM.ui.saveSettings()">保存</button>
-      </div>
-      <div class="settings-section">
         <h3>数据管理</h3>
+        <p>数据通过 jsonbin.io 自动同步。Bin ID: ${esc(CRM.api.getBinId()||'首次写入时自动创建')}</p>
         <button class="btn btn-ghost" onclick="CRM.ui.exportJSON()" style="margin-right:8px">导出 JSON</button>
         <button class="btn btn-ghost" onclick="document.getElementById('importFile2').click()">导入 JSON</button>
         <input type="file" id="importFile2" accept=".json" style="display:none" onchange="CRM.ui.importJSON(event)">
@@ -636,8 +631,6 @@ CRM.ui = {
   },
 
   saveSettings() {
-    CRM.api.setKey(document.getElementById('s_key').value.trim());
-    CRM.api.setBinId(document.getElementById('s_bin').value.trim());
     this.closeModal();
     CRM.state.load();
   },
