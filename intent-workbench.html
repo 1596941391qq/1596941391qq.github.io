@@ -305,6 +305,13 @@
         <div class="signal"><p class="muted">等待加载。</p></div>
       </div>
     </section>
+
+    <section class="card" style="margin-top:18px;">
+      <h2>LLM Research</h2>
+      <p class="muted" style="margin-top:8px;" id="llmStatus">等待加载。</p>
+      <div id="llmClassification" style="margin-top:10px;"></div>
+      <div id="llmFacts" class="signal-list" style="margin-top:10px;"></div>
+    </section>
   </main>
 
   <script>
@@ -324,6 +331,9 @@
       intentPills: document.getElementById('intentPills'),
       opportunityRows: document.getElementById('opportunityRows'),
       signals: document.getElementById('signals'),
+      llmStatus: document.getElementById('llmStatus'),
+      llmClassification: document.getElementById('llmClassification'),
+      llmFacts: document.getElementById('llmFacts'),
     };
 
     const configKey = 'intent-workbench-config-v1';
