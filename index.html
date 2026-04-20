@@ -1,9 +1,658 @@
-# 1596941391qq.github.io
-echo "# test" >> README.md 
-git init                                                   
-git add README.md 
-git add .                                                              
-git commit -m "first commit"                                                    
-git branch -M main                                                              
-git remote add origin https://github.com/jinxiaomiao/test.git                   
-git push -u origin main
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>weihacking — Strategy. Build. Ship.</title>
+  <meta name="description" content="weihacking — AI-powered growth, SEO/GEO strategy, and results-driven marketing for global brands.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
+  <style>
+    /* ============================================
+       CSS VARIABLES — 双模式亮/暗
+       ============================================ */
+    :root {
+      --bg: #faf7f1;
+      --bg-deep: #f0ebe0;
+      --ink: #1a1816;
+      --muted: #6b6459;
+      --accent: #9f371d;
+      --accent-soft: rgba(159,55,29,.12);
+      --card: rgba(255,255,255,.82);
+      --card-hover: rgba(255,255,255,.96);
+      --border: rgba(26,24,22,.10);
+      --border-strong: rgba(26,24,22,.22);
+      --shadow: 0 20px 60px rgba(46,32,18,.08);
+      --font-body: Georgia, "Noto Serif SC", "Source Han Serif SC", serif;
+      --font-mono: "SF Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+      --font-sans: -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+      --max-w: 900px;
+      --section-gap: 6rem;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111110;
+      --bg-deep: #191918;
+      --ink: #e8e4dc;
+      --muted: #8a8478;
+      --accent: #4ade80;
+      --accent-soft: rgba(74,222,128,.10);
+      --card: rgba(255,255,255,.04);
+      --card-hover: rgba(255,255,255,.08);
+      --border: rgba(255,255,255,.06);
+      --border-strong: rgba(255,255,255,.14);
+      --shadow: 0 20px 60px rgba(0,0,0,.3);
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+      transition: background .4s, color .4s;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ::selection { background: var(--accent-soft); }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 28px;
+      background: rgba(250,247,241,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background .4s;
+    }
+    [data-theme="dark"] nav { background: rgba(17,17,16,.85); }
+    .nav-brand {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      letter-spacing: -.02em;
+      color: var(--ink);
+    }
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .nav-btn {
+      background: none; border: 1px solid var(--border-strong);
+      color: var(--ink); padding: 6px 12px; font-size: 13px;
+      cursor: pointer; font-family: var(--font-mono);
+      transition: all .2s;
+    }
+    .nav-btn:hover { background: var(--accent-soft); border-color: var(--accent); }
+    .nav-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+    /* ============================================
+       MAIN CONTAINER
+       ============================================ */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================
+       SECTION BASE
+       ============================================ */
+    section {
+      padding-top: var(--section-gap);
+      padding-bottom: var(--section-gap);
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    #hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 80px;
+    }
+    .hero-name {
+      font-family: var(--font-mono);
+      font-size: clamp(14px, 2vw, 16px);
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: clamp(42px, 8vw, 80px);
+      font-weight: 700;
+      line-height: .92;
+      letter-spacing: -.03em;
+      margin-bottom: 20px;
+    }
+    .hero-slogan {
+      font-size: clamp(18px, 3vw, 24px);
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+    .hero-links {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .hero-links a {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      padding: 10px 18px;
+      border: 1px solid var(--border-strong);
+      color: var(--ink);
+      transition: all .2s;
+    }
+    .hero-links a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+    .hero-links a.primary {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+    .hero-links a.primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ============================================
+       ABOUT
+       ============================================ */
+    #about p {
+      font-size: 18px;
+      line-height: 1.75;
+      max-width: 680px;
+      margin-bottom: 16px;
+    }
+    .about-highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ============================================
+       NEWSLETTER
+       ============================================ */
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .newsletter-card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 24px;
+      transition: all .25s;
+      cursor: pointer;
+    }
+    .newsletter-card:hover {
+      background: var(--card-hover);
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow);
+    }
+    .newsletter-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .newsletter-card .meta {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .newsletter-card .keywords {
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+    .keyword-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    /* ============================================
+       THINKING (X Tweets)
+       ============================================ */
+    .thinking-item {
+      border-left: 2px solid var(--accent);
+      padding-left: 20px;
+      margin-bottom: 32px;
+    }
+    .thinking-item p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 6px;
+    }
+    .thinking-item .tweet-date {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ============================================
+       PRODUCTS
+       ============================================ */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .product-card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 24px;
+      transition: all .25s;
+    }
+    .product-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow);
+    }
+    .product-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .product-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .product-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border: 1px solid var(--accent-soft);
+      color: var(--accent);
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+
+    /* ============================================
+       KNOWLEDGE
+       ============================================ */
+    .knowledge-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .knowledge-item:last-child { border-bottom: none; }
+    .knowledge-item h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .knowledge-item p {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .knowledge-source {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* ============================================
+       TOOLS
+       ============================================ */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .tool-card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 18px;
+      transition: all .25s;
+    }
+    .tool-card:hover {
+      border-color: var(--accent);
+    }
+    .tool-card h3 {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .tool-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .tool-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-left: 6px;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 640px) {
+      nav { padding: 12px 16px; }
+      main { padding: 0 16px; }
+      .hero-title { font-size: 36px; }
+      .hero-slogan { font-size: 17px; }
+      #about p { font-size: 16px; }
+      footer { flex-direction: column; }
+    }
+
+    /* ============================================
+       THEME TRANSITION
+       ============================================ */
+    .theme-transitioning * {
+      transition: background .4s, color .4s, border-color .4s, box-shadow .4s !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav>
+    <span class="nav-brand">weihacking_</span>
+    <div class="nav-actions">
+      <button class="nav-btn" id="langToggle" onclick="toggleLang()">EN</button>
+      <button class="nav-btn" id="themeToggle" onclick="toggleTheme()">☀</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section id="hero">
+      <p class="hero-name">weihacking@github:~$</p>
+      <h1 class="hero-title" data-zh="策略。构建。交付。" data-en="Strategy.<br>Build.<br>Ship.">策略。<br>构建。<br>交付。</h1>
+      <p class="hero-slogan" data-zh="用 AI 做精准增长，按结果交付价值。不卖概念，只交付数字。" data-en="AI-powered growth, results-driven delivery. No buzzwords. Just numbers.">用 AI 做精准增长，按结果交付价值。不卖概念，只交付数字。</p>
+      <div class="hero-links">
+        <a href="#products" class="primary" data-zh="查看服务" data-en="Services">查看服务</a>
+        <a href="#newsletter" data-zh="hacking 周刊" data-en="Newsletter">hacking 周刊</a>
+        <a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+        <a href="https://github.com/weihacking" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT
+         ============================================ -->
+    <section id="about">
+      <div class="section-label">// about</div>
+      <p data-zh="我叫 weihacking。六年海外 SEO 实战，200+ 客户从 0 到稳定收入。我不做教科书式的优化，我做的是：在搜索引擎和 AI 平台的交叉地带，找到那些别人看不到的缝隙。" data-en="I'm weihacking. Six years of hands-on international SEO. 200+ clients from zero to sustainable revenue. I don't do textbook optimization. I find the gaps between search engines and AI platforms that others miss.">我叫 weihacking。六年海外 SEO 实战，200+ 客户从 0 到稳定收入。我不做教科书式的优化，我做的是：在搜索引擎和 AI 平台的交叉地带，找到那些别人看不到的缝隙。</p>
+      <p data-zh="我运营 <span class='about-highlight'>hacking 周刊</span>，拆解 SEO 暗面手法、AI 搜索策略、出海增长战术。我写的东西不是给所有人看的。是给那些认真在做增长、不想被平台收割的人看的。" data-en="I run the <span class='about-highlight'>hacking newsletter</span>, dissecting dark-side SEO tactics, AI search strategy, and global growth plays. What I write isn't for everyone. It's for people serious about growth — the ones who refuse to be farmed by platforms.">我运营 <span class="about-highlight">hacking 周刊</span>，拆解 SEO 暗面手法、AI 搜索策略、出海增长战术。我写的东西不是给所有人看的。是给那些认真在做增长、不想被平台收割的人看的。</p>
+      <p data-zh="我的公司叫 <span class='about-highlight'>炬象未来 / Concrete Future AI</span>。我们做结果向交付：出海营销、AI 社媒自动化、电商全链路获客。每一项服务的交付物都是具体的数字，不是感觉。" data-en="My company is <span class='about-highlight'>Concrete Future AI</span>. We do results-driven delivery: global marketing, AI social media automation, full-funnel e-commerce acquisition. Every deliverable is a number you can verify — not a feeling.">我的公司叫 <span class="about-highlight">炬象未来 / Concrete Future AI</span>。我们做结果向交付：出海营销、AI 社媒自动化、电商全链路获客。每一项服务的交付物都是具体的数字，不是感觉。</p>
+    </section>
+
+    <!-- ============================================
+         NEWSLETTER
+         ============================================ -->
+    <section id="newsletter">
+      <div class="section-label">// newsletter</div>
+      <h2 data-zh="hacking 周刊" data-en="hacking Newsletter" style="font-size:28px;margin-bottom:20px;">hacking 周刊</h2>
+      <div class="newsletter-grid">
+
+        <div class="newsletter-card">
+          <h3 data-zh="第二期：过期域名的残余价值评估" data-en="Issue #2: Expired Domain Residual Value Assessment">第二期：过期域名的残余价值评估</h3>
+          <div class="meta">2026-04-05 ~ 04-12</div>
+          <div class="keywords">
+            <span class="keyword-tag">过期域名</span>
+            <span class="keyword-tag">AI检测对抗</span>
+            <span class="keyword-tag">社媒工业化</span>
+            <span class="keyword-tag">内链拓扑</span>
+          </div>
+        </div>
+
+        <div class="newsletter-card">
+          <h3 data-zh="创刊号：平台正在一起淘汰假环境" data-en="Issue #1: Platforms Are Collectively Eliminating Fake Environments">创刊号：平台正在一起淘汰假环境</h3>
+          <div class="meta">2026-03-29 ~ 04-01</div>
+          <div class="keywords">
+            <span class="keyword-tag">平台压缩</span>
+            <span class="keyword-tag">Google 更新</span>
+            <span class="keyword-tag">Reddit 投票</span>
+            <span class="keyword-tag">外链翻车</span>
+          </div>
+        </div>
+
+        <!-- 占位：后续周刊 -->
+        <div class="newsletter-card" style="opacity:.5;border-style:dashed;">
+          <h3 data-zh="第三期即将发布..." data-en="Issue #3 coming soon...">第三期即将发布...</h3>
+          <div class="meta">2026-04-19 ~ 04-26</div>
+          <div class="keywords">
+            <span class="keyword-tag">待定</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         THINKING (X 推文哲思)
+         ============================================ -->
+    <section id="thinking">
+      <div class="section-label">// thinking</div>
+      <h2 data-zh="最近在想什么" data-en="Recent Thinking" style="font-size:28px;margin-bottom:24px;">最近在想什么</h2>
+
+      <div class="thinking-item">
+        <p data-zh="你花三个月写了一篇完整的深度文章。<br>AI 引用了它。<br>但引用的方式是：把你的结论压缩成一句话，塞进一个你看不到的对话框里。<br>没有人知道这句话来自你。<br>你的知识变成了 AI 的养分，你连名字都没留下。<br>被引用是养分循环。被记住是品牌。<br>你到底在种哪一个？" data-en="You spent three months writing a deep article.<br>AI cited it.<br>But the citation compresses your conclusion into one sentence, buried in a dialog box no one scrolls back to.<br>No one knows it came from you.<br>Your knowledge became AI's fuel. Your name didn't survive.<br>Being cited is nutrient cycling. Being remembered is brand.<br>Which one are you growing?">你花三个月写了一篇完整的深度文章。<br>AI 引用了它。<br>但引用的方式是：把你的结论压缩成一句话，塞进一个你看不到的对话框里。<br>没有人知道这句话来自你。<br>你的知识变成了 AI 的养分，你连名字都没留下。<br>被引用是养分循环。被记住是品牌。<br>你到底在种哪一个？</p>
+        <div class="tweet-date">2026-04-20</div>
+      </div>
+
+      <div class="thinking-item">
+        <p data-zh="凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——说明昨晚那个"特别清楚"的感觉，不是来自洞察。<br>是来自疲惫。" data-en="Ideas at 2am: write them down. Read them the next morning.<br>If they still feel right, they're right.<br>If they feel absurd — that clarity wasn't insight.<br>It was exhaustion.">凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——说明昨晚那个"特别清楚"的感觉，不是来自洞察。<br>是来自疲惫。</p>
+        <div class="tweet-date">2026-04-20</div>
+      </div>
+
+      <!-- 占位：后续推文 -->
+      <div class="thinking-item" style="opacity:.5;border-left-style:dashed;">
+        <p data-zh="更多哲思，持续更新中..." data-en="More thinking, continuously updated...">更多哲思，持续更新中...</p>
+      </div>
+
+    </section>
+
+    <!-- ============================================
+         PRODUCTS
+         ============================================ -->
+    <section id="products">
+      <div class="section-label">// products</div>
+      <h2 data-zh="结果向交付服务" data-en="Results-Driven Services" style="font-size:28px;margin-bottom:20px;">结果向交付服务</h2>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <h3 data-zh="出海营销 · 结果向交付" data-en="Global Marketing · Results Delivery">出海营销 · 结果向交付</h3>
+          <p data-zh="AI 驱动的精准触达，从社媒冷启动到红人合作到广告优化，全链路按数字交付。" data-en="AI-powered precision outreach. From social media cold start to influencer collaboration to ad optimization. Full funnel, delivered in numbers.">AI 驱动的精准触达，从社媒冷启动到红人合作到广告优化，全链路按数字交付。</p>
+          <span class="product-tag" data-zh="社媒增长" data-en="Social Growth">社媒增长</span>
+          <span class="product-tag" data-zh="红人触达" data-en="Influencer Outreach">红人触达</span>
+          <span class="product-tag" data-zh="广告优化" data-en="Ad Optimization">广告优化</span>
+        </div>
+
+        <div class="product-card">
+          <h3 data-zh="AI 社媒自动化营销" data-en="AI Social Media Automation">AI 社媒自动化营销</h3>
+          <p data-zh="用 AI 分析用户意图、筛选高价值目标、拆解竞品策略、预判素材效果、优化投放节奏。" data-en="AI analyzes user intent, filters high-value targets, dissects competitor strategies, predicts creative performance, and optimizes delivery pacing.">用 AI 分析用户意图、筛选高价值目标、拆解竞品策略、预判素材效果、优化投放节奏。</p>
+          <span class="product-tag" data-zh="意图分析" data-en="Intent Analysis">意图分析</span>
+          <span class="product-tag" data-zh="素材生成" data-en="Creative Gen">素材生成</span>
+          <span class="product-tag" data-zh="竞品监控" data-en="Competitor Intel">竞品监控</span>
+        </div>
+
+        <div class="product-card">
+          <h3 data-zh="AI + 电商外贸服务" data-en="AI + E-Commerce Export">AI + 电商外贸服务</h3>
+          <p data-zh="从选品到采购、从谈判到运营，全链路 AI 辅助，覆盖 Shopify/独立站/跨境电商。" data-en="From product selection to procurement, from negotiation to operations. Full-chain AI assistance for Shopify, DTC, and cross-border e-commerce.">从选品到采购、从谈判到运营，全链路 AI 辅助，覆盖 Shopify/独立站/跨境电商。</p>
+          <span class="product-tag" data-zh="独立站" data-en="DTC">独立站</span>
+          <span class="product-tag" data-zh="全链路" data-en="Full Funnel">全链路</span>
+          <span class="product-tag" data-zh="跨境" data-en="Cross-border">跨境</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         KNOWLEDGE
+         ============================================ -->
+    <section id="knowledge">
+      <div class="section-label">// knowledge</div>
+      <h2 data-zh="知识库精选洞察" data-en="Knowledge Highlights" style="font-size:28px;margin-bottom:20px;">知识库精选洞察</h2>
+
+      <div class="knowledge-item">
+        <h3 data-zh="YouTube 提及是 AI 可见性的最强信号（0.737），远超域名权重（0.266）" data-en="YouTube mentions are the strongest AI visibility signal (0.737), dwarfing domain rating (0.266)">YouTube 提及是 AI 可见性的最强信号（0.737），远超域名权重（0.266）</h3>
+        <p data-zh="75,000 个品牌的研究显示：品牌在 YouTube 上被提及的频次，比网站页面数量重要 4 倍。不是播放量，是被提及的广度。" data-en="Research across 75,000 brands shows: how widely your brand is mentioned on YouTube matters 4x more than how many pages your site has. Not views — breadth of mentions.">75,000 个品牌的研究显示：品牌在 YouTube 上被提及的频次，比网站页面数量重要 4 倍。不是播放量，是被提及的广度。</p>
+        <div class="knowledge-source">Ahrefs · 2025-12</div>
+      </div>
+
+      <div class="knowledge-item">
+        <h3 data-zh="AI Mode 和 AI Overviews：86% 语义一致，但只有 13.7% 引用来源相同" data-en="AI Mode vs AI Overviews: 86% semantic overlap, only 13.7% citation overlap">AI Mode 和 AI Overviews：86% 语义一致，但只有 13.7% 引用来源相同</h3>
+        <p data-zh="730,000 组响应对比证明：两个 AI 系统在说同一件事，却从完全不同的地方找到了答案。被一个引用不等于被另一个引用。" data-en="730,000 response pairs prove: two AI systems say the same thing using completely different sources. Being cited by one doesn't guarantee visibility in the other.">730,000 组响应对比证明：两个 AI 系统在说同一件事，却从完全不同的地方找到了答案。被一个引用不等于被另一个引用。</p>
+        <div class="knowledge-source">Ahrefs · 2025-12</div>
+      </div>
+
+      <div class="knowledge-item">
+        <h3 data-zh="LinkedIn 是 AI 搜索引用量第二大的域名，超过 Wikipedia" data-en="LinkedIn is the #2 most-cited domain in AI search, ahead of Wikipedia">LinkedIn 是 AI 搜索引用量第二大的域名，超过 Wikipedia</h3>
+        <p data-zh="89,000 条 AI 引用分析：被引用最多的帖子只有 15-25 个赞。AI 不追热点，它追的是持续的存在。" data-en="89,000 AI citations analyzed: the most-cited posts averaged 15-25 likes. AI doesn't chase virality. It chases consistent presence.">89,000 条 AI 引用分析：被引用最多的帖子只有 15-25 个赞。AI 不追热点，它追的是持续的存在。</p>
+        <div class="knowledge-source">Semrush · 2026-03</div>
+      </div>
+
+      <!-- 占位：后续知识条目 -->
+
+    </section>
+
+    <!-- ============================================
+         TOOLS
+         ============================================ -->
+    <section id="tools">
+      <div class="section-label">// tools</div>
+      <h2 data-zh="开源工具 & Skills" data-en="Open Source Tools & Skills" style="font-size:28px;margin-bottom:20px;">开源工具 & Skills</h2>
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <h3>hacking 周刊 <span class="tool-badge" data-zh="原创" data-en="original">原创</span></h3>
+          <p data-zh="SEO 暗面手法、AI 搜索策略、出海增长战术的深度拆解周刊。" data-en="Deep-dive newsletter on dark-side SEO, AI search strategy, and global growth tactics.">SEO 暗面手法、AI 搜索策略、出海增长战术的深度拆解周刊。</p>
+        </div>
+
+        <div class="tool-card">
+          <h3>Intent Workbench <span class="tool-badge" data-zh="免费" data-en="free">免费</span></h3>
+          <p data-zh="品牌上下文 + SEO 策略 + 关键词池 → 可执行的意图分析。" data-en="Brand context + SEO strategy + keyword pool → actionable intent analysis.">品牌上下文 + SEO 策略 + 关键词池 → 可执行的意图分析。</p>
+        </div>
+
+        <div class="tool-card">
+          <h3>PSEO Publisher <span class="tool-badge" data-zh="开源" data-en="open-source">开源</span></h3>
+          <p data-zh="一键发布文章到 GitHub Pages + UniFuncs，支持批量、防重复、自动回写飞书。" data-en="One-click article publishing to GitHub Pages + UniFuncs. Batch support, dedup, auto Feishu writeback.">一键发布文章到 GitHub Pages + UniFuncs，支持批量、防重复、自动回写飞书。</p>
+        </div>
+
+        <div class="tool-card">
+          <h3>NicheDigger <span class="tool-badge" data-zh="开源" data-en="open-source">开源</span></h3>
+          <p data-zh="一键挖词入口，品牌策略 → 结构化种子 → 推荐词表。" data-en="One-click keyword mining. Brand strategy → structured seeds → recommended keyword tables.">一键挖词入口，品牌策略 → 结构化种子 → 推荐词表。</p>
+        </div>
+
+        <!-- 占位：后续工具 -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div>
+      <span>© 2026 weihacking</span>
+      <span style="margin-left:16px;">炬象未来 / Concrete Future AI</span>
+    </div>
+    <div style="display:flex;gap:16px;">
+      <a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X ↗</a>
+      <a href="https://github.com/weihacking" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="mailto:echokay777@163.com">Email</a>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JS: 双语切换 + 主题切换
+       ============================================ -->
+  <script>
+    // ---------- THEME TOGGLE ----------
+    function toggleTheme() {
+      const html = document.documentElement;
+      document.body.classList.add('theme-transitioning');
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('themeToggle').textContent = next === 'dark' ? '☾' : '☀';
+      localStorage.setItem('theme', next);
+      setTimeout(() => document.body.classList.remove('theme-transitioning'), 500);
+    }
+
+    // ---------- LANG TOGGLE ----------
+    function toggleLang() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-lang');
+      const next = current === 'zh' ? 'en' : 'zh';
+      html.setAttribute('data-lang', next);
+      document.getElementById('langToggle').textContent = next === 'zh' ? 'EN' : '中文';
+      localStorage.setItem('lang', next);
+      applyLang(next);
+    }
+
+    function applyLang(lang) {
+      document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+        const html = el.getAttribute(`data-${lang}`);
+        if (html !== null) el.innerHTML = html;
+      });
+    }
+
+    // ---------- INIT ----------
+    (function() {
+      // Restore theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☾' : '☀';
+      }
+      // Restore lang
+      const savedLang = localStorage.getItem('lang');
+      if (savedLang) {
+        document.documentElement.setAttribute('data-lang', savedLang);
+        document.getElementById('langToggle').textContent = savedLang === 'zh' ? 'EN' : '中文';
+        applyLang(savedLang);
+      }
+    })();
+  </script>
+
+</body>
+</html>
