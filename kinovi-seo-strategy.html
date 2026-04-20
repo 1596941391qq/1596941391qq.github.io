@@ -577,7 +577,7 @@
             <tr><td>084</td><td>Gallery 资产可索引性</td><td><strong class="status-bad">风险</strong>：最强证据资产当前没有完全放开。</td></tr>
 
             <tr class="module-sep"><td colspan="3">13 性能与 CWV</td></tr>
-            <tr><td>085</td><td>首页 LCP 风险</td><td><strong class="status-good">良好</strong>：良好（已实测）：gstack 实测 TTFB 485ms，domReady 854ms，可接受。首页英雄区有 preload 策略，LCP 风险可控。</td></tr>
+            <tr><td>085</td><td>首页 LCP 风险</td><td><strong class="status-good">良好</strong>：良好（已实测）：gstack 实测 TTFB 485ms，domReady 854ms，可接受。首屏 hero 区有 preload 策略，LCP 风险可控。</td></tr>
             <tr><td>086</td><td>Pricing 页 LCP 风险</td><td><strong class="status-good">良好</strong>：良好（已实测）：/pricing 与首页同属 Next.js SPA 架构，TTFB 同级别。无额外 LCP 风险。</td></tr>
             <tr><td>087</td><td>INP 风险</td><td><strong class="status-warn">待优化</strong>：待优化（已实测）：首页有多个交互按钮（模型选择、时长、分辨率、生成按钮），但这些是 SPA 内交互，INP 风险较低。需关注大量图片加载后的交互响应。</td></tr>
             <tr><td>088</td><td>CLS 风险</td><td><strong class="status-bad">风险</strong>：风险（已实测）：slide-1~6.webp（6 张，500x500）无 width/height 声明，加载时会产生 CLS。首页价格对比表内容密集，可能加剧布局位移。</td></tr>
