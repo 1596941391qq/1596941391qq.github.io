@@ -42,11 +42,12 @@
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 32px;font-family:var(--mono);font-size:12px;mix-blend-mode:difference;color:#fff}
     nav a{color:#fff;opacity:.7;transition:opacity .2s}nav a:hover{opacity:1;text-decoration:none}
+    .nav-links{display:flex;gap:16px}
     .nav-r{display:flex;gap:6px;align-items:center}
     .nb{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:4px 10px;font-size:11px;cursor:pointer;font-family:var(--mono);border-radius:2px}
     .nb:hover{background:rgba(255,255,255,.15)}
 
-    /* HERO — centered, dramatic */
+    /* HERO */
     .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;position:relative;overflow:hidden;
       background:radial-gradient(ellipse at 50% 50%, rgba(192,57,43,.06) 0%, transparent 60%),var(--bg)}
     [data-theme="dark"] .hero{background:radial-gradient(ellipse at 50% 50%, rgba(74,222,128,.05) 0%, transparent 60%),var(--bg)}
@@ -56,37 +57,45 @@
     .hero h1{font-family:var(--serif);font-size:clamp(52px,11vw,130px);font-weight:900;line-height:.88;letter-spacing:-.04em;margin-bottom:20px}
     .hero h1 em{font-style:italic;color:var(--accent)}
     .hero-sub{font-size:clamp(16px,2.4vw,21px);color:var(--ink-s);max-width:500px;margin:0 auto 36px;line-height:1.6}
-    .hero-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .hero-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
     .cta{font-family:var(--mono);font-size:12px;letter-spacing:.04em;padding:12px 24px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);transition:all .2s;text-decoration:none}
     .cta:hover{background:var(--accent);border-color:var(--accent);text-decoration:none}
     .cta.ghost{background:none;color:var(--ink);border-color:var(--rule-s)}
     .cta.ghost:hover{border-color:var(--accent);color:var(--accent)}
 
-    /* Screenshot band */
-    .screenshot-band{width:100%;max-width:800px;margin:48px auto 0;border-radius:6px;overflow:hidden;border:1px solid var(--rule);box-shadow:var(--shadow)}
-    .screenshot-band img{width:100%;display:block}
-    .screenshot-placeholder{height:200px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;color:var(--muted);border:1px dashed var(--rule-s);overflow:hidden}
-
     /* SECTIONS */
     .wrap{max-width:900px;margin:0 auto;padding:0 28px}
-    section{padding:80px 0}
+    section{padding:80px 0;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    section.visible{opacity:1;transform:translateY(0)}
     .sec-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-top:2px solid var(--ink);padding-top:8px;display:inline-block;margin-bottom:32px}
     .sec-title{font-family:var(--serif);font-size:clamp(32px,5vw,44px);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px}
 
-    /* ABOUT */
-    .about-grid{display:grid;grid-template-columns:180px 1fr;gap:48px}
+    /* ABOUT — single column */
     .about-text p{font-size:19px;line-height:1.8;color:var(--ink-s);margin-bottom:18px}
     .about-text p:first-child{font-size:24px;font-weight:700;color:var(--ink);font-family:var(--serif)}
     .about-text em{font-style:normal;color:var(--accent);font-weight:700}
     .pull{font-family:var(--serif);font-size:28px;font-weight:700;line-height:1.35;color:var(--ink);border-left:3px solid var(--accent);padding-left:20px;margin:40px 0;font-style:italic}
     .about-img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-    .about-img-row .img-slot{border:1px dashed var(--rule-s);border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted)}
+    .about-img-row .img-slot{border:1px solid var(--rule);border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:var(--bg-alt)}
     .about-img-row .img-slot img{width:100%;height:100%;object-fit:cover}
+
+    /* STATS BAR */
+    .stats-bar{padding:40px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+    .stats-row{display:flex;justify-content:space-between;gap:24px;text-align:center}
+    .stat-num{font-family:var(--mono);font-size:clamp(24px,4vw,36px);font-weight:600;color:var(--ink);display:block}
+    .stat-label{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;display:block;margin-top:4px}
+
+    /* THINKING */
+    .think-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .think-piece{border-left:1px solid var(--rule-s);padding-left:18px}
+    .think-piece p{font-size:16px;line-height:1.85;color:var(--ink-s)}
+    .think-piece strong{color:var(--ink);font-weight:700}
+    .think-date{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.06em}
 
     /* NEWSLETTER / KB */
     .kb-section{background:var(--bg-alt)}
     .kb-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .kb-card{background:var(--card);border:1px solid var(--rule);padding:28px;transition:all .3s;cursor:pointer;position:relative}
+    .kb-card{background:var(--card);border:1px solid var(--rule);padding:28px;transition:all .3s;position:relative}
     .kb-card:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-2px)}
     .kb-card .kb-num{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em;margin-bottom:10px}
     .kb-card h3{font-family:var(--serif);font-size:20px;font-weight:700;line-height:1.3;margin-bottom:10px}
@@ -97,28 +106,22 @@
     .kb-card:hover .kb-tag{border-color:var(--accent);color:var(--accent)}
 
     /* HackingSEO OS1 banner */
-    .gos-banner{margin-top:32px;background:var(--card);border:1px solid var(--rule-s);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .gos-banner{margin-top:32px;background:var(--card);border:1px solid var(--rule-s);padding:32px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
     .gos-text h3{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:8px}
     .gos-text p{font-size:14px;color:var(--ink-s);line-height:1.6;margin-bottom:12px}
-    .gos-img{border:1px dashed var(--rule-s);border-radius:4px;aspect-ratio:4/3;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted);overflow:hidden}
+    .gos-img{border:1px solid var(--rule);border-radius:4px;aspect-ratio:4/3;background:var(--bg-alt);overflow:hidden}
     .gos-img img{width:100%;height:100%;object-fit:cover}
-
-    /* THINKING */
-    .think-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-    .think-piece{border-left:1px solid var(--rule-s);padding-left:18px}
-    .think-piece p{font-size:16px;line-height:1.85;color:var(--ink-s)}
-    .think-piece strong{color:var(--ink);font-weight:700}
-    .think-date{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.06em}
 
     /* PRODUCTS */
     .prod-section{background:var(--bg-alt)}
     .prod-note{font-size:14px;color:var(--muted);margin-bottom:28px;max-width:600px}
     .prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
-    .prod-cell{background:var(--card);padding:32px 24px;transition:all .3s}
+    .prod-cell{background:var(--card);padding:32px 24px;transition:all .3s;display:flex;flex-direction:column}
     .prod-cell:hover{background:var(--bg)}
     .prod-cell h3{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:10px;line-height:1.3}
     .prod-cell p{font-size:14px;color:var(--muted);line-height:1.65}
-    .prod-img{margin-top:16px;border:1px dashed var(--rule-s);border-radius:4px;aspect-ratio:16/9;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--muted);overflow:hidden}
+    .prod-cta{font-family:var(--mono);font-size:11px;color:var(--accent);margin-top:auto;padding-top:16px;display:inline-block}
+    .prod-img{margin-top:16px;border:1px solid var(--rule);border-radius:4px;aspect-ratio:16/9;overflow:hidden}
     .prod-img img{width:100%;height:100%;object-fit:cover}
 
     /* TOOLS */
@@ -136,8 +139,12 @@
     .k-item h3{font-family:var(--serif);font-size:22px;font-weight:700;line-height:1.35;margin-bottom:10px;max-width:680px}
     .k-item p{font-size:15px;color:var(--ink-s);max-width:580px}
 
+    /* CTA BAND */
+    .cta-band{padding:80px 0;text-align:center;border-top:1px solid var(--rule)}
+    .cta-band .cta{margin-top:8px}
+
     /* PARTNER */
-    .partner-band{text-align:center;padding:40px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+    .partner-band{text-align:center;padding:40px 0;border-bottom:1px solid var(--rule)}
     .partner-band p{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.04em}
     .partner-band strong{color:var(--ink)}
 
@@ -148,10 +155,13 @@
 
     /* RESPONSIVE */
     @media(max-width:768px){
-      .about-grid,.gos-banner{grid-template-columns:1fr;gap:16px}
+      .nav-links{display:none}
+      .gos-banner{grid-template-columns:1fr;gap:16px}
       .kb-grid,.think-grid,.prod-grid,.tools-grid{grid-template-columns:1fr}
-      .about-img-row{grid-template-columns:1fr}
-      .hero h1{font-size:44px}.hero-sub{font-size:16px}
+      .about-img-row,.stats-row{grid-template-columns:1fr 2}
+      .stats-row{flex-wrap:wrap;justify-content:center}
+      .stat{min-width:120px}
+      .hero-sub{font-size:16px}
       nav{padding:12px 16px}.wrap{padding:0 16px}
     }
     body.sw *{transition:background .5s,color .5s,border-color .5s!important}
@@ -161,6 +171,11 @@
 
   <nav>
     <a href="#">weihacking_</a>
+    <div class="nav-links">
+      <a href="#about" data-zh="关于" data-en="About">关于</a>
+      <a href="#knowledge-base" data-zh="知识" data-en="Knowledge">知识</a>
+      <a href="#products" data-zh="服务" data-en="Services">服务</a>
+    </div>
     <div class="nav-r">
       <button class="nb" id="langToggle" onclick="toggleLang()">EN</button>
       <button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button>
@@ -169,33 +184,57 @@
 
   <!-- ==================== HERO ==================== -->
   <div class="hero">
-    <!-- PLACEHOLDER: weihacking 头像 -->
     <div class="hero-photo" id="heroAvatar"><img src="images/avatar.jpg" alt="weihacking"></div>
-    <div class="hero-tag" data-zh="SEO / GEO 策略师 · hacking 周刊作者 · Soulcraft Limited" data-en="SEO / GEO Strategist · hacking Newsletter · Soulcraft Limited">SEO / GEO 策略师 · hacking 周刊作者 · Soulcraft Limited</div>
+    <div class="hero-tag" data-zh="SEO / GEO 策略师 · hacking 周刊作者" data-en="SEO / GEO Strategist · hacking Newsletter">SEO / GEO 策略师 · hacking 周刊作者</div>
     <h1 data-zh="wei<em>hacking</em>" data-en="wei<em>hacking</em>">wei<em>hacking</em></h1>
     <div class="hero-sub" data-zh="六年实战，200+ 客户。在搜索引擎和 AI 的交叉地带找缝隙。不卖概念，只交付数字。" data-en="Six years in the trenches. 200+ clients. Finding the gaps between search and AI. No buzzwords — just numbers.">六年实战，200+ 客户。在搜索引擎和 AI 的交叉地带找缝隙。不卖概念，只交付数字。</div>
     <div class="hero-links">
       <a href="#products" class="cta" data-zh="结果向交付 →" data-en="Services →">结果向交付 →</a>
       <a href="#knowledge-base" class="cta ghost" data-zh="HackingSEO OS1" data-en="HackingSEO OS1">HackingSEO OS1</a>
-      <a href="https://x.com/weihacking" target="_blank" rel="noreferrer" class="cta ghost">X / Twitter</a>
-      <a href="https://github.com/1596941391qq" target="_blank" rel="noreferrer" class="cta ghost">GitHub</a>
     </div>
   </div>
 
   <!-- ==================== ABOUT ==================== -->
   <section id="about">
     <div class="wrap">
-      <div class="about-grid">
-        <div class="sec-label" data-zh="关于" data-en="About">关于</div>
-        <div class="about-text">
-          <p data-zh="我做的是在 AI 和搜索的交叉地带<em>凿路</em>。" data-en="What I do is <em>carve paths</em> at the intersection of AI and search.">我做的是在 AI 和搜索的交叉地带<em>凿路</em>。</p>
-          <p data-zh="六年海外 SEO，200+ 品牌从零到稳定收入。运营 <em>hacking 周刊</em>，拆解 SEO 暗面手法、AI 搜索策略和出海增长。公司是 <em>Soulcraft Limited</em>，和炬象未来（Concrete Future AI）深度合作。" data-en="Six years of international SEO. 200+ brands from zero to revenue. I run the <em>hacking newsletter</em> — dissecting dark-side SEO, AI search strategy, and global growth. My company is <em>Soulcraft Limited</em>, partnering deep with Concrete Future AI.">六年海外 SEO，200+ 品牌从零到稳定收入。运营 <em>hacking 周刊</em>，拆解 SEO 暗面手法、AI 搜索策略和出海增长。公司是 <em>Soulcraft Limited</em>，和炬象未来（Concrete Future AI）深度合作。</p>
-          <div class="pull" data-zh="平台在淘汰的不是技巧，是整套假的生存环境。" data-en="Platforms aren't eliminating tactics — they're eliminating entire fake environments.">平台在淘汰的不是技巧，是整套假的生存环境。</div>
-          <!-- PLACEHOLDER: 2 张关于照片 -->
-          <div class="about-img-row">
-            <div class="img-slot" id="aboutImg1"><img src="images/7c6dc15500d5ed153dbd540d6a738c97.jpg" alt="Google Search Console Growth"></div>
-            <div class="img-slot" id="aboutImg2"><img src="images/feishu-ai-ui.png" alt="Feishu AI Q&A Interface"></div>
-          </div>
+      <div class="sec-label" data-zh="关于" data-en="About">关于</div>
+      <div class="about-text">
+        <p data-zh="我做的是在 AI 和搜索的交叉地带<em>凿路</em>。" data-en="What I do is <em>carve paths</em> at the intersection of AI and search.">我做的是在 AI 和搜索的交叉地带<em>凿路</em>。</p>
+        <p data-zh="六年海外 SEO，200+ 品牌从零到稳定收入。运营 <em>hacking 周刊</em>，拆解 SEO 暗面手法、AI 搜索策略和出海增长。公司是 <em>Soulcraft Limited</em>，和炬象未来（Concrete Future AI）深度合作。" data-en="Six years of international SEO. 200+ brands from zero to revenue. I run the <em>hacking newsletter</em> — dissecting dark-side SEO, AI search strategy, and global growth. My company is <em>Soulcraft Limited</em>, partnering deep with Concrete Future AI.">六年海外 SEO，200+ 品牌从零到稳定收入。运营 <em>hacking 周刊</em>，拆解 SEO 暗面手法、AI 搜索策略和出海增长。公司是 <em>Soulcraft Limited</em>，和炬象未来（Concrete Future AI）深度合作。</p>
+        <div class="pull" data-zh="平台在淘汰的不是技巧，是整套假的生存环境。" data-en="Platforms aren't eliminating tactics — they're eliminating entire fake environments.">平台在淘汰的不是技巧，是整套假的生存环境。</div>
+        <div class="about-img-row">
+          <div class="img-slot" id="aboutImg1"><img src="images/7c6dc15500d5ed153dbd540d6a738c97.jpg" alt="Google Search Console Growth"></div>
+          <div class="img-slot" id="aboutImg2"><img src="images/feishu-ai-ui.png" alt="Feishu AI Q&A Interface"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS BAR ==================== -->
+  <div class="stats-bar">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat"><span class="stat-num">200+</span><span class="stat-label" data-zh="品牌客户" data-en="Brands Served">品牌客户</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label" data-zh="年实战" data-en="Years Active">年实战</span></div>
+        <div class="stat"><span class="stat-num">60万</span><span class="stat-label" data-zh="字知识库" data-en="Words in KB">字知识库</span></div>
+        <div class="stat"><span class="stat-num">33</span><span class="stat-label" data-zh="篇文档" data-en="Documents">篇文档</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== THINKING ==================== -->
+  <section id="thinking">
+    <div class="wrap">
+      <div class="sec-label" data-zh="推文哲思" data-en="Thinking">推文哲思</div>
+      <div class="sec-title" data-zh="最近在想什么" data-en="Recent Thinking">最近在想什么</div>
+      <div class="think-grid">
+        <div class="think-piece">
+          <p data-zh="你优化了一篇文章让 AI 引用你。AI 引用了你。<strong>然后呢？</strong><br>读到 AI 回答的人不会点进你的网站。他们拿到了答案，关掉了标签页。<br>你赢了引用，输了流量。<br>如果你卖的是信息，你完了。<br>如果你卖的是<strong>信任</strong>，你才刚开始。" data-en="You optimize for AI citation. AI cites you. <strong>Then what?</strong><br>Nobody clicks through. They got the answer and closed the tab.<br>You won the citation. You lost the traffic.<br>If you sell information, you're done.<br>If you sell <strong>trust</strong>, you're just getting started.">你优化了一篇文章让 AI 引用你。AI 引用了你。<strong>然后呢？</strong><br>读到 AI 回答的人不会点进你的网站。他们拿到了答案，关掉了标签页。<br>你赢了引用，输了流量。<br>如果你卖的是信息，你完了。<br>如果你卖的是<strong>信任</strong>，你才刚开始。</p>
+          <div class="think-date">2026-04-20</div>
+        </div>
+        <div class="think-piece">
+          <p data-zh="凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——<br>说明昨晚那个<strong>「特别清楚」</strong>的感觉，不是来自洞察。<br>是来自疲惫。" data-en="Ideas at 2am: write them down. Morning verdict.<br>Still good? Then good.<br>Absurd? Then that clarity wasn't <strong>insight</strong>.<br>It was exhaustion.">凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——<br>说明昨晚那个<strong>「特别清楚」</strong>的感觉，不是来自洞察。<br>是来自疲惫。</p>
+          <div class="think-date">2026-04-20</div>
         </div>
       </div>
     </div>
@@ -225,36 +264,15 @@
         </div>
       </div>
 
-      <!-- HackingSEO_OS1 付费产品 -->
+      <!-- HackingSEO_OS1 banner -->
       <div class="gos-banner">
         <div class="gos-text">
           <h3 data-zh="HackingSEO_OS1 — 出海 SEO 认知操作系统" data-en="HackingSEO_OS1 — Frontier SEO/GEO Knowledge OS">HackingSEO_OS1 — 出海 SEO 认知操作系统</h3>
           <p data-zh="7 层知识架构：内容生产方法论 → AI 可见度/GEO 体系 → 外链建设 → 策略集/工具链 → 垂直行业指南 → 深水区方法论 → 行业情报。33 篇文档、60 万字、飞书 AI 24/7 问答。你不需要懂 SEO，带着业务问题来就行。" data-en="7-layer knowledge stack: Content → AI Visibility/GEO → Link Building → Strategy/Tools → Vertical Playbooks → Deep-Water Methods → Intelligence Feed. 33 docs, 600K+ words, 24/7 Feishu AI Q&A. No SEO background needed.">7 层知识架构：内容生产方法论 → AI 可见度/GEO 体系 → 外链建设 → 策略集/工具链 → 垂直行业指南 → 深水区方法论 → 行业情报。33 篇文档、60 万字、飞书 AI 24/7 问答。你不需要懂 SEO，带着业务问题来就行。</p>
-          <a href="https://vcnierml3885.feishu.cn/share/base/form/shrcn7Z09L3UJHDrX3NPgHNRyib" target="_blank" rel="noreferrer" style="font-family:var(--mono);font-size:12px;color:var(--accent)" data-zh="申请免费 30 分钟咨询 →" data-en="Apply for free 30-min advisory →">申请免费 30 分钟咨询 →</a>
+          <a href="https://vcnierml3885.feishu.cn/share/base/form/shrcn7Z09L3UJHDrX3NPgHNRyib" target="_blank" rel="noreferrer" class="cta ghost" style="display:inline-block" data-zh="申请免费 30 分钟咨询 →" data-en="Apply for free 30-min advisory →">申请免费 30 分钟咨询 →</a>
         </div>
-        <!-- PLACEHOLDER: HackingSEO_OS1 知识库截图 -->
         <div class="gos-img" id="gosImg"><img src="images/bb4938b58ff7501f1a635ec613cc671a.jpg" alt="HackingSEO_OS1 7-Layer Knowledge Base"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- ==================== THINKING ==================== -->
-  <section id="thinking">
-    <div class="wrap">
-      <div class="sec-label" data-zh="推文哲思" data-en="Thinking">推文哲思</div>
-      <div class="sec-title" data-zh="最近在想什么" data-en="Recent Thinking">最近在想什么</div>
-      <div class="think-grid">
-        <div class="think-piece">
-          <p data-zh="你优化了一篇文章让 AI 引用你。AI 引用了你。<strong>然后呢？</strong><br>读到 AI 回答的人不会点进你的网站。他们拿到了答案，关掉了标签页。<br>你赢了引用，输了流量。<br>如果你卖的是信息，你完了。<br>如果你卖的是<strong>信任</strong>，你才刚开始。" data-en="You optimize for AI citation. AI cites you. <strong>Then what?</strong><br>Nobody clicks through. They got the answer and closed the tab.<br>You won the citation. You lost the traffic.<br>If you sell information, you're done.<br>If you sell <strong>trust</strong>, you're just getting started.">你优化了一篇文章让 AI 引用你。AI 引用了你。<strong>然后呢？</strong><br>读到 AI 回答的人不会点进你的网站。他们拿到了答案，关掉了标签页。<br>你赢了引用，输了流量。<br>如果你卖的是信息，你完了。<br>如果你卖的是<strong>信任</strong>，你才刚开始。</p>
-          <div class="think-date">2026-04-20</div>
-        </div>
-        <div class="think-piece">
-          <p data-zh="凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——<br>说明昨晚那个<strong>「特别清楚」</strong>的感觉，不是来自洞察。<br>是来自疲惫。" data-en="Ideas at 2am: write them down. Morning verdict.<br>Still good? Then good.<br>Absurd? Then that clarity wasn't <strong>insight</strong>.<br>It was exhaustion.">凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——<br>说明昨晚那个<strong>「特别清楚」</strong>的感觉，不是来自洞察。<br>是来自疲惫。</p>
-          <div class="think-date">2026-04-20</div>
-        </div>
-      </div>
-      <!-- PLACEHOLDER: 更多推文截图 -->
-      <div style="margin-top:28px;border:1px solid var(--rule);border-radius:4px;aspect-ratio:21/9;overflow:hidden" id="tweetScreenshots"><img src="images/newsletter-header-dark-tech.jpg" alt="hacking Newsletter" style="width:100%;height:100%;object-fit:cover"></div>
     </div>
   </section>
 
@@ -270,11 +288,13 @@
           <h3 data-zh="高权重站文章发布" data-en="High-Authority Article Publishing">高权重站文章发布</h3>
           <p data-zh="在 DA 50+ 的高权重站点发布品牌文章，提升搜索可见性和 AI 引用率。每篇文章的排名、索引、流量均可追踪。" data-en="Publish branded articles on DA 50+ sites. Boost search visibility and AI citation rates. Every article's ranking, indexing, and traffic is trackable.">在 DA 50+ 的高权重站点发布品牌文章，提升搜索可见性和 AI 引用率。每篇文章的排名、索引、流量均可追踪。</p>
           <div class="prod-img" id="prodImg1"><img src="images/newsletter-header-seo-analytics.jpg" alt="High-Authority Article Publishing"></div>
+          <a href="https://vcnierml3885.feishu.cn/share/base/form/shrcn7Z09L3UJHDrX3NPgHNRyib" target="_blank" rel="noreferrer" class="prod-cta" data-zh="咨询详情 →" data-en="Learn more →">咨询详情 →</a>
         </div>
         <div class="prod-cell">
           <h3 data-zh="社媒评论截流" data-en="Social Comment Interception">社媒评论截流</h3>
           <p data-zh="AI 筛选高价值目标帖，自动生成有价值的评论，从竞争对手帖子下截取精准流量。触达效率提升 3-5 倍。" data-en="AI filters high-value target posts, generates valuable comments, intercepts precision traffic from competitor threads. 3-5x outreach efficiency.">AI 筛选高价值目标帖，自动生成有价值的评论，从竞争对手帖子下截取精准流量。触达效率提升 3-5 倍。</p>
           <div class="prod-img" id="prodImg2"><img src="images/tweet-img3.jpg" alt="Social Comment Interception"></div>
+          <a href="https://vcnierml3885.feishu.cn/share/base/form/shrcn7Z09L3UJHDrX3NPgHNRyib" target="_blank" rel="noreferrer" class="prod-cta" data-zh="咨询详情 →" data-en="Learn more →">咨询详情 →</a>
         </div>
       </div>
     </div>
@@ -287,7 +307,7 @@
       <div class="sec-title" data-zh="工具 &amp; 作品" data-en="Tools &amp; Works">工具 &amp; 作品</div>
       <div class="tools-grid">
         <div class="tool-card">
-          <h3>GitHub 主页</h3>
+          <h3>GitHub</h3>
           <p data-zh="所有开源工具、pack、bundle 和自动化链路" data-en="All open-source tools, packs, bundles, and automation chains">所有开源工具、pack、bundle 和自动化链路</p>
           <a href="https://github.com/1596941391qq" target="_blank" rel="noreferrer">github.com/1596941391qq →</a>
         </div>
@@ -327,6 +347,14 @@
     </div>
   </section>
 
+  <!-- ==================== CLOSING CTA ==================== -->
+  <div class="cta-band">
+    <div class="wrap">
+      <p style="font-family:var(--serif);font-size:24px;font-weight:700;margin-bottom:20px;color:var(--ink)" data-zh="聊聊你的业务，看我们能不能帮到你。" data-en="Let's talk about your business.">聊聊你的业务，看我们能不能帮到你。</p>
+      <a href="https://vcnierml3885.feishu.cn/share/base/form/shrcn7Z09L3UJHDrX3NPgHNRyib" target="_blank" rel="noreferrer" class="cta" data-zh="申请免费 30 分钟咨询 →" data-en="Apply for free 30-min advisory →">申请免费 30 分钟咨询 →</a>
+    </div>
+  </div>
+
   <!-- PARTNER -->
   <div class="partner-band">
     <p data-zh="深度合作伙伴：<strong>炬象未来 / Concrete Future AI</strong> — 出海营销 · AI 社媒自动化 · 电商全链路" data-en="Deep partner: <strong>Concrete Future AI</strong> — Global marketing · AI social automation · E-commerce full funnel">深度合作伙伴：<strong>炬象未来 / Concrete Future AI</strong> — 出海营销 · AI 社媒自动化 · 电商全链路</p>
@@ -347,6 +375,9 @@
     function toggleLang(){const h=document.documentElement,n=h.getAttribute('data-lang')==='zh'?'en':'zh';h.setAttribute('data-lang',n);document.getElementById('langToggle').textContent=n==='zh'?'EN':'中文';localStorage.setItem('lang',n);applyLang(n)}
     function applyLang(l){document.querySelectorAll('[data-zh][data-en]').forEach(e=>{const v=e.getAttribute('data-'+l);if(v!==null)e.innerHTML=v})}
     (function(){const t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);document.getElementById('themeToggle').textContent=t==='dark'?'☀':'☽'}const l=localStorage.getItem('lang');if(l){document.documentElement.setAttribute('data-lang',l);document.getElementById('langToggle').textContent=l==='zh'?'EN':'中文';applyLang(l)}})();
+    // Scroll fade-up
+    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+    document.querySelectorAll('section').forEach(s=>obs.observe(s));
   </script>
 </body>
 </html>
