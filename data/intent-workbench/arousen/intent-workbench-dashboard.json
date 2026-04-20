@@ -1,12 +1,12 @@
 {
   "brand": "arousen",
   "website": "https://arousen.com",
-  "generatedAt": "2026-04-20T18:28:05.070Z",
+  "generatedAt": "2026-04-20T19:17:43.808Z",
   "taxonomyVersion": 2,
   "llmEnabled": true,
   "summary": {
     "keywordCount": 10,
-    "liveQueryCount": 7,
+    "liveQueryCount": 8,
     "highPriorityCount": 10,
     "notRecommendedCount": 1
   },
@@ -44,6 +44,20 @@
   ],
   "topOpportunities": [
     {
+      "keyword": "best vibrator for couples",
+      "priority": "P0",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 88,
+      "liveSignalScore": 100,
+      "semrushVolume": 590,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
       "keyword": "best vibrators",
       "priority": "P0",
       "intent": "商业调查",
@@ -51,8 +65,70 @@
       "funnel": "mid",
       "conversionDistance": "mid",
       "commercialScore": 85,
-      "liveSignalScore": 80,
+      "liveSignalScore": 100,
       "semrushVolume": 12100,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best rabbit vibrators",
+      "priority": "P0",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 100,
+      "semrushVolume": 720,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best bullet vibrators",
+      "priority": "P0",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 100,
+      "semrushVolume": 590,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best wand vibrators",
+      "priority": "P0",
+      "intent": "商业调查",
+      "secondaryIntents": [],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 100,
+      "semrushVolume": 480,
+      "brandFitness": "medium",
+      "contentFormat": "bestof_page",
+      "strategyLine": "neutral_review"
+    },
+    {
+      "keyword": "best g spot vibrators",
+      "priority": "P0",
+      "intent": "商业调查",
+      "secondaryIntents": [
+        "功能型商业词"
+      ],
+      "funnel": "mid",
+      "conversionDistance": "mid",
+      "commercialScore": 85,
+      "liveSignalScore": 100,
+      "semrushVolume": 390,
       "brandFitness": "medium",
       "contentFormat": "bestof_page",
       "strategyLine": "neutral_review"
@@ -67,86 +143,10 @@
       "funnel": "bottom",
       "conversionDistance": "near",
       "commercialScore": 93,
-      "liveSignalScore": 34,
+      "liveSignalScore": 55,
       "semrushVolume": 320,
       "brandFitness": "low",
       "contentFormat": "review_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best vibrator for couples",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 88,
-      "liveSignalScore": 60,
-      "semrushVolume": 590,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best rabbit vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [
-        "功能型商业词"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 720,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best bullet vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [
-        "功能型商业词"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 590,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best wand vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 480,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
-      "strategyLine": "neutral_review"
-    },
-    {
-      "keyword": "best g spot vibrators",
-      "priority": "P1",
-      "intent": "商业调查",
-      "secondaryIntents": [
-        "功能型商业词"
-      ],
-      "funnel": "mid",
-      "conversionDistance": "mid",
-      "commercialScore": 85,
-      "liveSignalScore": 80,
-      "semrushVolume": 390,
-      "brandFitness": "medium",
-      "contentFormat": "bestof_page",
       "strategyLine": "neutral_review"
     },
     {
@@ -157,7 +157,7 @@
       "funnel": "mid",
       "conversionDistance": "mid",
       "commercialScore": 78,
-      "liveSignalScore": 40,
+      "liveSignalScore": 50,
       "semrushVolume": 1300,
       "brandFitness": "medium",
       "contentFormat": "category_page",
@@ -173,7 +173,7 @@
       "funnel": "mid",
       "conversionDistance": "mid",
       "commercialScore": 78,
-      "liveSignalScore": 40,
+      "liveSignalScore": 50,
       "semrushVolume": 720,
       "brandFitness": "medium",
       "contentFormat": "category_page",
@@ -189,7 +189,7 @@
       "funnel": "top",
       "conversionDistance": "mid-far",
       "commercialScore": 58,
-      "liveSignalScore": 80,
+      "liveSignalScore": 100,
       "semrushVolume": 5400,
       "brandFitness": "medium",
       "contentFormat": "guide_page",
@@ -210,8 +210,11 @@
     "classification": {
       "primaryIntent": "review",
       "searchQueries": [
-        "Lovense product review",
-        "Lovense vs competitors"
+        "Lovense review",
+        "Lovense vs other vibrators",
+        "Lovense pros and cons",
+        "Lovense user experience",
+        "Lovense disappointed reviews"
       ]
     },
     "iterations": 3,
@@ -219,22 +222,39 @@
   },
   "liveSignals": [
     {
-      "query": "Lovense product review",
-      "liveSignalScore": 24,
+      "query": "Lovense review",
+      "liveSignalScore": 55,
       "reddit": {
-        "count": 5,
+        "count": 8,
         "ok": true,
         "error": "",
         "topDiscussions": [
           {
+            "title": "Lovense mini/portable fuck machine reviews??",
+            "subreddit": "CamGirlProblems",
+            "score": 2,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
             "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
             "subreddit": "Python",
-            "score": 12,
+            "score": 9,
             "painPoints": [
               "battery_issue",
               "discretion_issue"
             ],
             "buyingSignals": []
+          },
+          {
+            "title": "Advice please!!",
+            "subreddit": "CamGirlProblems",
+            "score": 7,
+            "painPoints": [],
+            "buyingSignals": [
+              "seeking_recommendation",
+              "price_sensitivity"
+            ]
           },
           {
             "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
@@ -246,23 +266,9 @@
             ]
           },
           {
-            "title": "[IGN; 9/10] Netflix's 'One Piece' Season 2 Review: With grand production design, exquisite costuming, and stunning VFX work, and the most adorable reindeer doctor, this live-action manga adaptation is nothing short of a miracle",
-            "subreddit": "television",
-            "score": 2853,
-            "painPoints": [],
-            "buyingSignals": []
-          },
-          {
-            "title": "[WON] There is belief among those in WWE that after all the hype, Wrestlepalooza was a failure for a first show on ESPN. Paul Levesque reacted to the negative reviews on Wrestlepalooza during a production meeting, saying, “We work them (the fans). They don’t work us.\"",
-            "subreddit": "SquaredCircle",
-            "score": 1917,
-            "painPoints": [],
-            "buyingSignals": []
-          },
-          {
-            "title": "World in $1.5tn ‘plastics crisis’ hitting health from infancy to old age, report warns. Plastic production has increased more than 200 times since 1950 and hits health at every stage from extraction to disposal, says review in the Lancet.",
-            "subreddit": "science",
-            "score": 5151,
+            "title": "interactive toys recommendations",
+            "subreddit": "CamGirlProblems",
+            "score": 3,
             "painPoints": [],
             "buyingSignals": []
           }
@@ -276,38 +282,20 @@
       }
     },
     {
-      "query": "Lovense vs competitors",
-      "liveSignalScore": 51,
+      "query": "Lovense vs other vibrators",
+      "liveSignalScore": 53,
       "reddit": {
-        "count": 5,
+        "count": 4,
         "ok": true,
         "error": "",
         "topDiscussions": [
           {
-            "title": "Jeremy Lin: “Its been the honor of a lifetime to compete vs the fiercest competitors under the brightest lights…to challenge what the world thought was possible for someone who looks like me.…I’ll forever be the kid who felt fully alive everytime I touched a basketball”",
-            "subreddit": "nba",
-            "score": 4428,
-            "painPoints": [],
-            "buyingSignals": [
-              "comparison_shopping"
-            ]
-          },
-          {
-            "title": "G80 M3 vs New RS5. True competitors.",
-            "subreddit": "BMW",
-            "score": 894,
-            "painPoints": [],
-            "buyingSignals": [
-              "comparison_shopping"
-            ]
-          },
-          {
-            "title": "AITA for proving to my boyfriend the “nerds” never cared about the “popular” kids in high school?",
-            "subreddit": "BestofRedditorUpdates",
-            "score": 6480,
+            "title": "Take My girl Cock or Fuck My Ass",
+            "subreddit": "Emmatslov27",
+            "score": 3,
             "painPoints": [
-              "buyer_remorse",
-              "usability_issue"
+              "quality_issue",
+              "fit_comfort"
             ],
             "buyingSignals": [
               "comparison_shopping",
@@ -315,23 +303,34 @@
             ]
           },
           {
-            "title": "Tesla reports disappointing quarterly results as automotive revenue plunges 20%",
-            "subreddit": "stocks",
-            "score": 13947,
+            "title": "Shemale cock? Mine could be all yours…",
+            "subreddit": "Emmatslov27",
+            "score": 3,
             "painPoints": [
-              "battery_issue"
+              "fit_comfort"
             ],
+            "buyingSignals": [
+              "comparison_shopping",
+              "gift_intent"
+            ]
+          },
+          {
+            "title": "Lights, Camera, Action! (the tech of it all)",
+            "subreddit": "CamGirlProblems",
+            "score": 36,
+            "painPoints": [],
             "buyingSignals": [
               "comparison_shopping"
             ]
           },
           {
-            "title": "Unironically see zero reason to remove the mode at this point",
-            "subreddit": "marvelrivals",
-            "score": 3580,
+            "title": "How to Choose a Remote Control Vibrator in 2026 (Noise, App Control, Materials Explained)",
+            "subreddit": "ThePassionPortal",
+            "score": 3,
             "painPoints": [],
             "buyingSignals": [
-              "comparison_shopping"
+              "comparison_shopping",
+              "price_sensitivity"
             ]
           }
         ]
@@ -344,53 +343,80 @@
       }
     },
     {
-      "query": "lovense review",
-      "liveSignalScore": 34,
+      "query": "Lovense pros and cons",
+      "liveSignalScore": 16,
       "reddit": {
-        "count": 5,
+        "count": 2,
         "ok": true,
         "error": "",
         "topDiscussions": [
           {
-            "title": "Lovense mini/portable fuck machine reviews??",
+            "title": "MultiStreaming questions",
             "subreddit": "CamGirlProblems",
-            "score": 2,
+            "score": 0,
             "painPoints": [],
-            "buyingSignals": []
+            "buyingSignals": [
+              "considering"
+            ]
           },
           {
-            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
-            "subreddit": "Python",
-            "score": 11,
-            "painPoints": [
-              "battery_issue",
-              "discretion_issue"
-            ],
-            "buyingSignals": []
-          },
-          {
-            "title": "Advice please!!",
+            "title": "SM",
             "subreddit": "CamGirlProblems",
             "score": 5,
             "painPoints": [],
             "buyingSignals": [
-              "seeking_recommendation",
-              "price_sensitivity"
+              "value_assessment"
             ]
-          },
+          }
+        ]
+      },
+      "googleNews": {
+        "count": 0,
+        "ok": false,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "Lovense review |flair:Review",
+      "liveSignalScore": 34,
+      "reddit": {
+        "count": 8,
+        "ok": true,
+        "error": "",
+        "topDiscussions": [
           {
-            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
-            "subreddit": "SideProject",
-            "score": 1,
+            "title": "Pokémon Legends Z-A Review: A love letter to older fans that betters Arceus in every way | VGC",
+            "subreddit": "NintendoSwitch",
+            "score": 1767,
             "painPoints": [],
-            "buyingSignals": [
-              "gift_intent"
-            ]
+            "buyingSignals": []
           },
           {
-            "title": "interactive toys recommendations",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
+            "title": "PC Gamer Marathon review | 90/100",
+            "subreddit": "Games",
+            "score": 861,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "Super Mario Galaxy 1+2 review: Despite pointer issues, this is still 3D platforming at its very best | VGC",
+            "subreddit": "NintendoSwitch",
+            "score": 1336,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "Pokémon Pokopia Review: Minecraft and Animal Crossing combine in Pokémon’s best spin-off | VGC",
+            "subreddit": "NintendoSwitch",
+            "score": 1089,
+            "painPoints": [],
+            "buyingSignals": []
+          },
+          {
+            "title": "Parasakthi | Review Megathread",
+            "subreddit": "kollywood",
+            "score": 322,
             "painPoints": [],
             "buyingSignals": []
           }
@@ -404,57 +430,13 @@
       }
     },
     {
-      "query": "lovense review",
-      "liveSignalScore": 34,
+      "query": "https://www.reddit.com/r/CamGirlProblems/comments/10v5z8/lovense_mini_portable_fuck_machine_reviews/",
+      "liveSignalScore": 0,
       "reddit": {
-        "count": 5,
-        "ok": true,
+        "count": 0,
+        "ok": false,
         "error": "",
-        "topDiscussions": [
-          {
-            "title": "Lovense mini/portable fuck machine reviews??",
-            "subreddit": "CamGirlProblems",
-            "score": 2,
-            "painPoints": [],
-            "buyingSignals": []
-          },
-          {
-            "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
-            "subreddit": "Python",
-            "score": 7,
-            "painPoints": [
-              "battery_issue",
-              "discretion_issue"
-            ],
-            "buyingSignals": []
-          },
-          {
-            "title": "Advice please!!",
-            "subreddit": "CamGirlProblems",
-            "score": 6,
-            "painPoints": [],
-            "buyingSignals": [
-              "seeking_recommendation",
-              "price_sensitivity"
-            ]
-          },
-          {
-            "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
-            "subreddit": "SideProject",
-            "score": 1,
-            "painPoints": [],
-            "buyingSignals": [
-              "gift_intent"
-            ]
-          },
-          {
-            "title": "interactive toys recommendations",
-            "subreddit": "CamGirlProblems",
-            "score": 3,
-            "painPoints": [],
-            "buyingSignals": []
-          }
-        ]
+        "topDiscussions": []
       },
       "googleNews": {
         "count": 0,
@@ -465,7 +447,7 @@
     },
     {
       "query": "best vibrator for couples",
-      "liveSignalScore": 60,
+      "liveSignalScore": 100,
       "reddit": {
         "count": 5,
         "ok": true,
@@ -474,7 +456,7 @@
           {
             "title": "What’s the best couple vibrators for newbies? Seeking tips from experienced couples",
             "subreddit": "Marriage",
-            "score": 10,
+            "score": 9,
             "painPoints": [
               "usability_issue"
             ],
@@ -487,7 +469,7 @@
           {
             "title": "Best vibrator for newly weds",
             "subreddit": "ldssexuality",
-            "score": 30,
+            "score": 31,
             "painPoints": [],
             "buyingSignals": [
               "purchase_mention",
@@ -497,7 +479,7 @@
           {
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4152,
+            "score": 4154,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -513,7 +495,7 @@
           {
             "title": "AITA for changing Christmas plans with a newborn over a guest being unvaccinated?",
             "subreddit": "BestofRedditorUpdates",
-            "score": 1941,
+            "score": 1950,
             "painPoints": [
               "fit_comfort",
               "trust_issue",
@@ -529,7 +511,7 @@
           {
             "title": "A year in review - Everything changed.",
             "subreddit": "NevilleGoddard",
-            "score": 1344,
+            "score": 1339,
             "painPoints": [
               "trust_issue"
             ],
@@ -542,14 +524,14 @@
       },
       "googleNews": {
         "count": 0,
-        "ok": true,
-        "error": "",
+        "ok": false,
+        "error": "disabled",
         "items": []
       }
     },
     {
       "query": "best vibrators",
-      "liveSignalScore": 80,
+      "liveSignalScore": 100,
       "reddit": {
         "count": 5,
         "ok": true,
@@ -576,7 +558,7 @@
           {
             "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
             "subreddit": "Construction",
-            "score": 1503,
+            "score": 1499,
             "painPoints": [],
             "buyingSignals": [
               "seeking_recommendation"
@@ -585,7 +567,7 @@
           {
             "title": "Newey's Caught You All Sleeping.",
             "subreddit": "formula1",
-            "score": 10019,
+            "score": 10032,
             "painPoints": [
               "fit_comfort",
               "battery_issue",
@@ -600,7 +582,7 @@
           {
             "title": "my (23f) boyfriend (24m) keeps accidentally calling me his best friends name during sex",
             "subreddit": "BestofRedditorUpdates",
-            "score": 8920,
+            "score": 8922,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -614,51 +596,15 @@
         ]
       },
       "googleNews": {
-        "count": 5,
-        "ok": true,
-        "error": "",
-        "items": [
-          {
-            "source": "news",
-            "title": "5 月 1 日合肥 BEST 装置提前两个月启动总装，其基于 EAST ...",
-            "link": "https://www.zhihu.com/question/1901647000308552628",
-            "content": "May 4, 2025&ensp;&#0183;&ensp;5月1日，合肥紧凑型聚变能实验装置（BEST）项目工程总装工作比原计划提前两个月，在聚变堆主机关键系统综…",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "中国 BEST 核聚变装置主机开建，2030 年有望发电，核聚变 ...",
-            "link": "https://www.zhihu.com/question/1956806717900809294",
-            "content": "Sep 28, 2006&ensp;&#0183;&ensp;中国BEST，中文名“夸父启明\"。全称是：紧凑型燃烧等离子体聚变能综合研究系统。 这套可控核聚变技术就是借鉴太阳发光发热的原理，让氢的同位素氘和氚结合，从而持续稳定释放出巨 …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "英文信件最后「Cheers、Sincerely、Regards、Best Wishes ...",
-            "link": "https://www.zhihu.com/question/20822713",
-            "content": "Best or Best Wishes Casual or Business casual. A polite way to end the letter. Can be used between friends or strangers. Sincerely or Sincerely Yours or Yours Sincerely Casual, Business casual or …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "中国「人造太阳」BEST 预计 2027 年竣工，作为人类首个 ...",
-            "link": "https://www.zhihu.com/question/1966154271436310227",
-            "content": "Oct 27, 2025&ensp;&#0183;&ensp;我认为 BEST 是 实验装置 而非“聚变发电装置”，强行接入电网的话，BEST 的电价会很难看，而且其电价在预计 20 年的工作寿命范围内无法有效降低。 当然，“人类历史上首个实现聚变发 …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "邮件中best regards如何使用 - 百度知道",
-            "link": "https://zhidao.baidu.com/question/1971362416815298340.html",
-            "content": "Oct 26, 2024&ensp;&#0183;&ensp;邮件中best regards如何使用使用场景广泛，包括商务、个人以及感谢信等。一般置于邮件末尾，紧接正文的最后行。Best regards 后紧跟逗号，随后附上您的名字或昵称。还有其他类似表 …",
-            "freshnessScore": 50
-          }
-        ]
+        "count": 0,
+        "ok": false,
+        "error": "disabled",
+        "items": []
       }
     },
     {
       "query": "how to use a vibrator",
-      "liveSignalScore": 80,
+      "liveSignalScore": 100,
       "reddit": {
         "count": 5,
         "ok": true,
@@ -667,7 +613,7 @@
           {
             "title": "I bought a vibrator and idk how to use it",
             "subreddit": "WomensHealth",
-            "score": 3,
+            "score": 4,
             "painPoints": [],
             "buyingSignals": [
               "purchase_mention",
@@ -688,7 +634,7 @@
           {
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4143,
+            "score": 4152,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -704,7 +650,7 @@
           {
             "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4193,
+            "score": 4190,
             "painPoints": [
               "buyer_remorse",
               "quality_issue",
@@ -719,53 +665,17 @@
           {
             "title": "Happy 20 years sober to Patrick Fabian",
             "subreddit": "betterCallSaul",
-            "score": 12879,
+            "score": 12885,
             "painPoints": [],
             "buyingSignals": []
           }
         ]
       },
       "googleNews": {
-        "count": 5,
-        "ok": true,
-        "error": "",
-        "items": [
-          {
-            "source": "news",
-            "title": "use of与use的区别 - 百度知道",
-            "link": "https://zhidao.baidu.com/question/1123040662991287979.html",
-            "content": "Jul 15, 2024&ensp;&#0183;&ensp;use of与use的区别 use是动词，意思是“用” 如：We use video for teaching. 我们用录像进行教学. use of 的use 是名词，后面接of介词 如： He gave me the use of his bike. 他让我使用他的 …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Use automatic captioning - YouTube Help - Google Help",
-            "link": "https://support.google.com/youtube/answer/6373554?hl=en",
-            "content": "YouTube can use speech recognition technology to automatically create captions for your videos. Note: These automatic captions are generated by machine learning algorithms, so the quality of the …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Use Keyword Planner - Google Ads Help",
-            "link": "https://support.google.com/google-ads/answer/7337243?hl=en",
-            "content": "Keyword Planner helps you research keywords for your Search campaigns. You can use this free tool to discover new keywords related to your business and see estimates of the searches they receive and …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Use another email to sign in to your Google Account",
-            "link": "https://support.google.com/accounts/answer/176347?hl=en&amp;co=GENIE.Platform%3DDesktop",
-            "content": "Google Ads: If you use your other email to use Google Ads, both your Gmail and other email address show up. Remove your email address from someone else’s Google Account If someone accidentally …",
-            "freshnessScore": 50
-          },
-          {
-            "source": "news",
-            "title": "Use music and sound effects from the Audio Library",
-            "link": "https://support.google.com/youtube/answer/3376882?hl=en",
-            "content": "In the Audio Library in YouTube Studio, you can find royalty-free production music and sound effects to use in your videos. Music and sound effects from the YouTube Audio Library&n",
-            "freshnessScore": 50
-          }
-        ]
+        "count": 0,
+        "ok": false,
+        "error": "disabled",
+        "items": []
       }
     }
   ]
