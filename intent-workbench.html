@@ -423,21 +423,39 @@
         return;
       }
       els.signals.innerHTML = signals.map((signal) => {
-        const redditItems = (signal.reddit?.topDiscussions || signal.reddit?.items || []).slice(0, 5).map((item) => {
+        const reddit = signal.reddit || {};
+        const stats = reddit.stats || {};
+        const posts = reddit.topDiscussions || [];
+        const postItems = posts.slice(0, 5).map((item) => {
           const buying = (item.buyingSignals || []).map(s => `<span style="color:var(--ok);font-size:12px;">${s}</span>`).join(' ');
           const pain = (item.painPoints || []).map(p => `<span style="color:var(--accent);font-size:12px;">${p}</span>`).join(' ');
-          return `<li><strong>${item.title || item.link || 'untitled'}</strong> ${item.subreddit ? `<span class="muted">r/${item.subreddit}</span>` : ''}
-            ${buying ? `<br>Buying: ${buying}` : ''}${pain ? `<br>Pain: ${pain}` : ''}</li>`;
+          const comp = (item.competitors || []).map(c => `<span style="color:var(--muted);font-size:12px;">${c}</span>`).join(' ');
+          return `<li>
+            <strong>${item.score || 0}↑ ${item.numComments || 0}💬</strong>
+            ${item.title || 'untitled'}
+            ${item.subreddit ? `<span class="muted">r/${item.subreddit}</span>` : ''}
+            ${buying ? `<br><span style="font-size:12px;">购买信号: ${buying}</span>` : ''}
+            ${pain ? `<br><span style="font-size:12px;">痛点: ${pain}</span>` : ''}
+            ${comp ? `<br><span style="font-size:12px;">竞品: ${comp}</span>` : ''}
+          </li>`;
         }).join('');
-        const newsItems = (signal.googleNews?.items || []).slice(0, 3).map((item) => `<li>${item.title || item.link || ''}</li>`).join('');
+
         return `
           <div class="signal">
             <strong>${signal.query}</strong>
-            <p class="muted">live score: ${signal.liveSignalScore ?? 0}</p>
-            <p>Reddit: ${signal.reddit?.ok ? `${signal.reddit.count} results (${signal.reddit.mode || ''})` : (signal.reddit?.error || '不可用')}</p>
-            ${redditItems ? `<ul>${redditItems}</ul>` : ''}
-            <p style="margin-top:10px;">News: ${signal.googleNews?.ok ? `${signal.googleNews.count} 条` : (signal.googleNews?.error || '不可用')}</p>
-            ${newsItems ? `<ul>${newsItems}</ul>` : ''}
+            <p class="muted">live score: ${signal.liveSignalScore ?? 0} | 数据源: Reddit Only</p>
+            ${reddit.ok ? `
+              <p>Reddit: ${reddit.count} 条帖子 (模式: ${reddit.mode || '-'})</p>
+              <p style="font-size:13px;">
+                热度 avg=${stats.avgScore || 0}, max=${stats.maxScore || 0} |
+                评论 avg=${stats.avgComments || 0} |
+                购买信号=${stats.totalBuyingSignals || 0} |
+                痛点=${stats.totalPainPoints || 0}
+                ${(stats.competitors || []).length ? `<br>竞品提及: ${(stats.competitors || []).join(', ')}` : ''}
+              </p>
+              ${(stats.subreddits || []).length ? `<p style="font-size:12px;">子版块: ${(stats.subreddits || []).map(s => `<span class="pill">r/${s}</span>`).join(' ')}</p>` : ''}
+            ` : `<p>Reddit: ${reddit.error || '不可用'}</p>`}
+            ${postItems ? `<ul>${postItems}</ul>` : ''}
           </div>
         `;
       }).join('');

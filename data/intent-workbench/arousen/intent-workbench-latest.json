@@ -1,7 +1,7 @@
 {
   "brand": "arousen",
   "website": "https://arousen.com",
-  "generatedAt": "2026-04-20T19:17:43.808Z",
+  "generatedAt": "2026-04-20T19:39:23.780Z",
   "taxonomyVersion": 2,
   "llmEnabled": true,
   "llmResearch": {
@@ -9,19 +9,15 @@
     "classification": {
       "primaryIntent": "review",
       "searchQueries": [
-        "Lovense review",
-        "Lovense vs other vibrators",
-        "Lovense pros and cons",
-        "Lovense user experience",
-        "Lovense disappointed reviews"
+        "lovense product review",
+        "pros and cons of lovense",
+        "real user reviews of lovense"
       ],
-      "standaloneQuery": "Lovense review",
+      "standaloneQuery": "lovense review",
       "followUpQueries": [
-        "How does Lovense compare to other brands?",
-        "What are the most common issues with Lovense?",
-        "Are there any alternatives to Lovense?",
-        "What are the best features of Lovense?",
-        "How long does Lovense last?"
+        "how does lovense compare to other products?",
+        "are there any common issues with lovense?",
+        "what are the best features of lovense?"
       ]
     },
     "iterations": 3,
@@ -456,7 +452,7 @@
       "contentFormat": "review_page",
       "brandFitness": 30,
       "brandFitnessLabel": "low",
-      "liveSignalScore": 55,
+      "liveSignalScore": 22,
       "priority": "P1"
     }
   ],
@@ -718,7 +714,7 @@
       "contentFormat": "review_page",
       "brandFitness": 30,
       "brandFitnessLabel": "low",
-      "liveSignalScore": 55,
+      "liveSignalScore": 22,
       "priority": "P1"
     },
     {
@@ -871,13 +867,225 @@
       "contentFormat": "review_page",
       "brandFitness": 30,
       "brandFitnessLabel": "low",
-      "liveSignalScore": 55,
+      "liveSignalScore": 22,
       "priority": "P1"
     }
   ],
   "liveSignals": [
     {
-      "query": "Lovense review",
+      "query": "lovense product review",
+      "liveSignalScore": 33,
+      "reddit": {
+        "ok": true,
+        "count": 8,
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
+              "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
+              "subreddit": "Python",
+              "score": 9,
+              "buyingSignals": [],
+              "painPoints": [
+                "battery_issue",
+                "discretion_issue"
+              ],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "6 months, 40 downloads, 0 in revenue. Apple matched my gift app's ads to \"pickle\" and an adult toy brand. I have screenshots.",
+              "link": "https://reddit.com/r/SideProject/comments/1s0n7qv/6_months_40_downloads_0_in_revenue_apple_matched/",
+              "subreddit": "SideProject",
+              "score": 1,
+              "buyingSignals": [
+                "gift_intent"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            },
+            {
+              "title": "[IGN; 9/10] Netflix's 'One Piece' Season 2 Review: With grand production design, exquisite costuming, and stunning VFX work, and the most adorable reindeer doctor, this live-action manga adaptation is nothing short of a miracle",
+              "link": "https://reddit.com/r/television/comments/1rpuc7v/ign_910_netflixs_one_piece_season_2_review_with/",
+              "subreddit": "television",
+              "score": 2846,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "[WON] There is belief among those in WWE that after all the hype, Wrestlepalooza was a failure for a first show on ESPN. Paul Levesque reacted to the negative reviews on Wrestlepalooza during a production meeting, saying, “We work them (the fans). They don’t work us.\"",
+              "link": "https://reddit.com/r/SquaredCircle/comments/1o93nt4/won_there_is_belief_among_those_in_wwe_that_after/",
+              "subreddit": "SquaredCircle",
+              "score": 1923,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "World in $1.5tn ‘plastics crisis’ hitting health from infancy to old age, report warns. Plastic production has increased more than 200 times since 1950 and hits health at every stage from extraction to disposal, says review in the Lancet.",
+              "link": "https://reddit.com/r/science/comments/1mh52gm/world_in_15tn_plastics_crisis_hitting_health_from/",
+              "subreddit": "science",
+              "score": 5143,
+              "buyingSignals": [],
+              "painPoints": [],
+              "competitors": []
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 1,
+            "totalPainPoints": 2,
+            "competitorMentions": [
+              "lovense"
+            ]
+          }
+        }
+      },
+      "googleNews": {
+        "ok": false,
+        "count": 0,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "pros and cons of lovense",
+      "liveSignalScore": 8,
+      "reddit": {
+        "ok": true,
+        "count": 1,
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "MultiStreaming questions",
+              "link": "https://reddit.com/r/CamGirlProblems/comments/1n36rm0/multistreaming_questions/",
+              "subreddit": "CamGirlProblems",
+              "score": 0,
+              "buyingSignals": [
+                "considering"
+              ],
+              "painPoints": [],
+              "competitors": [
+                "lovense"
+              ]
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 1,
+            "totalPainPoints": 0,
+            "competitorMentions": [
+              "lovense"
+            ]
+          }
+        }
+      },
+      "googleNews": {
+        "ok": false,
+        "count": 0,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "real user reviews of lovense",
+      "liveSignalScore": 89,
+      "reddit": {
+        "ok": true,
+        "count": 8,
+        "mode": "direct_api",
+        "error": "",
+        "items": [],
+        "deepAnalysis": {
+          "topDiscussions": [
+            {
+              "title": "[Real-User Invite] LG UltraGear 5K2K GX9: The Ultimate Sweet Spot of UltraWide OLED Gaming Monitor",
+              "link": "https://reddit.com/r/ultrawidemasterrace/comments/1k48jzt/realuser_invite_lg_ultragear_5k2k_gx9_the/",
+              "subreddit": "ultrawidemasterrace",
+              "score": 817,
+              "buyingSignals": [
+                "considering"
+              ],
+              "painPoints": [],
+              "competitors": []
+            },
+            {
+              "title": "A Redditor Criticized ICE. Trump Is Trying to Unmask Them by Dragging the Company to a Secret Grand Jury.",
+              "link": "https://reddit.com/r/Fauxmoi/comments/1shj6zn/a_redditor_criticized_ice_trump_is_trying_to/",
+              "subreddit": "Fauxmoi",
+              "score": 12368,
+              "buyingSignals": [
+                "purchase_mention",
+                "comparison_shopping"
+              ],
+              "painPoints": [
+                "buyer_remorse"
+              ],
+              "competitors": []
+            },
+            {
+              "title": "Huntarr - Your passwords and your entire arr stack's API keys are exposed to anyone on your network, or worse, the internet.",
+              "link": "https://reddit.com/r/selfhosted/comments/1rckopd/huntarr_your_passwords_and_your_entire_arr_stacks/",
+              "subreddit": "selfhosted",
+              "score": 9586,
+              "buyingSignals": [
+                "price_sensitivity"
+              ],
+              "painPoints": [
+                "buyer_remorse"
+              ],
+              "competitors": []
+            },
+            {
+              "title": "I traced $2 billion in nonprofit grants and 45 states of lobbying records to figure out who's behind the age verification bills. The answer involves a company that profits from your data writing laws that collect more of it.",
+              "link": "https://reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+              "subreddit": "linux",
+              "score": 14997,
+              "buyingSignals": [
+                "considering",
+                "comparison_shopping"
+              ],
+              "painPoints": [
+                "usability_issue"
+              ],
+              "competitors": []
+            },
+            {
+              "title": "things go nuclear in r/falloutmemes when a mod removes a meme, deeming anything transgender as “political”",
+              "link": "https://reddit.com/r/SubredditDrama/comments/1rivlpn/things_go_nuclear_in_rfalloutmemes_when_a_mod/",
+              "subreddit": "SubredditDrama",
+              "score": 5279,
+              "buyingSignals": [],
+              "painPoints": [
+                "usability_issue"
+              ],
+              "competitors": []
+            }
+          ],
+          "aggregatedSignals": {
+            "totalBuyingSignals": 11,
+            "totalPainPoints": 5,
+            "competitorMentions": []
+          }
+        }
+      },
+      "googleNews": {
+        "ok": false,
+        "count": 0,
+        "error": "no_results",
+        "items": []
+      }
+    },
+    {
+      "query": "lovense review -buying_signals -pain_points",
       "liveSignalScore": 55,
       "reddit": {
         "ok": true,
@@ -902,7 +1110,7 @@
               "title": "[Showcase] I over-engineered a Python SDK for Lovense devices (Async, Pydantic)",
               "link": "https://reddit.com/r/Python/comments/1rz7620/showcase_i_overengineered_a_python_sdk_for/",
               "subreddit": "Python",
-              "score": 9,
+              "score": 8,
               "buyingSignals": [],
               "painPoints": [
                 "battery_issue",
@@ -916,7 +1124,7 @@
               "title": "Advice please!!",
               "link": "https://reddit.com/r/CamGirlProblems/comments/1s44eu1/advice_please/",
               "subreddit": "CamGirlProblems",
-              "score": 7,
+              "score": 6,
               "buyingSignals": [
                 "seeking_recommendation",
                 "price_sensitivity"
@@ -966,222 +1174,7 @@
       }
     },
     {
-      "query": "Lovense vs other vibrators",
-      "liveSignalScore": 53,
-      "reddit": {
-        "ok": true,
-        "count": 4,
-        "mode": "direct_api",
-        "error": "",
-        "items": [],
-        "deepAnalysis": {
-          "topDiscussions": [
-            {
-              "title": "Take My girl Cock or Fuck My Ass",
-              "link": "https://reddit.com/r/Emmatslov27/comments/1sqq2r1/take_my_girl_cock_or_fuck_my_ass/",
-              "subreddit": "Emmatslov27",
-              "score": 3,
-              "buyingSignals": [
-                "comparison_shopping",
-                "gift_intent"
-              ],
-              "painPoints": [
-                "quality_issue",
-                "fit_comfort"
-              ],
-              "competitors": [
-                "lovense"
-              ]
-            },
-            {
-              "title": "Shemale cock? Mine could be all yours…",
-              "link": "https://reddit.com/r/Emmatslov27/comments/1sqpal0/shemale_cock_mine_could_be_all_yours/",
-              "subreddit": "Emmatslov27",
-              "score": 3,
-              "buyingSignals": [
-                "comparison_shopping",
-                "gift_intent"
-              ],
-              "painPoints": [
-                "fit_comfort"
-              ],
-              "competitors": [
-                "lovense",
-                "dame"
-              ]
-            },
-            {
-              "title": "Lights, Camera, Action! (the tech of it all)",
-              "link": "https://reddit.com/r/CamGirlProblems/comments/1ndhhr1/lights_camera_action_the_tech_of_it_all/",
-              "subreddit": "CamGirlProblems",
-              "score": 36,
-              "buyingSignals": [
-                "comparison_shopping"
-              ],
-              "painPoints": [],
-              "competitors": [
-                "lovense"
-              ]
-            },
-            {
-              "title": "How to Choose a Remote Control Vibrator in 2026 (Noise, App Control, Materials Explained)",
-              "link": "https://reddit.com/r/ThePassionPortal/comments/1rxx2k8/how_to_choose_a_remote_control_vibrator_in_2026/",
-              "subreddit": "ThePassionPortal",
-              "score": 3,
-              "buyingSignals": [
-                "comparison_shopping",
-                "price_sensitivity"
-              ],
-              "painPoints": [],
-              "competitors": [
-                "lovense",
-                "satisfyer"
-              ]
-            }
-          ],
-          "aggregatedSignals": {
-            "totalBuyingSignals": 7,
-            "totalPainPoints": 3,
-            "competitorMentions": [
-              "lovense",
-              "dame",
-              "satisfyer"
-            ]
-          }
-        }
-      },
-      "googleNews": {
-        "ok": false,
-        "count": 0,
-        "error": "no_results",
-        "items": []
-      }
-    },
-    {
-      "query": "Lovense pros and cons",
-      "liveSignalScore": 16,
-      "reddit": {
-        "ok": true,
-        "count": 2,
-        "mode": "direct_api",
-        "error": "",
-        "items": [],
-        "deepAnalysis": {
-          "topDiscussions": [
-            {
-              "title": "MultiStreaming questions",
-              "link": "https://reddit.com/r/CamGirlProblems/comments/1n36rm0/multistreaming_questions/",
-              "subreddit": "CamGirlProblems",
-              "score": 0,
-              "buyingSignals": [
-                "considering"
-              ],
-              "painPoints": [],
-              "competitors": [
-                "lovense"
-              ]
-            },
-            {
-              "title": "SM",
-              "link": "https://reddit.com/r/CamGirlProblems/comments/1l4dzif/sm/",
-              "subreddit": "CamGirlProblems",
-              "score": 5,
-              "buyingSignals": [
-                "value_assessment"
-              ],
-              "painPoints": [],
-              "competitors": []
-            }
-          ],
-          "aggregatedSignals": {
-            "totalBuyingSignals": 2,
-            "totalPainPoints": 0,
-            "competitorMentions": [
-              "lovense"
-            ]
-          }
-        }
-      },
-      "googleNews": {
-        "ok": false,
-        "count": 0,
-        "error": "no_results",
-        "items": []
-      }
-    },
-    {
-      "query": "Lovense review |flair:Review",
-      "liveSignalScore": 34,
-      "reddit": {
-        "ok": true,
-        "count": 8,
-        "mode": "direct_api",
-        "error": "",
-        "items": [],
-        "deepAnalysis": {
-          "topDiscussions": [
-            {
-              "title": "Pokémon Legends Z-A Review: A love letter to older fans that betters Arceus in every way | VGC",
-              "link": "https://reddit.com/r/NintendoSwitch/comments/1o6eutp/pokémon_legends_za_review_a_love_letter_to_older/",
-              "subreddit": "NintendoSwitch",
-              "score": 1767,
-              "buyingSignals": [],
-              "painPoints": [],
-              "competitors": []
-            },
-            {
-              "title": "PC Gamer Marathon review | 90/100",
-              "link": "https://reddit.com/r/Games/comments/1s2sp6a/pc_gamer_marathon_review_90100/",
-              "subreddit": "Games",
-              "score": 861,
-              "buyingSignals": [],
-              "painPoints": [],
-              "competitors": []
-            },
-            {
-              "title": "Super Mario Galaxy 1+2 review: Despite pointer issues, this is still 3D platforming at its very best | VGC",
-              "link": "https://reddit.com/r/NintendoSwitch/comments/1nuckhq/super_mario_galaxy_12_review_despite_pointer/",
-              "subreddit": "NintendoSwitch",
-              "score": 1336,
-              "buyingSignals": [],
-              "painPoints": [],
-              "competitors": []
-            },
-            {
-              "title": "Pokémon Pokopia Review: Minecraft and Animal Crossing combine in Pokémon’s best spin-off | VGC",
-              "link": "https://reddit.com/r/NintendoSwitch/comments/1risb11/pokémon_pokopia_review_minecraft_and_animal/",
-              "subreddit": "NintendoSwitch",
-              "score": 1089,
-              "buyingSignals": [],
-              "painPoints": [],
-              "competitors": []
-            },
-            {
-              "title": "Parasakthi | Review Megathread",
-              "link": "https://reddit.com/r/kollywood/comments/1q84agm/parasakthi_review_megathread/",
-              "subreddit": "kollywood",
-              "score": 322,
-              "buyingSignals": [],
-              "painPoints": [],
-              "competitors": []
-            }
-          ],
-          "aggregatedSignals": {
-            "totalBuyingSignals": 2,
-            "totalPainPoints": 0,
-            "competitorMentions": []
-          }
-        }
-      },
-      "googleNews": {
-        "ok": false,
-        "count": 0,
-        "error": "no_results",
-        "items": []
-      }
-    },
-    {
-      "query": "https://www.reddit.com/r/CamGirlProblems/comments/10v5z8/lovense_mini_portable_fuck_machine_reviews/",
+      "query": "https://www.reddit.com/r/Python/comments/10x5z0q/showcase_i_over_engineered_a_python_sdk_for_lovense_devices/",
       "liveSignalScore": 0,
       "reddit": {
         "ok": false,
@@ -1234,7 +1227,7 @@
             "title": "Best vibrator for newly weds",
             "link": "https://reddit.com/r/ldssexuality/comments/1o8lxvh/best_vibrator_for_newly_weds/",
             "subreddit": "ldssexuality",
-            "score": 31,
+            "score": 30,
             "numComments": 37,
             "buyingSignals": [
               "purchase_mention",
@@ -1248,7 +1241,7 @@
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4154,
+            "score": 4147,
             "numComments": 786,
             "buyingSignals": [
               "purchase_mention",
@@ -1268,7 +1261,7 @@
             "title": "AITA for changing Christmas plans with a newborn over a guest being unvaccinated?",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1r60ipe/aita_for_changing_christmas_plans_with_a_newborn/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 1950,
+            "score": 1941,
             "numComments": 382,
             "buyingSignals": [
               "seeking_recommendation",
@@ -1288,7 +1281,7 @@
             "title": "A year in review - Everything changed.",
             "link": "https://reddit.com/r/NevilleGoddard/comments/1rffx3y/a_year_in_review_everything_changed/",
             "subreddit": "NevilleGoddard",
-            "score": 1339,
+            "score": 1344,
             "numComments": 368,
             "buyingSignals": [
               "value_assessment",
@@ -1323,7 +1316,7 @@
             "title": "Best vibrator for newly weds",
             "link": "https://reddit.com/r/ldssexuality/comments/1o8lxvh/best_vibrator_for_newly_weds/",
             "subreddit": "ldssexuality",
-            "score": 31,
+            "score": 30,
             "numComments": 37,
             "buyingSignals": [
               "purchase_mention",
@@ -1337,7 +1330,7 @@
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4154,
+            "score": 4147,
             "numComments": 786,
             "buyingSignals": [
               "purchase_mention",
@@ -1357,7 +1350,7 @@
             "title": "AITA for changing Christmas plans with a newborn over a guest being unvaccinated?",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1r60ipe/aita_for_changing_christmas_plans_with_a_newborn/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 1950,
+            "score": 1941,
             "numComments": 382,
             "buyingSignals": [
               "seeking_recommendation",
@@ -1377,7 +1370,7 @@
             "title": "A year in review - Everything changed.",
             "link": "https://reddit.com/r/NevilleGoddard/comments/1rffx3y/a_year_in_review_everything_changed/",
             "subreddit": "NevilleGoddard",
-            "score": 1339,
+            "score": 1344,
             "numComments": 368,
             "buyingSignals": [
               "value_assessment",
@@ -1417,7 +1410,7 @@
             "title": "Best vibrator",
             "link": "https://reddit.com/r/TwoXChromosomes/comments/1q7x4ix/best_vibrator/",
             "subreddit": "TwoXChromosomes",
-            "score": 1,
+            "score": 0,
             "numComments": 17,
             "buyingSignals": [],
             "painPoints": [],
@@ -1443,7 +1436,7 @@
             "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
             "link": "https://reddit.com/r/Construction/comments/1rzd0nr/looking_for_the_best_antivibration_gloves_any/",
             "subreddit": "Construction",
-            "score": 1499,
+            "score": 1494,
             "numComments": 651,
             "buyingSignals": [
               "seeking_recommendation"
@@ -1456,7 +1449,7 @@
             "title": "Newey's Caught You All Sleeping.",
             "link": "https://reddit.com/r/formula1/comments/1rnlcig/neweys_caught_you_all_sleeping/",
             "subreddit": "formula1",
-            "score": 10032,
+            "score": 10034,
             "numComments": 1066,
             "buyingSignals": [
               "comparison_shopping",
@@ -1495,7 +1488,7 @@
             "title": "Best vibrator",
             "link": "https://reddit.com/r/TwoXChromosomes/comments/1q7x4ix/best_vibrator/",
             "subreddit": "TwoXChromosomes",
-            "score": 1,
+            "score": 0,
             "numComments": 17,
             "buyingSignals": [],
             "painPoints": [],
@@ -1521,7 +1514,7 @@
             "title": "Looking for the best “anti-vibration” gloves. Any recommendations?",
             "link": "https://reddit.com/r/Construction/comments/1rzd0nr/looking_for_the_best_antivibration_gloves_any/",
             "subreddit": "Construction",
-            "score": 1499,
+            "score": 1494,
             "numComments": 651,
             "buyingSignals": [
               "seeking_recommendation"
@@ -1534,7 +1527,7 @@
             "title": "Newey's Caught You All Sleeping.",
             "link": "https://reddit.com/r/formula1/comments/1rnlcig/neweys_caught_you_all_sleeping/",
             "subreddit": "formula1",
-            "score": 10032,
+            "score": 10034,
             "numComments": 1066,
             "buyingSignals": [
               "comparison_shopping",
@@ -1624,7 +1617,7 @@
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4152,
+            "score": 4150,
             "numComments": 786,
             "buyingSignals": [
               "purchase_mention",
@@ -1644,7 +1637,7 @@
             "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1raiaxm/i_think_my_sister_just_ruined_our_dads_engagement/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4190,
+            "score": 4192,
             "numComments": 917,
             "buyingSignals": [
               "seeking_recommendation",
@@ -1663,7 +1656,7 @@
             "title": "Happy 20 years sober to Patrick Fabian",
             "link": "https://reddit.com/r/betterCallSaul/comments/1s5cubv/happy_20_years_sober_to_patrick_fabian/",
             "subreddit": "betterCallSaul",
-            "score": 12885,
+            "score": 12879,
             "numComments": 238,
             "buyingSignals": [],
             "painPoints": [],
@@ -1705,7 +1698,7 @@
             "title": "[New Update]: I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1sdod7o/new_update_i_think_my_sister_just_ruined_our_dads/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4152,
+            "score": 4150,
             "numComments": 786,
             "buyingSignals": [
               "purchase_mention",
@@ -1725,7 +1718,7 @@
             "title": "I think my sister just ruined our dad’s engagement to an amazing woman, and I hate her so much",
             "link": "https://reddit.com/r/BestofRedditorUpdates/comments/1raiaxm/i_think_my_sister_just_ruined_our_dads_engagement/",
             "subreddit": "BestofRedditorUpdates",
-            "score": 4190,
+            "score": 4192,
             "numComments": 917,
             "buyingSignals": [
               "seeking_recommendation",
@@ -1744,7 +1737,7 @@
             "title": "Happy 20 years sober to Patrick Fabian",
             "link": "https://reddit.com/r/betterCallSaul/comments/1s5cubv/happy_20_years_sober_to_patrick_fabian/",
             "subreddit": "betterCallSaul",
-            "score": 12885,
+            "score": 12879,
             "numComments": 238,
             "buyingSignals": [],
             "painPoints": [],
