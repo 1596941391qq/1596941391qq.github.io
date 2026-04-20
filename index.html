@@ -79,13 +79,7 @@
     .about-img-row .img-slot{border:1px solid var(--rule);border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:var(--bg-alt)}
     .about-img-row .img-slot img{width:100%;height:100%;object-fit:cover}
 
-    /* STATS BAR */
-    .stats-bar{padding:40px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-    .stats-row{display:flex;justify-content:space-between;gap:24px;text-align:center}
-    .stat-num{font-family:var(--mono);font-size:clamp(24px,4vw,36px);font-weight:600;color:var(--ink);display:block}
-    .stat-label{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;display:block;margin-top:4px}
-
-    /* THINKING */
+/* THINKING */
     .think-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
     .think-piece{border-left:1px solid var(--rule-s);padding-left:18px}
     .think-piece p{font-size:16px;line-height:1.85;color:var(--ink-s)}
@@ -158,10 +152,7 @@
       .nav-links{display:none}
       .gos-banner{grid-template-columns:1fr;gap:16px}
       .kb-grid,.think-grid,.prod-grid,.tools-grid{grid-template-columns:1fr}
-      .about-img-row,.stats-row{grid-template-columns:1fr 2}
-      .stats-row{flex-wrap:wrap;justify-content:center}
-      .stat{min-width:120px}
-      .hero-sub{font-size:16px}
+      .about-img-row{grid-template-columns:1fr}.hero-sub{font-size:16px}
       nav{padding:12px 16px}.wrap{padding:0 16px}
     }
     body.sw *{transition:background .5s,color .5s,border-color .5s!important}
@@ -185,7 +176,7 @@
   <!-- ==================== HERO ==================== -->
   <div class="hero">
     <div class="hero-photo" id="heroAvatar"><img src="images/avatar.jpg" alt="weihacking"></div>
-    <div class="hero-tag" data-zh="SEO / GEO 策略师 · hacking 周刊作者" data-en="SEO / GEO Strategist · hacking Newsletter">SEO / GEO 策略师 · hacking 周刊作者</div>
+    <div class="hero-tag" data-zh="SEO / GEO 策略师 · hacking 周刊作者 · Soulcraft Limited" data-en="SEO / GEO Strategist · hacking Newsletter · Soulcraft Limited">SEO / GEO 策略师 · hacking 周刊作者 · Soulcraft Limited</div>
     <h1 data-zh="wei<em>hacking</em>" data-en="wei<em>hacking</em>">wei<em>hacking</em></h1>
     <div class="hero-sub" data-zh="六年实战，200+ 客户。在搜索引擎和 AI 的交叉地带找缝隙。不卖概念，只交付数字。" data-en="Six years in the trenches. 200+ clients. Finding the gaps between search and AI. No buzzwords — just numbers.">六年实战，200+ 客户。在搜索引擎和 AI 的交叉地带找缝隙。不卖概念，只交付数字。</div>
     <div class="hero-links">
@@ -210,18 +201,6 @@
     </div>
   </section>
 
-  <!-- ==================== STATS BAR ==================== -->
-  <div class="stats-bar">
-    <div class="wrap">
-      <div class="stats-row">
-        <div class="stat"><span class="stat-num">200+</span><span class="stat-label" data-zh="品牌客户" data-en="Brands Served">品牌客户</span></div>
-        <div class="stat"><span class="stat-num">6</span><span class="stat-label" data-zh="年实战" data-en="Years Active">年实战</span></div>
-        <div class="stat"><span class="stat-num">60万</span><span class="stat-label" data-zh="字知识库" data-en="Words in KB">字知识库</span></div>
-        <div class="stat"><span class="stat-num">33</span><span class="stat-label" data-zh="篇文档" data-en="Documents">篇文档</span></div>
-      </div>
-    </div>
-  </div>
-
   <!-- ==================== THINKING ==================== -->
   <section id="thinking">
     <div class="wrap">
@@ -236,6 +215,9 @@
           <p data-zh="凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——<br>说明昨晚那个<strong>「特别清楚」</strong>的感觉，不是来自洞察。<br>是来自疲惫。" data-en="Ideas at 2am: write them down. Morning verdict.<br>Still good? Then good.<br>Absurd? Then that clarity wasn't <strong>insight</strong>.<br>It was exhaustion.">凌晨两点的想法，写下来。第二天早上再看。<br>如果还觉得好，那就是真的好。<br>如果觉得荒谬——<br>说明昨晚那个<strong>「特别清楚」</strong>的感觉，不是来自洞察。<br>是来自疲惫。</p>
           <div class="think-date">2026-04-20</div>
         </div>
+      </div>
+      <div style="margin-top:28px;text-align:center">
+        <a href="https://x.com/weihacking" target="_blank" rel="noreferrer" style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;border:1px solid var(--rule);padding:6px 16px;display:inline-block;border-radius:2px" data-zh="更多推文 → @weihacking" data-en="More thoughts → @weihacking">更多推文 → @weihacking</a>
       </div>
     </div>
   </section>
