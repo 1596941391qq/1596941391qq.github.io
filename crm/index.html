@@ -54,6 +54,7 @@ textarea{resize:vertical;min-height:60px}
 .btn-accent:hover{filter:brightness(1.1)}
 .btn-ghost{color:var(--text2);border:1px solid var(--border)}
 .btn-ghost:hover{color:var(--text);border-color:var(--text3)}
+.btn-sm{padding:4px 10px;font-size:11px;border-radius:6px;font-weight:600}
 .kanban{display:flex;gap:12px;padding:0 20px 20px;flex:1;overflow-x:auto;overflow-y:hidden}
 .column{min-width:260px;max-width:320px;flex:1;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
 .col-header{padding:14px 16px 10px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;flex-shrink:0}
@@ -62,9 +63,11 @@ textarea{resize:vertical;min-height:60px}
 .col-body.drag-over{background:var(--accent-dim)}
 
 /* Card */
-.card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;cursor:grab;transition:border-color .15s,transform .1s}
+.card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;cursor:grab;transition:border-color .15s,transform .1s;display:flex;gap:10px}
 .card:hover{border-color:var(--text3)}
 .card.dragging{opacity:.5;transform:rotate(2deg)}
+.card-main{flex:1;min-width:0}
+.card-side{display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .card-title{font-size:14px;font-weight:700;margin-bottom:4px;line-height:1.3}
 .card-sub{font-size:12px;color:var(--text2);line-height:1.4}
 .card-badges{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
@@ -77,6 +80,8 @@ textarea{resize:vertical;min-height:60px}
 .badge-pri-high{background:rgba(239,68,68,.1);color:#dc2626}
 .badge-pri-med{background:var(--yellow-dim);color:var(--yellow)}
 .badge-pri-low{background:var(--green-dim);color:var(--green)}
+.badge-step{background:rgba(139,92,246,.1);color:#7c3aed}
+.card-step{font-size:12px;font-weight:700;color:#7c3aed;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);border-radius:6px;padding:6px 10px;white-space:nowrap;text-align:center;line-height:1.3}
 .card-phone{font-size:11px;color:var(--accent);margin-top:6px;font-weight:600}
 
 /* Modal */
@@ -166,6 +171,41 @@ const TASK_LABELS = {'todo':'Todo','in-progress':'In Progress','finish':'Finish'
 const SEGMENTS = ['A','B','C','D'];
 const PRIORITIES = ['high','medium','low'];
 
+// Stage sub-steps: each stage has an ordered list of action steps
+const STAGE_STEPS = {
+  '意向客户': ['首次接触','需求沟通','约电话','电话完成'],
+  '试水期': ['出方案','方案已发','报价谈判','签约付款'],
+  '正式期': ['项目启动','执行中','阶段交付','续费讨论'],
+  '暂停/流失': ['服务暂停','跟进中','已流失']
+};
+
+// All step names as a flat set for fast lookup
+const ALL_STEPS = new Set(Object.values(STAGE_STEPS).flat());
+
+// Derive current step from activities timeline
+// 1. Try to match a predefined step name for current stage
+// 2. If no match, fall back to the latest meaningful activity text
+function deriveStep(customer) {
+  const acts = customer.activities || [];
+  if (!acts.length) return '';
+  // System-generated texts to skip
+  const skipTexts = ['更新了客户信息', '阶段变更:'];
+  // First pass: look for a predefined step match
+  const steps = STAGE_STEPS[customer.stage] || [];
+  for (const act of acts) {
+    const t = act.text || '';
+    for (const step of steps) {
+      if (t === step || t.includes(step)) return step;
+    }
+  }
+  // Second pass: fall back to latest non-system activity
+  for (const act of acts) {
+    const t = act.text || '';
+    if (t && !skipTexts.some(s => t.startsWith(s))) return t;
+  }
+  return '';
+}
+
 // ═══════════════════════════════════════════
 // Section 2: State Manager
 // ═══════════════════════════════════════════
@@ -182,7 +222,6 @@ CRM.state = {
     return { meta:{ lastUpdated: new Date().toISOString(), version:1 }, customers:[], tasks:[] };
   },
 
-  // Merge remote data into local: take union by ID, newer updatedAt wins
   _merge(remote, local) {
     const mergeArrays = (a, b) => {
       const map = new Map();
@@ -210,7 +249,6 @@ CRM.state = {
       if (remote) {
         if (!remote.meta) remote.meta = { lastUpdated: new Date().toISOString(), version:1 };
         if (!remote.tasks) remote.tasks = [];
-        // Merge instead of overwrite: local changes won't be lost
         this.data = this._merge(remote, this.data);
         localStorage.setItem('crm_cache', JSON.stringify(this.data));
         CRM.ui.render();
@@ -224,7 +262,6 @@ CRM.state = {
 
   save() {
     this.data.meta.lastUpdated = new Date().toISOString();
-    // Backup previous state before overwriting
     const prev = localStorage.getItem('crm_cache');
     if (prev) localStorage.setItem('crm_cache_backup', prev);
     localStorage.setItem('crm_cache', JSON.stringify(this.data));
@@ -248,7 +285,6 @@ CRM.state = {
     }, 1000);
   },
 
-  // Customer CRUD
   addCustomer(c) {
     c.id = 'cust_' + Date.now();
     c.createdAt = new Date().toISOString();
@@ -266,13 +302,13 @@ CRM.state = {
     Object.assign(c, updates, { updatedAt: new Date().toISOString() });
     if (updates.stage && updates.stage !== oldStage) {
       c.activities = c.activities || [];
-      c.activities.unshift({ date: new Date().toISOString(), text: `阶段变更: ${oldStage} → ${updates.stage}` });
+      c.activities.unshift({ id: 'act_' + Date.now(), date: new Date().toISOString(), text: `阶段变更: ${oldStage} → ${updates.stage}` });
     }
     this.save();
   },
   deleteCustomer(id) {
     this.data.customers = this.data.customers.filter(x => x.id !== id);
-    this.data.tasks = this.data.tasks.filter(t => t.customerId !== id);
+    this.data.tasks = this.data.tasks.filter(t => t.customerId === id);
     this.save();
   },
   getCustomer(id) { return this.data.customers.find(x => x.id === id); },
@@ -281,12 +317,11 @@ CRM.state = {
     const c = this.getCustomer(custId);
     if (!c) return;
     c.activities = c.activities || [];
-    c.activities.unshift({ date: new Date().toISOString(), text });
+    c.activities.unshift({ id: 'act_' + Date.now(), date: new Date().toISOString(), text });
     c.updatedAt = new Date().toISOString();
     this.save();
   },
 
-  // Task CRUD
   addTask(t) {
     t.id = 'task_' + Date.now();
     t.createdAt = new Date().toISOString();
@@ -306,7 +341,6 @@ CRM.state = {
     this.save();
   },
 
-  // Stats
   getStats() {
     const cs = this.data.customers;
     const ts = this.data.tasks;
@@ -317,7 +351,7 @@ CRM.state = {
     cs.forEach(c => { stageCounts[c.stage] = (stageCounts[c.stage]||0) + 1; });
     const today = now.toISOString().slice(0,10);
     const appointments = cs.filter(c => c.phoneAppointment && c.phoneAppointment.slice(0,10) === today);
-    const overdue = ts.filter(t => t.dueDate && t.dueDate < today && t.status !== 'review');
+    const overdue = ts.filter(t => t.dueDate && t.dueDate < today && t.status !== 'review' && t.status !== 'finish');
     const newThisWeek = cs.filter(c => new Date(c.createdAt) >= weekAgo).length;
     return { total: cs.length, stageCounts, appointments, overdue, newThisWeek, taskByStatus: TASK_STATUS.reduce((a,s)=>{a[s]=ts.filter(t=>t.status===s).length;return a},{}) };
   }
@@ -361,14 +395,19 @@ CRM.data.customerColumns = () => STAGES;
 CRM.data.renderCustomerCard = (c) => {
   const segClass = 'badge-' + c.segment.toLowerCase();
   const phoneStr = c.phoneAppointment ? new Date(c.phoneAppointment).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+  const currentStep = deriveStep(c);
+  const stepHtml = currentStep ? `<div class="card-side"><div class="card-step">${esc(currentStep)}</div></div>` : '';
   return `<div class="card" draggable="true" data-id="${c.id}" data-type="customer">
-    <div class="card-title">${esc(c.company||c.name)}</div>
-    <div class="card-sub">${esc(c.name)}${c.website?' · '+esc(c.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'')):''}</div>
-    ${phoneStr ? `<div class="card-phone">📞 ${phoneStr}</div>` : ''}
-    <div class="card-badges">
-      <span class="badge ${segClass}">${c.segment}类</span>
-      ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+    <div class="card-main">
+      <div class="card-title">${esc(c.company||c.name)}</div>
+      <div class="card-sub">${esc(c.name)}${c.website?' · '+esc(c.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'')):''}</div>
+      ${phoneStr ? `<div class="card-phone">📞 ${phoneStr}</div>` : ''}
+      <div class="card-badges">
+        <span class="badge ${segClass}">${c.segment}类</span>
+        ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+      </div>
     </div>
+    ${stepHtml}
   </div>`;
 };
 
@@ -433,7 +472,7 @@ CRM.ui = {
       tb.innerHTML = `<input type="text" placeholder="搜索客户..." value="${esc(CRM.state.searchQuery)}" oninput="CRM.state.searchQuery=this.value;CRM.ui.renderKanban()">
         <button class="btn btn-accent" onclick="CRM.ui.openCustomerForm()">+ 添加客户</button>
         <button class="btn btn-ghost" onclick="CRM.ui.exportJSON()">导出</button>
-        <button class="btn btn-ghost" onclick="document.getElementById('importFile').click()">导入</button>
+        <button class="btn btn-ghost" onclick="CRM.ui.openImportGuide()">导入</button>
         <input type="file" id="importFile" accept=".json" style="display:none" onchange="CRM.ui.importJSON(event)">`;
     } else {
       tb.innerHTML = `<input type="text" placeholder="搜索任务..." value="${esc(CRM.state.searchQuery)}" oninput="CRM.state.searchQuery=this.value;CRM.ui.renderKanban()">
@@ -464,7 +503,6 @@ CRM.ui = {
         </div>`;
       }).join('');
     }
-    // Bind drag events on cards
     kb.querySelectorAll('.card[draggable]').forEach(card => {
       card.addEventListener('dragstart', CRM.ui.onDragStart);
       card.addEventListener('dragend', CRM.ui.onDragEnd);
@@ -502,6 +540,8 @@ CRM.ui = {
   openCustomerForm(existing) {
     const c = existing || { name:'', company:'', website:'', contact:'', segment:'B', stage:'意向客户', services:[], phoneAppointment:'', phoneAppointmentNote:'', notes:'' };
     const isEdit = !!existing;
+    const currentStep = deriveStep(c);
+    const stepsForStage = STAGE_STEPS[c.stage] || [];
     document.getElementById('modalContent').innerHTML = `
       <h2>${isEdit?'编辑':'添加'}客户</h2>
       <div class="modal-grid">
@@ -539,8 +579,16 @@ CRM.ui = {
     };
     if (!d.name && !d.company) return alert('至少填写联系人或公司名');
     if (id) {
-      CRM.state.updateCustomer(id, d);
-      CRM.state.addActivity(id, '更新了客户信息');
+      const c = CRM.state.getCustomer(id);
+      if (!c) return;
+      const oldStage = c.stage;
+      Object.assign(c, d, { updatedAt: new Date().toISOString() });
+      c.activities = c.activities || [];
+      if (d.stage && d.stage !== oldStage) {
+        c.activities.unshift({ id: 'act_' + Date.now(), date: new Date().toISOString(), text: `阶段变更: ${oldStage} → ${d.stage}` });
+      }
+      c.activities.unshift({ id: 'act_' + (Date.now() + 1), date: new Date().toISOString(), text: '更新了客户信息' });
+      CRM.state.save();
     } else {
       CRM.state.addCustomer(d);
     }
@@ -551,10 +599,18 @@ CRM.ui = {
     const c = CRM.state.getCustomer(id);
     if (!c) return;
     const acts = (c.activities||[]).slice(0, 20);
+    const currentStep = deriveStep(c);
+    const stepBadge = currentStep ? `<span class="badge badge-step">${esc(currentStep)}</span>` : '';
+    const stepsForStage = STAGE_STEPS[c.stage] || [];
+    const stepButtons = stepsForStage.map(s => {
+      const isActive = s === currentStep;
+      return `<button class="btn btn-sm ${isActive?'btn-accent':'btn-ghost'}" onclick="CRM.ui.advanceStep('${c.id}','${s}')">${esc(s)}</button>`;
+    }).join(' ');
     document.getElementById('modalContent').innerHTML = `
-      <h2 style="display:flex;align-items:center;gap:8px">${esc(c.company||c.name)}
+      <h2 style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${esc(c.company||c.name)}
         <span class="badge badge-${c.segment.toLowerCase()}">${c.segment}类</span>
         <span class="badge" style="background:var(--accent-dim);color:var(--accent)">${c.stage}</span>
+        ${stepBadge}
       </h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:13px;color:var(--text2);margin-bottom:16px">
         ${c.name?`<div>联系人: ${esc(c.name)}</div>`:''}
@@ -564,11 +620,15 @@ CRM.ui = {
         ${(c.services||[]).length?`<div>服务: ${c.services.map(s=>esc(s)).join(', ')}</div>`:''}
       </div>
       ${c.notes?`<div style="font-size:13px;color:var(--text2);padding:12px;background:var(--surface);border-radius:6px;margin-bottom:16px">${esc(c.notes)}</div>`:''}
+      <div style="margin-bottom:16px">
+        <h3 style="font-size:13px;margin-bottom:8px">当前阶段步骤</h3>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">${stepButtons || '<span style="font-size:12px;color:var(--text3)">暂无步骤定义</span>'}</div>
+      </div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
         <h3 style="font-size:14px">活动时间线</h3>
         <button class="btn btn-ghost" style="font-size:11px;padding:4px 10px" onclick="CRM.ui.addActivityPrompt('${c.id}')">+ 添加记录</button>
       </div>
-      ${acts.length ? `<div class="timeline">${acts.map(a=>`<div class="tl-item"><div class="tl-date">${new Date(a.date).toLocaleString('zh-CN')}</div><div class="tl-text">${esc(a.text)}</div></div>`).join('')}</div>` : '<div class="empty">暂无活动记录</div>'}
+      ${acts.length ? `<div class="timeline">${acts.map(a=>{const aid=a.id||'';return `<div class="tl-item"><div class="tl-date">${new Date(a.date).toLocaleString('zh-CN')}</div><div class="tl-text">${esc(a.text)}</div><div style="display:flex;gap:4px;margin-top:2px"><button class="btn btn-ghost btn-sm" onclick="CRM.ui.editActivity('${c.id}','${aid}')">编辑</button><button class="btn btn-ghost btn-sm" style="color:#ef4444" onclick="CRM.ui.deleteActivity('${c.id}','${aid}')">删除</button></div></div>`}).join('')}</div>` : '<div class="empty">暂无活动记录</div>'}
       <div class="modal-actions">
         <button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteCustomer('${c.id}');CRM.ui.closeModal()}">删除</button>
         <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">关闭</button>
@@ -577,10 +637,47 @@ CRM.ui = {
     this.openModal();
   },
 
+  // Advance step: just add activity, deriveStep will pick it up
+  advanceStep(custId, stepName) {
+    const c = CRM.state.getCustomer(custId);
+    if (!c) return;
+    const oldStep = deriveStep(c);
+    CRM.state.addActivity(custId, stepName);
+    // Re-open detail to refresh UI
+    this.openCustomerDetail(custId);
+  },
+
   addActivityPrompt(custId) {
     const text = prompt('添加活动记录:');
     if (text && text.trim()) {
       CRM.state.addActivity(custId, text.trim());
+      this.openCustomerDetail(custId);
+    }
+  },
+
+  editActivity(custId, actId) {
+    const c = CRM.state.getCustomer(custId);
+    if (!c || !c.activities) return;
+    const act = c.activities.find(a => a.id === actId);
+    if (!act) return;
+    const newText = prompt('编辑活动记录:', act.text);
+    if (newText !== null && newText.trim()) {
+      act.text = newText.trim();
+      c.updatedAt = new Date().toISOString();
+      CRM.state.save();
+      this.openCustomerDetail(custId);
+    }
+  },
+
+  deleteActivity(custId, actId) {
+    const c = CRM.state.getCustomer(custId);
+    if (!c || !c.activities) return;
+    const idx = c.activities.findIndex(a => a.id === actId);
+    if (idx === -1) return;
+    if (confirm('确认删除该活动记录？')) {
+      c.activities.splice(idx, 1);
+      c.updatedAt = new Date().toISOString();
+      CRM.state.save();
       this.openCustomerDetail(custId);
     }
   },
@@ -623,6 +720,35 @@ CRM.ui = {
 
   openTaskDetail(id) { this.openTaskForm(CRM.state.data.tasks.find(t=>t.id===id)); },
 
+  // Import Guide Modal
+  openImportGuide() {
+    document.getElementById('modalContent').innerHTML = `
+      <h2>导入数据</h2>
+      <div class="settings-section">
+        <h3>⚠️ 导入前必读</h3>
+        <p style="line-height:1.7">
+          导入会<strong>整体覆盖</strong>当前数据，不是追加。如果你想把新数据加到现有数据里，请按以下步骤操作：
+        </p>
+        <div style="background:var(--surface2);border-radius:var(--radius);padding:12px;margin:12px 0;font-size:12px;line-height:1.8;color:var(--text2)">
+          <strong>追加数据的正确流程：</strong><br>
+          1. 先点"导出"按钮，把当前数据下载为 JSON 文件<br>
+          2. 在导出的 JSON 中，往 <code>customers</code> 和 <code>tasks</code> 数组里添加新记录<br>
+          3. 新记录的 <code>id</code> 格式：<code>cust_时间戳</code> 或 <code>task_时间戳</code>（如 <code>cust_1745234567890</code>）<br>
+          4. 新记录的 <code>createdAt</code> 和 <code>updatedAt</code> 填当前时间（ISO 格式）<br>
+          5. 保存 JSON 后再点下方"选择文件"导入
+        </div>
+        <p style="color:var(--accent);font-size:12px">
+          提示：也可以用 AI 把聊天记录转成 JSON，再合并到导出文件中。详见 README。
+        </p>
+      </div>
+      <div style="margin-bottom:16px">
+        <button class="btn btn-accent" onclick="document.getElementById('importFile').click()">选择 JSON 文件导入</button>
+        <button class="btn btn-ghost" style="margin-left:8px" onclick="CRM.ui.exportJSON()">先导出当前数据</button>
+      </div>
+      <div class="modal-actions"><button class="btn btn-ghost" onclick="CRM.ui.closeModal()">取消</button></div>`;
+    this.openModal();
+  },
+
   // Settings
   openSettings() {
     document.getElementById('modalContent').innerHTML = `
@@ -631,8 +757,7 @@ CRM.ui = {
         <h3>数据管理</h3>
         <p>数据通过 jsonbin.io 自动同步。</p>
         <button class="btn btn-ghost" onclick="CRM.ui.exportJSON()" style="margin-right:8px">导出 JSON</button>
-        <button class="btn btn-ghost" onclick="document.getElementById('importFile2').click()">导入 JSON</button>
-        <input type="file" id="importFile2" accept=".json" style="display:none" onchange="CRM.ui.importJSON(event)">
+        <button class="btn btn-ghost" onclick="CRM.ui.openImportGuide()">导入 JSON</button>
       </div>
       <div class="modal-actions"><button class="btn btn-ghost" onclick="CRM.ui.closeModal()">关闭</button></div>`;
     this.openModal();
@@ -661,10 +786,14 @@ CRM.ui = {
       try {
         const data = JSON.parse(reader.result);
         if (!data.customers) throw new Error('Invalid format');
-        if (confirm(`导入 ${data.customers.length} 个客户和 ${data.tasks?.length||0} 个任务？当前数据将被覆盖。`)) {
-          CRM.state.data = data;
-          CRM.state.save();
+        const existingC = CRM.state.data.customers.length;
+        const existingT = CRM.state.data.tasks.length;
+        if (!confirm(`⚠️ 导入会覆盖当前全部数据！\n\n当前：${existingC} 个客户、${existingT} 个任务\n导入：${data.customers.length} 个客户、${data.tasks?.length||0} 个任务\n\n如果是追加，建议先"导出"当前数据，合并后再导入。\n\n确认覆盖导入？`)) {
+          e.target.value = '';
+          return;
         }
+        CRM.state.data = data;
+        CRM.state.save();
       } catch(err) { alert('导入失败: ' + err.message); }
     };
     reader.readAsText(file);
@@ -680,7 +809,7 @@ CRM.ui = {
       if (!c.phoneAppointment) return;
       const apt = new Date(c.phoneAppointment);
       const diff = apt - now;
-      if (diff > 0 && diff < 30*60*1000) { // 30 min
+      if (diff > 0 && diff < 30*60*1000) {
         if (Notification.permission === 'granted') {
           new Notification(`📞 电话预约提醒`, { body: `${c.company||c.name} — ${apt.toLocaleTimeString('zh-CN')}`, tag: c.id });
         }
@@ -696,7 +825,6 @@ CRM.ui = {
     el.textContent = CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败';
   },
 
-  // Modal helpers
   openModal() { document.getElementById('modalOverlay').classList.add('open'); },
   closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
 };
@@ -716,20 +844,16 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
-// Keyboard shortcut
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') CRM.ui.closeModal();
   if (e.ctrlKey && e.key === 'k') { e.preventDefault(); document.querySelector('.kanban-toolbar input')?.focus(); }
 });
 
-// Notification check every 5 min
 setInterval(() => CRM.ui.checkAppointments(), 300000);
 
-// Boot
 CRM.state.load();
 
-// Service Worker
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
 </script>
 </body>
 </html>

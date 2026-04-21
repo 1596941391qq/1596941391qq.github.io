@@ -1,7 +1,7 @@
 {
   "name": "weichaking CRM",
   "short_name": "CRM",
-  "start_url": "./",
+  "start_url": "/crm/",
   "display": "standalone",
   "background_color": "#f8f9fb",
   "theme_color": "#f8f9fb",
