@@ -5,7 +5,7 @@ permalink: /perplexity-search-api-docs/
 ---
 # perplexity search api docs: Complete Guide 2026
 
-**Published:** 2026-04-19  
+**Published:** 2026-04-21  
 **Keywords:** perplexity search api docs
 
 ---

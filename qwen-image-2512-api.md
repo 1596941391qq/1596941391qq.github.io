@@ -5,7 +5,7 @@ permalink: /qwen-image-2512-api/
 ---
 # qwen image 2512 api: Complete Guide 2026
 
-**Published:** 2026-04-19  
+**Published:** 2026-04-21  
 **Keywords:** qwen image 2512 api
 
 ---
