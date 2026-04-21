@@ -5,7 +5,7 @@ permalink: /official-video-api/
 ---
 # official video api: Complete Guide 2026
 
-**Published:** 2026-04-19  
+**Published:** 2026-04-21  
 **Keywords:** official video api
 
 ---
