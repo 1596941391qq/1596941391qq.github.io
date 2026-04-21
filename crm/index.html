@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>weichaking CRM</title>
 <meta name="theme-color" content="#f8f9fb">
-<link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="manifest.json">
 <style>
 :root{
   --bg:#f8f9fb;--surface:#ffffff;--surface2:#f1f3f5;
@@ -729,7 +729,7 @@ setInterval(() => CRM.ui.checkAppointments(), 300000);
 CRM.state.load();
 
 // Service Worker
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
 </script>
 </body>
 </html>
