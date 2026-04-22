@@ -517,14 +517,15 @@ CRM.data.renderCustomerCard = (c) => {
 // ═══════════════════════════════════════════
 CRM.data.renderTaskCard = (t) => {
   const priClass = {high:'badge-pri-high',medium:'badge-pri-med',low:'badge-pri-low'}[t.priority]||'';
+  const priLabel = {high:'紧急',medium:'普通',low:'低'}[t.priority]||'普通';
   const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
   const dueStr = t.dueDate ? (t.dueDate < new Date().toISOString().slice(0,10) ? '⚠ '+t.dueDate : t.dueDate) : '';
   return `<div class="card" draggable="true" data-id="${t.id}" data-type="task">
-    <div class="card-title">${esc(t.title)}</div>
-    ${cust ? `<div class="card-sub">客户: ${esc(cust.company||cust.name)}</div>` : ''}
-    ${dueStr ? `<div class="card-sub" style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'var(--accent)':'var(--text3)'}">${dueStr}</div>` : ''}
-    <div class="card-badges">
-      <span class="badge ${priClass}">${{high:'紧急',medium:'普通',low:'低'}[t.priority]||'普通'}</span>
+    <span class="badge ${priClass}" style="flex-shrink:0">${priLabel}</span>
+    <div class="card-main" style="min-width:0">
+      <div class="card-title">${esc(t.title)}</div>
+      ${cust ? `<div class="card-sub">客户: ${esc(cust.company||cust.name)}</div>` : ''}
+      ${dueStr ? `<div class="card-sub" style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'var(--accent)':'var(--text3)'}">${dueStr}</div>` : ''}
     </div>
   </div>`;
 };
