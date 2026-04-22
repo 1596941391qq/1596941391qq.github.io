@@ -194,11 +194,14 @@ textarea{resize:vertical;min-height:60px}
     flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
   }
   .col-count{flex-shrink:0}
-  .col-body{overflow:visible}
-  .column:not(.expanded) .col-body{display:none}
+  .col-body{
+    overflow:hidden;max-height:0;padding:0 12px;
+    transition:max-height .3s ease-out,padding .3s ease-out;
+  }
+  .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
   .column.expanded .col-header .arrow{transform:rotate(90deg)}
   .column.expanded{background:var(--surface)}
-  .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg)}
+  .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
 
   /* Card touch - full width, no overflow */
   .card{
@@ -625,35 +628,53 @@ CRM.ui = {
         else CRM.ui.openTaskDetail(id);
       });
     });
-    // Mobile accordion
+    // Mobile accordion (max-height technique for smooth animation)
     if (isMobile) {
       const columns = kb.querySelectorAll('.column');
+      // Helper: expand a column by setting max-height to scrollHeight
+      const expandCol = (col) => {
+        col.classList.add('expanded');
+        const body = col.querySelector('.col-body');
+        // Temporarily remove max-height to measure true content height
+        body.style.maxHeight = 'none';
+        const h = body.scrollHeight;
+        body.style.maxHeight = h + 'px';
+      };
+      const collapseCol = (col) => {
+        col.classList.remove('expanded');
+        const body = col.querySelector('.col-body');
+        body.style.maxHeight = '0';
+      };
       // Preserve previously expanded stage
       const prevExpanded = this._mobileExpandedStage;
       if (prevExpanded) {
         const target = kb.querySelector(`.column[data-stage="${prevExpanded}"]`);
-        if (target) target.classList.add('expanded');
+        if (target) expandCol(target);
       }
       // Fallback: expand first column with cards
       if (!kb.querySelector('.column.expanded')) {
         for (const col of columns) {
           if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
-            col.classList.add('expanded');
+            expandCol(col);
             break;
           }
         }
-        if (!kb.querySelector('.column.expanded') && columns.length) columns[0].classList.add('expanded');
+        if (!kb.querySelector('.column.expanded') && columns.length) expandCol(columns[0]);
       }
       // Track expanded stage
       this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
-      // Bind accordion toggle
+      // Bind accordion toggle (exclusive: only one open at a time)
       columns.forEach(col => {
         col.querySelector('.col-header').addEventListener('click', (e) => {
-          // Don't toggle if clicking on drag-related elements
           if (e.target.closest('.col-count')) return;
-          columns.forEach(c => c.classList.remove('expanded'));
-          col.classList.add('expanded');
-          CRM.ui._mobileExpandedStage = col.dataset.stage;
+          const wasExpanded = col.classList.contains('expanded');
+          columns.forEach(c => collapseCol(c));
+          if (!wasExpanded) {
+            expandCol(col);
+            CRM.ui._mobileExpandedStage = col.dataset.stage;
+          } else {
+            CRM.ui._mobileExpandedStage = null;
+          }
         });
       });
     }
