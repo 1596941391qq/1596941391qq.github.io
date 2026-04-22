@@ -549,8 +549,10 @@ CRM.data.renderCustomerCard = (c) => {
       <div class="card-meta">${esc(c.name)}${c.website?' · '+esc(c.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'')):''}</div>
     </div>
     <div class="card-right">
-      <span class="badge ${segClass}">${c.segment}类</span>
-      ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+      <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">
+        <span class="badge ${segClass}">${c.segment}类</span>
+        ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+      </div>
       ${latestAct ? `<span class="card-latest">${esc(latestAct.length>20?latestAct.slice(0,18)+'…':latestAct)}</span>` : ''}
     </div>
   </div>`;
