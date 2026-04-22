@@ -304,39 +304,11 @@ const SEGMENTS = ['A','B','C','D'];
 const PRIORITIES = ['high','medium','low'];
 
 // Stage sub-steps: each stage has an ordered list of action steps
-const STAGE_STEPS = {
-  '意向客户': ['首次接触','需求沟通','约电话','电话完成'],
-  '试水期': ['出方案','方案已发','报价谈判','签约付款'],
-  '正式期': ['项目启动','执行中','阶段交付','续费讨论'],
-  '暂停/流失': ['服务暂停','跟进中','已流失']
-};
+const STAGE_STEPS = {};
 
-// All step names as a flat set for fast lookup
-const ALL_STEPS = new Set(Object.values(STAGE_STEPS).flat());
+const ALL_STEPS = new Set();
 
-// Derive current step from activities timeline
-// 1. Try to match a predefined step name for current stage
-// 2. If no match, fall back to the latest meaningful activity text
-function deriveStep(customer) {
-  const acts = customer.activities || [];
-  if (!acts.length) return '';
-  // System-generated texts to skip
-  const skipTexts = ['更新了客户信息', '阶段变更:'];
-  // First pass: look for a predefined step match
-  const steps = STAGE_STEPS[customer.stage] || [];
-  for (const act of acts) {
-    const t = act.text || '';
-    for (const step of steps) {
-      if (t === step || t.includes(step)) return step;
-    }
-  }
-  // Second pass: fall back to latest non-system activity
-  for (const act of acts) {
-    const t = act.text || '';
-    if (t && !skipTexts.some(s => t.startsWith(s))) return t;
-  }
-  return '';
-}
+function deriveStep() { return ''; }
 
 // ═══════════════════════════════════════════
 // Section 2: State Manager
@@ -527,8 +499,6 @@ CRM.data.customerColumns = () => STAGES;
 CRM.data.renderCustomerCard = (c) => {
   const segClass = 'badge-' + c.segment.toLowerCase();
   const phoneStr = c.phoneAppointment ? new Date(c.phoneAppointment).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
-  const currentStep = deriveStep(c);
-  const stepHtml = currentStep ? `<div class="card-side"><div class="card-step">${esc(currentStep)}</div></div>` : '';
   return `<div class="card" draggable="true" data-id="${c.id}" data-type="customer">
     <div class="card-main">
       <div class="card-title">${esc(c.company||c.name)}</div>
@@ -539,7 +509,6 @@ CRM.data.renderCustomerCard = (c) => {
         ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
       </div>
     </div>
-    ${stepHtml}
   </div>`;
 };
 
@@ -723,8 +692,6 @@ CRM.ui = {
   openCustomerForm(existing) {
     const c = existing || { name:'', company:'', website:'', contact:'', segment:'B', stage:'意向客户', services:[], phoneAppointment:'', phoneAppointmentNote:'', notes:'' };
     const isEdit = !!existing;
-    const currentStep = deriveStep(c);
-    const stepsForStage = STAGE_STEPS[c.stage] || [];
     document.getElementById('modalContent').innerHTML = `
       <h2>${isEdit?'编辑':'添加'}客户</h2>
       <div class="modal-grid">
@@ -782,18 +749,10 @@ CRM.ui = {
     const c = CRM.state.getCustomer(id);
     if (!c) return;
     const acts = (c.activities||[]).slice(0, 20);
-    const currentStep = deriveStep(c);
-    const stepBadge = currentStep ? `<span class="badge badge-step">${esc(currentStep)}</span>` : '';
-    const stepsForStage = STAGE_STEPS[c.stage] || [];
-    const stepButtons = stepsForStage.map(s => {
-      const isActive = s === currentStep;
-      return `<button class="btn btn-sm ${isActive?'btn-accent':'btn-ghost'}" onclick="CRM.ui.advanceStep('${c.id}','${s}')">${esc(s)}</button>`;
-    }).join(' ');
     document.getElementById('modalContent').innerHTML = `
       <h2 style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${esc(c.company||c.name)}
         <span class="badge badge-${c.segment.toLowerCase()}">${c.segment}类</span>
         <span class="badge" style="background:var(--accent-dim);color:var(--accent)">${c.stage}</span>
-        ${stepBadge}
       </h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:13px;color:var(--text2);margin-bottom:16px">
         ${c.name?`<div>联系人: ${esc(c.name)}</div>`:''}
@@ -803,10 +762,6 @@ CRM.ui = {
         ${(c.services||[]).length?`<div>服务: ${c.services.map(s=>esc(s)).join(', ')}</div>`:''}
       </div>
       ${c.notes?`<div style="font-size:13px;color:var(--text2);padding:12px;background:var(--surface);border-radius:6px;margin-bottom:16px">${esc(c.notes)}</div>`:''}
-      <div style="margin-bottom:16px">
-        <h3 style="font-size:13px;margin-bottom:8px">当前阶段步骤</h3>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">${stepButtons || '<span style="font-size:12px;color:var(--text3)">暂无步骤定义</span>'}</div>
-      </div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
         <h3 style="font-size:14px">活动时间线</h3>
         <button class="btn btn-ghost" style="font-size:11px;padding:4px 10px" onclick="CRM.ui.addActivityPrompt('${c.id}')">+ 添加记录</button>
@@ -822,13 +777,6 @@ CRM.ui = {
 
   // Advance step: just add activity, deriveStep will pick it up
   advanceStep(custId, stepName) {
-    const c = CRM.state.getCustomer(custId);
-    if (!c) return;
-    const oldStep = deriveStep(c);
-    CRM.state.addActivity(custId, stepName);
-    // Re-open detail to refresh UI
-    this.openCustomerDetail(custId);
-  },
 
   addActivityPrompt(custId) {
     const text = prompt('添加活动记录:');
