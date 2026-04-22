@@ -228,18 +228,24 @@ textarea{resize:vertical;min-height:60px}
   /* Card touch */
   .card{
     cursor:pointer;-webkit-tap-highlight-color:transparent;
-    padding:10px 12px;gap:8px;flex-wrap:nowrap;align-items:flex-start;
+    padding:10px 12px;gap:10px;flex-wrap:nowrap;align-items:flex-start;
     border-radius:10px;margin-bottom:4px;
   }
+  .card-left{min-width:0;flex:1;overflow:hidden}
+  .card-right{
+    display:flex;flex-direction:column;align-items:flex-end;gap:3px;
+    flex-shrink:0;max-width:55%;
+  }
   .card-main{min-width:0;flex:1;overflow:visible}
-  .card-title{font-size:13px;font-weight:600;line-height:1.35;overflow-wrap:break-word;word-break:break-word}
-  .card-sub{font-size:11px;line-height:1.35;overflow-wrap:break-word;word-break:break-word}
+  .card-title{font-size:13px;font-weight:600;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .card-sub,.card-meta{font-size:11px;line-height:1.35;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .card-latest{
-    font-size:10px;color:#7c3aed;margin-top:4px;
+    font-size:9px;color:#7c3aed;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
     max-width:100%;line-height:1.3;
     background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);
-    border-radius:6px;padding:2px 7px;display:inline-block;
+    border-radius:5px;padding:2px 6px;
+  }
   }
   .card-meta{
     display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;
@@ -531,7 +537,6 @@ CRM.data.customerColumns = () => STAGES;
 
 CRM.data.renderCustomerCard = (c) => {
   const segClass = 'badge-' + c.segment.toLowerCase();
-  const phoneStr = c.phoneAppointment ? new Date(c.phoneAppointment).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
   const skipTexts = ['更新了客户信息', '阶段变更:', '阶段更正:'];
   let latestAct = '';
   for (const a of (c.activities||[])) {
@@ -539,17 +544,14 @@ CRM.data.renderCustomerCard = (c) => {
     if (t && !skipTexts.some(s => t.startsWith(s))) { latestAct = t; break; }
   }
   return `<div class="card" draggable="true" data-id="${c.id}" data-type="customer">
-    <div class="card-main">
+    <div class="card-left">
       <div class="card-title">${esc(c.company||c.name)}</div>
-      <div class="card-meta">
-        ${esc(c.name)}${c.website?' · '+esc(c.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'')):''}
-      </div>
-      ${latestAct ? `<div class="card-latest">${esc(latestAct)}</div>` : ''}
-      <div class="card-badges">
-        <span class="badge ${segClass}">${c.segment}类</span>
-        ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
-        ${phoneStr ? `<span class="badge badge-phone">📞 ${phoneStr}</span>` : ''}
-      </div>
+      <div class="card-meta">${esc(c.name)}${c.website?' · '+esc(c.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'')):''}</div>
+    </div>
+    <div class="card-right">
+      <span class="badge ${segClass}">${c.segment}类</span>
+      ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+      ${latestAct ? `<span class="card-latest">${esc(latestAct.length>20?latestAct.slice(0,18)+'…':latestAct)}</span>` : ''}
     </div>
   </div>`;
 };
