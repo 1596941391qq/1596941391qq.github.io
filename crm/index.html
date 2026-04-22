@@ -241,7 +241,7 @@ textarea{resize:vertical;min-height:60px}
   .card-sub,.card-meta{font-size:11px;line-height:1.35;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .card-latest{
     font-size:9px;color:#7c3aed;
-    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    overflow-wrap:break-word;word-break:break-word;
     max-width:100%;line-height:1.3;
     background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);
     border-radius:5px;padding:2px 6px;
@@ -553,7 +553,7 @@ CRM.data.renderCustomerCard = (c) => {
         <span class="badge ${segClass}">${c.segment}类</span>
         ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
       </div>
-      ${latestAct ? `<span class="card-latest">${esc(latestAct.length>20?latestAct.slice(0,18)+'…':latestAct)}</span>` : ''}
+      ${latestAct ? `<span class="card-latest">${esc(latestAct)}</span>` : ''}
     </div>
   </div>`;
 };
