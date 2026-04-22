@@ -228,28 +228,30 @@ textarea{resize:vertical;min-height:60px}
   /* Card touch */
   .card{
     cursor:pointer;-webkit-tap-highlight-color:transparent;
-    padding:12px 14px;gap:8px;flex-wrap:wrap;
-    border-radius:10px;margin-bottom:6px;
+    padding:10px 12px;gap:8px;flex-wrap:nowrap;align-items:flex-start;
+    border-radius:10px;margin-bottom:4px;
   }
   .card-main{min-width:0;flex:1;overflow:visible}
-  .card-title{font-size:14px;font-weight:600;line-height:1.4;overflow-wrap:break-word;word-break:break-word}
-  .card-sub{font-size:12px;line-height:1.4;overflow-wrap:break-word;word-break:break-word}
+  .card-title{font-size:13px;font-weight:600;line-height:1.35;overflow-wrap:break-word;word-break:break-word}
+  .card-sub{font-size:11px;line-height:1.35;overflow-wrap:break-word;word-break:break-word}
   .card-latest{
-    font-size:12px;color:#7c3aed;margin-top:4px;
+    font-size:11px;color:#7c3aed;margin-top:3px;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-    max-width:100%;
+    max-width:100%;line-height:1.3;
+  }
+  .card-meta{
+    display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;
+    font-size:11px;color:var(--text2);line-height:1.3;align-items:center;
+  }
+  .pri-dot{
+    width:8px;height:8px;border-radius:50%;flex-shrink:0;
+    margin-top:5px;
+  }
+  .pri-tag{
+    font-size:10px;font-weight:600;padding:1px 6px;border-radius:4px;
+    border:1px solid;
   }
   .card:active{background:var(--border);transform:scale(.98);transition:transform .1s}
-  .pri-bar{
-    width:4px;min-height:100%;border-radius:4px;flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    position:relative;align-self:stretch;
-  }
-  .pri-bar span{
-    writing-mode:vertical-rl;text-orientation:mixed;
-    font-size:9px;font-weight:700;color:#fff;
-    letter-spacing:2px;white-space:nowrap;
-  }
   .card-badges{flex-wrap:wrap;gap:5px}
   .badge{font-size:10px;padding:3px 9px;border-radius:6px;white-space:nowrap}
 
@@ -558,11 +560,14 @@ CRM.data.renderTaskCard = (t) => {
   const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
   const dueStr = t.dueDate ? (t.dueDate < new Date().toISOString().slice(0,10) ? '⚠ '+t.dueDate : t.dueDate) : '';
   return `<div class="card" draggable="true" data-id="${t.id}" data-type="task">
-    <div class="pri-bar" style="background:${priColor}"><span>${esc(priLabel)}</span></div>
+    <div class="pri-dot" style="background:${priColor}"></div>
     <div class="card-main" style="min-width:0">
       <div class="card-title">${esc(t.title)}</div>
-      ${cust ? `<div class="card-sub">客户: ${esc(cust.company||cust.name)}</div>` : ''}
-      ${dueStr ? `<div class="card-sub" style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'#dc2626':'var(--text3)'}">${dueStr}</div>` : ''}
+      <div class="card-meta">
+        <span class="pri-tag" style="color:${priColor};border-color:${priColor}20">${esc(priLabel)}</span>
+        ${cust ? `<span>${esc(cust.company||cust.name)}</span>` : ''}
+        ${dueStr ? `<span style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'#dc2626':'var(--text3)'}">${dueStr}</span>` : ''}
+      </div>
     </div>
   </div>`;
 };
