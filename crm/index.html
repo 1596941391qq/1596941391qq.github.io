@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>weihacking CRM</title>
 <meta name="theme-color" content="#f8f9fb">
 <link rel="manifest" href="./manifest.json">
@@ -120,16 +120,86 @@ textarea{resize:vertical;min-height:60px}
 /* Empty state */
 .empty{text-align:center;padding:40px 20px;color:var(--text3);font-size:13px}
 
+/* Mobile Nav (hidden on desktop) */
+.mobile-nav{display:none}
+.nav-item{font:inherit}
+
 /* Responsive */
 @media(max-width:768px){
+  /* Bottom nav */
+  .mobile-nav{
+    display:flex;position:fixed;bottom:0;left:0;right:0;
+    background:var(--surface);border-top:1px solid var(--border);
+    padding:6px 0;padding-bottom:env(safe-area-inset-bottom);
+    z-index:50;
+  }
+  .nav-item{
+    flex:1;display:flex;flex-direction:column;align-items:center;
+    gap:2px;font-size:10px;color:var(--text3);padding:6px 0;
+    border-radius:0;transition:color .15s;
+  }
+  .nav-item.active{color:var(--accent)}
+
+  /* Hide desktop nav elements */
+  .topbar .tabs{display:none}
+  .topbar .icon-btn{display:none}
   .topbar{padding:10px 12px}
-  .tabs .tab{padding:5px 10px;font-size:12px}
-  .kanban{padding:0 8px 8px}
-  .column{min-width:220px}
-  .stats-bar{padding:8px 12px}
-  .stat{padding:8px 12px;min-width:100px}
-  .modal{max-width:100%;padding:16px}
+
+  /* App bottom padding for fixed nav */
+  .app{padding-bottom:56px}
+
+  /* Stats bar - 3 column grid */
+  .stats-bar{
+    display:grid;grid-template-columns:1fr 1fr 1fr;
+    gap:8px;padding:8px 12px;
+  }
+  .stat{min-width:unset;padding:8px 10px}
+  .stat-val{font-size:18px}
+  .stat-label{font-size:10px}
+  .sync-status{display:none}
+
+  /* Toolbar - search full width, hide secondary buttons */
+  .kanban-toolbar{flex-wrap:wrap;padding:8px 12px}
+  .kanban-toolbar input{max-width:100%;order:0}
+  .kanban-toolbar .btn-ghost{display:none}
+
+  /* Kanban - accordion */
+  .kanban{
+    flex-direction:column;overflow-x:hidden;overflow-y:auto;
+    padding:0 12px 12px;gap:0;
+  }
+  .column{
+    min-width:100%;max-width:100%;
+    border-radius:0;border-left:0;border-right:0;border-bottom:0;
+  }
+  .column:last-child{border-bottom:1px solid var(--border)}
+  .col-header{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+  .col-header .arrow{font-size:10px;margin-right:4px;transition:transform .15s;display:inline-block}
+  .column:not(.expanded) .col-body{display:none}
+  .column.expanded .col-header .arrow{transform:rotate(90deg)}
+
+  /* Card touch */
+  .card{cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .card:active{background:var(--border)}
+
+  /* Larger touch targets */
+  .btn{min-height:44px}
+  .btn-sm{min-height:36px}
+
+  /* Modal - bottom sheet */
+  .modal-overlay{align-items:flex-end;padding:0}
+  .modal{
+    max-width:100%;max-height:90vh;
+    border-radius:16px 16px 0 0;
+    padding:20px 16px;
+    padding-bottom:calc(20px + env(safe-area-inset-bottom));
+  }
+  .modal-overlay.open .modal{animation:slideUp .25s ease-out}
   .modal-grid{grid-template-columns:1fr}
+}
+@keyframes slideUp{
+  from{transform:translateY(100%)}
+  to{transform:translateY(0)}
 }
 </style>
 </head>
@@ -154,6 +224,13 @@ textarea{resize:vertical;min-height:60px}
     <div class="kanban" id="kanban"></div>
   </div>
 </div>
+
+<!-- Mobile Bottom Nav -->
+<nav class="mobile-nav">
+  <button class="nav-item active" data-view="customers">📋 客户</button>
+  <button class="nav-item" data-view="tasks">✅ 任务</button>
+  <button class="nav-item" data-action="settings">⚙ 设置</button>
+</nav>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)CRM.ui.closeModal()">
@@ -483,13 +560,14 @@ CRM.ui = {
   renderKanban() {
     const kb = document.getElementById('kanban');
     const q = CRM.state.searchQuery.toLowerCase();
+    const isMobile = window.innerWidth <= 768;
     if (CRM.state.currentView === 'customers') {
       const cols = STAGES;
       kb.innerHTML = cols.map(stage => {
         let cards = CRM.state.data.customers.filter(c => c.stage === stage);
         if (q) cards = cards.filter(c => (c.company+c.name+c.contact+(c.services||[]).join('')).toLowerCase().includes(q));
         return `<div class="column" data-stage="${stage}" ondragover="CRM.ui.onDragOver(event)" ondrop="CRM.ui.onDrop(event,'customer')" ondragleave="CRM.ui.onDragLeave(event)">
-          <div class="col-header"><span>${stage}</span><span class="col-count">${cards.length}</span></div>
+          <div class="col-header"><span class="arrow">▶</span><span>${stage}</span><span class="col-count">${cards.length}</span></div>
           <div class="col-body">${cards.length ? cards.map(c => CRM.data.renderCustomerCard(c)).join('') : '<div class="empty">暂无客户</div>'}</div>
         </div>`;
       }).join('');
@@ -498,7 +576,7 @@ CRM.ui = {
         let cards = CRM.state.data.tasks.filter(t => t.status === status);
         if (q) cards = cards.filter(t => t.title.toLowerCase().includes(q));
         return `<div class="column" data-stage="${status}" ondragover="CRM.ui.onDragOver(event)" ondrop="CRM.ui.onDrop(event,'task')" ondragleave="CRM.ui.onDragLeave(event)">
-          <div class="col-header"><span>${TASK_LABELS[status]}</span><span class="col-count">${cards.length}</span></div>
+          <div class="col-header"><span class="arrow">▶</span><span>${TASK_LABELS[status]}</span><span class="col-count">${cards.length}</span></div>
           <div class="col-body">${cards.length ? cards.map(t => CRM.data.renderTaskCard(t)).join('') : '<div class="empty">暂无任务</div>'}</div>
         </div>`;
       }).join('');
@@ -513,6 +591,28 @@ CRM.ui = {
         else CRM.ui.openTaskDetail(id);
       });
     });
+    // Mobile accordion
+    if (isMobile) {
+      const columns = kb.querySelectorAll('.column');
+      // Expand first column with cards
+      for (const col of columns) {
+        if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
+          col.classList.add('expanded');
+          break;
+        }
+      }
+      // If none had cards, expand first
+      if (!kb.querySelector('.column.expanded') && columns.length) columns[0].classList.add('expanded');
+      // Bind accordion toggle
+      columns.forEach(col => {
+        col.querySelector('.col-header').addEventListener('click', (e) => {
+          // Don't toggle if clicking on drag-related elements
+          if (e.target.closest('.col-count')) return;
+          columns.forEach(c => c.classList.remove('expanded'));
+          col.classList.add('expanded');
+        });
+      });
+    }
   },
 
   // Drag & Drop
@@ -839,6 +939,25 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
     tab.classList.add('active');
     CRM.state.currentView = tab.dataset.view;
+    CRM.state.searchQuery = '';
+    CRM.ui.render();
+  });
+});
+
+// Mobile bottom nav
+document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    if (item.dataset.action === 'settings') {
+      CRM.ui.openSettings();
+      return;
+    }
+    document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
+    item.classList.add('active');
+    // Sync desktop tab state
+    document.querySelectorAll('.tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.view === item.dataset.view);
+    });
+    CRM.state.currentView = item.dataset.view;
     CRM.state.searchQuery = '';
     CRM.ui.render();
   });
