@@ -231,15 +231,25 @@ textarea{resize:vertical;min-height:60px}
     padding:12px 14px;gap:8px;flex-wrap:wrap;
     border-radius:10px;margin-bottom:6px;
   }
-  .card-main{min-width:0;flex:1;overflow:hidden}
-  .card-title{font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .card-sub{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .card-main{min-width:0;flex:1;overflow:visible}
+  .card-title{font-size:14px;font-weight:600;line-height:1.4;overflow-wrap:break-word;word-break:break-word}
+  .card-sub{font-size:12px;line-height:1.4;overflow-wrap:break-word;word-break:break-word}
   .card-latest{
-    font-size:12px;color:var(--accent);margin-top:4px;
+    font-size:12px;color:#7c3aed;margin-top:4px;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
     max-width:100%;
   }
   .card:active{background:var(--border);transform:scale(.98);transition:transform .1s}
+  .pri-bar{
+    width:4px;min-height:100%;border-radius:4px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;align-self:stretch;
+  }
+  .pri-bar span{
+    writing-mode:vertical-rl;text-orientation:mixed;
+    font-size:9px;font-weight:700;color:#fff;
+    letter-spacing:2px;white-space:nowrap;
+  }
   .card-badges{flex-wrap:wrap;gap:5px}
   .badge{font-size:10px;padding:3px 9px;border-radius:6px;white-space:nowrap}
 
@@ -543,16 +553,16 @@ CRM.data.renderCustomerCard = (c) => {
 // Section 5: Task Module
 // ═══════════════════════════════════════════
 CRM.data.renderTaskCard = (t) => {
-  const priClass = {high:'badge-pri-high',medium:'badge-pri-med',low:'badge-pri-low'}[t.priority]||'';
+  const priColor = {high:'#dc2626',medium:'#f59e0b',low:'#22c55e'}[t.priority]||'#f59e0b';
   const priLabel = {high:'紧急',medium:'普通',low:'低'}[t.priority]||'普通';
   const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
   const dueStr = t.dueDate ? (t.dueDate < new Date().toISOString().slice(0,10) ? '⚠ '+t.dueDate : t.dueDate) : '';
   return `<div class="card" draggable="true" data-id="${t.id}" data-type="task">
-    <span class="badge ${priClass}" style="flex-shrink:0">${priLabel}</span>
+    <div class="pri-bar" style="background:${priColor}"><span>${esc(priLabel)}</span></div>
     <div class="card-main" style="min-width:0">
       <div class="card-title">${esc(t.title)}</div>
       ${cust ? `<div class="card-sub">客户: ${esc(cust.company||cust.name)}</div>` : ''}
-      ${dueStr ? `<div class="card-sub" style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'var(--accent)':'var(--text3)'}">${dueStr}</div>` : ''}
+      ${dueStr ? `<div class="card-sub" style="color:${t.dueDate<new Date().toISOString().slice(0,10)?'#dc2626':'var(--text3)'}">${dueStr}</div>` : ''}
     </div>
   </div>`;
 };
