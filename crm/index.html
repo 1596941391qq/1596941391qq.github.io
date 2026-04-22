@@ -61,6 +61,7 @@ textarea{resize:vertical;min-height:60px}
 .col-count{background:var(--surface2);border-radius:10px;padding:1px 8px;font-size:11px;color:var(--text2);font-weight:600}
 .col-body{flex:1;overflow-y:auto;padding:4px 8px 8px;display:flex;flex-direction:column;gap:6px}
 .col-body.drag-over{background:var(--accent-dim)}
+.col-header .arrow{display:none}
 
 /* Card */
 .card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;cursor:grab;transition:border-color .15s,transform .1s;display:flex;gap:10px}
@@ -248,26 +249,18 @@ const TASK_LABELS = {'todo':'Todo','in-progress':'In Progress','finish':'Finish'
 const SEGMENTS = ['A','B','C','D'];
 const PRIORITIES = ['high','medium','low'];
 
-// Stage sub-steps: each stage has an ordered list of action steps
 const STAGE_STEPS = {
   '意向客户': ['首次接触','需求沟通','约电话','电话完成'],
   '试水期': ['出方案','方案已发','报价谈判','签约付款'],
   '正式期': ['项目启动','执行中','阶段交付','续费讨论'],
   '暂停/流失': ['服务暂停','跟进中','已流失']
 };
-
-// All step names as a flat set for fast lookup
 const ALL_STEPS = new Set(Object.values(STAGE_STEPS).flat());
 
-// Derive current step from activities timeline
-// 1. Try to match a predefined step name for current stage
-// 2. If no match, fall back to the latest meaningful activity text
 function deriveStep(customer) {
   const acts = customer.activities || [];
   if (!acts.length) return '';
-  // System-generated texts to skip
   const skipTexts = ['更新了客户信息', '阶段变更:'];
-  // First pass: look for a predefined step match
   const steps = STAGE_STEPS[customer.stage] || [];
   for (const act of acts) {
     const t = act.text || '';
@@ -275,7 +268,6 @@ function deriveStep(customer) {
       if (t === step || t.includes(step)) return step;
     }
   }
-  // Second pass: fall back to latest non-system activity
   for (const act of acts) {
     const t = act.text || '';
     if (t && !skipTexts.some(s => t.startsWith(s))) return t;
@@ -488,9 +480,6 @@ CRM.data.renderCustomerCard = (c) => {
   </div>`;
 };
 
-// ═══════════════════════════════════════════
-// Section 5: Task Module
-// ═══════════════════════════════════════════
 CRM.data.renderTaskCard = (t) => {
   const priClass = {high:'badge-pri-high',medium:'badge-pri-med',low:'badge-pri-low'}[t.priority]||'';
   const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
@@ -509,6 +498,8 @@ CRM.data.renderTaskCard = (t) => {
 // Section 6: UI Shell
 // ═══════════════════════════════════════════
 CRM.ui = {
+  _mobileExpandedStage: null,
+
   render() {
     this.renderStats();
     this.renderToolbar();
@@ -594,22 +585,31 @@ CRM.ui = {
     // Mobile accordion
     if (isMobile) {
       const columns = kb.querySelectorAll('.column');
-      // Expand first column with cards
-      for (const col of columns) {
-        if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
-          col.classList.add('expanded');
-          break;
-        }
+      // Preserve previously expanded stage across re-renders
+      const prevExpanded = this._mobileExpandedStage;
+      if (prevExpanded) {
+        const target = kb.querySelector(`.column[data-stage="${prevExpanded}"]`);
+        if (target) target.classList.add('expanded');
       }
-      // If none had cards, expand first
-      if (!kb.querySelector('.column.expanded') && columns.length) columns[0].classList.add('expanded');
+      // Fallback: expand first column with cards
+      if (!kb.querySelector('.column.expanded')) {
+        for (const col of columns) {
+          if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
+            col.classList.add('expanded');
+            break;
+          }
+        }
+        if (!kb.querySelector('.column.expanded') && columns.length) columns[0].classList.add('expanded');
+      }
+      // Track current expanded stage
+      this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
       // Bind accordion toggle
       columns.forEach(col => {
         col.querySelector('.col-header').addEventListener('click', (e) => {
-          // Don't toggle if clicking on drag-related elements
           if (e.target.closest('.col-count')) return;
           columns.forEach(c => c.classList.remove('expanded'));
           col.classList.add('expanded');
+          CRM.ui._mobileExpandedStage = col.dataset.stage;
         });
       });
     }
@@ -640,8 +640,6 @@ CRM.ui = {
   openCustomerForm(existing) {
     const c = existing || { name:'', company:'', website:'', contact:'', segment:'B', stage:'意向客户', services:[], phoneAppointment:'', phoneAppointmentNote:'', notes:'' };
     const isEdit = !!existing;
-    const currentStep = deriveStep(c);
-    const stepsForStage = STAGE_STEPS[c.stage] || [];
     document.getElementById('modalContent').innerHTML = `
       <h2>${isEdit?'编辑':'添加'}客户</h2>
       <div class="modal-grid">
@@ -737,13 +735,10 @@ CRM.ui = {
     this.openModal();
   },
 
-  // Advance step: just add activity, deriveStep will pick it up
   advanceStep(custId, stepName) {
     const c = CRM.state.getCustomer(custId);
     if (!c) return;
-    const oldStep = deriveStep(c);
     CRM.state.addActivity(custId, stepName);
-    // Re-open detail to refresh UI
     this.openCustomerDetail(custId);
   },
 
@@ -820,7 +815,6 @@ CRM.ui = {
 
   openTaskDetail(id) { this.openTaskForm(CRM.state.data.tasks.find(t=>t.id===id)); },
 
-  // Import Guide Modal
   openImportGuide() {
     document.getElementById('modalContent').innerHTML = `
       <h2>导入数据</h2>
@@ -849,7 +843,6 @@ CRM.ui = {
     this.openModal();
   },
 
-  // Settings
   openSettings() {
     document.getElementById('modalContent').innerHTML = `
       <h2>设置</h2>
@@ -868,7 +861,6 @@ CRM.ui = {
     CRM.state.load();
   },
 
-  // Export / Import
   exportJSON() {
     const blob = new Blob([JSON.stringify(CRM.state.data, null, 2)], {type:'application/json'});
     const a = document.createElement('a');
@@ -900,7 +892,6 @@ CRM.ui = {
     e.target.value = '';
   },
 
-  // Notifications
   checkAppointments() {
     if (!('Notification' in window)) return;
     if (Notification.permission === 'default') Notification.requestPermission();
@@ -917,7 +908,6 @@ CRM.ui = {
     });
   },
 
-  // Sync status
   updateSyncStatus() {
     const el = document.getElementById('syncStatus');
     if (!el) return;
@@ -953,7 +943,6 @@ document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
     }
     document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
     item.classList.add('active');
-    // Sync desktop tab state
     document.querySelectorAll('.tab').forEach(t => {
       t.classList.toggle('active', t.dataset.view === item.dataset.view);
     });
@@ -966,6 +955,13 @@ document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') CRM.ui.closeModal();
   if (e.ctrlKey && e.key === 'k') { e.preventDefault(); document.querySelector('.kanban-toolbar input')?.focus(); }
+});
+
+// Re-render on resize to sync JS mobile detection with CSS media query
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => CRM.ui.render(), 150);
 });
 
 setInterval(() => CRM.ui.checkAppointments(), 300000);
