@@ -144,7 +144,9 @@ textarea{resize:vertical;min-height:60px}
   /* Hide desktop nav elements */
   .topbar .tabs{display:none}
   .topbar .icon-btn{display:none}
-  .topbar{padding:10px 12px}
+  .topbar{padding:10px 12px;gap:0}
+  .logo{font-size:16px}
+  .logo span{display:none}
 
   /* App bottom padding for fixed nav */
   .app{padding-bottom:56px}
@@ -152,11 +154,11 @@ textarea{resize:vertical;min-height:60px}
   /* Stats bar - 3 column grid */
   .stats-bar{
     display:grid;grid-template-columns:1fr 1fr 1fr;
-    gap:8px;padding:8px 12px;
+    gap:6px;padding:8px 12px;overflow:visible;
   }
-  .stat{min-width:unset;padding:8px 10px}
-  .stat-val{font-size:18px}
-  .stat-label{font-size:10px}
+  .stat{min-width:unset;padding:8px 6px;text-align:center}
+  .stat-val{font-size:17px}
+  .stat-label{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .sync-status{display:none}
 
   /* Toolbar - search full width, hide secondary buttons */
@@ -167,20 +169,44 @@ textarea{resize:vertical;min-height:60px}
   /* Kanban - accordion */
   .kanban{
     flex-direction:column;overflow-x:hidden;overflow-y:auto;
-    padding:0 12px 12px;gap:0;
+    padding:0 0 12px;gap:0;
   }
   .column{
     min-width:100%;max-width:100%;
-    border-radius:0;border-left:0;border-right:0;border-bottom:0;
+    border-radius:0;border-left:0;border-right:0;
+    border-bottom:1px solid var(--border);
+    background:var(--bg);
   }
-  .column:last-child{border-bottom:1px solid var(--border)}
-  .col-header{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
-  .col-header .arrow{font-size:10px;margin-right:4px;transition:transform .15s;display:inline-block}
+  .col-header{
+    cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;
+    padding:14px 16px;font-size:15px;font-weight:700;
+    display:flex;align-items:center;gap:8px;flex-shrink:0;
+    background:var(--surface);
+    position:sticky;top:0;z-index:2;
+  }
+  .col-header .arrow{
+    font-size:10px;transition:transform .15s;display:inline-block;
+    flex-shrink:0;
+  }
+  .col-header span:nth-child(2){
+    flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  }
+  .col-count{flex-shrink:0}
   .column:not(.expanded) .col-body{display:none}
   .column.expanded .col-header .arrow{transform:rotate(90deg)}
+  .column.expanded{background:var(--surface)}
+  .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg)}
 
-  /* Card touch */
-  .card{cursor:pointer;-webkit-tap-highlight-color:transparent}
+  /* Card touch - full width, no overflow */
+  .card{
+    cursor:pointer;-webkit-tap-highlight-color:transparent;
+    padding:10px 12px;gap:8px;
+    flex-wrap:wrap;
+  }
+  .card-main{min-width:0;overflow:hidden}
+  .card-title,.card-sub{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .card-side{flex-shrink:0;align-self:center}
+  .card-step{font-size:11px;padding:4px 8px}
   .card:active{background:var(--border)}
 
   /* Larger touch targets */
@@ -194,9 +220,13 @@ textarea{resize:vertical;min-height:60px}
     border-radius:16px 16px 0 0;
     padding:20px 16px;
     padding-bottom:calc(20px + env(safe-area-inset-bottom));
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
   }
+  .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
   .modal-overlay.open .modal{animation:slideUp .25s ease-out}
   .modal-grid{grid-template-columns:1fr}
+  .modal-actions{flex-wrap:wrap}
+  .modal-actions .btn{flex:1;min-width:0;text-align:center}
 }
 @keyframes slideUp{
   from{transform:translateY(100%)}
@@ -249,18 +279,26 @@ const TASK_LABELS = {'todo':'Todo','in-progress':'In Progress','finish':'Finish'
 const SEGMENTS = ['A','B','C','D'];
 const PRIORITIES = ['high','medium','low'];
 
+// Stage sub-steps: each stage has an ordered list of action steps
 const STAGE_STEPS = {
   '意向客户': ['首次接触','需求沟通','约电话','电话完成'],
   '试水期': ['出方案','方案已发','报价谈判','签约付款'],
   '正式期': ['项目启动','执行中','阶段交付','续费讨论'],
   '暂停/流失': ['服务暂停','跟进中','已流失']
 };
+
+// All step names as a flat set for fast lookup
 const ALL_STEPS = new Set(Object.values(STAGE_STEPS).flat());
 
+// Derive current step from activities timeline
+// 1. Try to match a predefined step name for current stage
+// 2. If no match, fall back to the latest meaningful activity text
 function deriveStep(customer) {
   const acts = customer.activities || [];
   if (!acts.length) return '';
+  // System-generated texts to skip
   const skipTexts = ['更新了客户信息', '阶段变更:'];
+  // First pass: look for a predefined step match
   const steps = STAGE_STEPS[customer.stage] || [];
   for (const act of acts) {
     const t = act.text || '';
@@ -268,6 +306,7 @@ function deriveStep(customer) {
       if (t === step || t.includes(step)) return step;
     }
   }
+  // Second pass: fall back to latest non-system activity
   for (const act of acts) {
     const t = act.text || '';
     if (t && !skipTexts.some(s => t.startsWith(s))) return t;
@@ -480,6 +519,9 @@ CRM.data.renderCustomerCard = (c) => {
   </div>`;
 };
 
+// ═══════════════════════════════════════════
+// Section 5: Task Module
+// ═══════════════════════════════════════════
 CRM.data.renderTaskCard = (t) => {
   const priClass = {high:'badge-pri-high',medium:'badge-pri-med',low:'badge-pri-low'}[t.priority]||'';
   const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
@@ -498,8 +540,6 @@ CRM.data.renderTaskCard = (t) => {
 // Section 6: UI Shell
 // ═══════════════════════════════════════════
 CRM.ui = {
-  _mobileExpandedStage: null,
-
   render() {
     this.renderStats();
     this.renderToolbar();
@@ -585,7 +625,7 @@ CRM.ui = {
     // Mobile accordion
     if (isMobile) {
       const columns = kb.querySelectorAll('.column');
-      // Preserve previously expanded stage across re-renders
+      // Preserve previously expanded stage
       const prevExpanded = this._mobileExpandedStage;
       if (prevExpanded) {
         const target = kb.querySelector(`.column[data-stage="${prevExpanded}"]`);
@@ -601,11 +641,12 @@ CRM.ui = {
         }
         if (!kb.querySelector('.column.expanded') && columns.length) columns[0].classList.add('expanded');
       }
-      // Track current expanded stage
+      // Track expanded stage
       this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
       // Bind accordion toggle
       columns.forEach(col => {
         col.querySelector('.col-header').addEventListener('click', (e) => {
+          // Don't toggle if clicking on drag-related elements
           if (e.target.closest('.col-count')) return;
           columns.forEach(c => c.classList.remove('expanded'));
           col.classList.add('expanded');
@@ -640,6 +681,8 @@ CRM.ui = {
   openCustomerForm(existing) {
     const c = existing || { name:'', company:'', website:'', contact:'', segment:'B', stage:'意向客户', services:[], phoneAppointment:'', phoneAppointmentNote:'', notes:'' };
     const isEdit = !!existing;
+    const currentStep = deriveStep(c);
+    const stepsForStage = STAGE_STEPS[c.stage] || [];
     document.getElementById('modalContent').innerHTML = `
       <h2>${isEdit?'编辑':'添加'}客户</h2>
       <div class="modal-grid">
@@ -735,10 +778,13 @@ CRM.ui = {
     this.openModal();
   },
 
+  // Advance step: just add activity, deriveStep will pick it up
   advanceStep(custId, stepName) {
     const c = CRM.state.getCustomer(custId);
     if (!c) return;
+    const oldStep = deriveStep(c);
     CRM.state.addActivity(custId, stepName);
+    // Re-open detail to refresh UI
     this.openCustomerDetail(custId);
   },
 
@@ -815,6 +861,7 @@ CRM.ui = {
 
   openTaskDetail(id) { this.openTaskForm(CRM.state.data.tasks.find(t=>t.id===id)); },
 
+  // Import Guide Modal
   openImportGuide() {
     document.getElementById('modalContent').innerHTML = `
       <h2>导入数据</h2>
@@ -843,6 +890,7 @@ CRM.ui = {
     this.openModal();
   },
 
+  // Settings
   openSettings() {
     document.getElementById('modalContent').innerHTML = `
       <h2>设置</h2>
@@ -861,6 +909,7 @@ CRM.ui = {
     CRM.state.load();
   },
 
+  // Export / Import
   exportJSON() {
     const blob = new Blob([JSON.stringify(CRM.state.data, null, 2)], {type:'application/json'});
     const a = document.createElement('a');
@@ -892,6 +941,7 @@ CRM.ui = {
     e.target.value = '';
   },
 
+  // Notifications
   checkAppointments() {
     if (!('Notification' in window)) return;
     if (Notification.permission === 'default') Notification.requestPermission();
@@ -908,6 +958,7 @@ CRM.ui = {
     });
   },
 
+  // Sync status
   updateSyncStatus() {
     const el = document.getElementById('syncStatus');
     if (!el) return;
@@ -943,6 +994,7 @@ document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
     }
     document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
     item.classList.add('active');
+    // Sync desktop tab state
     document.querySelectorAll('.tab').forEach(t => {
       t.classList.toggle('active', t.dataset.view === item.dataset.view);
     });
