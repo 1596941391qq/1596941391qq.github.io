@@ -257,8 +257,8 @@ textarea{resize:vertical;min-height:60px}
   }
   body.mode-accordion .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
   body.mode-accordion .col-body{
-    overflow:hidden;max-height:0;padding-top:0;padding-bottom:0;
-    transition:max-height .35s cubic-bezier(.4,0,.2,1),padding .25s ease;
+    overflow:hidden;max-height:0;padding:0;
+    transition:max-height .3s ease,padding .3s ease;
   }
   body.mode-accordion .column.expanded{background:var(--surface)}
   body.mode-accordion .column.expanded .col-body{
@@ -710,13 +710,17 @@ CRM.ui = {
       const expand = (col) => {
         col.classList.add('expanded');
         const body = col.querySelector('.col-body');
-        body.style.maxHeight = body.scrollHeight + 'px';
+        // Temporarily unlock to measure real height
+        body.style.maxHeight = 'none';
+        const h = body.scrollHeight;
+        body.style.maxHeight = '0';
+        body.offsetHeight; // force reflow
+        body.style.maxHeight = h + 'px';
         const onEnd = () => {
           if (col.classList.contains('expanded')) body.style.maxHeight = 'none';
           body.removeEventListener('transitionend', onEnd);
         };
         body.addEventListener('transitionend', onEnd);
-        // Fallback in case transitionend doesn't fire
         setTimeout(() => { if (col.classList.contains('expanded')) body.style.maxHeight = 'none'; }, 400);
       };
       if (prevExpanded) {
@@ -967,33 +971,32 @@ CRM.ui = {
   _toggleColumn(header) {
     const col = header.closest('.column');
     const body = col.querySelector('.col-body');
+    const collapse = (c) => {
+      const b = c.querySelector('.col-body');
+      // If maxHeight is 'none', set to actual height first for transition
+      b.style.maxHeight = b.scrollHeight + 'px';
+      // Force reflow so browser registers the starting value
+      b.offsetHeight;
+      b.style.maxHeight = '0';
+      c.classList.remove('expanded');
+    };
     if (col.classList.contains('expanded')) {
-      // Collapse: set explicit maxHeight first, then transition to 0
-      body.style.maxHeight = body.scrollHeight + 'px';
-      requestAnimationFrame(() => {
-        body.style.maxHeight = '0';
-        col.classList.remove('expanded');
-      });
+      collapse(col);
       this._mobileExpandedStage = null;
     } else {
-      // Collapse others first
-      document.querySelectorAll('.column.expanded').forEach(c => {
-        const ob = c.querySelector('.col-body');
-        ob.style.maxHeight = ob.scrollHeight + 'px';
-        requestAnimationFrame(() => {
-          ob.style.maxHeight = '0';
-          c.classList.remove('expanded');
-        });
-      });
+      // Collapse others
+      document.querySelectorAll('.column.expanded').forEach(c => collapse(c));
       // Expand this one
       col.classList.add('expanded');
       body.style.maxHeight = body.scrollHeight + 'px';
-      // Allow free scrolling after transition
+      // After transition, unlock for dynamic content
       const onEnd = () => {
         if (col.classList.contains('expanded')) body.style.maxHeight = 'none';
         body.removeEventListener('transitionend', onEnd);
       };
       body.addEventListener('transitionend', onEnd);
+      // Fallback
+      setTimeout(() => { if (col.classList.contains('expanded')) body.style.maxHeight = 'none'; }, 400);
       this._mobileExpandedStage = col.dataset.stage;
     }
   },
