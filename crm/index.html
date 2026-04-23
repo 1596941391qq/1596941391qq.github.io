@@ -186,7 +186,7 @@ textarea{resize:vertical;min-height:60px}
   .modal-overlay{align-items:flex-end;padding:0}
 
   /* === ACCORDION MODE (body.mode-accordion) === */
-  body.mode-accordion{overflow:hidden}
+  body.mode-accordion{overflow-y:auto;-webkit-overflow-scrolling:touch}
   body.mode-accordion .mobile-nav{
     display:flex;position:fixed;bottom:0;left:0;right:0;
     background:var(--surface);border-top:1px solid var(--border);
@@ -291,9 +291,9 @@ textarea{resize:vertical;min-height:60px}
   }
   body.mode-accordion .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
   body.mode-accordion .modal-overlay.open .modal{animation:slideUp .25s ease-out}
-  .modal-grid{grid-template-columns:1fr}
-  .modal-actions{flex-wrap:wrap}
-  .modal-actions .btn{flex:1;min-width:0;text-align:center}
+  body.mode-accordion .modal-grid{grid-template-columns:1fr}
+  body.mode-accordion .modal-actions{flex-wrap:wrap}
+  body.mode-accordion .modal-actions .btn{flex:1;min-width:0;text-align:center}
 }
 @keyframes slideUp{
   from{transform:translateY(100%)}
@@ -489,7 +489,7 @@ CRM.state = {
   updateTask(id, updates) {
     const t = this.data.tasks.find(x => x.id === id);
     if (!t) return;
-    Object.assign(t, updates);
+    Object.assign(t, updates, { updatedAt: new Date().toISOString() });
     this.save();
   },
   deleteTask(id) {
@@ -688,55 +688,26 @@ CRM.ui = {
         else CRM.ui.openTaskDetail(id);
       });
     });
-    // Mobile accordion (max-height technique for smooth animation)
+    // Mobile accordion: expand initial column
     if (isAccordion) {
       const columns = kb.querySelectorAll('.column');
-      // Helper: expand a column by setting max-height to scrollHeight
-      const expandCol = (col) => {
-        col.classList.add('expanded');
-        const body = col.querySelector('.col-body');
-        // Temporarily remove max-height to measure true content height
-        body.style.maxHeight = 'none';
-        const h = body.scrollHeight;
-        body.style.maxHeight = h + 'px';
-      };
-      const collapseCol = (col) => {
-        col.classList.remove('expanded');
-        const body = col.querySelector('.col-body');
-        body.style.maxHeight = '0';
-      };
-      // Preserve previously expanded stage
       const prevExpanded = this._mobileExpandedStage;
       if (prevExpanded) {
         const target = kb.querySelector(`.column[data-stage="${prevExpanded}"]`);
-        if (target) expandCol(target);
+        if (target) { target.classList.add('expanded'); target.querySelector('.col-body').style.maxHeight = 'none'; }
       }
-      // Fallback: expand first column with cards
       if (!kb.querySelector('.column.expanded')) {
         for (const col of columns) {
           if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
-            expandCol(col);
+            col.classList.add('expanded'); col.querySelector('.col-body').style.maxHeight = 'none';
             break;
           }
         }
-        if (!kb.querySelector('.column.expanded') && columns.length) expandCol(columns[0]);
+        if (!kb.querySelector('.column.expanded') && columns.length) {
+          columns[0].classList.add('expanded'); columns[0].querySelector('.col-body').style.maxHeight = 'none';
+        }
       }
-      // Track expanded stage
       this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
-      // Bind accordion toggle (exclusive: only one open at a time)
-      columns.forEach(col => {
-        col.querySelector('.col-header').addEventListener('click', (e) => {
-          if (e.target.closest('.col-count')) return;
-          const wasExpanded = col.classList.contains('expanded');
-          columns.forEach(c => collapseCol(c));
-          if (!wasExpanded) {
-            expandCol(col);
-            CRM.ui._mobileExpandedStage = col.dataset.stage;
-          } else {
-            CRM.ui._mobileExpandedStage = null;
-          }
-        });
-      });
     }
   },
 
@@ -816,6 +787,19 @@ CRM.ui = {
 
     document.addEventListener('touchend', e => {
       if (e.touches.length < 2) pinchStartDist = 0;
+    });
+
+    // Double-tap to reset zoom
+    let lastTap = 0;
+    document.getElementById('kanban')?.addEventListener('touchend', e => {
+      const now = Date.now();
+      if (now - lastTap < 300 && pinchScale !== 1) {
+        pinchScale = 1;
+        const kb = document.getElementById('kanban');
+        kb.style.transform = 'scale(1)';
+        kb.parentElement.style.overflow = 'hidden';
+      }
+      lastTap = now;
     });
 
     // ── Long-press drag ──
@@ -1270,25 +1254,6 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
     tab.classList.add('active');
     CRM.state.currentView = tab.dataset.view;
-    CRM.state.searchQuery = '';
-    CRM.ui.render();
-  });
-});
-
-// Mobile bottom nav
-document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
-  item.addEventListener('click', () => {
-    if (item.dataset.action === 'settings') {
-      CRM.ui.openSettings();
-      return;
-    }
-    document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
-    item.classList.add('active');
-    // Sync desktop tab state
-    document.querySelectorAll('.tab').forEach(t => {
-      t.classList.toggle('active', t.dataset.view === item.dataset.view);
-    });
-    CRM.state.currentView = item.dataset.view;
     CRM.state.searchQuery = '';
     CRM.ui.render();
   });
