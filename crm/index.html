@@ -699,13 +699,13 @@ CRM.ui = {
   renderKanban() {
     const kb = document.getElementById('kanban');
     const q = CRM.state.searchQuery.toLowerCase();
-const isAccordion = document.body.classList.contains('mode-accordion');)
+    const isAccordion = document.body.classList.contains('mode-accordion');
     if (CRM.state.currentView === 'customers') {
       const cols = STAGES;
       kb.innerHTML = cols.map(stage => {
         let cards = CRM.state.data.customers.filter(c => c.stage === stage);
         if (q) cards = cards.filter(c => (c.company+c.name+c.contact+(c.services||[]).join('')).toLowerCase().includes(q));
-const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
+        const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
         const dragOver = isAccordion ? '' : 'ondragover="CRM.ui.onDragOver(event)"';
         const dragDrop = isAccordion ? '' : 'ondrop="CRM.ui.onDrop(event,\'customer\')"';
         const dragLeave = isAccordion ? '' : 'ondragleave="CRM.ui.onDragLeave(event)"';
@@ -720,7 +720,7 @@ const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
         if (q) cards = cards.filter(t => t.title.toLowerCase().includes(q));
         const priOrder = {high:0,medium:1,low:2};
         cards.sort((a,b) => (priOrder[a.priority]??1) - (priOrder[b.priority]??1));
-const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
+        const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
         const dragOver = isAccordion ? '' : 'ondragover="CRM.ui.onDragOver(event)"';
         const dragDrop = isAccordion ? '' : 'ondrop="CRM.ui.onDrop(event,\'task\')"';
         const dragLeave = isAccordion ? '' : 'ondragleave="CRM.ui.onDragLeave(event)"';
