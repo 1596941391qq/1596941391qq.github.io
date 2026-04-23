@@ -85,6 +85,9 @@ textarea{resize:vertical;min-height:60px}
 .card-step{font-size:12px;font-weight:700;color:#7c3aed;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);border-radius:6px;padding:6px 10px;white-space:nowrap;text-align:center;line-height:1.3}
 .card-phone{font-size:11px;color:var(--accent);margin-top:4px;font-weight:600}
 
+/* Mobile Nav (hidden by default, shown in accordion mode) */
+.mobile-nav{display:none}
+
 /* Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .2s}
 .modal-overlay.open{opacity:1;pointer-events:auto}
@@ -144,7 +147,6 @@ textarea{resize:vertical;min-height:60px}
   .column{flex:1;min-width:240px;max-width:300px}
 }
 @media(max-width:768px){
-@media(max-width:768px){
   /* === DEFAULT: Horizontal scroll + touch drag === */
   body{overflow:hidden}
   .topbar{padding:10px 12px;flex-shrink:0}
@@ -154,9 +156,9 @@ textarea{resize:vertical;min-height:60px}
   .tabs .tab.active{background:var(--accent);color:#fff}
   .stats-bar{
     padding:8px 12px;gap:8px;flex-shrink:0;
-    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:touch;
   }
-  .stat{padding:8px 10px;min-width:90px;scroll-snap-align:start}
+  .stat{padding:8px 10px;min-width:90px;}
   .kanban-wrap{overflow:hidden;flex:1}
   .kanban-toolbar{
     padding:8px 12px;flex-shrink:0;
@@ -165,12 +167,12 @@ textarea{resize:vertical;min-height:60px}
   .kanban-toolbar input{max-width:160px;flex-shrink:0}
   .kanban{
     flex:1;overflow-x:auto;overflow-y:hidden;
-    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:touch;
     padding:0;gap:0;
   }
   .column{
     min-width:88vw;max-width:88vw;flex-shrink:0;
-    scroll-snap-align:start;border-radius:0;
+    border-radius:0;
     border-left:none;border-right:none;
     display:flex;flex-direction:column;
   }
@@ -184,7 +186,7 @@ textarea{resize:vertical;min-height:60px}
   .modal-overlay{align-items:flex-end;padding:0}
 
   /* === ACCORDION MODE (body.mode-accordion) === */
-  body.mode-accordion{overflow:hidden}
+  body.mode-accordion{overflow-y:auto;-webkit-overflow-scrolling:touch}
   body.mode-accordion .mobile-nav{
     display:flex;position:fixed;bottom:0;left:0;right:0;
     background:var(--surface);border-top:1px solid var(--border);
@@ -255,12 +257,14 @@ textarea{resize:vertical;min-height:60px}
   }
   body.mode-accordion .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
   body.mode-accordion .col-body{
-    overflow:hidden;max-height:0;padding:0 12px;
-    transition:max-height .3s ease-out,padding .3s ease-out;
+    max-height:0;overflow:hidden;padding:0;
+    transition:max-height .35s ease-out,padding .2s ease-out;
   }
-  body.mode-accordion .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
   body.mode-accordion .column.expanded{background:var(--surface)}
-  body.mode-accordion .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
+  body.mode-accordion .column.expanded .col-body{
+    max-height:2000px;padding:8px 12px 12px;background:var(--bg);
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+  }
   body.mode-accordion .card{
     cursor:pointer;-webkit-tap-highlight-color:transparent;
     padding:10px 12px;gap:10px;flex-wrap:nowrap;align-items:flex-start;
@@ -289,70 +293,13 @@ textarea{resize:vertical;min-height:60px}
   }
   body.mode-accordion .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
   body.mode-accordion .modal-overlay.open .modal{animation:slideUp .25s ease-out}
-}
-  .modal-grid{grid-template-columns:1fr}
-  .modal-actions{flex-wrap:wrap}
-  .modal-actions .btn{flex:1;min-width:0;text-align:center}
+  body.mode-accordion .modal-grid{grid-template-columns:1fr}
+  body.mode-accordion .modal-actions{flex-wrap:wrap}
+  body.mode-accordion .modal-actions .btn{flex:1;min-width:0;text-align:center}
 }
 @keyframes slideUp{
   from{transform:translateY(100%)}
   to{transform:translateY(0)}
-}
-
-/* 手风琴模式（通过设置切换） */
-@media(max-width:768px){
-  body.mode-accordion .mobile-nav{
-    display:flex;position:fixed;bottom:0;left:0;right:0;
-    background:var(--surface);border-top:1px solid var(--border);
-    padding:8px 12px;padding-bottom:calc(8px + env(safe-area-inset-bottom));
-    z-index:50;gap:4px;
-    box-shadow:0 -2px 12px rgba(0,0,0,.06);
-  }
-  body.mode-accordion .nav-item{
-    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    gap:3px;font-size:10px;font-weight:600;color:var(--text3);padding:8px 4px;
-    border-radius:12px;transition:all .2s;min-height:52px;background:transparent;
-  }
-  body.mode-accordion .nav-item:active{transform:scale(.93)}
-  body.mode-accordion .nav-item.active{color:var(--accent);background:var(--accent-dim)}
-  body.mode-accordion .topbar .tabs{display:none}
-  body.mode-accordion .topbar .icon-btn{display:none}
-  body.mode-accordion .topbar{padding:10px 12px;gap:0}
-  body.mode-accordion .logo{font-size:16px}
-  body.mode-accordion .logo span{display:none}
-  body.mode-accordion .app{height:auto;max-height:none;min-height:100vh;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
-  body.mode-accordion .kanban-wrap{flex:unset;overflow:visible}
-  body.mode-accordion .stats-bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px 12px;overflow:visible}
-  body.mode-accordion .stat{min-width:unset;padding:8px 6px;text-align:center}
-  body.mode-accordion .stat-val{font-size:17px}
-  body.mode-accordion .stat-label{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  body.mode-accordion .sync-status{display:none}
-  body.mode-accordion .kanban-toolbar{flex-wrap:wrap;padding:8px 12px}
-  body.mode-accordion .kanban-toolbar input{max-width:100%;order:0}
-  body.mode-accordion .kanban-toolbar .btn-ghost{display:none}
-  body.mode-accordion .kanban{flex-direction:column;overflow:visible;padding:8px 0 12px;gap:0;flex:unset;overflow-x:hidden}
-  body.mode-accordion .column{min-width:100%;max-width:100%;border-radius:0;border-left:0;border-right:0;border-bottom:1px solid var(--border);background:var(--bg);overflow:visible}
-  body.mode-accordion .column:first-child{border-top:none}
-  body.mode-accordion .col-header{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;padding:16px 16px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:10px;flex-shrink:0;background:var(--surface);border-bottom:1px solid transparent;transition:border-color .2s}
-  body.mode-accordion .col-header .arrow{width:20px;height:20px;display:flex;align-items:center;justify-content:center;background:var(--surface2);border-radius:6px;transition:transform .25s ease,background .2s;flex-shrink:0;font-size:9px;color:var(--text3)}
-  body.mode-accordion .column.expanded .col-header .arrow{transform:rotate(90deg);background:var(--accent-dim);color:var(--accent)}
-  body.mode-accordion .column.expanded .col-header{border-bottom:1px solid var(--border)}
-  body.mode-accordion .col-header span:nth-child(2){flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px}
-  body.mode-accordion .col-count{flex-shrink:0;font-size:12px;font-weight:700;background:var(--surface2);border-radius:8px;padding:3px 10px;color:var(--text2);min-width:28px;text-align:center}
-  body.mode-accordion .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
-  body.mode-accordion .col-body{overflow:hidden;max-height:0;padding:0 12px;transition:max-height .3s ease-out,padding .3s ease-out}
-  body.mode-accordion .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
-  body.mode-accordion .column.expanded{background:var(--surface)}
-  body.mode-accordion .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
-  body.mode-accordion .card{cursor:pointer;-webkit-tap-highlight-color:transparent;padding:10px 12px;border-radius:10px;margin-bottom:4px}
-  body.mode-accordion .btn{min-height:44px}
-  body.mode-accordion .btn-sm{min-height:36px}
-  body.mode-accordion .modal-overlay{align-items:flex-end;padding:0}
-  body.mode-accordion .modal{max-width:100%;max-height:90vh;border-radius:16px 16px 0 0;padding:20px 16px;padding-bottom:calc(20px + env(safe-area-inset-bottom));overflow-y:auto}
-  body.mode-accordion .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
-  body.mode-accordion .modal-grid{grid-template-columns:1fr}
-  body.mode-accordion .modal-actions{flex-wrap:wrap}
-  body.mode-accordion .modal-actions .btn{flex:1;min-width:0;text-align:center}
 }
 </style>
 </head>
@@ -378,7 +325,7 @@ textarea{resize:vertical;min-height:60px}
   </div>
 </div>
 
-<!-- Mobile Bottom Nav (手风琴模式) -->)
+<!-- Mobile Bottom Nav (手风琴模式) -->
 <nav class="mobile-nav">
   <button class="nav-item active" data-view="customers">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -445,10 +392,14 @@ CRM.state = {
       });
       return Array.from(map.values());
     };
+    const remoteTasks = (remote.tasks||[]);
+    const localTasks = (local.tasks||[]);
+    // Protect: if remote wiped tasks but local has them, keep local
+    const tasks = (remoteTasks.length === 0 && localTasks.length > 0) ? localTasks : mergeArrays(remoteTasks, localTasks);
     return {
       meta: { ...remote.meta, lastUpdated: new Date().toISOString() },
       customers: mergeArrays(remote.customers||[], local.customers||[]),
-      tasks: mergeArrays(remote.tasks||[], local.tasks||[])
+      tasks
     };
   },
 
@@ -544,7 +495,7 @@ CRM.state = {
   updateTask(id, updates) {
     const t = this.data.tasks.find(x => x.id === id);
     if (!t) return;
-    Object.assign(t, updates);
+    Object.assign(t, updates, { updatedAt: new Date().toISOString() });
     this.save();
   },
   deleteTask(id) {
@@ -589,6 +540,15 @@ CRM.api = {
   },
 
   async push(data) {
+    // Guard: never overwrite remote with empty tasks if we had tasks before
+    const cached = localStorage.getItem('crm_cache');
+    if (cached) {
+      const prev = JSON.parse(cached);
+      if ((prev.tasks||[]).length > 0 && (data.tasks||[]).length === 0) {
+        console.error('BLOCKED: attempted to push with empty tasks. Keeping previous tasks.');
+        data.tasks = prev.tasks;
+      }
+    }
     const r = await fetch(`${this.baseUrl}/b/${this.BIN_ID}`, {
       method:'PUT',
       headers:{ 'Content-Type':'application/json', 'X-Master-Key': this.MASTER_KEY, 'X-Access-Key': this.ACCESS_KEY },
@@ -743,55 +703,26 @@ CRM.ui = {
         else CRM.ui.openTaskDetail(id);
       });
     });
-    // Mobile accordion (max-height technique for smooth animation)
-    if (isMobile) {
+    // Mobile accordion: expand initial column
+    if (isAccordion) {
       const columns = kb.querySelectorAll('.column');
-      // Helper: expand a column by setting max-height to scrollHeight
-      const expandCol = (col) => {
-        col.classList.add('expanded');
-        const body = col.querySelector('.col-body');
-        // Temporarily remove max-height to measure true content height
-        body.style.maxHeight = 'none';
-        const h = body.scrollHeight;
-        body.style.maxHeight = h + 'px';
-      };
-      const collapseCol = (col) => {
-        col.classList.remove('expanded');
-        const body = col.querySelector('.col-body');
-        body.style.maxHeight = '0';
-      };
-      // Preserve previously expanded stage
       const prevExpanded = this._mobileExpandedStage;
       if (prevExpanded) {
         const target = kb.querySelector(`.column[data-stage="${prevExpanded}"]`);
-        if (target) expandCol(target);
+        if (target) target.classList.add('expanded');
       }
-      // Fallback: expand first column with cards
       if (!kb.querySelector('.column.expanded')) {
         for (const col of columns) {
           if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
-            expandCol(col);
+            col.classList.add('expanded');
             break;
           }
         }
-        if (!kb.querySelector('.column.expanded') && columns.length) expandCol(columns[0]);
+        if (!kb.querySelector('.column.expanded') && columns.length) {
+          columns[0].classList.add('expanded');
+        }
       }
-      // Track expanded stage
       this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
-      // Bind accordion toggle (exclusive: only one open at a time)
-      columns.forEach(col => {
-        col.querySelector('.col-header').addEventListener('click', (e) => {
-          if (e.target.closest('.col-count')) return;
-          const wasExpanded = col.classList.contains('expanded');
-          columns.forEach(c => collapseCol(c));
-          if (!wasExpanded) {
-            expandCol(col);
-            CRM.ui._mobileExpandedStage = col.dataset.stage;
-          } else {
-            CRM.ui._mobileExpandedStage = null;
-          }
-        });
-      });
     }
   },
 
@@ -871,6 +802,19 @@ CRM.ui = {
 
     document.addEventListener('touchend', e => {
       if (e.touches.length < 2) pinchStartDist = 0;
+    });
+
+    // Double-tap to reset zoom
+    let lastTap = 0;
+    document.getElementById('kanban')?.addEventListener('touchend', e => {
+      const now = Date.now();
+      if (now - lastTap < 300 && pinchScale !== 1) {
+        pinchScale = 1;
+        const kb = document.getElementById('kanban');
+        kb.style.transform = 'scale(1)';
+        kb.parentElement.style.overflow = 'hidden';
+      }
+      lastTap = now;
     });
 
     // ── Long-press drag ──
@@ -1010,20 +954,12 @@ CRM.ui = {
   _mobileExpandedStage: null,
   _toggleColumn(header) {
     const col = header.closest('.column');
-    const body = col.querySelector('.col-body');
     if (col.classList.contains('expanded')) {
       col.classList.remove('expanded');
-      body.style.maxHeight = '0';
       this._mobileExpandedStage = null;
     } else {
-      document.querySelectorAll('.column.expanded').forEach(c => {
-        c.classList.remove('expanded');
-        c.querySelector('.col-body').style.maxHeight = '0';
-      });
+      document.querySelectorAll('.column.expanded').forEach(c => c.classList.remove('expanded'));
       col.classList.add('expanded');
-      body.style.maxHeight = 'none';
-      const h = body.scrollHeight;
-      body.style.maxHeight = h + 'px';
       this._mobileExpandedStage = col.dataset.stage;
     }
   },
@@ -1325,25 +1261,6 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
     tab.classList.add('active');
     CRM.state.currentView = tab.dataset.view;
-    CRM.state.searchQuery = '';
-    CRM.ui.render();
-  });
-});
-
-// Mobile bottom nav
-document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
-  item.addEventListener('click', () => {
-    if (item.dataset.action === 'settings') {
-      CRM.ui.openSettings();
-      return;
-    }
-    document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
-    item.classList.add('active');
-    // Sync desktop tab state
-    document.querySelectorAll('.tab').forEach(t => {
-      t.classList.toggle('active', t.dataset.view === item.dataset.view);
-    });
-    CRM.state.currentView = item.dataset.view;
     CRM.state.searchQuery = '';
     CRM.ui.render();
   });
