@@ -540,6 +540,15 @@ CRM.api = {
   },
 
   async push(data) {
+    // Guard: never overwrite remote with empty tasks if we had tasks before
+    const cached = localStorage.getItem('crm_cache');
+    if (cached) {
+      const prev = JSON.parse(cached);
+      if ((prev.tasks||[]).length > 0 && (data.tasks||[]).length === 0) {
+        console.error('BLOCKED: attempted to push with empty tasks. Keeping previous tasks.');
+        data.tasks = prev.tasks;
+      }
+    }
     const r = await fetch(`${this.baseUrl}/b/${this.BIN_ID}`, {
       method:'PUT',
       headers:{ 'Content-Type':'application/json', 'X-Master-Key': this.MASTER_KEY, 'X-Access-Key': this.ACCESS_KEY },
