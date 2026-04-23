@@ -156,9 +156,9 @@ textarea{resize:vertical;min-height:60px}
   .tabs .tab.active{background:var(--accent);color:#fff}
   .stats-bar{
     padding:8px 12px;gap:8px;flex-shrink:0;
-    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:touch;
   }
-  .stat{padding:8px 10px;min-width:90px;scroll-snap-align:start}
+  .stat{padding:8px 10px;min-width:90px;}
   .kanban-wrap{overflow:hidden;flex:1}
   .kanban-toolbar{
     padding:8px 12px;flex-shrink:0;
@@ -167,12 +167,12 @@ textarea{resize:vertical;min-height:60px}
   .kanban-toolbar input{max-width:160px;flex-shrink:0}
   .kanban{
     flex:1;overflow-x:auto;overflow-y:hidden;
-    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:touch;
     padding:0;gap:0;
   }
   .column{
     min-width:88vw;max-width:88vw;flex-shrink:0;
-    scroll-snap-align:start;border-radius:0;
+    border-radius:0;
     border-left:none;border-right:none;
     display:flex;flex-direction:column;
   }
@@ -257,12 +257,14 @@ textarea{resize:vertical;min-height:60px}
   }
   body.mode-accordion .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
   body.mode-accordion .col-body{
-    overflow:hidden;max-height:0;padding:0 12px;
-    transition:max-height .3s ease-out,padding .3s ease-out;
+    overflow:hidden;max-height:0;padding-top:0;padding-bottom:0;
+    transition:max-height .35s cubic-bezier(.4,0,.2,1),padding .25s ease;
   }
-  body.mode-accordion .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
   body.mode-accordion .column.expanded{background:var(--surface)}
-  body.mode-accordion .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
+  body.mode-accordion .column.expanded .col-body{
+    padding:8px 12px 12px;background:var(--bg);
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+  }
   body.mode-accordion .card{
     cursor:pointer;-webkit-tap-highlight-color:transparent;
     padding:10px 12px;gap:10px;flex-wrap:nowrap;align-items:flex-start;
@@ -390,10 +392,14 @@ CRM.state = {
       });
       return Array.from(map.values());
     };
+    const remoteTasks = (remote.tasks||[]);
+    const localTasks = (local.tasks||[]);
+    // Protect: if remote wiped tasks but local has them, keep local
+    const tasks = (remoteTasks.length === 0 && localTasks.length > 0) ? localTasks : mergeArrays(remoteTasks, localTasks);
     return {
       meta: { ...remote.meta, lastUpdated: new Date().toISOString() },
       customers: mergeArrays(remote.customers||[], local.customers||[]),
-      tasks: mergeArrays(remote.tasks||[], local.tasks||[])
+      tasks
     };
   },
 
@@ -692,19 +698,31 @@ CRM.ui = {
     if (isAccordion) {
       const columns = kb.querySelectorAll('.column');
       const prevExpanded = this._mobileExpandedStage;
+      const expand = (col) => {
+        col.classList.add('expanded');
+        const body = col.querySelector('.col-body');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        const onEnd = () => {
+          if (col.classList.contains('expanded')) body.style.maxHeight = 'none';
+          body.removeEventListener('transitionend', onEnd);
+        };
+        body.addEventListener('transitionend', onEnd);
+        // Fallback in case transitionend doesn't fire
+        setTimeout(() => { if (col.classList.contains('expanded')) body.style.maxHeight = 'none'; }, 400);
+      };
       if (prevExpanded) {
         const target = kb.querySelector(`.column[data-stage="${prevExpanded}"]`);
-        if (target) { target.classList.add('expanded'); target.querySelector('.col-body').style.maxHeight = 'none'; }
+        if (target) expand(target);
       }
       if (!kb.querySelector('.column.expanded')) {
         for (const col of columns) {
           if (col.querySelector('.col-body').children.length > 0 && !col.querySelector('.empty')) {
-            col.classList.add('expanded'); col.querySelector('.col-body').style.maxHeight = 'none';
+            expand(col);
             break;
           }
         }
         if (!kb.querySelector('.column.expanded') && columns.length) {
-          columns[0].classList.add('expanded'); columns[0].querySelector('.col-body').style.maxHeight = 'none';
+          expand(columns[0]);
         }
       }
       this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
@@ -941,18 +959,32 @@ CRM.ui = {
     const col = header.closest('.column');
     const body = col.querySelector('.col-body');
     if (col.classList.contains('expanded')) {
-      col.classList.remove('expanded');
-      body.style.maxHeight = '0';
+      // Collapse: set explicit maxHeight first, then transition to 0
+      body.style.maxHeight = body.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        body.style.maxHeight = '0';
+        col.classList.remove('expanded');
+      });
       this._mobileExpandedStage = null;
     } else {
+      // Collapse others first
       document.querySelectorAll('.column.expanded').forEach(c => {
-        c.classList.remove('expanded');
-        c.querySelector('.col-body').style.maxHeight = '0';
+        const ob = c.querySelector('.col-body');
+        ob.style.maxHeight = ob.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          ob.style.maxHeight = '0';
+          c.classList.remove('expanded');
+        });
       });
+      // Expand this one
       col.classList.add('expanded');
-      body.style.maxHeight = 'none';
-      const h = body.scrollHeight;
-      body.style.maxHeight = h + 'px';
+      body.style.maxHeight = body.scrollHeight + 'px';
+      // Allow free scrolling after transition
+      const onEnd = () => {
+        if (col.classList.contains('expanded')) body.style.maxHeight = 'none';
+        body.removeEventListener('transitionend', onEnd);
+      };
+      body.addEventListener('transitionend', onEnd);
       this._mobileExpandedStage = col.dataset.stage;
     }
   },
