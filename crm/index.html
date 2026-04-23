@@ -121,21 +121,75 @@ textarea{resize:vertical;min-height:60px}
 /* Empty state */
 .empty{text-align:center;padding:40px 20px;color:var(--text3);font-size:13px}
 
-/* Mobile Nav (hidden on desktop) */
-.mobile-nav{display:none}
-.nav-item{font:inherit}
+/* Trello-style Touch Drag Ghost */
+.drag-ghost{
+  position:fixed;pointer-events:none;z-index:9999;
+  width:260px;background:var(--surface);border:2px solid var(--accent);
+  border-radius:var(--radius);padding:12px 14px;
+  box-shadow:0 12px 40px rgba(0,0,0,.12);opacity:.97;
+  transform:rotate(2deg) scale(1.02);
+  transition:transform .1s;
+}
+.drag-ghost .card-title{font-size:14px;font-weight:700;margin-bottom:4px}
+.drag-ghost .card-sub{font-size:12px;color:var(--text2)}
+.drag-ghost .card-badges{margin-top:8px}
+.drag-placeholder{height:56px;background:var(--accent-dim);border:2px dashed var(--accent);border-radius:var(--radius);margin-bottom:6px;transition:opacity .15s}
 
 /* Responsive */
+@media(min-width:769px){
+  .kanban{overflow-x:auto;overflow-y:hidden;scroll-snap-type:none}
+  .column{flex:1;min-width:240px;max-width:300px}
+}
 @media(max-width:768px){
-  /* Bottom nav */
-  .mobile-nav{
+@media(max-width:768px){
+  /* === DEFAULT: Horizontal scroll + touch drag === */
+  body{overflow:hidden}
+  .topbar{padding:10px 12px;flex-shrink:0}
+  .logo{font-size:16px}
+  .logo span{display:none}
+  .tabs .tab{padding:5px 10px;font-size:12px}
+  .tabs .tab.active{background:var(--accent);color:#fff}
+  .stats-bar{
+    padding:8px 12px;gap:8px;flex-shrink:0;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  }
+  .stat{padding:8px 10px;min-width:90px;scroll-snap-align:start}
+  .kanban-wrap{overflow:hidden;flex:1}
+  .kanban-toolbar{
+    padding:8px 12px;flex-shrink:0;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+  }
+  .kanban-toolbar input{max-width:160px;flex-shrink:0}
+  .kanban{
+    flex:1;overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    padding:0;gap:0;
+  }
+  .column{
+    min-width:88vw;max-width:88vw;flex-shrink:0;
+    scroll-snap-align:start;border-radius:0;
+    border-left:none;border-right:none;
+    display:flex;flex-direction:column;
+  }
+  .column:last-child{border-right:none}
+  .column.drag-over{background:var(--accent-dim);border-color:var(--accent)}
+  .col-body{min-height:120px;max-height:calc(100vh - 220px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .card{position:relative;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none}
+  .card:active,.card.touch-dragging{cursor:grabbing}
+  .btn{padding:6px 12px;font-size:12px}
+  .modal{max-width:100%;padding:16px;border-radius:12px 12px 0 0;max-height:90vh;position:fixed;bottom:0;left:0;right:0;top:auto;margin:0;border-bottom:none}
+  .modal-overlay{align-items:flex-end;padding:0}
+
+  /* === ACCORDION MODE (body.mode-accordion) === */
+  body.mode-accordion{overflow:hidden}
+  body.mode-accordion .mobile-nav{
     display:flex;position:fixed;bottom:0;left:0;right:0;
     background:var(--surface);border-top:1px solid var(--border);
     padding:8px 12px;padding-bottom:calc(8px + env(safe-area-inset-bottom));
     z-index:50;gap:4px;
     box-shadow:0 -2px 12px rgba(0,0,0,.06);
   }
-  .nav-item{
+  body.mode-accordion .nav-item{
     flex:1;display:flex;flex-direction:column;align-items:center;
     justify-content:center;
     gap:3px;font-size:10px;font-weight:600;
@@ -143,141 +197,96 @@ textarea{resize:vertical;min-height:60px}
     border-radius:12px;transition:all .2s;
     min-height:52px;background:transparent;
   }
-  .nav-item:active{transform:scale(.93)}
-  .nav-item.active{
-    color:var(--accent);background:var(--accent-dim);
-  }
-  .nav-item svg{transition:transform .2s}
-  .nav-item.active svg{transform:scale(1.1)}
-
-  /* Hide desktop nav elements */
-  .topbar .tabs{display:none}
-  .topbar .icon-btn{display:none}
-  .topbar{padding:10px 12px;gap:0}
-  .logo{font-size:16px}
-  .logo span{display:none}
-
-  /* App: remove viewport lock, allow natural page scroll */
-  .app{height:auto;max-height:none;min-height:100vh;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
-
-  /* Kanban wrap: let content grow naturally */
-  .kanban-wrap{flex:unset;overflow:visible}
-
-  /* Stats bar - 3 column grid */
-  .stats-bar{
+  body.mode-accordion .nav-item:active{transform:scale(.93)}
+  body.mode-accordion .nav-item.active{color:var(--accent);background:var(--accent-dim)}
+  body.mode-accordion .nav-item svg{transition:transform .2s}
+  body.mode-accordion .nav-item.active svg{transform:scale(1.1)}
+  body.mode-accordion .topbar .tabs{display:none}
+  body.mode-accordion .topbar .icon-btn{display:none}
+  body.mode-accordion .topbar{padding:10px 12px;gap:0}
+  body.mode-accordion .app{height:auto;max-height:none;min-height:100vh;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  body.mode-accordion .kanban-wrap{flex:unset;overflow:visible}
+  body.mode-accordion .stats-bar{
     display:grid;grid-template-columns:1fr 1fr 1fr;
     gap:6px;padding:8px 12px;overflow:visible;
   }
-  .stat{min-width:unset;padding:8px 6px;text-align:center}
-  .stat-val{font-size:17px}
-  .stat-label{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .sync-status{display:none}
-
-  /* Toolbar - search full width, hide secondary buttons */
-  .kanban-toolbar{flex-wrap:wrap;padding:8px 12px}
-  .kanban-toolbar input{max-width:100%;order:0}
-  .kanban-toolbar .btn-ghost{display:none}
-
-  /* Kanban - accordion */
-  .kanban{
+  body.mode-accordion .stat{min-width:unset;padding:8px 6px;text-align:center}
+  body.mode-accordion .stat-val{font-size:17px}
+  body.mode-accordion .stat-label{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body.mode-accordion .sync-status{display:none}
+  body.mode-accordion .kanban-toolbar{flex-wrap:wrap;padding:8px 12px}
+  body.mode-accordion .kanban-toolbar input{max-width:100%;order:0}
+  body.mode-accordion .kanban-toolbar .btn-ghost{display:none}
+  body.mode-accordion .kanban{
     flex-direction:column;overflow:visible;
     padding:8px 0 12px;gap:0;flex:unset;
   }
-  .column{
+  body.mode-accordion .column{
     min-width:100%;max-width:100%;
     border-radius:0;border-left:0;border-right:0;
     border-bottom:1px solid var(--border);
     background:var(--bg);overflow:visible;
   }
-  .column:first-child{border-top:none}
-  .col-header{
+  body.mode-accordion .column:first-child{border-top:none}
+  body.mode-accordion .col-header{
     cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;
     padding:16px 16px;font-size:15px;font-weight:600;
     display:flex;align-items:center;gap:10px;flex-shrink:0;
     background:var(--surface);border-bottom:1px solid transparent;
     transition:border-color .2s;
   }
-  .col-header .arrow{
+  body.mode-accordion .col-header .arrow{
     width:20px;height:20px;display:flex;align-items:center;justify-content:center;
     background:var(--surface2);border-radius:6px;
     transition:transform .25s ease,background .2s;flex-shrink:0;
     font-size:9px;color:var(--text3);
   }
-  .column.expanded .col-header .arrow{
-    transform:rotate(90deg);background:var(--accent-dim);color:var(--accent);
-  }
-  .column.expanded .col-header{border-bottom:1px solid var(--border)}
-  .col-header span:nth-child(2){
-    flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px;
-  }
-  .col-count{
+  body.mode-accordion .column.expanded .col-header .arrow{transform:rotate(90deg);background:var(--accent-dim);color:var(--accent)}
+  body.mode-accordion .column.expanded .col-header{border-bottom:1px solid var(--border)}
+  body.mode-accordion .col-header span:nth-child(2){flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px}
+  body.mode-accordion .col-count{
     flex-shrink:0;font-size:12px;font-weight:700;
     background:var(--surface2);border-radius:8px;
     padding:3px 10px;color:var(--text2);
     min-width:28px;text-align:center;
   }
-  .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
-  .col-body{
+  body.mode-accordion .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
+  body.mode-accordion .col-body{
     overflow:hidden;max-height:0;padding:0 12px;
     transition:max-height .3s ease-out,padding .3s ease-out;
   }
-  .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
-  .column.expanded{background:var(--surface)}
-  .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
-
-  /* Card touch */
-  .card{
+  body.mode-accordion .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
+  body.mode-accordion .column.expanded{background:var(--surface)}
+  body.mode-accordion .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
+  body.mode-accordion .card{
     cursor:pointer;-webkit-tap-highlight-color:transparent;
     padding:10px 12px;gap:10px;flex-wrap:nowrap;align-items:flex-start;
     border-radius:10px;margin-bottom:4px;
   }
-  .card-left{min-width:0;flex:1;overflow:hidden}
-  .card-right{
+  body.mode-accordion .card-left{min-width:0;flex:1;overflow:hidden}
+  body.mode-accordion .card-right{
     display:flex;flex-direction:column;align-items:flex-end;gap:3px;
     flex-shrink:0;max-width:55%;
   }
-  .card-main{min-width:0;flex:1;overflow:visible}
-  .card-title{font-size:13px;font-weight:600;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .card-sub,.card-meta{font-size:11px;line-height:1.35;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .card-latest{
-    font-size:9px;color:#7c3aed;
-    overflow-wrap:break-word;word-break:break-word;
-    max-width:100%;line-height:1.3;
-    background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.15);
-    border-radius:5px;padding:2px 6px;
-  }
-  }
-  .card-meta{
-    display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;
-    font-size:11px;color:var(--text2);line-height:1.3;align-items:center;
-  }
-  .pri-dot{
-    width:8px;height:8px;border-radius:50%;flex-shrink:0;
-    margin-top:5px;
-  }
-  .pri-tag{
-    font-size:10px;font-weight:600;padding:1px 6px;border-radius:4px;
-    border:1px solid;
-  }
-  .card:active{background:var(--border);transform:scale(.98);transition:transform .1s}
-  .card-badges{flex-wrap:wrap;gap:5px}
-  .badge{font-size:10px;padding:3px 9px;border-radius:6px;white-space:nowrap}
-
-  /* Larger touch targets */
-  .btn{min-height:44px}
-  .btn-sm{min-height:36px}
-
-  /* Modal - bottom sheet */
-  .modal-overlay{align-items:flex-end;padding:0}
-  .modal{
+  body.mode-accordion .card-main{min-width:0;flex:1;overflow:visible}
+  body.mode-accordion .card-title{font-size:13px;font-weight:600;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body.mode-accordion .card-sub,body.mode-accordion .card-meta{font-size:11px;line-height:1.35;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body.mode-accordion .card:active{background:var(--border);transform:scale(.98);transition:transform .1s}
+  body.mode-accordion .card-badges{flex-wrap:wrap;gap:5px}
+  body.mode-accordion .badge{font-size:10px;padding:3px 9px;border-radius:6px;white-space:nowrap}
+  body.mode-accordion .btn{min-height:44px}
+  body.mode-accordion .btn-sm{min-height:36px}
+  body.mode-accordion .modal-overlay{align-items:flex-end;padding:0}
+  body.mode-accordion .modal{
     max-width:100%;max-height:90vh;
     border-radius:16px 16px 0 0;
     padding:20px 16px;
     padding-bottom:calc(20px + env(safe-area-inset-bottom));
     overflow-y:auto;-webkit-overflow-scrolling:touch;
   }
-  .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
-  .modal-overlay.open .modal{animation:slideUp .25s ease-out}
+  body.mode-accordion .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
+  body.mode-accordion .modal-overlay.open .modal{animation:slideUp .25s ease-out}
+}
   .modal-grid{grid-template-columns:1fr}
   .modal-actions{flex-wrap:wrap}
   .modal-actions .btn{flex:1;min-width:0;text-align:center}
@@ -285,6 +294,62 @@ textarea{resize:vertical;min-height:60px}
 @keyframes slideUp{
   from{transform:translateY(100%)}
   to{transform:translateY(0)}
+}
+
+/* 手风琴模式（通过设置切换） */
+@media(max-width:768px){
+  body.mode-accordion .mobile-nav{
+    display:flex;position:fixed;bottom:0;left:0;right:0;
+    background:var(--surface);border-top:1px solid var(--border);
+    padding:8px 12px;padding-bottom:calc(8px + env(safe-area-inset-bottom));
+    z-index:50;gap:4px;
+    box-shadow:0 -2px 12px rgba(0,0,0,.06);
+  }
+  body.mode-accordion .nav-item{
+    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:3px;font-size:10px;font-weight:600;color:var(--text3);padding:8px 4px;
+    border-radius:12px;transition:all .2s;min-height:52px;background:transparent;
+  }
+  body.mode-accordion .nav-item:active{transform:scale(.93)}
+  body.mode-accordion .nav-item.active{color:var(--accent);background:var(--accent-dim)}
+  body.mode-accordion .topbar .tabs{display:none}
+  body.mode-accordion .topbar .icon-btn{display:none}
+  body.mode-accordion .topbar{padding:10px 12px;gap:0}
+  body.mode-accordion .logo{font-size:16px}
+  body.mode-accordion .logo span{display:none}
+  body.mode-accordion .app{height:auto;max-height:none;min-height:100vh;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  body.mode-accordion .kanban-wrap{flex:unset;overflow:visible}
+  body.mode-accordion .stats-bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px 12px;overflow:visible}
+  body.mode-accordion .stat{min-width:unset;padding:8px 6px;text-align:center}
+  body.mode-accordion .stat-val{font-size:17px}
+  body.mode-accordion .stat-label{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  body.mode-accordion .sync-status{display:none}
+  body.mode-accordion .kanban-toolbar{flex-wrap:wrap;padding:8px 12px}
+  body.mode-accordion .kanban-toolbar input{max-width:100%;order:0}
+  body.mode-accordion .kanban-toolbar .btn-ghost{display:none}
+  body.mode-accordion .kanban{flex-direction:column;overflow:visible;padding:8px 0 12px;gap:0;flex:unset;overflow-x:hidden}
+  body.mode-accordion .column{min-width:100%;max-width:100%;border-radius:0;border-left:0;border-right:0;border-bottom:1px solid var(--border);background:var(--bg);overflow:visible}
+  body.mode-accordion .column:first-child{border-top:none}
+  body.mode-accordion .col-header{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;padding:16px 16px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:10px;flex-shrink:0;background:var(--surface);border-bottom:1px solid transparent;transition:border-color .2s}
+  body.mode-accordion .col-header .arrow{width:20px;height:20px;display:flex;align-items:center;justify-content:center;background:var(--surface2);border-radius:6px;transition:transform .25s ease,background .2s;flex-shrink:0;font-size:9px;color:var(--text3)}
+  body.mode-accordion .column.expanded .col-header .arrow{transform:rotate(90deg);background:var(--accent-dim);color:var(--accent)}
+  body.mode-accordion .column.expanded .col-header{border-bottom:1px solid var(--border)}
+  body.mode-accordion .col-header span:nth-child(2){flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px}
+  body.mode-accordion .col-count{flex-shrink:0;font-size:12px;font-weight:700;background:var(--surface2);border-radius:8px;padding:3px 10px;color:var(--text2);min-width:28px;text-align:center}
+  body.mode-accordion .column.expanded .col-count{background:var(--accent-dim);color:var(--accent)}
+  body.mode-accordion .col-body{overflow:hidden;max-height:0;padding:0 12px;transition:max-height .3s ease-out,padding .3s ease-out}
+  body.mode-accordion .column:not(.expanded) .col-body{max-height:0;padding-top:0;padding-bottom:0}
+  body.mode-accordion .column.expanded{background:var(--surface)}
+  body.mode-accordion .column.expanded .col-body{padding:8px 12px 12px;background:var(--bg);overflow-y:visible}
+  body.mode-accordion .card{cursor:pointer;-webkit-tap-highlight-color:transparent;padding:10px 12px;border-radius:10px;margin-bottom:4px}
+  body.mode-accordion .btn{min-height:44px}
+  body.mode-accordion .btn-sm{min-height:36px}
+  body.mode-accordion .modal-overlay{align-items:flex-end;padding:0}
+  body.mode-accordion .modal{max-width:100%;max-height:90vh;border-radius:16px 16px 0 0;padding:20px 16px;padding-bottom:calc(20px + env(safe-area-inset-bottom));overflow-y:auto}
+  body.mode-accordion .modal h2{font-size:16px;flex-wrap:wrap;word-break:break-all}
+  body.mode-accordion .modal-grid{grid-template-columns:1fr}
+  body.mode-accordion .modal-actions{flex-wrap:wrap}
+  body.mode-accordion .modal-actions .btn{flex:1;min-width:0;text-align:center}
 }
 </style>
 </head>
@@ -310,7 +375,7 @@ textarea{resize:vertical;min-height:60px}
   </div>
 </div>
 
-<!-- Mobile Bottom Nav -->
+<!-- Mobile Bottom Nav (手风琴模式) -->)
 <nav class="mobile-nav">
   <button class="nav-item active" data-view="customers">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -634,15 +699,19 @@ CRM.ui = {
   renderKanban() {
     const kb = document.getElementById('kanban');
     const q = CRM.state.searchQuery.toLowerCase();
-    const isMobile = window.innerWidth <= 768;
+const isAccordion = document.body.classList.contains('mode-accordion');)
     if (CRM.state.currentView === 'customers') {
       const cols = STAGES;
       kb.innerHTML = cols.map(stage => {
         let cards = CRM.state.data.customers.filter(c => c.stage === stage);
         if (q) cards = cards.filter(c => (c.company+c.name+c.contact+(c.services||[]).join('')).toLowerCase().includes(q));
-        return `<div class="column" data-stage="${stage}" ondragover="CRM.ui.onDragOver(event)" ondrop="CRM.ui.onDrop(event,'customer')" ondragleave="CRM.ui.onDragLeave(event)">
-          <div class="col-header"><span class="arrow">▶</span><span>${stage}</span><span class="col-count">${cards.length}</span></div>
-          <div class="col-body">${cards.length ? cards.map(c => CRM.data.renderCustomerCard(c)).join('') : '<div class="empty">暂无客户</div>'}</div>
+const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
+        const dragOver = isAccordion ? '' : 'ondragover="CRM.ui.onDragOver(event)"';
+        const dragDrop = isAccordion ? '' : 'ondrop="CRM.ui.onDrop(event,\'customer\')"';
+        const dragLeave = isAccordion ? '' : 'ondragleave="CRM.ui.onDragLeave(event)"';
+        return `<div class="column" data-stage="${stage}">
+          <div class="col-header" ${isAccordion?'onclick="CRM.ui._toggleColumn(this)"':''}>${arrow}<span>${stage}</span><span class="col-count">${cards.length}</span></div>
+          <div class="col-body" ${dragOver} ${dragDrop} ${dragLeave}>${cards.length ? cards.map(c => CRM.data.renderCustomerCard(c)).join('') : '<div class="empty">暂无客户</div>'}</div>
         </div>`;
       }).join('');
     } else {
@@ -651,9 +720,13 @@ CRM.ui = {
         if (q) cards = cards.filter(t => t.title.toLowerCase().includes(q));
         const priOrder = {high:0,medium:1,low:2};
         cards.sort((a,b) => (priOrder[a.priority]??1) - (priOrder[b.priority]??1));
-        return `<div class="column" data-stage="${status}" ondragover="CRM.ui.onDragOver(event)" ondrop="CRM.ui.onDrop(event,'task')" ondragleave="CRM.ui.onDragLeave(event)">
-          <div class="col-header"><span class="arrow">▶</span><span>${TASK_LABELS[status]}</span><span class="col-count">${cards.length}</span></div>
-          <div class="col-body">${cards.length ? cards.map(t => CRM.data.renderTaskCard(t)).join('') : '<div class="empty">暂无任务</div>'}</div>
+const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
+        const dragOver = isAccordion ? '' : 'ondragover="CRM.ui.onDragOver(event)"';
+        const dragDrop = isAccordion ? '' : 'ondrop="CRM.ui.onDrop(event,\'task\')"';
+        const dragLeave = isAccordion ? '' : 'ondragleave="CRM.ui.onDragLeave(event)"';
+        return `<div class="column" data-stage="${status}">
+          <div class="col-header" ${isAccordion?'onclick="CRM.ui._toggleColumn(this)"':''}>${arrow}<span>${TASK_LABELS[status]}</span><span class="col-count">${cards.length}</span></div>
+          <div class="col-body" ${dragOver} ${dragDrop} ${dragLeave}>${cards.length ? cards.map(t => CRM.data.renderTaskCard(t)).join('') : '<div class="empty">暂无任务</div>'}</div>
         </div>`;
       }).join('');
     }
@@ -721,6 +794,7 @@ CRM.ui = {
 
   // Drag & Drop
   _dragData: null,
+  _touchDrag: { active: false, card: null, ghost: null, startX: 0, startY: 0, offsetX: 0, offsetY: 0 },
   onDragStart(e) {
     const card = e.target.closest('.card');
     CRM.ui._dragData = { id: card.dataset.id, type: card.dataset.type };
@@ -738,6 +812,123 @@ CRM.ui = {
     if (!id || srcType !== type) return;
     if (type === 'customer') CRM.state.updateCustomer(id, { stage: newStage });
     else CRM.state.updateTask(id, { status: newStage });
+  },
+
+  // Touch drag for mobile
+  _initTouchDrag() {
+    document.addEventListener('touchstart', e => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      const touch = e.touches[0];
+      const rect = card.getBoundingClientRect();
+      this._touchDrag = {
+        active: true,
+        card: card,
+        id: card.dataset.id,
+        type: card.dataset.type,
+        ghost: null,
+        startX: touch.clientX,
+        startY: touch.clientY,
+        offsetX: touch.clientX - rect.left,
+        offsetY: touch.clientY - rect.top,
+        origParent: card.parentElement,
+        origNextSibling: card.nextElementSibling
+      };
+      card.classList.add('touch-dragging');
+    }, { passive: true });
+
+    document.addEventListener('touchmove', e => {
+      const td = this._touchDrag;
+      if (!td.active) return;
+      e.preventDefault();
+      const touch = e.touches[0];
+      const x = touch.clientX - td.offsetX;
+      const y = touch.clientY - td.offsetY;
+
+      if (!td.ghost) {
+        td.ghost = document.createElement('div');
+        td.ghost.className = 'drag-ghost';
+        td.ghost.innerHTML = td.card.innerHTML;
+        document.body.appendChild(td.ghost);
+      }
+      td.ghost.style.left = x + 'px';
+      td.ghost.style.top = (y - 60) + 'px';
+
+      // Find column under touch
+      const elemBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+      const col = elemBelow?.closest('.column');
+      document.querySelectorAll('.column').forEach(c => c.classList.remove('drag-over'));
+      if (col) {
+        col.classList.add('drag-over');
+        const body = col.querySelector('.col-body');
+        if (body) {
+          // Insert placeholder above nearest card
+          const cards = [...body.querySelectorAll('.card:not(.touch-dragging)')];
+          body.querySelectorAll('.drag-placeholder').forEach(p => p.remove());
+          let inserted = false;
+          for (const c of cards) {
+            if (touch.clientY < c.getBoundingClientRect().top + c.offsetHeight / 2) {
+              const ph = document.createElement('div');
+              ph.className = 'drag-placeholder';
+              c.parentElement.insertBefore(ph, c);
+              inserted = true;
+              break;
+            }
+          }
+          if (!inserted) {
+            const ph = document.createElement('div');
+            ph.className = 'drag-placeholder';
+            body.appendChild(ph);
+          }
+        }
+      }
+    }, { passive: false });
+
+    document.addEventListener('touchend', e => {
+      const td = this._touchDrag;
+      if (!td.active) return;
+      const touch = e.changedTouches[0];
+      const elemBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+      const col = elemBelow?.closest('.column');
+
+      // Clean up
+      td.card?.classList.remove('touch-dragging');
+      td.ghost?.remove();
+      document.querySelectorAll('.drag-placeholder').forEach(p => p.remove());
+      document.querySelectorAll('.column').forEach(c => c.classList.remove('drag-over'));
+
+      if (col && td.id) {
+        const newStage = col.dataset.stage;
+        if (newStage) {
+          if (td.type === 'customer') CRM.state.updateCustomer(td.id, { stage: newStage });
+          else CRM.state.updateTask(td.id, { status: newStage });
+        }
+      }
+
+      this._touchDrag = { active: false, card: null, ghost: null, startX: 0, startY: 0, offsetX: 0, offsetY: 0 };
+    });
+  },
+
+  // Accordion toggle
+  _mobileExpandedStage: null,
+  _toggleColumn(header) {
+    const col = header.closest('.column');
+    const body = col.querySelector('.col-body');
+    if (col.classList.contains('expanded')) {
+      col.classList.remove('expanded');
+      body.style.maxHeight = '0';
+      this._mobileExpandedStage = null;
+    } else {
+      document.querySelectorAll('.column.expanded').forEach(c => {
+        c.classList.remove('expanded');
+        c.querySelector('.col-body').style.maxHeight = '0';
+      });
+      col.classList.add('expanded');
+      body.style.maxHeight = 'none';
+      const h = body.scrollHeight;
+      body.style.maxHeight = h + 'px';
+      this._mobileExpandedStage = col.dataset.stage;
+    }
   },
 
   // Customer Form
@@ -931,8 +1122,19 @@ CRM.ui = {
 
   // Settings
   openSettings() {
+    const mode = localStorage.getItem('crm_mobile_mode') || 'swipe';
+    const isSwipe = mode === 'swipe';
     document.getElementById('modalContent').innerHTML = `
       <h2>设置</h2>
+      <div class="settings-section">
+        <h3>移动端布局</h3>
+        <p>选择手机上的看板显示方式：</p>
+        <div style="display:flex;gap:8px;margin-bottom:12px">
+          <button class="btn ${isSwipe?'btn-accent':'btn-ghost'}" onclick="CRM.ui.setMobileMode('swipe')">横滑拖拽</button>
+          <button class="btn ${!isSwipe?'btn-accent':'btn-ghost'}" onclick="CRM.ui.setMobileMode('accordion')">手风琴</button>
+        </div>
+        <p style="font-size:11px;color:var(--text3)">横滑：左右滑动切换列，长按拖拽卡片。手风琴：上下展开折叠，底部导航栏。</p>
+      </div>
       <div class="settings-section">
         <h3>数据管理</h3>
         <p>数据通过 jsonbin.io 自动同步。</p>
@@ -941,6 +1143,13 @@ CRM.ui = {
       </div>
       <div class="modal-actions"><button class="btn btn-ghost" onclick="CRM.ui.closeModal()">关闭</button></div>`;
     this.openModal();
+  },
+
+  setMobileMode(mode) {
+    localStorage.setItem('crm_mobile_mode', mode);
+    if (mode === 'accordion') document.body.classList.add('mode-accordion');
+    else document.body.classList.remove('mode-accordion');
+    this.openSettings();
   },
 
   saveSettings() {
@@ -1048,16 +1257,54 @@ document.addEventListener('keydown', e => {
   if (e.ctrlKey && e.key === 'k') { e.preventDefault(); document.querySelector('.kanban-toolbar input')?.focus(); }
 });
 
-// Re-render on resize to sync JS mobile detection with CSS media query
+// Init mobile mode from localStorage
+if (localStorage.getItem('crm_mobile_mode') === 'accordion') {
+  document.body.classList.add('mode-accordion');
+}
+
+// Re-render on resize
 let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => CRM.ui.render(), 150);
 });
 
+// Mobile bottom nav handlers (accordion mode)
+document.querySelectorAll('.mobile-nav .nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const action = item.dataset.action;
+    if (action === 'settings') {
+      document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
+      item.classList.add('active');
+      CRM.ui.openSettings();
+      return;
+    }
+    document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
+    document.querySelectorAll('.topbar .tab').forEach(t=>t.classList.remove('active'));
+    item.classList.add('active');
+    const tab = document.querySelector(`.topbar .tab[data-view="${item.dataset.view}"]`);
+    if (tab) tab.classList.add('active');
+    CRM.state.currentView = item.dataset.view;
+    CRM.state.searchQuery = '';
+    CRM.ui.render();
+  });
+});
+
+// Sync topbar tab clicks with mobile nav
+document.querySelectorAll('.topbar .tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const view = tab.dataset.view;
+    if (!view) return;
+    document.querySelectorAll('.mobile-nav .nav-item').forEach(n=>n.classList.remove('active'));
+    const navItem = document.querySelector(`.mobile-nav .nav-item[data-view="${view}"]`);
+    if (navItem) navItem.classList.add('active');
+  });
+});
+
 setInterval(() => CRM.ui.checkAppointments(), 300000);
 
 CRM.state.load();
+CRM.ui._initTouchDrag();
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
 </script>
