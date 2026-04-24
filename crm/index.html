@@ -1346,7 +1346,7 @@ setInterval(() => CRM.ui.checkAppointments(), 300000);
 CRM.state.load();
 CRM.ui._initTouchDrag();
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script>
 </body>
 </html>
