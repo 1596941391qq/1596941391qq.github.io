@@ -315,6 +315,8 @@ textarea{resize:vertical;min-height:60px}
     <button class="icon-btn" onclick="CRM.ui.openSettings()" title="设置">⚙</button>
   </div>
 
+  <!-- Debug Info (temporary) -->
+  <div id="debugInfo" style="background:#fff3cd;padding:6px 12px;font-size:12px;display:none;border-bottom:1px solid #ffc107"></div>
   <!-- Stats Bar -->
   <div class="stats-bar" id="statsBar"></div>
 
@@ -406,19 +408,43 @@ CRM.state = {
   },
 
   load() {
+    // Show loading state
+    document.getElementById('kanban').innerHTML = '<div style="padding:40px;text-align:center;color:#666">正在从云端加载数据...</div>';
+    // Skip stale localStorage cache, always prefer cloud
     const cached = localStorage.getItem('crm_cache');
-    this.data = cached ? JSON.parse(cached) : this.defaultData();
-    CRM.ui.render();
+    if (cached) {
+      try {
+        const parsed = JSON.parse(cached);
+        // Only use cache if it has actual data
+        if ((parsed.customers?.length > 0) || (parsed.tasks?.length > 0)) {
+          this.data = parsed;
+        } else {
+          this.data = this.defaultData();
+        }
+      } catch(e) { this.data = this.defaultData(); }
+    } else {
+      this.data = this.defaultData();
+    }
     CRM.api.fetch().then(remote => {
+      const dbg = document.getElementById('debugInfo');
       if (remote) {
+        console.log('Cloud data loaded:', remote.customers?.length, 'customers,', remote.tasks?.length, 'tasks');
         this.data = this._merge(remote, this.data);
         localStorage.setItem('crm_cache', JSON.stringify(this.data));
+        if (dbg) dbg.style.display = 'none';
+        CRM.ui.render();
+      } else {
+        console.log('Remote returned null, using local');
+        if (dbg) { dbg.style.display = 'block'; dbg.textContent = '⚠️ 云端返回空数据，使用本地缓存'; }
         CRM.ui.render();
       }
       this._remoteLoaded = true;
-    }).catch(() => {
+    }).catch(err => {
       this._remoteLoaded = true;
-      console.log('Using cached data');
+      console.error('Cloud fetch failed:', err);
+      const dbg = document.getElementById('debugInfo');
+      if (dbg) { dbg.style.display = 'block'; dbg.textContent = '⚠️ 网络请求失败: ' + err.message; }
+      CRM.ui.render();
     });
   },
 
@@ -1320,7 +1346,7 @@ setInterval(() => CRM.ui.checkAppointments(), 300000);
 CRM.state.load();
 CRM.ui._initTouchDrag();
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
 </script>
 </body>
 </html>
