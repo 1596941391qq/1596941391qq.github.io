@@ -1,4 +1,4 @@
-const CACHE = 'crm-v4';
+const CACHE = 'crm-v5';
 self.addEventListener('install', e => {
   self.skipWaiting();
 });

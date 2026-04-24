@@ -605,7 +605,7 @@ CRM.data.renderCustomerCard = (c) => {
     <div class="card-right">
       <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">
         <span class="badge ${segClass}">${c.segment}类</span>
-        ${(c.services||[]).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
+        ${(Array.isArray(c.services)?c.services:[c.services].filter(Boolean)).slice(0,1).map(s=>`<span class="badge" style="background:var(--blue-dim);color:var(--blue)">${esc(s)}</span>`).join('')}
       </div>
       ${latestAct ? `<span class="card-latest">${esc(latestAct)}</span>` : ''}
     </div>
@@ -693,7 +693,7 @@ CRM.ui = {
       const cols = STAGES;
       kb.innerHTML = cols.map(stage => {
         let cards = CRM.state.data.customers.filter(c => c.stage === stage);
-        if (q) cards = cards.filter(c => (c.company+c.name+c.contact+(c.services||[]).join('')).toLowerCase().includes(q));
+        if (q) cards = cards.filter(c => (c.company+c.name+c.contact+(Array.isArray(c.services)?c.services:[c.services].filter(Boolean)).join('')).toLowerCase().includes(q));
         const arrow = isAccordion ? '<span class="arrow">▶</span>' : '';
         const dragOver = isAccordion ? '' : 'ondragover="CRM.ui.onDragOver(event)"';
         const dragDrop = isAccordion ? '' : 'ondrop="CRM.ui.onDrop(event,\'customer\')"';
@@ -1005,7 +1005,7 @@ CRM.ui = {
         <div class="field"><label>阶段</label><select id="f_stage">${STAGES.map(s=>`<option ${c.stage===s?'selected':''}>${s}</option>`).join('')}</select></div>
         <div class="field"><label>电话预约</label><input id="f_phone" type="datetime-local" value="${c.phoneAppointment?c.phoneAppointment.slice(0,16):''}"></div>
         <div class="field"><label>预约备注</label><input id="f_phoneNote" value="${esc(c.phoneAppointmentNote)}"></div>
-        <div class="field full"><label>服务</label><input id="f_services" value="${esc((c.services||[]).join(', '))}" placeholder="用逗号分隔"></div>
+        <div class="field full"><label>服务</label><input id="f_services" value="${esc((Array.isArray(c.services)?c.services:[c.services].filter(Boolean)).join(', '))}" placeholder="用逗号分隔"></div>
         <div class="field full"><label>备注</label><textarea id="f_notes">${esc(c.notes)}</textarea></div>
       </div>
       <div class="modal-actions">
@@ -1061,7 +1061,7 @@ CRM.ui = {
         ${c.website?`<div>网站: ${esc(c.website)}</div>`:''}
         ${c.contact?`<div>联系: ${esc(c.contact)}</div>`:''}
         ${c.phoneAppointment?`<div>📞 ${new Date(c.phoneAppointment).toLocaleString('zh-CN')}</div>`:''}
-        ${(c.services||[]).length?`<div>服务: ${c.services.map(s=>esc(s)).join(', ')}</div>`:''}
+        ${(Array.isArray(c.services)?c.services:[c.services].filter(Boolean)).length?`<div>服务: ${(Array.isArray(c.services)?c.services:[c.services].filter(Boolean)).map(s=>esc(s)).join(', ')}</div>`:''}
       </div>
       ${c.notes?`<div style="font-size:13px;color:var(--text2);padding:12px;background:var(--surface);border-radius:6px;margin-bottom:16px">${esc(c.notes)}</div>`:''}
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
