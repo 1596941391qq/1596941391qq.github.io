@@ -392,14 +392,16 @@ CRM.state = {
       });
       return Array.from(map.values());
     };
-    const remoteTasks = (remote.tasks||[]);
-    const localTasks = (local.tasks||[]);
-    // Protect: if remote wiped tasks but local has them, keep local
-    const tasks = (remoteTasks.length === 0 && localTasks.length > 0) ? localTasks : mergeArrays(remoteTasks, localTasks);
+    const remoteTasks = Array.isArray(remote.tasks) ? remote.tasks : [];
+    const localTasks = Array.isArray(local.tasks) ? local.tasks : [];
+    const remoteCusts = Array.isArray(remote.customers) ? remote.customers : [];
+    const localCusts = Array.isArray(local.customers) ? local.customers : [];
+    // Protect: never let an empty array wipe existing data
+    const tasks = remoteTasks.length > 0 ? mergeArrays(remoteTasks, localTasks) : localTasks;
+    const customers = remoteCusts.length > 0 ? mergeArrays(remoteCusts, localCusts) : localCusts;
     return {
-      meta: { ...remote.meta, lastUpdated: new Date().toISOString() },
-      customers: mergeArrays(remote.customers||[], local.customers||[]),
-      tasks
+      meta: { ...(remote.meta||{}), lastUpdated: new Date().toISOString() },
+      customers, tasks
     };
   },
 
@@ -409,8 +411,6 @@ CRM.state = {
     CRM.ui.render();
     CRM.api.fetch().then(remote => {
       if (remote) {
-        if (!remote.meta) remote.meta = { lastUpdated: new Date().toISOString(), version:1 };
-        if (!remote.tasks) remote.tasks = [];
         this.data = this._merge(remote, this.data);
         localStorage.setItem('crm_cache', JSON.stringify(this.data));
         CRM.ui.render();
