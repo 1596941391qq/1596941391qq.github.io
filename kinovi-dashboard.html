@@ -138,6 +138,136 @@
       <p class="subtitle">发布天数 vs 阅读量增长分析</p>
     </div>
 
+    <!-- SERP 搜索排名监控 -->
+    <style>
+      .serp-monitor { background: rgb(var(--card)); border: 1px solid rgb(var(--border)); border-radius: var(--radius); padding: 24px; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08); margin-bottom: 28px; }
+      .serp-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+      .serp-table th { text-align: center; padding: 8px 10px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid rgb(var(--border)); }
+      .serp-table th:first-child { text-align: left; }
+      .serp-table td { padding: 10px 10px; text-align: center; border-bottom: 1px solid rgb(var(--border)); }
+      .serp-table td:first-child { text-align: left; font-weight: 500; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .serp-table tr:nth-child(even) { background: rgba(244,114,182,0.03); }
+      .serp-hit { color: rgb(34,197,94); font-weight: 600; }
+      .serp-dim { color: rgb(var(--muted-fg)); }
+      .serp-thumb { max-height: 36px; max-width: 54px; border-radius: 3px; border: 1px solid rgb(var(--border)); cursor: pointer; vertical-align: middle; margin-left: 4px; transition: transform 0.15s; }
+      .serp-thumb:hover { transform: scale(1.8); z-index: 10; position: relative; }
+      .serp-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 999; cursor: pointer; align-items: center; justify-content: center; }
+      .serp-modal.active { display: flex; }
+      .serp-modal img { max-width: 95vw; max-height: 90vh; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    </style>
+    <div class="serp-monitor">
+      <div style="margin-bottom: 16px;">
+        <div style="font-size: 0.95rem; font-weight: 600; color: rgb(var(--card-fg));">搜索排名监控</div>
+        <div style="font-size: 0.8rem; color: rgb(var(--muted-fg)); margin-top: 2px;">最近检查: 2026-04-25 | Google / Bing / AI Mode</div>
+      </div>
+      <table class="serp-table">
+        <thead>
+          <tr>
+            <th>关键词</th>
+            <th>Google</th>
+            <th>Bing</th>
+            <th>AI Mode</th>
+            <th>AI 概览</th>
+            <th>浏览量</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>sora alternative free</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-hit">YES <img class="serp-thumb" src="serp-evidence/google-sora-alternative-free-20260425-172706.png" onclick="openSerpModal(this.src)" alt="screenshot"></td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">16</td>
+          </tr>
+          <tr>
+            <td>ai character video generator</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">50</td>
+          </tr>
+          <tr>
+            <td>ai video with consistent characters</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-hit">YES <img class="serp-thumb" src="serp-evidence/google-ai-video-with-consistent-characters-20260425-172706.png" onclick="openSerpModal(this.src)" alt="screenshot"></td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">89</td>
+          </tr>
+          <tr>
+            <td>ai video generator with audio</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-hit">YES <img class="serp-thumb" src="serp-evidence/google-ai-video-generator-with-audio-20260425-172706.png" onclick="openSerpModal(this.src)" alt="screenshot"></td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">79</td>
+          </tr>
+          <tr>
+            <td>ai ugc video generator</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">40</td>
+          </tr>
+          <tr>
+            <td>ai product video generator</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">28</td>
+          </tr>
+          <tr>
+            <td>ai ad creative video generator</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">39</td>
+          </tr>
+          <tr>
+            <td>replicate alternative video api</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">50</td>
+          </tr>
+          <tr>
+            <td>fal.ai alternative for video generation</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">11</td>
+          </tr>
+          <tr>
+            <td class="serp-hit">cheap video generation api</td>
+            <td class="serp-dim">-</td>
+            <td class="serp-hit">#3 <img class="serp-thumb" src="serp-evidence/bing-cheap-video-generation-api-20260424145301..png" onclick="openSerpModal(this.src)" alt="screenshot"></td>
+            <td class="serp-dim">-</td>
+            <td class="serp-dim">-</td>
+            <td style="color: rgb(var(--primary)); font-weight: 600;">52</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top: 12px; font-size: 0.72rem; color: rgb(var(--muted-fg)); line-height: 1.6;">
+        Google 采用语义排名机制，页面可能在相关查询中被收录，不局限于精确关键词匹配。点击缩略图可放大查看截图。
+      </div>
+    </div>
+    <div class="serp-modal" id="serpModal" onclick="this.classList.remove('active')">
+      <img id="serpModalImg" src="">
+    </div>
+    <script>
+    function openSerpModal(src) {
+      document.getElementById('serpModalImg').src = src;
+      document.getElementById('serpModal').classList.add('active');
+    }
+    </script>
+
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-label">在跑文章</div>
@@ -416,113 +546,6 @@
     renderHeatmapChart();
     renderTable();
   </script>
-
-  <!-- SERP Presence Monitor -->
-  <div class="serp-monitor" style="margin-top: 28px; background: rgb(var(--card)); border: 1px solid rgb(var(--border)); border-radius: var(--radius); padding: 24px; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);">
-    <div style="margin-bottom: 16px;">
-      <div style="font-size: 0.95rem; font-weight: 600; color: rgb(var(--card-fg));">SERP Presence Monitor</div>
-      <div style="font-size: 0.8rem; color: rgb(var(--muted-fg)); margin-top: 2px;">Last checked: 2026-04-25 | Google / Bing / AI Mode</div>
-    </div>
-    <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem;">
-      <thead>
-        <tr style="border-bottom: 2px solid rgb(var(--border));">
-          <th style="text-align: left; padding: 8px 12px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;">Keyword</th>
-          <th style="text-align: center; padding: 8px 12px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;">Google</th>
-          <th style="text-align: center; padding: 8px 12px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;">Bing</th>
-          <th style="text-align: center; padding: 8px 12px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;">AI Mode</th>
-          <th style="text-align: center; padding: 8px 12px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;">AI Overview</th>
-          <th style="text-align: center; padding: 8px 12px; color: rgb(var(--muted-fg)); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;">Views</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom: 1px solid rgb(var(--border)); background: rgba(244,114,182,0.04);">
-          <td style="padding: 10px 12px; font-weight: 500;">sora alternative free</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(34,197,94); font-weight: 600;">YES <a href="../workspace/serp-screenshot-inbox/kinovi/evidence/google-sora-alternative-free-20260425-172706.png" target="_blank" style="color: rgb(var(--primary)); font-size: 0.7rem; margin-left: 4px;">[img]</a></td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">16</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border));">
-          <td style="padding: 10px 12px; font-weight: 500;">ai character video generator</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">50</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border)); background: rgba(244,114,182,0.04);">
-          <td style="padding: 10px 12px; font-weight: 500;">ai video with consistent characters</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(34,197,94); font-weight: 600;">YES <a href="../workspace/serp-screenshot-inbox/kinovi/evidence/google-ai-video-with-consistent-characters-20260425-172706.png" target="_blank" style="color: rgb(var(--primary)); font-size: 0.7rem; margin-left: 4px;">[img]</a></td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">89</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border));">
-          <td style="padding: 10px 12px; font-weight: 500;">ai video generator with audio</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(34,197,94); font-weight: 600;">YES <a href="../workspace/serp-screenshot-inbox/kinovi/evidence/google-ai-video-generator-with-audio-20260425-172706.png" target="_blank" style="color: rgb(var(--primary)); font-size: 0.7rem; margin-left: 4px;">[img]</a></td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">79</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border)); background: rgba(244,114,182,0.04);">
-          <td style="padding: 10px 12px; font-weight: 500;">ai ugc video generator</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">40</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border));">
-          <td style="padding: 10px 12px; font-weight: 500;">ai product video generator</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">28</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border)); background: rgba(244,114,182,0.04);">
-          <td style="padding: 10px 12px; font-weight: 500;">ai ad creative video generator</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">39</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border));">
-          <td style="padding: 10px 12px; font-weight: 500;">replicate alternative video api</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">50</td>
-        </tr>
-        <tr style="border-bottom: 1px solid rgb(var(--border)); background: rgba(244,114,182,0.04);">
-          <td style="padding: 10px 12px; font-weight: 500;">fal.ai alternative for video generation</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">11</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px 12px; font-weight: 500; color: rgb(34,197,94);">cheap video generation api</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(34,197,94); font-weight: 700;">#3 <a href="../workspace/serp-screenshot-inbox/kinovi/evidence/bing-cheap-video-generation-api-20260424145301..png" target="_blank" style="color: rgb(var(--primary)); font-size: 0.7rem; margin-left: 4px;">[img]</a></td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--muted-fg));">-</td>
-          <td style="text-align: center; padding: 10px 12px; color: rgb(var(--primary)); font-weight: 600;">52</td>
-        </tr>
-      </tbody>
-    </table>
-    <div style="margin-top: 12px; font-size: 0.72rem; color: rgb(var(--muted-fg)); line-height: 1.6;">
-      Google uses semantic ranking; pages may appear for related queries beyond exact keyword matches.<br>
-      Rows highlighted in green have SERP presence. Screenshot links open in new tab.
-    </div>
-  </div>
-  <!-- END SERP Presence Monitor -->
 
 </body>
 </html>
