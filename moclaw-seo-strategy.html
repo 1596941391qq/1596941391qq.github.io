@@ -332,11 +332,11 @@
       <header class="hero">
         <div class="eyebrow">SEO Audit / Four-Line Strategy</div>
         <h1>moclaw.ai SEO 审计与四线策略</h1>
-        <p class="lead">这不是一份轻量体检。站点目前处于"能跑但 Google 完全看不见"的状态——两个系统打架、sitemap 空壳、canonical 自残、整站零索引。这份报告先把卡住增长的技术止血做完，再给出一套从冷启动到稳定吃量的执行路线。</p>
+        <p class="lead">这不是一份轻量体检。站点目前处于"能跑但 Google 完全看不见"的状态——两个系统打架、sitemap 格式不标准、canonical 自残、整站零索引。这份报告先把卡住增长的技术止血做完，再给出一套从冷启动到稳定吃量的执行路线。</p>
         <div class="hero-grid">
           <div class="hero-card">
             <div class="mini">核心判断</div>
-            <p>MoClaw 的问题不是产品不行，而是站点存在两套系统（SPA + Astro SSR）互相拆台的问题。Marketing 页做得不错，但 SPA 页面的 canonical 全部指向首页，等于主动告诉 Google 这些页面不存在。更严重的是 content-sitemap.xml 完全空壳，整站至今未被 Google 索引一条结果。</p>
+            <p>MoClaw 的问题不是产品不行，而是站点存在两套系统（SPA + Astro SSR）互相拆台的问题。Marketing 页做得不错，但 SPA 页面的 canonical 全部指向首页，等于主动告诉 Google 这些页面不存在。更严重的是 content-sitemap.xml 使用纯文本格式而非标准 XML，搜索引擎可能无法正确解析；/pricing 和 /integrations 两个核心页面未出现在任何 sitemap 中。整站至今未被 Google 索引一条结果。</p>
             <div class="meta">
               <span class="pill">审计日期：2026-04-27（工具实测版）</span>
               <span class="pill">页面样本：11 个核心页面 + 4 篇博客</span>
@@ -346,7 +346,7 @@
           </div>
           <div class="hero-note">
             <div class="mini">一句话结论</div>
-            <p>双系统架构没有统一 SEO 治理，SPA 页面 canonical 自残到首页，content-sitemap 空壳，整站零索引零外链。最紧急的不是做内容，而是先把 sitemap、canonical、noindex、H1 这些基础止血做完，让 Google 至少能看见站。</p>
+            <p>双系统架构没有统一 SEO 治理，SPA 页面 canonical 自残到首页，content-sitemap.xml 格式不标准（纯文本而非 XML），核心页面 /pricing 和 /integrations 缺失于 sitemap，整站零索引零外链。最紧急的不是做内容，而是先把 sitemap、canonical、noindex、H1 这些基础止血做完，让 Google 至少能看见站。</p>
             <div class="quote">MoClaw 有一个值得被搜索到的产品（托管 AI Agent、$20/月、免部署），但现在 Google 完全不知道它的存在。先把灯打开，再做装修。</div>
           </div>
         </div>
@@ -355,7 +355,7 @@
       <section id="summary">
         <div class="label">Executive Summary</div>
         <h2>执行摘要</h2>
-        <p class="statement">站点正处在"从零开始"之前的位置——不是内容不够厚，而是连被看见的前提都还没建立。两个技术系统各做各的，SPA 页面的 SEO 元素全是首页的壳子，sitemap 有一半是空的，整站 Google 索引量为零。这不是一个"补几篇 blog 就能起量"的问题，而是一个"先止血再起跑"的问题。</p>
+        <p class="statement">站点正处在"从零开始"之前的位置——不是内容不够厚，而是连被看见的前提都还没建立。两个技术系统各做各的，SPA 页面的 SEO 元素全是首页的壳子，sitemap 格式不标准且缺少核心页面，整站 Google 索引量为零。这不是一个"补几篇 blog 就能起量"的问题，而是一个"先止血再起跑"的问题。</p>
         <div class="grid-2" style="margin-top:18px">
           <div class="card">
             <div class="mini">已经具备的基础</div>
@@ -363,7 +363,7 @@
           </div>
           <div class="card">
             <div class="mini">真正拖后腿的地方</div>
-            <p>SPA 页面（/, /integrations, /privacy, /terms）没有 SSR，meta 标签全是首页的回退值。/integrations 的 title、H1、canonical 全部和首页一模一样，Google 永远不会独立索引这个页面。content-sitemap.xml 返回空数据，等于博客和用例页都没进 sitemap。整站零外链、零品牌提及、零 Google 索引。</p>
+            <p>SPA 页面（/, /integrations, /privacy, /terms）没有 SSR，meta 标签全是首页的回退值。/integrations 的 title、H1、canonical 全部和首页一模一样，Google 永远不会独立索引这个页面。content-sitemap.xml 包含 22+ 个 URL（博客、use case、/try 页面），但使用纯文本格式而非标准 XML，搜索引擎可能无法解析；/pricing 和 /integrations 两个核心页面未出现在任何 sitemap 中。整站零外链、零品牌提及、零 Google 索引。</p>
           </div>
         </div>
       </section>
@@ -388,8 +388,8 @@
             <tr>
               <td><strong>技术底盘</strong></td>
               <td class="status-warn">38</td>
-              <td>两套系统各做各的，SPA 页面 SEO 元素全是壳子，sitemap 半空。</td>
-              <td>content-sitemap.xml 返回空数据；/integrations、/privacy、/terms 的 canonical 全部指向 /（首页）；/use-cases 和 /blog 缺少 H1；/pricing 和 /blog 有 title 双品牌 bug；/privacy 和 /terms 缺 noindex。Marketing 页（Astro SSR）的 SEO 基础反而是好的。</td>
+              <td>两套系统各做各的，SPA 页面 SEO 元素全是壳子，sitemap 格式不标准且缺核心页。</td>
+              <td>content-sitemap.xml 使用纯文本格式（非标准 XML），包含 22+ 个 URL 但搜索引擎可能无法解析；/pricing 和 /integrations 未出现在任何 sitemap 中；/integrations、/privacy、/terms 的 canonical 全部指向 /（首页）；/use-cases 和 /blog 缺少 H1；/pricing 和 /blog 有 title 双品牌 bug；/privacy 和 /terms 缺 noindex。Marketing 页（Astro SSR）的 SEO 基础反而是好的。</td>
             </tr>
             <tr>
               <td><strong>内容权威</strong></td>
@@ -415,7 +415,7 @@
             <div class="sev status-bad">P0<strong>零索引</strong></div>
             <div>
               <h3>整站至今未被 Google 索引任何一条结果</h3>
-              <p>实测确认 site:moclaw.ai 零结果，品牌词 "moclaw.ai" 零结果。这不仅仅是新站沙盒的问题——content-sitemap.xml 空壳、SPA 页面 canonical 自残、GSC 验证未完成，这三件事叠加在一起，等于主动把门锁死。在 Google 看见站之前，所有内容建设工作都没有意义。</p>
+              <p>实测确认 site:moclaw.ai 零结果，品牌词 "moclaw.ai" 零结果。这不仅仅是新站沙盒的问题——content-sitemap.xml 格式不标准（纯文本非 XML）、SPA 页面 canonical 自残、GSC 验证未完成，这三件事叠加在一起，等于主动把门锁死。在 Google 看见站之前，所有内容建设工作都没有意义。</p>
             </div>
           </div>
           <div class="issue">
@@ -426,10 +426,10 @@
             </div>
           </div>
           <div class="issue">
-            <div class="sev status-bad">P0<strong>Sitemap 空壳</strong></div>
+            <div class="sev status-bad">P0<strong>Sitemap 格式与覆盖缺陷</strong></div>
             <div>
-              <h3>content-sitemap.xml 返回空数据，博客和用例页未进入 sitemap</h3>
-              <p>实测确认 sitemap index 下有两个子 sitemap：webapp-sitemap.xml（3 个 URL）和 content-sitemap.xml（空）。/pricing、/use-cases、/blog、所有博客文章都没有被 sitemap 覆盖。这意味着 Google 抓取 sitemap 后只能发现 3 个页面，其余全靠爬虫自己发现——但 SPA 页面又没有 SSR，爬虫也很难发现。</p>
+              <h3>content-sitemap.xml 使用纯文本格式，搜索引擎可能无法解析；/pricing 和 /integrations 缺失</h3>
+              <p>实测确认 content-sitemap.xml 包含 22+ 个 URL（5 篇博客、16 个 use case、3 个 /try 页面），但使用纯文本格式（# Sitemap + URL/日期交替行）而非标准 XML sitemap 协议。搜索引擎期望 &lt;urlset&gt;&lt;url&gt;&lt;loc&gt; 结构，纯文本格式可能被忽略。此外，/pricing 和 /integrations 两个核心页面未出现在任何 sitemap 中。webapp-sitemap.xml 返回 403 禁止访问。修正 sitemap 格式并补全缺失页面是"把灯打开"的第一步。</p>
             </div>
           </div>
           <div class="issue">
@@ -473,18 +473,18 @@
             <tr><td>002</td><td>robots 是否阻断核心页面</td><td><strong class="status-good">良好</strong>：robots.txt 只 Disallow /auth、/chat、/settings 三个功能性路径，核心营销页面（/pricing、/use-cases、/blog、/integrations）未被封锁。</td></tr>
             <tr><td>003</td><td>robots 是否误放测试路径</td><td><strong class="status-good">良好</strong>：实测确认 Disallow 列表只含功能性路径（/auth、/chat、/settings），没有误放静态资源或营销页面路径。</td></tr>
             <tr><td>004</td><td>sitemap.xml 可访问</td><td><strong class="status-good">良好</strong>：实测确认 https://moclaw.ai/sitemap.xml 返回 sitemap index（XML 格式），包含两个子 sitemap 声明。</td></tr>
-            <tr><td>005</td><td>sitemap 是否含核心收口页</td><td><strong class="status-bad">风险</strong>：实测发现 webapp-sitemap.xml 只含 3 个 URL（/, /privacy, /terms），content-sitemap.xml 返回空数据。/pricing、/use-cases、/blog、所有博客文章均未出现在任何 sitemap 中。7+ 个高价值页面对 Google 完全隐形。</td></tr>
+            <tr><td>005</td><td>sitemap 是否含核心收口页</td><td><strong class="status-bad">风险</strong>：content-sitemap.xml 包含 22+ 个 URL 但使用纯文本格式（非标准 XML），搜索引擎可能无法解析。webapp-sitemap.xml 返回 403 禁止访问。/pricing 和 /integrations 两个核心页面未出现在任何 sitemap 中。</td></tr>
             <tr><td>006</td><td>Search Console 属性是否齐全</td><td><strong class="status-bad">风险</strong>：实测确认 site:moclaw.ai 零结果，品牌词搜索零结果。GSC 验证明显未完成或未提交 sitemap。没有 GSC 数据意味着无法诊断索引问题。</td></tr>
             <tr><td>007</td><td>抓取入口是否统一到正式域</td><td><strong class="status-good">良好</strong>：robots.txt Sitemap 声明指向 https://moclaw.ai/sitemap.xml，域名一致。无 www/非 www 分裂问题。</td></tr>
 
             <tr class="module-sep"><td colspan="3">02 索引治理</td></tr>
-            <tr><td>008</td><td>首页索引状态</td><td><strong class="status-bad">风险</strong>：实测确认首页有 Organization Schema、canonical 指向 https://moclaw.ai/、meta robots 无 noindex。技术条件具备但实际未被 Google 索引。问题出在 sitemap 空壳 + 零外链 + GSC 未验证的组合上。</td></tr>
+            <tr><td>008</td><td>首页索引状态</td><td><strong class="status-bad">风险</strong>：实测确认首页有 Organization Schema、canonical 指向 https://moclaw.ai/、meta robots 无 noindex。技术条件具备但实际未被 Google 索引。问题出在 sitemap 格式不标准 + 零外链 + GSC 未验证的组合上。</td></tr>
             <tr><td>009</td><td>Pricing 页索引状态</td><td><strong class="status-bad">风险</strong>：实测确认 /pricing 有完整的 SEO 元素（title、meta desc、FAQPage Schema、BreadcrumbList、robots index/follow）。但该页未出现在 sitemap 中，且整站零索引，即使页面本身做得好也无法被 Google 发现。</td></tr>
             <tr><td>010</td><td>Blog 聚合页索引策略</td><td><strong class="status-bad">风险</strong>：实测确认 /blog 有 BreadcrumbList 和 CollectionPage Schema，但缺少 H1 标签，title 出现双 "Blog"（"Blog | MoClaw Blog"）。未出现在 sitemap 中。页面内容（4 篇文章列表）需要 JS 渲染才能看到。</td></tr>
             <tr><td>011</td><td>Use Cases 页索引边界</td><td><strong class="status-bad">风险</strong>：实测确认 /use-cases 有 BreadcrumbList 和 CollectionPage Schema，但完全没有 H1 标签（16 个 h2 但没有 h1）。语义结构不完整会影响 Google 的页面理解。未出现在 sitemap 中。</td></tr>
             <tr><td>012</td><td>SPA 页面索引风险</td><td><strong class="status-bad">风险</strong>：实测确认 /integrations、/privacy、/terms 的 title、H1、canonical 全部是 SPA 回退值（与首页相同）。/integrations canonical 指向 https://moclaw.ai/（首页），等于告诉 Google "我就是首页的副本"。这三个页面永远不会被独立索引。</td></tr>
             <tr><td>013</td><td>noindex 使用是否精准</td><td><strong class="status-bad">风险</strong>：实测发现 /privacy 和 /terms 没有 noindex 标签，但它们的 canonical 指向首页、内容是法律文本。这两个页面应该加 noindex（不需要被索引），同时 canonical 也指向首页（等于重复首页），双重混乱。/auth、/chat、/settings 被 robots.txt Disallow 但没有 noindex meta，应该补充。</td></tr>
-            <tr><td>014</td><td>重点页是否有被排除信号</td><td><strong class="status-bad">风险</strong>：实测确认：/integrations canonical → https://moclaw.ai/（指向首页），/privacy canonical → https://moclaw.ai/（指向首页），/terms canonical → https://moclaw.ai/（指向首页）。三个页面都在向 Google 声明"我非规范版本"，加上 content-sitemap 空壳，整站处于被主动排除的状态。</td></tr>
+            <tr><td>014</td><td>重点页是否有被排除信号</td><td><strong class="status-bad">风险</strong>：实测确认：/integrations canonical → https://moclaw.ai/（指向首页），/privacy canonical → https://moclaw.ai/（指向首页），/terms canonical → https://moclaw.ai/（指向首页）。三个页面都在向 Google 声明"我非规范版本"，加上 /integrations 未出现在任何 sitemap 中，整站处于被主动排除的状态。</td></tr>
 
             <tr class="module-sep"><td colspan="3">03 主域收口与映射</td></tr>
             <tr><td>015</td><td>首页 canonical 指向</td><td><strong class="status-good">良好</strong>：实测确认首页 canonical = https://moclaw.ai/，指向正确。og:url 也指向 https://moclaw.ai/。</td></tr>
@@ -626,7 +626,7 @@
               <th>为什么先做</th>
               <th>对应条线</th>
             </tr>
-            <tr><td><strong>P0</strong></td><td>修复 content-sitemap.xml：当前返回空数据，博客和用例页未进入 sitemap</td><td>7+ 个高价值页面 Google 完全看不见。这是"把灯打开"的第一步。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>将 content-sitemap.xml 从纯文本格式转换为标准 XML sitemap 协议，并补全 /pricing 和 /integrations</td><td>当前纯文本格式搜索引擎可能无法解析，/pricing 和 /integrations 完全不在线。这是"把灯打开"的第一步。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>完成 GSC 验证并提交 sitemap</td><td>整站零索引，GSC 是诊断和加速索引的必要工具。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>修复 SPA 页面 canonical：/integrations、/privacy、/terms 不应指向首页</td><td>/integrations 应该有自己的 canonical 指向自身；/privacy 和 /terms 应加 noindex。canonical 自残 = 主动告诉 Google 这些页面不存在。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>给 /privacy 和 /terms 加 noindex meta 标签</td><td>法律文本页面不需要被索引，且当前 canonical 指向首页会造成重复内容信号。</td><td>第三条线</td></tr>
@@ -713,7 +713,7 @@
           <div class="cols">
             <div class="card">
               <div class="mini">先做的技术治理</div>
-              <p>修 content-sitemap.xml（当前空壳）、完成 GSC 验证和 sitemap 提交、修复 SPA 页面 canonical（/integrations 指向自身，/privacy 和 /terms 加 noindex）、补 H1（/use-cases、/blog）、修 title bug（/pricing 双品牌、/blog 双 "Blog"）、补 Schema（WebSite + SoftwareApplication）。</p>
+              <p>将 content-sitemap.xml 从纯文本转为标准 XML 格式、补全 /pricing 和 /integrations、完成 GSC 验证和 sitemap 提交、修复 SPA 页面 canonical（/integrations 指向自身，/privacy 和 /terms 加 noindex）、补 H1（/use-cases、/blog）、修 title bug（/pricing 双品牌、/blog 双 "Blog"）、补 Schema（WebSite + SoftwareApplication）。</p>
             </div>
             <div class="card">
               <div class="mini">AI Search Ready 的重点</div>
