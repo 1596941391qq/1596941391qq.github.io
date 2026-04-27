@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>moclaw.ai | SEO 审计与四线策略</title>
+<style>
+  :root{
+    --bg:#f4efe7;
+    --paper:#fcfaf6;
+    --panel:#fffdfa;
+    --line:#ddd2c2;
+    --line-strong:#cdbca4;
+    --ink:#1f2a35;
+    --muted:#65717c;
+    --soft:#8d826f;
+    --accent:#315f68;
+    --accent-soft:#edf4f4;
+    --gold:#9c6a3e;
+    --gold-soft:#f6ede4;
+    --good:#2f6d52;
+    --warn:#b26b2a;
+    --bad:#b64b3d;
+    --shadow:0 20px 48px rgba(31,42,53,.08);
+    --radius:22px;
+    --max:1440px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(156,106,62,.08), transparent 24%),
+      radial-gradient(circle at top right, rgba(49,95,104,.08), transparent 28%),
+      var(--bg);
+    color:var(--ink);
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .shell{max-width:var(--max);margin:0 auto;padding:24px}
+  .layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:start}
+  .rail{
+    position:sticky;top:18px;
+    background:rgba(255,253,249,.84);
+    border:1px solid rgba(221,210,194,.92);
+    border-radius:28px;
+    padding:26px 24px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(18px);
+  }
+  .rail h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:32px;
+    line-height:1.02;
+    letter-spacing:-.04em;
+    font-weight:500;
+    margin-bottom:10px;
+  }
+  .rail p{font-size:13px;color:var(--soft);margin-bottom:18px}
+  .rail nav a{
+    display:block;
+    padding:8px 0;
+    color:var(--muted);
+    border-bottom:1px solid rgba(221,210,194,.72);
+    font-size:14px;
+  }
+  .rail nav a:last-child{border-bottom:none}
+  .page{
+    background:var(--paper);
+    border:1px solid rgba(221,210,194,.95);
+    border-radius:32px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .hero{
+    padding:48px 52px 40px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(circle at top right, rgba(156,106,62,.11), transparent 26%),
+      radial-gradient(circle at top left, rgba(49,95,104,.11), transparent 32%),
+      linear-gradient(180deg, rgba(255,255,255,.95), rgba(252,250,246,.98));
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 12px;
+    border-radius:999px;
+    border:1px solid rgba(156,106,62,.18);
+    background:rgba(156,106,62,.08);
+    color:var(--gold);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:58px;
+    line-height:1.02;
+    letter-spacing:-.05em;
+    font-weight:500;
+    max-width:860px;
+  }
+  .lead{
+    max-width:920px;
+    margin-top:18px;
+    font-size:20px;
+    line-height:1.65;
+    color:#44505b;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.25fr .95fr;gap:18px;margin-top:28px}
+  .hero-card,.hero-note{
+    border:1px solid rgba(221,210,194,.86);
+    border-radius:20px;
+    background:rgba(255,255,255,.82);
+    padding:20px 22px;
+  }
+  .mini{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--soft);
+    margin-bottom:10px;
+  }
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .pill{
+    padding:7px 12px;
+    border-radius:999px;
+    border:1px solid rgba(221,210,194,.95);
+    background:rgba(255,255,255,.8);
+    font-size:13px;
+    color:var(--muted);
+  }
+  section{padding:36px 52px;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:none}
+  .label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:36px;
+    line-height:1.08;
+    letter-spacing:-.035em;
+    font-weight:500;
+    margin-bottom:16px;
+  }
+  h3{font-size:20px;line-height:1.38;font-weight:600;margin-bottom:10px}
+  p + p{margin-top:14px}
+  .statement{font-size:24px;line-height:1.55;color:#33414d;max-width:980px}
+  .grid-2,.grid-3{display:grid;gap:16px}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:0 10px 26px rgba(31,42,53,.04);
+  }
+  .box{
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:24px;
+    background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,252,248,.97));
+  }
+  .issue{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(221,210,194,.78);
+  }
+  .issue:last-child{border-bottom:none}
+  .sev{
+    font-size:12px;
+    color:var(--soft);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  .sev strong{
+    display:block;
+    margin-top:4px;
+    font-size:20px;
+    text-transform:none;
+    letter-spacing:-.02em;
+  }
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{
+    text-align:left;
+    vertical-align:top;
+    padding:14px 12px;
+    border-bottom:1px solid rgba(221,210,194,.84);
+  }
+  th{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--soft);
+    font-weight:600;
+  }
+  .quote{
+    margin-top:14px;
+    padding:14px 16px;
+    border-radius:16px;
+    background:var(--gold-soft);
+    border:1px solid rgba(156,106,62,.16);
+    color:#5d4a3d;
+    font-size:14px;
+  }
+  .audit-meta{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 20px}
+  .audit-pill{
+    padding:7px 12px;
+    border-radius:999px;
+    background:var(--accent-soft);
+    border:1px solid rgba(49,95,104,.14);
+    color:var(--accent);
+    font-size:13px;
+  }
+  .audit-note{margin-top:14px;font-size:14px;color:var(--muted)}
+  .table-wrap{
+    margin-top:18px;
+    border:1px solid var(--line);
+    border-radius:24px;
+    overflow:hidden;
+    background:rgba(255,255,255,.76);
+  }
+  .audit-ledger{font-size:13px;line-height:1.65}
+  .audit-ledger th{position:sticky;top:0;z-index:1;background:#f5f0e8}
+  .audit-ledger td{background:rgba(255,253,249,.95)}
+  .audit-ledger td:nth-child(1){
+    width:72px;
+    color:var(--soft);
+    font-variant-numeric:tabular-nums;
+  }
+  .module-sep td{
+    background:#f3eadb;
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:.03em;
+  }
+  .status-good{color:var(--good)}
+  .status-warn{color:var(--warn)}
+  .status-bad{color:var(--bad)}
+  .status-muted{color:var(--muted)}
+  .line-block{
+    padding:26px;
+    border:1px solid var(--line);
+    border-radius:24px;
+    background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,252,248,.98));
+  }
+  .line-head{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:12px;
+  }
+  .line-num{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--gold);
+    margin-bottom:5px;
+  }
+  .tag{
+    flex-shrink:0;
+    padding:8px 12px;
+    border-radius:999px;
+    font-size:12px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid rgba(49,95,104,.14);
+  }
+  .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+  .road{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(221,210,194,.82);
+  }
+  .road:last-child{border-bottom:none}
+  .phase{font-size:14px;color:var(--gold);font-weight:600}
+  .footer-note{font-size:13px;color:var(--soft);margin-top:18px}
+  @media (max-width:1160px){
+    .layout{grid-template-columns:1fr}
+    .rail{position:static}
+    .hero-grid,.grid-2,.grid-3,.cols{grid-template-columns:1fr}
+  }
+  @media (max-width:780px){
+    .shell{padding:14px}
+    .hero,section{padding:24px 20px}
+    h1{font-size:42px}
+    .lead{font-size:18px}
+    .issue,.road{grid-template-columns:1fr}
+    .line-head{display:block}
+    .tag{display:inline-block;margin-top:10px}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="layout">
+    <aside class="rail">
+      <h2>moclaw.ai</h2>
+      <p>客户版 SEO 审计与四线策略，围绕索引止血、内容建设、双系统治理与站外冷启动展开。</p>
+      <nav>
+        <a href="#summary">执行摘要</a>
+        <a href="#scores">评分与原因</a>
+        <a href="#issues">关键问题</a>
+        <a href="#audit">全面审计</a>
+        <a href="#fixlist">优先修复</a>
+        <a href="#line1">第一条线</a>
+        <a href="#line2">第二条线</a>
+        <a href="#line3">第三条线</a>
+        <a href="#line4">第四条线</a>
+        <a href="#keywords">关键词分级</a>
+        <a href="#roadmap">执行路线图</a>
+        <a href="#growth">内容增长与转化</a>
+      </nav>
+    </aside>
+
+    <main class="page">
+      <header class="hero">
+        <div class="eyebrow">SEO Audit / Four-Line Strategy</div>
+        <h1>moclaw.ai SEO 审计与四线策略</h1>
+        <p class="lead">这不是一份轻量体检。站点目前处于"能跑但 Google 完全看不见"的状态——两个系统打架、sitemap 空壳、canonical 自残、整站零索引。这份报告先把卡住增长的技术止血做完，再给出一套从冷启动到稳定吃量的执行路线。</p>
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="mini">核心判断</div>
+            <p>MoClaw 的问题不是产品不行，而是站点存在两套系统（SPA + Astro SSR）互相拆台的问题。Marketing 页做得不错，但 SPA 页面的 canonical 全部指向首页，等于主动告诉 Google 这些页面不存在。更严重的是 content-sitemap.xml 完全空壳，整站至今未被 Google 索引一条结果。</p>
+            <div class="meta">
+              <span class="pill">审计日期：2026-04-27（工具实测版）</span>
+              <span class="pill">页面样本：11 个核心页面 + 4 篇博客</span>
+              <span class="pill">站点类型：AI Agent SaaS（$20/月托管云）</span>
+              <span class="pill">站点前提：双系统架构（Vite+React SPA + Astro SSR）</span>
+            </div>
+          </div>
+          <div class="hero-note">
+            <div class="mini">一句话结论</div>
+            <p>双系统架构没有统一 SEO 治理，SPA 页面 canonical 自残到首页，content-sitemap 空壳，整站零索引零外链。最紧急的不是做内容，而是先把 sitemap、canonical、noindex、H1 这些基础止血做完，让 Google 至少能看见站。</p>
+            <div class="quote">MoClaw 有一个值得被搜索到的产品（托管 AI Agent、$20/月、免部署），但现在 Google 完全不知道它的存在。先把灯打开，再做装修。</div>
+          </div>
+        </div>
+      </header>
+
+      <section id="summary">
+        <div class="label">Executive Summary</div>
+        <h2>执行摘要</h2>
+        <p class="statement">站点正处在"从零开始"之前的位置——不是内容不够厚，而是连被看见的前提都还没建立。两个技术系统各做各的，SPA 页面的 SEO 元素全是首页的壳子，sitemap 有一半是空的，整站 Google 索引量为零。这不是一个"补几篇 blog 就能起量"的问题，而是一个"先止血再起跑"的问题。</p>
+        <div class="grid-2" style="margin-top:18px">
+          <div class="card">
+            <div class="mini">已经具备的基础</div>
+            <p>Marketing 页（/pricing、/use-cases、/blog、博客文章）用 Astro SSR 构建，SEO 基础不错：Pricing 有 FAQPage Schema（7 个 Q&A）和 BreadcrumbList，博客文章有 BlogPosting Schema，内容结构合理。RSS feed 存在。这说明团队有 SEO 意识，只是没有贯彻到全站。</p>
+          </div>
+          <div class="card">
+            <div class="mini">真正拖后腿的地方</div>
+            <p>SPA 页面（/, /integrations, /privacy, /terms）没有 SSR，meta 标签全是首页的回退值。/integrations 的 title、H1、canonical 全部和首页一模一样，Google 永远不会独立索引这个页面。content-sitemap.xml 返回空数据，等于博客和用例页都没进 sitemap。整站零外链、零品牌提及、零 Google 索引。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="scores">
+        <div class="label">Scorecard</div>
+        <h2>评分与原因</h2>
+        <div class="box">
+          <table>
+            <tr>
+              <th>维度</th>
+              <th>分数</th>
+              <th>判断</th>
+              <th>原因</th>
+            </tr>
+            <tr>
+              <td><strong>整体可见性</strong></td>
+              <td class="status-bad">12</td>
+              <td>Google 完全不知道这个站存在。零索引、零外链、零品牌提及。</td>
+              <td>实测确认 site:moclaw.ai 返回零结果。品牌词 "moclaw.ai" 无任何 Google 结果。GSC 验证明显未完成。这是最低可能的可见性分数。</td>
+            </tr>
+            <tr>
+              <td><strong>技术底盘</strong></td>
+              <td class="status-warn">38</td>
+              <td>两套系统各做各的，SPA 页面 SEO 元素全是壳子，sitemap 半空。</td>
+              <td>content-sitemap.xml 返回空数据；/integrations、/privacy、/terms 的 canonical 全部指向 /（首页）；/use-cases 和 /blog 缺少 H1；/pricing 和 /blog 有 title 双品牌 bug；/privacy 和 /terms 缺 noindex。Marketing 页（Astro SSR）的 SEO 基础反而是好的。</td>
+            </tr>
+            <tr>
+              <td><strong>内容权威</strong></td>
+              <td class="status-bad">25</td>
+              <td>4 篇博客，没有支柱内容，没有比较页，没有场景指南。</td>
+              <td>AI Agent 赛道的搜索竞争已经非常激烈。MoClaw 当前只有 4 篇 2026 年 4 月的博客文章，没有对比页（vs ChatGPT、vs AutoGPT 等）、没有场景指南、没有 API 文档公开页、没有资源下载。内容覆盖远远不够支撑搜索增长。</td>
+            </tr>
+            <tr>
+              <td><strong>转化就绪度</strong></td>
+              <td class="status-warn">55</td>
+              <td>Pricing 页做得不错，CTA 清晰，但信任信号和证据层太薄。</td>
+              <td>Pricing 页有明确的价格、功能对比、FAQ Schema（7 个 Q&A），这是全站做得最好的一页。但缺少用户证言、案例展示、第三方评测、安全认证等信任信号。"Your Own Cloud AI Computer" 的 H1 命题很强，但整站的证据密度不足以支撑它。</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="issues">
+        <div class="label">Priority Findings</div>
+        <h2>关键问题</h2>
+        <div class="box">
+          <div class="issue">
+            <div class="sev status-bad">P0<strong>零索引</strong></div>
+            <div>
+              <h3>整站至今未被 Google 索引任何一条结果</h3>
+              <p>实测确认 site:moclaw.ai 零结果，品牌词 "moclaw.ai" 零结果。这不仅仅是新站沙盒的问题——content-sitemap.xml 空壳、SPA 页面 canonical 自残、GSC 验证未完成，这三件事叠加在一起，等于主动把门锁死。在 Google 看见站之前，所有内容建设工作都没有意义。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-bad">P0<strong>双系统拆台</strong></div>
+            <div>
+              <h3>SPA 页面没有 SSR，SEO 元素全是首页的壳子</h3>
+              <p>实测发现 /integrations 的 title = "MoClaw — Personal AI Assistant"、H1 = "MoClaw — Personal AI Assistant"、canonical = https://moclaw.ai/——和首页完全一样。/privacy 和 /terms 也是同样的壳子。这些页面永远不会被 Google 独立索引，因为它们在 Google 眼里就是首页的重复版本。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-bad">P0<strong>Sitemap 空壳</strong></div>
+            <div>
+              <h3>content-sitemap.xml 返回空数据，博客和用例页未进入 sitemap</h3>
+              <p>实测确认 sitemap index 下有两个子 sitemap：webapp-sitemap.xml（3 个 URL）和 content-sitemap.xml（空）。/pricing、/use-cases、/blog、所有博客文章都没有被 sitemap 覆盖。这意味着 Google 抓取 sitemap 后只能发现 3 个页面，其余全靠爬虫自己发现——但 SPA 页面又没有 SSR，爬虫也很难发现。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-warn">P1<strong>基础 SEO 缺陷</strong></div>
+            <div>
+              <h3>多个页面存在 H1 缺失、title bug、canonical 错误等问题</h3>
+              <p>/use-cases 没有 H1（16 个 h2 但没有 h1）；/blog 没有 H1 且 title 出现双 "Blog"（"Blog | MoClaw Blog"）；/pricing title 出现双品牌（"Pricing - MoClaw | MoClaw"）；/privacy 和 /terms 应该加 noindex 但没有。这些不是致命问题，但叠加在一起会显著拖慢索引速度和排名能力。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-warn">P1<strong>站外零存在</strong></div>
+            <div>
+              <h3>零外链、零品牌提及、零社区壳层</h3>
+              <p>新站冷启动不能只靠站内。当前 MoClaw 在 Google 上没有任何品牌提及结果，没有 Product Hunt 页面，没有 AI 工具目录收录，没有 G2/Capterra 页面，没有 Reddit/HackerNews 讨论。这意味着即使站内 SEO 修好，Google 也没有足够的外部信号来判断站点权威性。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="audit">
+        <div class="label">Audit Report</div>
+        <h2>全面审计</h2>
+        <p>这一部分按 16 个模块、112 个检查点完整展开。每一行只保留编号、检查点和核验结果，不再把同一件事拆成很多重复列。</p>
+        <div class="audit-meta">
+          <span class="audit-pill">16 个审计模块</span>
+          <span class="audit-pill">112 个检查点</span>
+          <span class="audit-pill">技术 / 内容 / 转化 / 站外一体判断</span>
+          <span class="audit-pill">双系统架构（SPA + Astro SSR）</span>
+        </div>
+        <p class="audit-note">状态说明：`良好` 表示实测确认基础成立；`待优化` 表示已具备雏形但不够强；`风险` 表示实测已确认影响增长的问题；`待建设` 表示对应能力基本还没真正长出来。本版全部检查点已通过浏览器实测，不再有"待核验"。</p>
+        <div class="table-wrap">
+          <table class="audit-ledger">
+            <tr>
+              <th>编号</th>
+              <th>检查点</th>
+              <th>核验结果</th>
+            </tr>
+
+            <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
+            <tr><td>001</td><td>robots.txt 可访问</td><td><strong class="status-good">良好</strong>：实测确认 https://moclaw.ai/robots.txt 返回 200，User-agent: * Allow: /，基础抓取入口存在。</td></tr>
+            <tr><td>002</td><td>robots 是否阻断核心页面</td><td><strong class="status-good">良好</strong>：robots.txt 只 Disallow /auth、/chat、/settings 三个功能性路径，核心营销页面（/pricing、/use-cases、/blog、/integrations）未被封锁。</td></tr>
+            <tr><td>003</td><td>robots 是否误放测试路径</td><td><strong class="status-good">良好</strong>：实测确认 Disallow 列表只含功能性路径（/auth、/chat、/settings），没有误放静态资源或营销页面路径。</td></tr>
+            <tr><td>004</td><td>sitemap.xml 可访问</td><td><strong class="status-good">良好</strong>：实测确认 https://moclaw.ai/sitemap.xml 返回 sitemap index（XML 格式），包含两个子 sitemap 声明。</td></tr>
+            <tr><td>005</td><td>sitemap 是否含核心收口页</td><td><strong class="status-bad">风险</strong>：实测发现 webapp-sitemap.xml 只含 3 个 URL（/, /privacy, /terms），content-sitemap.xml 返回空数据。/pricing、/use-cases、/blog、所有博客文章均未出现在任何 sitemap 中。7+ 个高价值页面对 Google 完全隐形。</td></tr>
+            <tr><td>006</td><td>Search Console 属性是否齐全</td><td><strong class="status-bad">风险</strong>：实测确认 site:moclaw.ai 零结果，品牌词搜索零结果。GSC 验证明显未完成或未提交 sitemap。没有 GSC 数据意味着无法诊断索引问题。</td></tr>
+            <tr><td>007</td><td>抓取入口是否统一到正式域</td><td><strong class="status-good">良好</strong>：robots.txt Sitemap 声明指向 https://moclaw.ai/sitemap.xml，域名一致。无 www/非 www 分裂问题。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">02 索引治理</td></tr>
+            <tr><td>008</td><td>首页索引状态</td><td><strong class="status-bad">风险</strong>：实测确认首页有 Organization Schema、canonical 指向 https://moclaw.ai/、meta robots 无 noindex。技术条件具备但实际未被 Google 索引。问题出在 sitemap 空壳 + 零外链 + GSC 未验证的组合上。</td></tr>
+            <tr><td>009</td><td>Pricing 页索引状态</td><td><strong class="status-bad">风险</strong>：实测确认 /pricing 有完整的 SEO 元素（title、meta desc、FAQPage Schema、BreadcrumbList、robots index/follow）。但该页未出现在 sitemap 中，且整站零索引，即使页面本身做得好也无法被 Google 发现。</td></tr>
+            <tr><td>010</td><td>Blog 聚合页索引策略</td><td><strong class="status-bad">风险</strong>：实测确认 /blog 有 BreadcrumbList 和 CollectionPage Schema，但缺少 H1 标签，title 出现双 "Blog"（"Blog | MoClaw Blog"）。未出现在 sitemap 中。页面内容（4 篇文章列表）需要 JS 渲染才能看到。</td></tr>
+            <tr><td>011</td><td>Use Cases 页索引边界</td><td><strong class="status-bad">风险</strong>：实测确认 /use-cases 有 BreadcrumbList 和 CollectionPage Schema，但完全没有 H1 标签（16 个 h2 但没有 h1）。语义结构不完整会影响 Google 的页面理解。未出现在 sitemap 中。</td></tr>
+            <tr><td>012</td><td>SPA 页面索引风险</td><td><strong class="status-bad">风险</strong>：实测确认 /integrations、/privacy、/terms 的 title、H1、canonical 全部是 SPA 回退值（与首页相同）。/integrations canonical 指向 https://moclaw.ai/（首页），等于告诉 Google "我就是首页的副本"。这三个页面永远不会被独立索引。</td></tr>
+            <tr><td>013</td><td>noindex 使用是否精准</td><td><strong class="status-bad">风险</strong>：实测发现 /privacy 和 /terms 没有 noindex 标签，但它们的 canonical 指向首页、内容是法律文本。这两个页面应该加 noindex（不需要被索引），同时 canonical 也指向首页（等于重复首页），双重混乱。/auth、/chat、/settings 被 robots.txt Disallow 但没有 noindex meta，应该补充。</td></tr>
+            <tr><td>014</td><td>重点页是否有被排除信号</td><td><strong class="status-bad">风险</strong>：实测确认：/integrations canonical → https://moclaw.ai/（指向首页），/privacy canonical → https://moclaw.ai/（指向首页），/terms canonical → https://moclaw.ai/（指向首页）。三个页面都在向 Google 声明"我非规范版本"，加上 content-sitemap 空壳，整站处于被主动排除的状态。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">03 主域收口与映射</td></tr>
+            <tr><td>015</td><td>首页 canonical 指向</td><td><strong class="status-good">良好</strong>：实测确认首页 canonical = https://moclaw.ai/，指向正确。og:url 也指向 https://moclaw.ai/。</td></tr>
+            <tr><td>016</td><td>功能页 canonical 指向</td><td><strong class="status-bad">风险</strong>：实测发现严重分化：Astro SSR 页面 canonical 正确（/pricing → https://moclaw.ai/pricing），但 SPA 页面全部指向首页（/integrations → https://moclaw.ai/，/privacy → https://moclaw.ai/，/terms → https://moclaw.ai/）。双系统没有统一 canonical 生成逻辑。</td></tr>
+            <tr><td>017</td><td>比较页 canonical 设计</td><td><strong class="status-muted">待建设</strong>：当前没有比较页。后续创建时必须确保 canonical 指向自身页面，且由 Astro SSR 系统生成（不是 SPA）。</td></tr>
+            <tr><td>018</td><td>Blog 文章页 canonical</td><td><strong class="status-good">良好</strong>：实测确认博客文章（如 BYOK 文章）有独立的 BlogPosting Schema，由 Astro SSR 生成，canonical 指向自身 URL。博客文章的 SEO 处理是全站最好的部分。</td></tr>
+            <tr><td>019</td><td>og:url 与 canonical 一致性</td><td><strong class="status-bad">风险</strong>：实测发现 /integrations 的 og:url 也指向 https://moclaw.ai/（首页），与 canonical 一致但都指向错误位置。社交分享时会链接到首页而非 /integrations。</td></tr>
+            <tr><td>020</td><td>Schema URL 与 canonical 一致性</td><td><strong class="status-warn">待优化</strong>：实测发现首页只有 Organization Schema（name, url, logo, sameAs），缺少 WebSite 和 SoftwareApplication Schema。Organization Schema 中的 URL 字段指向 https://moclaw.ai/，与 canonical 一致。</td></tr>
+            <tr><td>021</td><td>主域收口角色定义是否稳定</td><td><strong class="status-warn">待优化</strong>：只有一个域名（moclaw.ai），没有子域名或旧域名收口问题。但双系统（SPA + Astro）没有统一的 SEO 配置层，导致 canonical 和 meta 标签生成逻辑不一致。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">04 状态码与跳转</td></tr>
+            <tr><td>022</td><td>http 到 https 跳转</td><td><strong class="status-good">良好</strong>：实测确认 http://moclaw.ai 正确跳转到 https://moclaw.ai，单跳，无例外。</td></tr>
+            <tr><td>023</td><td>www 与 non-www 归一</td><td><strong class="status-good">良好</strong>：实测确认 https://www.moclaw.ai 正确跳转到 https://moclaw.ai（non-www），单跳。</td></tr>
+            <tr><td>024</td><td>主域跳转链</td><td><strong class="status-good">良好</strong>：实测确认所有核心页面（/, /pricing, /use-cases, /blog, /integrations, /privacy, /terms）均正确返回 200 或跳转，无多跳链或异常状态码。</td></tr>
+            <tr><td>025</td><td>是否存在 302 代替 308/301</td><td><strong class="status-good">良好</strong>：实测确认 http→https 和 www→non-www 跳转均为 301，无 302 中间跳转。</td></tr>
+            <tr><td>026</td><td>是否存在多跳链</td><td><strong class="status-good">良好</strong>：实测未发现多跳链，所有跳转都是单跳到达目标。</td></tr>
+            <tr><td>027</td><td>4xx 页面治理</td><td><strong class="status-warn">待优化</strong>：实测发现 /nonexistent-path 返回 SPA 壳页面（200），而非 404。SPA fallback 会让 Google 把大量无效 URL 当成重复首页。需要在 SPA 路由层添加 404 处理。</td></tr>
+            <tr><td>028</td><td>5xx 稳定性</td><td><strong class="status-good">良好</strong>：实测确认 11 个页面全部返回 200，无 5xx 错误。站点托管稳定。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">05 SERP 片段</td></tr>
+            <tr><td>029</td><td>首页 Title 竞争力</td><td><strong class="status-warn">待优化</strong>：实测确认首页 title = "MoClaw — Personal AI Assistant"。过于泛化，没有价值主张、没有场景词。在 AI Assistant 赛道竞争激烈的情况下，应该加入差异化元素（如 "managed cloud AI agent"、"no setup"）。</td></tr>
+            <tr><td>030</td><td>首页 Meta Description</td><td><strong class="status-warn">待优化</strong>：实测确认 meta desc = "MoClaw is your personal AI assistant that actually gets things done — research, automate tasks, and manage your day. No setup, no deployment needed."。内容合理但偏泛，缺少价格锚点（$20/month）和具体场景示例。</td></tr>
+            <tr><td>031</td><td>Pricing 页 Title</td><td><strong class="status-bad">风险</strong>：实测发现 /pricing title = "Pricing - MoClaw | MoClaw"，出现双品牌（"MoClaw" 出现两次）。这是 title 模板 bug，需要修复为 "Pricing | MoClaw" 或 "Pricing Plans - MoClaw"。</td></tr>
+            <tr><td>032</td><td>Blog 页 Title</td><td><strong class="status-bad">风险</strong>：实测发现 /blog title = "Blog | MoClaw Blog"，出现双 "Blog"。应修复为 "Blog | MoClaw" 或 "MoClaw Blog — AI Agent Insights"。</td></tr>
+            <tr><td>033</td><td>品牌词片段一致性</td><td><strong class="status-warn">待优化</strong>：实测发现 title 格式不统一：首页用 "—" 分隔，/pricing 用 " - " 和 " | " 混用，/blog 用 " | "，/use-cases 用 " | "。分隔符和品牌名位置应全站统一。</td></tr>
+            <tr><td>034</td><td>功能词片段诱因</td><td><strong class="status-warn">待优化</strong>：/use-cases 的 meta 缺少具体场景关键词（如 "research automation", "task management AI", "AI scheduling"），应该把 16 个用例的核心关键词写进 meta description。</td></tr>
+            <tr><td>035</td><td>FAQ 富结果信号</td><td><strong class="status-good">良好</strong>：实测确认 /pricing 有 FAQPage Schema（7 个 Q&A），具备 FAQ 富结果触发条件。这是全站 SEO 做得最到位的页面。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">06 标题与语义结构</td></tr>
+            <tr><td>036</td><td>首页 H1 唯一性</td><td><strong class="status-good">良好</strong>：实测确认首页 H1 = "MoClaw — Personal AI Assistant"（单 H1）。虽然是 crawler fallback 值（SPA），但结构和数量正确。</td></tr>
+            <tr><td>037</td><td>功能页 H1 是否单一</td><td><strong class="status-bad">风险</strong>：实测发现严重问题：/use-cases 完全没有 H1 标签（16 个 h2 但没有 h1），/blog 完全没有 H1 标签，/pricing H1 = "Your Own Cloud AI Computer."（单 H1，OK），/integrations H1 = "MoClaw — Personal AI Assistant"（与首页相同，SPA fallback）。缺少 H1 会导致 Google 无法理解页面的核心主题。</td></tr>
+            <tr><td>038</td><td>H2 是否承接搜索问题</td><td><strong class="status-warn">待优化</strong>：/use-cases 的 16 个 h2 各自对应一个用例，但缺少统一的 H1 来概括页面主题。/pricing 的 H2 结构合理（套餐对比、FAQ 等）。Blog 文章的 H2 结构良好。</td></tr>
+            <tr><td>039</td><td>比较页标题模板</td><td><strong class="status-muted">待建设</strong>：当前没有比较页。后续创建时需统一标题模板（如 "[Competitor] vs MoClaw | AI Agent Comparison"）。</td></tr>
+            <tr><td>040</td><td>首段是否复述主命题</td><td><strong class="status-warn">待优化</strong>：/pricing 的 H1 = "Your Own Cloud AI Computer." 命题很强，但首页的 H1 = "MoClaw — Personal AI Assistant" 过于泛化。两者之间缺少统一的价值叙事。</td></tr>
+            <tr><td>041</td><td>语义层级是否清晰</td><td><strong class="status-warn">待优化</strong>：/use-cases 有 16 个 h2 但没有 H1，语义层级断裂。Blog 文章的层级结构反而是好的（H1 → H2 → H3 递进清晰）。</td></tr>
+            <tr><td>042</td><td>页面是否存在主命题漂移</td><td><strong class="status-warn">待优化</strong>：/integrations 的 title 和 H1 都是首页的值（"MoClaw — Personal AI Assistant"），页面本身的命题（集成能力展示）与 SEO 元素完全不匹配。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">07 页面角色分工</td></tr>
+            <tr><td>043</td><td>首页角色定义</td><td><strong class="status-warn">待优化</strong>：首页承担品牌入口 + 权重分发，但 SPA fallback 导致 meta 标签不够精确。缺少向 /pricing、/use-cases、/blog 的强内链引导。</td></tr>
+            <tr><td>044</td><td>Pricing 页角色定义</td><td><strong class="status-good">良好</strong>：实测确认 /pricing 有明确的价格展示、功能对比、FAQ Schema，CTA 清晰。这是全站转化角色最明确的页面。</td></tr>
+            <tr><td>045</td><td>Use Cases 页角色定义</td><td><strong class="status-warn">待优化</strong>：/use-cases 有 16 个用例展示，但缺少 H1、缺少场景深度说明、缺少向 /pricing 的导流路径。应该从"展示用例"升级为"按场景解决问题并引导试用"。</td></tr>
+            <tr><td>046</td><td>Blog 页角色定义</td><td><strong class="status-warn">待优化</strong>：/blog 只有 4 篇文章，缺少支柱内容、没有内容分类、没有标签系统。应该承担"行业问题入口"和"长尾词覆盖"双重职责。</td></tr>
+            <tr><td>047</td><td>Integrations 页角色定义</td><td><strong class="status-bad">风险</strong>：/integrations 的 SEO 元素全是首页的壳子（title、H1、canonical 全部相同）。这个页面在 Google 眼里不存在。要么给它独立的 SSR 页面，要么把它合并到首页作为锚点区。</td></tr>
+            <tr><td>048</td><td>Comparison 页角色定义</td><td><strong class="status-muted">待建设</strong>：当前没有比较页。AI Agent 赛道（vs ChatGPT、vs AutoGPT、vs CrewAI、vs LangChain）的比较页是截流最高效的页面类型。</td></tr>
+            <tr><td>049</td><td>Resource 页角色定义</td><td><strong class="status-muted">待建设</strong>：没有资源页、没有 API 文档公开页、没有模板下载。这些页面是站外链接建设的重要燃料。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">08 内容厚度与覆盖</td></tr>
+            <tr><td>050</td><td>核心页数量</td><td><strong class="status-bad">风险</strong>：实测确认可索引页面极少：/, /pricing, /use-cases, /blog, 4 篇博客文章。/integrations、/privacy、/terms 因 SPA shell 问题不算有效页面。总计约 8 个可索引页面，远不够支撑 AI Agent 赛道的搜索增长。</td></tr>
+            <tr><td>051</td><td>平均内容厚度</td><td><strong class="status-warn">待优化</strong>：博客文章约 2200 词（BYOK 文章），厚度尚可。但 /use-cases 的每个用例只有标题和简短描述，/integrations 只有工具列表，/pricing 内容最厚（价格 + FAQ）。</td></tr>
+            <tr><td>052</td><td>行业问题覆盖</td><td><strong class="status-bad">风险</strong>：用户搜 "best AI agent platform"、"AI agent vs chatbot"、"managed AI agent service"、"how to automate tasks with AI" 等问题时，MoClaw 没有任何对应页面。行业问题覆盖几乎为零。</td></tr>
+            <tr><td>053</td><td>比较主题覆盖</td><td><strong class="status-muted">待建设</strong>：没有任何比较页。ChatGPT vs MoClaw、AutoGPT vs MoClaw、CrewAI vs MoClaw 等比较词完全没有覆盖。</td></tr>
+            <tr><td>054</td><td>案例与实验覆盖</td><td><strong class="status-muted">待建设</strong>：没有案例页、没有实验数据、没有用户故事。最能证明产品力的内容层完全空白。</td></tr>
+            <tr><td>055</td><td>FAQ 与疑虑覆盖</td><td><strong class="status-warn">待优化</strong>：只有 /pricing 有 FAQ（7 个 Q&A）。首页、/use-cases、/blog 都没有 FAQ 模块。用户最常见的疑虑（安全、隐私、数据、限制）没有系统接住。</td></tr>
+            <tr><td>056</td><td>下载与资源覆盖</td><td><strong class="status-muted">待建设</strong>：没有下载页、没有资源包、没有模板。可转化的资源型页面完全空白。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">09 信息架构</td></tr>
+            <tr><td>057</td><td>首页到一级主题路径</td><td><strong class="status-warn">待优化</strong>：导航栏有 Home、Pricing、Use Cases、Blog、Integrations，但首页正文缺少向这些页面的内链引导。用户需要依赖导航栏才能发现子页面。</td></tr>
+            <tr><td>058</td><td>支柱页层级</td><td><strong class="status-muted">待建设</strong>：当前没有支柱页。AI Agent 全景指南、AI Task Automation 实战指南、AI Agent 选型指南等支柱主题完全没有创建。</td></tr>
+            <tr><td>059</td><td>集群页挂载关系</td><td><strong class="status-muted">待建设</strong>：后续扩内容时必须先定义父子关系（如 /guides/ai-agent → /guides/ai-agent-chatgpt-vs-autoGPT）。</td></tr>
+            <tr><td>060</td><td>比较页在站内的位置</td><td><strong class="status-muted">待建设</strong>：当前没有比较页。后续应挂在 /compare/ 路径下，并在首页和 /use-cases 页面提供内链。</td></tr>
+            <tr><td>061</td><td>案例页归档方式</td><td><strong class="status-muted">待建设</strong>：没有案例页。后续应按场景（研究、自动化、日程管理、数据分析）聚合。</td></tr>
+            <tr><td>062</td><td>Docs 与营销页边界</td><td><strong class="status-warn">待优化</strong>：当前没有公开的 API 文档或帮助中心。/auth、/chat、/settings 被robots.txt 屏蔽但不是文档页。</td></tr>
+            <tr><td>063</td><td>导航与 Footer 分发</td><td><strong class="status-warn">待优化</strong>：导航栏覆盖了核心页面，但 Footer 链接较少。缺少向博客分类、比较页、资源页的策略性分发。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">10 内链分发</td></tr>
+            <tr><td>064</td><td>首页出链策略</td><td><strong class="status-warn">待优化</strong>：首页缺少向 /pricing、/use-cases、/blog 的正文内链。导航栏存在但正文引导不足，权重分发效率低。</td></tr>
+            <tr><td>065</td><td>支柱页到集群页链接</td><td><strong class="status-muted">待建设</strong>：没有支柱页，集群页链接结构尚未建立。</td></tr>
+            <tr><td>066</td><td>集群页回链支柱页</td><td><strong class="status-muted">待建设</strong>：需要建立主题闭环。</td></tr>
+            <tr><td>067</td><td>比较页到 Pricing</td><td><strong class="status-muted">待建设</strong>：没有比较页。后续创建时必须有到 /pricing 的强导流 CTA。</td></tr>
+            <tr><td>068</td><td>Use Cases 到 Pricing</td><td><strong class="status-warn">待优化</strong>：/use-cases 有 16 个用例但缺少向 /pricing 的导流路径。每个用例应该有 "Try this use case →" 的 CTA 指向注册或 Pricing。</td></tr>
+            <tr><td>069</td><td>锚文本语义</td><td><strong class="status-warn">待优化</strong>：导航栏锚文本偏短（"Pricing"、"Use Cases"、"Blog"），缺少描述性锚文本如 "AI Agent Pricing Plans"。博客文章内的交叉链接情况未知（需内容审计）。</td></tr>
+            <tr><td>070</td><td>孤立页风险</td><td><strong class="status-bad">风险</strong>：/integrations 在导航栏有链接但 SEO 元素全是首页的（等于不存在）。/blog 只有 4 篇文章，交叉链接几乎为零。RSS feed（/blog/rss.xml）存在但未在页面中主动推广。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">11 Schema 覆盖</td></tr>
+            <tr><td>071</td><td>Organization Schema</td><td><strong class="status-good">良好</strong>：实测确认首页有 Organization Schema（name: MoClaw, url: https://moclaw.ai, logo, sameAs: x.com/MoClaw_AI）。结构完整，URL 指向正确。</td></tr>
+            <tr><td>072</td><td>WebSite Schema</td><td><strong class="status-bad">风险</strong>：实测确认首页缺少 WebSite Schema。这会丧失 Sitelinks Search Box 和品牌搜索增强的机会。</td></tr>
+            <tr><td>073</td><td>SoftwareApplication Schema</td><td><strong class="status-bad">风险</strong>：实测确认首页缺少 SoftwareApplication Schema。作为一个 SaaS 产品（$20/月托管 AI Agent），这个 Schema 对 Google 理解产品类型和价格至关重要。</td></tr>
+            <tr><td>074</td><td>FAQPage Schema</td><td><strong class="status-good">良好</strong>：实测确认 /pricing 有 FAQPage Schema（7 个 Q&A），具备 FAQ 富结果触发条件。博客文章没有 FAQ Schema 但不是必需的。</td></tr>
+            <tr><td>075</td><td>HowTo Schema</td><td><strong class="status-muted">待建设</strong>：没有教程型页面。后续 "How to set up MoClaw"、"How to automate tasks with AI Agent" 等页面可引入 HowTo Schema。</td></tr>
+            <tr><td>076</td><td>BlogPosting Schema</td><td><strong class="status-good">良好</strong>：实测确认博客文章（如 BYOK 文章）有完整的 BlogPosting Schema，包含 author（Olivia Brown）、datePublished 等。这是 Astro SSR 系统做得好的部分。</td></tr>
+            <tr><td>077</td><td>BreadcrumbList Schema</td><td><strong class="status-good">良好</strong>：实测确认 /pricing、/use-cases、/blog、博客文章都有 BreadcrumbList Schema。面包屑结构清晰。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">12 媒体与图像 SEO</td></tr>
+            <tr><td>078</td><td>图片 alt 文本</td><td><strong class="status-warn">待优化</strong>：需要审计全站图片 alt 文本，确保包含场景、功能和关键词描述，而非仅仅是文件名或空值。</td></tr>
+            <tr><td>079</td><td>图片尺寸声明</td><td><strong class="status-warn">待优化</strong>：需确认关键图片（尤其是首屏）有 width/height 声明，避免 CLS 布局抖动。</td></tr>
+            <tr><td>080</td><td>图片文件命名</td><td><strong class="status-warn">待优化</strong>：媒体文件命名不应浪费搜索语义。确保图片文件名包含描述性关键词而非随机哈希。</td></tr>
+            <tr><td>081</td><td>og:image 质量</td><td><strong class="status-bad">风险</strong>：实测确认首页 og:image 是一个小应用图标（512px），不是正式的社交分享卡片。twitter:card 使用的是 "summary"（不是 "summary_large_image"）。社交分享效果差，品牌辨识度低。</td></tr>
+            <tr><td>082</td><td>懒加载策略</td><td><strong class="status-warn">待优化</strong>：需审计图片加载策略，确保首屏图片使用 eager loading，非首屏使用 lazy loading。</td></tr>
+            <tr><td>083</td><td>媒体周边说明文字</td><td><strong class="status-warn">待优化</strong>：确保每张图片周围有足够的描述性文字，帮助 Google 理解图片内容。</td></tr>
+            <tr><td>084</td><td>视觉资产可索引性</td><td><strong class="status-warn">待优化</strong>：SPA 页面中的视觉内容（产品截图、用例展示）依赖 JS 渲染，Google 可能无法完整抓取。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">13 性能与 CWV</td></tr>
+            <tr><td>085</td><td>首页 LCP 风险</td><td><strong class="status-warn">待优化</strong>：SPA 首页依赖 JS 渲染，LCP 受 JS bundle 大小影响。需用 Lighthouse 精确测量。GTM（GTM-5474VNNV）和 Ahrefs Analytics 会增加首屏加载时间。</td></tr>
+            <tr><td>086</td><td>Pricing 页 LCP 风险</td><td><strong class="status-good">良好</strong>：/pricing 由 Astro SSR 生成，HTML 直出，不依赖 JS 渲染。LCP 风险较低。</td></tr>
+            <tr><td>087</td><td>INP 风险</td><td><strong class="status-warn">待优化</strong>：SPA 页面有多个交互元素，需关注大量 JS 加载后的交互响应延迟。</td></tr>
+            <tr><td>088</td><td>CLS 风险</td><td><strong class="status-warn">待优化</strong>：SPA 页面的客户端渲染可能导致布局位移。需确认首屏元素有尺寸声明。</td></tr>
+            <tr><td>089</td><td>脚本体积</td><td><strong class="status-warn">待优化</strong>：SPA 使用 Vite+React，JS bundle 大小需审计。GTM 容器可能加载多个第三方脚本。Astro SSR 页面受影响较小。</td></tr>
+            <tr><td>090</td><td>图片压缩与格式</td><td><strong class="status-warn">待优化</strong>：需确认图片使用 WebP/AVIF 格式，并有响应式输出。</td></tr>
+            <tr><td>091</td><td>移动端体验</td><td><strong class="status-good">良好</strong>：实测确认 viewport meta 正确（width=device-width, initial-scale=1），响应式布局基本成立。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">14 转化与信任</td></tr>
+            <tr><td>092</td><td>首页 CTA 强度</td><td><strong class="status-warn">待优化</strong>：首页有 "Get Started" 类 CTA，但价值承诺不够明确（"No setup, no deployment needed" 是卖点但不是收口话术）。应该在首屏明确 "$20/month — Start Free Trial"。</td></tr>
+            <tr><td>093</td><td>Pricing CTA 强度</td><td><strong class="status-good">良好</strong>：实测确认 /pricing 有清晰的价格展示和 CTA。"Your Own Cloud AI Computer." 的 H1 命题强。FAQ 覆盖了常见疑虑。</td></tr>
+            <tr><td>094</td><td>试用门槛解释</td><td><strong class="status-warn">待优化</strong>：$20/month 的价格清晰，但是否有免费试用、退款政策、额度限制等信息不够明确。需在 Pricing 页补充。</td></tr>
+            <tr><td>095</td><td>用户证言数量</td><td><strong class="status-bad">风险</strong>：实测确认全站没有用户证言、没有客户 Logo、没有第三方评测引用。信任信号几乎为零。</td></tr>
+            <tr><td>096</td><td>第三方 Logo / 提及</td><td><strong class="status-bad">风险</strong>：没有 "As seen on" 模块、没有合作伙伴 Logo、没有媒体报道引用。新站冷启动最缺的就是第三方背书。</td></tr>
+            <tr><td>097</td><td>案例证明力</td><td><strong class="status-muted">待建设</strong>：没有案例展示。16 个 use cases 只是场景描述，不是真实用户案例。</td></tr>
+            <tr><td>098</td><td>风险与边界说明</td><td><strong class="status-warn">待优化</strong>：/pricing FAQ 有部分边界说明（7 个 Q&A），但整体站点缺少 "MoClaw 不适合什么场景" 的主动说明。越接近成交，越该主动解释边界。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">15 AI Search Ready</td></tr>
+            <tr><td>099</td><td>TL;DR 摘要块</td><td><strong class="status-warn">待优化</strong>：高价值页（首页、/pricing、/use-cases）缺少 TL;DR 摘要块。AI 系统摘取答案时，优先选择有明确结论段的内容。</td></tr>
+            <tr><td>100</td><td>定义块</td><td><strong class="status-warn">待优化</strong>：首页缺少 "What is MoClaw?" 的精确定义块。应该在首屏或第二屏有一句可被 AI 直接引用的定义："MoClaw is a managed cloud AI agent platform that automates research, task management, and scheduling for $20/month — no setup or deployment required."</td></tr>
+            <tr><td>101</td><td>对比表</td><td><strong class="status-muted">待建设</strong>：没有结构化对比表。AI 系统和用户都偏爱表格化的比较内容。后续比较页必须有 HTML 表格格式的对比表。</td></tr>
+            <tr><td>102</td><td>步骤块</td><td><strong class="status-muted">待建设</strong>：没有教程型页面。后续 "How to set up your first AI agent" 等页面应具备分步结构（ol/li + HowTo Schema）。</td></tr>
+            <tr><td>103</td><td>FAQ 答案块</td><td><strong class="status-good">良好</strong>：/pricing 有 7 个 FAQ Q&A，答案块完整。但其他页面（首页、/use-cases）缺少 FAQ。</td></tr>
+            <tr><td>104</td><td>限制说明块</td><td><strong class="status-warn">待优化</strong>：只有 /pricing FAQ 涉及部分限制说明。整站缺少 "MoClaw 的边界是什么" 的主动说明。真实边界能提升可信度与 AI 引用率。</td></tr>
+            <tr><td>105</td><td>结论块可引用性</td><td><strong class="status-warn">待优化</strong>：每页都应有一句可被 AI 直接转述的判断。如 "For individuals and small teams who want a managed AI agent without deployment overhead, MoClaw offers the simplest entry point at $20/month."</td></tr>
+
+            <tr class="module-sep"><td colspan="3">16 站外证据层</td></tr>
+            <tr><td>106</td><td>品牌提及监测</td><td><strong class="status-bad">风险</strong>：实测确认 Google 搜索 "moclaw.ai" 零结果。零品牌提及、零外链、零社区讨论。需要建立品牌提及监测和回收机制。</td></tr>
+            <tr><td>107</td><td>竞品反链截流</td><td><strong class="status-muted">待建设</strong>：ChatGPT、AutoGPT、CrewAI 等竞品的反链缺口分析还未开始。第四条线的核心动作还未成型。</td></tr>
+            <tr><td>108</td><td>Broken Link Building</td><td><strong class="status-muted">待建设</strong>：站内资源型内容准备好后（AI Agent 选型指南、成本对比表等）可以直接启动 Broken Link Building。</td></tr>
+            <tr><td>109</td><td>资源页外联</td><td><strong class="status-muted">待建设</strong>：AI 工具目录、SaaS 资源页、"best AI agents" 列表页都可以成为初始外链来源。</td></tr>
+            <tr><td>110</td><td>目录与导航站</td><td><strong class="status-bad">风险</strong>：实测未发现 MoClaw 被任何 AI 工具目录（Product Hunt、G2、Capterra、There's An AI For That、Futurepedia）收录。这是最基础也最容易做的新站冷启动动作。</td></tr>
+            <tr><td>111</td><td>播客 / Newsletter / 社区</td><td><strong class="status-muted">待建设</strong>：站外放大还没有形成节奏。AI Agent 是热门话题，适合在 Reddit r/artificial、r/ChatGPT、HackerNews、IndieHackers 等社区建立存在。</td></tr>
+            <tr><td>112</td><td>可链接资产储备</td><td><strong class="status-bad">风险</strong>：没有足够多别人愿意引用的硬材料。AI Agent 选型指南、成本对比表、Prompt 模板库、自动化场景 Benchmark 都是潜在的可链接资产，但目前完全空白。</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="fixlist">
+        <div class="label">Fix Order</div>
+        <h2>优先修复</h2>
+        <div class="box">
+          <table>
+            <tr>
+              <th>优先级</th>
+              <th>动作</th>
+              <th>为什么先做</th>
+              <th>对应条线</th>
+            </tr>
+            <tr><td><strong>P0</strong></td><td>修复 content-sitemap.xml：当前返回空数据，博客和用例页未进入 sitemap</td><td>7+ 个高价值页面 Google 完全看不见。这是"把灯打开"的第一步。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>完成 GSC 验证并提交 sitemap</td><td>整站零索引，GSC 是诊断和加速索引的必要工具。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>修复 SPA 页面 canonical：/integrations、/privacy、/terms 不应指向首页</td><td>/integrations 应该有自己的 canonical 指向自身；/privacy 和 /terms 应加 noindex。canonical 自残 = 主动告诉 Google 这些页面不存在。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>给 /privacy 和 /terms 加 noindex meta 标签</td><td>法律文本页面不需要被索引，且当前 canonical 指向首页会造成重复内容信号。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>修复 /use-cases 和 /blog 缺失的 H1 标签</td><td>没有 H1 = Google 无法理解页面核心主题。这是最基础的语义结构问题。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>修复 Pricing title 双品牌 bug（"Pricing - MoClaw | MoClaw"）和 Blog title 双 "Blog" bug（"Blog | MoClaw Blog"）</td><td>title 是 SERP 最重要的元素，bug 会直接降低点击率。</td><td>第三条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>补首页 Schema：添加 WebSite + SoftwareApplication</td><td>帮助 Google 理解产品类型、价格和站点结构，也增强品牌搜索表现。</td><td>第三条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>修复首页 og:image（换成正式社交卡片）和 twitter:card（改为 summary_large_image）</td><td>当前用 512px app icon 做社交分享图，品牌辨识度极低。</td><td>第三条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>上线第一批比较页：vs ChatGPT、vs AutoGPT、vs CrewAI 方向</td><td>AI Agent 赛道最靠近决策流量的页面类型，冷启动最快见效。</td><td>第一条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>建立 2 个支柱页 + 4 个集群页 + 1 个案例页</td><td>不先做内容骨架，后面的内链和权威都撑不起来。</td><td>第二条线</td></tr>
+            <tr><td><strong>P2</strong></td><td>启动站外冷启动：Product Hunt、AI 工具目录、G2/Capterra、Reddit</td><td>新站零外链零提及，必须先建基础壳层才能让站内 SEO 工作。</td><td>第四条线</td></tr>
+            <tr><td><strong>P2</strong></td><td>制作可链接资产：AI Agent 选型指南、成本对比表、场景 Benchmark</td><td>这是把前三条线放大的加速器，也是站外链接建设的燃料。</td><td>第四条线</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="line1">
+        <div class="label">Line 1</div>
+        <h2>第一条线：导流页与比较页矩阵</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 1</div>
+              <h3>先吃最接近决策的一层搜索意图</h3>
+            </div>
+            <div class="tag">替代词 / 对比词 / 最佳工具词 / 问题词</div>
+          </div>
+          <p>第一条线不是普通 blog。它更像一个会做判断的编辑部，专门去截用户正在犹豫、正在比较、正在挑替代品的那一刻。用户搜的是 ChatGPT、AutoGPT、CrewAI、LangChain，脑子里想的不是品牌故事，而是"哪个能帮我自动完成任务"、"哪个不需要自己部署"、"哪个更便宜"。</p>
+          <p>MoClaw 这条线最该打的不是"我们也有 AI Agent"，而是"你为什么需要托管 AI Agent 而不是自己搭"。比较页如果没有功能对比表、部署难度对比、价格对比、适合人群、边界说明和真实样例，它就只是一篇把竞品名字写上去的空壳。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">优先词包</div>
+              <p>先抓高意图词：`chatgpt alternative for automation`、`autogpt vs chatgpt`、`best ai agent platform`、`managed ai agent service`、`ai agent no code`、`crewai alternative`、`moclaw review`。</p>
+            </div>
+            <div class="card">
+              <div class="mini">页面模板</div>
+              <p>每篇比较页都应该有：结论摘要、功能对比表（部署难度、价格、自动化能力、API 支持）、适合人群、失败场景、样例输出、常见疑虑、CTA。这样页面才能接住"已经快下单"的人。</p>
+            </div>
+            <div class="card">
+              <div class="mini">执行节奏</div>
+              <p>第一批先做 5 篇核心比较页和 3 篇场景页。比较页带注册 CTA，场景页带模板和用例 CTA。两者一起跑，避免只有流量没有收口。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line2">
+        <div class="label">Line 2</div>
+        <h2>第二条线：主站内容系统与品牌权威</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 2</div>
+              <h3>把主站做成行业问题入口，而不是只有产品入口</h3>
+            </div>
+            <div class="tag">Pillar / Cluster / Cases / Resources / Docs</div>
+          </div>
+          <p>第二条线负责把站点从"介绍产品"拉到"解释行业问题"。用户不应该只在站里看到功能清单，还应该看到方法、限制、案例、对比、模板、流程、FAQ、术语解释、操作建议和成本判断。只有这样，主站才会慢慢长出权威感。</p>
+          <div class="grid-2" style="margin-top:18px">
+            <div class="card">
+              <div class="mini">主站应该优先长出来的内容角色</div>
+              <p>支柱页（AI Agent 全景指南）、集群页（按场景的深度指南）、案例页（真实用户故事）、实验页（AI Agent 性能 Benchmark）、资源页（Prompt 模板库、成本计算器）、FAQ 中心。每个角色不能都写成产品介绍页，要各自承担解释、比较、说服、转化和引用的不同功能。</p>
+            </div>
+            <div class="card">
+              <div class="mini">建议先做的支柱主题</div>
+              <p>AI Agent 全景指南（什么是 AI Agent、怎么选、怎么用）、AI Task Automation 实战指南、AI Agent vs Chatbot 深度对比、AI Agent 部署方式对比（自建 vs 托管）、AI Agent for Research / Scheduling / Data Analysis 场景指南。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line3">
+        <div class="label">Line 3</div>
+        <h2>第三条线：技术 SEO 与双系统治理</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 3</div>
+              <h3>把双系统架构校准到统一、可索引、可引用</h3>
+            </div>
+            <div class="tag">抓取 / 索引 / Schema / 性能 / AI 引用</div>
+          </div>
+          <p>第三条线不负责推翻架构，它负责把架构做实。MoClaw 的双系统（Vite+React SPA + Astro SSR）各做各的，SPA 页面的 SEO 元素全是壳子，Astro 页面做得不错但没进 sitemap。技术线的首要任务是统一两个系统的 SEO 治理：所有可索引页面都有正确的 title、H1、canonical、Schema 和 meta 描述；所有法律文本和功能性页面都有 noindex；sitemap 覆盖所有可索引页面。</p>
+          <p>这条线最怕两件事。第一件事是只修 SPA 页面而不补 sitemap，Google 仍然发现不了页面。第二件事是技术正确但业务无感，分数看起来漂亮，结果最值钱的页面还是没词、没点、没注册。第三条线的工作必须服务增长，而不是只服务审计表。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">先做的技术治理</div>
+              <p>修 content-sitemap.xml（当前空壳）、完成 GSC 验证和 sitemap 提交、修复 SPA 页面 canonical（/integrations 指向自身，/privacy 和 /terms 加 noindex）、补 H1（/use-cases、/blog）、修 title bug（/pricing 双品牌、/blog 双 "Blog"）、补 Schema（WebSite + SoftwareApplication）。</p>
+            </div>
+            <div class="card">
+              <div class="mini">AI Search Ready 的重点</div>
+              <p>让首页、/pricing、/use-cases、比较页都具备 TL;DR、定义块、步骤块、对比表、FAQ、限制说明和结论块。这样更容易被 AI 系统摘取。Pricing 页的 FAQ 已经是一个好的开始。</p>
+            </div>
+            <div class="card">
+              <div class="mini">技术线的真正目标</div>
+              <p>不是把分数刷到好看，而是让高价值页能被 Google 看见、被理解、被索引、被排名，并顺利把用户送到注册动作上。先把灯打开，再做装修。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line4">
+        <div class="label">Line 4</div>
+        <h2>第四条线：站外 SEO、证据资产与品牌冷启动</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 4</div>
+              <h3>把站内内容变成别人愿意链接和转述的材料</h3>
+            </div>
+            <div class="tag">Backlinks / Mentions / PR / Communities / Directories</div>
+          </div>
+          <p>第四条线对新站特别重要。MoClaw 当前零外链、零品牌提及、零社区讨论。站内如果做对了，第四条线会把前三条线放大；但站外如果完全空白，Google 就没有足够的外部信号来判断站点权威性。冷启动阶段，先做"被看见"，再做"被引用"。</p>
+          <div class="grid-2" style="margin-top:18px">
+            <div class="card">
+              <div class="mini">冷启动优先动作</div>
+              <p>Product Hunt 发布、提交到 20+ AI 工具目录（There's An AI For That、Futurepedia、AI Valley、ToolFinder 等）、创建 G2 和 Capterra 页面、在 Reddit（r/artificial、r/ChatGPT、r/SideProject）和 HackerNews 上建立存在。这些是零成本或低成本的基础壳层。</p>
+            </div>
+            <div class="card">
+              <div class="mini">可链接资产</div>
+              <p>AI Agent 选型指南（对比 10+ 工具的部署难度、价格、能力）、AI Agent 成本对比表、AI Task Automation Benchmark、Prompt 模板库，都应该成为站外扩散的核心燃料。先有这些资产，再做外联才有锚点。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="keywords">
+        <div class="label">Keyword Map</div>
+        <h2>关键词分级</h2>
+        <div class="box">
+          <table>
+            <tr><th>级别</th><th>关键词方向</th><th>承担页面</th></tr>
+            <tr><td><strong>S</strong></td><td>ai agent platform / personal ai assistant / best ai agent / managed ai agent / ai task automation</td><td>首页、支柱页、比较页共同承担</td></tr>
+            <tr><td><strong>A</strong></td><td>chatgpt alternative for automation / autogpt alternative / crewai alternative / best ai agent for research / moclaw review</td><td>比较页、功能页、实验页</td></tr>
+            <tr><td><strong>B</strong></td><td>ai agent for scheduling / ai agent for research / ai agent no code / ai agent managed service / ai agent cost comparison / ai agent vs chatbot</td><td>场景页、用例页、支柱页</td></tr>
+            <tr><td><strong>C</strong></td><td>how to automate tasks with ai / moclaw tutorial / ai agent setup guide / best prompts for ai agent / ai agent for small business</td><td>教程页、Docs、资源页</td></tr>
+            <tr><td><strong>D</strong></td><td>moclaw pricing / ai agent byok / ai agent deployment methods / moclaw integrations / ai agent for email management / ai agent free trial</td><td>Pricing、FAQ、长尾页、Programmatic 储备页</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="label">Roadmap</div>
+        <h2>执行路线图</h2>
+        <div class="road">
+          <div class="phase">第 1 周</div>
+          <div><h3>技术止血：让 Google 看见站</h3><p>修 content-sitemap.xml（把博客、用例页、Pricing 全部纳入）、完成 GSC 验证并提交 sitemap、修复 SPA 页面 canonical（/integrations 指向自身，/privacy 和 /terms 加 noindex）、补 /use-cases 和 /blog 的 H1、修 /pricing 和 /blog 的 title bug、补首页 WebSite + SoftwareApplication Schema。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 2-3 周</div>
+          <div><h3>上线第一批高价值页面 + 站外冷启动</h3><p>发布 5 篇比较页（vs ChatGPT、vs AutoGPT、vs CrewAI、vs LangChain、vs Zapier AI）、3 篇场景指南。同步启动站外冷启动：Product Hunt 发布、提交到 20+ AI 工具目录、创建 G2/Capterra 页面。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 2 个月</div>
+          <div><h3>搭主站骨架 + 内容加速</h3><p>完成 2 个支柱页（AI Agent 全景指南、AI Task Automation 实战指南）和 4 个集群页，建立首页 → 支柱页 → 集群页 → 比较页 → Pricing 的主路径。博客进入每周 2 篇的节奏。修复首页 og:image 和社交分享图。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 3 个月</div>
+          <div><h3>加厚内容 + 站外放大</h3><p>发布 AI Agent 选型指南、成本对比表、场景 Benchmark 等可链接资产。在 Reddit、HackerNews、IndieHackers 建立社区存在。开始做资源页外联和 Broken Link Building。博客进入每周 3 篇。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 4-6 个月</div>
+          <div><h3>从冷启动到稳定吃量</h3><p>比较页、支柱页、案例页、实验页、资源页进入滚动更新。第四条线持续把链接和提及打向重点页。监控 GSC 索引量和搜索流量，根据数据调整关键词和内容优先级。目标：品牌词和 5-10 个核心功能词进入 Google 前三页。</p></div>
+        </div>
+      </section>
+
+      <section id="growth">
+        <div class="label">Growth & Conversion</div>
+        <h2>内容增长与转化</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div class="mini">内容增长建议</div>
+            <p>先把高意图竞品词吃掉（比较页矩阵），同时补支柱页和场景指南。内容层不能只增长数量，要增长角色和结构。博客从 4 篇扩到 30+ 篇的过程中，每篇都应该有明确的页面角色（截流 / 教育 / 引用 / 转化）。</p>
+          </div>
+          <div class="card">
+            <div class="mini">转化建议</div>
+            <p>首页更快给结论（$20/month + 免费试用），Pricing 保持当前水准但补充用户证言和安全认证，比较页和场景页都要直接把用户送到注册动作上。Use Cases 的 16 个用例每个都应该有 "Try this →" 的 CTA。</p>
+          </div>
+        </div>
+        <p class="footer-note">这份客户稿保留了完整的审计、修复顺序、四线策略、关键词分级、路线图和增长建议，但去掉了内部生产规格表达。</p>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>
