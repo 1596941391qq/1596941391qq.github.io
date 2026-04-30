@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SongUnique SEO 审计与四线策略</title>
+<style>
+  :root{
+    --bg:#f6f1ea;--paper:#fffdf8;--panel:#ffffff;--ink:#17202a;--muted:#68717d;--line:#ded3c2;
+    --accent:#635bff;--accent2:#00a88f;--warm:#b46b43;--bad:#b84235;--warn:#b46b22;--good:#22745a;
+    --shadow:0 24px 70px rgba(24,32,42,.10);--radius:24px;--max:1420px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Aptos","Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(circle at 8% 6%,rgba(99,91,255,.16),transparent 26%),radial-gradient(circle at 88% 8%,rgba(0,168,143,.14),transparent 28%),linear-gradient(180deg,#fbf6ee 0%,#f4efe8 48%,#efe7dc 100%);color:var(--ink);line-height:1.76;font-size:16px}
+  a{color:var(--accent);text-decoration:none}
+  .shell{max-width:var(--max);margin:0 auto;padding:26px}
+  .layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:start}
+  .rail{position:sticky;top:20px;background:rgba(255,253,248,.88);border:1px solid rgba(222,211,194,.92);border-radius:30px;padding:26px 24px;box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+  .rail h2{font-family:Georgia,"Times New Roman",serif;font-size:34px;line-height:1.02;letter-spacing:-.045em;font-weight:500;margin-bottom:10px}
+  .rail p{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .rail nav a{display:block;padding:8px 0;border-bottom:1px solid rgba(222,211,194,.76);font-size:14px;color:#46515f}
+  .rail nav a:last-child{border-bottom:none}
+  .page{overflow:hidden;background:var(--paper);border:1px solid rgba(222,211,194,.98);border-radius:34px;box-shadow:var(--shadow)}
+  .hero{position:relative;padding:56px 56px 44px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(99,91,255,.11),transparent 34%),linear-gradient(315deg,rgba(0,168,143,.10),transparent 38%),rgba(255,255,255,.72)}
+  .eyebrow{display:inline-flex;border:1px solid rgba(99,91,255,.22);background:rgba(99,91,255,.08);color:#4d45d7;border-radius:999px;padding:7px 12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:62px;line-height:1.02;letter-spacing:-.055em;font-weight:500;max-width:980px}
+  .lead{max-width:960px;margin-top:18px;font-size:20px;line-height:1.65;color:#364252}
+  .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:28px}
+  .hero-card,.hero-note,.card,.box{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.88);padding:22px;box-shadow:0 12px 28px rgba(24,32,42,.045)}
+  .mini{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#8a755f;margin-bottom:8px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .pill{padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13px;color:#54606d}
+  section{padding:40px 56px;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:none}
+  .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--warm);margin-bottom:10px}
+  h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;line-height:1.08;letter-spacing:-.04em;font-weight:500;margin-bottom:16px}
+  h3{font-size:20px;line-height:1.38;margin-bottom:10px}
+  h4{font-size:16px;margin:18px 0 8px;color:#344151}
+  p+p{margin-top:12px}
+  .statement{font-size:24px;line-height:1.52;color:#2e3b48;max-width:1000px}
+  .grid-2,.grid-3{display:grid;gap:16px}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .score{font-family:Georgia,"Times New Roman",serif;font-size:44px;line-height:1;letter-spacing:-.04em}
+  .score small{font-family:inherit;font-size:18px;color:var(--muted)}
+  .bad{color:var(--bad)} .warn{color:var(--warn)} .good{color:var(--good)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{padding:13px 11px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(222,211,194,.86)}
+  th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#846f5d;font-weight:700}
+  tr:last-child td{border-bottom:none}
+  .audit-list{display:grid;gap:16px}
+  .audit-item{display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;padding:20px;border:1px solid var(--line);border-radius:24px;background:#fff}
+  .num{width:46px;height:46px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(99,91,255,.12),rgba(0,168,143,.12));color:#3931c9;font-weight:700}
+  .four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+  .four div{border:1px solid rgba(222,211,194,.72);border-radius:16px;padding:12px;background:#fffdf9}
+  .four b{display:block;font-size:12px;color:#8a755f;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+  ul{padding-left:20px}
+  li+li{margin-top:6px}
+  .quote{font-size:19px;line-height:1.62;color:#2f3d4b;border-left:4px solid var(--accent);padding-left:18px;background:rgba(99,91,255,.045);border-radius:14px;padding-top:12px;padding-bottom:12px}
+  @media (max-width:980px){.shell{padding:12px}.layout{display:block}.rail{position:relative;top:auto;margin-bottom:14px}.rail nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.hero,section{padding:30px 22px}h1{font-size:42px}h2{font-size:30px}.lead,.statement{font-size:18px}.hero-grid,.grid-2,.grid-3,.four{grid-template-columns:1fr}.audit-item{grid-template-columns:1fr}table{font-size:13px;display:block;overflow:visible}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="layout">
+    <aside class="rail">
+      <h2>SongUnique</h2>
+      <p>SEO 审计与增长策略<br>实测日期：2026-05-01</p>
+      <nav>
+        <a href="#summary">结论</a>
+        <a href="#type">站点类型</a>
+        <a href="#evidence">实测证据</a>
+        <a href="#pages">页面诊断</a>
+        <a href="#audit">16 项审计</a>
+        <a href="#fix">优先修复</a>
+        <a href="#strategy">四线策略</a>
+        <a href="#keywords">关键词矩阵</a>
+        <a href="#roadmap">90 天路线</a>
+      </nav>
+    </aside>
+    <main class="page">
+      <header class="hero" id="summary">
+        <div class="eyebrow">SEO Audit + Growth Strategy</div>
+        <h1>SongUnique 不缺页面，缺的是能让人放心送出去的证据。</h1>
+        <p class="lead">SongUnique 已经有完整的 PSEO 雏形：约 744 个 sitemap URL、8 个语言方向、recipient + occasion 场景页、基础 Product/FAQ/Breadcrumb schema。真正的瓶颈不在“有没有更多页面”，而在成交页、信任证据、样歌资产、站外背书和 AI 搜索可摘取结构。</p>
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="mini">Current Diagnosis</div>
+            <p><strong>综合判断：可打，但必须先补成交页和证据层。</strong> 12 个核心页面实测均可访问，平均分 72/100，平均正文约 947 词，内链 726 条。问题集中在 `/create`：无 title、无 meta、无 canonical、无 JSON-LD、两个 H1、无 H2、无内链。对一个礼物站来说，这相当于“用户走到收银台时，搜索引擎和用户都看不到完整说明”。</p>
+            <div class="meta">
+              <span class="pill">站点类型：AI 个性化歌曲礼物平台</span>
+              <span class="pill">核心定位：personalized song gift</span>
+              <span class="pill">主要风险：成交页 + 证据页</span>
+              <span class="pill">策略顺序：修复 -> 证据 -> 扩张</span>
+            </div>
+          </div>
+          <div class="hero-note">
+            <div class="mini">Health Snapshot</div>
+            <div class="grid-2">
+              <div><div class="score warn">72<small>/100</small></div><p>审计脚本平均分</p></div>
+              <div><div class="score good">744</div><p>sitemap loc 约数</p></div>
+              <div><div class="score bad">0</div><p>实测页面外链出口</p></div>
+              <div><div class="score bad">25<small>/100</small></div><p>/create 页面评分</p></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="type">
+        <div class="label">Site Type First</div>
+        <h2>先按礼物站评估，而不是按 AI 工具站评估</h2>
+        <p class="statement">用户买的不是一个音乐模型，而是一份能送给妈妈、伴侣、孩子、朋友或逝去亲人的情绪载体。SEO 评估标准必须围绕“是否可送、是否可信、是否不尴尬、是否能按时交付、是否可修改退款”。</p>
+        <div class="grid-3">
+          <div class="card"><h3>用户真实担心</h3><p>这首歌会不会尴尬？对方听完会不会有反应？我能不能把故事讲清楚？不满意能否退款？有没有样歌让我判断质量？</p></div>
+          <div class="card"><h3>核心信任证据</h3><p>样歌试听、歌词片段、真实评论、收件人反应、交付时间、退款规则、支付安全、多语言案例。</p></div>
+          <div class="card"><h3>品牌主心骨</h3><p>“AI song generator” 可以作为流量词，但不能做主叙事。主叙事应是 “personalized song gift”。</p></div>
+        </div>
+      </section>
+
+      <section id="evidence">
+        <div class="label">Measured Evidence</div>
+        <h2>实测证据摘要</h2>
+        <table>
+          <tr><th>指标</th><th>结果</th><th>判断</th></tr>
+          <tr><td>审计页面</td><td>12</td><td>覆盖首页、创建页、目录页、评论页、订单页、重点场景页</td></tr>
+          <tr><td>失败页面</td><td>0</td><td>基础访问正常</td></tr>
+          <tr><td>平均评分</td><td>72/100</td><td>中等偏上，但成交页存在硬伤</td></tr>
+          <tr><td>sitemap</td><td>当前 XML，约 744 loc</td><td>页面矩阵已成型，需 GSC 验证</td></tr>
+          <tr><td>hreflang</td><td>约 5952 alternate</td><td>多语言方向正确，需查闭环与 canonical</td></tr>
+          <tr><td>平均字数</td><td>947</td><td>有厚度，但部分页面仍像模板</td></tr>
+          <tr><td>内部链接</td><td>726</td><td>数量足够，语义分发需优化</td></tr>
+          <tr><td>外部链接</td><td>0</td><td>站外证据层不足</td></tr>
+          <tr><td>Schema</td><td>Organization / WebSite / Product / FAQPage / BreadcrumbList</td><td>方向正确，成交页和评论页需补强</td></tr>
+        </table>
+      </section>
+
+      <section id="pages">
+        <div class="label">Page Diagnosis</div>
+        <h2>页面级诊断</h2>
+        <table>
+          <tr><th>页面</th><th>当前角色</th><th>证据</th><th>问题</th><th>优先级</th></tr>
+          <tr><td>/</td><td>首页</td><td>1459 词，82 内链，Org/WebSite/Product/FAQ</td><td>应更强导向 examples/reviews/create</td><td>P1</td></tr>
+          <tr><td>/create</td><td>成交入口</td><td>184 词，4 图，0 内链</td><td>无 title/meta/canonical/JSON-LD，2 H1，无 H2</td><td>P0</td></tr>
+          <tr><td>/browse-songs</td><td>目录 hub</td><td>306 词，69 内链，Breadcrumb</td><td>像链接页，不像礼物决策页；meta 偏短</td><td>P1</td></tr>
+          <tr><td>/reviews</td><td>信任页</td><td>860 词，Product schema</td><td>缺 Review/AggregateRating，评论未按场景组织</td><td>P1</td></tr>
+          <tr><td>/track</td><td>订单工具页</td><td>168 词，2 内链</td><td>SEO 价值低，需 noindex 或补工具页 schema</td><td>P2</td></tr>
+          <tr><td>/anniversary-song</td><td>高意图场景页</td><td>1015 词，Product/FAQ/Breadcrumb</td><td>title 可能截断，需样歌和关系分支</td><td>P1</td></tr>
+          <tr><td>/memorial-song</td><td>敏感纪念页</td><td>1350 词，Product/FAQ</td><td>需更克制语气、样歌、隐私与修改说明</td><td>P1</td></tr>
+          <tr><td>/mother-song</td><td>高意图关系页</td><td>1264 词，Product/FAQ/Breadcrumb</td><td>title 可能截断，需 Mother's Day / birthday 分支</td><td>P1</td></tr>
+          <tr><td>/son-song</td><td>关系页</td><td>1287 词，结构较好</td><td>可补成长故事、毕业、父母心理</td><td>P2</td></tr>
+          <tr><td>/memory-song</td><td>回忆页</td><td>990 词，Product/FAQ/Breadcrumb</td><td>与 memorial/tribute 边界需更清楚</td><td>P2</td></tr>
+          <tr><td>/blessing-song</td><td>faith 场景页</td><td>1016 词，Product/FAQ/Breadcrumb</td><td>title 可能截断，需信仰语气边界</td><td>P2</td></tr>
+        </table>
+      </section>
+
+      <section id="audit">
+        <div class="label">16 Audit Modules</div>
+        <h2>16 项审计展开</h2>
+        <div class="audit-list">
+          <div class="audit-item"><div class="num">01</div><div><h3>抓取入口</h3><p>robots.txt 存在，普通搜索允许抓取；sitemap 当前可返回 XML，约 744 个 loc，含多语言 alternate。</p><div class="four"><div><b>现状</b>抓取入口基本可用。</div><div><b>影响</b>PSEO 矩阵依赖 sitemap 被完整发现。</div><div><b>问题</b>Cloudflare bot 规则复杂，脚本 sitemap_url_count 与实时 loc 不一致。</div><div><b>下一步</b>GSC 验证提交数、发现数、索引数。</div></div></div></div>
+          <div class="audit-item"><div class="num">02</div><div><h3>索引治理</h3><p>核心内容页大多可 index，支付和后台路径已在 robots 中阻止，但还缺页面类型级白名单。</p><div class="four"><div><b>现状</b>有 robots 层治理。</div><div><b>影响</b>防止抓取预算浪费在订单/支付页。</div><div><b>问题</b>/track 搜索价值低，需 noindex 决策。</div><div><b>下一步</b>建立 index/noindex 白名单。</div></div></div></div>
+          <div class="audit-item"><div class="num">03</div><div><h3>canonical 与域名映射</h3><p>多数场景页有 self canonical；/create 缺 canonical，是成交页 P0 问题。</p><div class="four"><div><b>现状</b>多数内容页方向正确。</div><div><b>影响</b>避免多语言和相似页面被错误合并。</div><div><b>问题</b>/create 缺 canonical，默认英文与 /en/ 需抽查。</div><div><b>下一步</b>/create 补 self canonical，抽样 30 页。</div></div></div></div>
+          <div class="audit-item"><div class="num">04</div><div><h3>状态码与跳转</h3><p>12 个样本均可访问，failed_pages 为 0，但样本未覆盖全部 744 URL。</p><div class="four"><div><b>现状</b>核心样本无访问失败。</div><div><b>影响</b>批量页面状态码决定矩阵能否稳定收录。</div><div><b>问题</b>未全量检查语言切换与尾斜杠跳转。</div><div><b>下一步</b>从 sitemap 抽样 100-200 URL 跑状态码。</div></div></div></div>
+          <div class="audit-item"><div class="num">05</div><div><h3>SERP 片段</h3><p>首页 title/meta 较完整；/create 无 title/meta；browse meta 偏短；部分场景页 title 可能截断。</p><div class="four"><div><b>现状</b>多数页面可用。</div><div><b>影响</b>礼物站 CTR 依赖“适合谁、什么场景、怎么交付”。</div><div><b>问题</b>/create 完全缺失，多个 title 截断。</div><div><b>下一步</b>重写 P0/P1 title/meta。</div></div></div></div>
+          <div class="audit-item"><div class="num">06</div><div><h3>标题与语义结构</h3><p>多数页面 H1 单一，/create 有两个 H1 且无 H2。</p><div class="four"><div><b>现状</b>内容页结构尚可。</div><div><b>影响</b>AI 搜索和 Google 依赖标题识别页面任务。</div><div><b>问题</b>/create 不像产品页标题结构。</div><div><b>下一步</b>/create 改单 H1，补完整 H2。</div></div></div></div>
+          <div class="audit-item"><div class="num">07</div><div><h3>页面角色分工</h3><p>首页、create、browse、reviews、场景页都有角色，但角色边界不够锋利。</p><div class="four"><div><b>现状</b>矩阵雏形存在。</div><div><b>影响</b>角色混乱会造成重复内容和转化断点。</div><div><b>问题</b>browse 像链接页，reviews 不像证据页，create 像表单。</div><div><b>下一步</b>重定义首页、hub、证据页、成交页。</div></div></div></div>
+          <div class="audit-item"><div class="num">08</div><div><h3>内容厚度与覆盖</h3><p>平均约 947 词，场景页有基础厚度；browse 和 create 明显偏薄。</p><div class="four"><div><b>现状</b>场景页不算空。</div><div><b>影响</b>礼物决策需要覆盖担心点，而不只是堆字数。</div><div><b>问题</b>样歌、歌词片段、真实反应不足。</div><div><b>下一步</b>create 到 800-1200 词，browse 到 1000+。</div></div></div></div>
+          <div class="audit-item"><div class="num">09</div><div><h3>信息架构</h3><p>footer 与分类链接覆盖广，但 hub/cluster 关系还可以更强。</p><div class="four"><div><b>现状</b>内链数量多。</div><div><b>影响</b>矩阵站需要清楚层级分发权重。</div><div><b>问题</b>分类 hub 内容不足，reviews/examples/create 闭环弱。</div><div><b>下一步</b>首页 -> browse hub -> 分类 hub -> 具体页。</div></div></div></div>
+          <div class="audit-item"><div class="num">10</div><div><h3>内链分发</h3><p>合计 726 内链，但 /create 为 0 内链，是严重异常。</p><div class="four"><div><b>现状</b>数量充足。</div><div><b>影响</b>内链决定哪些页面被视为核心。</div><div><b>问题</b>语义锚文本不足，成交页没有上下文链接。</div><div><b>下一步</b>场景页、reviews、examples 全部导向 create。</div></div></div></div>
+          <div class="audit-item"><div class="num">11</div><div><h3>Schema 覆盖</h3><p>已有 Organization、WebSite、Product、FAQPage、BreadcrumbList；/create 和 /track 缺 JSON-LD。</p><div class="four"><div><b>现状</b>基础 schema 方向正确。</div><div><b>影响</b>结构化数据影响富结果和 AI 摘取。</div><div><b>问题</b>成交页缺 Product/FAQ/Breadcrumb，reviews 缺 Review 结构。</div><div><b>下一步</b>补 create schema，reviews 补可解释评分。</div></div></div></div>
+          <div class="audit-item"><div class="num">12</div><div><h3>媒体与图片 SEO</h3><p>多数图片 alt 较好；/create 4 张图 alt 全空。</p><div class="four"><div><b>现状</b>内容页基本可用。</div><div><b>影响</b>样歌和视觉证据需要可被机器理解。</div><div><b>问题</b>样歌资产未形成独立可索引页面。</div><div><b>下一步</b>补 alt，建立 examples 音频+歌词页。</div></div></div></div>
+          <div class="audit-item"><div class="num">13</div><div><h3>性能与 CWV</h3><p>本次 JSON 未包含 Lighthouse / CrUX 数据，不能假设健康。</p><div class="four"><div><b>现状</b>未实测。</div><div><b>影响</b>礼物站移动端转化受 LCP/INP 影响明显。</div><div><b>问题</b>首页和场景页图片多，create 表单需测交互延迟。</div><div><b>下一步</b>跑 PSI/Lighthouse 六个模板页。</div></div></div></div>
+          <div class="audit-item"><div class="num">14</div><div><h3>转化与信任</h3><p>已有 4.9 rating、30+ countries、PayPal、Privacy、refund、guarantee；但脚本未识别 CTA。</p><div class="four"><div><b>现状</b>信任元素存在。</div><div><b>影响</b>情感礼物的转化依赖安心感。</div><div><b>问题</b>reviews/examples 未形成强证据，CTA 语义可能不标准。</div><div><b>下一步</b>首屏 Create + Listen to examples 双 CTA。</div></div></div></div>
+          <div class="audit-item"><div class="num">15</div><div><h3>AI Search Ready</h3><p>已有 FAQ 和 Product schema，但缺集中事实页与对比页。</p><div class="four"><div><b>现状</b>基础可摘取结构存在。</div><div><b>影响</b>AI 搜索需要定义句、步骤、表格、FAQ。</div><div><b>问题</b>How it works、pricing、examples、comparison 不足。</div><div><b>下一步</b>建立事实页和 3-5 个竞品对比页。</div></div></div></div>
+          <div class="audit-item"><div class="num">16</div><div><h3>站外证据层</h3><p>12 个实测页面 external links 为 0，第三方资源和社区证据不足。</p><div class="four"><div><b>现状</b>站外证据薄。</div><div><b>影响</b>没有第三方背书，Google 和 AI 搜索更难推荐。</div><div><b>问题</b>缺 gift guide、wedding checklist、memorial wording guide 等可链接资产。</div><div><b>下一步</b>启动资源页 outreach、testimonial links、unlinked mentions。</div></div></div></div>
+        </div>
+        <h3 style="margin-top:28px">审计项执行展开</h3>
+        <p>上面的 16 项不是标题清单，而是执行队列。SongUnique 的问题不在某一个单点错误，而在“成交入口、证据页、目录 hub、样歌资产、站外背书”没有被压成同一条增长链路。下面按可交付动作继续展开。</p>
+        <table>
+          <tr><th>模块</th><th>当前可确认状态</th><th>增长影响</th><th>具体动作</th></tr>
+          <tr><td>抓取入口</td><td>robots.txt 存在；sitemap 当前为 XML；约 744 loc 和 5952 alternate。</td><td>SongUnique 依赖大量 recipient、occasion、多语言页面，如果 sitemap 没被 Google 完整读取，页面矩阵会停留在“站内存在”，不能变成搜索入口。</td><td>用 GSC 验证提交、发现、抓取、索引数量；若单 sitemap 识别不稳定，拆成 sitemap-index + 分语言 sitemap。</td></tr>
+          <tr><td>索引治理</td><td>后台、支付、dashboard 等路径已有 robots 阻止；/track 仍是可访问 utility 页面。</td><td>低价值页面进入抓取队列会稀释站点质量信号，也会让 Google 把订单工具页和礼物内容页混在一起评估。</td><td>建立 index/noindex 白名单；/track 若不承担搜索流量，应 noindex；支付成功、取消、订单页同时做鉴权和 noindex。</td></tr>
+          <tr><td>canonical</td><td>多数场景页 self canonical 正常；/create 缺 canonical。</td><td>/create 是核心成交入口，缺 canonical 会削弱它作为主产品页的稳定性；多语言和默认英文路径也可能产生重复判断。</td><td>/create 立即补 self canonical；抽查默认英文与 /en/；memorial、memory、funeral 等相近页面不得粗暴合并。</td></tr>
+          <tr><td>状态码</td><td>12 个样本 0 失败，但未全量覆盖 744 URL。</td><td>PSEO 站点最怕批量页面隐藏 404、soft 404 或跳转链，单看首页和几个核心页不能证明矩阵健康。</td><td>从 sitemap 抽样 100-200 个 URL，检查 200、canonical、hreflang、跳转链；异常按模板页类型归因。</td></tr>
+          <tr><td>SERP 片段</td><td>首页可用；/create 完全缺 title/meta；browse meta 偏短；多个场景页 title 可能截断。</td><td>SongUnique 的点击理由不是“AI 很强”，而是“这份礼物适合我这个关系和场景”。片段不清楚会直接损失 CTR。</td><td>优先重写 /create、browse、reviews、anniversary、mother、blessing；title 控制 50-60 字符，meta 写清收件人、场景、交付和安心点。</td></tr>
+          <tr><td>语义结构</td><td>内容页 H1/H2 基本可用；/create 两个 H1 且无 H2。</td><td>AI 搜索和 Google 都需要明确“页面要回答什么”。/create 当前像应用流程，不像可索引产品页。</td><td>/create 单一 H1：Create a Personalized Song Gift；补 How it works、Choose recipient、Add story、Delivery/refund、FAQ。</td></tr>
+          <tr><td>页面角色</td><td>首页、browse、reviews、create 都存在，但角色没有完全分开。</td><td>页面角色不清会导致用户路径断裂：看完场景页不知道听样歌，看完评论不知道如何下单，看完目录不知道选哪个。</td><td>首页做定位；browse 做决策；reviews 做证据；examples 做试听；create 做成交；compare 做竞品分流。</td></tr>
+          <tr><td>内容覆盖</td><td>平均 947 词；browse 306 词，create 184 词。</td><td>场景页有字数，不等于解决送礼焦虑。真正需要覆盖的是“写什么、避开什么、效果如何、能不能改、多久交付”。</td><td>create 扩到 800-1200 词；browse 扩到 1000+；S 级页面补样歌、歌词方向、评论和 FAQ。</td></tr>
+          <tr><td>信息架构</td><td>footer 链接很丰富，但 hub 层内容不足。</td><td>大量平铺页面会让搜索引擎难以判断主次。礼物站需要从关系、场景、证据、成交形成清楚路径。</td><td>首页 -> browse hub -> 分类 hub -> 具体页；reviews/examples 反向链接具体页；具体页统一导向 create。</td></tr>
+          <tr><td>内链分发</td><td>全样本 726 内链；/create 0 内链。</td><td>成交页没有内链会变成孤岛。即使用户能通过按钮进入，搜索引擎也缺少上下文信号。</td><td>所有场景页首屏、样歌后、FAQ 后链接 create；create 底部链接 reviews、examples、pricing、browse。</td></tr>
+          <tr><td>Schema</td><td>已有 Organization、WebSite、Product、FAQPage、BreadcrumbList；create 无 JSON-LD。</td><td>结构化数据决定机器能否稳定读出产品、评分、价格、FAQ 和面包屑。</td><td>/create 补 Product 或 SoftwareApplication、FAQPage、BreadcrumbList；reviews 补 Review/AggregateRating，但评分来源必须页面可见。</td></tr>
+          <tr><td>媒体 SEO</td><td>多数页面图片 alt 可用；/create 4 张图 alt 全空。</td><td>SongUnique 的核心证据是样歌和故事，不是纯文字。音频和图片如果没有文本结构，无法成为搜索资产。</td><td>补 /create alt；建立 examples 页，每个样歌含收件人、场景、故事摘要、歌词片段、音频说明和 CTA。</td></tr>
+          <tr><td>CWV</td><td>本次未跑 Lighthouse / CrUX。</td><td>移动端礼物搜索通常时间紧，首屏慢、表单卡顿、音频加载慢都会影响创建率。</td><td>跑首页、create、browse、reviews、anniversary、memorial；目标 LCP < 2.5s、INP < 200ms、CLS < 0.1。</td></tr>
+          <tr><td>转化信任</td><td>有 4.9 rating、30+ countries、PayPal、Privacy、refund；脚本未识别 CTA。</td><td>用户下单前最怕“生成出来不能送”。信任模块必须贴近 create，而不是散落在 footer。</td><td>create 首屏放 Create + Listen to examples；支付前说明交付、修改、退款、隐私；reviews 按场景证明效果。</td></tr>
+          <tr><td>AI Search Ready</td><td>有 FAQ 和 schema 基础，但缺事实页和对比页。</td><td>AI 搜索会引用定义句、步骤、表格、FAQ。没有这些结构，SongUnique 很难进入“推荐 personalized song gift”的答案。</td><td>新增 How SongUnique works、pricing、examples、reviews、SongUnique vs Songfinch/Songlorious/LoveTunesAI。</td></tr>
+          <tr><td>站外证据</td><td>样本 external links 为 0，未形成第三方背书。</td><td>礼物站只靠站内自述不够。外部礼物博客、婚礼资源、纪念资源和社区提及能补可信度。</td><td>做 Personalized Song Gift Guide、Memorial Song Wording Guide、Wedding Song Gift Checklist，用 resource outreach、testimonial links、unlinked mentions 获取自然链接。</td></tr>
+        </table>
+      </section>
+
+      <section id="fix">
+        <div class="label">Priority Fixes</div>
+        <h2>P0/P1 修复清单</h2>
+        <div class="grid-2">
+          <div class="box"><h3>P0：修 `/create`</h3><ul><li>补 title：Create a Personalized Song Gift | SongUnique</li><li>补 meta、self canonical、单一 H1、完整 H2</li><li>补 Product/FAQ/Breadcrumb JSON-LD</li><li>补 reviews、examples、pricing、browse 内链</li><li>解释交付、修改、退款、隐私与支付安全</li></ul></div>
+          <div class="box"><h3>P0：GSC 验证 sitemap</h3><ul><li>确认提交 URL 数是否接近 744</li><li>确认发现、抓取、索引数量</li><li>检查多语言 alternate 是否闭环</li><li>检查默认英文与 /en/ 是否重复</li><li>必要时拆分语言 sitemap</li></ul></div>
+          <div class="box"><h3>P1：reviews 证据页</h3><ul><li>按 recipient / occasion / reaction 筛选</li><li>补 Review / AggregateRating schema</li><li>解释评分来源</li><li>每条评论链接到对应场景页和 create</li></ul></div>
+          <div class="box"><h3>P1：browse hub</h3><ul><li>从链接页改为 Gift Decision Hub</li><li>补分类解释、样歌方向、FAQ</li><li>用 ItemList / CollectionPage 承接目录角色</li><li>重点扶持 parents、partner、memory、faith、wedding 分类</li></ul></div>
+        </div>
+      </section>
+
+      <section id="strategy">
+        <div class="label">Four Lines</div>
+        <h2>四线增长策略</h2>
+        <div class="grid-2">
+          <div class="card"><h3>第一线：导流捕获</h3><p>不只打 AI song generator。优先 personalized song gift、custom song gift、song for mom、anniversary song、memorial song、Songfinch alternatives 这类礼物意图和比较意图。</p></div>
+          <div class="card"><h3>第二线：主站内容系统</h3><p>把首页、browse、reviews、examples、create 组合成礼物决策系统。用户从“我该送什么”一路走到“我怎么下单”。</p></div>
+          <div class="card"><h3>第三线：技术底盘</h3><p>先修成交页、索引白名单、sitemap/GSC、schema、hreflang、状态码和 CWV。技术修复不是装饰，是保护 PSEO 矩阵。</p></div>
+          <div class="card"><h3>第四线：站外 SEO</h3><p>用 gift guide、wedding checklist、memorial wording guide、examples library 做自然 outreach，不做垃圾目录堆链接。</p></div>
+        </div>
+      </section>
+
+      <section id="keywords">
+        <div class="label">Keyword Matrix</div>
+        <h2>关键词矩阵</h2>
+        <table>
+          <tr><th>等级</th><th>关键词</th><th>目标</th></tr>
+          <tr><td>S</td><td>personalized song gift / custom song gift / create a song for someone / custom birthday song / personalized anniversary song / song for mom / song for dad / song for wife / memorial song / wedding song gift</td><td>核心成交与品类入口</td></tr>
+          <tr><td>A</td><td>song for husband / song for daughter / song for son / song for girlfriend / Mother's Day song / Father's Day song / graduation song / retirement song / prayer song / blessing song / memory song / funeral song</td><td>关系和场景矩阵</td></tr>
+          <tr><td>B</td><td>SongUnique vs Songfinch / SongUnique vs Songlorious / SongUnique vs LoveTunesAI / Songfinch alternatives / best personalized song gift services / AI custom song vs human custom song</td><td>比较和替代词截流</td></tr>
+          <tr><td>C</td><td>how to write a custom song for someone / what to include in a personalized song / are custom songs a good gift / how long does a custom song take / how to make a memorial song</td><td>教育和 FAQ 捕获</td></tr>
+          <tr><td>D</td><td>AI song generator / AI music generator / free AI song generator / make music with AI / song maker online</td><td>只做辅助流量，不做主定位</td></tr>
+        </table>
+      </section>
+
+      <section id="roadmap">
+        <div class="label">90-Day Roadmap</div>
+        <h2>90 天执行路线</h2>
+        <table>
+          <tr><th>时间</th><th>目标</th><th>动作</th><th>产出</th></tr>
+          <tr><td>第 1 周</td><td>止血</td><td>修 /create；确认 sitemap/GSC</td><td>成交页可索引，矩阵可验证</td></tr>
+          <tr><td>第 2 周</td><td>索引治理</td><td>index/noindex 白名单；状态码抽样；hreflang/canonical 检查</td><td>技术风险清单</td></tr>
+          <tr><td>第 3-4 周</td><td>证据页</td><td>改 reviews；建立 examples hub；补 6 个样歌页</td><td>可引用信任资产</td></tr>
+          <tr><td>第 5-6 周</td><td>Hub 改造</td><td>改 browse-songs 和 6 个分类 hub</td><td>礼物决策系统成型</td></tr>
+          <tr><td>第 7-8 周</td><td>S 级页面加厚</td><td>mother、father、wife、anniversary、birthday、memorial</td><td>高转化页质量提升</td></tr>
+          <tr><td>第 9-10 周</td><td>竞品截流</td><td>发布 Songfinch/Songlorious/LoveTunesAI/Suno 对比页</td><td>比较词入口</td></tr>
+          <tr><td>第 11 周</td><td>AI Search Ready</td><td>How it works、pricing、examples、reviews facts</td><td>AI 可摘取事实层</td></tr>
+          <tr><td>第 12 周</td><td>站外证据</td><td>gift guide、wedding checklist、memorial wording guide outreach</td><td>初始外链与第三方提及</td></tr>
+        </table>
+        <p class="quote">最重要的顺序：先修成交页和索引治理，再做 reviews/examples 证据资产，然后再扩 PSEO 矩阵。否则 URL 数会增加，但信任和转化不会同步增加。</p>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>

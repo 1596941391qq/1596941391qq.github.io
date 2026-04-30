@@ -164,26 +164,10 @@
     .serp-badge.hit { background: rgba(244,63,94,0.1); color: rgb(220,38,38); }
     .serp-badge.miss { background: rgb(var(--secondary)); color: rgb(var(--muted-fg)); }
     .serp-badge.captcha { background: #fef3c7; color: #92400e; }
-    .serp-thumb {
-      max-height: 40px; border-radius: 3px; border: 1px solid rgb(var(--border));
-      cursor: pointer; transition: transform 0.15s;
-    }
-    .serp-thumb:hover { transform: scale(1.1); }
     .serp-sub-toggle { cursor: pointer; color: rgb(var(--primary)); font-size: 0.8rem; user-select: none; }
     .serp-sub-toggle:hover { text-decoration: underline; }
     .serp-sub-row { display: none; }
     .serp-sub-row.open { display: table-row; }
-    /* Lightbox */
-    .lightbox-overlay {
-      display: none; position: fixed; inset: 0; z-index: 9999;
-      background: rgba(0,0,0,0.85); justify-content: center; align-items: center;
-    }
-    .lightbox-overlay.open { display: flex; }
-    .lightbox-overlay img { max-width: 95vw; max-height: 95vh; border-radius: 4px; }
-    .lightbox-close {
-      position: absolute; top: 16px; right: 24px; color: #fff; font-size: 2rem;
-      cursor: pointer; background: none; border: none;
-    }
   </style>
 </head>
 <body>
@@ -197,7 +181,7 @@
         </div>
         <table class="serp-table">
           <thead>
-            <tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th><th>Evidence</th></tr>
+            <tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th></tr>
           </thead>
           <tbody>
             <tr>
@@ -205,100 +189,84 @@
               <td><span class="serp-badge hit">AI Overview</span> <span style="font-size:0.7rem;color:#64748b">since 04-26</span></td>
               <td><span class="serp-badge hit">#3</span> <span style="font-size:0.7rem;color:#64748b">since 04-25</span></td>
               <td><span class="serp-badge miss">-</span></td>
-              <td>
-                <img class="serp-thumb" onclick="openLightbox(this)" src="serp-evidence/google-kinovi-highlighted-cheap-video-gen-api-1777378491592.png" alt="Google AI Overview">
-              </td>
             </tr>
             <tr class="serp-sub-row" id="sub-cheap-video">
               <td style="padding-left:32px;font-size:0.82rem">cheap video generation api integration</td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge hit">kinovi</span> <span style="font-size:0.7rem;color:#64748b">04-26</span></td>
               <td><span class="serp-badge miss">-</span></td>
-              <td><img class="serp-thumb" onclick="openLightbox(this)" src="serp-evidence/bing-kinovi-cheap-video-generation-api-integration-1200-1777379463920.png" alt="Bing integration"></td>
             </tr>
             <tr class="serp-sub-row" id="sub-cheap-video">
               <td style="padding-left:32px;font-size:0.82rem">cheap video generation alternatives</td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge hit">kinovi</span> <span style="font-size:0.7rem;color:#64748b">04-28</span></td>
               <td><span class="serp-badge miss">-</span></td>
-              <td><img class="serp-thumb" onclick="openLightbox(this)" src="serp-evidence/bing-kinovi-cheap-video-generation-alternatives-1200-1777379472433.png" alt="Bing alternatives"></td>
             </tr>
             <tr class="serp-sub-row" id="sub-cheap-video">
               <td style="padding-left:32px;font-size:0.82rem">cheap video generation sdk</td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge hit">kinovi</span> <span style="font-size:0.7rem;color:#64748b">04-26</span></td>
               <td><span class="serp-badge miss">-</span></td>
-              <td><img class="serp-thumb" onclick="openLightbox(this)" src="serp-evidence/bing-kinovi-cheap-video-generation-sdk-1200-1777379479257.png" alt="Bing sdk"></td>
             </tr>
             <tr class="serp-sub-row" id="sub-cheap-video">
               <td style="padding-left:32px;font-size:0.82rem">cheap video generation api tutorial</td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge hit">kinovi</span> <span style="font-size:0.7rem;color:#64748b">04-26</span></td>
               <td><span class="serp-badge miss">-</span></td>
-              <td><img class="serp-thumb" onclick="openLightbox(this)" src="serp-evidence/bing-kinovi-cheap-video-generation-api-tutorial-1200-1777379485993.png" alt="Bing tutorial"></td>
             </tr>
             <tr>
               <td>ai video with consistent characters</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>ai video generator with audio</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>ai character video generator</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td><strong>replicate alternative video api</strong></td>
               <td><span class="serp-badge miss">disappeared 04-28</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>ai ugc video generator</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>ai ad creative video generator</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>ai product video generator</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>sora alternative free</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
             <tr>
               <td>fal.ai alternative for video generation</td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
               <td><span class="serp-badge miss">-</span></td>
               <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td>-</td>
             </tr>
           </tbody>
         </table>
@@ -591,20 +559,6 @@
     renderScatterChart();
     renderHeatmapChart();
     renderTable();
-  </script>
-  <!-- Lightbox -->
-  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="Evidence">
-  </div>
-  <script>
-    function openLightbox(el) {
-      document.getElementById('lightbox-img').src = el.src;
-      document.getElementById('lightbox').classList.add('open');
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-    }
   </script>
 </body>
 </html>

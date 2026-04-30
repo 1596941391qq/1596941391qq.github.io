@@ -143,12 +143,6 @@
     .serp-badge.hit { background: rgba(244,63,94,0.1); color: rgb(220,38,38); }
     .serp-badge.miss { background: rgb(var(--secondary)); color: rgb(var(--muted-fg)); }
     .serp-badge.captcha { background: #fef3c7; color: #92400e; }
-    .serp-thumb { max-height: 40px; border-radius: 3px; border: 1px solid rgb(var(--border)); cursor: pointer; transition: transform 0.15s; }
-    .serp-thumb:hover { transform: scale(1.1); }
-    .lightbox-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; }
-    .lightbox-overlay.open { display: flex; }
-    .lightbox-overlay img { max-width: 95vw; max-height: 95vh; border-radius: 4px; }
-    .lightbox-close { position: absolute; top: 16px; right: 24px; color: #fff; font-size: 2rem; cursor: pointer; background: none; border: none; }
   </style>
 </head>
 <body>
@@ -160,24 +154,18 @@
           <div class="serp-date">Last check: 2026-04-30</div>
         </div>
         <table class="serp-table">
-          <thead><tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th><th>Evidence</th></tr></thead>
+          <thead><tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th></tr></thead>
           <tbody>
-            <tr>
-              <td><strong>openclaw alternative</strong> <span class="serp-badge hit">1 hit</span></td>
-              <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td><span class="serp-badge hit">MoClaw</span> <span style="font-size:0.7rem;color:#64748b">04-30</span></td>
-              <td><span class="serp-badge captcha">captcha 04-30</span></td>
-              <td><img class="serp-thumb" onclick="openLightbox(this)" src="serp-evidence/bing-moclaw-openclaw-alternative-1777568342397.png" alt="Bing"></td>
-            </tr>
-            <tr><td>manus ai alternative</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>best AI automation tool 2026</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>personal AI assistant</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>AI agent platform</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>open interpreter alternative</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>AI browser automation tool</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>zapier alternative AI</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>cloud AI computer</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
-            <tr><td>AI deep research tool</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td><td>-</td></tr>
+            <tr><td>openclaw alternative</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>manus ai alternative</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>best AI automation tool 2026</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>personal AI assistant</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>AI agent platform</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>open interpreter alternative</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>AI browser automation tool</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>zapier alternative AI</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>cloud AI computer</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
+            <tr><td>AI deep research tool</td><td><span class="serp-badge captcha">captcha</span></td><td><span class="serp-badge miss">-</span></td><td><span class="serp-badge captcha">captcha</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -465,14 +453,6 @@
     renderScatterChart();
     renderHeatmapChart();
     renderTable();
-  </script>
-  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="Evidence">
-  </div>
-  <script>
-    function openLightbox(el) { document.getElementById('lightbox-img').src = el.src; document.getElementById('lightbox').classList.add('open'); }
-    function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
   </script>
 </body>
 </html>
