@@ -5,7 +5,7 @@ permalink: /long-term-memory-beta-api/
 ---
 # long-term memory(beta) api: Complete Guide 2026
 
-**Published:** 2026-04-01  
+**Published:** 2026-04-30  
 **Keywords:** long-term memory(beta) api
 
 ---
