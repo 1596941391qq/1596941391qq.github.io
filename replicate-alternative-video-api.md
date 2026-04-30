@@ -5,7 +5,7 @@ permalink: /replicate-alternative-video-api/
 ---
 # replicate alternative video api: Complete Guide 2026
 
-**Published:** 2026-04-23  
+**Published:** 2026-04-30  
 **Keywords:** replicate alternative video api
 
 ---
