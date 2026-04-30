@@ -5,7 +5,7 @@ permalink: /general-interface-api/
 ---
 # general interface api: Complete Guide 2026
 
-**Published:** 2026-03-31  
+**Published:** 2026-04-30  
 **Keywords:** general interface api
 
 ---
