@@ -301,6 +301,74 @@ textarea{resize:vertical;min-height:60px}
   from{transform:translateY(100%)}
   to{transform:translateY(0)}
 }
+
+/* Accounting */
+.acct-subtabs{display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap}
+.acct-subtab{padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;color:var(--text2);background:var(--surface2);transition:.15s}
+.acct-subtab:hover{color:var(--text)}
+.acct-subtab.active{color:#fff;background:var(--accent)}
+.acct-wrap{padding:0 20px 20px;overflow-y:auto;flex:1}
+.txn-list{display:flex;flex-direction:column;gap:6px}
+.txn-row{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;transition:border-color .15s}
+.txn-row:hover{border-color:var(--text3)}
+.txn-date{font-size:12px;color:var(--text3);min-width:80px;flex-shrink:0}
+.txn-cat{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;flex-shrink:0}
+.txn-cat.income{background:var(--green-dim);color:var(--green)}
+.txn-cat.expense{background:rgba(239,68,68,.1);color:#dc2626}
+.txn-desc{flex:1;font-size:13px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.txn-amount{font-size:15px;font-weight:700;flex-shrink:0;text-align:right;white-space:nowrap}
+.txn-amount.income{color:var(--green)}
+.txn-amount.expense{color:#dc2626}
+.inv-status{font-size:11px;padding:3px 8px;border-radius:10px;font-weight:700}
+.inv-status.pending{background:var(--yellow-dim);color:var(--yellow)}
+.inv-status.paid{background:var(--green-dim);color:var(--green)}
+.inv-status.overdue{background:rgba(239,68,68,.1);color:#dc2626}
+.inv-status.cancelled{background:var(--surface2);color:var(--text3)}
+
+/* Dashboard */
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.dash-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;overflow:hidden}
+.dash-card.full{grid-column:1/-1}
+.dash-card h3{font-size:13px;font-weight:700;color:var(--text2);margin-bottom:12px;text-transform:uppercase;letter-spacing:.3px}
+.dash-big{font-size:28px;font-weight:800;line-height:1}
+.dash-big.positive{color:var(--green)}
+.dash-big.negative{color:#dc2626}
+.dash-big.neutral{color:var(--text)}
+.dash-sub{font-size:11px;color:var(--text3);margin-top:4px}
+.bar-chart{display:flex;flex-direction:column;gap:8px}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:12px}
+.bar-label{min-width:60px;text-align:right;color:var(--text2);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{flex:1;height:20px;background:var(--surface2);border-radius:4px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:4px;transition:width .3s;display:flex;align-items:center;padding-left:6px;font-size:10px;font-weight:700;color:#fff;min-width:24px}
+.bar-fill.green{background:var(--green)}
+.bar-fill.red{background:#ef4444}
+.bar-fill.blue{background:var(--blue)}
+.bar-fill.accent{background:var(--accent)}
+.bar-fill.purple{background:#7c3aed}
+.bar-val{font-size:11px;color:var(--text3);min-width:50px;text-align:right;flex-shrink:0}
+.donut-wrap{display:flex;align-items:center;gap:16px}
+.donut-svg{flex-shrink:0}
+.donut-legend{display:flex;flex-direction:column;gap:4px;font-size:12px}
+.donut-legend span{display:flex;align-items:center;gap:6px}
+.donut-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+
+/* Mobile accounting */
+@media(max-width:768px){
+  .dash-grid{grid-template-columns:1fr;gap:10px}
+  .dash-big{font-size:22px}
+  .txn-row{flex-wrap:wrap;gap:6px 10px;padding:10px 12px}
+  .txn-date{min-width:auto;font-size:11px}
+  .txn-desc{min-width:60%;flex-basis:60%}
+  .txn-amount{flex-basis:auto;font-size:14px}
+  .bar-label{min-width:48px;font-size:10px}
+  .donut-wrap{flex-direction:column;align-items:flex-start}
+  .acct-wrap{padding:0 12px 12px}
+  .acct-subtab{padding:5px 10px;font-size:12px}
+}
+body.mode-accordion .acct-wrap{padding:8px 12px 80px}
+body.mode-accordion .dash-grid{grid-template-columns:1fr}
+body.mode-accordion .dash-big{font-size:20px}
+body.mode-accordion .bar-chart{gap:6px}
 </style>
 </head>
 <body>
@@ -311,6 +379,7 @@ textarea{resize:vertical;min-height:60px}
     <div class="tabs">
       <button class="tab active" data-view="customers">客户管理</button>
       <button class="tab" data-view="tasks">任务管理</button>
+      <button class="tab" data-view="accounting">记账</button>
     </div>
     <button class="icon-btn" onclick="CRM.ui.openSettings()" title="设置">⚙</button>
   </div>
@@ -337,6 +406,10 @@ textarea{resize:vertical;min-height:60px}
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
     <span>任务</span>
   </button>
+  <button class="nav-item" data-view="accounting">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+    <span>记账</span>
+  </button>
   <button class="nav-item" data-action="settings">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
     <span>设置</span>
@@ -358,6 +431,21 @@ const TASK_STATUS = ['todo','in-progress','finish','review'];
 const TASK_LABELS = {'todo':'Todo','in-progress':'In Progress','finish':'Finish','review':'Review'};
 const SEGMENTS = ['A','B','C','D'];
 const PRIORITIES = ['high','medium','low'];
+const TXN_CATEGORIES_INCOME = ['客户付款','退款','其他收入'];
+const TXN_CATEGORIES_EXPENSE = ['服务器/VPS','ADS账号','API费用','代理IP','TikHub','Apify','外包/工资','营销费用','合同/法律','办公/工具','其他支出'];
+const INV_STATUS = ['pending','paid','overdue','cancelled'];
+const INV_LABELS = {'pending':'待收款','paid':'已收款','overdue':'已逾期','cancelled':'已取消'};
+const CURRENCIES = ['USD','CNY','HKD'];
+const FIXED_COST_PERIODS = ['monthly','yearly'];
+const EXCHANGE_RATES = {USD:1, CNY:0.14, HKD:0.13};
+function toUSD(amount, currency) {
+  if (!currency || !EXCHANGE_RATES.hasOwnProperty(currency)) {
+    console.warn('toUSD: unknown currency', currency, 'amount:', amount);
+    return (amount||0); // treat as USD-equivalent number
+  }
+  return (amount||0) * EXCHANGE_RATES[currency];
+}
+const CURRENCY_SYMBOLS = {USD:'$', CNY:'¥', HKD:'HK$'};
 
 // Stage sub-steps: each stage has an ordered list of action steps
 const STAGE_STEPS = {};
@@ -379,7 +467,7 @@ CRM.state = {
   _remoteLoaded: false,
 
   defaultData() {
-    return { meta:{ lastUpdated: new Date().toISOString(), version:1 }, customers:[], tasks:[] };
+    return { meta:{ lastUpdated: new Date().toISOString(), version:1 }, customers:[], tasks:[], transactions:[], invoices:[], fixedCosts:[] };
   },
 
   _merge(remote, local) {
@@ -398,12 +486,21 @@ CRM.state = {
     const localTasks = Array.isArray(local.tasks) ? local.tasks : [];
     const remoteCusts = Array.isArray(remote.customers) ? remote.customers : [];
     const localCusts = Array.isArray(local.customers) ? local.customers : [];
+    const remoteTxns = Array.isArray(remote.transactions) ? remote.transactions : [];
+    const localTxns = Array.isArray(local.transactions) ? local.transactions : [];
+    const remoteInvs = Array.isArray(remote.invoices) ? remote.invoices : [];
+    const localInvs = Array.isArray(local.invoices) ? local.invoices : [];
+    const remoteFC = Array.isArray(remote.fixedCosts) ? remote.fixedCosts : [];
+    const localFC = Array.isArray(local.fixedCosts) ? local.fixedCosts : [];
     // Protect: never let an empty array wipe existing data
     const tasks = remoteTasks.length > 0 ? mergeArrays(remoteTasks, localTasks) : localTasks;
     const customers = remoteCusts.length > 0 ? mergeArrays(remoteCusts, localCusts) : localCusts;
+    const transactions = remoteTxns.length > 0 ? mergeArrays(remoteTxns, localTxns) : localTxns;
+    const invoices = remoteInvs.length > 0 ? mergeArrays(remoteInvs, localInvs) : localInvs;
+    const fixedCosts = remoteFC.length > 0 ? mergeArrays(remoteFC, localFC) : localFC;
     return {
       meta: { ...(remote.meta||{}), lastUpdated: new Date().toISOString() },
-      customers, tasks
+      customers, tasks, transactions, invoices, fixedCosts
     };
   },
 
@@ -450,9 +547,15 @@ CRM.state = {
 
   save() {
     this.data.meta.lastUpdated = new Date().toISOString();
-    const prev = localStorage.getItem('crm_cache');
-    if (prev) localStorage.setItem('crm_cache_backup', prev);
-    localStorage.setItem('crm_cache', JSON.stringify(this.data));
+    try {
+      const prev = localStorage.getItem('crm_cache');
+      if (prev) { try { localStorage.setItem('crm_cache_backup', prev); } catch(e) {} }
+      localStorage.setItem('crm_cache', JSON.stringify(this.data));
+    } catch(e) {
+      console.error('localStorage save failed:', e);
+      const el = document.getElementById('syncStatus');
+      if (el) { el.textContent = '⚠ 本地存储失败'; el.classList.add('unsynced'); }
+    }
     this.queueWrite();
     CRM.ui.render();
   },
@@ -464,6 +567,10 @@ CRM.state = {
     this.writeTimer = setTimeout(() => {
       CRM.api.push(this.data).then(() => {
         this.syncStatus = 'synced';
+        // Clear purge flags after successful push
+        if (this.data.meta && this.data.meta._purged) {
+          delete this.data.meta._purged;
+        }
         CRM.ui.updateSyncStatus();
       }).catch(err => {
         console.error('Save failed:', err);
@@ -529,9 +636,117 @@ CRM.state = {
     this.save();
   },
 
+  // Transaction CRUD
+  addTransaction(t, _skipSave) {
+    t.id = 'txn_' + Date.now();
+    t.createdAt = new Date().toISOString();
+    t.updatedAt = new Date().toISOString();
+    this.data.transactions.push(t);
+    if (!_skipSave) this.save();
+  },
+  updateTransaction(id, updates) {
+    const t = this.data.transactions.find(x => x.id === id);
+    if (!t) return;
+    Object.assign(t, updates, { updatedAt: new Date().toISOString() });
+    this.save();
+  },
+  deleteTransaction(id) {
+    this.data.transactions = this.data.transactions.filter(x => x.id !== id);
+    this.save();
+  },
+
+  // Purge all data of a type (bypasses empty array guard)
+  purgeData(key) {
+    if (['tasks','transactions','invoices','fixedCosts','customers'].includes(key)) {
+      this.data[key] = [];
+      this.data.meta = this.data.meta || {};
+      this.data.meta._purged = this.data.meta._purged || [];
+      if (!this.data.meta._purged.includes(key)) this.data.meta._purged.push(key);
+      this.save();
+    }
+  },
+
+  // Invoice CRUD
+  addInvoice(inv) {
+    inv.id = 'inv_' + Date.now();
+    inv.createdAt = new Date().toISOString();
+    inv.updatedAt = new Date().toISOString();
+    this.data.invoices.push(inv);
+    this.save();
+  },
+  updateInvoice(id, updates) {
+    const inv = this.data.invoices.find(x => x.id === id);
+    if (!inv) return;
+    const oldStatus = inv.status;
+    // Strip internal flags before writing to data
+    const { _skipAutoTxn, ...cleanUpdates } = updates;
+    Object.assign(inv, cleanUpdates, { updatedAt: new Date().toISOString() });
+    // Auto-create income transaction when invoice is marked as paid (skip double save)
+    // Guard: only create if no linked transaction already exists
+    if (cleanUpdates.status === 'paid' && oldStatus !== 'paid' && !_skipAutoTxn) {
+      const alreadyLinked = (this.data.transactions||[]).find(t => t.linkedInvoiceId === id);
+      if (!alreadyLinked) {
+        this.addTransaction({
+          type: 'income',
+          category: '客户付款',
+          amount: inv.amount,
+          currency: inv.currency || 'USD',
+          customerId: inv.customerId,
+          description: `账单收款: ${inv.description || '服务费'}`,
+          date: inv.paidDate || new Date().toISOString().slice(0,10),
+          linkedInvoiceId: inv.id
+        }, true); // _skipSave — we save once below
+      }
+    }
+    // Sync all linked transactions' amount/currency when editing a paid invoice
+    if (oldStatus === 'paid' && cleanUpdates.status === 'paid' && (cleanUpdates.amount || cleanUpdates.currency)) {
+      (this.data.transactions||[]).filter(t => t.linkedInvoiceId === id).forEach(linked => {
+        if (cleanUpdates.amount != null) linked.amount = cleanUpdates.amount;
+        if (cleanUpdates.currency) linked.currency = cleanUpdates.currency;
+        linked.updatedAt = new Date().toISOString();
+      });
+    }
+    // Remove linked transaction when invoice reverts from paid to other status
+    if (oldStatus === 'paid' && cleanUpdates.status && cleanUpdates.status !== 'paid') {
+      this.data.transactions = (this.data.transactions||[]).filter(
+        t => !(t.linkedInvoiceId === id)
+      );
+    }
+    this.save();
+  },
+  deleteInvoice(id) {
+    // Also remove any linked transaction
+    this.data.transactions = (this.data.transactions||[]).filter(
+      t => !(t.linkedInvoiceId === id)
+    );
+    this.data.invoices = this.data.invoices.filter(x => x.id !== id);
+    this.save();
+  },
+
+  // FixedCost CRUD
+  addFixedCost(fc) {
+    fc.id = 'fc_' + Date.now();
+    fc.createdAt = new Date().toISOString();
+    fc.updatedAt = new Date().toISOString();
+    this.data.fixedCosts.push(fc);
+    this.save();
+  },
+  updateFixedCost(id, updates) {
+    const fc = (this.data.fixedCosts||[]).find(x => x.id === id);
+    if (!fc) return;
+    Object.assign(fc, updates, { updatedAt: new Date().toISOString() });
+    this.save();
+  },
+  deleteFixedCost(id) {
+    this.data.fixedCosts = (this.data.fixedCosts||[]).filter(x => x.id !== id);
+    this.save();
+  },
+
   getStats() {
     const cs = this.data.customers;
     const ts = this.data.tasks;
+    const txns = this.data.transactions || [];
+    const invs = this.data.invoices || [];
     const now = new Date();
     const weekAgo = new Date(now - 7*86400000);
     const stageCounts = {};
@@ -541,7 +756,17 @@ CRM.state = {
     const appointments = cs.filter(c => c.phoneAppointment && c.phoneAppointment.slice(0,10) === today);
     const overdue = ts.filter(t => t.dueDate && t.dueDate < today && t.status !== 'review' && t.status !== 'finish');
     const newThisWeek = cs.filter(c => new Date(c.createdAt) >= weekAgo).length;
-    return { total: cs.length, stageCounts, appointments, overdue, newThisWeek, taskByStatus: TASK_STATUS.reduce((a,s)=>{a[s]=ts.filter(t=>t.status===s).length;return a},{}) };
+    // Financial stats (multi-currency → USD)
+    const totalIncome = txns.filter(t => t.type === 'income').reduce((s, t) => s + toUSD(t.amount, t.currency), 0);
+    const totalExpense = txns.filter(t => t.type === 'expense').reduce((s, t) => s + toUSD(t.amount, t.currency), 0);
+    const pendingInvoices = invs.filter(i => i.status === 'pending').reduce((s, i) => s + toUSD(i.amount, i.currency), 0);
+    const overdueInvoices = invs.filter(i => i.status === 'overdue').reduce((s, i) => s + toUSD(i.amount, i.currency), 0);
+    return {
+      total: cs.length, stageCounts, appointments, overdue, newThisWeek,
+      taskByStatus: TASK_STATUS.reduce((a,s)=>{a[s]=ts.filter(t=>t.status===s).length;return a},{}),
+      totalIncome, totalExpense, profit: totalIncome - totalExpense,
+      pendingInvoices, overdueInvoices
+    };
   }
 };
 
@@ -566,14 +791,25 @@ CRM.api = {
   },
 
   async push(data) {
-    // Guard: never overwrite remote with empty tasks if we had tasks before
+    // Guard: never overwrite remote with empty arrays if we had data before
     const cached = localStorage.getItem('crm_cache');
+    let prev = null;
     if (cached) {
-      const prev = JSON.parse(cached);
-      if ((prev.tasks||[]).length > 0 && (data.tasks||[]).length === 0) {
-        console.error('BLOCKED: attempted to push with empty tasks. Keeping previous tasks.');
-        data.tasks = prev.tasks;
+      try { prev = JSON.parse(cached); } catch(e) {
+        console.error('Cache parse failed, skipping empty guard:', e);
+        localStorage.removeItem('crm_cache');
       }
+    }
+    if (prev) {
+      const purged = (data.meta && data.meta._purged) || [];
+      const guards = ['customers','tasks','transactions','invoices','fixedCosts'];
+      guards.forEach(key => {
+        if (purged.includes(key)) return; // User intentionally purged this data
+        if ((prev[key]||[]).length > 0 && (data[key]||[]).length === 0) {
+          console.error(`BLOCKED: attempted to push with empty ${key}.`);
+          data[key] = prev[key];
+        }
+      });
     }
     const r = await fetch(`${this.baseUrl}/b/${this.BIN_ID}`, {
       method:'PUT',
@@ -658,13 +894,26 @@ CRM.ui = {
         <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
           ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
         </div>`;
-    } else {
+    } else if (CRM.state.currentView === 'tasks') {
       bar.innerHTML = `
         <div class="stat"><div class="stat-val accent">${CRM.state.data.tasks.length}</div><div class="stat-label">任务总数</div></div>
         <div class="stat"><div class="stat-val" style="color:#ef4444">${s.overdue.length}</div><div class="stat-label">已逾期</div></div>
         <div class="stat"><div class="stat-val blue">${s.taskByStatus['todo']||0}</div><div class="stat-label">Todo</div></div>
         <div class="stat"><div class="stat-val">${s.taskByStatus['in-progress']||0}</div><div class="stat-label">In Progress</div></div>
         <div class="stat"><div class="stat-val green">${s.taskByStatus['finish']||0}</div><div class="stat-label">Finish</div></div>
+        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
+          ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
+        </div>`;
+    } else if (CRM.state.currentView === 'accounting') {
+      const txns = CRM.state.data.transactions || [];
+      const invs = CRM.state.data.invoices || [];
+      bar.innerHTML = `
+        <div class="stat"><div class="stat-val green">$${s.totalIncome.toLocaleString()}</div><div class="stat-label">总收入</div></div>
+        <div class="stat"><div class="stat-val" style="color:#ef4444">$${s.totalExpense.toLocaleString()}</div><div class="stat-label">总支出</div></div>
+        <div class="stat"><div class="stat-val ${s.profit>=0?'accent':''}" style="${s.profit<0?'color:#ef4444':''}">$${s.profit.toLocaleString()}</div><div class="stat-label">净利润</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--yellow)">$${s.pendingInvoices.toLocaleString()}</div><div class="stat-label">待收款</div></div>
+        <div class="stat"><div class="stat-val">${txns.length}</div><div class="stat-label">流水笔数</div></div>
+        <div class="stat"><div class="stat-val">${invs.length}</div><div class="stat-label">账单数</div></div>
         <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
           ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
         </div>`;
@@ -679,9 +928,20 @@ CRM.ui = {
         <button class="btn btn-ghost" onclick="CRM.ui.exportJSON()">导出</button>
         <button class="btn btn-ghost" onclick="CRM.ui.openImportGuide()">导入</button>
         <input type="file" id="importFile" accept=".json" style="display:none" onchange="CRM.ui.importJSON(event)">`;
-    } else {
+    } else if (CRM.state.currentView === 'tasks') {
       tb.innerHTML = `<input type="text" placeholder="搜索任务..." value="${esc(CRM.state.searchQuery)}" oninput="CRM.state.searchQuery=this.value;CRM.ui.renderKanban()">
         <button class="btn btn-accent" onclick="CRM.ui.openTaskForm()">+ 添加任务</button>`;
+    } else if (CRM.state.currentView === 'accounting') {
+      const sub = this._acctSubtab || 'dashboard';
+      tb.innerHTML = `
+        <div class="acct-subtabs">
+          <button class="acct-subtab ${sub==='dashboard'?'active':''}" onclick="CRM.ui._acctSubtab='dashboard';CRM.ui.render()">看板</button>
+          <button class="acct-subtab ${sub==='transactions'?'active':''}" onclick="CRM.ui._acctSubtab='transactions';CRM.ui.render()">收支流水</button>
+          <button class="acct-subtab ${sub==='invoices'?'active':''}" onclick="CRM.ui._acctSubtab='invoices';CRM.ui.render()">客户账单</button>
+          <button class="acct-subtab ${sub==='fixedcosts'?'active':''}" onclick="CRM.ui._acctSubtab='fixedcosts';CRM.ui.render()">固定成本</button>
+        </div>
+        <input type="text" placeholder="搜索..." value="${esc(CRM.state.searchQuery)}" oninput="CRM.state.searchQuery=this.value;CRM.ui.renderKanban()">
+        ${sub!=='dashboard'?`<button class="btn btn-accent" onclick="${sub==='transactions'?'CRM.ui.openTransactionForm()':sub==='invoices'?'CRM.ui.openInvoiceForm()':'CRM.ui.openFixedCostForm()'}">+ ${sub==='transactions'?'记一笔':sub==='invoices'?'开账单':'添加固定成本'}</button>`:''}`;
     }
   },
 
@@ -703,7 +963,7 @@ CRM.ui = {
           <div class="col-body" ${dragOver} ${dragDrop} ${dragLeave}>${cards.length ? cards.map(c => CRM.data.renderCustomerCard(c)).join('') : '<div class="empty">暂无客户</div>'}</div>
         </div>`;
       }).join('');
-    } else {
+    } else if (CRM.state.currentView === 'tasks') {
       kb.innerHTML = TASK_STATUS.map(status => {
         let cards = CRM.state.data.tasks.filter(t => t.status === status);
         if (q) cards = cards.filter(t => t.title.toLowerCase().includes(q));
@@ -718,6 +978,98 @@ CRM.ui = {
           <div class="col-body" ${dragOver} ${dragDrop} ${dragLeave}>${cards.length ? cards.map(t => CRM.data.renderTaskCard(t)).join('') : '<div class="empty">暂无任务</div>'}</div>
         </div>`;
       }).join('');
+    } else if (CRM.state.currentView === 'accounting') {
+      const sub = this._acctSubtab || 'dashboard';
+      const q = CRM.state.searchQuery.toLowerCase();
+      if (sub === 'dashboard') {
+        kb.innerHTML = `<div class="acct-wrap">${this._renderDashboard()}</div>`;
+      } else if (sub === 'transactions') {
+        let txns = [...(CRM.state.data.transactions || [])];
+        if (q) txns = txns.filter(t => (t.description+t.category).toLowerCase().includes(q));
+        txns.sort((a, b) => new Date(b.date||b.createdAt) - new Date(a.date||a.createdAt));
+        kb.innerHTML = txns.length ? `<div class="acct-wrap"><div class="txn-list">${txns.map(t => {
+          const cust = t.customerId ? CRM.state.getCustomer(t.customerId) : null;
+          const sym = CURRENCY_SYMBOLS[t.currency] || '$';
+          const usdEquiv = t.currency && t.currency !== 'USD' ? ` <span style="font-size:10px;color:var(--text3)">≈$${toUSD(t.amount,t.currency).toFixed(0)}</span>` : '';
+          const linkedBadge = t.linkedInvoiceId ? ' <span style="font-size:9px;background:var(--blue-dim);color:var(--blue);padding:1px 5px;border-radius:4px">关联账单</span>' : '';
+          return `<div class="txn-row" onclick="CRM.ui.openTransactionForm(CRM.state.data.transactions.find(x=>x.id==='${t.id}'))">
+            <div class="txn-date">${(t.date||'').slice(0,10)}</div>
+            <span class="txn-cat ${t.type}">${t.type==='income'?'收入':'支出'}</span>
+            <div class="txn-desc">${esc(t.description||t.category)}${cust?' · '+esc(cust.company||cust.name):''}${linkedBadge}</div>
+            <div class="txn-amount ${t.type}">${t.type==='expense'?'-':'+'}${sym}${Number(t.amount||0).toLocaleString()}${usdEquiv}</div>
+          </div>`;
+        }).join('')}</div></div>` : '<div class="acct-wrap"><div class="empty">暂无收支记录，点击"记一笔"开始</div></div>';
+      } else if (sub === 'invoices') {
+        let invs = [...(CRM.state.data.invoices || [])];
+        if (q) invs = invs.filter(i => (i.description+(CRM.state.getCustomer(i.customerId)?.company||'')).toLowerCase().includes(q));
+        invs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        kb.innerHTML = invs.length ? `<div class="acct-wrap"><div class="txn-list">${invs.map(inv => {
+          const cust = inv.customerId ? CRM.state.getCustomer(inv.customerId) : null;
+          const sym = CURRENCY_SYMBOLS[inv.currency] || '$';
+          const usdEquiv = inv.currency && inv.currency !== 'USD' ? ` <span style="font-size:10px;color:var(--text3)">≈$${toUSD(inv.amount,inv.currency).toFixed(0)}</span>` : '';
+          const hasLinkedTxn = (CRM.state.data.transactions||[]).some(t => t.linkedInvoiceId === inv.id);
+          const paidBadge = inv.status === 'paid' && hasLinkedTxn ? ' <span style="font-size:9px;background:var(--green-dim);color:var(--green);padding:1px 5px;border-radius:4px">已入账</span>' : '';
+          return `<div class="txn-row" onclick="CRM.ui.openInvoiceForm(CRM.state.data.invoices.find(x=>x.id==='${inv.id}'))">
+            <div class="txn-date">${(inv.dueDate||'').slice(0,10)}</div>
+            <span class="inv-status ${inv.status}">${INV_LABELS[inv.status]||inv.status}</span>
+            <div class="txn-desc">${cust?esc(cust.company||cust.name)+' · ':''}${esc(inv.description||'')}${paidBadge}</div>
+            <div class="txn-amount" style="color:var(--accent)">${sym}${Number(inv.amount||0).toLocaleString()}${usdEquiv}</div>
+          </div>`;
+        }).join('')}</div></div>` : '<div class="acct-wrap"><div class="empty">暂无账单，点击"开账单"开始</div></div>';
+      } else if (sub === 'fixedcosts') {
+        const fcs = [...(CRM.state.data.fixedCosts || [])];
+        fcs.sort((a,b) => toUSD(b.amount,b.currency) - toUSD(a.amount,a.currency));
+        const txns = CRM.state.data.transactions || [];
+        const thisMonth = new Date().toISOString().slice(0,7);
+        const monthlyBudget = fcs.reduce((s,fc)=>s+toUSD(fc.period==='yearly'?(fc.amount||0)/12:(fc.amount||0),fc.currency),0);
+        // Calculate budget and actual per category (aggregated)
+        const budgetByCat = {};
+        fcs.forEach(fc => {
+          const m = toUSD(fc.period==='yearly'?(fc.amount||0)/12:(fc.amount||0), fc.currency);
+          budgetByCat[fc.category] = (budgetByCat[fc.category]||0) + m;
+        });
+        const actualByCat = {};
+        txns.filter(t=>t.type==='expense'&&(t.date||'').startsWith(thisMonth)).forEach(t=>{
+          actualByCat[t.category] = (actualByCat[t.category]||0) + toUSD(t.amount,t.currency);
+        });
+        const totalActual = Object.values(actualByCat).reduce((s,v)=>s+v,0);
+        const pct = monthlyBudget > 0 ? Math.min(totalActual/monthlyBudget*100, 100) : 0;
+        const barColor = pct > 90 ? '#ef4444' : pct > 70 ? '#f59e0b' : 'var(--green)';
+        // Group fixed costs by category for display
+        const catGroups = {};
+        fcs.forEach(fc => {
+          if (!catGroups[fc.category]) catGroups[fc.category] = [];
+          catGroups[fc.category].push(fc);
+        });
+        kb.innerHTML = fcs.length ? `<div class="acct-wrap">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+              <div><div style="font-size:13px;color:var(--text2)">月度固定成本</div><div style="font-size:22px;font-weight:800;color:#dc2626">$${monthlyBudget.toFixed(0)}<span style="font-size:13px;font-weight:400;color:var(--text3)">/月预算</span></div></div>
+              <div style="text-align:right"><div style="font-size:13px;color:var(--text2)">本月实际</div><div style="font-size:22px;font-weight:800;color:${barColor}">$${totalActual.toFixed(0)}</div></div>
+            </div>
+            <div style="background:var(--surface2);border-radius:4px;height:8px;overflow:hidden">
+              <div style="height:100%;width:${pct}%;background:${barColor};border-radius:4px;transition:width .3s"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--text3)">
+              <span>已使用 ${pct.toFixed(0)}%</span>
+              <span>盈亏平衡: 月收入 ≥ $${monthlyBudget.toFixed(0)}</span>
+            </div>
+          </div>
+          <div class="txn-list">${Object.entries(catGroups).map(([cat, items]) => {
+            const budget = budgetByCat[cat] || 0;
+            const actual = actualByCat[cat] || 0;
+            const overBudget = actual > budget;
+            return items.map(fc => {
+              const monthlyUSD = toUSD(fc.period==='yearly'?(fc.amount||0)/12:(fc.amount||0), fc.currency);
+              return `<div class="txn-row" onclick="CRM.ui.openFixedCostForm(CRM.state.data.fixedCosts.find(x=>x.id==='${fc.id}'))">
+                <span class="txn-cat expense">${esc(cat||'固定')}</span>
+                <div class="txn-desc">${esc(fc.name)}${fc.period==='yearly'?' (年付)':''}</div>
+                <div class="txn-amount expense">${CURRENCY_SYMBOLS[fc.currency]||'$'}${fc.amount}${fc.currency!=='USD'?' <span style="font-size:10px;color:var(--text3)">≈$'+Math.round(monthlyUSD)+'</span>':''}</div>
+              </div>`;
+            }).join('') + `<div style="font-size:11px;color:${overBudget?'#ef4444':'var(--text3)'};padding:4px 12px 8px;border-bottom:1px solid var(--border);margin-bottom:4px">分类汇总：实际 $${actual.toFixed(0)} / 预算 $${Math.round(budget)}</div>`;
+          }).join('')}</div>
+        </div>` : '<div class="acct-wrap"><div class="empty">暂未设置固定成本，点击"添加固定成本"开始</div></div>';
+      }
     }
     kb.querySelectorAll('.card[draggable]').forEach(card => {
       card.addEventListener('dragstart', CRM.ui.onDragStart);
@@ -750,6 +1102,442 @@ CRM.ui = {
       }
       this._mobileExpandedStage = kb.querySelector('.column.expanded')?.dataset.stage;
     }
+  },
+
+  // Accounting sub-tab state
+  _acctSubtab: 'dashboard',
+
+  // ═══════════════════════════════════════════
+  // Cash Flow Health Dashboard
+  // ═══════════════════════════════════════════
+  _renderDashboard() {
+    const txns = CRM.state.data.transactions || [];
+    const invs = CRM.state.data.invoices || [];
+    const fcs = CRM.state.data.fixedCosts || [];
+    const now = new Date();
+    const thisMonth = now.toISOString().slice(0,7);
+    const lastMonth = new Date(now.getFullYear(), now.getMonth()-1, 1).toISOString().slice(0,7);
+
+    // ── Basic totals (multi-currency → USD) ──
+    const totalIncome = txns.filter(t=>t.type==='income').reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+    const totalExpense = txns.filter(t=>t.type==='expense').reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+    const profit = totalIncome - totalExpense;
+    const pendingAmt = invs.filter(i=>i.status==='pending').reduce((s,i)=>s+toUSD(i.amount,i.currency),0);
+    const overdueAmt = invs.filter(i=>i.status==='overdue').reduce((s,i)=>s+toUSD(i.amount,i.currency),0);
+
+    // ── Monthly fixed costs (multi-currency → USD) ──
+    const monthlyFixed = fcs.reduce((s,fc) => {
+      return s + toUSD(fc.period === 'yearly' ? (fc.amount||0)/12 : (fc.amount||0), fc.currency);
+    }, 0);
+
+    // ── This month income/expense (multi-currency) ──
+    const monthIncome = txns.filter(t=>t.type==='income'&&(t.date||'').startsWith(thisMonth)).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+    const monthExpense = txns.filter(t=>t.type==='expense'&&(t.date||'').startsWith(thisMonth)).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+    const lastMonthIncome = txns.filter(t=>t.type==='income'&&(t.date||'').startsWith(lastMonth)).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+    const lastMonthExpense = txns.filter(t=>t.type==='expense'&&(t.date||'').startsWith(lastMonth)).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+
+    // ── Daily cash flow (last 14 days, multi-currency) ──
+    const days = [];
+    for (let i = 13; i >= 0; i--) {
+      const d = new Date(now); d.setDate(d.getDate() - i);
+      const ds = d.toISOString().slice(0,10);
+      const dayIn = txns.filter(t=>t.type==='income'&&t.date===ds).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+      const dayOut = txns.filter(t=>t.type==='expense'&&t.date===ds).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+      days.push({date:ds.slice(5), income:dayIn, expense:dayOut, net:dayIn-dayOut});
+    }
+    const maxDay = Math.max(...days.map(d=>Math.max(d.income,d.expense)),1);
+
+    // ── MRR estimation (from invoices, multi-currency) ──
+    const activeCusts = new Set(invs.filter(i=>i.status==='paid'||i.status==='pending').map(i=>i.customerId)).size;
+    const paidInvs = invs.filter(i=>i.status==='paid');
+    const avgDeal = paidInvs.length ? paidInvs.reduce((s,i)=>s+toUSD(i.amount,i.currency),0)/paidInvs.length : 0;
+    const estimatedMRR = avgDeal * activeCusts;
+
+    // ── Health score ──
+    let healthScore = 50;
+    if (profit > 0) healthScore += 15;
+    if (profit > totalExpense * 0.3) healthScore += 10;
+    if (monthIncome > monthExpense) healthScore += 10;
+    if (overdueAmt === 0) healthScore += 5;
+    if (monthIncome >= monthlyFixed) healthScore += 10;
+    healthScore = Math.min(100, Math.max(0, healthScore));
+
+    const healthColor = healthScore >= 80 ? 'var(--green)' : healthScore >= 50 ? 'var(--yellow)' : '#dc2626';
+    const healthLabel = healthScore >= 80 ? '健康' : healthScore >= 50 ? '一般' : '危险';
+
+    // ── Expense by category (multi-currency) ──
+    const expByCat = {};
+    txns.filter(t=>t.type==='expense').forEach(t=>{expByCat[t.category]=(expByCat[t.category]||0)+toUSD(t.amount,t.currency)});
+    const sortedCats = Object.entries(expByCat).sort((a,b)=>b[1]-a[1]);
+    const maxCat = sortedCats[0]?.[1]||1;
+
+    // ── Income by customer (multi-currency) ──
+    const incByCust = {};
+    txns.filter(t=>t.type==='income'&&t.customerId).forEach(t=>{
+      const c = CRM.state.getCustomer(t.customerId);
+      const name = c ? (c.company||c.name) : '其他';
+      incByCust[name] = (incByCust[name]||0)+toUSD(t.amount,t.currency);
+    });
+    const sortedCusts = Object.entries(incByCust).sort((a,b)=>b[1]-a[1]);
+    const maxCust = sortedCusts[0]?.[1]||1;
+
+    const catColors = ['var(--accent)','#7c3aed','var(--blue)','#f59e0b','#06b6d4','#ec4899','var(--green)','#64748b'];
+    const custColors = ['#7c3aed','var(--accent)','var(--blue)','var(--green)','#f59e0b','#06b6d4'];
+
+    // ── Donut SVG ──
+    const donutData = sortedCats.slice(0,6);
+    const donutTotal = donutData.reduce((s,d)=>s+d[1],0) || 1;
+    let cumPercent = 0;
+    const donutSegments = donutData.map((d,i)=>{
+      const pct = d[1]/donutTotal*100;
+      const start = cumPercent; cumPercent += pct;
+      return `<circle cx="50" cy="50" r="40" fill="none" stroke="${catColors[i%catColors.length]}" stroke-width="16" stroke-dasharray="${pct*2.513} ${251.3-pct*2.513}" stroke-dashoffset="${-start*2.513}" transform="rotate(-90 50 50)"/>`;
+    }).join('');
+    const donutLegend = donutData.map((d,i)=>`<span><span class="donut-dot" style="background:${catColors[i%catColors.length]}"></span>${d[0]} $${d[1]}</span>`).join('');
+
+    // ── AR aging ──
+    const today = now.toISOString().slice(0,10);
+    const openInvs = invs.filter(i=>i.status==='pending'||i.status==='overdue');
+    const threeDaysLater = new Date(now.getTime() + 3*86400000).toISOString().slice(0,10);
+    const warningInvs = openInvs.filter(i=>i.dueDate && i.dueDate <= threeDaysLater);
+
+    // ── MoM growth ──
+    const incomeGrowth = lastMonthIncome > 0 ? ((monthIncome - lastMonthIncome)/lastMonthIncome*100).toFixed(0) : '—';
+    const expenseGrowth = lastMonthExpense > 0 ? ((monthExpense - lastMonthExpense)/lastMonthExpense*100).toFixed(0) : '—';
+
+    // ── Monthly trend (last 6 months) ──
+    const months = [];
+    for (let i = 5; i >= 0; i--) {
+      const md = new Date(now.getFullYear(), now.getMonth()-i, 1);
+      const mk = md.toISOString().slice(0,7);
+      const mLabel = md.toLocaleString('zh-CN',{month:'short'});
+      const mIn = txns.filter(t=>t.type==='income'&&(t.date||'').startsWith(mk)).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+      const mOut = txns.filter(t=>t.type==='expense'&&(t.date||'').startsWith(mk)).reduce((s,t)=>s+toUSD(t.amount,t.currency),0);
+      months.push({label:mLabel, key:mk, income:mIn, expense:mOut, profit:mIn-mOut});
+    }
+    const maxMonth = Math.max(...months.map(m=>Math.max(m.income,m.expense)),1);
+
+    // ── Client profitability (revenue vs estimated cost) ──
+    const custProfit = {};
+    txns.filter(t=>t.customerId).forEach(t=>{
+      if(!custProfit[t.customerId]) custProfit[t.customerId]={income:0,expense:0};
+      if(t.type==='income') custProfit[t.customerId].income+=toUSD(t.amount,t.currency);
+      else custProfit[t.customerId].expense+=toUSD(t.amount,t.currency);
+    });
+    const sortedProfit = Object.entries(custProfit).map(([cid,v])=>{
+      const c=CRM.state.getCustomer(cid);
+      return {name:c?(c.company||c.name):'?',income:v.income,expense:v.expense,profit:v.income-v.expense};
+    }).sort((a,b)=>b.profit-a.profit);
+
+    return `
+    ${warningInvs.length ? `<div class="dash-card full" style="border-left:4px solid #f59e0b;background:#fffbeb">
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:18px">⚠️</span>
+        <div style="font-size:13px;font-weight:600;color:#92400e">${warningInvs.length} 笔账单即将到期（3天内）或已逾期，合计 $${warningInvs.reduce((s,i)=>s+toUSD(i.amount,i.currency),0).toLocaleString()}</span>
+      </div>
+    </div>` : ''}
+
+    <!-- Health Score Banner -->
+    <div class="dash-card full" style="border-left:4px solid ${healthColor}">
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">现金流健康度</div>
+          <div class="dash-big" style="color:${healthColor}">${healthScore}<span style="font-size:16px;font-weight:400">/100</span></div>
+          <div class="dash-sub">状态：${healthLabel}${profit>=0?' · 盈利中':' · 亏损中'}${monthIncome>=monthlyFixed?' · 收入覆盖固定成本':' · ⚠ 固定成本未覆盖'}</div>
+        </div>
+        <div style="margin-left:auto;display:flex;gap:12px;flex-wrap:wrap">
+          <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--blue)">$${estimatedMRR.toFixed(0)}</div><div style="font-size:10px;color:var(--text3)">预估MRR</div></div>
+          <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--green)">${activeCusts}</div><div style="font-size:10px;color:var(--text3)">活跃客户</div></div>
+          <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--yellow)">$${avgDeal.toFixed(0)}</div><div style="font-size:10px;color:var(--text3)">平均客单价</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 KPI Cards -->
+    <div class="dash-grid" style="margin-bottom:16px">
+      <div class="dash-card">
+        <h3>本月收入</h3>
+        <div class="dash-big positive">$${monthIncome.toLocaleString()}</div>
+        <div class="dash-sub">环比 ${incomeGrowth !== '—' ? (incomeGrowth >= 0 ? '+' : '') + incomeGrowth + '%' : '—'}</div>
+      </div>
+      <div class="dash-card">
+        <h3>本月支出</h3>
+        <div class="dash-big negative">$${monthExpense.toLocaleString()}</div>
+        <div class="dash-sub">环比 ${expenseGrowth !== '—' ? (expenseGrowth >= 0 ? '+' : '') + expenseGrowth + '%' : '—'}</div>
+      </div>
+      <div class="dash-card">
+        <h3>本月净现金流</h3>
+        <div class="dash-big ${(monthIncome-monthExpense)>=0?'positive':'negative'}">${(monthIncome-monthExpense)>=0?'+':''}$${(monthIncome-monthExpense).toLocaleString()}</div>
+        <div class="dash-sub">利润率 ${monthIncome>0?Math.round((monthIncome-monthExpense)/monthIncome*100):0}%</div>
+      </div>
+      <div class="dash-card">
+        <h3>应收账款</h3>
+        <div class="dash-big neutral">$${(pendingAmt+overdueAmt).toLocaleString()}</div>
+        <div class="dash-sub">待收 $${pendingAmt.toLocaleString()} · 逾期 $${overdueAmt.toLocaleString()}</div>
+      </div>
+    </div>
+
+    <!-- Daily Cash Flow -->
+    <div class="dash-card full">
+      <h3>日现金流（近14天）</h3>
+      <div style="display:flex;gap:2px;align-items:flex-end;height:100px;margin-top:8px">
+        ${days.map(d=>{
+          const inH = d.income/maxDay*80;
+          const outH = d.expense/maxDay*80;
+          return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:0" title="${d.date}: 收$${d.income} 支$${d.expense}">
+            <div style="width:100%;max-width:14px;height:${Math.max(inH,1)}px;background:var(--green);border-radius:2px 2px 0 0;opacity:.7"></div>
+            <div style="width:100%;max-width:14px;height:${Math.max(outH,1)}px;background:#ef4444;border-radius:0 0 2px 2px;opacity:.5"></div>
+            <div style="font-size:8px;color:var(--text3);margin-top:2px;white-space:nowrap">${d.date}</div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--text3)">
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--green);border-radius:2px;vertical-align:middle;margin-right:4px"></span>收入</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:#ef4444;border-radius:2px;vertical-align:middle;margin-right:4px;opacity:.5"></span>支出</span>
+      </div>
+    </div>
+
+    <!-- Monthly Trend (6 months) -->
+    <div class="dash-card full">
+      <h3>月度趋势（近6个月）</h3>
+      <div style="display:flex;gap:8px;align-items:flex-end;height:120px;margin-top:8px">
+        ${months.map(m=>{
+          const inH = m.income/maxMonth*90;
+          const outH = m.expense/maxMonth*90;
+          const isProfit = m.profit >= 0;
+          return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0" title="${m.key}: 收$${m.income.toFixed(0)} 支$${m.expense.toFixed(0)} 净${isProfit?'+':''}$${m.profit.toFixed(0)}">
+            <div style="font-size:9px;font-weight:600;color:${isProfit?'var(--green)':'#ef4444'}">${isProfit?'+':''}$${m.profit.toFixed(0)}</div>
+            <div style="display:flex;gap:1px;align-items:flex-end;height:90px">
+              <div style="width:14px;height:${Math.max(inH,2)}px;background:var(--green);border-radius:2px 2px 0 0;opacity:.7"></div>
+              <div style="width:14px;height:${Math.max(outH,2)}px;background:#ef4444;border-radius:2px 2px 0 0;opacity:.5"></div>
+            </div>
+            <div style="font-size:9px;color:var(--text3);margin-top:2px;white-space:nowrap">${m.label}</div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--text3)">
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--green);border-radius:2px;vertical-align:middle;margin-right:4px"></span>收入</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:#ef4444;border-radius:2px;vertical-align:middle;margin-right:4px;opacity:.5"></span>支出</span>
+        <span><span style="display:inline-block;width:10px;height:10px;background:var(--blue);border-radius:2px;vertical-align:middle;margin-right:4px"></span>净利润</span>
+      </div>
+    </div>
+
+    <!-- Fixed Costs + Customer Revenue -->
+    <div class="dash-grid">
+      <div class="dash-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <h3 style="margin:0">月度固定成本</h3>
+          <button class="btn btn-ghost btn-sm" onclick="CRM.ui.openFixedCostForm()">+ 添加</button>
+        </div>
+        <div class="dash-big negative" style="margin-bottom:8px">$${monthlyFixed.toFixed(0)}<span style="font-size:14px;font-weight:400;color:var(--text3)">/月</span></div>
+        <div class="bar-chart">
+          ${fcs.length ? fcs.map(fc=>{
+            const monthlyAmt = toUSD(fc.period === 'yearly' ? (fc.amount||0)/12 : (fc.amount||0), fc.currency);
+            const pct = monthlyFixed > 0 ? monthlyAmt/monthlyFixed*100 : 0;
+            return `<div class="bar-row" style="cursor:pointer" onclick="CRM.ui.openFixedCostForm(CRM.state.data.fixedCosts.find(x=>x.id==='${fc.id}'))">
+              <span class="bar-label">${esc(fc.name)}</span>
+              <div class="bar-track"><div class="bar-fill red" style="width:${pct}%">${pct>15?'$'+Math.round(monthlyAmt):''}</div></div>
+              <span class="bar-val">$${Math.round(monthlyAmt)}/月</span>
+            </div>`;
+          }).join('') : '<div style="color:var(--text3);font-size:12px;padding:8px 0">暂未设置固定成本，点击"+ 添加"开始</div>'}
+          ${fcs.length ? `<div style="border-top:1px solid var(--border);padding-top:8px;margin-top:4px;font-size:12px;color:var(--text2)">盈亏平衡点：月收入需 ≥ <strong>$${monthlyFixed.toFixed(0)}</strong></div>` : ''}
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <h3>客户收入排行</h3>
+        <div class="bar-chart">
+          ${sortedCusts.length ? sortedCusts.slice(0,6).map((d,i)=>`
+            <div class="bar-row">
+              <span class="bar-label">${esc(d[0])}</span>
+              <div class="bar-track"><div class="bar-fill" style="width:${d[1]/maxCust*100}%;background:${custColors[i%custColors.length]}">$${d[1]}</div></div>
+              <span class="bar-val">$${d[1]}</span>
+            </div>
+          `).join('') : '<div style="color:var(--text3);font-size:12px">暂无收入数据</div>'}
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <h3>支出分类构成</h3>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 100 100" width="100" height="100" class="donut-svg">${donutSegments}<circle cx="50" cy="50" r="32" fill="var(--surface)"/><text x="50" y="48" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">$${totalExpense}</text><text x="50" y="60" text-anchor="middle" font-size="7" fill="var(--text3)">总支出</text></svg>
+          <div class="donut-legend">${donutLegend || '<span style="color:var(--text3)">暂无数据</span>'}</div>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <h3>待收款明细</h3>
+        <div class="bar-chart">
+          ${openInvs.length ? openInvs.map(inv=>{
+            const c = inv.customerId ? CRM.state.getCustomer(inv.customerId) : null;
+            const isOverdue = inv.status==='overdue' || (inv.dueDate && inv.dueDate < today && inv.status==='pending');
+            const isWarning = !isOverdue && inv.dueDate && inv.dueDate <= threeDaysLater;
+            return `<div class="bar-row" style="cursor:pointer${isWarning?';background:#fffbeb':''}" onclick="CRM.ui.openInvoiceForm(CRM.state.data.invoices.find(x=>x.id==='${inv.id}'))">
+              <span class="bar-label">${c?esc(c.company||c.name):'?'}</span>
+              <span class="inv-status ${isOverdue?'overdue':isWarning?'pending':''}">${isOverdue?'逾期':isWarning?'⚠ 即将到期':'待收'}</span>
+              <span style="flex:1"></span>
+              <span style="font-size:13px;font-weight:700;color:var(--accent)">$${toUSD(inv.amount||0,inv.currency).toLocaleString()}</span>
+            </div>`;
+          }).join('') : '<div style="color:var(--text3);font-size:12px">全部收齐</div>'}
+        </div>
+      </div>
+
+      <!-- Client Profitability -->
+      <div class="dash-card">
+        <h3>客户盈利分析</h3>
+        <div class="bar-chart">
+          ${sortedProfit.length ? sortedProfit.slice(0,8).map(d=>{
+            const maxP = Math.max(...sortedProfit.map(x=>Math.max(x.income,x.expense)),1);
+            const barW = Math.abs(d.profit)/maxP*100;
+            const color = d.profit >= 0 ? 'var(--green)' : '#ef4444';
+            return `<div class="bar-row">
+              <span class="bar-label">${esc(d.name)}</span>
+              <div class="bar-track"><div class="bar-fill" style="width:${barW}%;background:${color}">${d.profit>=0?'+':''}$${d.profit.toFixed(0)}</div></div>
+              <span class="bar-val" style="color:${color}">${d.profit>=0?'+':''}$${d.profit.toFixed(0)}</span>
+            </div>`;
+          }).join('') : '<div style="color:var(--text3);font-size:12px">暂无数据</div>'}
+          ${sortedProfit.length ? `<div style="border-top:1px solid var(--border);padding-top:6px;margin-top:4px;font-size:11px;color:var(--text3)">收入 - 关联支出 = 净贡献</div>` : ''}
+        </div>
+      </div>
+    </div>`;
+  },
+
+  // Transaction Form
+  openTransactionForm(existing) {
+    const t = existing || { type:'income', category:'', amount:'', currency:'USD', customerId:'', description:'', date: new Date().toISOString().slice(0,10) };
+    const isEdit = !!existing;
+    const custs = CRM.state.data.customers;
+    const cats = t.type === 'income' ? TXN_CATEGORIES_INCOME : TXN_CATEGORIES_EXPENSE;
+    document.getElementById('modalContent').innerHTML = `
+      <h2>${isEdit?'编辑':'添加'}收支</h2>
+      <div class="modal-grid">
+        <div class="field"><label>类型</label><select id="atf_type" onchange="CRM.ui._updateTxCategories()">
+          <option value="income" ${t.type==='income'?'selected':''}>收入</option>
+          <option value="expense" ${t.type==='expense'?'selected':''}>支出</option>
+        </select></div>
+        <div class="field"><label>分类</label><select id="atf_cat">${cats.map(c=>`<option ${t.category===c?'selected':''}>${c}</option>`).join('')}</select></div>
+        <div class="field"><label>金额</label><input id="atf_amount" type="number" step="0.01" value="${t.amount||''}"></div>
+        <div class="field"><label>币种</label><select id="atf_currency">${CURRENCIES.map(c=>`<option ${t.currency===c?'selected':''}>${c}</option>`).join('')}</select></div>
+        <div class="field"><label>日期</label><input id="atf_date" type="date" value="${(t.date||'').slice(0,10)}"></div>
+        <div class="field"><label>关联客户</label><select id="atf_cust"><option value="">-- 无 --</option>${custs.map(c=>`<option value="${c.id}" ${t.customerId===c.id?'selected':''}>${esc(c.company||c.name)}</option>`).join('')}</select></div>
+        <div class="field full"><label>说明</label><input id="atf_desc" value="${esc(t.description)}" placeholder="简要说明"></div>
+      </div>
+      <div class="modal-actions">
+        ${isEdit?`<button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteTransaction('${t.id}');CRM.ui.closeModal()}">删除</button>`:''}
+        <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">取消</button>
+        <button class="btn btn-accent" onclick="CRM.ui.saveTransaction('${t.id||''}')">保存</button>
+      </div>`;
+    this.openModal();
+  },
+
+  _updateTxCategories() {
+    const type = document.getElementById('atf_type').value;
+    const cats = type === 'income' ? TXN_CATEGORIES_INCOME : TXN_CATEGORIES_EXPENSE;
+    document.getElementById('atf_cat').innerHTML = cats.map(c=>`<option>${c}</option>`).join('');
+  },
+
+  saveTransaction(id) {
+    const d = {
+      type: document.getElementById('atf_type').value,
+      category: document.getElementById('atf_cat').value,
+      amount: parseFloat(document.getElementById('atf_amount').value) || 0,
+      currency: document.getElementById('atf_currency').value,
+      customerId: document.getElementById('atf_cust').value,
+      description: document.getElementById('atf_desc').value.trim(),
+      date: document.getElementById('atf_date').value
+    };
+    if (!d.amount) return alert('请填写金额');
+    // Duplicate detection: same customer + same amount + same date + same type
+    if (!id) {
+      const dup = (CRM.state.data.transactions||[]).find(t =>
+        t.type === d.type &&
+        t.customerId === d.customerId &&
+        Math.abs(toUSD(t.amount, t.currency) - toUSD(d.amount, d.currency)) < 1 &&
+        t.date === d.date
+      );
+      if (dup) {
+        const custName = d.customerId ? (CRM.state.getCustomer(d.customerId)?.company || CRM.state.getCustomer(d.customerId)?.name) : '';
+        if (!confirm(`疑似重复记账！\n\n已存在：${custName || '无客户'} ${d.type==='income'?'收入':'支出'} ${CURRENCY_SYMBOLS[d.currency]||'$'}${d.amount} (${d.date})\n\n仍要继续？`)) return;
+      }
+    }
+    if (id) CRM.state.updateTransaction(id, d);
+    else CRM.state.addTransaction(d);
+    this.closeModal();
+  },
+
+  // Invoice Form
+  openInvoiceForm(existing) {
+    const inv = existing || { customerId:'', amount:'', currency:'USD', status:'pending', dueDate:'', description:'' };
+    const isEdit = !!existing;
+    const custs = CRM.state.data.customers;
+    document.getElementById('modalContent').innerHTML = `
+      <h2>${isEdit?'编辑':'添加'}账单</h2>
+      <div class="modal-grid">
+        <div class="field"><label>客户</label><select id="aif_cust">${custs.map(c=>`<option value="${c.id}" ${inv.customerId===c.id?'selected':''}>${esc(c.company||c.name)}</option>`).join('')}</select></div>
+        <div class="field"><label>金额</label><input id="aif_amount" type="number" step="0.01" value="${inv.amount||''}"></div>
+        <div class="field"><label>币种</label><select id="aif_currency">${CURRENCIES.map(c=>`<option ${inv.currency===c?'selected':''}>${c}</option>`).join('')}</select></div>
+        <div class="field"><label>状态</label><select id="aif_status">${INV_STATUS.map(s=>`<option value="${s}" ${inv.status===s?'selected':''}>${INV_LABELS[s]}</option>`).join('')}</select></div>
+        <div class="field"><label>到期日</label><input id="aif_due" type="date" value="${(inv.dueDate||'').slice(0,10)}"></div>
+        <div class="field"><label>收款日</label><input id="aif_paid" type="date" value="${(inv.paidDate||'').slice(0,10)}"></div>
+        <div class="field full"><label>说明</label><input id="aif_desc" value="${esc(inv.description)}" placeholder="服务内容"></div>
+      </div>
+      <div class="modal-actions">
+        ${isEdit?`<button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteInvoice('${inv.id}');CRM.ui.closeModal()}">删除</button>`:''}
+        <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">取消</button>
+        <button class="btn btn-accent" onclick="CRM.ui.saveInvoice('${inv.id||''}')">保存</button>
+      </div>`;
+    this.openModal();
+  },
+
+  saveInvoice(id) {
+    const d = {
+      customerId: document.getElementById('aif_cust').value,
+      amount: parseFloat(document.getElementById('aif_amount').value) || 0,
+      currency: document.getElementById('aif_currency').value,
+      status: document.getElementById('aif_status').value,
+      dueDate: document.getElementById('aif_due').value,
+      paidDate: document.getElementById('aif_paid').value || null,
+      description: document.getElementById('aif_desc').value.trim()
+    };
+    if (!d.amount) return alert('请填写金额');
+    if (id) CRM.state.updateInvoice(id, d);
+    else CRM.state.addInvoice(d);
+    this.closeModal();
+  },
+
+  // Fixed Cost Form
+  openFixedCostForm(existing) {
+    const fc = existing || { name:'', category:'服务器/VPS', amount:'', currency:'USD', period:'monthly' };
+    const isEdit = !!existing;
+    document.getElementById('modalContent').innerHTML = `
+      <h2>${isEdit?'编辑':'添加'}固定成本</h2>
+      <div class="modal-grid">
+        <div class="field full"><label>名称</label><input id="fcf_name" value="${esc(fc.name)}" placeholder="如：AWS服务器、ADS Power"></div>
+        <div class="field"><label>分类</label><select id="fcf_cat">${TXN_CATEGORIES_EXPENSE.map(c=>`<option ${fc.category===c?'selected':''}>${c}</option>`).join('')}</select></div>
+        <div class="field"><label>金额</label><input id="fcf_amount" type="number" step="0.01" value="${fc.amount||''}"></div>
+        <div class="field"><label>币种</label><select id="fcf_currency">${CURRENCIES.map(c=>`<option ${fc.currency===c?'selected':''}>${c}</option>`).join('')}</select></div>
+        <div class="field"><label>周期</label><select id="fcf_period"><option value="monthly" ${fc.period==='monthly'?'selected':''}>每月</option><option value="yearly" ${fc.period==='yearly'?'selected':''}>每年</option></select></div>
+      </div>
+      <div class="modal-actions">
+        ${isEdit?`<button class="btn btn-ghost" style="color:#ef4444;margin-right:auto" onclick="if(confirm('确认删除?')){CRM.state.deleteFixedCost('${fc.id}');CRM.ui.closeModal()}">删除</button>`:''}
+        <button class="btn btn-ghost" onclick="CRM.ui.closeModal()">取消</button>
+        <button class="btn btn-accent" onclick="CRM.ui.saveFixedCost('${fc.id||''}')">保存</button>
+      </div>`;
+    this.openModal();
+  },
+
+  saveFixedCost(id) {
+    const d = {
+      name: document.getElementById('fcf_name').value.trim(),
+      category: document.getElementById('fcf_cat').value,
+      amount: parseFloat(document.getElementById('fcf_amount').value) || 0,
+      currency: document.getElementById('fcf_currency').value,
+      period: document.getElementById('fcf_period').value
+    };
+    if (!d.name || !d.amount) return alert('请填写名称和金额');
+    if (id) CRM.state.updateFixedCost(id, d);
+    else CRM.state.addFixedCost(d);
+    this.closeModal();
   },
 
   // Drag & Drop
@@ -1233,7 +2021,12 @@ CRM.ui = {
     reader.onload = () => {
       try {
         const data = JSON.parse(reader.result);
-        if (!data.customers) throw new Error('Invalid format');
+        if (!data.customers || !Array.isArray(data.customers)) throw new Error('Invalid format: missing customers');
+        // Ensure all array fields exist
+        ['tasks','transactions','invoices','fixedCosts'].forEach(key => {
+          if (!Array.isArray(data[key])) data[key] = [];
+        });
+        if (!data.meta) data.meta = { lastUpdated: new Date().toISOString() };
         const existingC = CRM.state.data.customers.length;
         const existingT = CRM.state.data.tasks.length;
         if (!confirm(`⚠️ 导入会覆盖当前全部数据！\n\n当前：${existingC} 个客户、${existingT} 个任务\n导入：${data.customers.length} 个客户、${data.tasks?.length||0} 个任务\n\n如果是追加，建议先"导出"当前数据，合并后再导入。\n\n确认覆盖导入？`)) {
@@ -1346,7 +2139,7 @@ setInterval(() => CRM.ui.checkAppointments(), 300000);
 CRM.state.load();
 CRM.ui._initTouchDrag();
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
 </script>
 </body>
 </html>
