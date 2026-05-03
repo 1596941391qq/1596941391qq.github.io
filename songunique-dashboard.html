@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="utf-8">
-  <title>SongUnique 文章数据</title>
+  <title>MOCLAW 文章数据</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
   <style>
@@ -134,7 +134,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="page-title">SongUnique 文章数据洞察</div>
+      <div class="page-title">MOCLAW 文章数据洞察</div>
       <p class="subtitle">发布天数 vs 阅读量增长分析</p>
     </div>
 
@@ -225,7 +225,57 @@
     // 格式: { keyword, created_at, views, url }
     // created_at: ISO 日期字符串
     // url: UniFuncs 分享链接
-    const rawData = [{"keyword":"custom song gift","title":"","created_at":"","views":24,"url":"https://unifuncs.com/s/rbzJcrEv"},{"keyword":"custom birthday song","title":"","created_at":"","views":18,"url":"https://unifuncs.com/s/CE15IMVI"},{"keyword":"memorial song","title":"","created_at":"","views":17,"url":"https://unifuncs.com/s/HccFtcSp"},{"keyword":"song for wife","title":"","created_at":"","views":14,"url":"https://unifuncs.com/s/KJaCOcZV"},{"keyword":"wedding song gift","title":"","created_at":"","views":12,"url":"https://unifuncs.com/s/W8l7Qeuv"},{"keyword":"personalized anniversary song","title":"","created_at":"","views":11,"url":"https://unifuncs.com/s/64ORNk4l"},{"keyword":"song for mom","title":"","created_at":"","views":11,"url":"https://unifuncs.com/s/JnRltDXr"},{"keyword":"personalized song gift","title":"","created_at":"","views":0,"url":""},{"keyword":"create a song for someone","title":"","created_at":"","views":0,"url":""},{"keyword":"song for dad","title":"","created_at":"","views":0,"url":""}];
+    const rawData = [
+  {
+    "keyword": "custom song gift",
+    "title": "",
+    "views": 24,
+    "url": "https://unifuncs.com/s/rbzJcrEv",
+    "created_at": ""
+  },
+  {
+    "keyword": "custom birthday song",
+    "title": "",
+    "views": 18,
+    "url": "https://unifuncs.com/s/CE15IMVI",
+    "created_at": ""
+  },
+  {
+    "keyword": "memorial song",
+    "title": "",
+    "views": 17,
+    "url": "https://unifuncs.com/s/HccFtcSp",
+    "created_at": ""
+  },
+  {
+    "keyword": "song for wife",
+    "title": "",
+    "views": 14,
+    "url": "https://unifuncs.com/s/KJaCOcZV",
+    "created_at": ""
+  },
+  {
+    "keyword": "wedding song gift",
+    "title": "",
+    "views": 12,
+    "url": "https://unifuncs.com/s/W8l7Qeuv",
+    "created_at": ""
+  },
+  {
+    "keyword": "personalized anniversary song",
+    "title": "",
+    "views": 11,
+    "url": "https://unifuncs.com/s/64ORNk4l",
+    "created_at": ""
+  },
+  {
+    "keyword": "song for mom",
+    "title": "",
+    "views": 11,
+    "url": "https://unifuncs.com/s/JnRltDXr",
+    "created_at": ""
+  }
+];
 
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
