@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moment AI | SEO 审计与四线策略</title>
+<style>
+  :root{
+    --bg:#f4efe7;
+    --paper:#fcfaf6;
+    --panel:#fffdfa;
+    --line:#ddd2c2;
+    --line-strong:#cdbca4;
+    --ink:#1f2a35;
+    --muted:#65717c;
+    --soft:#8d826f;
+    --accent:#315f68;
+    --accent-soft:#edf4f4;
+    --gold:#9c6a3e;
+    --gold-soft:#f6ede4;
+    --good:#2f6d52;
+    --warn:#b26b2a;
+    --bad:#b64b3d;
+    --neutral:#5c6772;
+    --shadow:0 20px 48px rgba(31,42,53,.08);
+    --radius:22px;
+    --max:1440px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(156,106,62,.08), transparent 24%),
+      radial-gradient(circle at top right, rgba(49,95,104,.08), transparent 28%),
+      var(--bg);
+    color:var(--ink);
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .shell{max-width:var(--max);margin:0 auto;padding:24px}
+  .layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:start}
+  .rail{
+    position:sticky;top:18px;
+    background:rgba(255,253,249,.84);
+    border:1px solid rgba(221,210,194,.92);
+    border-radius:28px;
+    padding:26px 24px;
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(18px);
+  }
+  .rail h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:32px;
+    line-height:1.02;
+    letter-spacing:-.04em;
+    font-weight:500;
+    margin-bottom:10px;
+  }
+  .rail p{font-size:13px;color:var(--soft);margin-bottom:18px}
+  .rail nav a{
+    display:block;
+    padding:8px 0;
+    color:var(--muted);
+    border-bottom:1px solid rgba(221,210,194,.72);
+    font-size:14px;
+  }
+  .rail nav a:last-child{border-bottom:none}
+  .page{
+    background:var(--paper);
+    border:1px solid rgba(221,210,194,.95);
+    border-radius:32px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .hero{
+    padding:48px 52px 40px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(circle at top right, rgba(156,106,62,.11), transparent 26%),
+      radial-gradient(circle at top left, rgba(49,95,104,.11), transparent 32%),
+      linear-gradient(180deg, rgba(255,255,255,.95), rgba(252,250,246,.98));
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 12px;
+    border-radius:999px;
+    border:1px solid rgba(156,106,62,.18);
+    background:rgba(156,106,62,.08);
+    color:var(--gold);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:58px;
+    line-height:1.02;
+    letter-spacing:-.05em;
+    font-weight:500;
+    max-width:860px;
+  }
+  .lead{
+    max-width:920px;
+    margin-top:18px;
+    font-size:20px;
+    line-height:1.65;
+    color:#44505b;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.25fr .95fr;gap:18px;margin-top:28px}
+  .hero-card,.hero-note{
+    border:1px solid rgba(221,210,194,.86);
+    border-radius:20px;
+    background:rgba(255,255,255,.82);
+    padding:20px 22px;
+  }
+  .mini{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--soft);
+    margin-bottom:10px;
+  }
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .pill{
+    padding:7px 12px;
+    border-radius:999px;
+    border:1px solid rgba(221,210,194,.95);
+    background:rgba(255,255,255,.8);
+    font-size:13px;
+    color:var(--muted);
+  }
+  section{padding:36px 52px;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:none}
+  .label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:36px;
+    line-height:1.08;
+    letter-spacing:-.035em;
+    font-weight:500;
+    margin-bottom:16px;
+  }
+  h3{font-size:20px;line-height:1.38;font-weight:600;margin-bottom:10px}
+  p + p{margin-top:14px}
+  .statement{font-size:24px;line-height:1.55;color:#33414d;max-width:980px}
+  .grid-2,.grid-3{display:grid;gap:16px}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:0 10px 26px rgba(31,42,53,.04);
+  }
+  .box{
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:24px;
+    background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,252,248,.97));
+  }
+  .issue{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(221,210,194,.78);
+  }
+  .issue:last-child{border-bottom:none}
+  .sev{
+    font-size:12px;
+    color:var(--soft);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  .sev strong{
+    display:block;
+    margin-top:4px;
+    font-size:20px;
+    text-transform:none;
+    letter-spacing:-.02em;
+  }
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{
+    text-align:left;
+    vertical-align:top;
+    padding:14px 12px;
+    border-bottom:1px solid rgba(221,210,194,.84);
+  }
+  th{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--soft);
+    font-weight:600;
+  }
+  .quote{
+    margin-top:14px;
+    padding:14px 16px;
+    border-radius:16px;
+    background:var(--gold-soft);
+    border:1px solid rgba(156,106,62,.16);
+    color:#5d4a3d;
+    font-size:14px;
+  }
+  .score{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+  }
+  .score-num{
+    min-width:62px;
+    height:62px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-size:24px;
+    font-weight:700;
+  }
+  .status-good{color:var(--good);font-weight:700}
+  .status-warn{color:var(--warn);font-weight:700}
+  .status-bad{color:var(--bad);font-weight:700}
+  .status-muted{color:var(--neutral);font-weight:700}
+  .module-sep td{
+    background:rgba(49,95,104,.06);
+    color:var(--accent);
+    font-weight:700;
+    border-bottom:1px solid rgba(49,95,104,.16);
+  }
+  .line-block{
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:24px;
+    background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(250,247,241,.96));
+  }
+  .line-head{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:14px;
+    align-items:flex-start;
+  }
+  .line-num{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--soft);
+    margin-bottom:6px;
+  }
+  .tag{
+    white-space:nowrap;
+    font-size:12px;
+    color:var(--soft);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:7px 12px;
+    background:rgba(255,255,255,.8);
+  }
+  .road{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:18px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(221,210,194,.78);
+  }
+  .road:last-child{border-bottom:none}
+  .phase{
+    font-size:14px;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .footer-note{
+    margin-top:16px;
+    color:var(--soft);
+    font-size:13px;
+  }
+  @media (max-width:1100px){
+    .layout{grid-template-columns:1fr}
+    .rail{position:relative;top:auto}
+    .hero-grid,.grid-3{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    .shell{padding:12px}
+    .hero,section{padding:28px 22px}
+    h1{font-size:42px}
+    h2{font-size:30px}
+    .lead{font-size:18px}
+    .grid-2,.hero-grid{grid-template-columns:1fr}
+    .issue,.road{grid-template-columns:1fr}
+    .line-head{flex-direction:column}
+    .tag{white-space:normal}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="layout">
+    <aside class="rail">
+      <h2>Moment AI</h2>
+      <p>客户版 SEO 审计与四线策略，围绕索引结构、页面角色、内容系统与站外证据层展开。</p>
+      <nav>
+        <a href="#summary">执行摘要</a>
+        <a href="#scores">评分与原因</a>
+        <a href="#issues">关键问题</a>
+        <a href="#audit">全面审计</a>
+        <a href="#fixlist">优先修复</a>
+        <a href="#line1">第一条线</a>
+        <a href="#line2">第二条线</a>
+        <a href="#line3">第三条线</a>
+        <a href="#line4">第四条线</a>
+        <a href="#keywords">关键词分级</a>
+        <a href="#roadmap">执行路线图</a>
+        <a href="#growth">增长与转化</a>
+      </nav>
+    </aside>
+
+    <main class="page">
+      <div class="hero">
+        <div class="eyebrow">SEO Audit + Strategy</div>
+        <h1>Moment AI SEO 审计与四线策略</h1>
+        <p class="lead">这不是一个“文案再补一点”的站，而是一个“索引结构还没真正开始”的站。首页已经像一个合格的产品落地页，但搜索引擎看到的仍然几乎只有首页一个壳。</p>
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="mini">项目元信息</div>
+            <div class="meta">
+              <span class="pill">品牌：Moment AI</span>
+              <span class="pill">站点：meetmomentai.com</span>
+              <span class="pill">站点类型：AI personal knowledge assistant</span>
+              <span class="pill">审计日期：2026-05-04</span>
+            </div>
+            <div class="quote">核心证据：`robots.txt` 正常，`sitemap.xml` 仅 1 个 URL；`/pricing`、`/blog`、`/download`、`/privacy`、`/terms` 共用首页 title、description、canonical；HTTP 未 301 到 HTTPS。</div>
+          </div>
+          <div class="hero-note">
+            <div class="mini">一句话结论</div>
+            <p>Moment AI 现在最需要的不是继续堆 homepage copy，而是先把首页拆成真正独立的价格页、下载页、功能页、场景页、对比页和 FAQ 页，让搜索和 AI 引用系统第一次看见一个“产品站”，而不是“单页站”。</p>
+          </div>
+        </div>
+      </div>
+
+      <section id="summary">
+        <div class="label">Executive Summary</div>
+        <h2>执行摘要</h2>
+        <p class="statement">Moment AI 的产品定位其实不模糊。首页已经在讲“把个人知识系统变成决策与行动”，这句话是对的。问题不在定位，而在页面结构没有把定位翻译给搜索系统。</p>
+        <p>当前站点的基础元信息并不差：首页有 title、meta description、canonical、OG/Twitter 和 `Organization / WebSite / SoftwareApplication` 三类 schema。问题是这些信号几乎只存在于首页，而公开可访问的其他路由大多仍复用同一套首页 SEO 包。对搜索引擎来说，这等于在说：这个站没有真正的价格页、没有真正的博客、没有真正的下载页，只有一个首页和几个长得像首页的壳。</p>
+        <p>这会直接卡住增长上限。你可以继续跑品牌曝光、继续发 X 内容、继续做产品发布，但自然搜索、品牌词扩展、功能词承接、竞品词截流、AI 搜索引用，都会在“站内可索引页面面太薄”这个前置问题上被拦住。Moment AI 应该先修站点结构，再谈内容扩张。</p>
+      </section>
+
+      <section id="scores">
+        <div class="label">Scorecard</div>
+        <h2>评分与原因</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="score">
+              <div class="score-num">72</div>
+              <div>
+                <h3>首页基础 SEO</h3>
+                <p>首页 title、description、canonical、OG/Twitter、schema 都在线，H1 清楚，基础落地页包装合格。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="score">
+              <div class="score-num">28</div>
+              <div>
+                <h3>索引结构与页面分工</h3>
+                <p>公开路由基本没有独立 SEO 包，`sitemap.xml` 只列首页，站点仍接近单页结构。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="score">
+              <div class="score-num">34</div>
+              <div>
+                <h3>内容系统与增长面</h3>
+                <p>缺 feature、use-case、compare、guide、FAQ 等承接页，首页承载了几乎全部搜索意图。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-3" style="margin-top:16px">
+          <div class="card">
+            <div class="score">
+              <div class="score-num">38</div>
+              <div>
+                <h3>技术底盘</h3>
+                <p>HTTP 未跳 HTTPS，HSTS 未见，下载跳转首包偏慢，底盘不算灾难，但明显未收口。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="score">
+              <div class="score-num">31</div>
+              <div>
+                <h3>AI Search Ready</h3>
+                <p>首页可读，但缺“定义页、对比页、FAQ 页、步骤页、事实页”这类易摘取内容面。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="score">
+              <div class="score-num">26</div>
+              <div>
+                <h3>站外证据层</h3>
+                <p>当前几乎看不到足够厚的品牌外部证据、比较语境和可链接资产。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="issues">
+        <div class="label">Priority Findings</div>
+        <h2>关键问题</h2>
+        <div class="box">
+          <div class="issue">
+            <div class="sev">P0<br><strong>单页站壳</strong></div>
+            <div>
+              <h3>公开路由大多没有独立页面身份</h3>
+              <p>`/pricing`、`/blog`、`/download`、`/privacy`、`/terms` 虽然都能打开，但 title、description、canonical 仍与首页一致。搜索引擎会把这些路由理解为首页的镜像，而不是独立页面。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev">P0<br><strong>索引入口不足</strong></div>
+            <div>
+              <h3>`sitemap.xml` 只暴露首页</h3>
+              <p>这会直接压低站点的可发现性。对 AI 工具站来说，价格、下载、功能、场景、FAQ、对比页都应该进入 sitemap，而不是只让首页单兵作战。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev">P0<br><strong>协议未收口</strong></div>
+            <div>
+              <h3>HTTP 没有 301 到 HTTPS</h3>
+              <p>`http://meetmomentai.com/` 当前返回 200，不是 301 到 HTTPS。权重归一、抓取规范和信任一致性都还没收好。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev">P1<br><strong>内容矩阵缺失</strong></div>
+            <div>
+              <h3>没有 feature、use-case、compare、guide 体系</h3>
+              <p>Moment AI 的最佳故事不是“我们也有 AI”，而是“你的零散知识如何变成行动”。这个叙事需要由功能页、场景页、替代页、FAQ 页共同承担，而不是只靠首页一屏屏往下堆。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="audit">
+        <div class="label">16 Audit Modules</div>
+        <h2>全面审计</h2>
+        <div class="box">
+          <table>
+            <tr>
+              <th>#</th>
+              <th>审计项</th>
+              <th>判断</th>
+            </tr>
+
+            <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
+            <tr><td>001</td><td>robots.txt</td><td><strong class="status-good">基础通过</strong>：`User-agent: *`、`Allow: /` 与 `Sitemap:` 已存在，抓取入口不是主要问题。</td></tr>
+            <tr><td>002</td><td>sitemap.xml</td><td><strong class="status-bad">结构不足</strong>：目前只列出首页 1 个 URL。搜索引擎看不到价格页、下载页、内容页等更多抓取入口。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">02 索引治理</td></tr>
+            <tr><td>003</td><td>公开页面是否独立可索引</td><td><strong class="status-bad">高风险</strong>：多个公开路由复用首页 SEO 包，说明公开页面还没有真正独立的索引身份。</td></tr>
+            <tr><td>004</td><td>index / noindex 分层</td><td><strong class="status-warn">待明确</strong>：当前看不到清晰的收录白名单和 noindex 边界，后续扩页前必须先分层。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">03 canonical 与域名映射</td></tr>
+            <tr><td>005</td><td>首页 canonical</td><td><strong class="status-good">正常</strong>：首页 canonical 指向 `https://meetmomentai.com/`，首页本身没有错。</td></tr>
+            <tr><td>006</td><td>子页面 canonical</td><td><strong class="status-bad">严重问题</strong>：`/pricing`、`/blog`、`/download`、`/privacy`、`/terms` canonical 都指向首页，直接抹掉子页排名资格。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">04 状态码与跳转</td></tr>
+            <tr><td>007</td><td>HTTP 到 HTTPS</td><td><strong class="status-bad">P0</strong>：HTTP 返回 200，不是 301 到 HTTPS。协议归一还没完成。</td></tr>
+            <tr><td>008</td><td>下载跳转</td><td><strong class="status-warn">可用但偏慢</strong>：下载由 `javascript:downloadMac()` 触发并跳转到 DMG，首包约 2.28 秒，转化体验可继续优化。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">05 SERP 片段</td></tr>
+            <tr><td>009</td><td>首页 title / description</td><td><strong class="status-good">基础不错</strong>：首页标题明确讲清了 AI personal knowledge assistant 的品类。</td></tr>
+            <tr><td>010</td><td>路由级 SERP copy</td><td><strong class="status-bad">缺失</strong>：价格词、下载词、内容词没有自己的 title 和 description，SERP 点击面无法展开。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">06 标题与语义结构</td></tr>
+            <tr><td>011</td><td>首页 H1</td><td><strong class="status-good">清楚</strong>：H1 直接表达“Turn Your Personal Knowledge System into Decisions and Actions.”，定位清晰。</td></tr>
+            <tr><td>012</td><td>路由级语义树</td><td><strong class="status-warn">待重建</strong>：功能页、场景页、价格页没有各自的 H1/H2 语义角色，首页承担过多意图。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">07 页面角色分工</td></tr>
+            <tr><td>013</td><td>首页角色</td><td><strong class="status-warn">过载</strong>：首页同时承担品牌词、功能词、场景词、价格词、下载词与对比词，不利于任何一个意图做深。</td></tr>
+            <tr><td>014</td><td>关键路由分工</td><td><strong class="status-bad">缺失</strong>：缺真正独立的 `/pricing`、`/download`、`/use-cases`、`/compare`、`/faq` 页面体系。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">08 内容厚度与覆盖</td></tr>
+            <tr><td>015</td><td>首页内容厚度</td><td><strong class="status-warn">只够 landing，不够系统</strong>：首页能解释产品，但不足以支撑完整搜索矩阵。</td></tr>
+            <tr><td>016</td><td>内容覆盖面</td><td><strong class="status-bad">明显不足</strong>：未发现 docs、场景页、对比页、可索引博客档案页，知识面太薄。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">09 信息架构</td></tr>
+            <tr><td>017</td><td>目录级结构</td><td><strong class="status-bad">尚未建立</strong>：当前更多是首页锚点，而不是 `/features/`、`/use-cases/`、`/compare/` 这类目录结构。</td></tr>
+            <tr><td>018</td><td>搜索意图承接</td><td><strong class="status-warn">薄</strong>：价格、下载、替代关系、工作流问题都没有自己的承接页。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">10 内链分发</td></tr>
+            <tr><td>019</td><td>首页可见内链</td><td><strong class="status-warn">偏薄</strong>：当前主要是 `#pricing`、`#product`、`#use-cases` 这类锚点，加上下载动作和 Discord 外链。</td></tr>
+            <tr><td>020</td><td>站内权重分配</td><td><strong class="status-bad">无体系</strong>：没有 hub 页到 leaf 页、内容页回流商业页的内链骨架。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">11 Schema 覆盖</td></tr>
+            <tr><td>021</td><td>首页 schema</td><td><strong class="status-good">基础到位</strong>：`Organization`、`WebSite`、`SoftwareApplication` 已存在。</td></tr>
+            <tr><td>022</td><td>页面级 schema</td><td><strong class="status-warn">待扩展</strong>：`Pricing / FAQ / Article / Compare` 等页面类型还没有各自的结构化数据承接。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">12 媒体与图像 SEO</td></tr>
+            <tr><td>023</td><td>基础分享图</td><td><strong class="status-good">有基础</strong>：OG/Twitter 元标签已存在，分享层面不空。</td></tr>
+            <tr><td>024</td><td>产品截图资产</td><td><strong class="status-warn">未成体系</strong>：未见围绕具体 use case 的截图页、图像命名和可索引媒体资产结构。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">13 性能与 CWV</td></tr>
+            <tr><td>025</td><td>底层响应</td><td><strong class="status-warn">中等风险</strong>：HTTP/HTTPS 规范未收口，下载跳转首包偏慢。</td></tr>
+            <tr><td>026</td><td>CWV 实测</td><td><strong class="status-muted">未实测</strong>：当前缺 Lighthouse / PageSpeed 结果，需补跑移动端与桌面端实测。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">14 转化与信任</td></tr>
+            <tr><td>027</td><td>首页信任信号</td><td><strong class="status-warn">有但不够厚</strong>：已有“5,000+ doers”和 pricing，但缺更强的真实 workflow、使用前后对比和 objection handling。</td></tr>
+            <tr><td>028</td><td>商业承接页</td><td><strong class="status-bad">缺</strong>：定价、下载、FAQ 还没有真正独立承接页，离成交越近，越需要说真话和讲边界。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">15 AI Search Ready</td></tr>
+            <tr><td>029</td><td>事实页与定义页</td><td><strong class="status-bad">缺失</strong>：还没有“what is Moment AI / how it works / who it is for / alternatives”这种易被 AI 摘取的页面。</td></tr>
+            <tr><td>030</td><td>结构化答案格式</td><td><strong class="status-warn">待建设</strong>：FAQ、对比表、步骤页、短定义、限制说明越多，AI 搜索越容易引用。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">16 站外证据层</td></tr>
+            <tr><td>031</td><td>品牌外部证据</td><td><strong class="status-bad">偏薄</strong>：当前可见的外部证据层不厚，首页外链面也很轻。</td></tr>
+            <tr><td>032</td><td>可链接资产</td><td><strong class="status-warn">待建设</strong>：比较页、工作流模板、知识管理方法页都可以变成别人愿意引用的资产，现在还没长出来。</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="fixlist">
+        <div class="label">Fix Order</div>
+        <h2>优先修复</h2>
+        <div class="box">
+          <table>
+            <tr>
+              <th>优先级</th>
+              <th>动作</th>
+              <th>为什么先做</th>
+              <th>对应条线</th>
+            </tr>
+            <tr><td><strong>P0</strong></td><td>HTTP 全站 301 到 HTTPS</td><td>这是最便宜但必须先收的技术底盘。协议不统一，权重和信任都分裂。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>为 `/pricing`、`/download`、`/blog` 等公开路由输出独立 title / meta / canonical</td><td>只要路由还共用首页 SEO 包，搜索引擎就不会把它们当独立页面。</td><td>第三条线</td></tr>
+            <tr><td><strong>P0</strong></td><td>重做 sitemap，让所有公开可索引页进入地图</td><td>现在 sitemap 只有首页，结构性限制太明显。</td><td>第三条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>上线独立 `/pricing`、`/download`、`/faq`</td><td>这是商业意图最重、最该独立承接的三类页面。</td><td>第二条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>建立 `/features/` 与 `/use-cases/` 首批 6 页</td><td>Moment AI 的最佳叙事是工作流，不是功能清单。场景页比继续加首页段落更有效。</td><td>第二条线</td></tr>
+            <tr><td><strong>P1</strong></td><td>建立 `/compare/` 首批 5 页</td><td>替代词和对比词离决策最近，也是 AI 工具站最容易先打透的入口。</td><td>第一条线</td></tr>
+            <tr><td><strong>P2</strong></td><td>启动 guides / blog 内容中心</td><td>在路由级结构修完之前，大规模发内容效率不高。结构修完后再扩内容，胜率更高。</td><td>第二条线</td></tr>
+            <tr><td><strong>P2</strong></td><td>围绕 compare 与 workflow 做站外证据层</td><td>站外不是“发点曝光”，而是把可链接资产推到别人愿意引用的地方。</td><td>第四条线</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="line1">
+        <div class="label">Line 1</div>
+        <h2>第一条线：导流与捕获</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 1</div>
+              <h3>先打替代关系和工作流问题，不先硬刚泛词</h3>
+            </div>
+            <div class="tag">compare / alternative / workflow / intent capture</div>
+          </div>
+          <p>Moment AI 不该先去碰“AI productivity app”这种大泛词。那个词太散，竞争对象也太广。更稳的打法是从“个人知识工具替代关系”和“具体工作流问题”切进去，因为这两类词既更接近真实需求，也更适合产品差异表达。</p>
+          <p>Moment AI 的主叙事不是“又一个 AI 工具”，而是“capture scattered knowledge -> organize it -> retrieve it -> turn it into decisions and action”。所以第一条线的核心不是泛泛发博客，而是做真正能承接意图的对比页、问题页和场景页。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">优先词方向</div>
+              <p>`ai personal knowledge assistant`、`second brain ai assistant`、`ai note organizer`、`moment ai alternatives`、`mem alternative`、`reflect alternative`、`how to turn notes into action items`。</p>
+            </div>
+            <div class="card">
+              <div class="mini">优先页面</div>
+              <p>`/compare/moment-ai-vs-mem`、`/compare/moment-ai-vs-reflect`、`/personal-knowledge-assistant`、`/use-cases/notes-to-action-items`、`/use-cases/organize-screenshots-links`。</p>
+            </div>
+            <div class="card">
+              <div class="mini">执行原则</div>
+              <p>先打明确 intent，再扩品类词。先做“谁会切换、为什么切换、切过去会得到什么”，再谈泛化教育内容。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line2">
+        <div class="label">Line 2</div>
+        <h2>第二条线：主站内容系统与页面角色重建</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 2</div>
+              <h3>把首页从总包页，拆成真正的产品站结构</h3>
+            </div>
+            <div class="tag">features / use cases / faq / guides / pricing</div>
+          </div>
+          <p>Moment AI 当前最大的问题不是内容写得差，而是内容都挤在首页里。首页可以负责品牌叙事和主转化，但它不应该继续扛价格、下载、功能、场景、对比、FAQ、教育所有角色。</p>
+          <p>正确做法是把页面角色拆开，让每个页面只承担一个清楚任务：价格页负责回答值不值得买，下载页负责回答在哪里装、怎么装，功能页负责讲能力边界，场景页负责讲什么时候用、为什么用，对比页负责截流竞品词，FAQ 页负责把犹豫点一口气解释干净。</p>
+          <div class="grid-2" style="margin-top:18px">
+            <div class="card">
+              <div class="mini">建议站内结构</div>
+              <p>`/pricing`、`/download`、`/features/turn-knowledge-into-actions`、`/features/capture-notes-links`、`/use-cases/research-notes-to-decision`、`/use-cases/screenshots-to-knowledge`、`/compare/moment-ai-vs-mem`、`/faq`、`/guides/what-is-a-personal-knowledge-assistant`。</p>
+            </div>
+            <div class="card">
+              <div class="mini">首页保留职责</div>
+              <p>首页只保留：品类定义、核心承诺、主功能概览、社会证明、主 CTA。其他搜索意图全部分流到独立 URL。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line3">
+        <div class="label">Line 3</div>
+        <h2>第三条线：技术底盘修复</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 3</div>
+              <h3>先把“能被理解、能被收录、能被归一”这三件事做实</h3>
+            </div>
+            <div class="tag">https / canonical / sitemap / metadata / schema</div>
+          </div>
+          <p>第三条线不是锦上添花，它是所有增长动作的地基。只要 HTTP 没跳 HTTPS、公开路由没有 self canonical、sitemap 只有首页、路由级 title/meta 不独立，后面无论做多少内容和站外分发，都会被技术前提拦住。</p>
+          <div class="cols">
+            <div class="card">
+              <div class="mini">本周必须完成</div>
+              <p>HTTP 全站 301 到 HTTPS；为所有公开路由输出独立 title、meta、canonical；重建 sitemap；建立 index / noindex 白名单。</p>
+            </div>
+            <div class="card">
+              <div class="mini">两周内补齐</div>
+              <p>`/pricing` 上 Offer schema，`/faq` 上 FAQPage，`/blog/*` 上 Article，`/compare/*` 补对比表和 FAQ。</p>
+            </div>
+            <div class="card">
+              <div class="mini">技术线目标</div>
+              <p>不是把分数刷好看，而是让搜索引擎第一次把 Moment AI 当成一个真正有页面结构的产品站。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line4">
+        <div class="label">Line 4</div>
+        <h2>第四条线：站外 SEO 与证据资产</h2>
+        <div class="line-block">
+          <div class="line-head">
+            <div>
+              <div class="line-num">Line 4</div>
+              <h3>把比较语境和工作流资产，变成别人愿意引用的外部证据</h3>
+            </div>
+            <div class="tag">mentions / directories / community / resources / outreach</div>
+          </div>
+          <p>Moment AI 的站外 SEO 不能写成“做点品牌曝光”。真正有用的站外动作，是把主站里的 compare、workflow、模板、方法页推到那些本来就在讨论个人知识管理和 AI 工作流的人群面前，让外部世界开始为它建立语境。</p>
+          <div class="grid-2" style="margin-top:18px">
+            <div class="card">
+              <div class="mini">优先外部资产</div>
+              <p>`Mem vs Reflect vs Heptabase vs Moment AI`、`How to turn scattered notes into decisions`、`Best tools for managing screenshots, links and notes`、`Weekly review template for personal knowledge systems`。</p>
+            </div>
+            <div class="card">
+              <div class="mini">优先外部分发位</div>
+              <p>PKM 社区、AI workflow newsletter、note-taking 工具评测站、Product Hunt / launch 平台、Medium / Substack 的 workflow 文章区、resource page 与 comparison roundup。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="keywords">
+        <div class="label">Keyword Map</div>
+        <h2>关键词分级</h2>
+        <div class="box">
+          <table>
+            <tr><th>级别</th><th>关键词方向</th><th>承接页面</th></tr>
+            <tr><td><strong>S</strong></td><td>ai personal knowledge assistant / second brain ai assistant / ai knowledge assistant</td><td>品类定义页与核心功能页</td></tr>
+            <tr><td><strong>A</strong></td><td>moment ai pricing / moment ai download / moment ai review / ai tool for notes and links</td><td>`/pricing`、`/download`、`/review`、功能页</td></tr>
+            <tr><td><strong>B</strong></td><td>mem alternative / reflect alternative / heptabase alternative / capacities alternative</td><td>`/compare/*` 对比页</td></tr>
+            <tr><td><strong>C</strong></td><td>how to turn notes into action items / how to organize screenshots and links / how to build an ai second brain</td><td>use-case 与 guide 页面</td></tr>
+            <tr><td><strong>D</strong></td><td>best ai tools for personal knowledge management / personal knowledge management workflow</td><td>roundup、guide 与站外资产联动</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="label">Roadmap</div>
+        <h2>执行路线图</h2>
+        <div class="road">
+          <div class="phase">第 1 周</div>
+          <div><h3>先修收录资格</h3><p>完成 HTTP 到 HTTPS 301、公开路由独立 metadata、self canonical、sitemap 重建、index / noindex 白名单。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 2 周</div>
+          <div><h3>补商业页与信任页</h3><p>上线独立 `/pricing`、`/download`、`/faq`，把最接近转化的三类页面先做实。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 3-4 周</div>
+          <div><h3>搭功能页与场景页</h3><p>上线 `/features/` 与 `/use-cases/` 首批 6 页，让首页从总包页变成分发页。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 5-6 周</div>
+          <div><h3>抢竞品词</h3><p>上线 5 个 compare 页面，围绕 Mem、Reflect、Heptabase、Capacities、Readwise 建立替代关系截流面。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 7-8 周</div>
+          <div><h3>启动 guide 与内容中心</h3><p>在结构稳定后再扩内容，每周 2-3 篇，主打定义、方法、工作流和 FAQ 型内容。</p></div>
+        </div>
+        <div class="road">
+          <div class="phase">第 9-12 周</div>
+          <div><h3>做站外证据层</h3><p>围绕 compare、workflow、模板和 founder narrative 做社区分发、目录收录、资源页拓展和外部文章引用。</p></div>
+        </div>
+      </section>
+
+      <section id="growth">
+        <div class="label">Growth & Conversion</div>
+        <h2>内容增长与转化</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div class="mini">增长逻辑</div>
+            <p>Moment AI 最适合的增长顺序不是“先发很多博客”，而是“先修结构，再建页面矩阵，再让内容扩张”。因为这个站当前缺的不是文章数量，而是页面角色和索引资格。</p>
+          </div>
+          <div class="card">
+            <div class="mini">转化路径</div>
+            <p>搜索查询或 AI 引用 -> compare / guide / use-case 页 -> feature / pricing / faq -> download / signup。关键不是把人都扔回首页，而是在每一步都给用户一个更接近决策的答案。</p>
+          </div>
+        </div>
+        <p class="footer-note">这份客户稿保留了完整的审计、优先修复、四线策略、关键词分级与执行路线图。核心判断很简单：Moment AI 的问题不是“没有 SEO 包”，而是“SEO 包几乎只包住了首页”。</p>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>
