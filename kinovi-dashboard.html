@@ -129,10 +129,60 @@
     @media (max-width: 768px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
+    /* SERP section */
+    .serp-card {
+      background: rgb(var(--card));
+      border: 1px solid rgb(var(--border));
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+    }
+    .serp-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+    .serp-date { font-size: 0.8rem; color: rgb(var(--muted-fg)); margin-bottom: 12px; }
+    .serp-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .serp-table th { text-align: left; padding: 8px 12px; border-bottom: 2px solid rgb(var(--border)); font-weight: 600; color: rgb(var(--muted-fg)); }
+    .serp-table td { padding: 7px 12px; border-bottom: 1px solid rgb(var(--border)); }
+    .serp-table tr:hover { background: rgb(var(--secondary)); }
+    .serp-badge-hit { background: #10b981; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+    .serp-badge-miss { color: rgb(var(--muted-fg)); font-size: 0.8rem; }
+    .serp-badge-captcha { color: #ef4444; font-size: 0.75rem; }
+    .serp-toggle { cursor: pointer; color: rgb(var(--primary)); font-size: 0.8rem; user-select: none; }
+    .serp-toggle:hover { text-decoration: underline; }
+    .serp-sub-row { display: none; }
+    .serp-sub-row.show { display: table-row; }
+    .serp-sub-row td { padding-left: 32px; color: rgb(var(--muted-fg)); font-size: 0.8rem; }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- SERP Ranking Section -->
+    <div class="serp-card">
+      <div class="serp-title">SERP Ranking Monitor</div>
+      <div class="serp-date">Last updated: 2026-05-04</div>
+      <table class="serp-table">
+        <thead><tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th></tr></thead>
+        <tbody>
+          <tr><td>replicate alternative video api <span class="serp-toggle" onclick="document.querySelectorAll('.sub-rep').forEach(e=>e.classList.toggle('show'))">[1 sub]</span></td><td><span class="serp-badge-hit">#1</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr class="serp-sub-row sub-rep"><td>&#8627; replicate alternative video sdk</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
+          <tr><td>cheap video generation api <span class="serp-toggle" onclick="document.querySelectorAll('.sub-cheap').forEach(e=>e.classList.toggle('show'))">[4 subs]</span></td><td><span class="serp-badge-hit">hit</span></td><td><span class="serp-badge-hit">hit</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation api integration</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
+          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation alternatives</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
+          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation sdk</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
+          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation api tutorial</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
+          <tr><td>sora alternative free</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>ai character video generator</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>ai video with consistent characters</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>ai video generator with audio</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>ai ugc video generator</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>ai product video generator</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>ai ad creative video generator</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>fal.ai alternative for video generation</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- End SERP Section -->
+
     <div class="header">
       <div class="page-title">KINOVI 文章数据洞察</div>
       <p class="subtitle">发布天数 vs 阅读量增长分析</p>

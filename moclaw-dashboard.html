@@ -129,10 +129,49 @@
     @media (max-width: 768px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
+    /* SERP section */
+    .serp-card {
+      background: rgb(var(--card));
+      border: 1px solid rgb(var(--border));
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+    }
+    .serp-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+    .serp-date { font-size: 0.8rem; color: rgb(var(--muted-fg)); margin-bottom: 12px; }
+    .serp-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .serp-table th { text-align: left; padding: 8px 12px; border-bottom: 2px solid rgb(var(--border)); font-weight: 600; color: rgb(var(--muted-fg)); }
+    .serp-table td { padding: 7px 12px; border-bottom: 1px solid rgb(var(--border)); }
+    .serp-table tr:hover { background: rgb(var(--secondary)); }
+    .serp-badge-miss { color: rgb(var(--muted-fg)); font-size: 0.8rem; }
+    .serp-badge-captcha { color: #ef4444; font-size: 0.75rem; }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- SERP Ranking Section -->
+    <div class="serp-card">
+      <div class="serp-title">SERP Ranking Monitor</div>
+      <div class="serp-date">Last updated: 2026-05-04</div>
+      <table class="serp-table">
+        <thead><tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th></tr></thead>
+        <tbody>
+          <tr><td>openclaw alternative</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>manus ai alternative</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>best AI automation tool 2026</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>personal AI assistant</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>AI agent platform</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>open interpreter alternative</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>AI browser automation tool</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>zapier alternative AI</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>cloud AI computer</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+          <tr><td>AI deep research tool</td><td><span class="serp-badge-captcha">captcha</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-captcha">captcha</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- End SERP Section -->
+
     <div class="header">
       <div class="page-title">MOCLAW 文章数据洞察</div>
       <p class="subtitle">发布天数 vs 阅读量增长分析</p>
