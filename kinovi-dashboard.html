@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh">
 <head>
   <meta charset="utf-8">
@@ -129,59 +129,10 @@
     @media (max-width: 768px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    /* SERP section */
-    .serp-card {
-      background: rgb(var(--card));
-      border: 1px solid rgb(var(--border));
-      border-radius: var(--radius);
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
-    }
-    .serp-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
-    .serp-date { font-size: 0.8rem; color: rgb(var(--muted-fg)); margin-bottom: 12px; }
-    .serp-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-    .serp-table th { text-align: left; padding: 8px 12px; border-bottom: 2px solid rgb(var(--border)); font-weight: 600; color: rgb(var(--muted-fg)); }
-    .serp-table td { padding: 7px 12px; border-bottom: 1px solid rgb(var(--border)); }
-    .serp-table tr:hover { background: rgb(var(--secondary)); }
-    .serp-badge-hit { background: #10b981; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
-    .serp-badge-miss { color: rgb(var(--muted-fg)); font-size: 0.8rem; }
-        .serp-toggle { cursor: pointer; color: rgb(var(--primary)); font-size: 0.8rem; user-select: none; }
-    .serp-toggle:hover { text-decoration: underline; }
-    .serp-sub-row { display: none; }
-    .serp-sub-row.show { display: table-row; }
-    .serp-sub-row td { padding-left: 32px; color: rgb(var(--muted-fg)); font-size: 0.8rem; }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- SERP Ranking Section -->
-    <div class="serp-card">
-      <div class="serp-title">SERP Ranking Monitor</div>
-      <div class="serp-date">Last updated: 2026-05-04</div>
-      <table class="serp-table">
-        <thead><tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th></tr></thead>
-        <tbody>
-          <tr><td>replicate alternative video api <span class="serp-toggle" onclick="document.querySelectorAll('.sub-rep').forEach(e=>e.classList.toggle('show'))">[1 sub]</span></td><td><span class="serp-badge-hit">#1</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr class="serp-sub-row sub-rep"><td>&#8627; replicate alternative video sdk</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
-          <tr><td>cheap video generation api <span class="serp-toggle" onclick="document.querySelectorAll('.sub-cheap').forEach(e=>e.classList.toggle('show'))">[4 subs]</span></td><td><span class="serp-badge-hit">hit</span></td><td><span class="serp-badge-hit">hit</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation api integration</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
-          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation alternatives</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
-          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation sdk</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
-          <tr class="serp-sub-row sub-cheap"><td>&#8627; cheap video generation api tutorial</td><td>-</td><td><span class="serp-badge-hit">hit</span></td><td>-</td></tr>
-          <tr><td>sora alternative free</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>ai character video generator</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>ai video with consistent characters</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>ai video generator with audio</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>ai ugc video generator</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>ai product video generator</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>ai ad creative video generator</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>fal.ai alternative for video generation</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- End SERP Section -->
-
     <div class="header">
       <div class="page-title">KINOVI 文章数据洞察</div>
       <p class="subtitle">发布天数 vs 阅读量增长分析</p>
@@ -277,73 +228,63 @@
     const rawData = [
   {
     "keyword": "replicate alternative video api",
-    "title": "",
-    "created_at": "2026-04-23T01:55:06.699Z",
-    "views": 718,
-    "url": "https://unifuncs.com/s/AgPbI1U7"
+    "views": 619,
+    "url": "https://1596941391qq.github.io/replicate-alternative-video-api/",
+    "created_at": "2026-04-23T01:55:06.699Z"
   },
   {
     "keyword": "ai video generator with audio",
-    "title": "",
-    "created_at": "2026-04-23T01:54:46.348Z",
-    "views": 460,
-    "url": "https://unifuncs.com/s/dNehbtLl"
+    "views": 478,
+    "url": "https://1596941391qq.github.io/ai-video-generator-with-audio/",
+    "created_at": "2026-04-23T01:54:46.348Z"
   },
   {
     "keyword": "ai video with consistent characters",
-    "title": "",
-    "created_at": "2026-04-23T01:54:46.166Z",
-    "views": 384,
-    "url": "https://unifuncs.com/s/14y2wjq6"
+    "views": 400,
+    "url": "https://1596941391qq.github.io/ai-video-with-consistent-characters/",
+    "created_at": "2026-04-23T01:54:46.166Z"
   },
   {
     "keyword": "cheap video generation api",
-    "title": "",
-    "created_at": "2026-04-23T01:55:11.956Z",
-    "views": 213,
-    "url": "https://unifuncs.com/s/vnhhe8Sj"
+    "views": 215,
+    "url": "https://1596941391qq.github.io/cheap-video-generation-api/",
+    "created_at": "2026-04-23T01:55:11.956Z"
   },
   {
     "keyword": "ai character video generator",
-    "title": "",
-    "created_at": "2026-04-23T01:54:40.905Z",
-    "views": 198,
-    "url": "https://unifuncs.com/s/SHQ9HO1F"
+    "views": 206,
+    "url": "https://1596941391qq.github.io/ai-character-video-generator/",
+    "created_at": "2026-04-23T01:54:40.905Z"
   },
   {
     "keyword": "ai ad creative video generator",
-    "title": "",
-    "created_at": "2026-04-23T01:55:03.984Z",
-    "views": 176,
-    "url": "https://unifuncs.com/s/Cy6S6Gd5"
-  },
-  {
-    "keyword": "sora alternative free",
-    "title": "",
-    "created_at": "2026-04-23T01:54:38.062Z",
-    "views": 127,
-    "url": "https://unifuncs.com/s/V4s753n0"
+    "views": 178,
+    "url": "https://1596941391qq.github.io/ai-ad-creative-video-generator/",
+    "created_at": "2026-04-23T01:55:03.984Z"
   },
   {
     "keyword": "ai ugc video generator",
-    "title": "",
-    "created_at": "2026-04-23T01:54:47.808Z",
-    "views": 126,
-    "url": "https://unifuncs.com/s/CZMIrfeO"
+    "views": 134,
+    "url": "https://1596941391qq.github.io/ai-ugc-video-generator/",
+    "created_at": "2026-04-23T01:54:47.808Z"
+  },
+  {
+    "keyword": "sora alternative free",
+    "views": 116,
+    "url": "https://1596941391qq.github.io/sora-alternative-free/",
+    "created_at": "2026-04-23T01:54:38.062Z"
   },
   {
     "keyword": "ai product video generator",
-    "title": "",
-    "created_at": "2026-04-23T01:55:03.739Z",
-    "views": 108,
-    "url": "https://unifuncs.com/s/8HyJ80iC"
+    "views": 114,
+    "url": "https://1596941391qq.github.io/ai-product-video-generator/",
+    "created_at": "2026-04-23T01:55:03.739Z"
   },
   {
     "keyword": "fal.ai alternative for video generation",
-    "title": "",
-    "created_at": "2026-04-23T01:55:11.260Z",
     "views": 52,
-    "url": "https://unifuncs.com/s/Ep9C2zpx"
+    "url": "https://1596941391qq.github.io/fal-ai-alternative-for-video-generation/",
+    "created_at": "2026-04-23T01:55:11.260Z"
   }
 ];
 
