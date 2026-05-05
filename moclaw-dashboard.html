@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh">
 <head>
   <meta charset="utf-8">
@@ -129,48 +129,10 @@
     @media (max-width: 768px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    /* SERP section */
-    .serp-card {
-      background: rgb(var(--card));
-      border: 1px solid rgb(var(--border));
-      border-radius: var(--radius);
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
-    }
-    .serp-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
-    .serp-date { font-size: 0.8rem; color: rgb(var(--muted-fg)); margin-bottom: 12px; }
-    .serp-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-    .serp-table th { text-align: left; padding: 8px 12px; border-bottom: 2px solid rgb(var(--border)); font-weight: 600; color: rgb(var(--muted-fg)); }
-    .serp-table td { padding: 7px 12px; border-bottom: 1px solid rgb(var(--border)); }
-    .serp-table tr:hover { background: rgb(var(--secondary)); }
-    .serp-badge-miss { color: rgb(var(--muted-fg)); font-size: 0.8rem; }
-      </style>
+  </style>
 </head>
 <body>
   <div class="container">
-    <!-- SERP Ranking Section -->
-    <div class="serp-card">
-      <div class="serp-title">SERP Ranking Monitor</div>
-      <div class="serp-date">Last updated: 2026-05-04</div>
-      <table class="serp-table">
-        <thead><tr><th>Keyword</th><th>Google</th><th>Bing</th><th>AI Mode</th></tr></thead>
-        <tbody>
-          <tr><td>openclaw alternative</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>manus ai alternative</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>best AI automation tool 2026</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>personal AI assistant</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>AI agent platform</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>open interpreter alternative</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>AI browser automation tool</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>zapier alternative AI</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>cloud AI computer</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-          <tr><td>AI deep research tool</td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td><td><span class="serp-badge-miss">-</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- End SERP Section -->
-
     <div class="header">
       <div class="page-title">MOCLAW 文章数据洞察</div>
       <p class="subtitle">发布天数 vs 阅读量增长分析</p>
@@ -263,148 +225,7 @@
     // 格式: { keyword, created_at, views, url }
     // created_at: ISO 日期字符串
     // url: UniFuncs 分享链接
-    const rawData = [
-  {
-    "keyword": "AI agent use cases",
-    "title": "",
-    "created_at": "2026-05-03T11:47:36.398Z",
-    "views": 240,
-    "url": "https://unifuncs.com/s/AaJuYH9g"
-  },
-  {
-    "keyword": "AI assistant for developers",
-    "title": "",
-    "created_at": "2026-05-03T11:47:47.376Z",
-    "views": 136,
-    "url": "https://unifuncs.com/s/RfMGdY3z"
-  },
-  {
-    "keyword": "open interpreter alternative",
-    "title": "",
-    "created_at": "2026-05-03T11:47:49.308Z",
-    "views": 92,
-    "url": "https://unifuncs.com/s/xSTY8XNN"
-  },
-  {
-    "keyword": "AI automation ROI",
-    "title": "",
-    "created_at": "2026-05-03T11:47:48.825Z",
-    "views": 86,
-    "url": "https://unifuncs.com/s/YZd6bRpu"
-  },
-  {
-    "keyword": "best AI automation tool",
-    "title": "",
-    "created_at": "2026-05-03T11:47:24.731Z",
-    "views": 80,
-    "url": "https://unifuncs.com/s/jbJAKt3m"
-  },
-  {
-    "keyword": "AI Slack integration",
-    "title": "",
-    "created_at": "2026-05-03T11:47:33.598Z",
-    "views": 69,
-    "url": "https://unifuncs.com/s/txifeHeB"
-  },
-  {
-    "keyword": "AI web scraping agent",
-    "title": "",
-    "created_at": "2026-05-03T11:47:37.002Z",
-    "views": 61,
-    "url": "https://unifuncs.com/s/0GxKgE3w"
-  },
-  {
-    "keyword": "AI agent for small business",
-    "title": "",
-    "created_at": "2026-05-03T11:47:24.651Z",
-    "views": 42,
-    "url": "https://unifuncs.com/s/m4X0gfri"
-  },
-  {
-    "keyword": "always-on AI agent",
-    "title": "",
-    "created_at": "2026-05-03T11:47:07.277Z",
-    "views": 38,
-    "url": "https://unifuncs.com/s/PrNp7xT8"
-  },
-  {
-    "keyword": "cloud AI agent",
-    "title": "",
-    "created_at": "2026-05-03T11:46:58.032Z",
-    "views": 34,
-    "url": "https://unifuncs.com/s/8eBcARYF"
-  },
-  {
-    "keyword": "AI content research automation",
-    "title": "",
-    "created_at": "2026-05-03T11:47:46.983Z",
-    "views": 33,
-    "url": "https://unifuncs.com/s/AVsM73ht"
-  },
-  {
-    "keyword": "openclaw alternative",
-    "title": "",
-    "created_at": "2026-05-03T11:46:57.909Z",
-    "views": 32,
-    "url": "https://unifuncs.com/s/k1RXzqY9"
-  },
-  {
-    "keyword": "AI cron jobs",
-    "title": "",
-    "created_at": "2026-05-03T11:47:24.853Z",
-    "views": 30,
-    "url": "https://unifuncs.com/s/fzUG9MnW"
-  },
-  {
-    "keyword": "automated competitor monitoring",
-    "title": "",
-    "created_at": "2026-05-03T11:47:24.775Z",
-    "views": 30,
-    "url": "https://unifuncs.com/s/72hhc0Xi"
-  },
-  {
-    "keyword": "AI email processing",
-    "title": "",
-    "created_at": "2026-05-03T11:47:33.941Z",
-    "views": 29,
-    "url": "https://unifuncs.com/s/TaYtvQhH"
-  },
-  {
-    "keyword": "AI Telegram bot",
-    "title": "",
-    "created_at": "2026-05-03T11:47:20.624Z",
-    "views": 27,
-    "url": "https://unifuncs.com/s/n5lO2pIa"
-  },
-  {
-    "keyword": "manus ai alternative",
-    "title": "",
-    "created_at": "2026-05-03T11:47:32.698Z",
-    "views": 27,
-    "url": "https://unifuncs.com/s/8GgfvzEI"
-  },
-  {
-    "keyword": "AI browser automation",
-    "title": "",
-    "created_at": "2026-05-03T11:47:07.350Z",
-    "views": 23,
-    "url": "https://unifuncs.com/s/rFNTB36z"
-  },
-  {
-    "keyword": "scheduled AI tasks",
-    "title": "",
-    "created_at": "2026-05-03T11:47:07.293Z",
-    "views": 21,
-    "url": "https://unifuncs.com/s/fqEhxkTm"
-  },
-  {
-    "keyword": "autonomous AI assistant",
-    "title": "",
-    "created_at": "2026-05-03T11:47:48.231Z",
-    "views": 19,
-    "url": "https://unifuncs.com/s/u71lu1ul"
-  }
-];
+    const rawData = [{"keyword":"AI agent use cases","title":"AI agent use cases","created_at":"2026-05-03T11:47:36.398Z","views":486,"url":"https://unifuncs.com/s/AaJuYH9g"},{"keyword":"AI assistant for developers","title":"AI assistant for developers","created_at":"2026-05-03T11:47:47.376Z","views":276,"url":"https://unifuncs.com/s/RfMGdY3z"},{"keyword":"open interpreter alternative","title":"open interpreter alternative","created_at":"2026-05-03T11:47:49.308Z","views":186,"url":"https://unifuncs.com/s/xSTY8XNN"},{"keyword":"AI automation ROI","title":"AI automation ROI","created_at":"2026-05-03T11:47:48.825Z","views":176,"url":"https://unifuncs.com/s/YZd6bRpu"},{"keyword":"best AI automation tool","title":"best AI automation tool","created_at":"2026-05-03T11:47:24.731Z","views":172,"url":"https://unifuncs.com/s/jbJAKt3m"},{"keyword":"AI Slack integration","title":"AI Slack integration","created_at":"2026-05-03T11:47:33.598Z","views":142,"url":"https://unifuncs.com/s/txifeHeB"},{"keyword":"AI web scraping agent","title":"AI web scraping agent","created_at":"2026-05-03T11:47:37.002Z","views":128,"url":"https://unifuncs.com/s/0GxKgE3w"},{"keyword":"AI agent for small business","title":"AI agent for small business","created_at":"2026-05-03T11:47:24.651Z","views":94,"url":"https://unifuncs.com/s/m4X0gfri"},{"keyword":"always-on AI agent","title":"always-on AI agent","created_at":"2026-05-03T11:47:07.277Z","views":84,"url":"https://unifuncs.com/s/PrNp7xT8"},{"keyword":"openclaw alternative","title":"openclaw alternative","created_at":"2026-05-03T11:46:57.909Z","views":72,"url":"https://unifuncs.com/s/k1RXzqY9"},{"keyword":"AI content research automation","title":"AI content research automation","created_at":"2026-05-03T11:47:46.983Z","views":72,"url":"https://unifuncs.com/s/AVsM73ht"},{"keyword":"cloud AI agent","title":"cloud AI agent","created_at":"2026-05-03T11:46:58.032Z","views":68,"url":"https://unifuncs.com/s/8eBcARYF"},{"keyword":"AI email processing","title":"AI email processing","created_at":"2026-05-03T11:47:33.941Z","views":64,"url":"https://unifuncs.com/s/TaYtvQhH"},{"keyword":"automated competitor monitoring","title":"automated competitor monitoring","created_at":"2026-05-03T11:47:24.775Z","views":62,"url":"https://unifuncs.com/s/72hhc0Xi"},{"keyword":"AI cron jobs","title":"AI cron jobs","created_at":"2026-05-03T11:47:24.853Z","views":60,"url":"https://unifuncs.com/s/fzUG9MnW"},{"keyword":"AI Telegram bot","title":"AI Telegram bot","created_at":"2026-05-03T11:47:20.624Z","views":58,"url":"https://unifuncs.com/s/n5lO2pIa"},{"keyword":"manus ai alternative","title":"manus ai alternative","created_at":"2026-05-03T11:47:32.698Z","views":56,"url":"https://unifuncs.com/s/8GgfvzEI"},{"keyword":"AI browser automation","title":"AI browser automation","created_at":"2026-05-03T11:47:07.350Z","views":54,"url":"https://unifuncs.com/s/rFNTB36z"},{"keyword":"scheduled AI tasks","title":"scheduled AI tasks","created_at":"2026-05-03T11:47:07.293Z","views":44,"url":"https://unifuncs.com/s/fqEhxkTm"},{"keyword":"autonomous AI assistant","title":"autonomous AI assistant","created_at":"2026-05-03T11:47:48.231Z","views":40,"url":"https://unifuncs.com/s/u71lu1ul"}];
 
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
