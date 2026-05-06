@@ -225,7 +225,128 @@
     // 格式: { keyword, created_at, views, url }
     // created_at: ISO 日期字符串
     // url: UniFuncs 分享链接
-    const rawData = [{"keyword":"AI agent use cases","title":"AI agent use cases","created_at":"2026-05-03T11:47:36.398Z","views":486,"url":"https://unifuncs.com/s/AaJuYH9g"},{"keyword":"AI assistant for developers","title":"AI assistant for developers","created_at":"2026-05-03T11:47:47.376Z","views":276,"url":"https://unifuncs.com/s/RfMGdY3z"},{"keyword":"open interpreter alternative","title":"open interpreter alternative","created_at":"2026-05-03T11:47:49.308Z","views":186,"url":"https://unifuncs.com/s/xSTY8XNN"},{"keyword":"AI automation ROI","title":"AI automation ROI","created_at":"2026-05-03T11:47:48.825Z","views":176,"url":"https://unifuncs.com/s/YZd6bRpu"},{"keyword":"best AI automation tool","title":"best AI automation tool","created_at":"2026-05-03T11:47:24.731Z","views":172,"url":"https://unifuncs.com/s/jbJAKt3m"},{"keyword":"AI Slack integration","title":"AI Slack integration","created_at":"2026-05-03T11:47:33.598Z","views":142,"url":"https://unifuncs.com/s/txifeHeB"},{"keyword":"AI web scraping agent","title":"AI web scraping agent","created_at":"2026-05-03T11:47:37.002Z","views":128,"url":"https://unifuncs.com/s/0GxKgE3w"},{"keyword":"AI agent for small business","title":"AI agent for small business","created_at":"2026-05-03T11:47:24.651Z","views":94,"url":"https://unifuncs.com/s/m4X0gfri"},{"keyword":"always-on AI agent","title":"always-on AI agent","created_at":"2026-05-03T11:47:07.277Z","views":84,"url":"https://unifuncs.com/s/PrNp7xT8"},{"keyword":"openclaw alternative","title":"openclaw alternative","created_at":"2026-05-03T11:46:57.909Z","views":72,"url":"https://unifuncs.com/s/k1RXzqY9"},{"keyword":"AI content research automation","title":"AI content research automation","created_at":"2026-05-03T11:47:46.983Z","views":72,"url":"https://unifuncs.com/s/AVsM73ht"},{"keyword":"cloud AI agent","title":"cloud AI agent","created_at":"2026-05-03T11:46:58.032Z","views":68,"url":"https://unifuncs.com/s/8eBcARYF"},{"keyword":"AI email processing","title":"AI email processing","created_at":"2026-05-03T11:47:33.941Z","views":64,"url":"https://unifuncs.com/s/TaYtvQhH"},{"keyword":"automated competitor monitoring","title":"automated competitor monitoring","created_at":"2026-05-03T11:47:24.775Z","views":62,"url":"https://unifuncs.com/s/72hhc0Xi"},{"keyword":"AI cron jobs","title":"AI cron jobs","created_at":"2026-05-03T11:47:24.853Z","views":60,"url":"https://unifuncs.com/s/fzUG9MnW"},{"keyword":"AI Telegram bot","title":"AI Telegram bot","created_at":"2026-05-03T11:47:20.624Z","views":58,"url":"https://unifuncs.com/s/n5lO2pIa"},{"keyword":"manus ai alternative","title":"manus ai alternative","created_at":"2026-05-03T11:47:32.698Z","views":56,"url":"https://unifuncs.com/s/8GgfvzEI"},{"keyword":"AI browser automation","title":"AI browser automation","created_at":"2026-05-03T11:47:07.350Z","views":54,"url":"https://unifuncs.com/s/rFNTB36z"},{"keyword":"scheduled AI tasks","title":"scheduled AI tasks","created_at":"2026-05-03T11:47:07.293Z","views":44,"url":"https://unifuncs.com/s/fqEhxkTm"},{"keyword":"autonomous AI assistant","title":"autonomous AI assistant","created_at":"2026-05-03T11:47:48.231Z","views":40,"url":"https://unifuncs.com/s/u71lu1ul"}];
+    const rawData = [
+  {
+    "keyword": "AI agent use cases",
+    "created_at": "2026-05-03T11:47:36.398Z",
+    "views": 492,
+    "url": "https://unifuncs.com/s/AaJuYH9g"
+  },
+  {
+    "keyword": "AI assistant for developers",
+    "created_at": "2026-05-03T11:47:47.376Z",
+    "views": 278,
+    "url": "https://unifuncs.com/s/RfMGdY3z"
+  },
+  {
+    "keyword": "open interpreter alternative",
+    "created_at": "2026-05-03T11:47:49.308Z",
+    "views": 190,
+    "url": "https://unifuncs.com/s/xSTY8XNN"
+  },
+  {
+    "keyword": "AI automation ROI",
+    "created_at": "2026-05-03T11:47:48.825Z",
+    "views": 176,
+    "url": "https://unifuncs.com/s/YZd6bRpu"
+  },
+  {
+    "keyword": "best AI automation tool",
+    "created_at": "2026-05-03T11:47:24.731Z",
+    "views": 174,
+    "url": "https://unifuncs.com/s/jbJAKt3m"
+  },
+  {
+    "keyword": "AI Slack integration",
+    "created_at": "2026-05-03T11:47:33.598Z",
+    "views": 142,
+    "url": "https://unifuncs.com/s/txifeHeB"
+  },
+  {
+    "keyword": "AI web scraping agent",
+    "created_at": "2026-05-03T11:47:37.002Z",
+    "views": 128,
+    "url": "https://unifuncs.com/s/0GxKgE3w"
+  },
+  {
+    "keyword": "AI agent for small business",
+    "created_at": "2026-05-03T11:47:24.651Z",
+    "views": 94,
+    "url": "https://unifuncs.com/s/m4X0gfri"
+  },
+  {
+    "keyword": "always-on AI agent",
+    "created_at": "2026-05-03T11:47:07.277Z",
+    "views": 86,
+    "url": "https://unifuncs.com/s/PrNp7xT8"
+  },
+  {
+    "keyword": "openclaw alternative",
+    "created_at": "2026-05-03T11:46:57.909Z",
+    "views": 74,
+    "url": "https://unifuncs.com/s/k1RXzqY9"
+  },
+  {
+    "keyword": "AI content research automation",
+    "created_at": "2026-05-03T11:47:46.983Z",
+    "views": 74,
+    "url": "https://unifuncs.com/s/AVsM73ht"
+  },
+  {
+    "keyword": "cloud AI agent",
+    "created_at": "2026-05-03T11:46:58.032Z",
+    "views": 72,
+    "url": "https://unifuncs.com/s/8eBcARYF"
+  },
+  {
+    "keyword": "AI email processing",
+    "created_at": "2026-05-03T11:47:33.941Z",
+    "views": 68,
+    "url": "https://unifuncs.com/s/TaYtvQhH"
+  },
+  {
+    "keyword": "automated competitor monitoring",
+    "created_at": "2026-05-03T11:47:24.775Z",
+    "views": 64,
+    "url": "https://unifuncs.com/s/72hhc0Xi"
+  },
+  {
+    "keyword": "AI cron jobs",
+    "created_at": "2026-05-03T11:47:24.853Z",
+    "views": 60,
+    "url": "https://unifuncs.com/s/fzUG9MnW"
+  },
+  {
+    "keyword": "AI Telegram bot",
+    "created_at": "2026-05-03T11:47:20.624Z",
+    "views": 58,
+    "url": "https://unifuncs.com/s/n5lO2pIa"
+  },
+  {
+    "keyword": "manus ai alternative",
+    "created_at": "2026-05-03T11:47:32.698Z",
+    "views": 56,
+    "url": "https://unifuncs.com/s/8GgfvzEI"
+  },
+  {
+    "keyword": "AI browser automation",
+    "created_at": "2026-05-03T11:47:07.350Z",
+    "views": 54,
+    "url": "https://unifuncs.com/s/rFNTB36z"
+  },
+  {
+    "keyword": "scheduled AI tasks",
+    "created_at": "2026-05-03T11:47:07.293Z",
+    "views": 46,
+    "url": "https://unifuncs.com/s/fqEhxkTm"
+  },
+  {
+    "keyword": "autonomous AI assistant",
+    "created_at": "2026-05-03T11:47:48.231Z",
+    "views": 42,
+    "url": "https://unifuncs.com/s/u71lu1ul"
+  }
+];
 
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
