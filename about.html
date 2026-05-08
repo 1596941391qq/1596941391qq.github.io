@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — weihacking</title>
-  <meta name="description" content="About weihacking — developer turned SEO strategist, hacking newsletter author, founder of Soulcraft Limited.">
+  <meta name="description" content="About weihacking — developer turned SEO/GEO strategist, hacking newsletter author, and founder of Soulcraft Limited. Free 30-min consultation available.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,11 +66,10 @@
 }
 </script>
 
-<style>.sub-hero::after{content:'';display:block;width:60px;height:2px;background:var(--accent);margin:20px auto 0;animation:accentIn .8s ease forwards;opacity:0;transform:scaleX(0)}@keyframes accentIn{to{opacity:1;transform:scaleX(1)}}</style>
 </head>
 <body>
 
-  <nav>
+  <nav aria-label="主导航">
     <a href="index.html">weihacking_</a>
     <div class="nav-r">
       <a href="index.html" class="nb" style="margin-right:8px">←</a>
@@ -78,6 +77,7 @@
       <button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button>
     </div>
   </nav>
+  <main>
 
   <!-- ==================== PAGE HEADER ==================== -->
   <div class="sub-hero">
@@ -265,12 +265,12 @@
 
       <!-- IMAGES -->
       <div class="about-img-row" style="margin-top:40px">
-        <div class="img-slot"><img src="images/gsc-growth.jpg" alt="Google Search Console 769K Impressions Growth" loading="lazy"></div>
-        <div class="img-slot"><img src="images/feishu-ai-ui.jpg" alt="HackingSEO OS1 Feishu AI Q&A" loading="lazy"></div>
+        <div class="img-slot"><img src="images/gsc-growth.jpg" width="1200" height="630" alt="Google Search Console 769K Impressions Growth" loading="lazy"></div>
+        <div class="img-slot"><img src="images/feishu-ai-ui.jpg" width="1411" height="868" alt="HackingSEO OS1 Feishu AI Q&A" loading="lazy"></div>
       </div>
       <div class="about-img-row" style="margin-top:12px">
-        <div class="img-slot"><img src="images/twitter-profile.jpg" alt="weihacking X/Twitter Profile" loading="lazy"></div>
-        <div class="img-slot"><img src="images/tweet-img8.jpg" alt="Tweet: AI and SEO insights" loading="lazy"></div>
+        <div class="img-slot"><img src="images/twitter-profile.jpg" width="1536" height="1024" alt="weihacking X/Twitter Profile" loading="lazy"></div>
+        <div class="img-slot"><img src="images/tweet-img8.jpg" width="1500" height="500" alt="Tweet: AI and SEO insights" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -328,11 +328,11 @@
       <h2 class="sec-label" data-zh="技术哲学" data-en="Tech Philosophy">技术哲学</h2>
       <p class="passage" data-zh="技术选型的三个判断标准：能不能缩短从想法到验证的路径，能不能在验证成功后快速放大，能不能在不增加复杂度的前提下覆盖更多场景。基于这三条标准，技术栈的选择不是追新而是追效：React 用于需要复杂状态管理的交互界面，Node.js 用于 Agent 系统和数据管道，PowerShell 用于 Windows 环境下的自动化编排，GitHub Pages 用于零运维成本的高权重 SEO 载体。" data-en="Three criteria for technology selection: does it shorten the path from idea to validation, does it scale fast after validation succeeds, does it cover more scenarios without adding complexity. Based on these three criteria, technology choices chase effectiveness, not novelty: React for complex state management interfaces, Node.js for Agent systems and data pipelines, PowerShell for Windows automation orchestration, GitHub Pages for zero-ops-cost high-authority SEO hosting.">技术选型的三个判断标准：能不能缩短从想法到验证的路径，能不能在验证成功后快速放大，能不能在不增加复杂度的前提下覆盖更多场景。基于这三条标准，技术栈的选择不是追新而是追效：React 用于需要复杂状态管理的交互界面，Node.js 用于 Agent 系统和数据管道，PowerShell 用于 Windows 环境下的自动化编排，GitHub Pages 用于零运维成本的高权重 SEO 载体。</p>
       <div class="contra-grid">
-        <div class="contra-item">
+        <div class="contra-card">
           <strong data-zh="快速验证优先" data-en="Validation First">快速验证优先</strong>
           <span data-zh="3 小时做 Chrome 扩展，1 周末搭挖词工具，2 周验证 SERP 首页。不是做完美产品，是做能跑的东西" data-en="3h Chrome extension, 1 weekend keyword tool, 2 weeks to SERP page one. Not perfect products, working products">3 小时做 Chrome 扩展，1 周末搭挖词工具，2 周验证 SERP 首页。不是做完美产品，是做能跑的东西</span>
         </div>
-        <div class="contra-item">
+        <div class="contra-card">
           <strong data-zh="零运维放大" data-en="Zero-Ops Scaling">零运维放大</strong>
           <span data-zh="GitHub Pages 做高权重 SEO 载体，PSEO 批量生产替代手工写稿，Agent 自动化替代人力堆叠" data-en="GitHub Pages as high-authority SEO host, PSEO batch production replacing manual writing, Agent automation replacing labor stacking">GitHub Pages 做高权重 SEO 载体，PSEO 批量生产替代手工写稿，Agent 自动化替代人力堆叠</span>
         </div>
@@ -365,7 +365,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  
+  </main><footer>
     <div style="margin-bottom:8px;font-family:var(--hand);font-size:18px;color:var(--accent)">weihacking</div>
     <div>© 2026 weihacking · Soulcraft Limited</div>
     <div class="f-links">
@@ -377,6 +378,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

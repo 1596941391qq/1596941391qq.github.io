@@ -1,6 +1,7 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=&apos;http://www.w3.org/2000/svg&apos; viewBox=&apos;0 0 100 100&apos;><text y=&apos;.9em&apos; font-size=&apos;90&apos;>⌘</text></svg>">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEO Billing Statement - HakkoAI</title>
@@ -154,63 +155,63 @@
     {
         "keyword":  "valorant ai coach 2026",
         "rank":  1,
-        "screenshot":  "images/serp1-hakkoai-valorant-ai-coach-2026.png",
+        "screenshot":  "../images/serp1-hakkoai-valorant-ai-coach-2026.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "roblox ai coach",
         "rank":  2,
-        "screenshot":  "images/serp2-hakkoai-Roblox-AI-Coach.png",
+        "screenshot":  "",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "league of legends al coach 2026",
         "rank":  3,
-        "screenshot":  "images/serp3-hakkoai-league-of-legends-al-coach-2026.png",
+        "screenshot":  "../images/serp3-hakkoai-league-of-legends-al-coach-2026.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "cs2 ai coach",
         "rank":  3,
-        "screenshot":  "images/serp3-hakkoai-cs2-ai-coach.png",
+        "screenshot":  "../images/serp3-hakkoai-cs2-ai-coach.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "cod warzone ai coach",
         "rank":  3,
-        "screenshot":  "images/serp3-hakkoai-cod-warzone-ai-coach.png",
+        "screenshot":  "../images/serp3-hakkoai-cod-warzone-ai-coach.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "apex legends ai coach",
         "rank":  3,
-        "screenshot":  "images/serp3-hakkoai-apex-legends-ai-coach.png",
+        "screenshot":  "../images/serp3-hakkoai-apex-legends-ai-coach.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "overwatch 2 al coach",
         "rank":  4,
-        "screenshot":  "images/serp4-hakkoai-Overwatch-2-Al-Coach.png",
+        "screenshot":  "../images/serp4-hakkoai-Overwatch-2-Al-Coach.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "dota2 ai mmr coach",
         "rank":  5,
-        "screenshot":  "images/serp5-hakkoai-dota2-ai-mmr-coach.png",
+        "screenshot":  "../images/serp5-hakkoai-dota2-ai-mmr-coach.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     },
     {
         "keyword":  "genshin impact ai assistant",
         "rank":  5,
-        "screenshot":  "images/serp5-hakkoai-genshin-impact-ai-assistant.png",
+        "screenshot":  "../images/serp5-hakkoai-genshin-impact-ai-assistant.png",
         "type":  "longtail",
         "date":  "2026-03-14"
     }
@@ -271,7 +272,7 @@
                 </div>
               </div>
               <div class="mt-5 overflow-hidden rounded-[24px] border border-slate-200 bg-slate-50">
-                <img src="${k.screenshot}" alt="SERP screenshot" class="w-full bg-white" style="max-height: 300px; object-fit: contain;">
+                ${k.screenshot ? '<img src="${k.screenshot}" alt="SERP screenshot" class="w-full bg-white" style="max-height:300px;object-fit:contain">' : '<div class="w-full bg-white text-center text-gray-400" style="max-height:300px;display:flex;align-items:center;justify-content:center">暂无截图</div>'}
               </div>
               <div class="mt-3 flex items-center justify-between gap-3 text-xs text-slate-400">
                 <span>Google SERP 截图证据</span>

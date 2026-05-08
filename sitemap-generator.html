@@ -18,17 +18,20 @@
   <meta property="og:site_name" content="weihacking">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@weihacking">
+  <meta name="twitter:title" content="Sitemap Generator — Free SEO Tool">
+  <meta name="twitter:description" content="Free XML sitemap generator. Create standards-compliant sitemap.xml for your website.">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://1596941391qq.github.io/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://1596941391qq.github.io/tools.html"},{"@type":"ListItem","position":3,"name":"Sitemap Generator","item":"https://1596941391qq.github.io/sitemap-generator.html"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sitemap Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Web","description":"Free XML sitemap generator. Create standards-compliant sitemap.xml.","url":"https://1596941391qq.github.io/sitemap-generator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sitemap Generator","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Free XML sitemap generator. Create standards-compliant sitemap.xml.","url":"https://1596941391qq.github.io/sitemap-generator.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"weihacking","url":"https://1596941391qq.github.io"},"publisher":{"@type":"Organization","name":"Soulcraft Limited","logo":{"@type":"ImageObject","url":"https://1596941391qq.github.io/images/avatar.jpg"}}}
 </script>
 </head>
 <body>
-  <nav>
+  <nav aria-label="主导航">
     <a href="index.html">weihacking_</a>
     <div class="nav-r">
       <a href="tools.html" class="nb" style="margin-right:8px">←</a>
@@ -76,12 +79,12 @@
       </div>
 
       <div class="tool-output" id="output">
-        <h4 data-zh="生成的 sitemap.xml" data-en="Generated sitemap.xml">生成的 sitemap.xml</h4>
+        <h2 data-zh="生成的 sitemap.xml" data-en="Generated sitemap.xml">生成的 sitemap.xml</h2>
         <pre id="outputCode"></pre>
       </div>
 
       <div class="tool-tips">
-        <h4 data-zh="Sitemap 要点" data-en="Sitemap Tips">Sitemap 要点</h4>
+        <h2 data-zh="Sitemap 要点" data-en="Sitemap Tips">Sitemap 要点</h2>
         <ul>
           <li data-zh="<strong>大小</strong>：单个 sitemap 不超过 50MB 或 50,000 URL。" data-en="<strong>Size</strong>: Single sitemap max 50MB or 50,000 URLs."><strong>大小</strong>：单个 sitemap 不超过 50MB 或 50,000 URL。</li>
           <li data-zh="<strong>位置</strong>：放在根目录，通过 robots.txt 引用。" data-en="<strong>Location</strong>: Place at root, reference from robots.txt."><strong>位置</strong>：放在根目录，通过 robots.txt 引用。</li>
@@ -96,17 +99,17 @@
     <div class="rn-grid">
       <a href="robots-txt-generator.html" class="rn-item">
         <div class="rn-sec">Tool</div>
-        <h4 data-zh="Robots.txt 生成器" data-en="Robots.txt Generator">Robots.txt 生成器</h4>
+        <h2 data-zh="Robots.txt 生成器" data-en="Robots.txt Generator">Robots.txt 生成器</h2>
         <p data-zh="配合 sitemap 使用" data-en="Pair with your sitemap">配合 sitemap 使用</p>
       </a>
       <a href="schema-markup-generator.html" class="rn-item">
         <div class="rn-sec">Tool</div>
-        <h4 data-zh="Schema 标记生成器" data-en="Schema Markup Generator">Schema 标记生成器</h4>
+        <h2 data-zh="Schema 标记生成器" data-en="Schema Markup Generator">Schema 标记生成器</h2>
         <p data-zh="生成 JSON-LD 结构化数据" data-en="Generate JSON-LD structured data">生成 JSON-LD 结构化数据</p>
       </a>
       <a href="tools.html" class="rn-item">
         <div class="rn-sec">Tools</div>
-        <h4 data-zh="全部工具" data-en="All Tools">全部工具</h4>
+        <h2 data-zh="全部工具" data-en="All Tools">全部工具</h2>
         <p data-zh="查看所有免费 SEO 工具" data-en="Browse all free SEO tools">查看所有免费 SEO 工具</p>
       </a>
     </div>
@@ -121,7 +124,7 @@
       <a href="mailto:echokay777@163.com">Email</a>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <script>
   function generate(){
     var urls=document.getElementById('urlList').value.trim().split('\n').filter(function(x){return x.trim()});

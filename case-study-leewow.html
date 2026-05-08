@@ -72,11 +72,10 @@
 }
 </script>
 
-<style>.sub-hero::after{content:'';display:block;width:60px;height:2px;background:var(--accent);margin:20px auto 0;animation:accentIn .8s ease forwards;opacity:0;transform:scaleX(0)}@keyframes accentIn{to{opacity:1;transform:scaleX(1)}}</style>
 </head>
 <body>
 
-  <nav>
+  <nav aria-label="主导航">
     <a href="index.html">weihacking_</a>
     <div class="nav-r">
       <a href="index.html" class="nb" style="margin-right:8px">←</a>
@@ -84,6 +83,7 @@
       <button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button>
     </div>
   </nav>
+  <main>
 
   <!-- ==================== PAGE HEADER ==================== -->
   <div class="sub-hero">
@@ -136,22 +136,22 @@
       <div class="process-flow" style="margin:0 0 48px">
         <div class="process-step">
           <div class="process-num">01</div>
-          <h4 data-zh="NicheDigger 挖词" data-en="NicheDigger Mining">NicheDigger 挖词</h4>
+          <h3 data-zh="NicheDigger 挖词" data-en="NicheDigger Mining">NicheDigger 挖词</h3>
           <p data-zh="品牌上下文驱动，100+ 候选词，意图自动分类" data-en="Brand context driven, 100+ candidates, auto intent classification">品牌上下文驱动，100+ 候选词，意图自动分类</p>
         </div>
         <div class="process-step">
           <div class="process-num">02</div>
-          <h4 data-zh="意图筛选" data-en="Intent Filtering">意图筛选</h4>
+          <h3 data-zh="意图筛选" data-en="Intent Filtering">意图筛选</h3>
           <p data-zh="信息意图优先，商业意图次之，过滤品牌词和竞品词" data-en="Informational intent first, commercial second, filter brand/competitor terms">信息意图优先，商业意图次之，过滤品牌词和竞品词</p>
         </div>
         <div class="process-step">
           <div class="process-num">03</div>
-          <h4 data-zh="PSEO Agent 生成" data-en="PSEO Agent Generation">PSEO Agent 生成</h4>
+          <h3 data-zh="PSEO Agent 生成" data-en="PSEO Agent Generation">PSEO Agent 生成</h3>
           <p data-zh="每词独立 prompt，结构化可抓取，原创度检测" data-en="Per-keyword prompts, structured for crawling, originality check">每词独立 prompt，结构化可抓取，原创度检测</p>
         </div>
         <div class="process-step">
           <div class="process-num">04</div>
-          <h4 data-zh="自动发布" data-en="Auto-Publish">自动发布</h4>
+          <h3 data-zh="自动发布" data-en="Auto-Publish">自动发布</h3>
           <p data-zh="GitHub Pages + UniFuncs DeepSearch，自动索引提交" data-en="GitHub Pages + UniFuncs DeepSearch, auto index submission">GitHub Pages + UniFuncs DeepSearch，自动索引提交</p>
         </div>
       </div>
@@ -186,27 +186,27 @@
       <p class="passage" data-zh="以下六张 SERP 截图为 2026 年 Google 搜索实时结果。Leewow 在六个独立关键词上获得第一名，覆盖「按需创建」「AI 实物产品」「POD 对比」三大搜索意图方向。所有排名均为自然搜索结果，排名时间线与 Ranking Growth Path 区块对应：最快 14 天从发布到首页。" data-en="Six SERP screenshots from live 2026 Google search results. Leewow achieved position one across six independent keywords covering three search intent directions: on-demand creation, AI physical products, and POD comparisons. All rankings are organic. Timeline matches the Ranking Growth Path section: fastest 14 days from publish to page one.">以下六张 SERP 截图为 2026 年 Google 搜索实时结果。Leewow 在六个独立关键词上获得第一名，覆盖三大搜索意图方向。最快 14 天从发布到首页。</p>
       <div class="serp-gallery">
         <div class="serp-item">
-          <img src="images/serp1-leewow-on-demand-product-creation-for-beginners.png" alt="Leewow SERP #1: On-Demand Product Creation for Beginners" loading="lazy">
+          <img src="images/serp1-leewow-on-demand-product-creation-for-beginners.png" width="1920" height="1040" alt="Leewow SERP #1: On-Demand Product Creation for Beginners" loading="lazy">
           <div class="serp-caption" data-zh="#1 — On-Demand Product Creation for Beginners" data-en="#1 — On-Demand Product Creation for Beginners">#1 — On-Demand Product Creation for Beginners</div>
         </div>
         <div class="serp-item">
-          <img src="images/serp1-leewow-generative-ai-for-physical-products.png" alt="Leewow SERP #1: Generative AI for Physical Products" loading="lazy">
+          <img src="images/serp1-leewow-generative-ai-for-physical-products.png" width="1920" height="1040" alt="Leewow SERP #1: Generative AI for Physical Products" loading="lazy">
           <div class="serp-caption" data-zh="#1 — Generative AI for Physical Products" data-en="#1 — Generative AI for Physical Products">#1 — Generative AI for Physical Products</div>
         </div>
         <div class="serp-item">
-          <img src="images/serp1-leewow-on-demand-product-creation-2026.png" alt="Leewow SERP #1: On-Demand Product Creation 2026" loading="lazy">
+          <img src="images/serp1-leewow-on-demand-product-creation-2026.png" width="1920" height="1040" alt="Leewow SERP #1: On-Demand Product Creation 2026" loading="lazy">
           <div class="serp-caption" data-zh="#1 — On-Demand Product Creation 2026" data-en="#1 — On-Demand Product Creation 2026">#1 — On-Demand Product Creation 2026</div>
         </div>
         <div class="serp-item">
-          <img src="images/serp1-leewow-printful-vs-leewow.png" alt="Leewow SERP #1: Printful vs Leewow" loading="lazy">
+          <img src="images/serp1-leewow-printful-vs-leewow.png" width="1920" height="1040" alt="Leewow SERP #1: Printful vs Leewow" loading="lazy">
           <div class="serp-caption" data-zh="#1 — Printful vs Leewow" data-en="#1 — Printful vs Leewow">#1 — Printful vs Leewow</div>
         </div>
         <div class="serp-item">
-          <img src="images/serp1-leewow-on-demand-product-creation-vs-product-creation-agent.png" alt="Leewow SERP #1: On-Demand Product Creation vs Product Creation Agent" loading="lazy">
+          <img src="images/serp1-leewow-on-demand-product-creation-vs-product-creation-agent.png" width="1920" height="1040" alt="Leewow SERP #1: On-Demand Product Creation vs Product Creation Agent" loading="lazy">
           <div class="serp-caption" data-zh="#1 — On-Demand Creation vs Product Creation Agent" data-en="#1 — On-Demand Creation vs Product Creation Agent">#1 — On-Demand Creation vs Product Creation Agent</div>
         </div>
         <div class="serp-item">
-          <img src="images/serp1-leewow-traditional-product-workflows-vs-ai-product-creation.png" alt="Leewow SERP #1: Traditional Workflows vs AI Product Creation" loading="lazy">
+          <img src="images/serp1-leewow-traditional-product-workflows-vs-ai-product-creation.png" width="1920" height="1040" alt="Leewow SERP #1: Traditional Workflows vs AI Product Creation" loading="lazy">
           <div class="serp-caption" data-zh="#1 — Traditional Workflows vs AI Product Creation" data-en="#1 — Traditional Workflows vs AI Product Creation">#1 — Traditional Workflows vs AI Product Creation</div>
         </div>
       </div>
@@ -362,7 +362,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  
+  </main><footer>
     <div>&copy; 2026 weihacking &middot; Soulcraft Limited</div>
     <div class="f-links">
       <a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X &nearr;</a>
@@ -371,6 +372,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

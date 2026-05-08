@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Insights — weihacking</title>
-  <meta name="description" content="Curated SEO and AI search insights — data-driven findings from Ahrefs, Semrush, and real campaign results.">
+  <meta name="description" content="Curated SEO and AI search insights — data-driven findings from Ahrefs, Semrush, real campaign results, and SERP evidence. Updated weekly.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,11 +57,10 @@
 }
 </script>
 
-<style>.sub-hero::after{content:'';display:block;width:60px;height:2px;background:var(--accent);margin:20px auto 0;animation:accentIn .8s ease forwards;opacity:0;transform:scaleX(0)}@keyframes accentIn{to{opacity:1;transform:scaleX(1)}}</style>
 </head>
 <body>
 
-  <nav>
+  <nav aria-label="主导航">
     <a href="index.html">weihacking_</a>
     <div class="nav-r">
       <a href="index.html" class="nb" style="margin-right:8px">←</a>
@@ -69,6 +68,7 @@
       <button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button>
     </div>
   </nav>
+  <main>
 
   <!-- ==================== PAGE HEADER ==================== -->
   <div class="sub-hero">
@@ -148,7 +148,7 @@
       <!-- CASE SPOTLIGHT -->
       <div class="case-spot">
         <div class="case-spot-img">
-          <img src="images/gsc-growth.jpg" alt="Google Search Console showing 769K impressions growth" loading="lazy">
+          <img src="images/gsc-growth.jpg" width="1200" height="630" alt="Google Search Console showing 769K impressions growth" loading="lazy">
         </div>
         <div class="case-spot-text">
           <h3 data-zh="PSEO Agent 实战：769K 月曝光" data-en="PSEO Agent in Action: 769K Monthly Impressions">PSEO Agent 实战：769K 月曝光</h3>
@@ -206,14 +206,14 @@
       <div style="margin-top:32px">
         <h2 class="sec-label" data-zh="排名证据" data-en="SERP Evidence">排名证据</h2>
         <p class="passage" data-zh="SERP 截图证据来自 Leewow 和 HakkoAI 的真实排名。Leewow 在「Printful vs Leewow」「Generative AI for Physical Products」「On-Demand Product Creation 2026」等关键词获得 SERP 第一名。HakkoAI 在「Valorant AI Coach 2026」排名第一，在「CS2 AI Coach」排名第三。所有截图为 Google 搜索结果实时截取。" data-en="SERP screenshot evidence from Leewow and HakkoAI real rankings. Leewow achieved SERP position one for keywords including Printful vs Leewow, Generative AI for Physical Products, and On-Demand Product Creation 2026. HakkoAI ranked position one for Valorant AI Coach 2026 and position three for CS2 AI Coach. All screenshots are live captures of actual Google search results.">SERP 截图证据来自 Leewow 和 HakkoAI 的真实排名。Leewow 在「Printful vs Leewow」「Generative AI for Physical Products」「On-Demand Product Creation 2026」等关键词获得 SERP 第一名。HakkoAI 在「Valorant AI Coach 2026」排名第一，在「CS2 AI Coach」排名第三。所有截图为 Google 搜索结果实时截取。</p>
-        <div class="about-img-row" style="grid-template-columns:1fr 1fr 1fr">
-          <div class="img-slot"><img src="images/serp1-leewow-printful-vs-leewow.png" alt="SERP #1: Printful vs Leewow" loading="lazy"></div>
-          <div class="img-slot"><img src="images/serp1-leewow-generative-ai-for-physical-products.png" alt="SERP #1: Generative AI for Physical Products" loading="lazy"></div>
-          <div class="img-slot"><img src="images/serp1-leewow-on-demand-product-creation-2026.png" alt="SERP #1: On-Demand Product Creation 2026" loading="lazy"></div>
+        <div class="about-img-row three-col">
+          <div class="img-slot"><img src="images/serp1-leewow-printful-vs-leewow.png" width="1920" height="1040" alt="SERP #1: Printful vs Leewow" loading="lazy"></div>
+          <div class="img-slot"><img src="images/serp1-leewow-generative-ai-for-physical-products.png" width="1920" height="1040" alt="SERP #1: Generative AI for Physical Products" loading="lazy"></div>
+          <div class="img-slot"><img src="images/serp1-leewow-on-demand-product-creation-2026.png" width="1920" height="1040" alt="SERP #1: On-Demand Product Creation 2026" loading="lazy"></div>
         </div>
-        <div class="about-img-row" style="margin-top:12px;grid-template-columns:1fr 1fr">
-          <div class="img-slot"><img src="images/serp1-hakkoai-valorant-ai-coach-2026.png" alt="HakkoAI SERP #1: Valorant AI Coach 2026" loading="lazy"></div>
-          <div class="img-slot"><img src="images/serp3-hakkoai-cs2-ai-coach.png" alt="HakkoAI SERP #3: CS2 AI Coach" loading="lazy"></div>
+        <div class="about-img-row" style="margin-top:12px">
+          <div class="img-slot"><img src="images/serp1-hakkoai-valorant-ai-coach-2026.png" width="1920" height="1040" alt="HakkoAI SERP #1: Valorant AI Coach 2026" loading="lazy"></div>
+          <div class="img-slot"><img src="images/serp3-hakkoai-cs2-ai-coach.png" width="1920" height="1040" alt="HakkoAI SERP #3: CS2 AI Coach" loading="lazy"></div>
         </div>
       </div>
 
@@ -348,7 +348,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  
+  </main><footer>
     <div style="margin-bottom:8px;font-family:var(--hand);font-size:18px;color:var(--accent)">weihacking</div>
     <div>© 2026 weihacking · Soulcraft Limited</div>
     <div class="f-links">
@@ -360,6 +361,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

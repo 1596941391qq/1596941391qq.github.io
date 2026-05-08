@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thinking — weihacking</title>
-  <meta name="description" content="Personal aphorisms, collaboration manifesto, and contrarian takes from weihacking on SEO, AI, and strategy.">
+  <meta name="description" content="Personal aphorisms, collaboration manifesto, and contrarian takes from weihacking on SEO, AI, and growth strategy. Build in public, ship fast.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,11 +57,10 @@
 }
 </script>
 
-<style>.sub-hero::after{content:'';display:block;width:60px;height:2px;background:var(--accent);margin:20px auto 0;animation:accentIn .8s ease forwards;opacity:0;transform:scaleX(0)}@keyframes accentIn{to{opacity:1;transform:scaleX(1)}}</style>
 </head>
 <body>
 
-  <nav>
+  <nav aria-label="主导航">
     <a href="index.html">weihacking_</a>
     <div class="nav-r">
       <a href="index.html" class="nb" style="margin-right:8px">←</a>
@@ -69,6 +68,7 @@
       <button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button>
     </div>
   </nav>
+  <main>
 
   <!-- ==================== PAGE HEADER ==================== -->
   <div class="sub-hero">
@@ -346,9 +346,9 @@
     <div class="wrap">
       <h2 class="sec-label" data-zh="推文影响" data-en="Tweet Reach">推文影响</h2>
       <p class="passage" data-zh="weihacking 在 X/Twitter 发布关于 SEO、AI 搜索和出海增长的个人反思与反共识观点，所有洞察均来自 2026 年真实品牌项目数据而非理论推演。推文涵盖 AI 引用优化的信任悖论、PSEO 批量内容的排名验证和 GEO 策略的实战复盘。" data-en="weihacking publishes personal reflections and contrarian takes on SEO, AI search, and global growth on X/Twitter. All insights come from real 2026 brand campaign data rather than theoretical reasoning. Tweets cover the trust paradox in AI citation optimization, PSEO batch content ranking verification, and GEO strategy field reports.">weihacking 在 X/Twitter 发布关于 SEO、AI 搜索和出海增长的个人反思与反共识观点，所有洞察均来自 2026 年真实品牌项目数据而非理论推演。推文涵盖 AI 引用优化的信任悖论、PSEO 批量内容的排名验证和 GEO 策略的实战复盘。</p>
-      <div class="about-img-row" style="grid-template-columns:1fr 1fr">
-        <div class="img-slot"><img src="images/tweet-img1.jpg" alt="Tweet engagement: SEO strategy insights" loading="lazy"></div>
-        <div class="img-slot"><img src="images/tweet-img2.jpg" alt="Tweet engagement: AI search analysis" loading="lazy"></div>
+      <div class="about-img-row">
+        <div class="img-slot"><img src="images/tweet-img1.jpg" width="942" height="2048" alt="Tweet engagement: SEO strategy insights" loading="lazy"></div>
+        <div class="img-slot"><img src="images/tweet-img2.jpg" width="1835" height="905" alt="Tweet engagement: AI search analysis" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -378,7 +378,8 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  
+  </main><footer>
     <div style="margin-bottom:8px;font-family:var(--hand);font-size:18px;color:var(--accent)">weihacking</div>
     <div>© 2026 weihacking · Soulcraft Limited</div>
     <div class="f-links">
@@ -390,6 +391,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
