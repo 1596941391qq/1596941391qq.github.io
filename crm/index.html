@@ -416,6 +416,7 @@ body.mode-accordion .bar-chart{gap:6px}
     <span>设置</span>
   </button>
 </nav>
+<main>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)CRM.ui.closeModal()">
@@ -2142,5 +2143,6 @@ CRM.ui._initTouchDrag();
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('/crm/sw.js').catch(()=>{});
 </script>
+</main>
 </body>
 </html>

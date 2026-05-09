@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>MOCLAW 文章数据</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js" defer></script>
   <style>
     :root {
       --bg: 248 250 252;
@@ -397,7 +397,7 @@
         <tr>
           <td class="rank-num">${start + i + 1}</td>
           <td class="keyword-cell">
-            <a class="keyword-link" href="${d.url}" target="_blank" title="${d.keyword}">${d.keyword}</a>
+            <a class="keyword-link" href="${d.url}" target="_blank" rel="noreferrer" title="${d.keyword}">${d.keyword}</a>
           </td>
           <td>${d.date}</td>
           <td class="views-cell">${d.views}</td>
