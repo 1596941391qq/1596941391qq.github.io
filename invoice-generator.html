@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Invoice Generator - SoulCraft Limited</title>
+<meta name="description" content="免费在线 Invoice 生成器，支持多币种、自定义服务模板、一键导出 PDF。适用于出海企业及自由职业者。">
+<link rel="canonical" href="https://1596941391qq.github.io/invoice-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Invoice Generator — 免费在线发票生成器">
+<meta property="og:description" content="免费在线 Invoice 生成器，支持多币种、自定义服务模板、一键导出 PDF。">
+<meta property="og:url" content="https://1596941391qq.github.io/invoice-generator.html">
+<meta property="og:image" content="https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -12,7 +20,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#000;font-s
 
 /* === Sidebar === */
 .sb{width:340px;background:#fff;border-right:1px solid #ddd;padding:20px;overflow-y:auto;flex-shrink:0}
-.sb h2{font-size:16px;margin-bottom:16px;font-weight:700}
+.sb h1{font-size:16px;margin-bottom:16px;font-weight:700}
 .sec{margin-bottom:14px}
 .sec label{display:block;font-size:11px;font-weight:600;color:#666;margin-bottom:3px}
 .sec input,.sec select,.sec textarea{width:100%;padding:6px 8px;border:1px solid #ccc;border-radius:3px;font-size:13px;font-family:inherit}
@@ -38,9 +46,9 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#000;font-s
 
 /* Meta rows: label left, value right */
 .inv-meta{margin-bottom:24px}
-.inv-mrow{display:flex;font-size:10pt;line-height:1.9;color:#000}
-.inv-mrow .ml{color:#000;flex-shrink:0}
-.inv-mrow .mv{color:#000;flex:1;text-align:left}
+.inv-mrow{display:flex;font-size:10pt;line-height:1.9;color:#000;gap:24px}
+.inv-mrow .ml{color:#000;min-width:140px}
+.inv-mrow .mv{color:#000}
 
 /* Two columns: company info left, Bill to right */
 .inv-cols{display:flex;margin-bottom:28px;gap:0}
@@ -89,15 +97,17 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#000;font-s
 .rmb{display:none!important}
 }
 </style>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%233b5998'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='system-ui' font-weight='bold'>W</text></svg>">
 </head>
 <body>
+<main>
 <div class="app">
 
 <!-- Sidebar -->
 <div class="sb">
-  <h2>Invoice Generator</h2>
+  <h1>Invoice Generator</h1>
   <div class="sec">
-    <label>Invoice Number</label>
+    <label for="invoiceNumber">Invoice Number</label>
     <div class="r2">
       <input type="text" id="invoiceNumber" readonly style="background:#f8f8f8">
       <button class="btn bs" onclick="regenNum()">&#x21bb;</button>
@@ -105,15 +115,15 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#000;font-s
   </div>
   <div class="sec">
     <div class="r2">
-      <div><label>Date of Issue</label><input type="date" id="issueDate"></div>
-      <div><label>Due Date</label><input type="date" id="dueDate"></div>
+      <div><label for="issueDate">Date of Issue</label><input type="date" id="issueDate"></div>
+      <div><label for="dueDate">Due Date</label><input type="date" id="dueDate"></div>
     </div>
   </div>
-  <div class="sec"><label>Client Name</label><input type="text" id="clientName" placeholder="e.g. Cubo World Inc"></div>
-  <div class="sec"><label>Client Email</label><input type="email" id="clientEmail" placeholder="e.g. kelly@flot.ai"></div>
-  <div class="sec"><label>Client Address</label><textarea id="clientAddress" rows="3" placeholder="Full address"></textarea></div>
+  <div class="sec"><label for="clientName">Client Name</label><input type="text" id="clientName" placeholder="e.g. Cubo World Inc"></div>
+  <div class="sec"><label for="clientEmail">Client Email</label><input type="email" id="clientEmail" placeholder="e.g. kelly@flot.ai"></div>
+  <div class="sec"><label for="clientAddress">Client Address</label><textarea id="clientAddress" rows="3" placeholder="Full address"></textarea></div>
   <div class="sec">
-    <label>Currency</label>
+    <label for="currency">Currency</label>
     <select id="currency">
       <option value="USD">USD ($)</option>
       <option value="EUR">EUR (€)</option>
@@ -132,7 +142,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#000;font-s
     </div>
   </div>
   <div class="sec">
-    <label>Add Line Item</label>
+    <label for="tplSelect">Add Line Item</label>
     <div style="margin-bottom:4px"><select id="tplSelect" style="width:100%"><option value="">-- pick saved or type --</option></select></div>
     <input type="text" id="itemDesc" placeholder="Description" style="margin-bottom:4px">
     <div class="r2" style="margin-bottom:6px">
@@ -190,7 +200,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#000;font-s
   <!-- Table -->
   <table class="inv-tbl">
     <thead><tr>
-      <th>Description</th><th>Qty</th><th>Unit price</th><th>Amount</th>
+      <th scope="col">Description</th><th scope="col">Qty</th><th scope="col">Unit price</th><th scope="col">Amount</th>
     </tr></thead>
     <tbody id="tBody"></tbody>
   </table>
@@ -260,5 +270,6 @@ function dlPDF(){
 
 (function(){document.getElementById('invoiceNumber').value=genNum();document.getElementById('issueDate').value=new Date().toISOString().split('T')[0];document.getElementById('dueDate').value=defDue();renderTpls();upd()})();
 </script>
+</main>
 </body>
 </html>
