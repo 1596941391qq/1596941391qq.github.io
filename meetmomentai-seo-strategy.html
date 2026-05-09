@@ -466,9 +466,9 @@
         <div class="box">
           <table>
             <tr>
-              <th>#</th>
-              <th>审计项</th>
-              <th>判断</th>
+              <th scope="col">#</th>
+              <th scope="col">审计项</th>
+              <th scope="col">判断</th>
             </tr>
 
             <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
@@ -624,10 +624,10 @@
         <div class="box">
           <table>
             <tr>
-              <th>优先级</th>
-              <th>动作</th>
-              <th>为什么先做</th>
-              <th>对应条线</th>
+              <th scope="col">优先级</th>
+              <th scope="col">动作</th>
+              <th scope="col">为什么先做</th>
+              <th scope="col">对应条线</th>
             </tr>
             <tr><td><strong>P0</strong></td><td>HTTP 全站 301 到 HTTPS</td><td>这是最便宜但必须先收的技术底盘。协议不统一，权重和信任都分裂。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>为 `/pricing`、`/download`、`/blog` 等公开路由输出独立 title / meta / canonical</td><td>只要路由还共用首页 SEO 包，搜索引擎就不会把它们当独立页面。</td><td>第三条线</td></tr>
@@ -756,7 +756,7 @@
         <h2>关键词分级</h2>
         <div class="box">
           <table>
-            <tr><th>级别</th><th>关键词方向</th><th>承接页面</th></tr>
+            <tr><th scope="col">级别</th><th scope="col">关键词方向</th><th scope="col">承接页面</th></tr>
             <tr><td><strong>S</strong></td><td>ai personal knowledge assistant / second brain ai assistant / ai knowledge assistant</td><td>品类定义页与核心功能页</td></tr>
             <tr><td><strong>A</strong></td><td>moment ai pricing / moment ai download / moment ai review / ai tool for notes and links</td><td>`/pricing`、`/download`、`/review`、功能页</td></tr>
             <tr><td><strong>B</strong></td><td>mem alternative / reflect alternative / heptabase alternative / capacities alternative</td><td>`/compare/*` 对比页</td></tr>

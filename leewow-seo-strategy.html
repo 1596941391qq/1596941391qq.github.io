@@ -209,7 +209,7 @@
         <h2>评分与原因</h2>
         <div class="box">
           <table>
-            <tr><th>维度</th><th>分数</th><th>判断</th><th>原因</th></tr>
+            <tr><th scope="col">维度</th><th scope="col">分数</th><th scope="col">判断</th><th scope="col">原因</th></tr>
             <tr>
               <td><strong>整体可见性</strong></td>
               <td class="status-bad">25</td>
@@ -299,7 +299,7 @@
         <p class="audit-note">状态说明：`良好` = 实测确认基础成立；`待优化` = 有雏形但不够；`风险` = 实测确认影响增长；`待建设` = 对应能力未长出来。</p>
         <div class="table-wrap">
           <table class="audit-ledger">
-            <tr><th>编号</th><th>检查点</th><th>核验结果</th></tr>
+            <tr><th scope="col">编号</th><th scope="col">检查点</th><th scope="col">核验结果</th></tr>
 
             <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
             <tr><td>001</td><td>robots.txt 可访问</td><td><strong class="status-good">良好</strong>：User-agent: * Allow: /，Sitemap 声明正确。</td></tr>
@@ -453,7 +453,7 @@
         <h2>优先修复</h2>
         <div class="box">
           <table>
-            <tr><th>优先级</th><th>动作</th><th>为什么先做</th><th>对应条线</th></tr>
+            <tr><th scope="col">优先级</th><th scope="col">动作</th><th scope="col">为什么先做</th><th scope="col">对应条线</th></tr>
             <tr><td><strong>P0</strong></td><td>首页从 SPA 改造为 SSR/SSG，确保 Google 爬到完整的 HTML 内容</td><td>首页是权重分发中心。SPA 空壳 = 无法传递权重 = 所有子页面都是孤岛。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>Sitemap 从 4 URL 扩展到完整覆盖</td><td>只有 4 URL = Google 几乎不爬这个站。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>修复多语言 canonical（每个语言版本指向自身 URL）+ 部署 hreflang</td><td>当前 6 个语言 URL 全指向同一 canonical = 重复内容。</td><td>第三条线</td></tr>
@@ -583,7 +583,7 @@
         <h2>关键词分级</h2>
         <div class="box">
           <table>
-            <tr><th>级别</th><th>关键词方向</th><th>承担页面</th></tr>
+            <tr><th scope="col">级别</th><th scope="col">关键词方向</th><th scope="col">承担页面</th></tr>
             <tr><td><strong>S</strong></td><td>printful alternative / printify alternative / ai product design / custom merchandise ai / product creation agent</td><td>对比页、首页、产品页共同承担</td></tr>
             <tr><td><strong>A</strong></td><td>redbubble alternative / gelato vs printful / ai t-shirt design / custom hoodie ai / personalized blanket gift</td><td>对比页、品类页</td></tr>
             <tr><td><strong>B</strong></td><td>how to start a merchandise brand / print on demand vs ai product creation / best custom gift ideas 2026 / ai design tools for products</td><td>博客、教程页</td></tr>

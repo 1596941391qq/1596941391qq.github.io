@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <title>302AI 文章数据</title>
@@ -130,8 +130,10 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
-</head>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%233b5998'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='system-ui' font-weight='bold'>W</text></svg>"></head>
 <body>
+<main>
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">302Ai Dashboard</h1>
   <div class="container">
     <div class="header">
       <div class="page-title">302AI 文章数据洞察</div>
@@ -209,10 +211,10 @@
       <table>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Keyword</th>
-            <th>Published</th>
-            <th>Views</th>
+            <th scope="col">#</th>
+            <th scope="col">Keyword</th>
+            <th scope="col">Published</th>
+            <th scope="col">Views</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -397,7 +399,7 @@
         <tr>
           <td class="rank-num">${start + i + 1}</td>
           <td class="keyword-cell">
-            <a class="keyword-link" href="${d.url}" target="_blank" title="${d.keyword}">${d.keyword}</a>
+            <a class="keyword-link" href="${d.url}" target="_blank" rel="noopener noreferrer" title="${d.keyword}">${d.keyword}</a>
           </td>
           <td>${d.date}</td>
           <td class="views-cell">${d.views}</td>
@@ -416,5 +418,6 @@
     renderHeatmapChart();
     renderTable();
   </script>
+</main>
 </body>
 </html>

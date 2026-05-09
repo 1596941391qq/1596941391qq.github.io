@@ -555,7 +555,7 @@ CRM.state = {
       localStorage.setItem('crm_cache', JSON.stringify(this.data));
     } catch(e) {
       console.error('localStorage save failed:', e);
-      const el = document.getElementById('syncStatus');
+      const el = document.querySelector('.sync-status');
       if (el) { el.textContent = '⚠ 本地存储失败'; el.classList.add('unsynced'); }
     }
     this.queueWrite();
@@ -893,7 +893,7 @@ CRM.ui = {
         <div class="stat"><div class="stat-val">${s.stageCounts['试水期']||0}</div><div class="stat-label">试水期</div></div>
         <div class="stat"><div class="stat-val">${s.stageCounts['正式期']||0}</div><div class="stat-label">正式期</div></div>
         <div class="stat"><div class="stat-val accent">${s.appointments.length}</div><div class="stat-label">今日电话</div></div>
-        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
+        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" >
           ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
         </div>`;
     } else if (CRM.state.currentView === 'tasks') {
@@ -903,7 +903,7 @@ CRM.ui = {
         <div class="stat"><div class="stat-val blue">${s.taskByStatus['todo']||0}</div><div class="stat-label">Todo</div></div>
         <div class="stat"><div class="stat-val">${s.taskByStatus['in-progress']||0}</div><div class="stat-label">In Progress</div></div>
         <div class="stat"><div class="stat-val green">${s.taskByStatus['finish']||0}</div><div class="stat-label">Finish</div></div>
-        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
+        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" >
           ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
         </div>`;
     } else if (CRM.state.currentView === 'accounting') {
@@ -916,7 +916,7 @@ CRM.ui = {
         <div class="stat"><div class="stat-val" style="color:var(--yellow)">$${s.pendingInvoices.toLocaleString()}</div><div class="stat-label">待收款</div></div>
         <div class="stat"><div class="stat-val">${txns.length}</div><div class="stat-label">流水笔数</div></div>
         <div class="stat"><div class="stat-val">${invs.length}</div><div class="stat-label">账单数</div></div>
-        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" id="syncStatus">
+        <div class="stat sync-status ${CRM.state.syncStatus==='synced'?'':'unsynced'}" >
           ${CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败'}
         </div>`;
     }
@@ -2062,7 +2062,7 @@ CRM.ui = {
 
   // Sync status
   updateSyncStatus() {
-    const el = document.getElementById('syncStatus');
+    const el = document.querySelector('.sync-status');
     if (!el) return;
     el.className = 'sync-status ' + (CRM.state.syncStatus==='synced'?'':'unsynced');
     el.textContent = CRM.state.syncStatus==='synced'?'✓ 已同步':CRM.state.syncStatus==='unsynced'?'● 未同步':'✗ 同步失败';

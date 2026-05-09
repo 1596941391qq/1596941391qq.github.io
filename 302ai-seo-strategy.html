@@ -75,10 +75,10 @@
         <div class="box">
           <table>
             <tr>
-              <th>维度</th>
-              <th>分数</th>
-              <th>判断</th>
-              <th>原因</th>
+              <th scope="col">维度</th>
+              <th scope="col">分数</th>
+              <th scope="col">判断</th>
+              <th scope="col">原因</th>
             </tr>
             <tr>
               <td><strong>整体可见性</strong></td>
@@ -177,9 +177,9 @@
         <div class="table-wrap">
           <table class="audit-ledger">
             <tr>
-              <th>编号</th>
-              <th>检查点</th>
-              <th>核验结果</th>
+              <th scope="col">编号</th>
+              <th scope="col">检查点</th>
+              <th scope="col">核验结果</th>
             </tr>
 
             <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
@@ -335,10 +335,10 @@
         <div class="box">
           <table>
             <tr>
-              <th>优先级</th>
-              <th>动作</th>
-              <th>为什么先做</th>
-              <th>对应条线</th>
+              <th scope="col">优先级</th>
+              <th scope="col">动作</th>
+              <th scope="col">为什么先做</th>
+              <th scope="col">对应条线</th>
             </tr>
             <tr><td><strong>P0</strong></td><td>HTTP → HTTPS 301 重定向</td><td>一行 nginx 配置即可修复。不修这个，链接权重永远分散在两个协议上。</td><td>第三条线</td></tr>
             <tr><td><strong>P0</strong></td><td>国际化从 cookie 制改为 URL 路径制（/en/、/ja/），加 hreflang</td><td>英文版从 SEO 角度不存在 = 出海 SEO 无法启动。这是 302.ai 最大的结构性缺陷。</td><td>第三条线</td></tr>
@@ -471,7 +471,7 @@
         <h2>关键词分级</h2>
         <div class="box">
           <table>
-            <tr><th>级别</th><th>关键词方向</th><th>承担页面</th></tr>
+            <tr><th scope="col">级别</th><th scope="col">关键词方向</th><th scope="col">承担页面</th></tr>
             <tr><td><strong>S</strong></td><td>openai api alternative / cursor alternative / cheap ai api / ai api pricing comparison</td><td>对比页、寄生站教程共同承担</td></tr>
             <tr><td><strong>A</strong></td><td>replit alternative / midjourney alternative cheaper / gpt-4 api alternative / multimodal ai api</td><td>对比页、API 文档页</td></tr>
             <tr><td><strong>B</strong></td><td>best ai coding assistant / ai video generator free / how to reduce openai api cost / ai tool for developers</td><td>博客、教程页、功能页</td></tr>

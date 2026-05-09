@@ -123,7 +123,7 @@
         <div class="label">Measured Evidence</div>
         <h2>实测证据摘要</h2>
         <table>
-          <tr><th>指标</th><th>结果</th><th>判断</th></tr>
+          <tr><th scope="col">指标</th><th scope="col">结果</th><th scope="col">判断</th></tr>
           <tr><td>审计页面</td><td>12</td><td>覆盖首页、创建页、目录页、评论页、订单页、重点场景页</td></tr>
           <tr><td>失败页面</td><td>0</td><td>基础访问正常</td></tr>
           <tr><td>平均评分</td><td>72/100</td><td>中等偏上，但成交页存在硬伤</td></tr>
@@ -140,7 +140,7 @@
         <div class="label">Page Diagnosis</div>
         <h2>页面级诊断</h2>
         <table>
-          <tr><th>页面</th><th>当前角色</th><th>证据</th><th>问题</th><th>优先级</th></tr>
+          <tr><th scope="col">页面</th><th scope="col">当前角色</th><th scope="col">证据</th><th scope="col">问题</th><th scope="col">优先级</th></tr>
           <tr><td>/</td><td>首页</td><td>1459 词，82 内链，Org/WebSite/Product/FAQ</td><td>应更强导向 examples/reviews/create</td><td>P1</td></tr>
           <tr><td>/create</td><td>成交入口</td><td>184 词，4 图，0 内链</td><td>无 title/meta/canonical/JSON-LD，2 H1，无 H2</td><td>P0</td></tr>
           <tr><td>/browse-songs</td><td>目录 hub</td><td>306 词，69 内链，Breadcrumb</td><td>像链接页，不像礼物决策页；meta 偏短</td><td>P1</td></tr>
@@ -179,7 +179,7 @@
         <h3 style="margin-top:28px">审计项执行展开</h3>
         <p>上面的 16 项不是标题清单，而是执行队列。SongUnique 的问题不在某一个单点错误，而在“成交入口、证据页、目录 hub、样歌资产、站外背书”没有被压成同一条增长链路。下面按可交付动作继续展开。</p>
         <table>
-          <tr><th>模块</th><th>当前可确认状态</th><th>增长影响</th><th>具体动作</th></tr>
+          <tr><th scope="col">模块</th><th scope="col">当前可确认状态</th><th scope="col">增长影响</th><th scope="col">具体动作</th></tr>
           <tr><td>抓取入口</td><td>robots.txt 存在；sitemap 当前为 XML；约 744 loc 和 5952 alternate。</td><td>SongUnique 依赖大量 recipient、occasion、多语言页面，如果 sitemap 没被 Google 完整读取，页面矩阵会停留在“站内存在”，不能变成搜索入口。</td><td>用 GSC 验证提交、发现、抓取、索引数量；若单 sitemap 识别不稳定，拆成 sitemap-index + 分语言 sitemap。</td></tr>
           <tr><td>索引治理</td><td>后台、支付、dashboard 等路径已有 robots 阻止；/track 仍是可访问 utility 页面。</td><td>低价值页面进入抓取队列会稀释站点质量信号，也会让 Google 把订单工具页和礼物内容页混在一起评估。</td><td>建立 index/noindex 白名单；/track 若不承担搜索流量，应 noindex；支付成功、取消、订单页同时做鉴权和 noindex。</td></tr>
           <tr><td>canonical</td><td>多数场景页 self canonical 正常；/create 缺 canonical。</td><td>/create 是核心成交入口，缺 canonical 会削弱它作为主产品页的稳定性；多语言和默认英文路径也可能产生重复判断。</td><td>/create 立即补 self canonical；抽查默认英文与 /en/；memorial、memory、funeral 等相近页面不得粗暴合并。</td></tr>
@@ -225,7 +225,7 @@
         <div class="label">Keyword Matrix</div>
         <h2>关键词矩阵</h2>
         <table>
-          <tr><th>等级</th><th>关键词</th><th>目标</th></tr>
+          <tr><th scope="col">等级</th><th scope="col">关键词</th><th scope="col">目标</th></tr>
           <tr><td>S</td><td>personalized song gift / custom song gift / create a song for someone / custom birthday song / personalized anniversary song / song for mom / song for dad / song for wife / memorial song / wedding song gift</td><td>核心成交与品类入口</td></tr>
           <tr><td>A</td><td>song for husband / song for daughter / song for son / song for girlfriend / Mother's Day song / Father's Day song / graduation song / retirement song / prayer song / blessing song / memory song / funeral song</td><td>关系和场景矩阵</td></tr>
           <tr><td>B</td><td>SongUnique vs Songfinch / SongUnique vs Songlorious / SongUnique vs LoveTunesAI / Songfinch alternatives / best personalized song gift services / AI custom song vs human custom song</td><td>比较和替代词截流</td></tr>
@@ -238,7 +238,7 @@
         <div class="label">90-Day Roadmap</div>
         <h2>90 天执行路线</h2>
         <table>
-          <tr><th>时间</th><th>目标</th><th>动作</th><th>产出</th></tr>
+          <tr><th scope="col">时间</th><th scope="col">目标</th><th scope="col">动作</th><th scope="col">产出</th></tr>
           <tr><td>第 1 周</td><td>止血</td><td>修 /create；确认 sitemap/GSC</td><td>成交页可索引，矩阵可验证</td></tr>
           <tr><td>第 2 周</td><td>索引治理</td><td>index/noindex 白名单；状态码抽样；hreflang/canonical 检查</td><td>技术风险清单</td></tr>
           <tr><td>第 3-4 周</td><td>证据页</td><td>改 reviews；建立 examples hub；补 6 个样歌页</td><td>可引用信任资产</td></tr>
