@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <title>KINOVI 文章数据</title>
@@ -130,10 +130,8 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%233b5998'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='system-ui' font-weight='bold'>W</text></svg>"></head>
+</head>
 <body>
-<main>
-<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Kinovi Dashboard</h1>
   <div class="container">
     <div class="header">
       <div class="page-title">KINOVI 文章数据洞察</div>
@@ -211,10 +209,10 @@
       <table>
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Keyword</th>
-            <th scope="col">Published</th>
-            <th scope="col">Views</th>
+            <th>#</th>
+            <th>Keyword</th>
+            <th>Published</th>
+            <th>Views</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -227,7 +225,7 @@
     // 格式: { keyword, created_at, views, url }
     // created_at: ISO 日期字符串
     // url: UniFuncs 分享链接
-    const rawData = [{"keyword":"ai ad creative video generator","title":"","created_at":"2026-04-23T01:55:03.984Z","views":211,"url":"https://unifuncs.com/s/DGZn3Izn"},{"keyword":"ai character video generator","title":"","created_at":"2026-04-23T01:54:40.905Z","views":116,"url":"https://unifuncs.com/s/SHQ9HO1F"},{"keyword":"ai product video generator","title":"","created_at":"2026-04-23T01:55:03.739Z","views":64,"url":"https://unifuncs.com/s/8HyJ80iC"},{"keyword":"ai ugc video generator","title":"","created_at":"2026-04-23T01:54:47.808Z","views":72,"url":"https://unifuncs.com/s/CZMIrfeO"},{"keyword":"ai video generator with audio","title":"","created_at":"2026-04-23T01:54:46.348Z","views":279,"url":"https://unifuncs.com/s/dNehbtLl"},{"keyword":"ai video with consistent characters","title":"","created_at":"2026-04-23T01:54:46.166Z","views":218,"url":"https://unifuncs.com/s/14y2wjq6"},{"keyword":"cheap video generation api","title":"","created_at":"2026-04-23T01:55:11.956Z","views":245,"url":"https://unifuncs.com/s/vnhhe8Sj"},{"keyword":"fal.ai alternative for video generation","title":"","created_at":"2026-04-23T01:55:11.260Z","views":134,"url":"https://unifuncs.com/s/ebV2eQfD"},{"keyword":"replicate alternative video api","title":"","created_at":"2026-04-23T01:55:06.699Z","views":542,"url":"https://unifuncs.com/s/TDikzkNU"},{"keyword":"sora alternative free","title":"","created_at":"2026-04-23T01:54:38.062Z","views":116,"url":"https://unifuncs.com/s/IjcrkHjX"}];
+    const rawData = [{"keyword":"ai ad creative video generator","title":"","created_at":"2026-03-01T00:00:00","views":498,"url":"https://unifuncs.com/s/DGZn3Izn"},{"keyword":"ai character video generator","title":"","created_at":"2026-03-01T00:00:00","views":248,"url":"https://unifuncs.com/s/SHQ9HO1F"},{"keyword":"ai product video generator","title":"","created_at":"2026-03-01T00:00:00","views":130,"url":"https://unifuncs.com/s/8HyJ80iC"},{"keyword":"ai ugc video generator","title":"","created_at":"2026-03-01T00:00:00","views":144,"url":"https://unifuncs.com/s/CZMIrfeO"},{"keyword":"ai video generator with audio","title":"","created_at":"2026-03-01T00:00:00","views":564,"url":"https://unifuncs.com/s/dNehbtLl"},{"keyword":"ai video with consistent characters","title":"","created_at":"2026-03-01T00:00:00","views":446,"url":"https://unifuncs.com/s/14y2wjq6"},{"keyword":"cheap video generation api","title":"","created_at":"2026-04-23T01:55:11.956Z","views":250,"url":"https://unifuncs.com/s/vnhhe8Sj"},{"keyword":"fal.ai alternative for video generation","title":"","created_at":"2026-03-01T00:00:00","views":328,"url":"https://unifuncs.com/s/ebV2eQfD"},{"keyword":"replicate alternative video api","title":"","created_at":"2026-03-01T00:00:00","views":1150,"url":"https://unifuncs.com/s/TDikzkNU"},{"keyword":"sora alternative free","title":"","created_at":"2026-03-01T00:00:00","views":254,"url":"https://unifuncs.com/s/IjcrkHjX"}];
 
     // ============ 模板逻辑（无需修改）============
     const today = new Date();
@@ -399,7 +397,7 @@
         <tr>
           <td class="rank-num">${start + i + 1}</td>
           <td class="keyword-cell">
-            <a class="keyword-link" href="${d.url}" target="_blank" rel="noopener noreferrer" title="${d.keyword}">${d.keyword}</a>
+            <a class="keyword-link" href="${d.url}" target="_blank" title="${d.keyword}">${d.keyword}</a>
           </td>
           <td>${d.date}</td>
           <td class="views-cell">${d.views}</td>
@@ -418,6 +416,5 @@
     renderHeatmapChart();
     renderTable();
   </script>
-</main>
 </body>
 </html>
