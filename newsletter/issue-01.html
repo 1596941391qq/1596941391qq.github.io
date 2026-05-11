@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>hacking 周刊 #01 — 平台正在一起淘汰假环境</title>
-  <meta name="description" content="hacking 周刊 #01：Google 压缩模板页、Reddit 打击脚本互动、外链同源污染。2026-03-29 ~ 04-01。">
+  <title>hacking 周刊 #01 · 平台正在一起淘汰假环境</title>
+  <meta name="description" content="hacking 周刊第一期：Google 压缩模板化页面，Reddit 压缩模板化互动，外链市场放大同源污染。2026-03-29 ~ 04-01。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Code+Pro:wght@400;600&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <meta property="og:title" content="hacking 周刊 #01 — 平台正在一起淘汰假环境">
+  <meta property="og:title" content="hacking 周刊 #01 · 平台正在一起淘汰假环境">
   <meta property="og:description" content="hacking 周刊第一期：Google 压缩模板化页面，Reddit 压缩模板化互动，外链市场放大同源污染。2026-03-29 ~ 04-01。">
   <meta property="og:url" content="https://1596941391qq.github.io/newsletter/issue-01.html">
   <meta property="og:site_name" content="weihacking">
@@ -19,54 +19,193 @@
   <meta property="og:image" content="https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@weihacking">
-  <meta name="twitter:title" content="hacking 周刊 #01 — 平台正在一起淘汰假环境">
+  <meta name="twitter:title" content="hacking 周刊 #01 · 平台正在一起淘汰假环境">
   <meta name="twitter:description" content="hacking 周刊第一期：Google 压缩模板化页面，Reddit 压缩模板化互动，外链市场放大同源污染。2026-03-29 ~ 04-01。">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://1596941391qq.github.io/"},{"@type":"ListItem","position":2,"name":"Newsletter","item":"https://1596941391qq.github.io/knowledge.html"},{"@type":"ListItem","position":3,"name":"#01 · 平台正在一起淘汰假环境"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"#01 · 平台正在一起淘汰假环境","description":"hacking 周刊第一期：Google 压缩模板化页面，Reddit 压缩模板化互动，外链市场放大同源污染。2026-03-29 ~ 04-01。","url":"https://1596941391qq.github.io/newsletter/issue-01.html","datePublished":"2026-03-29","author":{"@type":"Person","name":"weihacking","url":"https://1596941391qq.github.io"},"publisher":{"@type":"Organization","name":"Soulcraft Limited","logo":{"@type":"ImageObject","url":"https://1596941391qq.github.io/images/avatar.jpg"}},"image":"https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg"}</script>
   <link rel="canonical" href="https://1596941391qq.github.io/newsletter/issue-01.html">
   <link rel="alternate" hreflang="zh" href="https://1596941391qq.github.io/newsletter/issue-01.html">
   <link rel="alternate" hreflang="x-default" href="https://1596941391qq.github.io/newsletter/issue-01.html">
-  <style>
-    .pdf-viewer{width:100%;height:calc(100vh - 200px);min-height:600px;border:1px solid var(--rule);border-radius:4px}
-    .nav-issue{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
-    .nav-issue a{font-family:var(--mono);font-size:12px;color:var(--accent)}
-  </style>
+  <style>.nl-article{max-width:740px;margin:0 auto;padding:0 28px 48px}.nl-article h2{font-family:var(--serif);font-size:28px;font-weight:900;line-height:1.2;margin:48px 0 20px;color:var(--ink);border-top:2px solid var(--rule);padding-top:32px}.nl-article h3{font-family:var(--serif);font-size:20px;font-weight:700;line-height:1.3;margin:28px 0 12px;color:var(--ink)}.nl-article p{font-size:16px;line-height:1.8;color:var(--ink-s);margin-bottom:16px}.nl-article blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:20px 0;font-style:italic;color:var(--ink-s);background:var(--bg-alt)}.nl-article strong{color:var(--ink);font-weight:700}.nl-article em{font-style:normal;color:var(--accent);font-weight:700}.nl-article ul,.nl-article ol{margin:12px 0 16px 24px;color:var(--ink-s)}.nl-article li{font-size:15px;line-height:1.7;margin-bottom:6px}.nl-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.nl-table th{background:var(--bg-alt);padding:10px 14px;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--rule)}.nl-table td{padding:10px 14px;border-bottom:1px solid var(--rule);color:var(--ink-s);line-height:1.5}.nl-tool-list{list-style:none;padding:0;margin:12px 0 24px}.nl-tool-list li{font-size:14px;color:var(--ink-s);padding:6px 0;border-bottom:1px solid var(--rule)}.nl-tool-list strong{color:var(--ink)}.nl-term-list{list-style:none;padding:0;margin:12px 0 24px}.nl-term-list li{font-size:14px;padding:8px 0;border-bottom:1px solid var(--rule)}.nl-term-list strong{color:var(--accent);font-family:var(--mono);font-size:12px}.nav-issue{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding:24px 0;border-top:1px solid var(--rule)}.nav-issue a{font-family:var(--mono);font-size:12px;color:var(--accent)}.nl-editor-note{font-size:15px;line-height:1.8;color:var(--ink-s);margin-bottom:24px;padding:20px 24px;background:var(--bg-alt);border-left:3px solid var(--accent)}.nl-editor-note strong{color:var(--ink)}.nl-summary{font-size:15px;line-height:1.8;color:var(--ink-s);margin:20px 0 24px;padding:16px 20px;background:var(--bg-alt);border-radius:2px;font-family:var(--body)}.nl-quotes blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:16px 0;font-style:italic;color:var(--ink-s);background:var(--bg-alt)}.nl-quotes blockquote strong{color:var(--ink);font-style:normal}.nl-preview{font-size:14px;line-height:1.7;color:var(--ink-s);margin-top:48px;padding:20px 24px;border-top:2px solid var(--rule);font-style:italic}</style>
 </head>
 <body>
-  <nav aria-label="主导航">
-    <a href="../index.html">weihacking_</a>
-    <div class="nav-r">
-      <a href="../knowledge.html" class="nb" style="margin-right:8px">←</a>
-      <button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button>
-    </div>
-  </nav>
+  <nav aria-label="主导航"><a href="../index.html">weihacking_</a><div class="nav-r"><a href="../knowledge.html" class="nb" style="margin-right:8px">←</a><button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button></div></nav>
 <main>
-  <div class="sub-hero" style="padding-bottom:32px">
-    <div class="wrap">
-      <p class="sec-label">hacking 周刊</p>
-      <h1>#01 · 平台正在一起淘汰假环境</h1>
-      <p class="hero-sub">2026-03-29 ~ 04-01</p>
-    </div>
-  </div>
+  <div class="sub-hero" style="padding-bottom:32px"><div class="wrap"><p class="sec-label">hacking 周刊</p><h1>#01 · 平台正在一起淘汰假环境</h1><p class="hero-sub">2026-03-29 ~ 04-01</p></div></div>
   <section class="wrap" style="padding:0 28px 32px">
-    <embed src="issue-01-2026-0329-0401.pdf" type="application/pdf" class="pdf-viewer">
+    <div class="nl-article">
+<div class="nl-editor-note">
+<strong>编者按：</strong> 这是 hacking周刊的创刊号。为什么在这个时间点做一份周刊？因为我观察到 SEO 暗面圈正在经历一次集体认知迁移——从"怎么搞"到"搞了之后怎么活"。三月的 Google 更新没有带来任何新招，但它继续压缩了所有旧模式。Reddit 的投票操纵成本已经超过 ROI。买外链的翻车案例越来越多，而过期域名的价值正在被重新定义。所有这些信号指向同一个结论：<strong>平台正在一起淘汰"假环境"。</strong> 这不是坏消息——它只是意味着，认真做事情的人的机会成本在降低。
+</div>
+
+<h2>一、平台正在一起淘汰"假环境"</h2>
+<p>三月底的这一轮情报里，真正重复出现的事实只有一条：平台正在一起抬高"被承认"的门槛。Google 在继续压缩模板化页面，Reddit 在压缩模板化互动，公开外链市场在放大同源污染，旧域名则反过来证明历史残影仍然能被平台读取。</p>
+<h3>四条线的交叉信号</h3>
+<p><strong>Google 这条线。</strong> 2026 年 3 月的更新最集中的判断是：scaled AI spam、parasite abuse、trash links 这些旧模式还在继续被识别。讨论中没有形成"某个单点规则导致团灭"的共识，更多反馈是模板化信号更快暴露——页面孤立、主题支撑薄、链接供给重复的站点更容易出问题。Ahrefs 2026-03-03 的文章把 AI 搜索下的 SEO 变化概括为点击下降、信息入口改写、品牌与站外信号权重提升，与论坛侧"页面不能只像内容工厂"的结论互相印证。</p>
+<p><strong>Reddit 这条线。</strong> 几乎所有 upvote panel 都在掉效果。垃圾账号上的票回滚更快，同一账号连续接多帖多单时更容易掉票。价格上涨，但稳定可交付上限仍偏低。而另一面，Reddit 正在被 Google 和 AI 系统大量展示——高互动帖子直接成为需求验证信号。Reddit 的公开讨论本身已成为搜索和 AI 的上游语料。</p>
+<p><strong>买外链这条线。</strong> 接入公开市场的包量型外链后，站点表现转差。修复动作不是"换更猛的卖家"，而是先 disavow，再修站点速度、缓存、内容质量和抓取节奏。对某些新闻类站点，最好结果反而接近零外链或极少量强相关外链。</p>
+<p><strong>过期域名这条线。</strong> 被讨论的不是抽象的"老域名天然有效"，而是"旧本地商家资产、真实目录资料、地图商家、旧页面和旧评价残影，会抬高域名的初始接受度"。讨论重点从 DR、外链数、注册年限，转向了实体资料、目录痕迹、历史主题和旧流量。</p>
+<h3>这意味着什么</h3>
+<p>几条线放在一起看，平台现在筛掉的不是单个动作，而是整套假环境。页面像内容工厂、互动像脚本、外链像同一池货、域名没有可信前史——这些信号正在被一起压缩。这是结构性的，不是波动性的。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 平台在淘汰的不是技巧，而是整套假的生存环境。你可以换一个技巧，但你换不了一套环境。唯一的出路是：让你造的环境越来越像真的——或者说，它就是真的。</p>
+</blockquote>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>Vote Fuzzing</strong> — Reddit 前端显示的票数与系统实际承认的票数不一致。你看到 +50，实际可能只有 +12。这不是 bug，而是反操纵的内置机制。</li>
+<li><strong>Delayed Scoring</strong> — 动作先发生，是否被正式记分会延后判断。你的 upvote 可能在 24 小时后才被计入（或被丢弃）。</li>
+<li><strong>Proxy ASN Blocks</strong> — 平台不只看 IP 地址，还看这个 IP 所在网络（ASN）是不是典型高风险代理提供商。同一个数据中心 IP 段的所有请求可能被整体降权。</li>
+<li><strong>Browser Telemetry</strong> — 平台结合停留时间、滚动行为、标签切换、设备信息和会话连续性来判断"动作像不像真人"。</li>
+</ul>
+<h2>二、Reddit 投票操纵的四层检测模型</h2>
+<p>Reddit 的检测系统已经不再依赖单一信号判断投票是否真实，而是升级到了四层联合检测。这个模型的意义超出了 Reddit 本身——它代表了主流平台检测思路的进化方向。</p>
+<h3>四层技术拆解</h3>
+<p><strong>第一层：设备指纹。</strong> 浏览器的 canvas fingerprint、WebGL 渲染特征、字体列表、屏幕分辨率组合等硬件级信号可以唯一标识一个浏览器实例。同一个浏览器登录多个账号，即使换了代理，指纹仍然一致。</p>
+<p><strong>第二层：行为评分。</strong> 真实用户的投票行为有自然节奏——浏览 feed 时随机停留、上滑下滑、偶尔点击评论、间隔不规律地投票。自动化操作的"直达式"模式（登录→导航到目标→投票→退出）已经被行为评分系统识别。</p>
+<p><strong>第三层：账号历史。</strong> 注册三个月、只有投票记录、从未发帖或评论的账号，投票权重远低于注册两年、有丰富互动历史的账号。平台不是简单计票，而是给每票赋予不同权重。</p>
+<p><strong>第四层：网络识别。</strong> 代理服务商的 ASN 段正在被标记。Rotating residential proxies、static ISP proxies、数据中心代理都在不同程度上被识别。</p>
+<h3>这对操作者的含义</h3>
+<p>四层联合检测意味着单一的"换代理"或"换账号"已经不够。你需要在设备、行为、账号质量和网络四个维度同时满足真实性要求。这直接导致服务商的成本结构变化：价格在上涨，可交付上限在下降。操纵的成本已经超过了它在大部分场景下的 ROI。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> Reddit 的检测从"看 IP"升级到"四层联合"，本质上是在回答一个问题："这个操作背后是不是一个真实的人？" 当平台把这个问题回答得越来越好时，你的回答只能是：那就让背后真的坐着一个人。但这样的话，自动化就失去了意义——而这正是平台想要的结果。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Multilogin / GoLogin</strong> — 指纹浏览器，解决第一层设备指纹问题。每个账号独立环境，独立 canvas/WebGL/字体特征。</li>
+<li><strong>Otterly</strong> (otterly.ai) — AI 可见性监控工具，追踪品牌在 AI 平台（包括 Reddit 被 AI 引用的情况）的提及频率。适合评估 Reddit 内容在 AI 搜索中的实际影响力。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>Ahrefs "Reddit as AI Source" 研究 (2026-03-05) — 硬数据证明了 Reddit 线程在 Google AI Overviews 和 ChatGPT 中的高频引用。这不是猜测，这是事实。</li>
+<li>Ahrefs 73 万组 AI Overviews 响应研究 (2025-12-15) — Reddit 在 AI 生成答案中的引用频率仅次于维基百科和官方文档。</li>
+</ul>
+<h2>三、外链翻车的诊断与修复</h2>
+<p>购买 backlinks 后网站表现变差，这不是个例——它是 2026 年初 SEO 圈正在大量出现的模式。问题不在外链本身，而在公开市场的高度同源化。</p>
+<h3>翻车的典型路径</h3>
+<p>站点原本稳定 → 接入公开市场链接包 → 排名转差 → 流量下降。修复样本给出的直接顺序是：disavow → 修站点速度 → 内容重做 → 更克制的外链策略。而不是"换更猛的卖家"。</p>
+<h3>诊断三步</h3>
+<p><strong>第一步：审计重叠。</strong> 对每条外链记录其来源站点的 IP 地址、域名注册信息、CMS 指纹。多条外链来自同一 IP 段或同一组站点，即为上游重叠信号。公开市场里多个卖家共享同一批上游站点——你从三个卖家那里买到的"不同链接"可能来自同一组 IP 和同一套 PBN 网络。</p>
+<p><strong>第二步：检查锚文本分布。</strong> 大量外链使用完全匹配的锚文本（如精确关键词）是惩罚触发器。自然锚文本分布应包含品牌词、URL 形式、部分匹配和泛词，比例接近自然链接模式。</p>
+<p><strong>第三步：验证来源页面质量。</strong> 外链所在页面内容是否与目标站点主题相关？页面 DA/DR 是否合理？页面本身是否被搜索引擎正常收录？</p>
+<h3>对某些站点的反直觉结论</h3>
+<p>修复样本自己的结论非常强：对某些新闻类站点，最好结果反而接近零外链或极少量强相关外链，而不是持续加包。这打破了"外链越多越好"的旧教条。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 买链最危险的不是少，而是反复买到同一池脏货。公开市场里的外链看起来来自不同卖家，但底层可能是同一个 PBN 网络。你花了三份钱，买了一样东西三次——而搜索引擎只需要识别一次。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Ahrefs Backlink Checker</strong> (ahrefs.com) — 免费版可以查看外链来源的 IP 分布和域名注册信息。审计重叠的第一站。</li>
+<li><strong>Google Disavow Tool</strong> (search.google.com/search-console/disavow-links) — 官方的拒绝外链工具。用之前一定要先审计，盲目 disavow 可能误伤正常外链。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>Disavow</strong> — 向 Google 提交"请忽略这些外链"的声明。相当于告诉搜索引擎"这些链接不是我买的，我不想要"。但频繁使用 disavow 本身也是一种信号。</li>
+<li><strong>PBN (Private Blog Network)</strong> — 用于操控搜索引擎排名的私有博客网络。公开市场上很多外链底层来自 PBN，而 PBN 的同源性是翻车的主要根因。</li>
+</ul>
+<h2>四、过期域名的真实价值在于历史残影</h2>
+<p>过期域名这条线的核心发现不是"老域名有用"或"老域名没用"，而是平台在读一种特定类型的前史——真实的前史。</p>
+<h3>什么才是"真前史"</h3>
+<p>被讨论的不是抽象的域名年龄或外链数量。真正抬高域名初始接受度的，是这些具体的东西：曾经注册过的本地商家（GBP）、真实目录资料、地图商家记录、旧页面的 Wayback 快照、旧图片、旧用户评价。这些是"活过的痕迹"，而不是"注册时间的数字"。</p>
+<h3>什么不是</h3>
+<p>DR 值高但来源全是垃圾站的外链、域名年龄长但历史内容与新用途断裂、空置超过 6 个月的域名——这些正在从"中性"变成"负值"。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 平台吃的不是"老域名"三个字，而是它背后的真实前史。一个 2018 年注册、有过真实本地业务、有评价、有目录记录的域名，比一个 2010 年注册但空置了五年的域名更有价值。注册时间是门面，历史痕迹才是地基。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Wayback Machine</strong> (web.archive.org) — 查看过期域名历史内容的唯一免费手段。不要只看最近一次快照，至少翻到 3 个不同年份。</li>
+<li><strong>Ahrefs Site Explorer</strong> — 检查历史外链的质量分布，特别是 DR 30+ 且主题相关的外链比例。</li>
+</ul>
+<h2>五、AI 内容检测的技术原理与对抗</h2>
+<p>AI 内容检测器正在从学术研究进入产品化阶段。多个内容平台开始部署自己的检测工具，检测的准确率和覆盖面都在快速提升。</p>
+<h3>检测看什么</h3>
+<p><strong>困惑度（Perplexity）。</strong> 语言模型生成文本时选择概率最高的词，AI 文本在统计上更"可预测"、用词更集中、句式更规整。困惑度越低，AI 生成概率越高。</p>
+<p><strong>突发性（Burstiness）。</strong> 人类写作的句子长度和复杂度变化大（短句后接长句），AI 文本的句子长度分布更均匀。突发性越低，AI 生成概率越高。</p>
+<h3>最容易被检测的模式</h3>
+<p>结构高度一致的多篇文章、缺乏具体细节的通用描述、引用模式一致的来源使用——这些在统计上都是强信号。</p>
+<p>对抗检测的核心不是"让 AI 写得更像人"，而是增加内容的不可预测性和不均匀性：标题用口语化表述、首段引入个人判断、结论标注不确定性、数据引用加批判性评价、文章结构打破模板。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> AI 检测看的是"可预测性"和"均匀性"——你的文章越像一个统计学上的"好学生"，越容易被识别。最安全的策略不是伪装成坏学生，而是真的在三个关键位置（标题、首段、结论）亲自下笔。15 分钟的人工介入，比任何 prompt engineering 都管用。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Surfer SEO</strong> (surferseo.com) — 内容结构审计工具。如果你的多篇文章结构得分都在同一区间，说明你已经模板化了。</li>
+<li><strong>FastSEOFix</strong> (fastseofix.com) — Reddit 社区 2026 年推荐的高性价比 AI SEO 替代方案。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>DetectGPT 论文 — 困惑度检测方法的原始学术来源。搜索 "DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature"。</li>
+<li>GPTZero — 面向公众的 AI 内容检测工具，可以用来反向测试自己的内容是否容易被检测。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>Perplexity（困惑度）</strong> — 语言模型对文本"惊讶程度"的度量。低困惑度 = 模型很"确定"下一步 = 更可能是 AI 生成。</li>
+<li><strong>Burstiness（突发性）</strong> — 文本中句子长度和复杂度的变化幅度。人类写作天然高突发性，AI 天然低突发性。</li>
+</ul>
+<h2>本期工具精选</h2>
+<table class="nl-table">
+<thead>
+<tr>
+<th>工具</th>
+<th>类别</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multilogin</strong></td>
+<td>反识别</td>
+<td>指纹浏览器标杆，每个账号独立环境。贵但稳。</td>
+</tr>
+<tr>
+<td><strong>GoLogin</strong></td>
+<td>反识别</td>
+<td>Multilogin 的高性价比替代。</td>
+</tr>
+<tr>
+<td><strong>Ahrefs</strong></td>
+<td>SEO</td>
+<td>外链审计、竞品分析、关键词研究的全能工具。免费版够用。</td>
+</tr>
+<tr>
+<td><strong>Wayback Machine</strong></td>
+<td>域名评估</td>
+<td>查看过期域名历史内容的唯一免费手段。</td>
+</tr>
+<tr>
+<td><strong>Surfer SEO</strong></td>
+<td>内容审计</td>
+<td>检查内容结构是否模板化。如果多篇文章得分一样，你就暴露了。</td>
+</tr>
+<tr>
+<td><strong>Otterly</strong></td>
+<td>GEO/AI 可见性</td>
+<td>追踪品牌在 AI 平台中的提及频率。</td>
+</tr>
+<tr>
+<td><strong>Google Disavow Tool</strong></td>
+<td>外链管理</td>
+<td>官方工具，拒绝有害外链。用之前先审计。</td>
+</tr>
+</tbody>
+</table>
+<div class="nl-quotes">
+<blockquote><p>"平台在淘汰的不是技巧，而是整套假的生存环境。你可以换一个技巧，但你换不了一套环境。"</p></blockquote>
+<blockquote><p>"Google 不是突然变了，而是在更快识别旧垃圾模式。如果你还在做 2023 年的事情，别怪 2026 年的算法对你不客气。"</p></blockquote>
+<blockquote><p>"Reddit 变难不是因为不能做动作了，而是因为动作越来越不被承认。一个不被承认的 upvote，和没有 upvote 有什么区别？"</p></blockquote>
+<blockquote><p>"买链最危险的不是少，而是反复买到同一池脏货。三份钱买同一样东西三次——而搜索引擎只需要识别一次。"</p></blockquote>
+<blockquote><p>"过期域名就像二手车——你永远不知道上一任车主在发动机里倒了什么。但至少二手车有个 Carfax。"</p></blockquote>
+</div>
+
+<div class="nl-preview">下期预告：四月第二期将深挖过期域名的完整评估框架、AI 内容站群的粗放 vs 精细分化，以及一个 12 个月 17 万美元的社媒变现案例的完整流程拆解。</div>
+    </div>
     <div class="nav-issue">
       <span style="color:var(--muted);font-family:var(--mono);font-size:12px">#01 / 06</span>
-      <div>
-        <a href="issue-02.html" data-en="Next: #02 →" data-zh="下一篇: #02 →">下一篇: #02 →</a>
-        <span style="margin:0 12px;color:var(--rule)">|</span>
-        <a href="issue-01-2026-0329-0401.pdf" download data-zh="下载 PDF" data-en="Download PDF">下载 PDF</a>
-      </div>
+      <div><a href="issue-01-2026-0329-0401.pdf" download>下载 PDF</a><span style="margin:0 12px;color:var(--rule)">|</span><a href="issue-02.html">下一篇 →</a></div>
     </div>
   </section>
   </main>
-<footer>
-    <div>© <span class="cpyear">2026</span> weihacking · Soulcraft Limited</div>
-    <div class="f-links">
-      <a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X ↗</a>
-      <a href="https://github.com/1596941391qq" target="_blank" rel="noreferrer">GitHub ↗</a>
-    </div>
-  </footer>
+<footer><div>&copy; <span class="cpyear">2026</span> weihacking &middot; Soulcraft Limited</div><div class="f-links"><a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X &nearr;</a><a href="https://github.com/1596941391qq" target="_blank" rel="noreferrer">GitHub &nearr;</a></div></footer>
   <script src="../script.js" defer></script>
 </body>
 </html>

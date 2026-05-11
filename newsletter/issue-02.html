@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>hacking 周刊 #02 — 过期域名的残余价值评估框架</title>
-  <meta name="description" content="hacking 周刊第二期：2026 三月 spam 更新后过期域名信任残留的系统性压缩。2026-04-05 ~ 04-12。">
+  <title>hacking 周刊 #02 · 过期域名的残余价值评估框架</title>
+  <meta name="description" content="hacking 周刊第二期：过期域名信任残留压缩、AI 检测对抗、社媒工业化变现、内链拓扑优化。2026-04-05 ~ 04-12。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Code+Pro:wght@400;600&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <meta property="og:title" content="hacking 周刊 #02 — 过期域名的残余价值评估框架">
-  <meta property="og:description" content="hacking 周刊第二期：2026 三月 spam 更新后过期域名信任残留的系统性压缩。2026-04-05 ~ 04-12。">
+  <meta property="og:title" content="hacking 周刊 #02 · 过期域名的残余价值评估框架">
+  <meta property="og:description" content="hacking 周刊第二期：过期域名信任残留压缩、AI 检测对抗、社媒工业化变现、内链拓扑优化。2026-04-05 ~ 04-12。">
   <meta property="og:url" content="https://1596941391qq.github.io/newsletter/issue-02.html">
   <meta property="og:site_name" content="weihacking">
   <meta property="og:type" content="article">
@@ -19,34 +19,347 @@
   <meta property="og:image" content="https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@weihacking">
-  <meta name="twitter:title" content="hacking 周刊 #02 — 过期域名的残余价值评估框架">
-  <meta name="twitter:description" content="hacking 周刊第二期：2026 三月 spam 更新后过期域名信任残留的系统性压缩。2026-04-05 ~ 04-12。">
+  <meta name="twitter:title" content="hacking 周刊 #02 · 过期域名的残余价值评估框架">
+  <meta name="twitter:description" content="hacking 周刊第二期：过期域名信任残留压缩、AI 检测对抗、社媒工业化变现、内链拓扑优化。2026-04-05 ~ 04-12。">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://1596941391qq.github.io/"},{"@type":"ListItem","position":2,"name":"Newsletter","item":"https://1596941391qq.github.io/knowledge.html"},{"@type":"ListItem","position":3,"name":"#02 · 过期域名的残余价值评估框架"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"#02 · 过期域名的残余价值评估框架","description":"hacking 周刊第二期：2026 三月 spam 更新后过期域名信任残留的系统性压缩。2026-04-05 ~ 04-12。","url":"https://1596941391qq.github.io/newsletter/issue-02.html","datePublished":"2026-04-05","author":{"@type":"Person","name":"weihacking","url":"https://1596941391qq.github.io"},"publisher":{"@type":"Organization","name":"Soulcraft Limited","logo":{"@type":"ImageObject","url":"https://1596941391qq.github.io/images/avatar.jpg"}},"image":"https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"#02 · 过期域名的残余价值评估框架","description":"hacking 周刊第二期：过期域名信任残留压缩、AI 检测对抗、社媒工业化变现、内链拓扑优化。2026-04-05 ~ 04-12。","url":"https://1596941391qq.github.io/newsletter/issue-02.html","datePublished":"2026-04-05","author":{"@type":"Person","name":"weihacking","url":"https://1596941391qq.github.io"},"publisher":{"@type":"Organization","name":"Soulcraft Limited","logo":{"@type":"ImageObject","url":"https://1596941391qq.github.io/images/avatar.jpg"}},"image":"https://1596941391qq.github.io/images/newsletter-header-dark-tech.jpg"}</script>
   <link rel="canonical" href="https://1596941391qq.github.io/newsletter/issue-02.html">
   <link rel="alternate" hreflang="zh" href="https://1596941391qq.github.io/newsletter/issue-02.html">
   <link rel="alternate" hreflang="x-default" href="https://1596941391qq.github.io/newsletter/issue-02.html">
-  <style>.pdf-viewer{width:100%;height:calc(100vh - 200px);min-height:600px;border:1px solid var(--rule);border-radius:4px}.nav-issue{display:flex;justify-content:space-between;align-items:center;margin-top:16px}.nav-issue a{font-family:var(--mono);font-size:12px;color:var(--accent)}</style>
+  <style>.nl-article{max-width:740px;margin:0 auto;padding:0 28px 48px}.nl-article h2{font-family:var(--serif);font-size:28px;font-weight:900;line-height:1.2;margin:48px 0 20px;color:var(--ink);border-top:2px solid var(--rule);padding-top:32px}.nl-article h3{font-family:var(--serif);font-size:20px;font-weight:700;line-height:1.3;margin:28px 0 12px;color:var(--ink)}.nl-article p{font-size:16px;line-height:1.8;color:var(--ink-s);margin-bottom:16px}.nl-article blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:20px 0;font-style:italic;color:var(--ink-s);background:var(--bg-alt)}.nl-article strong{color:var(--ink);font-weight:700}.nl-article em{font-style:normal;color:var(--accent);font-weight:700}.nl-article ul,.nl-article ol{margin:12px 0 16px 24px;color:var(--ink-s)}.nl-article li{font-size:15px;line-height:1.7;margin-bottom:6px}.nl-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.nl-table th{background:var(--bg-alt);padding:10px 14px;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--rule)}.nl-table td{padding:10px 14px;border-bottom:1px solid var(--rule);color:var(--ink-s);line-height:1.5}.nl-tool-list{list-style:none;padding:0;margin:12px 0 24px}.nl-tool-list li{font-size:14px;color:var(--ink-s);padding:6px 0;border-bottom:1px solid var(--rule)}.nl-tool-list strong{color:var(--ink)}.nl-term-list{list-style:none;padding:0;margin:12px 0 24px}.nl-term-list li{font-size:14px;padding:8px 0;border-bottom:1px solid var(--rule)}.nl-term-list strong{color:var(--accent);font-family:var(--mono);font-size:12px}.nav-issue{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding:24px 0;border-top:1px solid var(--rule)}.nav-issue a{font-family:var(--mono);font-size:12px;color:var(--accent)}.nl-editor-note{font-size:15px;line-height:1.8;color:var(--ink-s);margin-bottom:24px;padding:20px 24px;background:var(--bg-alt);border-left:3px solid var(--accent)}.nl-editor-note strong{color:var(--ink)}.nl-summary{font-size:15px;line-height:1.8;color:var(--ink-s);margin:20px 0 24px;padding:16px 20px;background:var(--bg-alt);border-radius:2px;font-family:var(--body)}.nl-quotes blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:16px 0;font-style:italic;color:var(--ink-s);background:var(--bg-alt)}.nl-quotes blockquote strong{color:var(--ink);font-style:normal}.nl-preview{font-size:14px;line-height:1.7;color:var(--ink-s);margin-top:48px;padding:20px 24px;border-top:2px solid var(--rule);font-style:italic}</style>
 </head>
 <body>
   <nav aria-label="主导航"><a href="../index.html">weihacking_</a><div class="nav-r"><a href="../knowledge.html" class="nb" style="margin-right:8px">←</a><button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button></div></nav>
 <main>
   <div class="sub-hero" style="padding-bottom:32px"><div class="wrap"><p class="sec-label">hacking 周刊</p><h1>#02 · 过期域名的残余价值评估框架</h1><p class="hero-sub">2026-04-05 ~ 04-12</p></div></div>
   <section class="wrap" style="padding:0 28px 32px">
-    <embed src="issue-02-2026-0405-0412.pdf" type="application/pdf" class="pdf-viewer">
+    <div class="nl-article">
+<div class="nl-editor-note">
+<strong>编者按：</strong> 这一期最让我兴奋的不是某个具体手法，而是整个暗面 SEO 圈正在经历的一次认知升级——从"怎么搞"到"搞了之后怎么活"。过期域名的 ROI 从正转负、AI 内容从全自动化转向精细派、多账号从技巧堆砌转向系统性风险对冲。所有人都在问同一个问题：<strong>规模到底是护城河还是靶心？</strong> 我不确定答案，但问对问题的人已经比那些还在"批量生成、批量祈祷"的人领先了两个身位。
+</div>
+
+<h2>过期域名的残余价值评估框架</h2>
+<p>2026 年三月的 spam 更新之后，一个长期被视为"低成本杠杆"的策略开始出现结构性裂缝：过期域名的信任残留正在被系统性压缩。这不再是"波动"，而是 ROI 从正转负的临界信号。</p>
+<p>我曾经也觉得过期域名是 SEO 里的"打折商品"——便宜、有历史、拿到就能用。但看完这次的更新影响面，我的判断变了：搜索引擎不是在惩罚过期域名，它只是在不再奖励"域名年龄"这个维度本身。一个 2015 年注册的域名和一个 2026 年注册的域名，在失去了主题连续性之后，起跑线是一样的。但前者花了钱，后者没有。</p>
+<p>过期域名曾经的核心逻辑是：购买一个有历史的域名，继承它的注册时间、历史外链和可能的品牌信号残留，从而跳过新域名的"沙盒期"。这个逻辑在 2024 年以前大部分时间成立，但从 2024 年底的 spam 更新开始，搜索引擎对过期域名的评估维度明显增加了。</p>
+<h3>残余价值的三层评估</h3>
+<p><strong>第一层：历史外链。</strong> 传统评估中最受关注的维度。一个过期域名如果曾经被高质量站点引用过，这些外链在域名过期后仍然指向它（只要新站的内容结构合理覆盖了旧 URL）。但外链价值的衰减速度在加快——一个 2023 年获得的高质量外链，到 2026 年权重可能衰减了 60-70%。更致命的是：如果域名在过期期间经历了内容变更，部分外链的"主题相关性"会断裂。一个曾经指向宠物用品文章的外链现在指向金融内容，这种断裂本身就是可疑信号。</p>
+<p><strong>第二层：主题连续性。</strong> 这是新增的评估维度，也是过期域名贬值的主要打击面。搜索引擎正在评估域名历史内容的主题是否与当前用途一致。教育内容域名被用来做商业产品评测？这种主题断裂可能触发"域名用途变更"标记。验证方法很直接：通过 Wayback Machine 查看域名在不同时间点的内容主题，确认是否存在明显的主题跳跃。</p>
+<p><strong>第三层：活跃信号残留。</strong> 过期域名在注册期间是否有真实的用户互动、社交信号、品牌搜索量、GBP 注册等"活跃痕迹"。这些信号在域名过期后不会立即消失，但会随时间衰减。空置时间越长，衰减越快。</p>
+<h3>什么时候仍然值得</h3>
+<p>全部满足以下条件时 ROI 仍可能为正：历史主题与新用途高度一致（相机评测域名→摄影器材电商）；历史外链中至少 30% 来自 DA/DR 30+ 且主题相关的站点；无 Google 手动惩罚记录；过期后空置不超过 6 个月；存在 GBP 注册、本地实体痕迹或品牌搜索量残留。</p>
+<p>不满足两条以上？新注册域名 + 高质量内容 + 克制的外链策略。起站周期 3-6 个月，比过期域名慢，但不会在下次 spam 更新时让你心脏骤停。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 过期域名正在从"捡漏"变成"接盘"——你以为买的是别人的信任积累，实际上买的是别人的历史包袱。真正便宜的东西是：选对主题，老老实实写三个月。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Wayback Machine</strong> (web.archive.org) — 查看过期域名历史内容快照，验证主题连续性的唯一免费手段。查域名时别只看最近一次快照，至少翻到 3 个不同年份。</li>
+<li><strong>Ahrefs Site Explorer</strong> (ahrefs.com) — 检查历史外链质量、DR 分布和主题相关性。免费版可以看基础外链概况。</li>
+<li><strong>SE Ranking</strong> (seranking.com) — 其新增的 GEO 工具同时追踪传统 SERP 和 AI 平台可见性，适合评估域名在多渠道的残余价值。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>Google Spam Update 官方公告 — 每次更新后 Google Search Central Blog 会发布受影响区域，过期域名的主题连续性惩罚在 2024 Q4 首次被提及。</li>
+<li>Wayback Machine CDX API — 批量查询域名历史快照的编程接口，适合一次评估多个过期域名。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>DA/DR</strong> — Domain Authority (Moz) / Domain Rating (Ahrefs)，衡量域名整体权重的指标。DA/DR 30+ 意味着该站点至少有一定的搜索引擎信任积累。</li>
+<li><strong>GBP</strong> — Google Business Profile，本地商家档案。一个有过 GBP 注册的过期域名意味着曾经有真实线下实体，这是最难的活跃信号残留。</li>
+<li><strong>Spam Update</strong> — Google 定期发布的反垃圾更新，每次更新都可能改变对过期域名、AI 内容、站群等策略的评估方式。</li>
+</ul>
+<h2>AI 内容检测的技术原理与规避策略</h2>
+<p>2026 年四月，AI 内容检测器正在从学术研究阶段进入产品化阶段。多个内容平台开始部署自己的检测工具，检测的准确率和覆盖面都在快速提升。</p>
+<p>这件事让我想起一个反直觉的事实：对抗 AI 检测最有效的方法，不是"让 AI 写得更像人"，而是"让人在关键位置真正介入"。所有试图用 AI 模拟人类写作不规则性的方案，最终都会被更好的统计模型反制——因为你的"模拟不规则"本身也是一种可识别的模式。真正不可预测的只有一种东西：一个真实的人在真实地思考。</p>
+<h3>检测的技术原理</h3>
+<p><strong>困惑度（Perplexity）。</strong> 语言模型生成文本时，会为每个位置计算所有可能词汇的概率分布，然后选择概率最高的词。AI 生成的文本在统计上更"可预测"——用词更集中、句式更规整。人类写作则更不规则，会使用更多低概率词汇和更跳跃的句式组合。困惑度越低，AI 生成概率越高。</p>
+<p><strong>突发性（Burstiness）。</strong> 人类写作的句子长度和复杂度变化很大——一个短句后面可能跟着一个很长的复合句，然后又回到短句。AI 生成的文本则更均匀。突发性越低，AI 生成概率越高。</p>
+<h3>最容易被检测的内容模式</h3>
+<p><strong>结构高度一致的多篇文章。</strong> 一个站点上几十篇文章都遵循"引言→三个要点→结论"？即使具体内容不同，这种"结构模板化"本身就是强信号。解决方案：打破模板——有的文章以具体案例开头，有的以反直觉判断开头。</p>
+<p><strong>缺乏具体细节的通用描述。</strong> AI 倾向于生成"正确但没有信息量"的通用表述，比如"内容质量是 SEO 的关键因素"——没错，但没有任何具体信息。增加具体数字、具体案例、具体工具名、具体操作步骤，可以显著降低被检测概率。</p>
+<p><strong>引用模式一致。</strong> 每篇文章都以相同方式引用相同类型的来源？这种模式本身就是信号。解决方案：引用上增加多样性——学术论文、从业者经验、公开数据交叉使用。</p>
+<h3>增加人工痕迹的具体方法</h3>
+<p><strong>标题层：</strong> 使用更口语化和不规则的表述。不要写"AI 内容检测的完整指南"，而是写"你的 AI 文章正在被标记——检测器到底在看什么"。后者有立场、有判断、有情绪。</p>
+<p><strong>首段：</strong> 在第一段就引入个人判断和具体立场。不要用"本文将介绍"，而是直接从一个具体判断或案例切入。</p>
+<p><strong>结论层：</strong> 引入不确定性和矛盾讨论。AI 生成的结论倾向于给出确定性总结。人类分析师更倾向于标注不确定性——"这个判断的概率是 70%，因为还有两个因素我们不确定"。</p>
+<p><strong>数据引用：</strong> 对数据来源加入批判性评价。不要只写"根据 X 数据"，而是写"X 数据显示 Y，但样本量只有 Z，而且采集时间在算法更新之前"。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 统计学不会说谎——困惑度和突发性就是两面照妖镜。与其研究怎么骗过镜子，不如在标题、首段和结论这三个位置亲自下场写。15 分钟的人工介入，比任何 prompt engineering 都管用。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>ContentMonk</strong> (contentmonk.ai) — AI 可见性追踪+内容写作工具，$99/月起步追踪 50 个 prompt。适合同时监控自己的内容在 AI 搜索中的表现。</li>
+<li><strong>FastSEOFix</strong> (fastseofix.com) — Reddit 上被多个用户推荐的 AI SEO 替代方案，比 Surfer SEO 性价比更高。</li>
+<li><strong>Surfer SEO</strong> (surferseo.com) — 内容优化老牌工具，AI 检测对抗时可用来检查内容结构的"均匀性"得分，如果你的多篇文章结构得分都在同一区间，说明你已经模板化了。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>AI 内容检测原理原始论文 — 搜索 "DetectGPT" 和 "GPTZero methodology" 可以找到困惑度和突发性指标的学术论文来源。理解原理比盲目对抗更有效。</li>
+<li>Reddit r/DigitalMarketing — 持续有用户实测各类 AI 检测器的准确率对比，是目前最活跃的民间测试社区。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>Perplexity（困惑度）</strong> — 语言模型对文本的"惊讶程度"。低困惑度 = 模型对每个下一个词都很"确定" = 更可能是 AI 生成。</li>
+<li><strong>Burstiness（突发性）</strong> — 文本中句子长度和复杂度的变化幅度。人类写作天然高突发性（长短句交替），AI 天然低突发性（句子均匀）。</li>
+</ul>
+<h2>社媒大规模触达变现的流程拆解</h2>
+<p>2026 年四月，一个被公开分享的案例提供了社媒工业化变现的完整流程：12 个月、17 万美元、单一平台、可重复流程。这个案例的价值不在于"赚了多少钱"，而在于它把一个模糊的"社媒变现"概念拆解成了可分析的流程节点。</p>
+<p>17 万美元、12 个月、单一平台。说实话，看到这个数字时我的第一反应不是"哇好厉害"，而是"这个数字在缩水"。两年前同样方法能做到 40-50 万，现在挤到 17 万，说明竞争者涌入的速度远快于市场扩大的速度。这不是一个可以躺赢的生意——但它的流程拆解仍然值得学习，因为<strong>流程思维本身比具体数字更有价值</strong>。</p>
+<h3>流程节点拆解</h3>
+<p><strong>节点一：账号矩阵搭建。</strong> 不是开一个账号，而是搭建矩阵。每个账号有独立的设备环境、独立的 IP、独立的浏览行为历史。搭建周期通常 2-4 周，期间需要为每个账号培养基本的浏览和互动历史。</p>
+<p><strong>节点二：大规模触达。</strong> 核心是"like + follow + DM"组合：通过目标标签找潜在受众 → 对其近期内容点赞 → 关注对方 → 对方回关后发私信。日触达量需要达到数百甚至上千次。这个量级必须依赖自动化工具。</p>
+<p><strong>节点三：设备环境管理。</strong> 最容易被忽略但最容易翻车的环节。每个账号必须在独立设备环境中运行——不是"开一个新浏览器窗口"，而是"独立的设备指纹 + 独立的 IP + 独立的浏览历史"。iOS 设备上的账号权重普遍高于 Android，因为 iOS 的硬件特征更难伪造。</p>
+<p><strong>节点四：节奏控制。</strong> 每个平台都有自己的行为频率阈值。经验值：每天新关注不超过 50、点赞不超过 200、私信不超过 20。这些数字不是固定的，会随账号年龄和活跃度动态调整。</p>
+<p><strong>节点五：转化闭环。</strong> 私信不是直接卖货，而是引导到更深层的对话。转化路径：私信 → 简短互动 → 确认需求 → 转移到更私密沟通渠道（邮件/预约系统）→ 成交。</p>
+<h3>竞争壁垒的迁移</h3>
+<p>"知道怎么做"不再是壁垒。壁垒迁移到了：设备环境的稳定性和规模、节奏控制的精确度、内容个性化程度。当方法被公开后，执行层的细腻程度才是真正的区分点。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 这个案例最值得学的不是 17 万美元，而是它把一个模糊概念拆成了 5 个可测量、可优化、可复制的节点。大部分人在社媒上赚不到钱，不是因为方法不对，是因为他们从来没有把"发私信"当成一个工程问题来对待。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Vista Social</strong> (vistasocial.com) — 集成 AI 驱动的 DM 自动化（意图检测）、统一收件箱、自动报告和跨平台排程的社媒管理工具。Reddit r/SaaS 2026 年度推荐。</li>
+<li><strong>n8n</strong> (n8n.io) — 开源工作流自动化平台，400+ 集成，可自托管。比 Zapier 省每月 $500+。适合把"标签→筛选→点赞→关注→私信"整个链路自动化串联。</li>
+<li><strong>Lightpanda</strong> (lightpanda.io) — 开源无头浏览器，用 Zig 写的，比 Chrome 快 11 倍、内存少 9 倍。如果你要跑大规模社媒自动化，用这个替代 Puppeteer+Chrome 方案能把基础设施成本砍掉一个数量级。GitHub 27K+ stars。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>Reddit r/AI_Agents — 2026 年最活跃的 AI Agent 工具讨论社区，持续有自动化方案对比。</li>
+<li>Browser Use vs Stagehand 对比 (skyvern.com/blog) — 两个主流 AI 浏览器自动化框架的详细对比，适合选择社媒自动化底层方案时参考。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>指纹浏览器</strong> — 为每个账号创建独立浏览环境的工具（如 Multilogin、GoLogin、AdsPower），每个环境有独立的 canvas fingerprint、WebGL renderer、字体列表等设备特征。</li>
+<li><strong>Rotating Residential Proxies</strong> — IP 每次请求都变化的住宅代理，适合大量一次性身份场景（注册、投票）。</li>
+<li><strong>Static ISP Proxies</strong> — 与账号稳定绑定的静态代理 IP，适合长期养号，更接近真实用户行为模式。</li>
+</ul>
+<h2>站群自动化管理的技术栈</h2>
+<p>一个令人关注的趋势是：管理上百个 SEO 站点的自动化工具链已经成熟到可以被一个新手公开分享的程度。这意味着"规模化站群"的技术门槛正在快速降低。</p>
+<p>这件事让我觉得特别有意思：当一个人说他能管理 100 个站的时候，他是英雄；当所有人都能管理 100 个站的时候，管理 100 个站就变成了新的最低标准。技术民主化就是这样——它永远不偏爱先行者，只偏爱那些在门槛降低后依然能做出差异化的人。</p>
+<h3>可自动化的环节</h3>
+<p><strong>内容生成与发布。</strong> 自动化程度最高。通过 AI 模型批量生成内容，通过 CMS API 或脚本批量发布。当前技术可以做到从关键词研究到内容生成到发布，全程无人工介入。</p>
+<p><strong>SEO 基础优化。</strong> Meta 标签生成、内部链接建议、sitemap 自动更新、结构化数据注入——都可以通过脚本自动完成。</p>
+<p><strong>数据监控。</strong> 排名变化、流量波动、索引状态、外链增长——通过 API 自动采集并汇总到统一看板。异常值可以设置自动告警。</p>
+<h3>仍然需要人工判断的环节</h3>
+<p><strong>内容质量审核。</strong> AI 批量生成的内容在统计上"看起来不错"，但具体信息的准确性和独特性经常出问题。特别是数据引用、专业判断和行业术语，AI 的幻觉率仍然不低。</p>
+<p><strong>策略决策。</strong> 哪些站点优先投入、哪些关键词值得追、什么时候调整方向——需要基于对行业和竞争格局的理解。</p>
+<p><strong>异常处理。</strong> 站点被惩罚、流量暴跌、技术故障——自动化系统可以检测到异常，但修复动作通常需要人工判断。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 当所有人都能自动化 100 个站的时候，自动化本身就不再是优势了。真正的护城河是：你在第 101 个站上做了什么别人做不到的事。答案只能是内容质量和主题深度——恰恰是最难自动化的部分。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>AirOps + Page360</strong> (airops.com) — 端到端"内容工程"平台，自动化多步骤 SEO 工作流（研究→生成→刷新→发布），Page360 追踪 AI 引用和内容表现。Reddit r/seogrowth 实测推荐。</li>
+<li><strong>Cursor</strong> (cursor.com) — AI 原生 IDE，从 VS Code 分叉但已完全独立。站群管理中需要写大量脚本和自动化代码时，这个工具能显著加速开发。Reddit r/cursor 用户说"我对 AI 代码审查的依赖程度已经到了有点可怕的地步"。</li>
+<li><strong>Kiro</strong> (kiro.dev) — Amazon/AWS 推出的 Agent IDE，用自主 agent 生成和维护项目计划、规格和代码。适合站群管理这种多步骤、多项目的工程场景。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>Reddit r/seogrowth — "我测了 15+ AI SEO 工具，只有这几个值得用"帖，2026 年初高票回答。</li>
+<li>dev.to "n8n 8 个月使用评测" — 用 n8n 搭建站群自动化工作流的真实踩坑记录。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>CMS API</strong> — 内容管理系统的编程接口，允许通过脚本而非人工操作来发布、编辑和管理内容。</li>
+<li><strong>结构化数据</strong> — 嵌入网页中的标准化数据格式（如 JSON-LD），帮助搜索引擎理解页面内容的语义结构。</li>
+<li><strong>幻觉率</strong> — AI 生成内容中包含虚假或错误信息的比例。在站群场景中，幻觉的代价不是"一篇文章写得不好"，而是"一批文章全部带着同一个错误被发布"。</li>
+</ul>
+<h2>在线服务采购的争议保护机制</h2>
+<p>在外链采购和 SEO 服务外包中，争议处理是一个常被忽略但可能造成实际损失的环节。近期出现的骗局模式值得注意：有人会在你与供应商发生争议时，通过即时通讯工具主动联系你，声称可以帮助退款，但实际目的是把退款引导到错误的收款地址。</p>
+<p>这类骗局最让人恼火的不是它的技术含量——它毫无技术含量——而是它精准利用了受害者在争议过程中的焦虑心理。你已经跟供应商吵了三天，精疲力竭，突然有人说"我可以帮你解决"，你的理性防线在那个瞬间是最低的。所有社会工程的本质都是一样的：<strong>在你最疲惫的时候递给你一杯水，而那杯水有毒。</strong></p>
+<h3>防护原则</h3>
+<p><strong>所有争议沟通必须留在交易平台上。</strong> 平台的争议处理机制只认平台内的沟通记录。平台外做出的承诺或妥协都不会被考虑。</p>
+<p><strong>验证每一笔退款的收款地址。</strong> 如果对方要求你提供收款地址，务必通过平台内的争议帖确认地址是否正确。</p>
+<p><strong>警惕主动联系你的第三方。</strong> 任何在争议期间主动联系你声称"可以帮助"的第三方都应该被视为潜在风险。</p>
+<h3>采购前的风险降低</h3>
+<p>确认供应商的交付周期是否有明确承诺；确认争议处理流程是否在服务条款中有清楚说明；使用平台提供的托管支付而非直接转账；收到交付后先验证再确认完成。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 争议保护的核心不是"出了问题怎么办"，而是"在还没出问题的时候就让所有对话都在阳光下进行"。暗处永远比明处危险——这不是道理，这是概率。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li>无特定工具推荐。这一章的核心工具就是<strong>平台本身的争议系统</strong>。选择交易平台时，优先选有托管支付和仲裁机制的（如 Fiverr、Legiit、SEO Clerks），避免直接转账。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>托管支付 (Escrow)</strong> — 买方付款到平台托管账户，确认交付后平台才放款给卖方。没有这个机制的平台，基本上等于裸奔。</li>
+<li><strong>Noindex 标记</strong> — HTML meta 标签，告诉搜索引擎不要收录该页面。不良供应商可能用这个让外链页面"看起来存在但实际不被搜索引擎看到"。</li>
+</ul>
+<h2>内链作为 SEO 杠杆的具体操作方法</h2>
+<p>2026 年四月，一个被长期低估的 SEO 杠杆重新回到了核心讨论区：内部链接。当外链的边际收益被感知为接近天花板时，越来越多的从业者开始回头看自己站点内部的结构——发现内链优化的 ROI 可能远超预期。</p>
+<p>我喜欢内链这个话题，因为它是少数几个"不花钱、不违法、不依赖外部关系"的 SEO 手段。你不需要求任何人给你一个链接——你只需要把自己家里的路修好。讽刺的是，大部分人宁愿花 500 美元买一条外链，也不愿意花一个下午把自己站点的内链理清楚。</p>
+<p>内链的价值不在于"给搜索引擎传递权重"（这是外链的核心功能），而在于<strong>引导搜索引擎理解站点的内容结构和主题层次</strong>。一个没有内链的站点在搜索引擎看来是一堆独立的页面；一个有清晰内链结构的站点是一个有层次的知识体系。</p>
+<h3>两个层级的内链策略</h3>
+<p><strong>第一层级：锚文本优化（基础动作）。</strong> 在文章 A 中提到某个概念时，用锚文本链接到文章 B。关键规则：锚文本必须准确描述目标页面的内容，不要用"点击这里"或"了解更多"。搜索引擎通过锚文本来理解目标页面的主题。</p>
+<p>操作方法：为站点的每篇文章列出核心关键词和主题，然后在其他文章中找到提到这些关键词的位置，插入内链。100 篇文章的站点，通常 2-3 小时内可以完成基础锚文本优化。</p>
+<p><strong>第二层级：主题集群拓扑设计（结构层面）。</strong> 核心概念是"pillar-cluster"模型：选择几个核心主题（pillar topics），每个核心主题下围绕 5-15 个相关子主题（cluster topics）创建内容，通过内链把子主题页面全部链接回核心主题页面，同时在子主题之间建立横向链接。</p>
+<p>具体操作：识别站点中最核心的 3-5 个主题 → 为每个核心主题创建综合性页面（pillar page）→ 确保每个子主题页面都链接回核心主题页面 → 在语义相关的子主题之间建立横向链接。</p>
+<p><strong>关键判断点：链接深度。</strong> 从首页到任何一篇文章，经过的内链跳转不应超过 3 次。需要 4 次以上点击才能到达的页面，在权重分配中处于不利位置。</p>
+<h3>快速评估方法</h3>
+<p>在站点地图中标记出所有内链为零的"孤立页面"——这些页面在搜索引擎眼中几乎不存在。孤立页面比例超过 20%？内链优化应该是最高优先级。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 内链是被严重低估的 SEO 杠杆——不是因为它的效果不明显，而是因为它不花钱。SEO 圈有一个怪现象：越是免费的手段，越没人认真做。不信？去查查你自己站点的孤立页面比例。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Screaming Frog SEO Spider</strong> (screamingfrog.co.uk) — 桌面爬虫工具，免费版可爬 500 个 URL，用它跑一遍站点就能立刻看到：孤立页面、链接深度分布、锚文本重复情况。做内链优化的第一步就是用它。</li>
+<li><strong>Sitebulb</strong> (sitebulb.com) — 比 Screaming Frog 更可视化的站点审计工具，内链结构的树形图展示特别直观，适合向非技术人员解释"为什么这个页面需要内链"。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>"Pillar-Cluster" 模型原始介绍 — HubSpot 最早系统化提出的内链架构模型，搜索 "HubSpot pillar cluster model" 可以找到完整的实施指南。</li>
+<li>内链深度可视化 — 用 Screaming Frog 导出的内部链接数据导入 Gephi 或类似图可视化工具，可以直观看到哪些页面是"孤岛"。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>Pillar Page</strong> — 核心主题综合性页面，不是普通文章，而是一个主题的完整概述，包含指向所有相关子主题的内链。</li>
+<li><strong>孤立页面 (Orphan Page)</strong> — 没有任何内部链接指向的页面。在搜索引擎眼中，这类页面的存在感接近零。</li>
+<li><strong>链接深度 (Click Depth)</strong> — 从首页到目标页面需要的最小点击次数。超过 3 次就是危险信号。</li>
+</ul>
+<h2>AI 内容站群的精细化程度评估</h2>
+<p>2026 年四月，"用 AI 内容做 SEO 站群"这个策略正在经历一次重要的分化：粗放派和精细派。这两派的区别不是"用不用 AI"，而是"在哪些环节用 AI、在哪些环节保留人工介入"。</p>
+<p>我见过太多人陷入一个思维陷阱："既然 AI 能写 90 分的内容，为什么还要人？" 因为那剩下的 10 分不是"更好"，而是"不同"。AI 写的内容在统计上是收敛的——它永远朝向平均值靠拢。人的介入是发散的——它让内容偏离平均值，而偏离才是不可被统计检测的东西。</p>
+<h3>粗放派的做法与风险</h3>
+<p>核心流程：批量选择关键词 → AI 批量生成内容 → 自动发布 → 等待收录和排名。自动化程度最高，风险也最大。风险不在于内容"不好"——AI 生成的内容在语法和可读性上甚至可能优于人工。风险在于"模式化"：几百篇文章的结构、语气、信息密度高度一致时，搜索引擎不需要判断内容是否由 AI 生成——它只需要识别"这些页面来自同一个模板"。</p>
+<p>识别模板比识别 AI 简单得多。段落长度分布高度一致、用词频率分布高度相似、标题结构高度重复——这些统计特征就是模板化的铁证。模板化站点在每次 spam 更新中都面临更高的打击风险。</p>
+<h3>精细派的做法与取舍</h3>
+<p><strong>人工编辑层介入。</strong> AI 生成初稿后，人类编辑在以下位置介入：标题重写（增加不规则性和立场）、首段重写（加入个人判断和具体案例）、数据验证（确认 AI 引用的数据是否准确）、结论重写（加入不确定性和矛盾讨论）。成本：每篇 15-30 分钟，但显著降低被检测为模板化的概率。</p>
+<p><strong>结构差异化。</strong> 不让所有文章遵循相同模板。有的以具体案例开头，有的以反直觉判断开头，有的以对话开头。段落长度故意制造不均匀——有的段落只有一句话，有的段落是完整分析。这种"不均匀性"是人类写作的自然特征，也是对抗模板化检测的最有效手段。</p>
+<p>精细派的代价是速度变慢——每天能发布的文章数量可能是粗放派的 1/3 到 1/5。但长期风险调整后的 ROI 更可持续。</p>
+<h3>评估标准</h3>
+<p>你的站点上是否有两篇文章的段落结构完全相同？如果有，你属于粗放派。你的每篇文章是否都经过了至少一个关键位置（标题/首段/结论）的人工重写？如果没有，你属于粗放派。你的文章之间是否存在明显的结构差异？如果没有，你属于粗放派。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 粗放派和精细派的分水岭不是"用不用 AI"，而是"你的文章能不能通过一个简单的统计检验"。如果你连自己都分不清站上的两篇文章是不是同一个模板出来的，搜索引擎更分得清。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Granola App</strong> — Reddit r/seogrowth 2026 年推荐的新工具，适合 AI 内容站群的质量审计和模板化检测。</li>
+<li><strong>AI Clicks</strong> (aiclicks.com) — AI 可见性工具，追踪你的站群内容在 AI 搜索结果中的出现频率，适合评估精派 vs 粗派的长期效果差异。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>模板化 (Templating)</strong> — 多篇文章在段落结构、用词分布、标题格式上高度相似。这不是"内容质量"问题，而是"统计指纹"问题。</li>
+<li><strong>风险调整后的 ROI</strong> — 把被惩罚的概率纳入收益计算。粗放派短期收益高但每次 spam 更新都可能清零，精细派短期收益低但长期稳定。真正的比较基准是后者。</li>
+</ul>
+<h2>多账号运营的反识别技术栈</h2>
+<p>在跨平台运营中，多账号管理是底层基础设施。2026 年四月，一批系统化的多账号管理方法论被整理发布，把零散的反识别技巧汇聚成了完整的技术栈。</p>
+<p>多账号管理是 SEO 暗面里最"地下"也最"工程化"的环节。有意思的是，当这些技术被系统化公开分享的那一刻，它们的保质期就开始倒计时了。这是一场知识扩散速度 vs 平台识别升级速度的持续赛跑——而互联网的记忆是永久的，你三年前发的方法论今天还在被平台安全团队研读。</p>
+<h3>四层技术栈</h3>
+<p><strong>第一层：设备隔离。</strong> 每个账号必须在独立的设备环境中运行——不是"开一个新浏览器标签页"，而是"独立的浏览器配置文件 + 独立的设备指纹"。使用指纹浏览器（Multilogin、GoLogin、AdsPower）为每个账号创建独立的浏览环境，每个环境有独立的 canvas fingerprint、WebGL renderer、字体列表、屏幕分辨率、AudioContext 特征等。</p>
+<p><strong>第二层：网络隔离。</strong> 代理选择需要匹配使用场景。关键判断：你的操作需要"大量一次性身份"还是"少量稳定身份"。大量一次性适合 rotating residential proxies。少量稳定身份适合 static ISP proxies 或 dedicated mobile IPs。数据中心代理几乎完全无效。</p>
+<p><strong>第三层：行为隔离。</strong> 每个账号的操作节奏必须不同。三个账号每天在完全相同的时间发帖、点赞和评论？"节奏同步"本身就是关联信号。为每个账号设置不同的活跃时间段、操作间隔、浏览路径。</p>
+<p><strong>第四层：数据隔离。</strong> 账号之间不能共享任何可识别信息：不使用相同邮箱、手机号、支付方式、个人资料。特别注意支付信息——同一张信用卡可以让平台通过支付网络直接关联多个账号。</p>
+<blockquote>
+<p><strong>一句话点评：</strong> 四层隔离是必要的，但也是脆弱的——因为你知道的所有技巧，平台的反欺诈团队也知道。最务实的策略不是"我比你聪明"，而是"我让自己不值得你花时间来抓"。小规模、多矩阵、不把鸡蛋放在一个篮子里。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Multilogin / GoLogin / AdsPower</strong> — 三大指纹浏览器，各有优劣。Multilogin 稳定性最好但价格高，GoLogin 性价比最高，AdsPower 对中文用户最友好。</li>
+<li><strong>Stagehand</strong> (docs.stagehand.dev) — 开源 AI 浏览器自动化 SDK，基于 Playwright，用自然语言控制浏览器。v3 新增 action caching，重复操作的成本递减。适合需要"模拟人类浏览行为"的场景。</li>
+<li><strong>Browser Use</strong> (github.com/browser-use/browser-use) — Python 的 AI 浏览器 agent 框架，Stagehand 的主要竞品。如果你更习惯 Python 生态，选这个。</li>
+</ul>
+<h3>本章资源</h3>
+<ul class="nl-tool-list">
+<li>Reddit r/agentdevelopmentkit — "Browser Use vs Stagehand" 深度对比帖，两个框架的核心差异在于语言生态（Python vs JS）和缓存策略。</li>
+</ul>
+<h3>本章术语</h3>
+<ul class="nl-term-list">
+<li><strong>Canvas Fingerprint</strong> — 通过 HTML5 Canvas API 绘制的图形特征，由于硬件和驱动的微小差异，每个浏览器实例的 canvas 渲染结果略有不同，可以用来唯一标识一个浏览器。</li>
+<li><strong>WebGL Renderer</strong> — 浏览器的 3D 渲染引擎特征，包括 GPU 型号和驱动版本，是设备指纹的重要组成部分。</li>
+</ul>
+<h2>外链采购的争议保护与验收标准</h2>
+<p>在外链和 SEO 服务采购中，争议处理是一个被低估的环节。近期的治理规则更新为采购方提供了更明确的保护框架。</p>
+<p>外链采购这个行业有一个特别的尴尬：它是 SEO 中最重要的外部杠杆之一，但也是最不透明的。你花了钱，对方说"做好了"，你却很难验证"做好"到底意味着什么——链接在不在？权重高不高？会不会被惩罚？这一章给了一个足够具体的验收清单。</p>
+<h3>争议处理的核心原则</h3>
+<p><strong>所有沟通留在交易平台上。</strong> 最高优先级。不管供应商在即时通讯工具里说什么，都不要在平台外进行任何争议相关沟通。平台的争议仲裁只看平台内的沟通记录。</p>
+<p><strong>确认交付期限。</strong> 如果供应商没有在服务描述中明确交付期限，默认交付期限为 7 天。7 天内没有收到交付，你有权发起争议。</p>
+<h3>外链验收的具体标准</h3>
+<p>确认交付后不要立即确认收货。逐条验收：</p>
+<ol>
+<li><strong>页面是否真实发布且可访问。</strong> 不要只看截图——直接访问链接，确认页面存在、正常加载、没有被 noindex 阻止。</li>
+<li><strong>目标链接是否真实存在。</strong> 在页面上搜索你的目标链接，确认它被放置在页面上，且没有被 rel="nofollow" 或 rel="sponsored" 标记。</li>
+<li><strong>页面主题相关性。</strong> 外链页面的主题是否与你的站点相关？美食站上放金融外链，不仅没正面效果，还可能被搜索引擎视为可疑信号。</li>
+<li><strong>链接位置和可见性。</strong> 正文中的链接权重最高；侧边栏、页脚或评论区权重较低。</li>
+</ol>
+<blockquote>
+<p><strong>一句话点评：</strong> 外链验收不是"收到了吗"的问题，而是"收到的到底值多少钱"的问题。一条在正文中、主题相关的 dofollow 链接，和一条在页脚的 nofollow 链接，价值差距可能是 50 倍。别让供应商用截图糊弄你——自己去点。</p>
+</blockquote>
+<h3>本章工具</h3>
+<ul class="nl-tool-list">
+<li><strong>Ahrefs Backlink Checker</strong> (ahrefs.com/backlink-checker) — 免费版就能看到外链的 dofollow/nofollow 状态、引用域数量和基础权重指标。验收外链时的第一站。</li>
+<li><strong>SEO SpyGlass</strong> (link-assistant.com) — LinkAssistant 出品的外链分析工具，可以批量检查外链是否仍然存活、是否被标记 nofollow。</li>
+</ul>
+<h2>本期工具精选</h2>
+<p>除了各章提到的工具，这里集中推荐 2026 年四月值得关注的几个新工具：</p>
+<table class="nl-table">
+<thead>
+<tr>
+<th>工具</th>
+<th>类别</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lightpanda</strong></td>
+<td>AI Agent</td>
+<td>开源无头浏览器，Zig 写的，比 Chrome 快 11 倍，内存少 9 倍。做大规模自动化的人应该立刻去看。</td>
+</tr>
+<tr>
+<td><strong>Stagehand v3</strong></td>
+<td>AI Agent</td>
+<td>基于 Playwright 的 AI 浏览器 SDK，自然语言控制浏览器，新出的 action caching 能把重复操作成本砍半。</td>
+</tr>
+<tr>
+<td><strong>Profound</strong></td>
+<td>GEO</td>
+<td>追踪品牌在 ChatGPT/Perplexity/Gemini/Claude 中的可见性，GEO 赛道目前最完整的仪表盘。</td>
+</tr>
+<tr>
+<td><strong>Vismore</strong></td>
+<td>GEO</td>
+<td>专为品牌/AI 可见性设计，核心特点就是从监控到发布（execution + distribution）全链路覆盖，这点和其他大多数只停留在“监控+建议”的 GEO 工具很不一样。</td>
+</tr>
+<tr>
+<td><strong>n8n</strong></td>
+<td>自动化</td>
+<td>开源工作流自动化，比 Zapier 省钱，比 Python 脚本好维护。站群和社媒自动化的胶水层。</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td>AI 编程</td>
+<td>AI 原生 IDE，已经完全脱离 VS Code 独立发展。如果你还在用 VS Code + Copilot，试试这个。</td>
+</tr>
+<tr>
+<td><strong>Accio Work</strong></td>
+<td>出海电商</td>
+<td>从产品设计、采购到谈判、店铺运营、营销和 CRM——为真实业务打造的 AI Agent 平台</td>
+</tr>
+<tr>
+<td><strong>Ecomtent</strong></td>
+<td>出海电商</td>
+<td>专门做电商产品列表的 GEO 优化，针对 Amazon Rufus 和 ChatGPT Shopping 等新型 AI 购物入口。做跨境电商的值得关注。</td>
+</tr>
+</tbody>
+</table>
+<div class="nl-quotes">
+<blockquote><p>"当所有人都涌向同一个杠杆时，杠杆就断了。这不是物理定律，但它是 SEO 定律。"</p></blockquote>
+<blockquote><p>"规模是靶心，不是护城河。你越大，打你的人越多。"</p></blockquote>
+<blockquote><p>"过期域名就像二手车——你永远不知道上一任车主在发动机里倒了什么。但至少二手车有个 Carfax，过期域名连这个都没有。"</p></blockquote>
+<blockquote><p>"AI 内容检测器看的不是你写了什么，而是你没写什么。它看的是你有没有那 10% 的不可预测性——而那 10% 恰恰是整个内容里最有意思的部分。"</p></blockquote>
+<blockquote><p>"最好的争议保护不是争议后的处理，而是争议前的交易设计。所有沟通留在平台上——这不是偏执，这是概率。"</p></blockquote>
+</div>
+
+<div class="nl-preview">下期预告：如果你觉得这期还不够刺激，下一期我们聊聊"当 AI 搜索取代传统搜索后，SEO 从业者该去哪里"。 spoiler：答案可能不是"转行做 GEO"。</div>
+    </div>
     <div class="nav-issue">
       <span style="color:var(--muted);font-family:var(--mono);font-size:12px">#02 / 06</span>
-      <div>
-        <a href="issue-01.html" data-zh="← 上一篇: #01" data-en="← Prev: #01">← 上一篇: #01</a>
-        <span style="margin:0 12px;color:var(--rule)">|</span>
-        <a href="issue-03.html" data-zh="下一篇: #03 →" data-en="Next: #03 →">下一篇: #03 →</a>
-        <span style="margin:0 12px;color:var(--rule)">|</span>
-        <a href="issue-02-2026-0405-0412.pdf" download>下载 PDF</a>
-      </div>
+      <div><a href="issue-01.html">← 上一篇</a><span style="margin:0 12px;color:var(--rule)">|</span><a href="issue-02-2026-0405-0412.pdf" download>下载 PDF</a><span style="margin:0 12px;color:var(--rule)">|</span><a href="issue-03.html">下一篇 →</a></div>
     </div>
   </section>
   </main>
-<footer><div>© <span class="cpyear">2026</span> weihacking · Soulcraft Limited</div><div class="f-links"><a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X ↗</a><a href="https://github.com/1596941391qq" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
+<footer><div>&copy; <span class="cpyear">2026</span> weihacking &middot; Soulcraft Limited</div><div class="f-links"><a href="https://x.com/weihacking" target="_blank" rel="noreferrer">X &nearr;</a><a href="https://github.com/1596941391qq" target="_blank" rel="noreferrer">GitHub &nearr;</a></div></footer>
   <script src="../script.js" defer></script>
 </body>
 </html>
