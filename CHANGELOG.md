@@ -72,3 +72,35 @@ tools.html          | 1 commit  | SVG 图标替换
 newsletter/*.html   | 2 commits | opacity 修复 + 生成脚本更新
 scripts/nl-md2html.py | 1 commit | 模板 section 样式更新
 ```
+
+---
+
+## v3 — CEO Review 驱动：转化追踪 + SEO 信号 (05-13)
+
+### 转化追踪（CEO Review Critical 项）
+
+| Commit | 变更 | 具体 |
+|--------|------|------|
+| `2d47850` | 首页 CTA 添加 UTM 追踪 | 4 个飞书咨询链接分别加 utm_content=os1-banner/prod-high-authority/prod-social-interception/bottom-band |
+
+### SEO 结构化数据
+
+| Commit | 变更 |
+|--------|------|
+| `2d47850` | 4 个科普页补全 Article JSON-LD：geo-aeo-optimization-guide、pseo-agent-how-it-works、thinking、tools |
+
+### 修复
+
+| Commit | 变更 |
+|--------|------|
+| `2d47850` | issue-05 导航格式统一（与其他期一致） |
+
+### CEO Review 状态更新
+
+| # | 发现 | 严重度 | v3 状态 |
+|---|------|--------|---------|
+| 1 | CTA 转化追踪 | Critical | **已修复** — 全站 4 个 CTA 加 UTM |
+| 2 | SSG 迁移 | High | 中期规划（本轮不执行） |
+| 3 | GEO 信号 | High | **部分修复** — 4 个科普页加 Article schema |
+| 4 | 推文内容不足 | Medium | 待补充 |
+| 5 | og:image 统一 | Medium | 待补全 |
