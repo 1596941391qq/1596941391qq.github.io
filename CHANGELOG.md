@@ -113,13 +113,13 @@ scripts/nl-md2html.py | 1 commit | 模板 section 样式更新
 
 | Commit | 变更 |
 |--------|------|
-| `pending` | 首页推文哲思 section 从 2 条补充至 4 条：新增「假环境淘汰论」(05-06) + 「SEO 终局是被引用」(05-11) |
+| `5768f09` | 首页推文哲思 section 从 2 条补充至 4 条：新增「假环境淘汰论」(05-06) + 「SEO 终局是被引用」(05-11) |
 
 ### og:image 优化（CEO Review Medium 项 #5）
 
 | Commit | 变更 |
 |--------|------|
-| `pending` | 首页 og:image 从 avatar.jpg 替换为 gsc-growth.jpg（GSC 增长截图，更能体现 SEO 专业度） |
+| `5768f09` | 首页 og:image 从 avatar.jpg 替换为 gsc-growth.jpg（GSC 增长截图，更能体现 SEO 专业度） |
 
 ### CEO Review 状态更新
 
