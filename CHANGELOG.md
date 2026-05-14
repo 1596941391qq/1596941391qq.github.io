@@ -104,3 +104,29 @@ scripts/nl-md2html.py | 1 commit | 模板 section 样式更新
 | 3 | GEO 信号 | High | **部分修复** — 4 个科普页加 Article schema |
 | 4 | 推文内容不足 | Medium | 待补充 |
 | 5 | og:image 统一 | Medium | 待补全 |
+
+---
+
+## v4 — 内容深化 + 社交分享优化 (05-13)
+
+### 推文哲思补充（CEO Review Medium 项 #4）
+
+| Commit | 变更 |
+|--------|------|
+| `pending` | 首页推文哲思 section 从 2 条补充至 4 条：新增「假环境淘汰论」(05-06) + 「SEO 终局是被引用」(05-11) |
+
+### og:image 优化（CEO Review Medium 项 #5）
+
+| Commit | 变更 |
+|--------|------|
+| `pending` | 首页 og:image 从 avatar.jpg 替换为 gsc-growth.jpg（GSC 增长截图，更能体现 SEO 专业度） |
+
+### CEO Review 状态更新
+
+| # | 发现 | 严重度 | v4 状态 |
+|---|------|--------|---------|
+| 1 | CTA 转化追踪 | Critical | **已修复** (v3) |
+| 2 | SSG 迁移 | High | 中期规划（不执行） |
+| 3 | GEO 信号 | High | **部分修复** (v3) |
+| 4 | 推文内容不足 | Medium | **已修复** — 2→4 条 |
+| 5 | og:image 统一 | Medium | **部分修复** — 首页已换，其余页面待统一 |
