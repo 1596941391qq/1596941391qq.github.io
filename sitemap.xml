@@ -166,6 +166,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://1596941391qq.github.io/newsletter/issue-06.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://1596941391qq.github.io/newsletter/issue-special-keyword-impulse.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://1596941391qq.github.io/newsletter/issue-special-ecommerce-interception.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
