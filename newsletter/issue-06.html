@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hacking 周刊 #06 — UCP 代理商务 / GEO Citation Hook / 静默去索引</title>
+  <meta name="description" content="hacking 周刊 #06：Google UCP Buy 按钮、GEO Citation Hook 三步框架、归因黑洞、Wise AI 可见性 87 分拆解、AI 内容静默去索引、Rentman $15M ARR。2026-05-06 ~ 05-12。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Code+Pro:wght@400;600&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="hacking 周刊 #06 — UCP 代理商务 / GEO Citation Hook / 静默去索引">
+  <meta property="og:description" content="hacking 周刊第六期：Google UCP Buy 按钮、GEO Citation Hook 三步框架、归因黑洞、Wise AI 可见性拆解、AI 内容静默去索引。2026-05-06 ~ 05-12。">
+  <meta property="og:url" content="https://1596941391qq.github.io/newsletter/issue-06.html">
+  <meta property="og:site_name" content="weihacking">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://1596941391qq.github.io/images/newsletter-header-data-nodes.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@weihacking">
+  <meta name="twitter:title" content="hacking 周刊 #06 — UCP 代理商务 / GEO Citation Hook / 静默去索引">
+  <meta name="twitter:description" content="hacking 周刊第六期：Google UCP Buy 按钮、GEO Citation Hook 三步框架、归因黑洞、Wise AI 可见性拆解、AI 内容静默去索引。2026-05-06 ~ 05-12。">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://1596941391qq.github.io/"},{"@type":"ListItem","position":2,"name":"Newsletter","item":"https://1596941391qq.github.io/knowledge.html"},{"@type":"ListItem","position":3,"name":"#06 · UCP 代理商务 / GEO Citation Hook / 静默去索引"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"#06 · UCP 代理商务 / GEO Citation Hook / 静默去索引","description":"hacking 周刊第六期：Google UCP Buy 按钮、GEO Citation Hook 三步框架、归因黑洞、Wise AI 可见性拆解、AI 内容静默去索引。2026-05-06 ~ 05-12。","url":"https://1596941391qq.github.io/newsletter/issue-06.html","datePublished":"2026-05-06","author":{"@type":"Person","name":"weihacking","url":"https://1596941391qq.github.io"},"publisher":{"@type":"Organization","name":"Soulcraft Limited","logo":{"@type":"ImageObject","url":"https://1596941391qq.github.io/images/avatar.jpg"}},"image":"https://1596941391qq.github.io/images/newsletter-header-data-nodes.jpg"}</script>
+  <link rel="canonical" href="https://1596941391qq.github.io/newsletter/issue-06.html">
+  <link rel="alternate" hreflang="zh" href="https://1596941391qq.github.io/newsletter/issue-06.html">
+  <link rel="alternate" hreflang="x-default" href="https://1596941391qq.github.io/newsletter/issue-06.html">
+  <style>
+    .nl-article{max-width:740px;margin:0 auto;padding:0 28px 48px}
+    .nl-article h2{font-family:var(--serif);font-size:28px;font-weight:900;line-height:1.2;margin:48px 0 20px;color:var(--ink);border-top:2px solid var(--rule);padding-top:32px}
+    .nl-article h3{font-family:var(--serif);font-size:20px;font-weight:700;line-height:1.3;margin:28px 0 12px;color:var(--ink)}
+    .nl-article p{font-size:16px;line-height:1.8;color:var(--ink-s);margin-bottom:16px}
+    .nl-article blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:20px 0;font-style:italic;color:var(--ink-s);background:var(--bg-alt)}
+    .nl-article strong{color:var(--ink);font-weight:700}
+    .nl-article em{font-style:normal;color:var(--accent);font-weight:700}
+    .nl-article ul,.nl-article ol{margin:12px 0 16px 24px;color:var(--ink-s)}
+    .nl-article li{font-size:16px;line-height:1.75;margin-bottom:6px}
+    .nl-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+    .nl-table th{background:var(--bg-alt);padding:10px 14px;text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--rule)}
+    .nl-table td{padding:12px 14px;border-bottom:1px solid var(--rule);color:var(--ink-s);line-height:1.6}
+    .nl-tool-list{list-style:none;padding:0;margin:12px 0 24px}
+    .nl-tool-list li{font-size:15px;color:var(--ink-s);padding:6px 0;border-bottom:1px solid var(--rule)}
+    .nl-tool-list strong{color:var(--ink)}
+    .nl-term-list{list-style:none;padding:0;margin:12px 0 24px}
+    .nl-term-list li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--rule)}
+    .nl-term-list strong{color:var(--accent);font-family:var(--mono);font-size:12px}
+    .nav-issue{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding:24px 0;border-top:1px solid var(--rule)}
+    .nav-issue a{font-family:var(--mono);font-size:12px;color:var(--accent)}
+    .nl-editor-note{font-size:15px;line-height:1.8;color:var(--ink-s);margin-bottom:24px;padding:20px 24px;background:var(--bg-alt);border-left:3px solid var(--accent)}
+    .nl-editor-note strong{color:var(--ink)}
+    .nl-summary{font-size:15px;line-height:1.8;color:var(--ink-s);margin:20px 0 24px;padding:16px 20px;background:var(--bg-alt);border-radius:2px;font-family:var(--body)}
+    .nl-quotes blockquote{border-left:3px solid var(--accent);padding:12px 20px;margin:16px 0;font-style:italic;color:var(--ink-s);background:var(--bg-alt)}
+    .nl-quotes blockquote strong{color:var(--ink);font-style:normal}
+    .nl-preview{font-size:14px;line-height:1.7;color:var(--ink-s);margin-top:48px;padding:20px 24px;border-top:2px solid var(--rule);font-style:italic}
+  </style>
+</head>
+<body>
+  <nav aria-label="主导航"><a href="../index.html">weihacking_</a><div class="nav-r"><a href="../knowledge.html" class="nb" style="margin-right:8px">←</a><button class="nb" id="themeToggle" onclick="toggleTheme()">☽</button></div></nav>
+<main>
+  <div class="sub-hero" style="padding-bottom:32px"><div class="wrap"><p class="sec-label">hacking 周刊</p><h1>#06 · UCP 代理商务 / GEO Citation Hook / 静默去索引</h1><p class="hero-sub">2026-05-06 ~ 05-12</p></div></div>
+  <section class="wrap" style="padding:0 28px 32px;opacity:1;transform:none">
+    <div class="nl-article">
+      <div class="nl-editor-note">
+        <strong>编者按：</strong> 这期最让我们兴奋的不是一个工具，是一个信号：Google 在主搜索结果页上放了 Buy 按钮。不是 Shopping 标签页，不是 AI Overviews 里的推荐链接——是主 SERP。同一周，论坛出现了我们见过的最实操的 GEO 框架——不是"做好内容等 AI 来引用"，而是"主动找 AI 回复里的缺口，用专门的页面去填"。加上 AI 内容正在被"静默去索引"的警告，和一个 16 岁起步做到 $15M ARR 的独立开发者故事，这期信息密度非常高。
+      </div>
+
+      <h2>Google UCP：搜索结果里的 Buy 按钮</h2>
+
+      <p>Google 本周推出 Universal Commerce Protocol（UCP）——一个开放标准，让 AI 代理可以直接在搜索结果里完成购买。不是跳转网站，不是打开 App。是在 SERP 上直接显示 Buy 按钮，一键下单。</p>
+
+      <h3>Wayfair 第一个接入</h3>
+
+      <p>Wayfair 成为第一个在主 SERP 上展示 UCP Buy 按钮的品牌。用户搜索 Wayfair 相关产品时，搜索结果旁直接出现购买入口，支持 Google Pay 一键结算。</p>
+
+      <h3>技术要求</h3>
+
+      <ol>
+        <li><strong>Google Merchant Center 账户</strong> — 产品数据通过 feed 提交</li>
+        <li><strong>native_commerce 属性</strong> — 在产品数据中标记，声明支持代理商务</li>
+        <li><strong>Google Pay 集成</strong> — 一键支付结算</li>
+        <li><strong>.well-known/ucp 配置文件</strong> — 域名下放置 UCP 配置</li>
+      </ol>
+
+      <h3>路径压缩的数据</h3>
+
+      <p>一项 1030 人的消费者调查：<strong>50%</strong> 用 AI 辅助研究后已经买过东西，<strong>87%</strong> 说 AI 摘要帮他们更快了解品牌，<strong>52%</strong> 在提问时就带了约束条件，<strong>69%</strong> 期望 AI 在未来购物中起更大作用。AI 代理通常只推荐 <strong>4-6 个产品</strong>。赢家通吃。</p>
+
+      <div class="nl-summary">极致压缩：UCP 在主 SERP 放 Buy 按钮，Wayfair 首发接入。需要 Merchant Center + native_commerce + Google Pay + .well-known/ucp。背后是 Agentic AI 取代 Generative AI 的五维转变。50% AI 辅助购买，4-6 产品推荐，赢家通吃。</div>
+
+      <blockquote>UCP 不是新广告位——它是搜索的终点站。当 Buy 按钮出现在 SERP 上，SEO 的目标从"让用户点击我的网站"变成"让 AI 代理推荐我的产品"。</blockquote>
+
+      <h2>GEO Citation Hook：让 AI "不得不引用"你</h2>
+
+      <p>本周论坛出现了一个高价值 GEO 实操帖——20+ 回复，2 页讨论。发帖者提出完整的三步框架，不是"做好内容等 AI 引用"，而是<strong>主动出击，让 AI 模型在生成回复时不得不引用你</strong>。</p>
+
+      <h3>第一步：Citation Hook 策略</h3>
+
+      <p>用 AI 扫描你所在领域的 LLM 回复，找回复中的薄弱环节：<strong>"Source: Unknown"</strong>、过时的统计数据、模糊的结论。然后用 Schema-heavy 的专用页面填补这些缺口。</p>
+
+      <h3>第二步：Entity-Based 品牌关联</h3>
+
+      <p>AI 不只看关键词，看 Entity。你的品牌需要被跨平台关联到特定的语义实体。评论区一条回复："AI 模型在训练数据里看到的不是你的关键词密度，是你作为一个实体的上下文网络。如果你的品牌只出现在你自己的网站上，那你在 AI 的世界里就不存在。"</p>
+
+      <h3>第三步：Extreme Snippet Baiting</h3>
+
+      <p>把 Speakable + FAQ Schema 做到极致。答案格式匹配 LLM 的 token 输出风格：简洁、事实性、列表化。目标：让 AI "直接复制粘贴"你的内容作为答案。</p>
+
+      <div class="nl-summary">极致压缩：三步 GEO 框架 = Citation Hook（找 AI 回复缺口）+ Entity-Based 品牌关联（跨平台语义实体网络）+ Extreme Snippet Baiting（答案格式匹配 LLM 输出风格）。</div>
+
+      <h2>Agentic 搜索的归因黑洞</h2>
+
+      <p><strong>58% 的电商消费者已经在用 AI 工具研究产品。</strong> 但你在 GA4 里能看到多少来自 AI 的流量？可能不到 5%。问题不在 AI 不发送流量。问题在 AI 发送的流量被错误归因了。</p>
+
+      <h3>三层归因框架</h3>
+
+      <p><strong>第一层：Eligible</strong> — 你的内容是否满足出现在 AI 回答中的基本条件？<br><strong>第二层：Appearing</strong> — 你的品牌是否真的出现在 AI 回答中？<br><strong>第三层：Outcomes</strong> — 出现在 AI 回答中是否带来了业务？</p>
+
+      <h3>Query Fan-Out 问题</h3>
+
+      <p>AI 搜索有一个传统搜索没有的特性：用户问一个复杂问题，AI 在后台自动展开 10-50 个子查询。一个用户查询可能在 AI 端触发了 50 次"搜索"，但在你的分析工具里只记录为 1 次 "direct" 访问。</p>
+
+      <div class="nl-summary">极致压缩：58% 电商消费者用 AI 研究产品，但 AI 流量被 GA4 错误归因为 "direct"。三层框架：Eligible → Appearing → Outcomes。Query Fan-Out 让一个用户查询触发 50 次 AI 后台搜索。</div>
+
+      <h2>Wise.com AI 可见性 87 分拆解</h2>
+
+      <p>一项 AI 可见性研究对比了跨境支付领域：<strong>Wise 得分 87，PayPal 76。</strong> 11 分差距来自四个因素。</p>
+
+      <table class="nl-table">
+        <thead><tr><th scope="col">因素</th><th scope="col">Wise 的做法</th></tr></thead>
+        <tbody>
+          <tr><td>SEO 基础设施</td><td>月均 1.52 亿次自然搜索流量，1600 万个排名关键词</td></tr>
+          <tr><td>数据驱动页面</td><td>10,000+ 个 SWIFT 代码页面，程序化生成</td></tr>
+          <tr><td>信任信号密度</td><td>1600 万用户、每季度数十亿转账、50+ 市场合规</td></tr>
+          <tr><td>全渠道存在</td><td>论坛、视频、X、金融博客的自然讨论</td></tr>
+        </tbody>
+      </table>
+
+      <div class="nl-summary">极致压缩：Wise AI 可见性 87 vs PayPal 76。数据驱动的程序化内容 + 长尾覆盖 = AI 可见性的基础设施。10,000+ SWIFT 代码页面是 PSEO 思维在 AI 时代的价值证明。</div>
+
+      <h2>AI 内容的"静默去索引"危机</h2>
+
+      <p>本周论坛两个帖子从不同角度指向同一个警告：<strong>未经深度编辑的 AI 内容正在被 Google 悄悄从索引中移除。</strong> 不是惩罚通知，不是排名下降。是直接消失。</p>
+
+      <p>论坛共识：</p>
+      <ul>
+        <li>"未经编辑的 ChatGPT 直出内容被去索引的速度比以前快多了。"</li>
+        <li>"有些页面不是惩罚，是被静默去索引（quietly deindexed）。"</li>
+        <li>"Google 现在优先看 information gain 和原创数据。"</li>
+        <li>发布在外部出版物上的 AI 生成内容也开始从索引中消失——外链层面的 AI 检测是新威胁。</li>
+      </ul>
+
+      <div class="nl-summary">极致压缩：两个帖子交叉验证——未经深度编辑的 AI 内容正在被"静默去索引"。不是惩罚，是消失。外链层面 AI 检测是新威胁。</div>
+
+      <blockquote>"静默去索引"这四个字是本周最该记住的警告。Google 不再需要"惩罚"你——它只需要不再索引你。没有通知，没有申诉。你的页面像从没存在过。</blockquote>
+
+      <h2>Rentman：16 岁写自用工具，8 年做到 $15M ARR</h2>
+
+      <p>创始人 16 岁时在自家租赁公司干活，工具要么太贵、要么太复杂。他决定自己写一个。最初只有一个功能：管理库存。8 年后，Rentman 服务 70 个国家，$15M ARR。</p>
+
+      <p>三个关键转折：<strong>自用→别人也要用</strong>（周围租赁公司看到他在用的工具，问能不能也装一个），<strong>工具→平台</strong>（用户一步步"逼"出来的功能），<strong>本地→全球</strong>（活动租赁行业的跨国性质自然扩展）。</p>
+
+      <div class="nl-summary">极致压缩：16 岁在自家租赁公司写库存管理工具，8 年做到 $15M ARR / 70 国家。"先做自己的用户"是最被低估的启动策略。</div>
+
+      <h2>平台变动速览</h2>
+
+      <table class="nl-table">
+        <thead><tr><th scope="col">变动</th><th scope="col">核心影响</th></tr></thead>
+        <tbody>
+          <tr><td>Gemini in Chrome 全球扩展</td><td>Chrome 内置 Gemini 助手覆盖 50+ 语言，部分站点 CTR 下降 61%</td></tr>
+          <tr><td>Google Preferred Sources 全球上线</td><td>用户可指定"偏好信源"，品牌忠诚度有了直接的排名乘数</td></tr>
+          <tr><td>Bing Webmaster Tools AI 报告</td><td>新增 Citation Share，第一个量化"AI 引用可见性"的主流站长工具</td></tr>
+          <tr><td>Google 2026 更新时间线</td><td>大量小更新不再公布，排名静默波动是常态</td></tr>
+        </tbody>
+      </table>
+
+      <div class="nl-summary">极致压缩：Gemini 在 Chrome 里截流，Preferred Sources 把品牌忠诚度变成排名信号，Bing 量化 AI 引用份额，Google 静默更新成常态。四条信号同向：搜索引擎从"推荐链接"转向"推荐答案"。</div>
+
+      <h2>本期工具精选</h2>
+
+      <table class="nl-table">
+        <thead><tr><th scope="col">工具</th><th scope="col">类别</th><th scope="col">一句话</th></tr></thead>
+        <tbody>
+          <tr><td>Vismore</td><td>GEO/AEO</td><td>超越仪表盘的可执行 GEO 策略。Citation Hook 优先级排序利器。</td></tr>
+          <tr><td>Accio Work</td><td>跨境电商</td><td>本地优先桌面 AI agent，选品/采购/运营/CRM 全链路。</td></tr>
+          <tr><td>Google Merchant Center + UCP</td><td>代理商务</td><td>SERP Buy 按钮的前置条件。</td></tr>
+          <tr><td>Semrush Prompt Research</td><td>AI 搜索追踪</td><td>AI 搜索量、意图分类、AI 答案中的品牌提及。</td></tr>
+        </tbody>
+      </table>
+
+      <div class="nl-quotes">
+        <blockquote>"UCP 不是新广告位——它是搜索的终点站。"</blockquote>
+        <blockquote>"如果你的页面格式就是 AI 想要的输出格式，它有什么理由不引用你？"</blockquote>
+        <blockquote>"未经编辑的 ChatGPT 直出内容被去索引的速度比以前快多了。"</blockquote>
+        <blockquote>"先做自己的用户是最被低估的启动策略。" Rentman 用 8 年 $15M ARR 验证的道理。</blockquote>
+      </div>
+
+      <div class="nl-preview">下期预告：UCP Buy 按钮的实际转化数据值得追踪——Wayfair 之后谁跟进？Citation Hook 长期效果需 3-6 个月验证。"静默去索引"范围是否从信息类扩展到商业类内容？</div>
+
+      <div class="nav-issue">
+        <a href="issue-05.html">← #05 Adobe 收购 Semrush</a>
+        <a href="../knowledge.html">全部周刊 →</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+<footer><span>© 2026 weihacking / Soulcraft Limited</span><div class="f-links"><a href="../index.html">Home</a><a href="../knowledge.html">Knowledge</a></div></footer>
+<script src="../script.js"></script>
+</body>
+</html>
