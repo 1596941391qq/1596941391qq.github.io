@@ -5,7 +5,7 @@ permalink: /seedance-2-0-api-commercial-use/
 ---
 # Seedance 2.0 API commercial use: Complete Guide 2026
 
-**Published:** 2026-05-15  
+**Published:** 2026-05-17  
 **Keywords:** Seedance 2.0 API commercial use
 
 ---
