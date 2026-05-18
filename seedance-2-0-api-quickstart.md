@@ -5,7 +5,7 @@ permalink: /seedance-2-0-api-quickstart/
 ---
 # Seedance 2.0 API quickstart: Complete Guide 2026
 
-**Published:** 2026-05-15  
+**Published:** 2026-05-18  
 **Keywords:** Seedance 2.0 API quickstart
 
 ---

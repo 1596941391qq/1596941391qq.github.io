@@ -5,7 +5,7 @@ permalink: /seedance-api-for-batch-video-generation/
 ---
 # Seedance API for batch video generation: Complete Guide 2026
 
-**Published:** 2026-05-14  
+**Published:** 2026-05-18  
 **Keywords:** Seedance API for batch video generation
 
 ---
