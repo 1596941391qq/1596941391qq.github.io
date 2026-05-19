@@ -5,7 +5,7 @@ permalink: /seedance-api-integration-guide/
 ---
 # Seedance API integration guide: Complete Guide 2026
 
-**Published:** 2026-05-14  
+**Published:** 2026-05-19  
 **Keywords:** Seedance API integration guide
 
 ---
