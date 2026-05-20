@@ -5,7 +5,7 @@ permalink: /seedance-api-for-ecommerce-videos/
 ---
 # Seedance API for ecommerce videos: Complete Guide 2026
 
-**Published:** 2026-05-19  
+**Published:** 2026-05-20  
 **Keywords:** Seedance API for ecommerce videos
 
 ---

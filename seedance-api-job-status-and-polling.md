@@ -5,7 +5,7 @@ permalink: /seedance-api-job-status-and-polling/
 ---
 # Seedance API job status and polling: Complete Guide 2026
 
-**Published:** 2026-05-14  
+**Published:** 2026-05-20  
 **Keywords:** Seedance API job status and polling
 
 ---
