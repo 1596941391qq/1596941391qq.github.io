@@ -86,7 +86,7 @@
 
   .contact-bar { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; padding: 16px 0; margin-top: 16px; font-size: 14px; color: var(--fg3); }
   .img-row { display: flex; gap: 24px; margin-top: 32px; align-items: flex-start; justify-content: center; }
-  .img-row img { border-radius: var(--r-lg); box-shadow: var(--shadow); }
+  .img-row img { border-radius: var(--r-lg); box-shadow: var(--shadow); height: auto; }
   .img-center { text-align: center; margin-top: 36px; }
   .img-center img { max-width: 100%; border-radius: var(--r-lg); box-shadow: var(--shadow); }
 
@@ -206,8 +206,8 @@
     .card { padding: 24px 20px; }
 
     .img-row { gap: 12px; }
-    .img-row img { max-width: 48% !important; flex: 1; min-width: 0; }
-    .img-center img { max-width: 100% !important; }
+    .img-row img { max-width: 48% !important; flex: 1; min-width: 0; height: auto; }
+    .img-center img { max-width: 100% !important; height: auto; }
 
     .cmp-table { font-size: 14px; }
     .cmp-table th, .cmp-table td { padding: 12px 10px; }
@@ -394,12 +394,14 @@
     .img-row img {
       max-width: 100% !important;
       width: 100%;
+      height: auto;
       flex: none;
       min-width: 0;
     }
 
     .img-center img {
       max-width: 100% !important;
+      height: auto;
     }
 
     .cmp-table,

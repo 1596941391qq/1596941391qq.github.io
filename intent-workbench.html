@@ -93,6 +93,8 @@
       padding: 14px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.65);
+      overflow-wrap: break-word;
+      word-break: break-all;
     }
 
     .stat strong {
@@ -139,6 +141,7 @@
       border-collapse: collapse;
       margin-top: 12px;
       font-size: 14px;
+      table-layout: fixed;
     }
 
     th, td {
@@ -146,6 +149,8 @@
       padding: 10px 8px;
       border-bottom: 1px solid var(--line);
       vertical-align: top;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .pill {
@@ -298,7 +303,7 @@
     <section class="card" style="margin-top:18px;">
       <h2>优先机会词</h2>
       <table>
-        <th scope="col"ead>
+        <thead>
           <tr>
             <th scope="col">Keyword</th>
             <th scope="col">Priority</th>
