@@ -5,7 +5,7 @@ permalink: /seedance-api-webhook-and-callback-workflow/
 ---
 # Seedance API webhook and callback workflow: Complete Guide 2026
 
-**Published:** 2026-05-14  
+**Published:** 2026-05-21  
 **Keywords:** Seedance API webhook and callback workflow
 
 ---
