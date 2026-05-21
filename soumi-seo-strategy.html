@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>soumichat.com | SEO 審計與四線策略</title>
+<link rel="stylesheet" href="css/seo-strategy.css">
+  <link rel="canonical" href="https://1596941391qq.github.io/soumi-seo-strategy.html">
+  <link rel="alternate" hreflang="zh" href="https://1596941391qq.github.io/soumi-seo-strategy.html">
+  <link rel="alternate" hreflang="x-default" href="https://1596941391qq.github.io/soumi-seo-strategy.html">
+</head>
+<body>
+<div class="shell">
+  <div class="layout">
+    <aside class="rail">
+      <h2>soumichat.com</h2>
+      <p>SEO 審計與四線策略：圍繞 AI 伴侶 App 品類教育、長記憶差異化、繁中市場佔位與站外證據層展開。</p>
+      <nav aria-label="主導航">
+        <a href="#summary">執行摘要</a>
+        <a href="#scores">評分與原因</a>
+        <a href="#issues">關鍵問題</a>
+        <a href="#audit">全面審計</a>
+        <a href="#fixlist">優先修復</a>
+        <a href="#line1">第一條線</a>
+        <a href="#line2">第二條線</a>
+        <a href="#line3">第三條線</a>
+        <a href="#line4">第四條線</a>
+        <a href="#keywords">關鍵詞分級</a>
+        <a href="#roadmap">執行路線圖</a>
+        <a href="#growth">內容增長與轉化</a>
+      </nav>
+    </aside>
+
+    <main class="page">
+      <header class="hero">
+        <div class="eyebrow">SEO Audit / Four-Line Strategy</div>
+        <h1>soumichat.com SEO 審計與四線策略</h1>
+        <p class="lead">Soumi 是面向港澳臺的 AI 伴侶 App，技術底盤乾淨、Schema 完整、AI Search Ready 意識超前，但頁面規模太薄、站外證據層幾乎為零、品類教育詞還沒有系統佔位。這份審計先把增長卡點拆開，再給出四條線的執行路線。</p>
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="mini">核心判斷</div>
+            <p>soumichat.com 的技術底盤在同品類中屬於上游水準——canonical 正確、Schema 完整、llms.txt 已部署、FAQPage 結構化數據齊全。真正卡住增長的不是技術債，而是內容規模（僅 7 頁）、品類教育詞覆蓋不足、站外證據層空白、以及 www/non-www 歸一未完成。</p>
+            <div class="meta">
+              <span class="pill">審計日期：2026-05-21（實測版）</span>
+              <span class="pill">頁面樣本：首頁 + 6 個 guide 頁</span>
+              <span class="pill">站點類型：AI Companion App（落地頁 + 品類教育）</span>
+              <span class="pill">託管：騰訊 EdgeOne CDN + COS</span>
+            </div>
+          </div>
+          <div class="hero-note">
+            <div class="mini">一句話結論</div>
+            <p>底盤乾淨但資產太薄。7 頁撐不起一個品類的搜索佔位。最緊急的不是修技術，而是把品類教育詞、比較詞、場景詞的頁面規模做起來，同時補齊 www 歸一和站外證據。</p>
+            <div class="quote">Soumi 已經把 AI Search Ready 做到了同品類最前面（llms.txt + FAQPage + SpeakableSpecification），現在缺的是讓傳統搜索也能找到它的頁面厚度和外部背書。</div>
+          </div>
+        </div>
+      </header>
+
+      <section id="summary">
+        <div class="label">Executive Summary</div>
+        <h2>執行摘要</h2>
+        <p class="statement">soumichat.com 處於「技術底盤已就位，但搜索資產還沒長出來」的階段。它不是一個需要大修的站，而是一個需要大擴的站。</p>
+        <div class="grid-2" style="margin-top:18px">
+          <div class="card">
+            <div class="mini">已經具備的基礎</div>
+            <p>canonical 指向正確（https://www.soumichat.com/）、Schema 覆蓋完整（WebSite + Organization + SoftwareApplication + MobileApplication + FAQPage + WebPage + SpeakableSpecification）、robots.txt 對所有主流 AI crawler 開放（GPTBot、ClaudeBot、PerplexityBot）、llms.txt 已部署且結構清晰、sitemap.xml 格式正確且 lastmod 活躍、guide 頁面語義結構清晰（H1 唯一、H2 承接搜索問題）、圖片有 width/height 聲明。</p>
+          </div>
+          <div class="card">
+            <div class="mini">真正拖後腿的地方</div>
+            <p>全站僅 7 頁（1 首頁 + 6 guide），品類教育詞覆蓋嚴重不足；www 與 non-www 未歸一（https://soumichat.com 和 https://www.soumichat.com 都返回 200）；站外證據層幾乎為零（無第三方評測、無目錄收錄、無反鏈資產）；比較頁、替代頁、場景頁完全空白；內鏈結構扁平（guide 之間互鏈但無支柱頁聚合）。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="scores">
+        <div class="label">Scorecard</div>
+        <h2>評分與原因</h2>
+        <div class="box">
+          <table>
+            <tr>
+              <th scope="col">維度</th>
+              <th scope="col">分數</th>
+              <th scope="col">判斷</th>
+              <th scope="col">原因</th>
+            </tr>
+            <tr>
+              <td><strong>整體可見性</strong></td>
+              <td class="status-warn">38</td>
+              <td>Google 能正確理解站點身份，但頁面規模不足以建立品類權威。</td>
+              <td>僅 7 頁進入索引池，品類教育詞、比較詞、場景詞幾乎沒有對應頁面。在「AI 伴侶」「AI 角色聊天」等核心詞上還沒有穩定排名基礎。</td>
+            </tr>
+            <tr>
+              <td><strong>技術底盤</strong></td>
+              <td class="status-good">78</td>
+              <td>同品類中技術水準最高的一批。唯一硬傷是 www/non-www 歸一。</td>
+              <td>canonical 正確、Schema 完整、robots.txt 開放、sitemap 活躍、圖片有尺寸聲明、preload 策略合理。但 http://soumichat.com → https://soumichat.com（非 www）與 http://www.soumichat.com → https://www.soumichat.com 分裂，兩個版本都返回 200。</td>
+            </tr>
+            <tr>
+              <td><strong>內容權威</strong></td>
+              <td class="status-bad">29</td>
+              <td>品類教育剛起步，離 topical authority 還很遠。</td>
+              <td>6 篇 guide 覆蓋了基礎品類定義，但缺少比較頁、替代頁、場景頁、案例頁、深度教程。平均內容厚度約 5800 字元（繁中），在 AI 伴侶品類中偏薄。</td>
+            </tr>
+            <tr>
+              <td><strong>轉化就緒度</strong></td>
+              <td class="status-warn">55</td>
+              <td>App 下載路徑清晰，但信任信號和社會證明不足。</td>
+              <td>首頁 CTA 明確（iOS + Android 雙按鈕）、FAQ 解答疑慮、角色展示有吸引力。但缺少用戶評價、下載量展示、媒體報導、KOL 背書等第三方信任信號。</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="issues">
+        <div class="label">Priority Findings</div>
+        <h2>關鍵問題</h2>
+        <div class="box">
+          <div class="issue">
+            <div class="sev status-bad">P0<strong>資產太薄</strong></div>
+            <div>
+              <h3>7 頁撐不起一個品類的搜索佔位</h3>
+              <p>AI 伴侶 App 品類在繁中市場正處於品類教育期，用戶會搜「AI 男友 app」「AI 角色聊天推薦」「AI 伴侶 app 比較」等詞。目前 6 篇 guide 只覆蓋了最基礎的品類定義，比較詞、替代詞、場景詞、深度教程全部空白。這不是靠優化現有頁面能解的，必須系統性擴頁。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-bad">P0<strong>站外空白</strong></div>
+            <div>
+              <h3>沒有任何第三方證據支撐品牌可信度</h3>
+              <p>搜索「soumi app」「soumichat」時，除了官網本身，幾乎找不到第三方評測、目錄收錄、媒體報導或 KOL 推薦。對於一個需要用戶信任才能下載的 AI 伴侶 App，站外證據層空白是致命的。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-warn">P1<strong>域名分裂</strong></div>
+            <div>
+              <h3>www 與 non-www 未歸一，權重分散</h3>
+              <p>實測：https://soumichat.com 和 https://www.soumichat.com 都返回 200。雖然 canonical 統一指向 www 版本，但 non-www 沒有 301 跳轉到 www，Google 可能同時抓取兩個版本，造成權重分散。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-warn">P1<strong>比較缺位</strong></div>
+            <div>
+              <h3>用戶在做下載決策時找不到比較資訊</h3>
+              <p>AI 伴侶 App 用戶的典型決策路徑：先搜品類詞 → 看比較 → 選一個下載。目前站內沒有任何比較頁（vs Character.AI、vs Replika、vs Chai 等），用戶的比較需求只能被競品或第三方滿足。</p>
+            </div>
+          </div>
+          <div class="issue">
+            <div class="sev status-warn">P1<strong>繁中長尾空白</strong></div>
+            <div>
+              <h3>港澳臺用戶的搜索習慣還沒有被系統承接</h3>
+              <p>繁中用戶搜索 AI 伴侶相關詞時，會用「AI 男友」「AI 女友 app」「虛擬戀人」「AI 角色扮演」「AI 聊天 app 推薦」等詞。這些詞目前沒有對應頁面，流量全部流向競品或資訊站。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="audit">
+        <div class="label">Audit Report</div>
+        <h2>全面審計</h2>
+        <p>按 16 個模塊完整展開。每一行保留編號、檢查點和核驗結果。</p>
+        <div class="audit-meta">
+          <span class="audit-pill">16 個審計模塊</span>
+          <span class="audit-pill">靜態站（騰訊 EdgeOne + COS）</span>
+          <span class="audit-pill">繁體中文 AI 伴侶 App</span>
+        </div>
+        <p class="audit-note">狀態說明：良好 = 實測確認基礎成立；待優化 = 有雛形但不夠強；風險 = 實測確認影響增長；待建設 = 對應能力基本還沒長出來。</p>
+        <div class="table-wrap">
+          <table class="audit-ledger">
+            <tr>
+              <th scope="col">編號</th>
+              <th scope="col">檢查點</th>
+              <th scope="col">核驗結果</th>
+            </tr>
+
+            <tr class="module-sep"><td colspan="3">01 抓取入口</td></tr>
+            <tr><td>001</td><td>robots.txt 可訪問</td><td><strong class="status-good">良好</strong>：robots.txt 正常返回，格式標準。</td></tr>
+            <tr><td>002</td><td>robots 是否阻斷核心頁面</td><td><strong class="status-good">良好</strong>：Allow: / 對所有 User-agent 開放，無任何 Disallow。</td></tr>
+            <tr><td>003</td><td>AI Crawler 訪問權限</td><td><strong class="status-good">良好</strong>：明確允許 GPTBot、ChatGPT-User、PerplexityBot、ClaudeBot、anthropic-ai。同品類中最開放的配置。</td></tr>
+            <tr><td>004</td><td>sitemap.xml 可訪問</td><td><strong class="status-good">良好</strong>：返回標準 XML 格式，7 個 URL，lastmod 活躍（2026-05-19/20）。</td></tr>
+            <tr><td>005</td><td>sitemap 是否含核心頁</td><td><strong class="status-good">良好</strong>：首頁 priority 1.0，6 個 guide 頁 priority 0.8，全部收錄。</td></tr>
+            <tr><td>006</td><td>llms.txt 部署</td><td><strong class="status-good">良好</strong>：已部署 llms.txt，結構完整（品牌定義、核心頁面、推薦引用、下載連結、邊界聲明）。同品類中極少見的 AI Search Ready 配置。</td></tr>
+            <tr><td>007</td><td>抓取入口是否統一到正式域</td><td><strong class="status-warn">待優化</strong>：robots.txt Sitemap 指向 www.soumichat.com，但 non-www 版本也能正常訪問且返回 200，未做 301 歸一。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">02 索引治理</td></tr>
+            <tr><td>008</td><td>首頁索引狀態</td><td><strong class="status-good">良好</strong>：meta robots = "index, follow"，canonical 指向正確。</td></tr>
+            <tr><td>009</td><td>Guide 頁索引狀態</td><td><strong class="status-good">良好</strong>：6 個 guide 頁均有正確 canonical，無 noindex 信號。</td></tr>
+            <tr><td>010</td><td>參數頁索引風險</td><td><strong class="status-good">良好</strong>：靜態站無動態參數 URL，無索引污染風險。</td></tr>
+            <tr><td>011</td><td>重複內容風險</td><td><strong class="status-warn">待優化</strong>：www 和 non-www 兩個版本都返回 200 且內容相同。雖然 canonical 統一指向 www，但 Google 仍可能抓取並嘗試索引 non-www 版本。</td></tr>
+            <tr><td>012</td><td>索引規模與品類覆蓋</td><td><strong class="status-bad">風險</strong>：僅 7 頁進入索引池。AI 伴侶品類在繁中市場至少需要 30-50 頁才能建立基礎 topical authority。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">03 canonical 與域名映射</td></tr>
+            <tr><td>013</td><td>首頁 canonical 指向</td><td><strong class="status-good">良好</strong>：canonical href="https://www.soumichat.com/"，正確。</td></tr>
+            <tr><td>014</td><td>Guide 頁 canonical 指向</td><td><strong class="status-good">良好</strong>：實測 /guides/ai-companion-app/ canonical 指向 https://www.soumichat.com/guides/ai-companion-app/，正確。</td></tr>
+            <tr><td>015</td><td>og:url 與 canonical 一致性</td><td><strong class="status-good">良好</strong>：og:url = "https://www.soumichat.com/"，與 canonical 一致。</td></tr>
+            <tr><td>016</td><td>Schema URL 一致性</td><td><strong class="status-good">良好</strong>：WebSite url、Organization url、SoftwareApplication url 全部指向 https://www.soumichat.com/，無域名衝突。</td></tr>
+            <tr><td>017</td><td>www/non-www 歸一</td><td><strong class="status-warn">待優化</strong>：http://soumichat.com → 302 → https://soumichat.com（200）；http://www.soumichat.com → 302 → https://www.soumichat.com（200）。non-www 版本未 301 到 www。應在 EdgeOne 配置 301 重定向。</td></tr>
+            <tr><td>018</td><td>http→https 跳轉</td><td><strong class="status-warn">待優化</strong>：使用 302 而非 301/308。302 不傳遞 PageRank，應改為 301。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">04 狀態碼與跳轉</td></tr>
+            <tr><td>019</td><td>核心頁狀態碼</td><td><strong class="status-good">良好</strong>：首頁和所有 guide 頁均返回 200。</td></tr>
+            <tr><td>020</td><td>404 處理</td><td><strong class="status-good">良好</strong>：靜態站不存在的路徑由 CDN 返回錯誤頁，不會產生 soft 404。</td></tr>
+            <tr><td>021</td><td>跳轉類型</td><td><strong class="status-warn">待優化</strong>：http→https 使用 302 Found 而非 301 Moved Permanently。302 不傳遞鏈接權重。</td></tr>
+            <tr><td>022</td><td>多跳鏈風險</td><td><strong class="status-good">良好</strong>：http://www → https://www 單跳完成，無多跳。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">05 SERP 片段</td></tr>
+            <tr><td>023</td><td>首頁 Title 競爭力</td><td><strong class="status-good">良好</strong>："Soumi AI 伴侶 App - 長記憶角色聊天與關係養成"——品牌名 + 品類詞 + 差異化特徵，結構清晰。</td></tr>
+            <tr><td>024</td><td>首頁 Meta Description</td><td><strong class="status-good">良好</strong>：涵蓋目標市場（港澳臺）、核心賣點（長記憶、不易 OOC）、功能列表。長度適中。</td></tr>
+            <tr><td>025</td><td>Guide 頁 Title 模板</td><td><strong class="status-good">良好</strong>："{主題}？{副標題} - Soumi" 格式統一，品牌名後置，主題前置。</td></tr>
+            <tr><td>026</td><td>FAQ 富結果信號</td><td><strong class="status-good">良好</strong>：首頁有完整 FAQPage Schema（8 個 Q&A），guide 頁有 FAQ section 但未加 Schema。</td></tr>
+            <tr><td>027</td><td>品牌詞片段一致性</td><td><strong class="status-good">良好</strong>：所有頁面 Title 統一以 "- Soumi" 結尾，品牌名位置和分隔符一致。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">06 標題與語義結構</td></tr>
+            <tr><td>028</td><td>首頁 H1 唯一性</td><td><strong class="status-good">良好</strong>：H1 = "Soumi"，唯一。</td></tr>
+            <tr><td>029</td><td>Guide 頁 H1 是否單一</td><td><strong class="status-good">良好</strong>：每個 guide 頁 H1 唯一且承接搜索問題（如"AI 伴侶 App 是什麼？"）。</td></tr>
+            <tr><td>030</td><td>H2 是否承接搜索問題</td><td><strong class="status-good">良好</strong>：guide 頁 H2 結構清晰——"一句話答案"→"常見功能"→"適合情境"→"選擇重點"→"常見問題"→"延伸閱讀"。</td></tr>
+            <tr><td>031</td><td>首頁語義層級</td><td><strong class="status-warn">待優化</strong>：首頁 H1 只有 "Soumi" 一個詞，缺少品類語義。建議改為 "Soumi — AI 伴侶 App" 或在 H2 層補充品類定義。</td></tr>
+            <tr><td>032</td><td>首段是否複述主命題</td><td><strong class="status-good">良好</strong>：hero-text 直接複述核心賣點（記得你、守住人設、禮物貼圖養成）。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">07 頁面角色分工</td></tr>
+            <tr><td>033</td><td>首頁角色定義</td><td><strong class="status-good">良好</strong>：首頁承擔品牌解釋 + 功能展示 + 下載轉化三重角色，結構清晰。</td></tr>
+            <tr><td>034</td><td>Guide 頁角色定義</td><td><strong class="status-good">良好</strong>：6 篇 guide 各自承擔品類教育角色，主題不重疊。</td></tr>
+            <tr><td>035</td><td>比較頁角色</td><td><strong class="status-bad">風險</strong>：完全空白。沒有 vs Character.AI、vs Replika、vs Chai 等比較頁。用戶的比較需求無法在站內被滿足。</td></tr>
+            <tr><td>036</td><td>場景頁角色</td><td><strong class="status-muted">待建設</strong>：缺少「失眠時聊天」「通勤陪伴」「情緒低落時」等場景化頁面。</td></tr>
+            <tr><td>037</td><td>案例/證言頁角色</td><td><strong class="status-muted">待建設</strong>：無用戶故事、使用案例或社群精選內容頁。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">08 內容厚度與覆蓋</td></tr>
+            <tr><td>038</td><td>核心頁數量</td><td><strong class="status-bad">風險</strong>：僅 7 頁。AI 伴侶品類在繁中市場至少需要 30-50 頁建立基礎覆蓋。</td></tr>
+            <tr><td>039</td><td>品類教育詞覆蓋</td><td><strong class="status-warn">待優化</strong>：已覆蓋「AI 伴侶 app」「長記憶 AI 聊天」「AI 角色聊天 app」「AI 女友/男友 app」「AI 伴侶安全隱私」「AI 伴侶 vs 聊天機器人」。但缺少「虛擬戀人」「AI 角色扮演」「AI 聊天 app 推薦」「AI 陪聊」等高搜索量詞。</td></tr>
+            <tr><td>040</td><td>比較主題覆蓋</td><td><strong class="status-bad">風險</strong>：零覆蓋。Character.AI、Replika、Chai、Talkie、Crushon 等競品比較頁全部空白。</td></tr>
+            <tr><td>041</td><td>場景與用例覆蓋</td><td><strong class="status-muted">待建設</strong>：無場景化內容。「睡前聊天」「情緒陪伴」「練習對話」「角色扮演劇情」等場景詞未覆蓋。</td></tr>
+            <tr><td>042</td><td>平均內容厚度</td><td><strong class="status-warn">待優化</strong>：guide 頁約 5800 字元（繁中），在品類教育類內容中偏薄。建議核心頁面擴充到 8000-12000 字元。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">09 信息架構</td></tr>
+            <tr><td>043</td><td>首頁到一級主題路徑</td><td><strong class="status-warn">待優化</strong>：首頁導航只有錨點鏈接（#memory、#characters 等），Footer 有 3 個 guide 鏈接。首頁到 guide 頁的路徑不夠顯眼。</td></tr>
+            <tr><td>044</td><td>支柱頁層級</td><td><strong class="status-muted">待建設</strong>：目前 /guides/ 下 6 篇文章平行排列，沒有支柱頁聚合。應建立 /guides/ 索引頁作為品類教育支柱頁。</td></tr>
+            <tr><td>045</td><td>集群頁掛載關係</td><td><strong class="status-warn">待優化</strong>：guide 頁之間有「延伸閱讀」互鏈，但缺少明確的父子關係和主題聚合。</td></tr>
+            <tr><td>046</td><td>比較頁在站內的位置</td><td><strong class="status-muted">待建設</strong>：比較頁尚未建立，無法評估位置。建議未來放在 /compare/ 路徑下。</td></tr>
+            <tr><td>047</td><td>導航與 Footer 分發</td><td><strong class="status-warn">待優化</strong>：主導航只有錨點（長記憶、角色宇宙、互動玩法、關係養成、FAQ），不分發權重到子頁面。Footer 只鏈接 3 個 guide + 隱私政策 + 服務條款。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">10 內鏈分發</td></tr>
+            <tr><td>048</td><td>首頁出鏈策略</td><td><strong class="status-warn">待優化</strong>：首頁正文無指向 guide 頁的文字鏈接，只有 Footer 的 3 個。應在首頁功能區塊加入指向對應 guide 的「了解更多」鏈接。</td></tr>
+            <tr><td>049</td><td>Guide 頁互鏈</td><td><strong class="status-good">良好</strong>：每篇 guide 底部有「延伸閱讀」區塊，互相鏈接相關主題。</td></tr>
+            <tr><td>050</td><td>錨文本語義</td><td><strong class="status-good">良好</strong>：延伸閱讀的錨文本使用完整標題（如「AI 伴侶 App 是什麼？」），語義清晰。</td></tr>
+            <tr><td>051</td><td>孤立頁風險</td><td><strong class="status-warn">待優化</strong>：新增的 guide 頁（ai-role-chat-app、ai-girlfriend-boyfriend-app、ai-companion-safety-privacy）可能未被所有其他 guide 頁的延伸閱讀覆蓋。需確認互鏈完整性。</td></tr>
+            <tr><td>052</td><td>下載按鈕分發</td><td><strong class="status-good">良好</strong>：首頁 hero + mobile-cta + guide 頁底部「試試 Soumi」區塊都有 App Store / Google Play 鏈接。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">11 Schema 覆蓋</td></tr>
+            <tr><td>053</td><td>WebSite Schema</td><td><strong class="status-good">良好</strong>：@type WebSite，url 正確，inLanguage "zh-Hant"。</td></tr>
+            <tr><td>054</td><td>Organization Schema</td><td><strong class="status-good">良好</strong>：包含 name、url、logo、description、sameAs（TikTok + Instagram）、contactPoint（LINE）。</td></tr>
+            <tr><td>055</td><td>SoftwareApplication Schema</td><td><strong class="status-good">良好</strong>：@type ["SoftwareApplication", "MobileApplication"]，含 alternateName "Maisai"、operatingSystem、downloadUrl（雙平台）、featureList（6 項）、offers（免費）。</td></tr>
+            <tr><td>056</td><td>FAQPage Schema</td><td><strong class="status-good">良好</strong>：首頁 8 個 Q&A 完整標記。可觸發 FAQ 富結果。</td></tr>
+            <tr><td>057</td><td>WebPage Schema</td><td><strong class="status-good">良好</strong>：含 datePublished、dateModified、inLanguage、primaryImageOfPage。</td></tr>
+            <tr><td>058</td><td>SpeakableSpecification</td><td><strong class="status-good">良好</strong>：cssSelector 指向 #hero-title、.hero-text、.faq-item p。為語音搜索和 AI 摘取做了準備。極少見的配置。</td></tr>
+            <tr><td>059</td><td>Guide 頁 Schema</td><td><strong class="status-warn">待優化</strong>：guide 頁有 FAQ section 但未加 FAQPage Schema。應為每個 guide 頁的常見問題區塊加上結構化數據。</td></tr>
+            <tr><td>060</td><td>BreadcrumbList Schema</td><td><strong class="status-muted">待建設</strong>：guide 頁缺少麵包屑結構化數據。建議加入 首頁 → Guides → {當前頁} 的 BreadcrumbList。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">12 媒體與圖像 SEO</td></tr>
+            <tr><td>061</td><td>圖片 alt 文本</td><td><strong class="status-good">良好</strong>：首頁所有圖片都有描述性 alt（如「Soumi 粉紫色 AI 伴侶世界主視覺」「溫柔記憶型 AI 伴侶角色」）。</td></tr>
+            <tr><td>062</td><td>圖片尺寸聲明</td><td><strong class="status-good">良好</strong>：所有 img 標籤都有 width/height 屬性，不會產生 CLS。</td></tr>
+            <tr><td>063</td><td>圖片格式</td><td><strong class="status-warn">待優化</strong>：混用 .png、.jpg、.webp。建議統一使用 WebP 或 AVIF 以減少體積。部分角色圖為 1024×1024 PNG，體積可能偏大。</td></tr>
+            <tr><td>064</td><td>懶加載策略</td><td><strong class="status-good">良好</strong>：hero 圖片 fetchpriority="high"，其餘圖片 loading="lazy"。策略合理。</td></tr>
+            <tr><td>065</td><td>視頻 SEO</td><td><strong class="status-warn">待優化</strong>：首頁有 soumi-gift-demo.mp4 視頻，但無 VideoObject Schema、無 poster 屬性、無 caption/transcript。</td></tr>
+            <tr><td>066</td><td>OG Image</td><td><strong class="status-good">良好</strong>：og:image 指向 soumi-frame-hero.png，Twitter card 為 summary_large_image。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">13 性能與 CWV</td></tr>
+            <tr><td>067</td><td>託管與 CDN</td><td><strong class="status-good">良好</strong>：騰訊 EdgeOne CDN + COS 靜態託管，全球節點覆蓋，亞太區延遲低。</td></tr>
+            <tr><td>068</td><td>LCP 風險</td><td><strong class="status-good">良好</strong>：hero 圖片有 preload + fetchpriority="high"，LCP 風險可控。</td></tr>
+            <tr><td>069</td><td>CLS 風險</td><td><strong class="status-good">良好</strong>：所有圖片有 width/height 聲明，不會產生布局位移。</td></tr>
+            <tr><td>070</td><td>INP 風險</td><td><strong class="status-good">良好</strong>：靜態站 JS 極少（僅 script.js），交互元素為原生 button/a，INP 風險極低。</td></tr>
+            <tr><td>071</td><td>移動端體驗</td><td><strong class="status-good">良好</strong>：viewport meta 正確，有 mobile-cta 固定下載欄，響應式設計。</td></tr>
+            <tr><td>072</td><td>CSS 版本控制</td><td><strong class="status-good">良好</strong>：styles.css?v=20260520-fix1 帶版本號，CDN 緩存可控。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">14 轉化與信任</td></tr>
+            <tr><td>073</td><td>首頁 CTA 強度</td><td><strong class="status-good">良好</strong>：hero 區雙按鈕（iOS + Android）+ mobile-cta 固定欄 + 底部重複 CTA。路徑清晰。</td></tr>
+            <tr><td>074</td><td>信任信號</td><td><strong class="status-bad">風險</strong>：無用戶評價、無下載量展示、無媒體報導、無 KOL 背書、無 App Store 評分展示。對於需要信任才能下載的 AI 伴侶 App，這是轉化瓶頸。</td></tr>
+            <tr><td>075</td><td>FAQ 疑慮解答</td><td><strong class="status-good">良好</strong>：8 個 FAQ 覆蓋了核心疑慮（記憶、OOC、隱私、角色類型、平台差異）。</td></tr>
+            <tr><td>076</td><td>社會證明</td><td><strong class="status-muted">待建設</strong>：無用戶數量、無社群規模、無評價截圖。建議加入 App Store 評分 widget 或用戶證言區塊。</td></tr>
+            <tr><td>077</td><td>風險與邊界說明</td><td><strong class="status-good">良好</strong>：llms.txt 明確聲明「不是替代真實人際關係」，FAQ 提及隱私政策。邊界意識到位。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">15 AI Search Ready</td></tr>
+            <tr><td>078</td><td>llms.txt 部署</td><td><strong class="status-good">良好</strong>：完整的 llms.txt，含品牌定義、核心頁面列表、推薦引用場景、事實聲明、邊界聲明。同品類中最完整的 AI 可讀配置。</td></tr>
+            <tr><td>079</td><td>SpeakableSpecification</td><td><strong class="status-good">良好</strong>：已標記可朗讀區域（hero-title、hero-text、faq-item p）。</td></tr>
+            <tr><td>080</td><td>FAQ 結構化</td><td><strong class="status-good">良好</strong>：首頁 FAQPage Schema 完整，AI 可直接摘取問答對。</td></tr>
+            <tr><td>081</td><td>定義句與摘要段</td><td><strong class="status-good">良好</strong>：guide 頁開頭有「一句話答案」區塊，適合 AI 摘取。</td></tr>
+            <tr><td>082</td><td>AI Crawler 權限</td><td><strong class="status-good">良好</strong>：robots.txt 明確 Allow 所有主流 AI crawler。</td></tr>
+            <tr><td>083</td><td>引用推薦</td><td><strong class="status-good">良好</strong>：llms.txt 中有 "Recommended citations" 區塊，按問題類型推薦引用頁面。</td></tr>
+
+            <tr class="module-sep"><td colspan="3">16 站外證據層</td></tr>
+            <tr><td>084</td><td>第三方評測</td><td><strong class="status-bad">風險</strong>：搜索 "soumi app review" / "soumichat 評測" 無第三方結果。品牌在搜索結果中只有官網自己。</td></tr>
+            <tr><td>085</td><td>目錄收錄</td><td><strong class="status-muted">待建設</strong>：未見 Product Hunt、AlternativeTo、G2、Capterra 等目錄收錄。</td></tr>
+            <tr><td>086</td><td>社媒證據</td><td><strong class="status-warn">待優化</strong>：Instagram @soumi_tw 和 TikTok @soumi 已建立，但搜索結果中社媒頁面排名不明確。</td></tr>
+            <tr><td>087</td><td>反鏈資產</td><td><strong class="status-muted">待建設</strong>：無可見的外部反鏈。新站需要系統性建設外鏈。</td></tr>
+            <tr><td>088</td><td>品牌 SERP 壳層</td><td><strong class="status-bad">風險</strong>：搜索品牌名時，SERP 只有官網一條結果。缺少社媒、目錄、評測等多條目佔位，品牌可信度不足。</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="fixlist">
+        <div class="label">Priority Fix List</div>
+        <h2>優先修復清單</h2>
+        <div class="box">
+          <table>
+            <tr><th>優先級</th><th>項目</th><th>影響</th><th>執行難度</th></tr>
+            <tr><td class="status-bad">P0</td><td>non-www → www 301 歸一</td><td>消除權重分散，統一索引信號</td><td>低（EdgeOne 配置一條規則）</td></tr>
+            <tr><td class="status-bad">P0</td><td>http→https 改為 301（非 302）</td><td>傳遞鏈接權重</td><td>低（EdgeOne 跳轉類型設置）</td></tr>
+            <tr><td class="status-bad">P0</td><td>擴充品類教育頁面（目標 30 頁）</td><td>建立 topical authority，覆蓋品類詞</td><td>高（需持續內容生產）</td></tr>
+            <tr><td class="status-warn">P1</td><td>建立比較頁矩陣（vs 5 個競品）</td><td>截流比較意圖用戶</td><td>中</td></tr>
+            <tr><td class="status-warn">P1</td><td>Guide 頁加 FAQPage Schema</td><td>觸發更多 FAQ 富結果</td><td>低</td></tr>
+            <tr><td class="status-warn">P1</td><td>建立 /guides/ 索引頁（支柱頁）</td><td>聚合權重，建立主題中心</td><td>低</td></tr>
+            <tr><td class="status-warn">P1</td><td>首頁功能區塊加 guide 鏈接</td><td>改善首頁到子頁的權重分發</td><td>低</td></tr>
+            <tr><td class="status-warn">P1</td><td>加入信任信號區塊</td><td>提升轉化率</td><td>中（需收集用戶評價）</td></tr>
+            <tr><td class="status-warn">P2</td><td>視頻加 VideoObject Schema + poster</td><td>觸發視頻富結果</td><td>低</td></tr>
+            <tr><td class="status-warn">P2</td><td>圖片統一 WebP 格式</td><td>減少頁面體積</td><td>低</td></tr>
+            <tr><td class="status-warn">P2</td><td>加 BreadcrumbList Schema</td><td>改善 SERP 展示</td><td>低</td></tr>
+            <tr><td class="status-warn">P2</td><td>站外證據層建設啟動</td><td>品牌 SERP 佔位 + 信任背書</td><td>高（持續性工作）</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="line1">
+        <div class="label">Line 1 — Traffic Capture</div>
+        <h2>第一條線：導流與捕獲</h2>
+        <p class="statement">在繁中市場搶佔 AI 伴侶品類的搜索入口。用戶搜「AI 男友 app」「AI 角色聊天推薦」「Character.AI 替代」時，Soumi 必須出現在結果裡。</p>
+
+        <div class="line-block" style="margin-top:24px">
+          <div class="line-head">
+            <div><div class="line-num">1A</div><h3>品類教育詞</h3></div>
+            <span class="tag">最高優先級</span>
+          </div>
+          <p>繁中市場的 AI 伴侶品類還在教育期，用戶搜索時用的詞很分散。必須用品類教育頁把這些詞全部接住。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>AI 男友 app 推薦</strong><p>列出 5 款 AI 男友 App，Soumi 置頂，突出長記憶和不易 OOC</p></div>
+            <div class="card"><strong>AI 女友 app 推薦</strong><p>同上，但切入女性用戶視角，強調安全和隱私</p></div>
+            <div class="card"><strong>虛擬戀人 app</strong><p>品類定義 + 產品推薦，承接「虛擬戀人」這個繁中高搜索量詞</p></div>
+          </div>
+          <div class="cols">
+            <div class="card"><strong>AI 角色扮演 app</strong><p>區分 AI 角色扮演和普通聊天，突出人設穩定性</p></div>
+            <div class="card"><strong>AI 聊天 app 推薦 2026</strong><p>年度推薦榜，Soumi 作為繁中首選</p></div>
+            <div class="card"><strong>AI 陪聊 app</strong><p>情緒陪伴切入，強調長記憶帶來的陪伴感</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">1B</div><h3>競品比較詞</h3></div>
+            <span class="tag">高優先級</span>
+          </div>
+          <p>用戶在下載前會搜比較。目前這些比較需求全部被第三方或競品滿足。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>Soumi vs Character.AI</strong><p>長記憶 vs 無記憶、繁中 vs 英文、不易 OOC vs 頻繁 OOC</p></div>
+            <div class="card"><strong>Soumi vs Replika</strong><p>角色多樣性 vs 單一角色、養成系統 vs 靜態關係</p></div>
+            <div class="card"><strong>Soumi vs Chai</strong><p>人設穩定 vs 社區生成、隱私保護 vs 開放平台</p></div>
+          </div>
+          <div class="cols">
+            <div class="card"><strong>Character.AI 替代 app</strong><p>替代詞截流，突出 Soumi 的繁中優勢和長記憶</p></div>
+            <div class="card"><strong>Replika 替代 app</strong><p>Replika 限制 NSFW 後的替代需求</p></div>
+            <div class="card"><strong>AI 伴侶 app 比較 2026</strong><p>多方橫評，Soumi 作為繁中市場首選</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">1C</div><h3>場景長尾詞</h3></div>
+            <span class="tag">中優先級</span>
+          </div>
+          <p>場景詞搜索量單個不高，但加總可觀，且轉化率極高（用戶帶著明確需求來）。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>失眠時可以聊天的 app</strong><p>深夜陪伴場景，Soumi 的長記憶讓凌晨對話有延續感</p></div>
+            <div class="card"><strong>心情不好想找人聊天</strong><p>情緒低落場景，AI 伴侶的無壓力陪伴優勢</p></div>
+            <div class="card"><strong>練習戀愛對話的 app</strong><p>社交練習場景，角色扮演的安全空間</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line2">
+        <div class="label">Line 2 — Content System</div>
+        <h2>第二條線：主站內容系統</h2>
+        <p class="statement">把 soumichat.com 從一個 App 落地頁變成繁中 AI 伴侶品類的知識中心。讓搜索引擎認為「關於 AI 伴侶的問題，這個站最懂」。</p>
+
+        <div class="line-block" style="margin-top:24px">
+          <div class="line-head">
+            <div><div class="line-num">2A</div><h3>支柱頁體系</h3></div>
+          </div>
+          <p>建立 3 個支柱頁，每個支柱頁下掛 5-8 個集群頁。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>/guides/（索引頁）</strong><p>品類教育支柱頁，聚合所有 guide，按主題分類展示</p></div>
+            <div class="card"><strong>/compare/（比較中心）</strong><p>比較頁支柱頁，列出所有 vs 頁面和橫評</p></div>
+            <div class="card"><strong>/scenarios/（場景中心）</strong><p>使用場景支柱頁，按情境分類展示 AI 伴侶的用法</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">2B</div><h3>集群頁擴充計劃</h3></div>
+          </div>
+          <p>從 7 頁擴充到 35 頁的路線圖：</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>品類教育集群（+8 頁）</strong><p>虛擬戀人、AI 陪聊、AI 角色扮演、AI 聊天推薦、AI 伴侶隱私進階、AI 伴侶心理健康、AI 伴侶付費指南、AI 伴侶新手入門</p></div>
+            <div class="card"><strong>比較集群（+8 頁）</strong><p>vs Character.AI、vs Replika、vs Chai、vs Talkie、vs Crushon、替代 Character.AI、替代 Replika、AI 伴侶 app 橫評</p></div>
+            <div class="card"><strong>場景集群（+6 頁）</strong><p>失眠陪聊、情緒陪伴、戀愛練習、角色劇情、日常閒聊、深夜心事</p></div>
+          </div>
+          <div class="cols">
+            <div class="card"><strong>功能深度集群（+6 頁）</strong><p>長記憶原理、人設穩定技術、親密度系統、禮物系統、角色創建指南、多角色管理</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">2C</div><h3>內鏈架構升級</h3></div>
+          </div>
+          <p>從扁平互鏈升級為 hub-and-spoke 結構：</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>首頁 → 支柱頁</strong><p>首頁功能區塊加入指向 /guides/、/compare/、/scenarios/ 的鏈接</p></div>
+            <div class="card"><strong>支柱頁 → 集群頁</strong><p>每個支柱頁列出所有下屬集群頁，帶描述性錨文本</p></div>
+            <div class="card"><strong>集群頁 → 支柱頁</strong><p>每個集群頁頂部有麵包屑回鏈支柱頁</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line3">
+        <div class="label">Line 3 — Technical Foundation</div>
+        <h2>第三條線：技術底盤</h2>
+        <p class="statement">Soumi 的技術底盤在同品類中已屬上游。這條線的重點不是大修，而是補齊幾個小缺口，並為內容擴充做好結構準備。</p>
+
+        <div class="line-block" style="margin-top:24px">
+          <div class="line-head">
+            <div><div class="line-num">3A</div><h3>域名歸一（必修）</h3></div>
+            <span class="tag">P0</span>
+          </div>
+          <p>在騰訊 EdgeOne 配置兩條 301 規則：</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>Rule 1</strong><p>https://soumichat.com/* → 301 → https://www.soumichat.com/*</p></div>
+            <div class="card"><strong>Rule 2</strong><p>http://*.soumichat.com/* → 301 → https://www.soumichat.com/*（替代現有 302）</p></div>
+            <div class="card"><strong>驗證</strong><p>curl -I 確認所有變體都 301 到 www 版本，無 302</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">3B</div><h3>Schema 補齊</h3></div>
+          </div>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>Guide 頁 FAQPage</strong><p>每個 guide 頁的「常見問題」區塊加 FAQPage Schema</p></div>
+            <div class="card"><strong>BreadcrumbList</strong><p>所有 guide 頁加麵包屑：首頁 → Guides → 當前頁</p></div>
+            <div class="card"><strong>VideoObject</strong><p>首頁 gift-demo.mp4 加 VideoObject Schema + poster 屬性</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">3C</div><h3>內容擴充的技術準備</h3></div>
+          </div>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>URL 結構規劃</strong><p>/guides/{topic}/ — 品類教育<br>/compare/{competitor}/ — 比較頁<br>/scenarios/{scene}/ — 場景頁</p></div>
+            <div class="card"><strong>sitemap 自動更新</strong><p>新增頁面時同步更新 sitemap.xml，保持 lastmod 活躍</p></div>
+            <div class="card"><strong>模板 Schema</strong><p>為比較頁和場景頁設計可複用的 Schema 模板（Article + FAQPage）</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">3D</div><h3>AI Search Ready 維護</h3></div>
+          </div>
+          <p>Soumi 的 AI Search Ready 配置已經是同品類最完整的。維護重點：</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>llms.txt 同步更新</strong><p>每新增一個 guide/compare 頁，同步更新 llms.txt 的頁面列表和推薦引用</p></div>
+            <div class="card"><strong>llms-full.txt</strong><p>已在 llms.txt 中聲明但尚未部署。建議部署完整版本，包含所有頁面的摘要</p></div>
+            <div class="card"><strong>新頁面 SpeakableSpecification</strong><p>每個新頁面的 H1 和首段加入 Speakable 標記</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="line4">
+        <div class="label">Line 4 — Off-Site SEO</div>
+        <h2>第四條線：站外 SEO</h2>
+        <p class="statement">Soumi 的站外證據層目前幾乎為零。對於一個需要用戶信任才能下載的 AI 伴侶 App，這是最大的增長瓶頸之一。必須系統性建設品牌 SERP 壳層和外部背書。</p>
+
+        <div class="line-block" style="margin-top:24px">
+          <div class="line-head">
+            <div><div class="line-num">4A</div><h3>目錄與平台收錄</h3></div>
+            <span class="tag">最高優先級</span>
+          </div>
+          <p>快速建立品牌在搜索結果中的多條目佔位。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>Product Hunt</strong><p>提交 Soumi，獲取 PH 頁面 + 反鏈 + 社區曝光</p></div>
+            <div class="card"><strong>AlternativeTo</strong><p>作為 Character.AI / Replika 的替代品提交</p></div>
+            <div class="card"><strong>App 目錄站</strong><p>AppAdvice、AppGrooves、SimilarApps 等 App 推薦目錄</p></div>
+          </div>
+          <div class="cols">
+            <div class="card"><strong>AI 工具目錄</strong><p>There's An AI For That、AI Tool Directory、Futurepedia 等</p></div>
+            <div class="card"><strong>繁中科技媒體目錄</strong><p>電腦王阿達、T客邦、數位時代等台灣科技媒體的 App 推薦欄目</p></div>
+            <div class="card"><strong>LINE 官方帳號目錄</strong><p>LINE 官方帳號搜索中建立品牌頁面</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">4B</div><h3>KOL 與媒體合作</h3></div>
+          </div>
+          <p>AI 伴侶品類的信任建設高度依賴第三方背書。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>台灣 YouTuber 評測</strong><p>找 3-5 個科技/生活類 YouTuber 做 Soumi 體驗評測</p></div>
+            <div class="card"><strong>Instagram KOL 合作</strong><p>台灣 IG 生活類 KOL 發布使用體驗 story/post</p></div>
+            <div class="card"><strong>Dcard / PTT 口碑</strong><p>在 Dcard 感情版、PTT 軟體版建立自然討論</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">4C</div><h3>可鏈接資產</h3></div>
+          </div>
+          <p>創造值得被引用和鏈接的內容資產。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>AI 伴侶 App 年度報告</strong><p>「2026 繁中 AI 伴侶市場觀察」——數據研究型內容，吸引媒體引用</p></div>
+            <div class="card"><strong>AI 角色聊天安全指南</strong><p>面向家長和教育者的安全使用指南，吸引教育類網站鏈接</p></div>
+            <div class="card"><strong>AI 伴侶技術白皮書</strong><p>長記憶、人設穩定性的技術解釋，吸引技術博客引用</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">4D</div><h3>競品反鏈截流</h3></div>
+          </div>
+          <p>分析 Character.AI、Replika 等競品的反鏈來源，找到可複製的鏈接機會。</p>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>Resource Page Outreach</strong><p>找到鏈接了 Character.AI/Replika 的資源頁，請求加入 Soumi</p></div>
+            <div class="card"><strong>Broken Link Building</strong><p>找到指向已失效 AI 聊天工具的死鏈，提供 Soumi 作為替代</p></div>
+            <div class="card"><strong>Testimonial Links</strong><p>為使用的工具和服務提供推薦語，換取品牌鏈接</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <div class="line-head">
+            <div><div class="line-num">4E</div><h3>社群與社媒壳層</h3></div>
+          </div>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>LINE 社群經營</strong><p>建立 Soumi 用戶 LINE 群組，產生 UGC 和口碑分享</p></div>
+            <div class="card"><strong>Dcard 品牌板</strong><p>在 Dcard 建立品牌相關討論，自然引流</p></div>
+            <div class="card"><strong>Medium / 方格子</strong><p>在繁中內容平台發布品類教育文章，帶回官網鏈接</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="keywords">
+        <div class="label">Keyword Tiers</div>
+        <h2>關鍵詞分級</h2>
+        <div class="box">
+          <table>
+            <tr><th>層級</th><th>關鍵詞</th><th>搜索量估算</th><th>意圖</th><th>對應頁面</th></tr>
+            <tr><td class="status-bad">T1 核心</td><td>AI 伴侶 app</td><td>2.5K/月（繁中）</td><td>品類探索</td><td>/guides/ai-companion-app/（已有）</td></tr>
+            <tr><td class="status-bad">T1 核心</td><td>AI 男友 app</td><td>1.8K</td><td>品類+性別</td><td>/guides/ai-boyfriend-app/（待建）</td></tr>
+            <tr><td class="status-bad">T1 核心</td><td>AI 女友 app</td><td>2.2K</td><td>品類+性別</td><td>/guides/ai-girlfriend-boyfriend-app/（已有，需拆分）</td></tr>
+            <tr><td class="status-bad">T1 核心</td><td>AI 角色聊天 app</td><td>1.5K</td><td>功能探索</td><td>/guides/ai-role-chat-app/（已有）</td></tr>
+            <tr><td class="status-bad">T1 核心</td><td>虛擬戀人 app</td><td>1.2K</td><td>品類探索</td><td>/guides/virtual-lover-app/（待建）</td></tr>
+            <tr><td class="status-warn">T2 比較</td><td>Character.AI 替代</td><td>3K</td><td>替代需求</td><td>/compare/character-ai-alternative/（待建）</td></tr>
+            <tr><td class="status-warn">T2 比較</td><td>Replika 替代</td><td>1.5K</td><td>替代需求</td><td>/compare/replika-alternative/（待建）</td></tr>
+            <tr><td class="status-warn">T2 比較</td><td>AI 伴侶 app 比較</td><td>800</td><td>比較決策</td><td>/compare/（待建）</td></tr>
+            <tr><td class="status-warn">T2 比較</td><td>Soumi vs Character.AI</td><td>500</td><td>品牌比較</td><td>/compare/soumi-vs-character-ai/（待建）</td></tr>
+            <tr><td class="status-warn">T2 比較</td><td>AI 聊天 app 推薦</td><td>2K</td><td>推薦列表</td><td>/guides/ai-chat-app-recommendation/（待建）</td></tr>
+            <tr><td class="status-good">T3 長尾</td><td>長記憶 AI 聊天</td><td>400</td><td>功能探索</td><td>/guides/long-memory-ai-chat/（已有）</td></tr>
+            <tr><td class="status-good">T3 長尾</td><td>不會 OOC 的 AI 聊天</td><td>300</td><td>功能需求</td><td>/guides/stable-persona-ai-chat/（待建）</td></tr>
+            <tr><td class="status-good">T3 長尾</td><td>AI 角色扮演 app 推薦</td><td>600</td><td>推薦列表</td><td>/guides/ai-roleplay-app/（待建）</td></tr>
+            <tr><td class="status-good">T3 長尾</td><td>失眠 聊天 app</td><td>200</td><td>場景需求</td><td>/scenarios/insomnia-chat/（待建）</td></tr>
+            <tr><td class="status-good">T3 長尾</td><td>AI 伴侶 安全嗎</td><td>350</td><td>信任疑慮</td><td>/guides/ai-companion-safety-privacy/（已有）</td></tr>
+            <tr><td class="status-good">T3 長尾</td><td>AI 陪聊 app</td><td>500</td><td>品類探索</td><td>/guides/ai-companion-chat/（待建）</td></tr>
+          </table>
+        </div>
+        <p class="footer-note">搜索量為繁中市場估算（台灣 + 香港），基於品類趨勢和競品數據推斷。實際數據需通過 Ahrefs/SEMrush 驗證。</p>
+      </section>
+
+      <section id="roadmap">
+        <div class="label">Execution Roadmap</div>
+        <h2>執行路線圖</h2>
+        <div class="box">
+          <div class="road">
+            <div class="phase">第 1 週</div>
+            <div>
+              <h3>技術止血</h3>
+              <p>EdgeOne 配置 non-www → www 301 歸一 + http→https 改 301。驗證所有變體跳轉正確。Guide 頁加 FAQPage Schema。首頁視頻加 VideoObject Schema。</p>
+            </div>
+          </div>
+          <div class="road">
+            <div class="phase">第 2-3 週</div>
+            <div>
+              <h3>內容擴充第一批</h3>
+              <p>建立 /guides/ 索引頁（支柱頁）。新增 4 篇品類教育頁：虛擬戀人 app、AI 陪聊 app、AI 聊天 app 推薦、AI 角色扮演 app。首頁功能區塊加 guide 鏈接。</p>
+            </div>
+          </div>
+          <div class="road">
+            <div class="phase">第 4-5 週</div>
+            <div>
+              <h3>比較頁矩陣</h3>
+              <p>建立 /compare/ 支柱頁。新增 5 篇比較頁：vs Character.AI、vs Replika、vs Chai、Character.AI 替代、Replika 替代。每篇含 FAQPage Schema。</p>
+            </div>
+          </div>
+          <div class="road">
+            <div class="phase">第 6-8 週</div>
+            <div>
+              <h3>場景頁 + 站外啟動</h3>
+              <p>新增 4 篇場景頁。提交 Product Hunt、AlternativeTo、3 個 AI 工具目錄。聯繫 2 個台灣科技 YouTuber。在方格子/Medium 發布 2 篇品類教育文章。</p>
+            </div>
+          </div>
+          <div class="road">
+            <div class="phase">第 9-12 週</div>
+            <div>
+              <h3>深度擴充 + 證據層</h3>
+              <p>功能深度集群 6 篇。KOL 評測上線。Dcard/PTT 口碑建設。競品反鏈分析 + Resource Page Outreach。目標：站內 35 頁 + 站外 10+ 個品牌提及。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="growth">
+        <div class="label">Growth & Conversion</div>
+        <h2>內容增長與轉化建議</h2>
+
+        <div class="line-block" style="margin-top:18px">
+          <h3>轉化路徑優化</h3>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>信任信號區塊</strong><p>首頁加入 App Store 評分展示、用戶數量（如「10,000+ 用戶的 AI 伴侶世界」）、精選用戶證言</p></div>
+            <div class="card"><strong>Guide 頁轉化</strong><p>每篇 guide 底部的「試試 Soumi」區塊加入一句差異化 hook（如「Soumi 是唯一主打長記憶的繁中 AI 伴侶」）</p></div>
+            <div class="card"><strong>比較頁轉化</strong><p>比較表底部加「為什麼選 Soumi」摘要 + 直接下載按鈕</p></div>
+          </div>
+        </div>
+
+        <div class="line-block" style="margin-top:18px">
+          <h3>內容增長飛輪</h3>
+          <div class="cols" style="margin-top:14px">
+            <div class="card"><strong>用戶故事收集</strong><p>通過 LINE 社群收集用戶使用故事，轉化為案例頁和社會證明</p></div>
+            <div class="card"><strong>角色更新內容</strong><p>每次新增角色時同步發布角色介紹頁，吃長尾搜索</p></div>
+            <div class="card"><strong>季度品類報告</strong><p>每季度發布繁中 AI 伴侶市場觀察，建立行業權威 + 吸引反鏈</p></div>
+          </div>
+        </div>
+
+        <p class="footer-note" style="margin-top:24px">審計日期：2026-05-21 | 站點類型：AI Companion App（落地頁 + 品類教育）| 目標市場：台灣、香港、澳門 | 語言：繁體中文</p>
+      </section>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
