@@ -5,7 +5,7 @@ permalink: /ai-ugc-video-generator/
 ---
 # ai ugc video generator: Complete Guide 2026
 
-**Published:** 2026-04-30  
+**Published:** 2026-05-22  
 **Keywords:** ai ugc video generator
 
 ---

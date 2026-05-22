@@ -5,7 +5,7 @@ permalink: /ai-product-video-generator/
 ---
 # ai product video generator: Complete Guide 2026
 
-**Published:** 2026-04-30  
+**Published:** 2026-05-22  
 **Keywords:** ai product video generator
 
 ---
