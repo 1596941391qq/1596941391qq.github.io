@@ -5,7 +5,7 @@ permalink: /fal-ai-alternative-for-video-generation/
 ---
 # fal.ai alternative for video generation: Complete Guide 2026
 
-**Published:** 2026-04-30  
+**Published:** 2026-05-24  
 **Keywords:** fal.ai alternative for video generation
 
 ---
