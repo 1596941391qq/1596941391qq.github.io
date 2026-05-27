@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T03:04:05.608Z",
+  "updatedAt": "2026-05-27T03:13:16.068Z",
   "status": {
     "round": 4,
     "phase": "visits",
@@ -1360,7 +1360,7 @@
     "firstUseSuccess": 11,
     "firstUseFail": 49,
     "returnSuccess": 0,
-    "visitSuccess": 38
+    "visitSuccess": 41
   },
   "activities": {
     "anonymous": [
@@ -1479,6 +1479,15 @@
         "duration": 93512,
         "pages": 1,
         "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:08:55.500Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 188929,
+        "pages": 1,
+        "region": "JP",
         "success": true
       },
       {
@@ -1680,6 +1689,15 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T03:11:04.981Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 107537,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:17:18.359Z",
         "brand": "myclaw",
         "type": "anonymous",
@@ -1857,6 +1875,15 @@
         "duration": 373695,
         "pages": 1,
         "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:05:27.595Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 125655,
+        "pages": 8,
+        "region": "JP",
         "success": true
       },
       {
@@ -2632,12 +2659,26 @@
         "visitSuccess": 38
       },
       "errors": 49
+    },
+    {
+      "ts": "2026-05-27T03:13:16.068Z",
+      "round": 4,
+      "phase": "visits",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "counters": {
+        "firstUseSuccess": 11,
+        "firstUseFail": 49,
+        "returnSuccess": 0,
+        "visitSuccess": 41
+      },
+      "errors": 49
     }
   ],
   "recentLogs": [
-    "[01:30:43] ",
-    "[VISIT] 3 brands concurrent: mr=200 mc=200 dt=200",
-    "[01:32:01]   [visit] #1 mulerun OK: 1 pages, 65s",
     "[01:32:56]   [visit] #1 myclaw OK: 1 pages, 35s",
     "[01:36:32]   [visit] #1 ditai OK: 1 pages, 194s",
     "[01:37:29]   [visit] #2 mulerun OK: 3 pages, 39s",
@@ -2674,7 +2715,10 @@
     "[02:53:03]   [visit] #12 myclaw OK: 1 pages, 184s",
     "[02:59:37]   [visit] #12 ditai OK: 1 pages, 374s",
     "[03:01:30]   [visit] #13 mulerun OK: 1 pages, 94s",
-    "[03:02:59]   [visit] #13 myclaw OK: 5 pages, 71s"
+    "[03:02:59]   [visit] #13 myclaw OK: 5 pages, 71s",
+    "[03:05:27]   [visit] #13 ditai OK: 8 pages, 126s",
+    "[03:08:55]   [visit] #14 mulerun OK: 1 pages, 189s",
+    "[03:11:04]   [visit] #14 myclaw OK: 1 pages, 108s"
   ],
   "registrationLog": [
     "[22:45:39] [info] [1] COMPLETE (no verify): everalon469q@gmail.com",
