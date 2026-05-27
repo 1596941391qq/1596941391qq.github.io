@@ -292,9 +292,16 @@ function renderStats(data) {
   document.getElementById('returnSub').textContent = '回访完成';
 
   const el = document.getElementById('processTag');
-  el.innerHTML = data.processAlive
-    ? '<span style="color:rgb(var(--success));font-weight:600">● ALIVE</span>'
-    : '<span style="color:rgb(var(--danger));font-weight:600">● DEAD</span>';
+  const sched = data.activeScheduler || 'unknown';
+  const warn = data.schedulerWarning;
+  if (data.processAlive) {
+    el.innerHTML = `<span style="color:rgb(var(--success));font-weight:600">● ALIVE</span> <span style="font-size:0.7rem;color:rgb(var(--muted-fg))">${sched}</span>`;
+  } else {
+    el.innerHTML = '<span style="color:rgb(var(--danger));font-weight:600">● DEAD</span>';
+  }
+  if (warn) {
+    el.innerHTML += `<div style="color:rgb(var(--danger));font-size:0.7rem;font-weight:600;margin-top:2px">${warn}</div>`;
+  }
   document.getElementById('lastUpdate').textContent = new Date(data.updatedAt).toLocaleString('zh-CN');
 }
 
