@@ -66,6 +66,19 @@
     .tab-btn.active { background: rgb(var(--primary)); color: #fff; border-color: rgb(var(--primary)); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
+    /* Conversation cards */
+    .conv-card { border: 1px solid rgb(var(--border)); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+    .conv-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgb(var(--muted)); cursor: pointer; font-size: 0.8rem; }
+    .conv-header:hover { background: rgb(var(--border)); }
+    .conv-meta { flex: 1; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .conv-toggle { font-size: 0.7rem; color: rgb(var(--muted-fg)); }
+    .conv-rounds { display: none; padding: 0; }
+    .conv-rounds.open { display: block; }
+    .conv-round { padding: 10px 14px; border-bottom: 1px solid rgb(var(--muted)); font-size: 0.78rem; }
+    .conv-round:last-child { border-bottom: none; }
+    .conv-prompt { color: rgb(var(--primary)); font-weight: 500; margin-bottom: 4px; }
+    .conv-reply { color: rgb(var(--muted-fg)); padding-left: 12px; border-left: 2px solid rgb(var(--border)); max-height: 80px; overflow-y: auto; }
+    .conv-round-num { display: inline-block; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 50%; background: rgb(var(--primary)); color: #fff; font-size: 0.65rem; font-weight: 700; margin-right: 6px; flex-shrink: 0; }
     @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .charts-grid { grid-template-columns: 1fr; } .chart-card.full { grid-column: span 1; } }
     @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } body { padding: 16px; } }
   </style>
@@ -124,8 +137,8 @@
   <div class="tab-bar" id="tabBar">
     <button class="tab-btn active" data-tab="overview">总览</button>
     <button class="tab-btn" data-tab="accounts">账号明细</button>
+    <button class="tab-btn" data-tab="conversations">AI 对话审计</button>
     <button class="tab-btn" data-tab="activities">行为记录</button>
-    <button class="tab-btn" data-tab="conversations">AI 对话</button>
     <button class="tab-btn" data-tab="logs">运行日志</button>
   </div>
 
@@ -160,6 +173,23 @@
     </div>
   </div>
 
+  <!-- Tab: Conversations (moved before Activities) -->
+  <div class="tab-panel" id="tab-conversations">
+    <div class="chart-card" style="margin-bottom:16px">
+      <div class="chart-title">对话计划执行概览</div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:0.85rem;padding:8px 0" id="planStats">
+        <span>预生成计划: <b id="planTotal">0</b></span>
+        <span>已执行: <b id="planConsumed" style="color:rgb(var(--success))">0</b></span>
+        <span>Fallback模式: <b id="planFallback" style="color:rgb(var(--warning))">0</b></span>
+        <span>实际捕获对话: <b id="planCaptured" style="color:rgb(var(--primary))">0</b></span>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">AI 对话审计 (<span id="convCount">0</span> 次会话, <span id="convRounds">0</span> 轮对话)</div>
+      <div id="convList" style="max-height:700px;overflow-y:auto"></div>
+    </div>
+  </div>
+
   <!-- Tab: Activities -->
   <div class="tab-panel" id="tab-activities">
     <div class="charts-grid">
@@ -183,23 +213,10 @@
     </div>
   </div>
 
-  <!-- Tab: Conversations -->
-  <div class="tab-panel" id="tab-conversations">
-    <div class="chart-card">
-      <div class="chart-title">AI 对话审计 (<span id="convCount">0</span> 条)</div>
-      <div style="overflow-x:auto">
-        <table class="data-table" id="convTable">
-          <thead><tr><th>时间</th><th>品牌</th><th>账号</th><th>类型</th><th>Prompt</th><th>IP/区域</th></tr></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
   <!-- Tab: Logs -->
   <div class="tab-panel" id="tab-logs">
     <div class="log-card">
-      <div class="chart-title">实时日志 (最近 40 行)</div>
+      <div class="chart-title">实时日志 (最近 40 行) <span style="font-weight:400;color:rgb(var(--muted-fg));font-size:0.7rem">时间为服务器本地时间 UTC+8</span></div>
       <div class="log-list" id="logList"></div>
     </div>
     <div class="chart-card" style="margin-top:16px">
@@ -389,17 +406,51 @@ function renderActivities(data) {
 
 function renderConversations(data) {
   const convs = data.aiConversations || [];
+  const plans = data.conversationPlans || {};
+  let totalRounds = 0;
+  convs.forEach(c => { totalRounds += (c.conversations||[]).length || (c.prompt ? 1 : 0); });
   document.getElementById('convCount').textContent = convs.length;
-  const tbody = document.querySelector('#convTable tbody');
-  tbody.innerHTML = convs.slice().reverse().map(c => {
-    const prompts = (c.conversations||[]).map(x => x.prompt).join(' → ');
-    return `<tr><td>${fmtTime(c.ts)}</td><td>${brandBadge(c.brand)}</td><td>${c.email||'--'}</td><td>${c.type||'--'}</td><td title="${prompts.replace(/"/g,'&quot;')}">${prompts.slice(0,80)}${prompts.length>80?'...':''}</td><td>${c.ip||'?'}/${c.region||'?'}</td></tr>`;
+  document.getElementById('convRounds').textContent = totalRounds;
+  document.getElementById('planTotal').textContent = plans.planned || 0;
+  document.getElementById('planConsumed').textContent = plans.consumed || 0;
+  document.getElementById('planFallback').textContent = plans.fallback || 0;
+  document.getElementById('planCaptured').textContent = convs.length;
+  const container = document.getElementById('convList');
+  container.innerHTML = convs.slice().reverse().map((c, idx) => {
+    const rounds = c.conversations || [];
+    if (rounds.length === 0 && c.prompt) rounds.push({prompt: c.prompt, reply: c.aiReply || c.reply || '', ts: c.ts});
+    if (rounds.length === 0) return '';
+    const typeMap = {first_use:'首次使用',return:'回访','return_visit':'回访'};
+    const header = `<div class="conv-header" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.conv-toggle').textContent=this.nextElementSibling.classList.contains('open')?'▼':'▶'">
+      <div class="conv-meta">
+        <span class="conv-toggle">▶</span>
+        <span>${fmtTime(c.ts)}</span>
+        ${c.brand ? brandBadge(c.brand) : ''}
+        <span>${c.email||'匿名'}</span>
+        <span class="badge">${typeMap[c.type]||c.type||'--'}</span>
+        <span style="color:rgb(var(--muted-fg))">${rounds.length} 轮</span>
+        ${c.ip ? `<span style="color:rgb(var(--muted-fg));font-size:0.7rem">${c.ip}/${c.region||'?'}</span>` : ''}
+      </div>
+    </div>`;
+    const body = rounds.map((r, i) => `<div class="conv-round">
+      <div class="conv-prompt"><span class="conv-round-num">${i+1}</span>${(r.prompt||'').replace(/</g,'&lt;')}</div>
+      <div class="conv-reply">${(r.reply||'(无回复)').replace(/</g,'&lt;')}</div>
+    </div>`).join('');
+    return `<div class="conv-card">${header}<div class="conv-rounds">${body}</div></div>`;
   }).join('');
+  if (convs.length === 0) container.innerHTML = '<div style="padding:20px;color:rgb(var(--muted-fg));text-align:center">暂无 AI 对话记录。可能原因：品牌页面 chat input selector 未匹配到元素，或会话尚未进入 first-use/return 阶段。</div>';
 }
 
 function renderLogs(data) {
-  document.getElementById('logList').innerHTML = (data.recentLogs||[]).map(l => `<div class="line">${l.replace(/</g,'&lt;')}</div>`).join('');
-  document.getElementById('regLogList').innerHTML = (data.registrationLog||[]).map(l => `<div class="line">${l.replace(/</g,'&lt;')}</div>`).join('');
+  const highlightLog = l => {
+    let s = l.replace(/</g,'&lt;');
+    s = s.replace(/\[(\d{2}:\d{2}:\d{2})\]/, '<span style="color:rgb(var(--primary));font-weight:600">[$1]</span>');
+    if (/error|fail|✗/i.test(s)) s = `<span style="color:rgb(var(--danger))">${s}</span>`;
+    else if (/success|complete|✓|OK/i.test(s)) s = `<span style="color:rgb(var(--success))">${s}</span>`;
+    return s;
+  };
+  document.getElementById('logList').innerHTML = (data.recentLogs||[]).map(l => `<div class="line">${highlightLog(l)}</div>`).join('');
+  document.getElementById('regLogList').innerHTML = (data.registrationLog||[]).map(l => `<div class="line">${highlightLog(l)}</div>`).join('');
 }
 
 async function init() {
