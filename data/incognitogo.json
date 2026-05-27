@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-05-27T03:13:16.068Z",
+  "updatedAt": "2026-05-27T03:58:35.901Z",
   "status": {
     "round": 4,
-    "phase": "visits",
-    "errors": 49,
-    "updatedAt": "2026-05-27T01:30:43.793Z"
+    "phase": "registrations",
+    "errors": 0,
+    "updatedAt": "2026-05-27T03:56:09.085Z"
   },
   "processAlive": true,
   "heartbeatTriggers": 0,
@@ -20,7 +20,7 @@
         "brands": [
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T22:45:43.604Z",
+            "registeredAt": "2026-05-27T03:57:02.297Z",
             "status": "active"
           }
         ],
@@ -1357,10 +1357,10 @@
     }
   },
   "counters": {
-    "firstUseSuccess": 11,
-    "firstUseFail": 49,
+    "firstUseSuccess": 0,
+    "firstUseFail": 0,
     "returnSuccess": 0,
-    "visitSuccess": 41
+    "visitSuccess": 0
   },
   "activities": {
     "anonymous": [
@@ -1488,6 +1488,33 @@
         "duration": 188929,
         "pages": 1,
         "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:15:09.885Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 20634,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:20:11.065Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 9680,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:27:15.127Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 105575,
+        "pages": 1,
+        "region": "GB",
         "success": true
       },
       {
@@ -1698,6 +1725,33 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T03:18:36.875Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 189427,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:21:28.942Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 59291,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:27:44.858Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 8686,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:17:18.359Z",
         "brand": "myclaw",
         "type": "anonymous",
@@ -1883,6 +1937,42 @@
         "type": "anonymous",
         "duration": 125655,
         "pages": 8,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:14:27.217Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 183923,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:19:42.568Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 46413,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:25:04.962Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 199280,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:30:16.471Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 134131,
+        "pages": 1,
         "region": "JP",
         "success": true
       },
@@ -2676,72 +2766,68 @@
         "visitSuccess": 41
       },
       "errors": 49
+    },
+    {
+      "ts": "2026-05-27T03:58:35.901Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "counters": {
+        "firstUseSuccess": 0,
+        "firstUseFail": 0,
+        "returnSuccess": 0,
+        "visitSuccess": 0
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[01:32:56]   [visit] #1 myclaw OK: 1 pages, 35s",
-    "[01:36:32]   [visit] #1 ditai OK: 1 pages, 194s",
-    "[01:37:29]   [visit] #2 mulerun OK: 3 pages, 39s",
-    "[01:39:42]   [visit] #2 myclaw OK: 1 pages, 116s",
-    "[01:41:32]   [visit] #2 ditai OK: 1 pages, 93s",
-    "[01:42:45]   [visit] #3 mulerun OK: 1 pages, 55s",
-    "[01:44:58]   [visit] #3 myclaw OK: 1 pages, 116s",
-    "[01:45:53]   [visit] #3 ditai OK: 1 pages, 37s",
-    "[01:47:31]   [visit] #4 mulerun OK: 1 pages, 79s",
-    "[01:51:02]   [visit] #4 myclaw OK: 1 pages, 194s",
-    "[01:51:48]   [visit] #4 ditai OK: 1 pages, 29s",
-    "[01:53:33]   [visit] #5 mulerun OK: 1 pages, 80s",
-    "[01:57:34]   [visit] #5 myclaw OK: 1 pages, 224s",
-    "[01:59:43]   [visit] #5 ditai OK: 1 pages, 109s",
-    "[02:00:41]   [visit] #6 mulerun OK: 1 pages, 32s",
-    "[02:04:14]   [visit] #6 myclaw OK: 1 pages, 194s",
-    "[02:07:53]   [visit] #6 ditai OK: 1 pages, 200s",
-    "[02:08:21]   [visit] #7 mulerun OK: 1 pages, 11s",
-    "[02:10:32]   [visit] #7 myclaw OK: 1 pages, 114s",
-    "[02:13:54]   [visit] #7 ditai OK: 1 pages, 184s",
-    "[02:15:37]   [visit] #8 mulerun OK: 1 pages, 85s",
-    "[02:17:54]   [visit] #8 myclaw OK: 1 pages, 117s",
-    "[02:18:55]   [visit] #8 ditai OK: 1 pages, 41s",
-    "[02:20:15]   [visit] #9 mulerun OK: 1 pages, 60s",
-    "[02:23:47]   [visit] #9 myclaw OK: 1 pages, 192s",
-    "[02:24:33]   [visit] #9 ditai OK: 1 pages, 28s",
-    "[02:33:43]   [visit] #10 mulerun OK: 3 pages, 533s",
-    "[02:37:15]   [visit] #10 myclaw OK: 1 pages, 193s",
-    "[02:43:43]   [visit] #10 ditai OK: 1 pages, 366s",
-    "[02:45:26]   [visit] #11 mulerun OK: 1 pages, 83s",
-    "[02:47:36]   [visit] #11 myclaw OK: 1 pages, 111s",
-    "[02:48:36]   [visit] #11 ditai OK: 1 pages, 40s",
-    "[02:49:40]   [visit] #12 mulerun OK: 1 pages, 47s",
-    "[02:53:03]   [visit] #12 myclaw OK: 1 pages, 184s",
-    "[02:59:37]   [visit] #12 ditai OK: 1 pages, 374s",
-    "[03:01:30]   [visit] #13 mulerun OK: 1 pages, 94s",
-    "[03:02:59]   [visit] #13 myclaw OK: 5 pages, 71s",
-    "[03:05:27]   [visit] #13 ditai OK: 8 pages, 126s",
-    "[03:08:55]   [visit] #14 mulerun OK: 1 pages, 189s",
-    "[03:11:04]   [visit] #14 myclaw OK: 1 pages, 108s"
+    "[03:56:26] [info] Warmup: https://example.com/",
+    "[03:56:26] [info] Navigating to https://mulerun.com/invitation/RNV2MCPZQ2N3",
+    "[03:56:32] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-315173320:1779854186900650",
+    "[03:56:32] [info] Typing email (human-like)...",
+    "[03:56:36] [info] SPA rendered after 8s",
+    "[03:56:42] [info] Using MuleRun password: RegeveraX7k2",
+    "[03:56:43] [info] Waiting for Turnstile to solve before submitting...",
+    "[03:56:43] [info] Form state: {\"email\":\"everalon469q@gmail.com\",\"username\":\"everalon469q\",\"pwdLen\":12,\"hasTurnstile\":true}",
+    "[03:56:49] [info] Turnstile solved (token: 1072 chars) after 6s",
+    "[03:56:49] [info] Re-syncing all form fields after Turnstile via nativeInputValueSetter...",
+    "[03:56:49] [info] Re-sync result: #_r_0_-form-item:22, #_r_1_-form-item:12, #_r_2_-form-item:12",
+    "[03:56:50] [info] Clicked CONTINUE after Turnstile",
+    "[03:56:53] [warn] Form validation errors: Password: 8-32 chars; Include at least two types: uppercase, lowercase, numbers, or special characters.",
+    "[03:56:58] [info] After Continue: {\"url\":\"https://mulerun.com/signin\",\"bodyText\":\"ALL IN ONE\\nYour all-in-one AI office platform.\\nLet Mule handle the grind\\nYour AI-powered workspace for getting things done\\nGoogle\\nApple\\nOR SIGN IN WITH EMAIL\\nForgot your password?\\nLOG IN\\nDon't have an account?\\nSign up\\nLog in to MuleRun Enterprise\",\"inputs\":[{\"type\":\"text\",\"name\":\"email\",\"id\":\"_r_5_-form-item\"},{\"type\":\"password\",\"name\":\"password\",\"id\":\"_r_6_-form-item\"},{\"type\":\"hidden\",\"name\":\"cf-turnstile-response\",\"id\":\"cf-chl-widget-3cji8_response\"}]}",
+    "[03:56:58] [info] Redirected to /signin — registration complete (no verification needed)",
+    "[03:56:58] [info] [1] COMPLETE (no verify): everalon469q@gmail.com",
+    "[03:57:01] [error] [1] attempt 1 FAILED: Password field not found after email",
+    "[03:57:01] [info] Will retry with new profile...",
+    "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
+    "[03:57:02] [info] Waiting 55s before next registration...",
+    "[03:57:21] [info] [1] Phase 1: Embedded Google login...",
+    "[03:57:21] [info] === Embedded Login: everalon469q@gmail.com ===",
+    "[03:57:28] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-501525008:1779854242448180",
+    "[03:57:28] [info] Typing email (human-like)...",
+    "[03:57:56] [error] [1] attempt 2 FAILED: Password field not found after email",
+    "[03:57:56] [info] ",
+    "============================================================",
+    "[03:57:56] [info] [2] Registering: bonnsward@gmail.com (attempt 1)",
+    "[03:57:56] [info] ============================================================",
+    "[03:57:57] [info] Profile: k1cwws6a",
+    "[03:58:01] [warn] Skipping everalon469q@gmail.com (Password field not found after email), trying next...",
+    "[03:58:01] [info] Waiting 36s before next...",
+    "[03:58:05] [info] CDP port: 45569",
+    "[03:58:08] [info] Stealth applied",
+    "[03:58:15] [info] Warmup: https://example.com/",
+    "[03:58:15] [info] Navigating to https://mulerun.com/invitation/RNV2MCPZQ2N3",
+    "[03:58:27] [info] SPA rendered after 10s",
+    "[03:58:33] [info] Using MuleRun password: RegbonnsX7k2",
+    "[03:58:33] [info] Waiting for Turnstile to solve before submitting...",
+    "[03:58:33] [info] Form state: {\"email\":\"bonnsward@gmail.com\",\"username\":\"bonnsward\",\"pwdLen\":12,\"hasTurnstile\":true}"
   ],
   "registrationLog": [
-    "[22:45:39] [info] [1] COMPLETE (no verify): everalon469q@gmail.com",
-    "[22:48:11] [info] [2] COMPLETE (no verify): bonnsward@gmail.com",
-    "[22:49:35] [info] [3] COMPLETE (no verify): nashbertina83@gmail.com",
-    "[22:53:07] [info] [1] COMPLETE: nguyenphuonganh1317tv@gmail.com — registered!",
-    "[22:53:24] [info] [4] COMPLETE (no verify): nguyenphuonganh1317tv@gmail.com",
-    "[22:54:53] [info] [5] COMPLETE (no verify): heanghoch0@gmail.com",
-    "[22:56:31] [info] [2] COMPLETE: heanghoch0@gmail.com — registered!",
-    "[22:58:32] [info] [6] COMPLETE (no verify): tranvanquy1993pn@gmail.com",
-    "[23:00:00] [info] [3] COMPLETE: tranvanquy1993pn@gmail.com — registered!",
-    "[23:01:46] [info] [7] COMPLETE (no verify): evekoo24@gmail.com",
-    "[23:03:18] [info] [4] COMPLETE: evekoo24@gmail.com — registered!",
-    "[23:03:28] [info] [8] COMPLETE (no verify): elizabethcarteri2raikvn@gmail.com",
-    "[23:05:14] [info] [9] COMPLETE (no verify): nguyenkhacmanh448@gmail.com",
-    "[23:06:58] [info] [10] COMPLETE (no verify): adalsardi37@gmail.com",
-    "[23:09:37] [info] [5] COMPLETE: nguyenkhacmanh448@gmail.com — registered!",
-    "[23:10:45] [info] [11] COMPLETE (no verify): dellxaviery40lj@gmail.com",
-    "[23:12:11] [info] [12] COMPLETE (no verify): publicspecial6224@gmail.com",
-    "[23:12:46] [info] [5] COMPLETE: adalsardi37@gmail.com — registered!",
-    "[23:15:33] [info] [13] COMPLETE: ellieparry75@gmail.com",
-    "[23:15:52] [info] [6] COMPLETE: dellxaviery40lj@gmail.com — registered!",
-    "[23:21:27] [info] [7] COMPLETE: publicspecial6224@gmail.com — registered!",
-    "[23:22:42] [info] [7] COMPLETE: ellieparry75@gmail.com — registered!"
+    "[03:56:58] [info] [1] COMPLETE (no verify): everalon469q@gmail.com"
   ]
 }
