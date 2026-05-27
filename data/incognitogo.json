@@ -1,16 +1,1348 @@
 {
-  "updatedAt": "2026-05-27T02:52:36.505Z",
+  "updatedAt": "2026-05-27T03:04:05.608Z",
   "status": {
     "round": 4,
     "phase": "visits",
     "errors": 49,
     "updatedAt": "2026-05-27T01:30:43.793Z"
   },
+  "processAlive": true,
+  "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 33,
     "myclaw": 50,
     "ditai": 43,
-    "total": 485
+    "total": 485,
+    "accounts": [
+      {
+        "email": "everalon469q@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T22:45:43.604Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "bonnsward@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T22:48:16.355Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nashbertina83@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T22:49:39.825Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenphuonganh1317tv@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:27:30.990Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T22:53:13.333Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T22:53:28.663Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "heanghoch0@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T22:54:58.306Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T19:51:20.429Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T22:56:36.763Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "tranvanquy1993pn@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T23:00:06.101Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T14:26:59.979Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T22:58:37.320Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "evekoo24@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T23:03:23.177Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:38:28.300Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:01:51.164Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "elizabethcarteri2raikvn@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T14:30:30.604Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:03:32.986Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T22:37:24.383Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenkhacmanh448@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:05:18.739Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T22:11:12.747Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T19:54:25.553Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "adalsardi37@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:47:45.133Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:07:02.618Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T23:12:51.256Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "dellxaviery40lj@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:51:08.283Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:10:49.425Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T23:15:57.235Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "publicspecial6224@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T14:37:43.334Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:12:15.299Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T20:18:32.615Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "ellieparry75@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T14:41:01.932Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T23:22:47.559Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T23:15:37.253Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "thihangnguyen612@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T14:57:49.748Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T19:57:41.769Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenngocquyendn1996@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T20:14:37.852Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T20:28:05.308Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T22:22:48.683Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 32935,
+            "ts": "2026-05-26T18:21:23.740Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 144840,
+            "ts": "2026-05-26T21:21:46.784Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 204825,
+            "ts": "2026-05-26T23:36:04.149Z"
+          }
+        ]
+      },
+      {
+        "email": "anhphuctran16@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T20:04:22.837Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "clydeiojpasqualec8@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T20:21:31.020Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T20:34:05.671Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T21:57:04.951Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 28308,
+            "ts": "2026-05-26T18:24:51.065Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 93861,
+            "ts": "2026-05-26T21:26:23.139Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 198619,
+            "ts": "2026-05-26T23:42:27.445Z"
+          }
+        ]
+      },
+      {
+        "email": "melanierodriguez39866@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T14:59:10.889Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T15:00:32.827Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:12:07.608Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 145355,
+            "ts": "2026-05-26T18:30:19.991Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 155171,
+            "ts": "2026-05-26T21:35:01.839Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 154656,
+            "ts": "2026-05-26T23:53:36.683Z"
+          }
+        ]
+      },
+      {
+        "email": "chihieudo96@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:02:14.492Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T20:41:11.917Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "hypatiawatson74140@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:08:11.795Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:21:29.977Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "emoryhines306@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-26T15:14:09.819Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T20:50:45.118Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T20:14:09.885Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 10258,
+            "ts": "2026-05-26T18:33:33.369Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 195219,
+            "ts": "2026-05-27T00:01:52.656Z"
+          }
+        ]
+      },
+      {
+        "email": "mmuralis24067@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:15:24.995Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:27:54.586Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "hothitranghn295@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T20:17:32.332Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "meclarke38@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T22:03:35.612Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "amirajenkins2860@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:25:31.057Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:36:57.300Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "thaban868@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T20:22:52.868Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenvandiep1977pq@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:32:23.348Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "dangthitohop2267@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:46:40.796Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T22:29:10.271Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "mustaphamanje@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T22:09:22.539Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "quyn8quyn@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:52:18.192Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T22:32:10.903Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "trieuthigaman771@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:47:15.020Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T15:55:58.146Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "siricaviolina@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:50:20.673Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "dannyellacoraiola@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:55:50.328Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "lyndafiona1@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T15:58:49.222Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T16:09:39.380Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "first_use",
+            "success": true,
+            "duration": 372144,
+            "ts": "2026-05-26T23:31:45.607Z"
+          }
+        ]
+      },
+      {
+        "email": "gameshohaia@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:02:05.111Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T16:12:51.243Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "vrieoslcneupsxl@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T20:40:52.669Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "first_use",
+            "success": true,
+            "duration": 162043,
+            "ts": "2026-05-26T23:49:30.396Z"
+          }
+        ]
+      },
+      {
+        "email": "fcyisosvfrcjdklc@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:11:26.324Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "qha15419@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T20:46:47.298Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "angelynapessanha@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:23:58.032Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "first_use",
+            "success": true,
+            "duration": 162963,
+            "ts": "2026-05-27T00:12:42.252Z"
+          }
+        ]
+      },
+      {
+        "email": "SamipBaune@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T21:00:08.008Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "AlbuquerqueMary63@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:35:15.810Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T16:43:43.990Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "SepijakBejdl@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T16:47:14.904Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T21:03:28.427Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "OrtizmarinGenner@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:44:09.175Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T16:54:04.715Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "first_use",
+            "success": true,
+            "duration": 180782,
+            "ts": "2026-05-27T00:28:59.404Z"
+          }
+        ]
+      },
+      {
+        "email": "ChristineHassan858@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:47:16.289Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T16:57:25.015Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "KistIselda677@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:52:58.606Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "StranenIsela@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T16:56:15.670Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:06:59.101Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "tiffnerarmenteroswt17@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:16:12.132Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "DsouzaConnie571@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:09:16.815Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "RuhterEncarnacion@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:23:13.251Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "barlettaniolfm654@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:26:22.100Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MorandoCrhis@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:29:45.310Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "OswaldoNevarez781@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:22:40.170Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:33:01.217Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "LucreGio47@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:38:47.649Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "NoraJulia840@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:33:09.282Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:42:12.845Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MeaveEwen572@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:36:28.542Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:45:36.857Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "bacikkinlocklj977@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:39:52.145Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:48:59.767Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "first_use",
+            "success": true,
+            "duration": 159320,
+            "ts": "2026-05-27T01:06:10.537Z"
+          }
+        ]
+      },
+      {
+        "email": "ShanthiNarro@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:55:48.605Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "DaniyelAndrees@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:49:26.728Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T17:58:59.423Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MaAmolak843@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T17:52:37.357Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T18:01:55.579Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "PalmaAlessandra548@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T18:05:25.143Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "PaygeVela@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T18:15:05.827Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "WeijieDearman@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 610712,
+            "ts": "2026-05-26T18:46:54.639Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 140721,
+            "ts": "2026-05-27T00:07:48.215Z"
+          }
+        ]
+      },
+      {
+        "email": "ShuklaShternie346@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MariaYt314@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenlan25a@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 298730,
+            "ts": "2026-05-26T19:01:33.715Z"
+          }
+        ]
+      },
+      {
+        "email": "KrossBeaton@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MohamedKarl926@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "quainbertainauh288@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "destimehovingtm38@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "TeresaPopczyk666@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "jira45666@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "musa43549@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenvanbinh210454@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "chriskilm22@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "bineshkumara163@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "vanessafry123@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "wrrnikhngphul@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 174446,
+            "ts": "2026-05-26T13:12:06.645Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 521385,
+            "ts": "2026-05-27T01:29:14.439Z"
+          }
+        ]
+      }
+    ]
   },
   "targets": {
     "4": {
@@ -24,28 +1356,1229 @@
       "returns": 45
     }
   },
-  "visits": {
-    "today": {
-      "mulerun": {
-        "total": 15,
-        "success": 15,
-        "fail": 0,
-        "ips": 0
-      },
-      "myclaw": {
-        "total": 14,
-        "success": 14,
-        "fail": 0,
-        "ips": 0
-      },
-      "ditai": {
-        "total": 11,
-        "success": 11,
-        "fail": 0,
-        "ips": 0
-      }
-    }
+  "counters": {
+    "firstUseSuccess": 11,
+    "firstUseFail": 49,
+    "returnSuccess": 0,
+    "visitSuccess": 38
   },
+  "activities": {
+    "anonymous": [
+      {
+        "ts": "2026-05-27T01:32:01.714Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 65347,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:37:29.061Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 39311,
+        "pages": 3,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:42:45.443Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 55387,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:47:31.256Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 78829,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:53:33.585Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 79820,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:00:41.988Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 32460,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:08:21.686Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 11345,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:15:37.794Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 85061,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:20:15.019Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 59500,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:33:43.924Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 532882,
+        "pages": 3,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:45:26.592Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 83369,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:49:40.630Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 46688,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:01:30.313Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 93512,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:13:39.147Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 56998,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:21:46.251Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 98756,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:26:27.248Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 84486,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:35:39.212Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 16919,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:44:56.720Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 12157,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:50:47.674Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 52992,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:59:37.481Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 80447,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:06:57.920Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 89776,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:12:06.030Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 97902,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:32:56.031Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 34503,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:39:42.499Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 115534,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:44:58.134Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 115758,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:51:02.047Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 193887,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:57:34.975Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 224333,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:04:14.348Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 193745,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:10:32.329Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 114394,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:17:54.316Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 116835,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:23:47.201Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 191999,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:37:15.868Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 193220,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:47:36.025Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 111312,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:53:03.466Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 184199,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T03:02:59.505Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 70804,
+        "pages": 5,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:17:18.359Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 199871,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:22:33.771Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 31446,
+        "pages": 3,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:28:35.207Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 110425,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:42:32.190Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 395013,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:48:40.131Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 204948,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:54:28.208Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 201976,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:02:59.436Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 185451,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:07:57.669Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 42211,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:36:32.754Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 194095,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:41:32.816Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 92537,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:45:53.717Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 37118,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:51:48.623Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 29391,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:59:43.840Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 108851,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:07:53.935Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 199530,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:13:54.227Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 183736,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:18:55.313Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 40747,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:24:33.751Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 28378,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:43:43.939Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 365797,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:48:36.696Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 39882,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T02:59:37.317Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 373695,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:19:43.567Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 127837,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:24:46.017Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 113650,
+        "pages": 8,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:35:05.751Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 371837,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:44:27.594Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 98155,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:49:36.584Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 39802,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:58:00.559Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 195132,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:05:11.385Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 114512,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:10:10.176Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 115301,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      }
+    ],
+    "first_use": [
+      {
+        "ts": "2026-05-27T00:01:52.651Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "emoryhines306@gmail.com",
+        "duration": 195219,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T00:07:48.212Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "WeijieDearman@gmail.com",
+        "duration": 140721,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:29:14.433Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "wrrnikhngphul@gmail.com",
+        "duration": 521385,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:12:06.642Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "wrrnikhngphul@gmail.com",
+        "duration": 174446,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T18:21:23.737Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "nguyenngocquyendn1996@gmail.com",
+        "duration": 32935,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T18:24:51.062Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "clydeiojpasqualec8@gmail.com",
+        "duration": 28308,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T18:30:19.986Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "melanierodriguez39866@gmail.com",
+        "duration": 145355,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T18:33:33.367Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "emoryhines306@gmail.com",
+        "duration": 10258,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T18:46:54.635Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "WeijieDearman@gmail.com",
+        "duration": 610712,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T19:01:33.712Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "nguyenlan25a@gmail.com",
+        "duration": 298730,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T21:21:46.779Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "nguyenngocquyendn1996@gmail.com",
+        "duration": 144840,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T21:26:23.136Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "clydeiojpasqualec8@gmail.com",
+        "duration": 93861,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T21:35:01.836Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "melanierodriguez39866@gmail.com",
+        "duration": 155171,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:36:04.145Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "nguyenngocquyendn1996@gmail.com",
+        "duration": 204825,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:42:27.442Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "clydeiojpasqualec8@gmail.com",
+        "duration": 198619,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:53:36.678Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "melanierodriguez39866@gmail.com",
+        "duration": 154656,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T00:12:42.249Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "angelynapessanha@gmail.com",
+        "duration": 162963,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T00:28:59.401Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "OrtizmarinGenner@gmail.com",
+        "duration": 180782,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:06:10.535Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "bacikkinlocklj977@gmail.com",
+        "duration": 159320,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:31:45.603Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "lyndafiona1@gmail.com",
+        "duration": 372144,
+        "pages": 4,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:49:30.393Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "vrieoslcneupsxl@gmail.com",
+        "duration": 162043,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      }
+    ],
+    "return": []
+  },
+  "aiConversations": [
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "wrrnikhngphul@gmail.com",
+      "ip": "38.142.84.50",
+      "region": "US",
+      "persona": {
+        "primary": "photography",
+        "secondary": [
+          "sneakers"
+        ]
+      },
+      "conversations": [
+        {
+          "prompt": "I spend too much on photography and need to be smarter about it",
+          "reply": "(no response captured)",
+          "ts": "2026-05-26T13:11:57.667Z"
+        }
+      ],
+      "duration": 174446,
+      "ts": "2026-05-26T13:12:06.642Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "nguyenngocquyendn1996@gmail.com",
+      "ip": "76.143.135.124",
+      "region": "US",
+      "persona": {
+        "primary": "engineering",
+        "secondary": [
+          "beer & wine"
+        ]
+      },
+      "conversations": [],
+      "duration": 32935,
+      "ts": "2026-05-26T18:21:23.736Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "clydeiojpasqualec8@gmail.com",
+      "ip": "73.46.147.209",
+      "region": "US",
+      "persona": {
+        "primary": "fashion (streetwear)",
+        "secondary": [
+          "stationery",
+          "trains"
+        ]
+      },
+      "conversations": [],
+      "duration": 28308,
+      "ts": "2026-05-26T18:24:51.062Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "melanierodriguez39866@gmail.com",
+      "ip": "24.63.89.43",
+      "region": "US",
+      "persona": {
+        "primary": "beauty & skincare",
+        "secondary": [
+          "memes",
+          "MMA/UFC"
+        ]
+      },
+      "conversations": [],
+      "duration": 145355,
+      "ts": "2026-05-26T18:30:19.985Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "emoryhines306@gmail.com",
+      "ip": "98.216.9.25",
+      "region": "US",
+      "persona": {
+        "primary": "photography",
+        "secondary": [
+          "gardening"
+        ]
+      },
+      "conversations": [],
+      "duration": 10258,
+      "ts": "2026-05-26T18:33:33.367Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "WeijieDearman@gmail.com",
+      "ip": "204.111.238.182",
+      "region": "US",
+      "persona": {
+        "primary": "sustainability",
+        "secondary": [
+          "beer & wine"
+        ]
+      },
+      "conversations": [
+        {
+          "prompt": "How can I track my company's carbon footprint?",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-26T18:39:38.446Z"
+        },
+        {
+          "prompt": "What data do I need to collect for Scope 1 and 2 emissions?",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-26T18:40:29.470Z"
+        },
+        {
+          "prompt": "Create a project to audit our energy consumption across all offices",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "create_task",
+          "ts": "2026-05-26T18:41:20.588Z"
+        },
+        {
+          "prompt": "Can you help me set reduction targets for next year?",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-26T18:42:01.403Z"
+        },
+        {
+          "prompt": "Create a dashboard mockup showing our emissions by category",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "generate_image",
+          "ts": "2026-05-26T18:42:56.568Z"
+        },
+        {
+          "prompt": "Are there sustainability certifications we should pursue?",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-26T18:43:44.919Z"
+        }
+      ],
+      "duration": 610712,
+      "ts": "2026-05-26T18:46:54.634Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "nguyenlan25a@gmail.com",
+      "ip": "73.45.85.217",
+      "region": "US",
+      "persona": {
+        "primary": "photography",
+        "secondary": [
+          "movies"
+        ]
+      },
+      "conversations": [
+        {
+          "prompt": "How can I organize my photo shoot schedule and deliverables?",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-26T18:59:33.431Z"
+        },
+        {
+          "prompt": "Create a mood board layout for a cinematic portrait shoot",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "generate_image",
+          "ts": "2026-05-26T19:00:33.472Z"
+        },
+        {
+          "prompt": "Set up a project for editing my wedding photos with timeline and milestones",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "create_task",
+          "ts": "2026-05-26T19:01:24.332Z"
+        }
+      ],
+      "duration": 298730,
+      "ts": "2026-05-26T19:01:33.712Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "nguyenngocquyendn1996@gmail.com",
+      "ip": "174.54.33.214",
+      "region": "US",
+      "persona": {
+        "primary": "engineering",
+        "secondary": [
+          "beer & wine"
+        ]
+      },
+      "conversations": [],
+      "duration": 144840,
+      "ts": "2026-05-26T21:21:46.775Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "clydeiojpasqualec8@gmail.com",
+      "ip": "76.18.103.13",
+      "region": "US",
+      "persona": {
+        "primary": "fashion (streetwear)",
+        "secondary": [
+          "stationery",
+          "trains"
+        ]
+      },
+      "conversations": [],
+      "duration": 93861,
+      "ts": "2026-05-26T21:26:23.136Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "melanierodriguez39866@gmail.com",
+      "ip": "96.30.227.94",
+      "region": "US",
+      "persona": {
+        "primary": "beauty & skincare",
+        "secondary": [
+          "memes",
+          "MMA/UFC"
+        ]
+      },
+      "conversations": [],
+      "duration": 155171,
+      "ts": "2026-05-26T21:35:01.836Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "myclaw",
+      "email": "lyndafiona1@gmail.com",
+      "ip": "47.37.35.149",
+      "region": "US",
+      "persona": {
+        "primary": "cricket (IPL)",
+        "secondary": [
+          "yoga",
+          "stock market"
+        ]
+      },
+      "conversations": [],
+      "duration": 372144,
+      "ts": "2026-05-26T23:31:45.602Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "nguyenngocquyendn1996@gmail.com",
+      "ip": "107.193.20.104",
+      "region": "US",
+      "persona": {
+        "primary": "engineering",
+        "secondary": [
+          "beer & wine"
+        ]
+      },
+      "conversations": [],
+      "duration": 204825,
+      "ts": "2026-05-26T23:36:04.145Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "clydeiojpasqualec8@gmail.com",
+      "ip": "151.213.99.190",
+      "region": "US",
+      "persona": {
+        "primary": "fashion (streetwear)",
+        "secondary": [
+          "stationery",
+          "trains"
+        ]
+      },
+      "conversations": [],
+      "duration": 198619,
+      "ts": "2026-05-26T23:42:27.442Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "myclaw",
+      "email": "vrieoslcneupsxl@gmail.com",
+      "ip": "108.28.7.107",
+      "region": "US",
+      "persona": {
+        "primary": "gaming (mobile)",
+        "secondary": [
+          "stock market"
+        ]
+      },
+      "conversations": [],
+      "duration": 162043,
+      "ts": "2026-05-26T23:49:30.393Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "melanierodriguez39866@gmail.com",
+      "ip": "164.153.54.59",
+      "region": "US",
+      "persona": {
+        "primary": "beauty & skincare",
+        "secondary": [
+          "memes",
+          "MMA/UFC"
+        ]
+      },
+      "conversations": [],
+      "duration": 154656,
+      "ts": "2026-05-26T23:53:36.677Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "emoryhines306@gmail.com",
+      "ip": "99.82.205.197",
+      "region": "US",
+      "persona": {
+        "primary": "photography",
+        "secondary": [
+          "gardening"
+        ]
+      },
+      "conversations": [],
+      "duration": 195219,
+      "ts": "2026-05-27T00:01:52.651Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "WeijieDearman@gmail.com",
+      "ip": "108.250.37.71",
+      "region": "US",
+      "persona": {
+        "primary": "sustainability",
+        "secondary": [
+          "beer & wine"
+        ]
+      },
+      "conversations": [],
+      "duration": 140721,
+      "ts": "2026-05-27T00:07:48.211Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "myclaw",
+      "email": "angelynapessanha@gmail.com",
+      "ip": "99.37.169.246",
+      "region": "US",
+      "persona": {
+        "primary": "AI & tech",
+        "secondary": [
+          "productivity"
+        ]
+      },
+      "conversations": [],
+      "duration": 162963,
+      "ts": "2026-05-27T00:12:42.248Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "myclaw",
+      "email": "OrtizmarinGenner@gmail.com",
+      "ip": "40.136.226.163",
+      "region": "US",
+      "persona": {
+        "primary": "e-commerce",
+        "secondary": [
+          "memes",
+          "cars (tuning)"
+        ]
+      },
+      "conversations": [],
+      "duration": 180782,
+      "ts": "2026-05-27T00:28:59.401Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "myclaw",
+      "email": "bacikkinlocklj977@gmail.com",
+      "ip": "24.103.173.94",
+      "region": "US",
+      "persona": {
+        "primary": "baking",
+        "secondary": [
+          "DIY"
+        ]
+      },
+      "conversations": [],
+      "duration": 159320,
+      "ts": "2026-05-27T01:06:10.534Z"
+    },
+    {
+      "type": "first_use",
+      "brand": "mulerun",
+      "email": "wrrnikhngphul@gmail.com",
+      "ip": "108.145.134.35",
+      "region": "US",
+      "persona": {
+        "primary": "photography",
+        "secondary": [
+          "sneakers"
+        ]
+      },
+      "conversations": [
+        {
+          "prompt": "Help me organize my sneaker collection photos by brand",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-27T01:23:18.215Z"
+        },
+        {
+          "prompt": "Create a mood board layout for displaying sneaker photography",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "generate_image",
+          "ts": "2026-05-27T01:24:15.779Z"
+        },
+        {
+          "prompt": "Set up a project to edit and tag 50 new sneaker photos this week",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "create_task",
+          "ts": "2026-05-27T01:25:07.330Z"
+        },
+        {
+          "prompt": "What's the best lighting setup for photographing sneakers indoors?",
+          "reply": "Log in to MuleRun Enterprise",
+          "type": "chat",
+          "ts": "2026-05-27T01:26:04.047Z"
+        }
+      ],
+      "duration": 521385,
+      "ts": "2026-05-27T01:29:14.433Z"
+    }
+  ],
   "timeline": [
     {
       "ts": "2026-05-27T02:47:17.766Z",
@@ -82,14 +2615,42 @@
       },
       "visitSuccess": 34,
       "errors": 49
+    },
+    {
+      "ts": "2026-05-27T03:04:05.608Z",
+      "round": 4,
+      "phase": "visits",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "counters": {
+        "firstUseSuccess": 11,
+        "firstUseFail": 49,
+        "returnSuccess": 0,
+        "visitSuccess": 38
+      },
+      "errors": 49
     }
   ],
-  "heartbeat": {
-    "triggers": 0,
-    "lastCheck": "2026-05-27T02:52:36.505Z",
-    "processAlive": true
-  },
   "recentLogs": [
+    "[01:30:43] ",
+    "[VISIT] 3 brands concurrent: mr=200 mc=200 dt=200",
+    "[01:32:01]   [visit] #1 mulerun OK: 1 pages, 65s",
+    "[01:32:56]   [visit] #1 myclaw OK: 1 pages, 35s",
+    "[01:36:32]   [visit] #1 ditai OK: 1 pages, 194s",
+    "[01:37:29]   [visit] #2 mulerun OK: 3 pages, 39s",
+    "[01:39:42]   [visit] #2 myclaw OK: 1 pages, 116s",
+    "[01:41:32]   [visit] #2 ditai OK: 1 pages, 93s",
+    "[01:42:45]   [visit] #3 mulerun OK: 1 pages, 55s",
+    "[01:44:58]   [visit] #3 myclaw OK: 1 pages, 116s",
+    "[01:45:53]   [visit] #3 ditai OK: 1 pages, 37s",
+    "[01:47:31]   [visit] #4 mulerun OK: 1 pages, 79s",
+    "[01:51:02]   [visit] #4 myclaw OK: 1 pages, 194s",
+    "[01:51:48]   [visit] #4 ditai OK: 1 pages, 29s",
+    "[01:53:33]   [visit] #5 mulerun OK: 1 pages, 80s",
+    "[01:57:34]   [visit] #5 myclaw OK: 1 pages, 224s",
     "[01:59:43]   [visit] #5 ditai OK: 1 pages, 109s",
     "[02:00:41]   [visit] #6 mulerun OK: 1 pages, 32s",
     "[02:04:14]   [visit] #6 myclaw OK: 1 pages, 194s",
@@ -109,6 +2670,34 @@
     "[02:45:26]   [visit] #11 mulerun OK: 1 pages, 83s",
     "[02:47:36]   [visit] #11 myclaw OK: 1 pages, 111s",
     "[02:48:36]   [visit] #11 ditai OK: 1 pages, 40s",
-    "[02:49:40]   [visit] #12 mulerun OK: 1 pages, 47s"
+    "[02:49:40]   [visit] #12 mulerun OK: 1 pages, 47s",
+    "[02:53:03]   [visit] #12 myclaw OK: 1 pages, 184s",
+    "[02:59:37]   [visit] #12 ditai OK: 1 pages, 374s",
+    "[03:01:30]   [visit] #13 mulerun OK: 1 pages, 94s",
+    "[03:02:59]   [visit] #13 myclaw OK: 5 pages, 71s"
+  ],
+  "registrationLog": [
+    "[22:45:39] [info] [1] COMPLETE (no verify): everalon469q@gmail.com",
+    "[22:48:11] [info] [2] COMPLETE (no verify): bonnsward@gmail.com",
+    "[22:49:35] [info] [3] COMPLETE (no verify): nashbertina83@gmail.com",
+    "[22:53:07] [info] [1] COMPLETE: nguyenphuonganh1317tv@gmail.com — registered!",
+    "[22:53:24] [info] [4] COMPLETE (no verify): nguyenphuonganh1317tv@gmail.com",
+    "[22:54:53] [info] [5] COMPLETE (no verify): heanghoch0@gmail.com",
+    "[22:56:31] [info] [2] COMPLETE: heanghoch0@gmail.com — registered!",
+    "[22:58:32] [info] [6] COMPLETE (no verify): tranvanquy1993pn@gmail.com",
+    "[23:00:00] [info] [3] COMPLETE: tranvanquy1993pn@gmail.com — registered!",
+    "[23:01:46] [info] [7] COMPLETE (no verify): evekoo24@gmail.com",
+    "[23:03:18] [info] [4] COMPLETE: evekoo24@gmail.com — registered!",
+    "[23:03:28] [info] [8] COMPLETE (no verify): elizabethcarteri2raikvn@gmail.com",
+    "[23:05:14] [info] [9] COMPLETE (no verify): nguyenkhacmanh448@gmail.com",
+    "[23:06:58] [info] [10] COMPLETE (no verify): adalsardi37@gmail.com",
+    "[23:09:37] [info] [5] COMPLETE: nguyenkhacmanh448@gmail.com — registered!",
+    "[23:10:45] [info] [11] COMPLETE (no verify): dellxaviery40lj@gmail.com",
+    "[23:12:11] [info] [12] COMPLETE (no verify): publicspecial6224@gmail.com",
+    "[23:12:46] [info] [5] COMPLETE: adalsardi37@gmail.com — registered!",
+    "[23:15:33] [info] [13] COMPLETE: ellieparry75@gmail.com",
+    "[23:15:52] [info] [6] COMPLETE: dellxaviery40lj@gmail.com — registered!",
+    "[23:21:27] [info] [7] COMPLETE: publicspecial6224@gmail.com — registered!",
+    "[23:22:42] [info] [7] COMPLETE: ellieparry75@gmail.com — registered!"
   ]
 }
