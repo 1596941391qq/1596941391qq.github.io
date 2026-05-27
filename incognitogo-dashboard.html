@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>IncognitoGo 阶梯测试面板</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+  <style>
+    :root {
+      --bg: 248 250 252;
+      --fg: 15 23 42;
+      --card: 255 255 255;
+      --card-fg: 30 41 59;
+      --primary: 59 130 246;
+      --primary-fg: 255 255 255;
+      --success: 34 197 94;
+      --warning: 234 179 8;
+      --danger: 239 68 68;
+      --muted: 241 245 249;
+      --muted-fg: 100 116 139;
+      --border: 226 232 240;
+      --radius: 0.5rem;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: rgb(var(--bg));
+      font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+      color: rgb(var(--fg));
+      min-height: 100vh;
+      padding: 32px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1600px; margin: 0 auto; }
+    .header { margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .page-title { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.025em; }
+    .subtitle { color: rgb(var(--muted-fg)); font-size: 0.9rem; margin-top: 4px; }
+    .refresh-info { text-align: right; color: rgb(var(--muted-fg)); font-size: 0.8rem; }
+    .refresh-info .time { font-weight: 600; color: rgb(var(--card-fg)); }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: rgb(var(--card));
+      border: 1px solid rgb(var(--border));
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+    }
+    .stat-label { color: rgb(var(--muted-fg)); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .stat-value { font-size: 1.5rem; font-weight: 700; color: rgb(var(--card-fg)); margin-top: 4px; }
+    .stat-value.alive { color: rgb(var(--success)); }
+    .stat-value.dead { color: rgb(var(--danger)); }
+    .stat-value.primary { color: rgb(var(--primary)); }
+    .progress-bar { margin-top: 8px; height: 4px; background: rgb(var(--muted)); border-radius: 2px; overflow: hidden; }
+    .progress-bar .fill { height: 100%; background: rgb(var(--primary)); border-radius: 2px; transition: width 0.3s; }
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .chart-card {
+      background: rgb(var(--card));
+      border: 1px solid rgb(var(--border));
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+    }
+    .chart-card.full { grid-column: span 2; }
+    .chart-title { font-size: 0.9rem; font-weight: 600; color: rgb(var(--card-fg)); margin-bottom: 12px; }
+    .chart-container { width: 100%; height: 300px; }
+    .log-card {
+      background: rgb(var(--card));
+      border: 1px solid rgb(var(--border));
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .log-list {
+      font-family: "JetBrains Mono", "Fira Code", monospace;
+      font-size: 0.75rem;
+      line-height: 1.8;
+      max-height: 320px;
+      overflow-y: auto;
+      color: rgb(var(--muted-fg));
+    }
+    .log-list .line { padding: 2px 0; border-bottom: 1px solid rgb(var(--muted)); }
+    .log-list .line:last-child { border-bottom: none; }
+    @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .charts-grid { grid-template-columns: 1fr; } .chart-card.full { grid-column: span 1; } }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr; } body { padding: 16px; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div>
+      <div class="page-title">IncognitoGo 阶梯测试</div>
+      <div class="subtitle">HK-13 (38.76.222.226) — R4-R5 自动化执行面板</div>
+    </div>
+    <div class="refresh-info">
+      <div>最后更新: <span class="time" id="lastUpdate">--</span></div>
+      <div id="countdown"></div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">当前阶段</div>
+      <div class="stat-value primary" id="phase">--</div>
+      <div class="progress-bar"><div class="fill" id="phaseProgress" style="width:0%"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">品牌注册</div>
+      <div class="stat-value" id="regTotal">--</div>
+      <div class="subtitle" id="regDetail"></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">今日访问</div>
+      <div class="stat-value" id="visitTotal">--</div>
+      <div class="subtitle" id="visitRate"></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">进程状态</div>
+      <div class="stat-value" id="processStatus">--</div>
+      <div class="subtitle" id="heartbeatInfo"></div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card">
+      <div class="chart-title">品牌注册 vs 目标</div>
+      <div class="chart-container" id="chartReg"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">访问时间线</div>
+      <div class="chart-container" id="chartTimeline"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">阶段进度</div>
+      <div class="chart-container" id="chartPhase"></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">今日品牌访问分布</div>
+      <div class="chart-container" id="chartVisits"></div>
+    </div>
+  </div>
+
+  <div class="log-card">
+    <div class="chart-title">最近日志</div>
+    <div class="log-list" id="logList"></div>
+  </div>
+</div>
+<script>
+const DATA_URL = 'data/incognitogo.json';
+const PHASES = ['registrations', 'first-use', 'visits', 'returns', 'complete'];
+
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    return await res.json();
+  } catch { return null; }
+}
+
+function phaseIndex(phase) {
+  const idx = PHASES.indexOf(phase);
+  return idx >= 0 ? idx : 0;
+}
+
+function renderStats(data) {
+  // Phase
+  const round = data.status.round || '?';
+  const phase = data.status.phase || 'unknown';
+  document.getElementById('phase').textContent = `R${round} / ${phase}`;
+  const pct = ((phaseIndex(phase) + 1) / PHASES.length * 100).toFixed(0);
+  document.getElementById('phaseProgress').style.width = pct + '%';
+
+  // Registry
+  const r = data.registry;
+  const total = (r.mulerun || 0) + (r.myclaw || 0) + (r.ditai || 0);
+  document.getElementById('regTotal').textContent = total;
+  document.getElementById('regDetail').textContent = `MR:${r.mulerun} MC:${r.myclaw} DT:${r.ditai}`;
+
+  // Visits
+  const v = data.visits.today || {};
+  const vTotal = Object.values(v).reduce((s, b) => s + (b.total || 0), 0);
+  const vSuccess = Object.values(v).reduce((s, b) => s + (b.success || 0), 0);
+  document.getElementById('visitTotal').textContent = vTotal;
+  const rate = vTotal > 0 ? ((vSuccess / vTotal) * 100).toFixed(0) : '--';
+  document.getElementById('visitRate').textContent = `成功率 ${rate}%`;
+
+  // Process
+  const alive = data.heartbeat.processAlive;
+  const el = document.getElementById('processStatus');
+  el.textContent = alive ? 'ALIVE' : 'DEAD';
+  el.className = 'stat-value ' + (alive ? 'alive' : 'dead');
+  document.getElementById('heartbeatInfo').textContent = `熔断触发: ${data.heartbeat.triggers}次`;
+
+  // Update time
+  document.getElementById('lastUpdate').textContent = new Date(data.updatedAt).toLocaleString('zh-CN');
+}
+
+function renderCharts(data) {
+  // 1. Registration bar chart
+  const regChart = echarts.init(document.getElementById('chartReg'));
+  const r = data.registry;
+  const targetRound = data.status.round || 4;
+  const targets = data.targets[String(targetRound)] || { regs: 60 };
+  const targetPer = Math.round((targets.regs || 60) / 3);
+  regChart.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['当前', '目标'], top: 0 },
+    xAxis: { type: 'category', data: ['MuleRun', 'MyClaw', 'dit.ai'] },
+    yAxis: { type: 'value' },
+    series: [
+      { name: '当前', type: 'bar', data: [r.mulerun, r.myclaw, r.ditai], itemStyle: { color: '#3b82f6' } },
+      { name: '目标', type: 'bar', data: [targetPer, targetPer, targetPer], itemStyle: { color: '#e2e8f0' } },
+    ]
+  });
+
+  // 2. Timeline
+  const tlChart = echarts.init(document.getElementById('chartTimeline'));
+  const tl = data.timeline || [];
+  tlChart.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['MuleRun', 'MyClaw', 'dit.ai'], top: 0 },
+    xAxis: { type: 'category', data: tl.map(t => new Date(t.ts).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })) },
+    yAxis: { type: 'value', name: '注册数' },
+    series: [
+      { name: 'MuleRun', type: 'line', data: tl.map(t => t.registry.mr), smooth: true },
+      { name: 'MyClaw', type: 'line', data: tl.map(t => t.registry.mc), smooth: true },
+      { name: 'dit.ai', type: 'line', data: tl.map(t => t.registry.dt), smooth: true },
+    ]
+  });
+
+  // 3. Phase progress (gauge)
+  const phaseChart = echarts.init(document.getElementById('chartPhase'));
+  const currentPhase = data.status.phase || 'unknown';
+  const pIdx = phaseIndex(currentPhase);
+  phaseChart.setOption({
+    series: [{
+      type: 'gauge',
+      startAngle: 200,
+      endAngle: -20,
+      min: 0,
+      max: PHASES.length,
+      pointer: { show: true, length: '60%' },
+      progress: { show: true, width: 14, itemStyle: { color: '#3b82f6' } },
+      axisLine: { lineStyle: { width: 14, color: [[1, '#e2e8f0']] } },
+      axisTick: { show: false },
+      splitLine: { show: false },
+      axisLabel: { show: false },
+      detail: { formatter: currentPhase, fontSize: 16, offsetCenter: [0, '70%'], color: '#334155' },
+      data: [{ value: pIdx + 1 }],
+    }]
+  });
+
+  // 4. Today visits pie
+  const visitChart = echarts.init(document.getElementById('chartVisits'));
+  const v = data.visits.today || {};
+  visitChart.setOption({
+    tooltip: { trigger: 'item' },
+    series: [{
+      type: 'pie',
+      radius: ['40%', '70%'],
+      label: { formatter: '{b}: {c}' },
+      data: [
+        { value: (v.mulerun || {}).total || 0, name: 'MuleRun', itemStyle: { color: '#3b82f6' } },
+        { value: (v.myclaw || {}).total || 0, name: 'MyClaw', itemStyle: { color: '#22c55e' } },
+        { value: (v.ditai || {}).total || 0, name: 'dit.ai', itemStyle: { color: '#f59e0b' } },
+      ]
+    }]
+  });
+
+  window.addEventListener('resize', () => {
+    regChart.resize(); tlChart.resize(); phaseChart.resize(); visitChart.resize();
+  });
+}
+
+function renderLogs(data) {
+  const list = document.getElementById('logList');
+  const logs = data.recentLogs || [];
+  list.innerHTML = logs.map(l => `<div class="line">${l.replace(/</g,'&lt;')}</div>`).join('');
+}
+
+async function init() {
+  const data = await loadData();
+  if (!data) {
+    document.getElementById('phase').textContent = '数据加载失败';
+    return;
+  }
+  renderStats(data);
+  renderCharts(data);
+  renderLogs(data);
+}
+
+init();
+setInterval(init, 300000);
+</script>
+</body>
+</html>
