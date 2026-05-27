@@ -1,0 +1,90 @@
+{
+  "updatedAt": "2026-05-27T02:47:17.766Z",
+  "status": {
+    "round": 4,
+    "phase": "visits",
+    "errors": 49,
+    "updatedAt": "2026-05-27T01:30:43.793Z"
+  },
+  "registry": {
+    "mulerun": 33,
+    "myclaw": 50,
+    "ditai": 43,
+    "total": 485
+  },
+  "targets": {
+    "4": {
+      "visits": 600,
+      "regs": 60,
+      "returns": 30
+    },
+    "5": {
+      "visits": 750,
+      "regs": 75,
+      "returns": 45
+    }
+  },
+  "visits": {
+    "today": {
+      "mulerun": {
+        "total": 14,
+        "success": 14,
+        "fail": 0,
+        "ips": 0
+      },
+      "myclaw": {
+        "total": 13,
+        "success": 13,
+        "fail": 0,
+        "ips": 0
+      },
+      "ditai": {
+        "total": 10,
+        "success": 10,
+        "fail": 0,
+        "ips": 0
+      }
+    }
+  },
+  "timeline": [
+    {
+      "ts": "2026-05-27T02:47:17.766Z",
+      "round": 4,
+      "phase": "visits",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "visitSuccess": 31,
+      "errors": 49
+    }
+  ],
+  "heartbeat": {
+    "triggers": 0,
+    "lastCheck": "2026-05-27T02:47:17.766Z",
+    "processAlive": true
+  },
+  "recentLogs": [
+    "[01:51:48]   [visit] #4 ditai OK: 1 pages, 29s",
+    "[01:53:33]   [visit] #5 mulerun OK: 1 pages, 80s",
+    "[01:57:34]   [visit] #5 myclaw OK: 1 pages, 224s",
+    "[01:59:43]   [visit] #5 ditai OK: 1 pages, 109s",
+    "[02:00:41]   [visit] #6 mulerun OK: 1 pages, 32s",
+    "[02:04:14]   [visit] #6 myclaw OK: 1 pages, 194s",
+    "[02:07:53]   [visit] #6 ditai OK: 1 pages, 200s",
+    "[02:08:21]   [visit] #7 mulerun OK: 1 pages, 11s",
+    "[02:10:32]   [visit] #7 myclaw OK: 1 pages, 114s",
+    "[02:13:54]   [visit] #7 ditai OK: 1 pages, 184s",
+    "[02:15:37]   [visit] #8 mulerun OK: 1 pages, 85s",
+    "[02:17:54]   [visit] #8 myclaw OK: 1 pages, 117s",
+    "[02:18:55]   [visit] #8 ditai OK: 1 pages, 41s",
+    "[02:20:15]   [visit] #9 mulerun OK: 1 pages, 60s",
+    "[02:23:47]   [visit] #9 myclaw OK: 1 pages, 192s",
+    "[02:24:33]   [visit] #9 ditai OK: 1 pages, 28s",
+    "[02:33:43]   [visit] #10 mulerun OK: 3 pages, 533s",
+    "[02:37:15]   [visit] #10 myclaw OK: 1 pages, 193s",
+    "[02:43:43]   [visit] #10 ditai OK: 1 pages, 366s",
+    "[02:45:26]   [visit] #11 mulerun OK: 1 pages, 83s"
+  ]
+}
