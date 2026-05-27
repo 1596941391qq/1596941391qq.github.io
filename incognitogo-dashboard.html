@@ -134,6 +134,15 @@
     </div>
   </div>
 
+  <div class="chart-card" style="margin-bottom:16px;padding:14px 20px" id="todayProgress">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <div class="chart-title" style="margin:0">今日任务进度</div>
+      <span style="font-size:0.85rem;font-weight:700;color:rgb(var(--primary))" id="todayPct">--%</span>
+    </div>
+    <div class="progress-bar" style="height:8px;margin-bottom:10px"><div class="fill" id="todayBar" style="width:0%;background:rgb(var(--primary))"></div></div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:0.78rem;color:rgb(var(--muted-fg))" id="todayDetail"></div>
+  </div>
+
   <div class="tab-bar" id="tabBar">
     <button class="tab-btn active" data-tab="overview">总览</button>
     <button class="tab-btn" data-tab="accounts">账号明细</button>
@@ -303,6 +312,27 @@ function renderStats(data) {
     el.innerHTML += `<div style="color:rgb(var(--danger));font-size:0.7rem;font-weight:600;margin-top:2px">${warn}</div>`;
   }
   document.getElementById('lastUpdate').textContent = new Date(data.updatedAt).toLocaleString('zh-CN');
+
+  // Today's progress
+  const daily = data.unifiedState && data.unifiedState.daily;
+  const plan = data.todayPlan || {};
+  const today = new Date().toISOString().slice(0, 10);
+  let todayDone = 0, todayTarget = 0;
+  const details = [];
+  if (daily) {
+    for (const [brand, days] of Object.entries(daily)) {
+      const d = days[today] || { visits: 0, regs: 0, returns: 0 };
+      const done = (d.visits||0) + (d.regs||0) + (d.returns||0);
+      todayDone += done;
+      const target = plan[brand] ? plan[brand].total : 0;
+      todayTarget += target;
+      details.push(`<span>${brandBadge(brand)} ${done}/${target} (${d.visits}v+${d.regs}r+${d.returns}rt)</span>`);
+    }
+  }
+  const pct = todayTarget > 0 ? Math.round(todayDone / todayTarget * 100) : 0;
+  document.getElementById('todayPct').textContent = `${todayDone}/${todayTarget} (${pct}%)`;
+  document.getElementById('todayBar').style.width = pct + '%';
+  document.getElementById('todayDetail').innerHTML = details.join('') || '<span>等待数据...</span>';
 }
 
 function renderOverviewCharts(data) {
