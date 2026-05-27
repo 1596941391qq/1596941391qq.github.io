@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T18:55:29.742Z",
+  "updatedAt": "2026-05-27T19:40:40.611Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -13,23 +13,23 @@
     "daily": {
       "mulerun": {
         "2026-05-27": {
-          "visits": 138,
+          "visits": 139,
           "regs": 28,
           "returns": 11
         }
       },
       "dit": {
         "2026-05-27": {
-          "visits": 71,
-          "regs": 24,
+          "visits": 77,
+          "regs": 25,
           "returns": 5
         }
       },
       "myclaw": {
         "2026-05-27": {
-          "visits": 55,
-          "regs": 21,
-          "returns": 8
+          "visits": 63,
+          "regs": 22,
+          "returns": 10
         }
       }
     },
@@ -58,8 +58,8 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 20,
-    "myclaw": 25,
-    "ditai": 5,
+    "myclaw": 26,
+    "ditai": 6,
     "total": 485,
     "accounts": [
       {
@@ -197,6 +197,11 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-26T12:47:45.133Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-27T19:36:48.392Z",
             "status": "active"
           }
         ],
@@ -406,6 +411,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-27T15:32:41.069Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "dangthitohop2267@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-27T19:11:29.396Z",
             "status": "active"
           }
         ],
@@ -650,12 +667,12 @@
     }
   },
   "counters": {
-    "visitSuccess": 229,
-    "visitTotal": 229,
+    "visitSuccess": 238,
+    "visitTotal": 238,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
-    "returnSuccess": 12,
-    "returnTotal": 12
+    "returnSuccess": 14,
+    "returnTotal": 14
   },
   "activities": {
     "anonymous": [
@@ -3049,6 +3066,22 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T19:24:24.778Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cxodp7",
+        "region": "US",
+        "ip": "50.239.138.114",
+        "target": "mule.page",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 47,
+        "actions": 7,
+        "pages": 0,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:17:18.359Z",
         "brand": "myclaw",
         "type": "anonymous",
@@ -4173,6 +4206,126 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T18:57:06.928Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cxnofw",
+        "region": "US",
+        "ip": "72.109.56.38",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 44,
+        "actions": 7,
+        "pages": 0,
+        "maxScroll": 25,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:16:49.502Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cxo5vy",
+        "region": "DE",
+        "ip": "31.17.127.93",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 114,
+        "actions": 1,
+        "pages": 0,
+        "maxScroll": 5,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:21:19.088Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1cxo9ee",
+        "region": "GB",
+        "ip": "82.132.237.193",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 13,
+        "actions": 2,
+        "pages": 0,
+        "maxScroll": 2,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:23:02.356Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1cxocpy",
+        "region": "BR",
+        "ip": "200.194.190.159",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 48,
+        "actions": 8,
+        "pages": 0,
+        "maxScroll": 23,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:27:18.659Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cxofox",
+        "region": "DE",
+        "ip": "92.209.235.173",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 40,
+        "actions": 8,
+        "pages": 3,
+        "maxScroll": 4,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:32:03.754Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cxoj2c",
+        "region": "GB",
+        "ip": "82.12.32.168",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 67,
+        "actions": 18,
+        "pages": 5,
+        "maxScroll": 71,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:35:26.422Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1cxol3d",
+        "region": "US",
+        "ip": "45.73.130.145",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 109,
+        "actions": 22,
+        "pages": 7,
+        "maxScroll": 91,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:37:18.765Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1cxonav",
+        "region": "BR",
+        "ip": "189.4.188.124",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 8,
+        "actions": 2,
+        "pages": 0,
+        "maxScroll": 5,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:19:43.567Z",
         "brand": "ditai",
         "type": "anonymous",
@@ -4795,6 +4948,36 @@
         "actions": 2,
         "pages": 0,
         "maxScroll": 12,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:25:29.863Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cxoekj",
+        "region": "GB",
+        "ip": "93.180.217.158",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 19,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 13,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T19:29:39.720Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cxoh6p",
+        "region": "US",
+        "ip": "24.115.124.224",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 75,
+        "actions": 16,
+        "pages": 3,
+        "maxScroll": 21,
         "success": true
       }
     ]
@@ -7983,17 +8166,36 @@
         "returnTotal": 12
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-27T19:40:40.611Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 20,
+        "mc": 26,
+        "dt": 6
+      },
+      "counters": {
+        "visitSuccess": 238,
+        "visitTotal": 238,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 14,
+        "returnTotal": 14
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-27 18:55:",
+    "[状态总结] 截至 2026-05-27 19:40:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 263 次行为 (匿名访问 229 + 首次使用 22 + 回访 12)",
-    "  品牌注册: MuleRun=20 MyClaw=25 dit.ai=5",
-    "  今日进度: 361/432 任务完成 (84%)",
-    "    mulerun: 177/46 (385%) — 138v + 28r + 11rt",
-    "    dit: 100/181 (55%) — 71v + 24r + 5rt",
-    "    myclaw: 84/205 (41%) — 55v + 21r + 8rt",
+    "  历史累计完成: 274 次行为 (匿名访问 238 + 首次使用 22 + 回访 14)",
+    "  品牌注册: MuleRun=20 MyClaw=26 dit.ai=6",
+    "  今日进度: 380/432 任务完成 (88%)",
+    "    mulerun: 178/46 (387%) — 139v + 28r + 11rt",
+    "    dit: 107/181 (59%) — 77v + 25r + 5rt",
+    "    myclaw: 95/205 (46%) — 63v + 22r + 10rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
     "[2026-05-27T17:35:16] [info] === Unified Scheduler ===",
