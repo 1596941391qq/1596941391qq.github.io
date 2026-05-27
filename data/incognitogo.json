@@ -1,56 +1,28 @@
 {
-  "updatedAt": "2026-05-27T20:29:16.847Z",
+  "updatedAt": "2026-05-27T20:54:24.125Z",
   "status": {
     "round": 4,
     "phase": "registrations",
-    "errors": 0,
-    "startedAt": "2026-05-27T03:56:09.085Z"
+    "errors": 0
   },
   "registry": {
     "mulerun": 24,
-    "myclaw": 28,
+    "myclaw": 29,
     "dit": 26,
-    "total": 78
-  },
-  "targets": {
-    "4": {
-      "visits": 600,
-      "regs": 60,
-      "returns": 30
-    },
-    "5": {
-      "visits": 750,
-      "regs": 75,
-      "returns": 45
-    }
+    "total": 79
   },
   "heartbeat": {
-    "lastCheck": "2026-05-27T20:29:16.851Z",
+    "lastCheck": "2026-05-27T20:54:24.127Z",
     "processAlive": true,
-    "memUsedMB": 1574,
+    "memUsedMB": 1588,
     "memTotalMB": 7941,
-    "chromeProcs": 24
+    "chromeProcs": 23
   },
   "recentLogs": [
-    "[2026-05-27T18:57:10] [info] [myclaw] visit x1 OK",
-    "[2026-05-27T19:06:56] [info] [dit] visit x5 OK",
-    "[2026-05-27T19:11:50] [info] [myclaw] register x1 OK",
-    "[2026-05-27T19:22:22] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-05-27T19:23:05] [info] [myclaw] visit x3 OK",
-    "[2026-05-27T19:24:28] [info] [mulerun] visit x1 OK",
-    "[2026-05-27T19:25:33] [info] [myclaw] return x1 OK",
-    "[2026-05-27T19:27:21] [info] [myclaw] visit x1 OK",
-    "[2026-05-27T19:29:42] [info] [myclaw] return x1 OK",
-    "[2026-05-27T19:37:09] [info] [dit] register x1 OK",
-    "[2026-05-27T19:37:22] [info] [myclaw] visit x3 OK",
-    "[2026-05-27T19:40:35] [info] [dit] visit x1 OK",
-    "[2026-05-27T19:51:27] [info] [dit] register x1 OK",
-    "[2026-05-27T19:52:07] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-05-27T19:54:38] [info] [myclaw] register x2 OK",
-    "[2026-05-27T20:02:22] [info] [dit] visit x5 OK",
-    "[2026-05-27T20:11:18] [info] [myclaw] visit x5 OK",
-    "[2026-05-27T20:14:33] [info] [myclaw] return x1 OK",
-    "[2026-05-27T20:14:35] [info] [dit] register x1 OK",
-    "[2026-05-27T20:17:53] [info] [myclaw] visit x2 OK"
+    "[2026-05-27T20:36:40] [error] [mulerun] register x3 FAILED: exit 1",
+    "[2026-05-27T20:37:15] [info] [dit] visit x1 OK",
+    "[2026-05-27T20:37:34] [info] [myclaw] register x1 OK",
+    "[2026-05-27T20:50:34] [info] [myclaw] visit x4 OK",
+    "[2026-05-27T20:52:59] [info] [dit] register x1 OK"
   ]
 }
