@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T04:55:07.506Z",
+  "updatedAt": "2026-05-27T05:46:06.601Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -9,11 +9,57 @@
   "processAlive": true,
   "activeScheduler": "unified-scheduler",
   "schedulerWarning": null,
+  "unifiedState": {
+    "daily": {
+      "mulerun": {
+        "2026-05-27": {
+          "visits": 8,
+          "regs": 2,
+          "returns": 2
+        }
+      },
+      "dit": {
+        "2026-05-27": {
+          "visits": 14,
+          "regs": 1,
+          "returns": 0
+        }
+      },
+      "myclaw": {
+        "2026-05-27": {
+          "visits": 7,
+          "regs": 1,
+          "returns": 0
+        }
+      }
+    },
+    "lastPlan": null
+  },
+  "todayPlan": {
+    "mulerun": {
+      "visits": 176,
+      "regs": 46,
+      "returns": 19,
+      "total": 241
+    },
+    "myclaw": {
+      "visits": 190,
+      "regs": 52,
+      "returns": 19,
+      "total": 261
+    },
+    "dit": {
+      "visits": 153,
+      "regs": 42,
+      "returns": 14,
+      "total": 209
+    }
+  },
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 19,
-    "myclaw": 4,
-    "ditai": 3,
+    "myclaw": 6,
+    "ditai": 4,
     "total": 485,
     "accounts": [
       {
@@ -22,7 +68,7 @@
         "brands": [
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-27T04:52:09.947Z",
+            "registeredAt": "2026-05-27T05:14:40.163Z",
             "status": "active"
           }
         ],
@@ -70,6 +116,23 @@
         "visits": []
       },
       {
+        "email": "heanghoch0@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-27T05:04:38.031Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-27T05:22:57.744Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "tranvanquy1993pn@gmail.com",
         "region": "US",
         "brands": [
@@ -93,6 +156,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-26T12:38:28.300Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenkhacmanh448@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-27T05:44:53.632Z",
             "status": "active"
           }
         ],
@@ -641,6 +716,111 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T05:01:26.417Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cwy6l7",
+        "region": "US",
+        "ip": "45.22.244.58",
+        "target": "mule.page",
+        "mode": "adaptive",
+        "duration": 83,
+        "actions": 21,
+        "pages": 0,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:03:38.839Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cwy9iq",
+        "region": "US",
+        "ip": "65.28.37.134",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 42,
+        "actions": 8,
+        "pages": 2,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:08:48.636Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cwydr8",
+        "region": "US",
+        "ip": "73.158.38.231",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 65,
+        "actions": 14,
+        "pages": 2,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:11:33.478Z",
+        "brand": "mulerun",
+        "visitNum": 2,
+        "profileId": "k1cwyg6p",
+        "region": "US",
+        "ip": "68.42.163.146",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 82,
+        "actions": 18,
+        "pages": 3,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:24:58.396Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cwyrca",
+        "region": "US",
+        "ip": "209.205.186.33",
+        "target": "mule.page",
+        "mode": "adaptive",
+        "duration": 95,
+        "actions": 18,
+        "pages": 0,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:35:47.381Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cx0117",
+        "region": "US",
+        "ip": "138.43.134.136",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 45,
+        "actions": 3,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:46:03.762Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1cx0b2t",
+        "region": "US",
+        "ip": "154.40.143.2",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 97,
+        "actions": 1,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:17:18.359Z",
         "brand": "myclaw",
         "type": "anonymous",
@@ -919,6 +1099,48 @@
         "actions": 16,
         "pages": 6,
         "maxScroll": 45,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:09:25.185Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cwyebu",
+        "region": "IN",
+        "ip": "49.36.216.140",
+        "mode": "adaptive",
+        "duration": 88,
+        "actions": 15,
+        "pages": 2,
+        "maxScroll": 26,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:14:10.837Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1cwygrp",
+        "region": "JP",
+        "ip": "114.158.167.115",
+        "mode": "adaptive",
+        "duration": 78,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 13,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T05:16:07.532Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1cwyl5c",
+        "region": "JP",
+        "ip": "110.134.49.159",
+        "mode": "adaptive",
+        "duration": 6,
+        "actions": 2,
+        "pages": 0,
+        "maxScroll": 6,
         "success": true
       },
       {
@@ -1795,10 +2017,32 @@
     }
   ],
   "conversationPlans": {
-    "planned": 0,
-    "consumed": 0,
+    "planned": 26,
+    "consumed": 3,
     "fallback": 0,
-    "sessions": []
+    "sessions": [
+      {
+        "email": "wrrnikhngphul@gmail.com",
+        "brand": "mulerun",
+        "rounds": 5,
+        "consumed": "2026-05-27T01:29:14.429Z",
+        "fallback": false
+      },
+      {
+        "email": "WeijieDearman@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "consumed": "2026-05-26T18:46:54.632Z",
+        "fallback": false
+      },
+      {
+        "email": "nguyenlan25a@gmail.com",
+        "brand": "mulerun",
+        "rounds": 3,
+        "consumed": "2026-05-26T19:01:33.710Z",
+        "fallback": false
+      }
+    ]
   },
   "timeline": [
     {
@@ -1963,9 +2207,37 @@
         "returnTotal": 0
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-27T05:46:06.601Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 19,
+        "mc": 6,
+        "dt": 4
+      },
+      "counters": {
+        "visitSuccess": 76,
+        "visitTotal": 76,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 0,
+        "returnTotal": 0
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
+    "[状态总结] 截至 2026-05-27 05:46:",
+    "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
+    "  历史累计完成: 98 次行为 (匿名访问 76 + 首次使用 22 + 回访 0)",
+    "  品牌注册: MuleRun=19 MyClaw=6 dit.ai=4",
+    "  今日进度: 35/711 任务完成 (5%)",
+    "    mulerun: 12/241 (5%) — 8v + 2r + 2rt",
+    "    dit: 15/209 (7%) — 14v + 1r + 0rt",
+    "    myclaw: 8/261 (3%) — 7v + 1r + 0rt",
+    "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
     "[2026-05-27T04:39:31] [info] === Unified Scheduler ===",
     "[2026-05-27T04:39:31] [info] Brands: mulerun, myclaw, dit | Days: 3",
@@ -1981,7 +2253,18 @@
     "[2026-05-27T04:50:38] [info] [mulerun] visit x4 OK",
     "[2026-05-27T04:52:03] [info] [dit] visit x5 OK",
     "[2026-05-27T04:52:09] [info] [mulerun] register x1 OK",
-    "[2026-05-27T04:52:53] [info] [myclaw] visit x4 OK"
+    "[2026-05-27T04:52:53] [info] [myclaw] visit x4 OK",
+    "[2026-05-27T05:01:29] [info] [mulerun] visit x1 OK",
+    "[2026-05-27T05:03:42] [info] [mulerun] return x1 OK",
+    "[2026-05-27T05:05:05] [info] [myclaw] register x1 OK",
+    "[2026-05-27T05:06:07] [info] [dit] visit x5 OK",
+    "[2026-05-27T05:11:36] [info] [mulerun] visit x2 OK",
+    "[2026-05-27T05:14:40] [info] [mulerun] register x1 OK",
+    "[2026-05-27T05:16:11] [info] [myclaw] visit x3 OK",
+    "[2026-05-27T05:23:19] [info] [dit] register x1 OK",
+    "[2026-05-27T05:25:01] [info] [mulerun] visit x1 OK",
+    "[2026-05-27T05:35:50] [info] [mulerun] return x1 OK",
+    "[2026-05-27T05:39:40] [info] [dit] visit x4 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
