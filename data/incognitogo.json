@@ -1,28 +1,32 @@
 {
-  "updatedAt": "2026-05-27T20:54:24.125Z",
+  "updatedAt": "2026-05-27T21:29:04.013Z",
   "status": {
     "round": 4,
-    "phase": "registrations",
-    "errors": 0
+    "phase": "unified-scheduler"
   },
   "registry": {
     "mulerun": 24,
-    "myclaw": 29,
+    "myclaw": 30,
     "dit": 26,
-    "total": 79
+    "total": 80
   },
   "heartbeat": {
-    "lastCheck": "2026-05-27T20:54:24.127Z",
+    "lastCheck": "2026-05-27T21:29:04.015Z",
     "processAlive": true,
-    "memUsedMB": 1588,
+    "memUsedMB": 1518,
     "memTotalMB": 7941,
-    "chromeProcs": 23
+    "chromeProcs": 24
   },
   "recentLogs": [
-    "[2026-05-27T20:36:40] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-05-27T20:37:15] [info] [dit] visit x1 OK",
-    "[2026-05-27T20:37:34] [info] [myclaw] register x1 OK",
     "[2026-05-27T20:50:34] [info] [myclaw] visit x4 OK",
-    "[2026-05-27T20:52:59] [info] [dit] register x1 OK"
+    "[2026-05-27T20:52:59] [info] [dit] register x1 OK",
+    "[2026-05-27T21:02:57] [warn] [mulerun] Circuit OPEN — 3 consecutive failures, cooling down 300s",
+    "[2026-05-27T21:02:57] [error] [mulerun] register x3 FAILED: exit 1",
+    "[2026-05-27T21:05:29] [info] [myclaw] register x1 OK",
+    "[2026-05-27T21:07:22] [warn] [mulerun] Breaker open, waiting 36s...",
+    "[2026-05-27T21:13:36] [info] [dit] visit x5 OK",
+    "[2026-05-27T21:15:54] [info] [dit] return x1 OK",
+    "[2026-05-27T21:16:18] [info] [myclaw] visit x5 OK",
+    "[2026-05-27T21:25:24] [info] [dit] visit x2 OK"
   ]
 }
