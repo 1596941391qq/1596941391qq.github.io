@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T19:55:13.965Z",
+  "updatedAt": "2026-05-27T20:29:16.847Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -24,34 +24,14 @@
       "returns": 45
     }
   },
-  "visits": {
-    "today": {
-      "mulerun": {
-        "total": 0,
-        "success": 0
-      },
-      "myclaw": {
-        "total": 0,
-        "success": 0
-      },
-      "dit": {
-        "total": 0,
-        "success": 0
-      }
-    }
-  },
   "heartbeat": {
-    "lastCheck": "2026-05-27T19:55:13.968Z",
+    "lastCheck": "2026-05-27T20:29:16.851Z",
     "processAlive": true,
-    "memUsedMB": 1409,
-    "memTotalMB": 7941
+    "memUsedMB": 1574,
+    "memTotalMB": 7941,
+    "chromeProcs": 24
   },
   "recentLogs": [
-    "[2026-05-27T18:52:59] [info] [myclaw] All return accounts have conversation plans",
-    "[2026-05-27T18:52:59] [info] [dit] Today's queue: 154v + 37r + 13rt = 204 tasks",
-    "[2026-05-27T18:52:59] [info] [dit] All return accounts have conversation plans",
-    "[2026-05-27T18:52:59] [info] Health: http://0.0.0.0:9090/health",
-    "[2026-05-27T18:54:23] [info] [mulerun] visit x1 OK",
     "[2026-05-27T18:57:10] [info] [myclaw] visit x1 OK",
     "[2026-05-27T19:06:56] [info] [dit] visit x5 OK",
     "[2026-05-27T19:11:50] [info] [myclaw] register x1 OK",
@@ -66,6 +46,11 @@
     "[2026-05-27T19:40:35] [info] [dit] visit x1 OK",
     "[2026-05-27T19:51:27] [info] [dit] register x1 OK",
     "[2026-05-27T19:52:07] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-05-27T19:54:38] [info] [myclaw] register x2 OK"
+    "[2026-05-27T19:54:38] [info] [myclaw] register x2 OK",
+    "[2026-05-27T20:02:22] [info] [dit] visit x5 OK",
+    "[2026-05-27T20:11:18] [info] [myclaw] visit x5 OK",
+    "[2026-05-27T20:14:33] [info] [myclaw] return x1 OK",
+    "[2026-05-27T20:14:35] [info] [dit] register x1 OK",
+    "[2026-05-27T20:17:53] [info] [myclaw] visit x2 OK"
   ]
 }
