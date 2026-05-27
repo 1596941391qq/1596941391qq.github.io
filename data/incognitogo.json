@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T04:40:49.922Z",
+  "updatedAt": "2026-05-27T04:52:57.508Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -7,13 +7,322 @@
     "updatedAt": "2026-05-27T03:56:09.085Z"
   },
   "processAlive": true,
+  "activeScheduler": "unified-scheduler",
+  "schedulerWarning": null,
   "heartbeatTriggers": 0,
   "registry": {
-    "mulerun": 0,
-    "myclaw": 0,
-    "ditai": 0,
-    "total": 0,
-    "accounts": []
+    "mulerun": 19,
+    "myclaw": 4,
+    "ditai": 3,
+    "total": 485,
+    "accounts": [
+      {
+        "email": "everalon469q@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-27T04:52:09.947Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "bonnsward@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nashbertina83@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenphuonganh1317tv@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:27:30.990Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T12:27:59.152Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "tranvanquy1993pn@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T12:34:56.470Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "evekoo24@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-26T12:38:12.537Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:38:28.300Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "adalsardi37@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:47:45.133Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "dellxaviery40lj@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-26T12:51:08.283Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "WeijieDearman@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "ShuklaShternie346@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MariaYt314@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenlan25a@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "KrossBeaton@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MohamedKarl926@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "quainbertainauh288@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "destimehovingtm38@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "TeresaPopczyk666@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "jira45666@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "musa43549@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenvanbinh210454@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "chriskilm22@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "bineshkumara163@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "vanessafry123@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "wrrnikhngphul@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "first_use",
+            "success": true,
+            "duration": 174446,
+            "ts": "2026-05-26T13:12:06.645Z"
+          }
+        ]
+      }
+    ]
   },
   "targets": {
     "4": {
@@ -30,8 +339,8 @@
   "counters": {
     "visitSuccess": 76,
     "visitTotal": 76,
-    "firstUseSuccess": 21,
-    "firstUseTotal": 21,
+    "firstUseSuccess": 22,
+    "firstUseTotal": 22,
     "returnSuccess": 0,
     "returnTotal": 0
   },
@@ -287,6 +596,51 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T04:42:50.499Z",
+        "brand": "mulerun",
+        "visitNum": 2,
+        "profileId": "k1cwxrdi",
+        "region": "US",
+        "ip": "71.253.144.83",
+        "target": "mule.page",
+        "mode": "adaptive",
+        "duration": 43,
+        "actions": 9,
+        "pages": 0,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T04:48:22.850Z",
+        "brand": "mulerun",
+        "visitNum": 3,
+        "profileId": "k1cwxt5h",
+        "region": "US",
+        "ip": "71.7.67.196",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 92,
+        "actions": 15,
+        "pages": 1,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T04:50:35.446Z",
+        "brand": "mulerun",
+        "visitNum": 4,
+        "profileId": "k1cwxxp5",
+        "region": "US",
+        "ip": "67.185.203.92",
+        "target": "invitation",
+        "mode": "adaptive",
+        "duration": 37,
+        "actions": 6,
+        "pages": 2,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:17:18.359Z",
         "brand": "myclaw",
         "type": "anonymous",
@@ -509,6 +863,62 @@
         "duration": 8686,
         "pages": 1,
         "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T04:44:28.274Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cwxpyg",
+        "region": "IN",
+        "ip": "157.49.58.102",
+        "mode": "adaptive",
+        "duration": 103,
+        "actions": 19,
+        "pages": 0,
+        "maxScroll": 51,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T04:46:27.555Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1cwxuog",
+        "region": "IN",
+        "ip": "171.61.16.145",
+        "mode": "adaptive",
+        "duration": 14,
+        "actions": 4,
+        "pages": 0,
+        "maxScroll": 12,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T04:49:52.803Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1cwxw95",
+        "region": "IN",
+        "ip": "106.78.19.188",
+        "mode": "adaptive",
+        "duration": 107,
+        "actions": 23,
+        "pages": 4,
+        "maxScroll": 77,
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T04:52:50.372Z",
+        "brand": "myclaw",
+        "visitNum": 4,
+        "profileId": "k1cwxysc",
+        "region": "JP",
+        "ip": "60.103.72.192",
+        "mode": "adaptive",
+        "duration": 76,
+        "actions": 16,
+        "pages": 6,
+        "maxScroll": 45,
         "success": true
       },
       {
@@ -1515,49 +1925,44 @@
         "returnTotal": 0
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-27T04:52:57.508Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 19,
+        "mc": 4,
+        "dt": 3
+      },
+      "counters": {
+        "visitSuccess": 76,
+        "visitTotal": 76,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 0,
+        "returnTotal": 0
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[04:35:14] [error] [5] attempt 1 FAILED: Create profile: AggregateError",
-    "[04:35:14] [info] Will retry with new profile...",
-    "[04:35:28] [info] [5] Phase 1: Embedded Google login...",
-    "[04:35:28] [info] === Embedded Login: ellieparry75@gmail.com ===",
-    "[04:35:35] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-803908728:1779856530035784",
-    "[04:35:35] [info] Typing email (human-like)...",
-    "[04:35:48] [info] Typing password (human-like)...",
-    "[04:36:03] [info] 2FA detected, entering TOTP...",
-    "[04:36:21] [info] Verifying Google session...",
-    "[04:36:27] [info] Google session valid: true",
-    "[04:36:27] [info] [5] Phase 2: dit.ai OAuth...",
-    "[04:36:27] [info] === dit.ai OAuth (with existing Google session) ===",
-    "[04:36:36] [info] Looking for login/signup button...",
-    "[04:36:36] [info] No login button found, trying /login...",
-    "[04:36:40] [info] Looking for Google OAuth button...",
-    "[04:36:40] [info] Clicked Google OAuth, waiting for redirect...",
-    "[04:36:48] [info] After OAuth click: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S235830764%3A1779856602713219&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=3d938ad6-17a2-4add-9b61-2e310896d995&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMVxZ1GPQcy4KFXhjAWLw51Sgp1oIYRgQ597EnfoOIC0gj_DOn1gVZjCl9yYMYNbWgoahQH-3DQi_1yKzr7FmtYZyWRTgcqLd_XEWGRtJWPC7Qu6Jr1_EsQQnSwi6NtjuDKZgfq5iYZ3uKliOzag2ss4d7zYY1z8wf6qqMwbpJGFhBqXVBl1YHSJPNIgKKWP-3OdzucQbSGMCQ_BBBvzOSN0YWMWM8Xk6hXOIkPl9BN536mffD2lasJX-cOVxs5EBTnpJdRPCUq_dGeBl50avqL7iOj5E5T6HN3TTxCTEEOpswrNmwlWqkf2DzblXQrO5EEaaJSQ2a0xu9tvOaHGL9AJtHlnAEYT4NJiimy9zKhwrgBcIJCQPSfXclGgzjd84UNQ0zcWMwT00vFJ5dtSngl4T6Wnyop1lMSoprMoaV3Av9yX1u02DOeGZIaUb0I-9iX2DB-TXK63PK0Xa0SfwwSiyrwNw%26flowName%3DGeneralOAuthFlow%26as%3DS235830764%253A1779856602713219%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcduqIv7_z_S7czHnEeUy2AOf_rk2RPTjmpwDJD5XEAcrhqZssmo6LDsrALAQF40-Z_Vsg8S4J2pHeGWyHOQbW15j-ImfCmUI5Pm8MUGpfo9-nGAK3Y",
-    "[04:36:48] [info] Google page state: email=true, pwd=true, chooser=false",
-    "[04:36:48] [info] Identifier page — typing email (human-like)...",
-    "[04:37:02] [info] Password page — typing password (human-like)...",
-    "[04:37:28] [info] Consent check — path: /v3/signin/identifier, text: Loading",
-    "Sign in with Google",
-    "Sign in",
-    "to continue to DIT",
-    "Email or phone",
-    "Forgot email?",
-    "Before using this app, you can review DIT’s Privacy Policy and Ter",
-    "[04:37:28] [info] OAuth confirmation/consent screen — clicking Continue/Allow...",
-    "[04:37:29] [info] Consent click result: clicked:next",
-    "[04:37:37] [info] Still on Google after consent click, retrying...",
-    "[04:37:50] [warn] Unclear state. URL: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S235830764%3A1779856602713219&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=3d938ad6-17a2-4add-9b61-2e310896d995&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMVxZ1GPQcy4KFXhjAWLw51Sgp1oIYRgQ597EnfoOIC0gj_DOn1gVZjCl9yYMYNbWgoahQH-3DQi_1yKzr7FmtYZyWRTgcqLd_XEWGRtJWPC7Qu6Jr1_EsQQnSwi6NtjuDKZgfq5iYZ3uKliOzag2ss4d7zYY1z8wf6qqMwbpJGFhBqXVBl1YHSJPNIgKKWP-3OdzucQbSGMCQ_BBBvzOSN0YWMWM8Xk6hXOIkPl9BN536mffD2lasJX-cOVxs5EBTnpJdRPCUq_dGeBl50avqL7iOj5E5T6HN3TTxCTEEOpswrNmwlWqkf2DzblXQrO5EEaaJSQ2a0xu9tvOaHGL9AJtHlnAEYT4NJiimy9zKhwrgBcIJCQPSfXclGgzjd84UNQ0zcWMwT00vFJ5dtSngl4T6Wnyop1lMSoprMoaV3Av9yX1u02DOeGZIaUb0I-9iX2DB-TXK63PK0Xa0SfwwSiyrwNw%26flowName%3DGeneralOAuthFlow%26as%3DS235830764%253A1779856602713219%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcduqIv7_z_S7czHnEeUy2AOf_rk2RPTjmpwDJD5XEAcrhqZssmo6LDsrALAQF40-Z_Vsg8S4J2pHeGWyHOQbW15j-ImfCmUI5Pm8MUGpfo9-nGAK3Y",
-    "[04:37:53] [info] [5] Final URL: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S235830764%3A1779856602713219&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=3d938ad6-17a2-4add-9b61-2e310896d995&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMVxZ1GPQcy4KFXhjAWLw51Sgp1oIYRgQ597EnfoOIC0gj_DOn1gVZjCl9yYMYNbWgoahQH-3DQi_1yKzr7FmtYZyWRTgcqLd_XEWGRtJWPC7Qu6Jr1_EsQQnSwi6NtjuDKZgfq5iYZ3uKliOzag2ss4d7zYY1z8wf6qqMwbpJGFhBqXVBl1YHSJPNIgKKWP-3OdzucQbSGMCQ_BBBvzOSN0YWMWM8Xk6hXOIkPl9BN536mffD2lasJX-cOVxs5EBTnpJdRPCUq_dGeBl50avqL7iOj5E5T6HN3TTxCTEEOpswrNmwlWqkf2DzblXQrO5EEaaJSQ2a0xu9tvOaHGL9AJtHlnAEYT4NJiimy9zKhwrgBcIJCQPSfXclGgzjd84UNQ0zcWMwT00vFJ5dtSngl4T6Wnyop1lMSoprMoaV3Av9yX1u02DOeGZIaUb0I-9iX2DB-TXK63PK0Xa0SfwwSiyrwNw%26flowName%3DGeneralOAuthFlow%26as%3DS235830764%253A1779856602713219%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcduqIv7_z_S7czHnEeUy2AOf_rk2RPTjmpwDJD5XEAcrhqZssmo6LDsrALAQF40-Z_Vsg8S4J2pHeGWyHOQbW15j-ImfCmUI5Pm8MUGpfo9-nGAK3Y",
-    "[04:37:53] [warn] [5] INCOMPLETE: ellieparry75@gmail.com (UNCLEAR)",
-    "[04:37:58] [warn] Skipping ellieparry75@gmail.com (OAuth result: UNCLEAR), trying next...",
-    "[04:37:58] [info] Waiting 43s before next...",
-    "[04:38:56] [info] [5] Phase 1: Embedded Google login...",
-    "[04:38:56] [info] === Embedded Login: thihangnguyen612@gmail.com ===",
-    "[04:39:03] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S1580687237:1779856737570567",
-    "[04:39:03] [info] Typing email (human-like)...",
-    "[04:39:18] [info] Typing password (human-like)..."
+    "[SCHEDULER] unified-scheduler (混合调度模式)",
+    "[2026-05-27T04:39:31] [info] === Unified Scheduler ===",
+    "[2026-05-27T04:39:31] [info] Brands: mulerun, myclaw, dit | Days: 3",
+    "[2026-05-27T04:39:31] [info] Mode: PRODUCTION",
+    "[2026-05-27T04:39:31] [info] [mulerun] Plan: 564v + 147r + 51rt over 3 days",
+    "[2026-05-27T04:39:31] [info] [myclaw] Plan: 665v + 158r + 52rt over 3 days",
+    "[2026-05-27T04:39:31] [info] [dit] Plan: 640v + 141r + 53rt over 3 days",
+    "[2026-05-27T04:39:31] [info] Starting parallel workers for 2026-05-27...",
+    "[2026-05-27T04:39:31] [info] [mulerun] Today's queue: 176v + 46r + 19rt = 241 tasks",
+    "[2026-05-27T04:39:31] [info] [myclaw] Today's queue: 190v + 52r + 19rt = 261 tasks",
+    "[2026-05-27T04:39:31] [info] [dit] Today's queue: 153v + 42r + 14rt = 209 tasks",
+    "[2026-05-27T04:39:31] [info] Health: http://0.0.0.0:9090/health",
+    "[2026-05-27T04:50:38] [info] [mulerun] visit x4 OK",
+    "[2026-05-27T04:52:03] [info] [dit] visit x5 OK",
+    "[2026-05-27T04:52:09] [info] [mulerun] register x1 OK",
+    "[2026-05-27T04:52:53] [info] [myclaw] visit x4 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
