@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T03:58:35.901Z",
+  "updatedAt": "2026-05-27T04:29:24.458Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -44,7 +44,7 @@
         "brands": [
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T22:49:39.825Z",
+            "registeredAt": "2026-05-27T04:02:56.643Z",
             "status": "active"
           }
         ],
@@ -61,7 +61,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-26T22:53:13.333Z",
+            "registeredAt": "2026-05-27T04:06:10.861Z",
             "status": "active"
           },
           {
@@ -110,7 +110,7 @@
           },
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T22:58:37.320Z",
+            "registeredAt": "2026-05-27T04:09:06.933Z",
             "status": "active"
           }
         ],
@@ -122,7 +122,7 @@
         "brands": [
           {
             "name": "ditai",
-            "registeredAt": "2026-05-26T23:03:23.177Z",
+            "registeredAt": "2026-05-27T04:17:02.550Z",
             "status": "active"
           },
           {
@@ -132,7 +132,7 @@
           },
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T23:01:51.164Z",
+            "registeredAt": "2026-05-27T04:12:43.689Z",
             "status": "active"
           }
         ],
@@ -149,7 +149,7 @@
           },
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T23:03:32.986Z",
+            "registeredAt": "2026-05-27T04:14:31.504Z",
             "status": "active"
           },
           {
@@ -166,7 +166,7 @@
         "brands": [
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T23:05:18.739Z",
+            "registeredAt": "2026-05-27T04:16:21.695Z",
             "status": "active"
           },
           {
@@ -215,7 +215,7 @@
           },
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T23:10:49.425Z",
+            "registeredAt": "2026-05-27T04:22:25.561Z",
             "status": "active"
           },
           {
@@ -237,7 +237,7 @@
           },
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T23:12:15.299Z",
+            "registeredAt": "2026-05-27T04:24:15.702Z",
             "status": "active"
           },
           {
@@ -264,7 +264,7 @@
           },
           {
             "name": "mulerun",
-            "registeredAt": "2026-05-26T23:15:37.253Z",
+            "registeredAt": "2026-05-27T04:27:37.290Z",
             "status": "active"
           }
         ],
@@ -1357,13 +1357,96 @@
     }
   },
   "counters": {
-    "firstUseSuccess": 0,
-    "firstUseFail": 0,
+    "visitSuccess": 76,
+    "visitTotal": 76,
+    "firstUseSuccess": 42,
+    "firstUseTotal": 42,
     "returnSuccess": 0,
-    "visitSuccess": 0
+    "returnTotal": 0
   },
   "activities": {
     "anonymous": [
+      {
+        "ts": "2026-05-26T13:13:39.147Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 56998,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:21:46.251Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 98756,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:26:27.248Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 84486,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:35:39.212Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 16919,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:44:56.720Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 12157,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:50:47.674Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 52992,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:59:37.481Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 80447,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:06:57.920Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 89776,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:12:06.030Z",
+        "brand": "mulerun",
+        "type": "anonymous",
+        "duration": 97902,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
       {
         "ts": "2026-05-27T01:32:01.714Z",
         "brand": "mulerun",
@@ -1518,82 +1601,73 @@
         "success": true
       },
       {
-        "ts": "2026-05-26T13:13:39.147Z",
-        "brand": "mulerun",
+        "ts": "2026-05-26T13:17:18.359Z",
+        "brand": "myclaw",
         "type": "anonymous",
-        "duration": 56998,
+        "duration": 199871,
         "pages": 1,
         "region": "IN",
         "success": true
       },
       {
-        "ts": "2026-05-26T13:21:46.251Z",
-        "brand": "mulerun",
+        "ts": "2026-05-26T13:22:33.771Z",
+        "brand": "myclaw",
         "type": "anonymous",
-        "duration": 98756,
+        "duration": 31446,
+        "pages": 3,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:28:35.207Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 110425,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:42:32.190Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 395013,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:48:40.131Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 204948,
         "pages": 1,
         "region": "GB",
         "success": true
       },
       {
-        "ts": "2026-05-26T13:26:27.248Z",
-        "brand": "mulerun",
+        "ts": "2026-05-26T13:54:28.208Z",
+        "brand": "myclaw",
         "type": "anonymous",
-        "duration": 84486,
+        "duration": 201976,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:02:59.436Z",
+        "brand": "myclaw",
+        "type": "anonymous",
+        "duration": 185451,
         "pages": 1,
         "region": "JP",
         "success": true
       },
       {
-        "ts": "2026-05-26T13:35:39.212Z",
-        "brand": "mulerun",
+        "ts": "2026-05-26T14:07:57.669Z",
+        "brand": "myclaw",
         "type": "anonymous",
-        "duration": 16919,
-        "pages": 1,
-        "region": "IN",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:44:56.720Z",
-        "brand": "mulerun",
-        "type": "anonymous",
-        "duration": 12157,
-        "pages": 1,
-        "region": "JP",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:50:47.674Z",
-        "brand": "mulerun",
-        "type": "anonymous",
-        "duration": 52992,
-        "pages": 1,
-        "region": "GB",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:59:37.481Z",
-        "brand": "mulerun",
-        "type": "anonymous",
-        "duration": 80447,
-        "pages": 1,
-        "region": "GB",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:06:57.920Z",
-        "brand": "mulerun",
-        "type": "anonymous",
-        "duration": 89776,
-        "pages": 1,
-        "region": "JP",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:12:06.030Z",
-        "brand": "mulerun",
-        "type": "anonymous",
-        "duration": 97902,
+        "duration": 42211,
         "pages": 1,
         "region": "GB",
         "success": true
@@ -1752,73 +1826,73 @@
         "success": true
       },
       {
-        "ts": "2026-05-26T13:17:18.359Z",
-        "brand": "myclaw",
+        "ts": "2026-05-26T13:19:43.567Z",
+        "brand": "ditai",
         "type": "anonymous",
-        "duration": 199871,
+        "duration": 127837,
         "pages": 1,
-        "region": "IN",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:22:33.771Z",
-        "brand": "myclaw",
-        "type": "anonymous",
-        "duration": 31446,
-        "pages": 3,
         "region": "JP",
         "success": true
       },
       {
-        "ts": "2026-05-26T13:28:35.207Z",
-        "brand": "myclaw",
+        "ts": "2026-05-26T13:24:46.017Z",
+        "brand": "ditai",
         "type": "anonymous",
-        "duration": 110425,
-        "pages": 1,
-        "region": "BR",
+        "duration": 113650,
+        "pages": 8,
+        "region": "IN",
         "success": true
       },
       {
-        "ts": "2026-05-26T13:42:32.190Z",
-        "brand": "myclaw",
+        "ts": "2026-05-26T13:35:05.751Z",
+        "brand": "ditai",
         "type": "anonymous",
-        "duration": 395013,
-        "pages": 1,
-        "region": "DE",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:48:40.131Z",
-        "brand": "myclaw",
-        "type": "anonymous",
-        "duration": 204948,
+        "duration": 371837,
         "pages": 1,
         "region": "GB",
         "success": true
       },
       {
-        "ts": "2026-05-26T13:54:28.208Z",
-        "brand": "myclaw",
+        "ts": "2026-05-26T13:44:27.594Z",
+        "brand": "ditai",
         "type": "anonymous",
-        "duration": 201976,
-        "pages": 1,
-        "region": "BR",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:02:59.436Z",
-        "brand": "myclaw",
-        "type": "anonymous",
-        "duration": 185451,
+        "duration": 98155,
         "pages": 1,
         "region": "JP",
         "success": true
       },
       {
-        "ts": "2026-05-26T14:07:57.669Z",
-        "brand": "myclaw",
+        "ts": "2026-05-26T13:49:36.584Z",
+        "brand": "ditai",
         "type": "anonymous",
-        "duration": 42211,
+        "duration": 39802,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T13:58:00.559Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 195132,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:05:11.385Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 114512,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T14:10:10.176Z",
+        "brand": "ditai",
+        "type": "anonymous",
+        "duration": 115301,
         "pages": 1,
         "region": "GB",
         "success": true
@@ -1975,111 +2049,9 @@
         "pages": 1,
         "region": "JP",
         "success": true
-      },
-      {
-        "ts": "2026-05-26T13:19:43.567Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 127837,
-        "pages": 1,
-        "region": "JP",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:24:46.017Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 113650,
-        "pages": 8,
-        "region": "IN",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:35:05.751Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 371837,
-        "pages": 1,
-        "region": "GB",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:44:27.594Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 98155,
-        "pages": 1,
-        "region": "JP",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:49:36.584Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 39802,
-        "pages": 1,
-        "region": "GB",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:58:00.559Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 195132,
-        "pages": 1,
-        "region": "DE",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:05:11.385Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 114512,
-        "pages": 1,
-        "region": "BR",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:10:10.176Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 115301,
-        "pages": 1,
-        "region": "GB",
-        "success": true
       }
     ],
     "first_use": [
-      {
-        "ts": "2026-05-27T00:01:52.651Z",
-        "brand": "mulerun",
-        "type": "first_use",
-        "account": "emoryhines306@gmail.com",
-        "duration": 195219,
-        "pages": 1,
-        "region": "US",
-        "success": true
-      },
-      {
-        "ts": "2026-05-27T00:07:48.212Z",
-        "brand": "mulerun",
-        "type": "first_use",
-        "account": "WeijieDearman@gmail.com",
-        "duration": 140721,
-        "pages": 1,
-        "region": "US",
-        "success": true
-      },
-      {
-        "ts": "2026-05-27T01:29:14.433Z",
-        "brand": "mulerun",
-        "type": "first_use",
-        "account": "wrrnikhngphul@gmail.com",
-        "duration": 521385,
-        "pages": 1,
-        "region": "US",
-        "success": true
-      },
       {
         "ts": "2026-05-26T13:12:06.642Z",
         "brand": "mulerun",
@@ -2211,6 +2183,56 @@
         "success": true
       },
       {
+        "ts": "2026-05-27T00:01:52.651Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "emoryhines306@gmail.com",
+        "duration": 195219,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T00:07:48.212Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "WeijieDearman@gmail.com",
+        "duration": 140721,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-27T01:29:14.433Z",
+        "brand": "mulerun",
+        "type": "first_use",
+        "account": "wrrnikhngphul@gmail.com",
+        "duration": 521385,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:31:45.603Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "lyndafiona1@gmail.com",
+        "duration": 372144,
+        "pages": 4,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-05-26T23:49:30.393Z",
+        "brand": "myclaw",
+        "type": "first_use",
+        "account": "vrieoslcneupsxl@gmail.com",
+        "duration": 162043,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
         "ts": "2026-05-27T00:12:42.249Z",
         "brand": "myclaw",
         "type": "first_use",
@@ -2236,26 +2258,6 @@
         "type": "first_use",
         "account": "bacikkinlocklj977@gmail.com",
         "duration": 159320,
-        "pages": 1,
-        "region": "US",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T23:31:45.603Z",
-        "brand": "myclaw",
-        "type": "first_use",
-        "account": "lyndafiona1@gmail.com",
-        "duration": 372144,
-        "pages": 4,
-        "region": "US",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T23:49:30.393Z",
-        "brand": "myclaw",
-        "type": "first_use",
-        "account": "vrieoslcneupsxl@gmail.com",
-        "duration": 162043,
         "pages": 1,
         "region": "US",
         "success": true
@@ -2696,6 +2698,12 @@
       "ts": "2026-05-27T01:29:14.433Z"
     }
   ],
+  "conversationPlans": {
+    "planned": 0,
+    "consumed": 0,
+    "fallback": 0,
+    "sessions": []
+  },
   "timeline": [
     {
       "ts": "2026-05-27T02:47:17.766Z",
@@ -2783,51 +2791,95 @@
         "visitSuccess": 0
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-27T04:29:24.458Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "counters": {
+        "visitSuccess": 76,
+        "visitTotal": 76,
+        "firstUseSuccess": 42,
+        "firstUseTotal": 42,
+        "returnSuccess": 0,
+        "returnTotal": 0
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[03:56:26] [info] Warmup: https://example.com/",
-    "[03:56:26] [info] Navigating to https://mulerun.com/invitation/RNV2MCPZQ2N3",
-    "[03:56:32] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-315173320:1779854186900650",
-    "[03:56:32] [info] Typing email (human-like)...",
-    "[03:56:36] [info] SPA rendered after 8s",
-    "[03:56:42] [info] Using MuleRun password: RegeveraX7k2",
-    "[03:56:43] [info] Waiting for Turnstile to solve before submitting...",
-    "[03:56:43] [info] Form state: {\"email\":\"everalon469q@gmail.com\",\"username\":\"everalon469q\",\"pwdLen\":12,\"hasTurnstile\":true}",
-    "[03:56:49] [info] Turnstile solved (token: 1072 chars) after 6s",
-    "[03:56:49] [info] Re-syncing all form fields after Turnstile via nativeInputValueSetter...",
-    "[03:56:49] [info] Re-sync result: #_r_0_-form-item:22, #_r_1_-form-item:12, #_r_2_-form-item:12",
-    "[03:56:50] [info] Clicked CONTINUE after Turnstile",
-    "[03:56:53] [warn] Form validation errors: Password: 8-32 chars; Include at least two types: uppercase, lowercase, numbers, or special characters.",
-    "[03:56:58] [info] After Continue: {\"url\":\"https://mulerun.com/signin\",\"bodyText\":\"ALL IN ONE\\nYour all-in-one AI office platform.\\nLet Mule handle the grind\\nYour AI-powered workspace for getting things done\\nGoogle\\nApple\\nOR SIGN IN WITH EMAIL\\nForgot your password?\\nLOG IN\\nDon't have an account?\\nSign up\\nLog in to MuleRun Enterprise\",\"inputs\":[{\"type\":\"text\",\"name\":\"email\",\"id\":\"_r_5_-form-item\"},{\"type\":\"password\",\"name\":\"password\",\"id\":\"_r_6_-form-item\"},{\"type\":\"hidden\",\"name\":\"cf-turnstile-response\",\"id\":\"cf-chl-widget-3cji8_response\"}]}",
-    "[03:56:58] [info] Redirected to /signin — registration complete (no verification needed)",
-    "[03:56:58] [info] [1] COMPLETE (no verify): everalon469q@gmail.com",
-    "[03:57:01] [error] [1] attempt 1 FAILED: Password field not found after email",
-    "[03:57:01] [info] Will retry with new profile...",
-    "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
-    "[03:57:02] [info] Waiting 55s before next registration...",
-    "[03:57:21] [info] [1] Phase 1: Embedded Google login...",
-    "[03:57:21] [info] === Embedded Login: everalon469q@gmail.com ===",
-    "[03:57:28] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-501525008:1779854242448180",
-    "[03:57:28] [info] Typing email (human-like)...",
-    "[03:57:56] [error] [1] attempt 2 FAILED: Password field not found after email",
-    "[03:57:56] [info] ",
+    "[04:28:11] [info] No login button found, trying /login...",
+    "[04:28:15] [info] ",
     "============================================================",
-    "[03:57:56] [info] [2] Registering: bonnsward@gmail.com (attempt 1)",
-    "[03:57:56] [info] ============================================================",
-    "[03:57:57] [info] Profile: k1cwws6a",
-    "[03:58:01] [warn] Skipping everalon469q@gmail.com (Password field not found after email), trying next...",
-    "[03:58:01] [info] Waiting 36s before next...",
-    "[03:58:05] [info] CDP port: 45569",
-    "[03:58:08] [info] Stealth applied",
-    "[03:58:15] [info] Warmup: https://example.com/",
-    "[03:58:15] [info] Navigating to https://mulerun.com/invitation/RNV2MCPZQ2N3",
-    "[03:58:27] [info] SPA rendered after 10s",
-    "[03:58:33] [info] Using MuleRun password: RegbonnsX7k2",
-    "[03:58:33] [info] Waiting for Turnstile to solve before submitting...",
-    "[03:58:33] [info] Form state: {\"email\":\"bonnsward@gmail.com\",\"username\":\"bonnsward\",\"pwdLen\":12,\"hasTurnstile\":true}"
+    "[04:28:15] [info] [14] Registering: thihangnguyen612@gmail.com (attempt 1)",
+    "[04:28:15] [info] ============================================================",
+    "[04:28:15] [info] Looking for Google OAuth button...",
+    "[04:28:15] [info] Clicked Google OAuth, waiting for redirect...",
+    "[04:28:15] [info] Profile: k1cwxgg3",
+    "[04:28:23] [info] After OAuth click: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S269268110%3A1779856097891512&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=c843f417-9bd0-4d29-aba3-cd139313cd16&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hANKlFYvanTbcpt5uSXbE658cEBLt55FPb1hkEiv_-Tt0Pi4eSCov8s1E11qFbG1FLAHW0DW9SfX7lqKiNYEr5yD7uGffSBMgwDvskZFP04HY6uteaBm3FxPlxrEI6vK8DwRdIDFfU5CzfrrfAxutCoVcFC6F8SYrskzUpNrnGbN9R4yoshex3z38nWi9bfS5ZvH3UPe4tHyRslcj690SXxJoJ_WVKJ8QRZPKRFzKJ4hThayH-RXDNANt5bVYboQl3wtEU1RK73dQiPKGHjr5UBBWgV31xmdNvVVQTicUDmGZ5D6XHedS63cS6TYbJ1KoUTjXp6N1UhR-2WUex0JUGFcs_K_f0UGks5jqlPNR6oaISR74UzMd4oVR5VZMckoYn00D3k1ku2FQnAZ2B4hO1Tzv038mqko7r20ixNr5eeFYaH6ROmwucuT_uHCJfeFZj6mGPKQQevzl5vex2A1qUpcnaZYpg%26flowName%3DGeneralOAuthFlow%26as%3DS269268110%253A1779856097891512%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcfIpcupTPhYenvq15ySwduWSAogJScrCTICZEsZyRYCUEIx_CA28TpYdzOX8ms6BpsGTtUCvwl0U56sBXKcp-49fyRwLgzMMm5lkOi9DbwaWlvmNaQ",
+    "[04:28:23] [info] Google page state: email=true, pwd=true, chooser=false",
+    "[04:28:23] [info] Identifier page — typing email (human-like)...",
+    "[04:28:32] [info] CDP port: 43903",
+    "[04:28:35] [info] Stealth applied",
+    "[04:28:37] [info] Password page — typing password (human-like)...",
+    "[04:28:41] [info] Warmup: https://example.com/",
+    "[04:28:41] [info] Navigating to https://mulerun.com/invitation/RNV2MCPZQ2N3",
+    "[04:28:43] [info] [3] Phase 1: Embedded Google login...",
+    "[04:28:43] [info] === Embedded Login: dellxaviery40lj@gmail.com ===",
+    "[04:28:51] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-2012948126:1779856125275028",
+    "[04:28:51] [info] Typing email (human-like)...",
+    "[04:28:51] [info] SPA rendered after 8s",
+    "[04:28:53] [info] 2FA in OAuth flow — entering TOTP...",
+    "[04:28:57] [info] Using MuleRun password: RegthihaX7k2",
+    "[04:28:58] [info] Waiting for Turnstile to solve before submitting...",
+    "[04:28:58] [info] Form state: {\"email\":\"thihangnguyen612@gmail.com\",\"username\":\"thihangnguye\",\"pwdLen\":12,\"hasTurnstile\":true}",
+    "[04:29:05] [info] Typing password (human-like)...",
+    "[04:29:08] [info] Turnstile solved (token: 1029 chars) after 10s",
+    "[04:29:08] [info] Re-syncing all form fields after Turnstile via nativeInputValueSetter...",
+    "[04:29:08] [info] Re-sync result: #_r_0_-form-item:26, #_r_1_-form-item:12, #_r_2_-form-item:12",
+    "[04:29:08] [info] Clicked CONTINUE after Turnstile",
+    "[04:29:11] [info] Redirected to dit.ai after OAuth login — SUCCESS!",
+    "[04:29:14] [info] [3] Final URL: https://dit.ai/dashboard?auth_success=login&auth_intent=2cdf62edd70d4159bf28f3fa95f2b8c1",
+    "[04:29:14] [info] [3] COMPLETE: adalsardi37@gmail.com — registered!",
+    "[04:29:16] [info] After Continue: {\"url\":\"https://mulerun.com/signup\",\"bodyText\":\"ALL IN ONE\\nYour all-in-one AI office platform.\\nBack\\nCheck your emails !\\nWe've sent a verification code to:\\nthihangnguyen612@gmail.com\\nIf you don't get the email, check your spam folder.\\nCONTINUE\\nResend Email in 54 seconds\\nAlready have an account?\\nLog in\",\"inputs\":[{\"type\":\"text\",\"name\":\"code\",\"id\":\"_r_5_-form-item\"}]}",
+    "[04:29:16] [info] On verification code page — need email code",
+    "[04:29:16] [info] Confirmed: on verification code page",
+    "[04:29:16] [imap] [info] Searching for verification code: thihangnguyen612@gmail.com, query=\"mulerun\"",
+    "[04:29:18] [imap] [warn] IMAP error (attempt 1): Command failed",
+    "[04:29:18] [imap] [info] Attempt 2/6, waiting 8s...",
+    "[04:29:22] [info] 2FA detected, entering TOTP..."
   ],
   "registrationLog": [
-    "[03:56:58] [info] [1] COMPLETE (no verify): everalon469q@gmail.com"
+    "[03:56:58] [info] [1] COMPLETE (no verify): everalon469q@gmail.com",
+    "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
+    "[04:02:52] [info] [3] COMPLETE (no verify): nashbertina83@gmail.com",
+    "[04:02:56] [info] Registry updated: nashbertina83@gmail.com → mulerun registered (pwd stored)",
+    "[04:06:05] [info] [1] COMPLETE: nguyenphuonganh1317tv@gmail.com — registered!",
+    "[04:06:10] [info] Registry updated: nguyenphuonganh1317tv@gmail.com → ditai registered",
+    "[04:09:02] [info] [6] COMPLETE (no verify): tranvanquy1993pn@gmail.com",
+    "[04:09:06] [info] Registry updated: tranvanquy1993pn@gmail.com → mulerun registered (pwd stored)",
+    "[04:11:30] [info] [2] COMPLETE: heanghoch0@gmail.com — registered!",
+    "[04:12:39] [info] [7] COMPLETE (no verify): evekoo24@gmail.com",
+    "[04:12:43] [info] Registry updated: evekoo24@gmail.com → mulerun registered (pwd stored)",
+    "[04:14:27] [info] [8] COMPLETE (no verify): elizabethcarteri2raikvn@gmail.com",
+    "[04:14:31] [info] Registry updated: elizabethcarteri2raikvn@gmail.com → mulerun registered (pwd stored)",
+    "[04:14:34] [info] [2] COMPLETE: tranvanquy1993pn@gmail.com — registered!",
+    "[04:16:17] [info] [9] COMPLETE (no verify): nguyenkhacmanh448@gmail.com",
+    "[04:16:21] [info] Registry updated: nguyenkhacmanh448@gmail.com → mulerun registered (pwd stored)",
+    "[04:16:57] [info] [2] COMPLETE: evekoo24@gmail.com — registered!",
+    "[04:17:02] [info] Registry updated: evekoo24@gmail.com → ditai registered",
+    "[04:22:21] [info] [11] COMPLETE (no verify): dellxaviery40lj@gmail.com",
+    "[04:22:25] [info] Registry updated: dellxaviery40lj@gmail.com → mulerun registered (pwd stored)",
+    "[04:23:50] [warn] [3] INCOMPLETE: nguyenkhacmanh448@gmail.com (UNCLEAR)",
+    "[04:24:11] [info] [12] COMPLETE (no verify): publicspecial6224@gmail.com",
+    "[04:24:15] [info] Registry updated: publicspecial6224@gmail.com → mulerun registered (pwd stored)",
+    "[04:27:32] [info] [13] COMPLETE (no verify): ellieparry75@gmail.com",
+    "[04:27:37] [info] Registry updated: ellieparry75@gmail.com → mulerun registered (pwd stored)",
+    "[04:29:14] [info] [3] COMPLETE: adalsardi37@gmail.com — registered!"
   ]
 }
