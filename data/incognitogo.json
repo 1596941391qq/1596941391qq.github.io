@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T02:50:31.419Z",
+  "updatedAt": "2026-05-27T02:52:36.505Z",
   "status": {
     "round": 4,
     "phase": "visits",
@@ -70,11 +70,23 @@
       },
       "visitSuccess": 34,
       "errors": 49
+    },
+    {
+      "ts": "2026-05-27T02:52:36.505Z",
+      "round": 4,
+      "phase": "visits",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "visitSuccess": 34,
+      "errors": 49
     }
   ],
   "heartbeat": {
     "triggers": 0,
-    "lastCheck": "2026-05-27T02:50:31.419Z",
+    "lastCheck": "2026-05-27T02:52:36.505Z",
     "processAlive": true
   },
   "recentLogs": [
