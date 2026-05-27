@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T06:43:22.168Z",
+  "updatedAt": "2026-05-27T06:44:22.027Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,7 +20,7 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 17,
+          "visits": 18,
           "regs": 5,
           "returns": 1
         }
@@ -3824,16 +3824,35 @@
         "returnTotal": 0
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-27T06:44:22.027Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 19,
+        "mc": 7,
+        "dt": 4
+      },
+      "counters": {
+        "visitSuccess": 77,
+        "visitTotal": 77,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 0,
+        "returnTotal": 0
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-27 06:43:",
+    "[状态总结] 截至 2026-05-27 06:44:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 99 次行为 (匿名访问 77 + 首次使用 22 + 回访 0)",
     "  品牌注册: MuleRun=19 MyClaw=7 dit.ai=4",
-    "  今日进度: 61/792 任务完成 (8%)",
+    "  今日进度: 62/792 任务完成 (8%)",
     "    mulerun: 26/287 (9%) — 17v + 4r + 5rt",
-    "    dit: 23/210 (11%) — 17v + 5r + 1rt",
+    "    dit: 24/210 (11%) — 18v + 5r + 1rt",
     "    myclaw: 12/295 (4%) — 8v + 3r + 1rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
@@ -3850,7 +3869,8 @@
     "[2026-05-27T06:42:05] [info] [myclaw] All return accounts have conversation plans",
     "[2026-05-27T06:42:05] [info] [dit] Today's queue: 154v + 44r + 12rt = 210 tasks",
     "[2026-05-27T06:42:05] [info] [dit] All return accounts have conversation plans",
-    "[2026-05-27T06:42:05] [info] Health: http://0.0.0.0:9090/health"
+    "[2026-05-27T06:42:05] [info] Health: http://0.0.0.0:9090/health",
+    "[2026-05-27T06:43:23] [info] [dit] visit x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
