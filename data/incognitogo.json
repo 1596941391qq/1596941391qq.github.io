@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T02:47:17.766Z",
+  "updatedAt": "2026-05-27T02:50:31.419Z",
   "status": {
     "round": 4,
     "phase": "visits",
@@ -27,20 +27,20 @@
   "visits": {
     "today": {
       "mulerun": {
+        "total": 15,
+        "success": 15,
+        "fail": 0,
+        "ips": 0
+      },
+      "myclaw": {
         "total": 14,
         "success": 14,
         "fail": 0,
         "ips": 0
       },
-      "myclaw": {
-        "total": 13,
-        "success": 13,
-        "fail": 0,
-        "ips": 0
-      },
       "ditai": {
-        "total": 10,
-        "success": 10,
+        "total": 11,
+        "success": 11,
         "fail": 0,
         "ips": 0
       }
@@ -58,17 +58,26 @@
       },
       "visitSuccess": 31,
       "errors": 49
+    },
+    {
+      "ts": "2026-05-27T02:50:31.419Z",
+      "round": 4,
+      "phase": "visits",
+      "registry": {
+        "mr": 33,
+        "mc": 50,
+        "dt": 43
+      },
+      "visitSuccess": 34,
+      "errors": 49
     }
   ],
   "heartbeat": {
     "triggers": 0,
-    "lastCheck": "2026-05-27T02:47:17.766Z",
+    "lastCheck": "2026-05-27T02:50:31.419Z",
     "processAlive": true
   },
   "recentLogs": [
-    "[01:51:48]   [visit] #4 ditai OK: 1 pages, 29s",
-    "[01:53:33]   [visit] #5 mulerun OK: 1 pages, 80s",
-    "[01:57:34]   [visit] #5 myclaw OK: 1 pages, 224s",
     "[01:59:43]   [visit] #5 ditai OK: 1 pages, 109s",
     "[02:00:41]   [visit] #6 mulerun OK: 1 pages, 32s",
     "[02:04:14]   [visit] #6 myclaw OK: 1 pages, 194s",
@@ -85,6 +94,9 @@
     "[02:33:43]   [visit] #10 mulerun OK: 3 pages, 533s",
     "[02:37:15]   [visit] #10 myclaw OK: 1 pages, 193s",
     "[02:43:43]   [visit] #10 ditai OK: 1 pages, 366s",
-    "[02:45:26]   [visit] #11 mulerun OK: 1 pages, 83s"
+    "[02:45:26]   [visit] #11 mulerun OK: 1 pages, 83s",
+    "[02:47:36]   [visit] #11 myclaw OK: 1 pages, 111s",
+    "[02:48:36]   [visit] #11 ditai OK: 1 pages, 40s",
+    "[02:49:40]   [visit] #12 mulerun OK: 1 pages, 47s"
   ]
 }
