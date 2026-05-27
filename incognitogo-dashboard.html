@@ -193,8 +193,12 @@
         <span>实际捕获对话: <b id="planCaptured" style="color:rgb(var(--primary))">0</b></span>
       </div>
     </div>
+    <div class="chart-card" style="margin-bottom:16px">
+      <div class="chart-title">预生成计划审计 <span style="font-weight:400;color:rgb(var(--muted-fg));font-size:0.7rem">— 展示每个账号的完整对话链，验证真人标准</span></div>
+      <div id="planAuditList" style="max-height:600px;overflow-y:auto"></div>
+    </div>
     <div class="chart-card">
-      <div class="chart-title">AI 对话审计 (<span id="convCount">0</span> 次会话, <span id="convRounds">0</span> 轮对话)</div>
+      <div class="chart-title">AI 对话实际执行记录 (<span id="convCount">0</span> 次会话, <span id="convRounds">0</span> 轮对话)</div>
       <div id="convList" style="max-height:700px;overflow-y:auto"></div>
     </div>
   </div>
@@ -452,6 +456,38 @@ function renderConversations(data) {
   document.getElementById('planConsumed').textContent = plans.consumed || 0;
   document.getElementById('planFallback').textContent = plans.fallback || 0;
   document.getElementById('planCaptured').textContent = convs.length;
+
+  // Render plan audit
+  const auditContainer = document.getElementById('planAuditList');
+  const allPlans = (plans.plans || []).slice().reverse();
+  if (allPlans.length > 0) {
+    const typeIcons = {chat:'💬',generate_image:'🎨',create_task:'📋',browse_feature:'🔍',review_history:'📜'};
+    const langDetect = p => /[぀-ゟ゠-ヿ]/.test(p)?'🇯🇵': /[à-ÿ]|ção|ção/.test(p)?'🇧🇷': /[äöüß]/.test(p)?'🇩🇪':'🇺🇸';
+    auditContainer.innerHTML = allPlans.map(plan => {
+      const statusBadge = plan.consumed ? '<span style="background:rgb(var(--success)/0.1);color:rgb(var(--success));padding:2px 6px;border-radius:3px;font-size:0.7rem">已执行</span>' : plan.fallback ? '<span style="background:rgb(var(--warning)/0.1);color:rgb(var(--warning));padding:2px 6px;border-radius:3px;font-size:0.7rem">Fallback</span>' : '<span style="background:rgb(var(--primary)/0.1);color:rgb(var(--primary));padding:2px 6px;border-radius:3px;font-size:0.7rem">待执行</span>';
+      const lang = plan.actions.length > 0 ? langDetect(plan.actions[0].prompt) : '';
+      const header = `<div class="conv-header" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.conv-toggle').textContent=this.nextElementSibling.classList.contains('open')?'▼':'▶'">
+        <div class="conv-meta">
+          <span class="conv-toggle">▶</span>
+          ${brandBadge(plan.brand)}
+          <span>${plan.email}</span>
+          <span>${lang}</span>
+          <span style="color:rgb(var(--muted-fg))">${plan.rounds} 轮</span>
+          ${statusBadge}
+          <span style="color:rgb(var(--muted-fg));font-size:0.7rem">${plan.generatedAt ? plan.generatedAt.slice(5,16).replace('T',' ') : ''}</span>
+        </div>
+      </div>`;
+      const body = (plan.actions||[]).map((a, i) => `<div class="conv-round">
+        <div class="conv-prompt"><span class="conv-round-num">${i+1}</span>${typeIcons[a.type]||'💬'} <b>[${a.type}]</b> ${(a.prompt||'').replace(/</g,'&lt;')}</div>
+        ${a.expectedTopic ? `<div class="conv-reply" style="opacity:0.7;font-style:italic">→ 预期回复方向: ${a.expectedTopic.replace(/</g,'&lt;')}</div>` : ''}
+      </div>`).join('');
+      return `<div class="conv-card">${header}<div class="conv-rounds">${body}</div></div>`;
+    }).join('');
+  } else {
+    auditContainer.innerHTML = '<div style="padding:20px;color:rgb(var(--muted-fg));text-align:center">暂无预生成计划数据。等待下次 sync 拉取。</div>';
+  }
+
+  // Render actual conversation executions
   const container = document.getElementById('convList');
   container.innerHTML = convs.slice().reverse().map((c, idx) => {
     const rounds = c.conversations || [];
@@ -475,7 +511,7 @@ function renderConversations(data) {
     </div>`).join('');
     return `<div class="conv-card">${header}<div class="conv-rounds">${body}</div></div>`;
   }).join('');
-  if (convs.length === 0) container.innerHTML = '<div style="padding:20px;color:rgb(var(--muted-fg));text-align:center">暂无 AI 对话记录。可能原因：品牌页面 chat input selector 未匹配到元素，或会话尚未进入 first-use/return 阶段。</div>';
+  if (convs.length === 0) container.innerHTML = '<div style="padding:20px;color:rgb(var(--muted-fg));text-align:center">暂无实际执行的 AI 对话记录。回访任务执行后会出现在这里。</div>';
 }
 
 function renderLogs(data) {
