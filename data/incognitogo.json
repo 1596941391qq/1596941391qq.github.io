@@ -1,27 +1,32 @@
 {
-  "updatedAt": "2026-05-27T22:54:13.598Z",
+  "updatedAt": "2026-05-27T23:29:04.248Z",
   "status": {
     "round": 4,
     "phase": "unified-scheduler"
   },
   "registry": {
     "mulerun": 24,
-    "myclaw": 33,
+    "myclaw": 35,
     "dit": 28,
-    "total": 85
+    "total": 87
   },
   "heartbeat": {
-    "lastCheck": "2026-05-27T22:54:13.600Z",
+    "lastCheck": "2026-05-27T23:29:04.251Z",
     "processAlive": true,
-    "memUsedMB": 1534,
+    "memUsedMB": 2289,
     "memTotalMB": 7941,
-    "chromeProcs": 25
+    "chromeProcs": 41
   },
   "recentLogs": [
-    "[2026-05-27T22:37:18] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-05-27T22:39:08] [warn] [mulerun] Breaker open, waiting 190s...",
-    "[2026-05-27T22:39:16] [info] [dit] register x3 OK",
-    "[2026-05-27T22:48:57] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-05-27T22:49:53] [info] [dit] visit x5 OK"
+    "[2026-05-27T22:56:39] [info] [myclaw] register x1 OK",
+    "[2026-05-27T22:59:38] [info] [dit] visit x5 OK",
+    "[2026-05-27T23:00:37] [error] [mulerun] register x1 FAILED: exit 1",
+    "[2026-05-27T23:04:04] [info] [mulerun] visit x2 OK",
+    "[2026-05-27T23:04:52] [info] [myclaw] visit x2 OK",
+    "[2026-05-27T23:06:51] [info] [myclaw] return x1 OK",
+    "[2026-05-27T23:14:21] [info] [dit] visit x5 OK",
+    "[2026-05-27T23:18:23] [info] [dit] visit x2 OK",
+    "[2026-05-27T23:21:07] [info] [myclaw] register x1 OK",
+    "[2026-05-27T23:25:25] [info] [myclaw] return x1 OK"
   ]
 }
