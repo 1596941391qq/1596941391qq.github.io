@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T19:28:57.833Z",
+  "updatedAt": "2026-05-28T20:02:40.629Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,7 +20,7 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 207,
+          "visits": 212,
           "regs": 60,
           "returns": 16
         }
@@ -28,7 +28,7 @@
       "myclaw": {
         "2026-05-27": {
           "visits": 151,
-          "regs": 49,
+          "regs": 50,
           "returns": 17
         }
       }
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 53,
+    "myclaw": 54,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -849,6 +849,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-28T18:36:19.429Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "NoraJulia840@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T19:57:59.777Z",
             "status": "active"
           }
         ],
@@ -9792,13 +9804,32 @@
         "returnTotal": 22
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T20:02:40.629Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 54,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 334,
+        "visitTotal": 334,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 22,
+        "returnTotal": 22
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 19:28:",
+    "[状态总结] 截至 2026-05-28 20:02:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 378 次行为 (匿名访问 334 + 首次使用 22 + 回访 22)",
-    "  品牌注册: MuleRun=35 MyClaw=53 dit.ai=8",
+    "  品牌注册: MuleRun=35 MyClaw=54 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
