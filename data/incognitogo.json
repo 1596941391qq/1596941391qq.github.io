@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T17:54:07.511Z",
+  "updatedAt": "2026-05-28T18:28:59.093Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,7 +20,7 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 195,
+          "visits": 200,
           "regs": 60,
           "returns": 15
         }
@@ -9558,10 +9558,29 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T18:28:59.093Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 52,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 324,
+        "visitTotal": 324,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 21,
+        "returnTotal": 21
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 17:54:",
+    "[状态总结] 截至 2026-05-28 18:28:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 367 次行为 (匿名访问 324 + 首次使用 22 + 回访 21)",
     "  品牌注册: MuleRun=35 MyClaw=52 dit.ai=8",
