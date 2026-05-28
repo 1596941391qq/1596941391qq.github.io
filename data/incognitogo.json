@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T10:54:03.655Z",
+  "updatedAt": "2026-05-28T11:28:57.543Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -21,7 +21,7 @@
       "dit": {
         "2026-05-27": {
           "visits": 165,
-          "regs": 44,
+          "regs": 47,
           "returns": 13
         }
       },
@@ -131,7 +131,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T03:49:57.752Z",
+            "registeredAt": "2026-05-28T10:57:56.922Z",
             "status": "active"
           },
           {
@@ -148,7 +148,7 @@
         "brands": [
           {
             "name": "ditai",
-            "registeredAt": "2026-05-27T23:36:38.082Z",
+            "registeredAt": "2026-05-28T11:01:07.848Z",
             "status": "active"
           },
           {
@@ -170,7 +170,7 @@
         "brands": [
           {
             "name": "ditai",
-            "registeredAt": "2026-05-27T22:25:47.404Z",
+            "registeredAt": "2026-05-28T11:04:31.830Z",
             "status": "active"
           },
           {
@@ -8937,10 +8937,29 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T11:28:57.543Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 46,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 304,
+        "visitTotal": 304,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 21,
+        "returnTotal": 21
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 10:54:",
+    "[状态总结] 截至 2026-05-28 11:28:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 347 次行为 (匿名访问 304 + 首次使用 22 + 回访 21)",
     "  品牌注册: MuleRun=35 MyClaw=46 dit.ai=8",
