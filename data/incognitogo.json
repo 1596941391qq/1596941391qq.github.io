@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T18:28:59.093Z",
+  "updatedAt": "2026-05-28T18:54:05.279Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,16 +20,16 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 200,
+          "visits": 207,
           "regs": 60,
           "returns": 15
         }
       },
       "myclaw": {
         "2026-05-27": {
-          "visits": 141,
-          "regs": 48,
-          "returns": 16
+          "visits": 142,
+          "regs": 49,
+          "returns": 17
         }
       }
     },
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 52,
+    "myclaw": 53,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -843,6 +843,18 @@
         "visits": []
       },
       {
+        "email": "LucreGio47@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T18:36:19.429Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "WeijieDearman@gmail.com",
         "region": "GB",
         "brands": [
@@ -1057,12 +1069,12 @@
     }
   },
   "counters": {
-    "visitSuccess": 324,
-    "visitTotal": 324,
+    "visitSuccess": 325,
+    "visitTotal": 325,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
-    "returnSuccess": 21,
-    "returnTotal": 21
+    "returnSuccess": 22,
+    "returnTotal": 22
   },
   "activities": {
     "anonymous": [
@@ -6022,6 +6034,21 @@
         "success": true
       },
       {
+        "ts": "2026-05-28T18:38:25.303Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cyprhx",
+        "region": "BR",
+        "ip": "177.64.225.38",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 14,
+        "actions": 4,
+        "pages": 0,
+        "maxScroll": 5,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:19:43.567Z",
         "brand": "ditai",
         "type": "anonymous",
@@ -6780,6 +6807,21 @@
         "actions": 22,
         "pages": 7,
         "maxScroll": 98,
+        "success": true
+      },
+      {
+        "ts": "2026-05-28T18:42:43.275Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cypvvy",
+        "region": "GB",
+        "ip": "83.167.185.11",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 15,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 10,
         "success": true
       }
     ]
@@ -9577,13 +9619,32 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T18:54:05.279Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 53,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 325,
+        "visitTotal": 325,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 22,
+        "returnTotal": 22
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 18:28:",
+    "[状态总结] 截至 2026-05-28 18:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 367 次行为 (匿名访问 324 + 首次使用 22 + 回访 21)",
-    "  品牌注册: MuleRun=35 MyClaw=52 dit.ai=8",
+    "  历史累计完成: 369 次行为 (匿名访问 325 + 首次使用 22 + 回访 22)",
+    "  品牌注册: MuleRun=35 MyClaw=53 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
