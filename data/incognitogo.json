@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T12:54:14.565Z",
+  "updatedAt": "2026-05-28T13:29:00.313Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,8 +20,8 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 172,
-          "regs": 50,
+          "visits": 173,
+          "regs": 51,
           "returns": 13
         }
       },
@@ -131,7 +131,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T12:26:23.453Z",
+            "registeredAt": "2026-05-28T13:17:53.535Z",
             "status": "active"
           },
           {
@@ -9085,10 +9085,29 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T13:29:00.313Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 47,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 308,
+        "visitTotal": 308,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 21,
+        "returnTotal": 21
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 12:54:",
+    "[状态总结] 截至 2026-05-28 13:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 351 次行为 (匿名访问 308 + 首次使用 22 + 回访 21)",
     "  品牌注册: MuleRun=35 MyClaw=47 dit.ai=8",
