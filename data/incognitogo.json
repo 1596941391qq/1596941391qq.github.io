@@ -1,32 +1,27 @@
 {
-  "updatedAt": "2026-05-28T01:36:28.027Z",
+  "updatedAt": "2026-05-28T01:54:09.996Z",
   "status": {
     "round": 4,
     "phase": "unified-scheduler"
   },
   "registry": {
-    "mulerun": 25,
+    "mulerun": 30,
     "myclaw": 38,
     "dit": 28,
-    "total": 91
+    "total": 96
   },
   "heartbeat": {
-    "lastCheck": "2026-05-28T01:36:28.029Z",
+    "lastCheck": "2026-05-28T01:54:09.998Z",
     "processAlive": true,
-    "memUsedMB": 3382,
+    "memUsedMB": 2933,
     "memTotalMB": 7941,
-    "chromeProcs": 64
+    "chromeProcs": 57
   },
   "recentLogs": [
-    "[2026-05-27T23:43:18] [info] [dit] return x1 OK",
-    "[2026-05-27T23:44:43] [info] [dit] visit x1 OK",
-    "[2026-05-28T00:10:25] [info] [myclaw] register x1 OK",
-    "[2026-05-28T00:20:47] [info] [dit] register x2 OK",
-    "[2026-05-28T00:20:49] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-05-28T00:35:23] [info] [myclaw] visit x4 OK",
     "[2026-05-28T00:52:03] [warn] [mulerun] Circuit OPEN — 3 consecutive failures, cooling down 300s",
     "[2026-05-28T00:52:03] [error] [mulerun] register x3 FAILED: exit 1",
     "[2026-05-28T00:54:09] [info] [dit] visit x1 OK",
-    "[2026-05-28T01:34:09] [info] [myclaw] register x2 OK"
+    "[2026-05-28T01:34:09] [info] [myclaw] register x2 OK",
+    "[2026-05-28T01:53:49] [info] [dit] register x1 OK"
   ]
 }
