@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T15:29:00.315Z",
+  "updatedAt": "2026-05-28T15:54:11.839Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,15 +20,15 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 187,
-          "regs": 53,
-          "returns": 13
+          "visits": 188,
+          "regs": 55,
+          "returns": 15
         }
       },
       "myclaw": {
         "2026-05-27": {
           "visits": 131,
-          "regs": 45,
+          "regs": 46,
           "returns": 16
         }
       }
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 49,
+    "myclaw": 50,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -148,7 +148,7 @@
         "brands": [
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T11:55:57.516Z",
+            "registeredAt": "2026-05-28T15:35:39.513Z",
             "status": "active"
           },
           {
@@ -801,6 +801,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-28T13:32:43.001Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MorandoCrhis@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T15:40:15.753Z",
             "status": "active"
           }
         ],
@@ -9304,13 +9316,32 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T15:54:11.839Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 50,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 315,
+        "visitTotal": 315,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 21,
+        "returnTotal": 21
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 15:29:",
+    "[状态总结] 截至 2026-05-28 15:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 358 次行为 (匿名访问 315 + 首次使用 22 + 回访 21)",
-    "  品牌注册: MuleRun=35 MyClaw=49 dit.ai=8",
+    "  品牌注册: MuleRun=35 MyClaw=50 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
