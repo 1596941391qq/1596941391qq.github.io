@@ -1,32 +1,27 @@
 {
-  "updatedAt": "2026-05-28T04:29:21.726Z",
+  "updatedAt": "2026-05-28T04:54:14.323Z",
   "status": {
     "round": 4,
     "phase": "unified-scheduler"
   },
   "registry": {
     "mulerun": 32,
-    "myclaw": 40,
+    "myclaw": 41,
     "dit": 28,
-    "total": 100
+    "total": 101
   },
   "heartbeat": {
-    "lastCheck": "2026-05-28T04:29:21.728Z",
+    "lastCheck": "2026-05-28T04:54:14.326Z",
     "processAlive": true,
-    "memUsedMB": 3031,
+    "memUsedMB": 3047,
     "memTotalMB": 7941,
-    "chromeProcs": 58
+    "chromeProcs": 59
   },
   "recentLogs": [
-    "[2026-05-28T03:22:05] [info] [dit] visit x5 OK",
-    "[2026-05-28T03:35:49] [info] [dit] visit x3 OK",
-    "[2026-05-28T03:50:07] [info] [dit] register x2 OK",
-    "[2026-05-28T03:51:11] [info] [myclaw] register x2 OK",
-    "[2026-05-28T03:57:20] [info] [dit] visit x2 OK",
-    "[2026-05-28T04:05:29] [info] [myclaw] visit x4 OK",
-    "[2026-05-28T04:06:40] [info] [mulerun] visit x2 OK",
     "[2026-05-28T04:10:10] [info] [myclaw] return x1 OK",
     "[2026-05-28T04:17:45] [info] [dit] register x1 OK",
-    "[2026-05-28T04:18:26] [info] [myclaw] visit x3 OK"
+    "[2026-05-28T04:18:26] [info] [myclaw] visit x3 OK",
+    "[2026-05-28T04:42:52] [info] [dit] visit x5 OK",
+    "[2026-05-28T04:50:14] [info] [dit] visit x4 OK"
   ]
 }
