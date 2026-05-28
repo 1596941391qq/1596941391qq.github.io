@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T20:54:03.122Z",
+  "updatedAt": "2026-05-28T21:29:05.152Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,7 +20,7 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 217,
+          "visits": 220,
           "regs": 60,
           "returns": 17
         }
@@ -28,8 +28,8 @@
       "myclaw": {
         "2026-05-27": {
           "visits": 153,
-          "regs": 50,
-          "returns": 17
+          "regs": 53,
+          "returns": 18
         }
       }
     },
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 55,
+    "myclaw": 57,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -879,6 +879,30 @@
         "visits": []
       },
       {
+        "email": "PalmaAlessandra548@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T21:00:37.040Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "WayoBellefeuille@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T21:15:36.355Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "WeijieDearman@gmail.com",
         "region": "GB",
         "brands": [
@@ -1097,8 +1121,8 @@
     "visitTotal": 336,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
-    "returnSuccess": 22,
-    "returnTotal": 22
+    "returnSuccess": 23,
+    "returnTotal": 23
   },
   "activities": {
     "anonymous": [
@@ -7012,6 +7036,21 @@
         "pages": 0,
         "maxScroll": 10,
         "success": true
+      },
+      {
+        "ts": "2026-05-28T21:28:31.116Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cytllt",
+        "region": "BR",
+        "ip": "45.6.190.24",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 10,
+        "actions": 1,
+        "pages": 0,
+        "maxScroll": 3,
+        "success": true
       }
     ]
   },
@@ -9903,13 +9942,32 @@
         "returnTotal": 22
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T21:29:05.152Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 57,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 336,
+        "visitTotal": 336,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 23,
+        "returnTotal": 23
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 20:54:",
+    "[状态总结] 截至 2026-05-28 21:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 380 次行为 (匿名访问 336 + 首次使用 22 + 回访 22)",
-    "  品牌注册: MuleRun=35 MyClaw=55 dit.ai=8",
+    "  历史累计完成: 381 次行为 (匿名访问 336 + 首次使用 22 + 回访 23)",
+    "  品牌注册: MuleRun=35 MyClaw=57 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
