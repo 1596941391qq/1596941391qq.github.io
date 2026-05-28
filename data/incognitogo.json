@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T20:29:03.763Z",
+  "updatedAt": "2026-05-28T20:54:03.122Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,7 +20,7 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 212,
+          "visits": 217,
           "regs": 60,
           "returns": 17
         }
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 54,
+    "myclaw": 55,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -861,6 +861,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-28T19:57:59.777Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "BdranWalid292@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T20:46:31.863Z",
             "status": "active"
           }
         ],
@@ -9872,13 +9884,32 @@
         "returnTotal": 22
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T20:54:03.122Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 55,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 336,
+        "visitTotal": 336,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 22,
+        "returnTotal": 22
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 20:29:",
+    "[状态总结] 截至 2026-05-28 20:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 380 次行为 (匿名访问 336 + 首次使用 22 + 回访 22)",
-    "  品牌注册: MuleRun=35 MyClaw=54 dit.ai=8",
+    "  品牌注册: MuleRun=35 MyClaw=55 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
