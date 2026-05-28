@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T00:29:09.516Z",
+  "updatedAt": "2026-05-28T00:54:13.129Z",
   "status": {
     "round": 4,
     "phase": "unified-scheduler"
@@ -11,22 +11,17 @@
     "total": 88
   },
   "heartbeat": {
-    "lastCheck": "2026-05-28T00:29:09.518Z",
+    "lastCheck": "2026-05-28T00:54:13.132Z",
     "processAlive": true,
-    "memUsedMB": 1378,
+    "memUsedMB": 860,
     "memTotalMB": 7941,
-    "chromeProcs": 12
+    "chromeProcs": 0
   },
   "recentLogs": [
-    "[2026-05-27T23:25:25] [info] [myclaw] return x1 OK",
-    "[2026-05-27T23:34:37] [info] [myclaw] visit x3 OK",
-    "[2026-05-27T23:36:57] [info] [dit] register x1 OK",
-    "[2026-05-27T23:41:46] [info] [dit] visit x1 OK",
-    "[2026-05-27T23:42:07] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-05-27T23:43:18] [info] [dit] return x1 OK",
-    "[2026-05-27T23:44:43] [info] [dit] visit x1 OK",
-    "[2026-05-28T00:10:25] [info] [myclaw] register x1 OK",
-    "[2026-05-28T00:20:47] [info] [dit] register x2 OK",
-    "[2026-05-28T00:20:49] [error] [mulerun] register x3 FAILED: exit 1"
+    "[2026-05-28T00:20:49] [error] [mulerun] register x3 FAILED: exit 1",
+    "[2026-05-28T00:35:23] [info] [myclaw] visit x4 OK",
+    "[2026-05-28T00:52:03] [warn] [mulerun] Circuit OPEN — 3 consecutive failures, cooling down 300s",
+    "[2026-05-28T00:52:03] [error] [mulerun] register x3 FAILED: exit 1",
+    "[2026-05-28T00:54:09] [info] [dit] visit x1 OK"
   ]
 }
