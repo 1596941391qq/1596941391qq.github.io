@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T11:54:06.481Z",
+  "updatedAt": "2026-05-28T12:29:05.351Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -20,15 +20,15 @@
       },
       "dit": {
         "2026-05-27": {
-          "visits": 165,
-          "regs": 47,
+          "visits": 167,
+          "regs": 50,
           "returns": 13
         }
       },
       "myclaw": {
         "2026-05-27": {
           "visits": 122,
-          "regs": 42,
+          "regs": 43,
           "returns": 16
         }
       }
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 46,
+    "myclaw": 47,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -109,7 +109,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T10:19:09.070Z",
+            "registeredAt": "2026-05-28T12:22:40.992Z",
             "status": "active"
           },
           {
@@ -131,7 +131,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T10:57:56.922Z",
+            "registeredAt": "2026-05-28T12:26:23.453Z",
             "status": "active"
           },
           {
@@ -148,7 +148,7 @@
         "brands": [
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T11:01:07.848Z",
+            "registeredAt": "2026-05-28T11:55:57.516Z",
             "status": "active"
           },
           {
@@ -772,6 +772,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-28T06:34:54.494Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "RuhterEncarnacion@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T12:05:06.713Z",
             "status": "active"
           }
         ],
@@ -8975,13 +8987,32 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T12:29:05.351Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 47,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 304,
+        "visitTotal": 304,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 21,
+        "returnTotal": 21
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 11:54:",
+    "[状态总结] 截至 2026-05-28 12:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 347 次行为 (匿名访问 304 + 首次使用 22 + 回访 21)",
-    "  品牌注册: MuleRun=35 MyClaw=46 dit.ai=8",
+    "  品牌注册: MuleRun=35 MyClaw=47 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
