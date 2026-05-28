@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T17:35:53.890Z",
+  "updatedAt": "2026-05-28T17:54:07.511Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -21,14 +21,14 @@
       "dit": {
         "2026-05-27": {
           "visits": 195,
-          "regs": 58,
+          "regs": 60,
           "returns": 15
         }
       },
       "myclaw": {
         "2026-05-27": {
-          "visits": 140,
-          "regs": 47,
+          "visits": 141,
+          "regs": 48,
           "returns": 16
         }
       }
@@ -58,7 +58,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 35,
-    "myclaw": 51,
+    "myclaw": 52,
     "ditai": 8,
     "total": 485,
     "accounts": [
@@ -109,7 +109,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T17:16:21.115Z",
+            "registeredAt": "2026-05-28T17:37:24.579Z",
             "status": "active"
           },
           {
@@ -131,7 +131,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-28T14:07:57.444Z",
+            "registeredAt": "2026-05-28T17:40:38.938Z",
             "status": "active"
           },
           {
@@ -831,6 +831,18 @@
         "visits": []
       },
       {
+        "email": "MariBarragan220@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-28T17:51:19.996Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "WeijieDearman@gmail.com",
         "region": "GB",
         "brands": [
@@ -1045,8 +1057,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 323,
-    "visitTotal": 323,
+    "visitSuccess": 324,
+    "visitTotal": 324,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 21,
@@ -5995,6 +6007,21 @@
         "success": true
       },
       {
+        "ts": "2026-05-28T17:53:13.757Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1cyojtp",
+        "region": "GB",
+        "ip": "90.249.101.31",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 9,
+        "actions": 2,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:19:43.567Z",
         "brand": "ditai",
         "type": "anonymous",
@@ -9512,13 +9539,32 @@
         "returnTotal": 21
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-28T17:54:07.511Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 35,
+        "mc": 52,
+        "dt": 8
+      },
+      "counters": {
+        "visitSuccess": 324,
+        "visitTotal": 324,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 21,
+        "returnTotal": 21
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-28 17:35:",
+    "[状态总结] 截至 2026-05-28 17:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 366 次行为 (匿名访问 323 + 首次使用 22 + 回访 21)",
-    "  品牌注册: MuleRun=35 MyClaw=51 dit.ai=8",
+    "  历史累计完成: 367 次行为 (匿名访问 324 + 首次使用 22 + 回访 21)",
+    "  品牌注册: MuleRun=35 MyClaw=52 dit.ai=8",
     "  今日进度: 0/432 任务完成 (0%)",
     "    mulerun: 0/46 (0%) — 0v + 0r + 0rt",
     "    dit: 0/181 (0%) — 0v + 0r + 0rt",
