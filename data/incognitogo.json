@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-30T10:57:02.563Z",
+  "updatedAt": "2026-05-30T11:04:25.301Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -40,26 +40,7 @@
     },
     "lastPlan": null
   },
-  "todayPlan": {
-    "mulerun": {
-      "visits": 224,
-      "regs": 46,
-      "returns": 22,
-      "total": 292
-    },
-    "myclaw": {
-      "visits": 138,
-      "regs": 78,
-      "returns": 13,
-      "total": 229
-    },
-    "dit": {
-      "visits": 154,
-      "regs": 44,
-      "returns": 20,
-      "total": 218
-    }
-  },
+  "todayPlan": {},
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 36,
@@ -12989,17 +12970,36 @@
         "returnTotal": 23
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-30T11:04:25.301Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 36,
+        "mc": 79,
+        "dt": 18
+      },
+      "counters": {
+        "visitSuccess": 352,
+        "visitTotal": 352,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 23,
+        "returnTotal": 23
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-30 10:57:",
+    "[状态总结] 截至 2026-05-30 11:04:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 397 次行为 (匿名访问 352 + 首次使用 22 + 回访 23)",
     "  品牌注册: MuleRun=36 MyClaw=79 dit.ai=18",
-    "  今日进度: 0/739 任务完成 (0%)",
-    "    mulerun: 0/292 (0%) — 0v + 0r + 0rt",
-    "    myclaw: 0/229 (0%) — 0v + 0r + 0rt",
-    "    dit: 0/218 (0%) — 0v + 0r + 0rt",
+    "  今日进度: 0/0 任务完成 (0%)",
+    "    mulerun: 0/0 (0%) — 0v + 0r + 0rt",
+    "    myclaw: 0/0 (0%) — 0v + 0r + 0rt",
+    "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
     "[04:35:14] [error] [5] attempt 1 FAILED: Create profile: AggregateError",
