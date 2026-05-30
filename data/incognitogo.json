@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-30T10:54:20.604Z",
+  "updatedAt": "2026-05-30T10:57:02.563Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -63,7 +63,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 36,
-    "myclaw": 78,
+    "myclaw": 79,
     "ditai": 18,
     "total": 485,
     "accounts": [
@@ -1217,6 +1217,18 @@
           {
             "name": "mulerun",
             "registeredAt": "2026-05-18T00:00:00Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "SabDami377@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-30T10:54:25.892Z",
             "status": "active"
           }
         ],
@@ -12958,13 +12970,32 @@
         "returnTotal": 23
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-30T10:57:02.563Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 36,
+        "mc": 79,
+        "dt": 18
+      },
+      "counters": {
+        "visitSuccess": 352,
+        "visitTotal": 352,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 23,
+        "returnTotal": 23
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-30 10:54:",
+    "[状态总结] 截至 2026-05-30 10:57:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 397 次行为 (匿名访问 352 + 首次使用 22 + 回访 23)",
-    "  品牌注册: MuleRun=36 MyClaw=78 dit.ai=18",
+    "  品牌注册: MuleRun=36 MyClaw=79 dit.ai=18",
     "  今日进度: 0/739 任务完成 (0%)",
     "    mulerun: 0/292 (0%) — 0v + 0r + 0rt",
     "    myclaw: 0/229 (0%) — 0v + 0r + 0rt",
