@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T03:54:38.751Z",
+  "updatedAt": "2026-05-31T04:29:36.255Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -62,7 +62,7 @@
           "returns": 5
         },
         "2026-05-31": {
-          "visits": 6,
+          "visits": 8,
           "regs": 2,
           "returns": 1
         }
@@ -92,9 +92,9 @@
   },
   "heartbeatTriggers": 0,
   "registry": {
-    "mulerun": 70,
-    "myclaw": 151,
-    "ditai": 75,
+    "mulerun": 75,
+    "myclaw": 153,
+    "ditai": 76,
     "total": 485,
     "accounts": [
       {
@@ -1995,12 +1995,53 @@
         "visits": []
       },
       {
+        "email": "winninghamsimienay673@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T03:54:49.514Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "StarrPalau@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T03:58:44.108Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "SanchezrojasMartinn@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T04:09:10.764Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "SagradoDadey@gmail.com",
         "region": "JP",
         "brands": [
           {
             "name": "myclaw",
             "registeredAt": "2026-05-30T14:42:34.540Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T04:14:20.979Z",
             "status": "active"
           }
         ],
@@ -2013,6 +2054,11 @@
           {
             "name": "ditai",
             "registeredAt": "2026-05-30T18:24:04.654Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T04:19:33.561Z",
             "status": "active"
           }
         ],
@@ -2818,6 +2864,18 @@
         "visits": []
       },
       {
+        "email": "CefaloBossert@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T04:27:53.489Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "PizzellaRexroad@gmail.com",
         "region": "US",
         "brands": [
@@ -2980,6 +3038,30 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-31T03:35:16.145Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "CenknerMomirka@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T04:02:00.791Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "minhanhxinhgaii111@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T04:12:34.728Z",
             "status": "active"
           }
         ],
@@ -18256,17 +18338,36 @@
         "returnTotal": 32
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T04:29:36.255Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 75,
+        "mc": 153,
+        "dt": 76
+      },
+      "counters": {
+        "visitSuccess": 463,
+        "visitTotal": 463,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 32,
+        "returnTotal": 32
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 03:54:",
+    "[状态总结] 截至 2026-05-31 04:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 517 次行为 (匿名访问 463 + 首次使用 22 + 回访 32)",
-    "  品牌注册: MuleRun=70 MyClaw=151 dit.ai=75",
-    "  今日进度: 20/168 任务完成 (12%)",
+    "  品牌注册: MuleRun=75 MyClaw=153 dit.ai=76",
+    "  今日进度: 22/168 任务完成 (13%)",
     "    mulerun: 8/56 (14%) — 8v + 0r + 0rt",
     "    myclaw: 3/56 (5%) — 2v + 1r + 0rt",
-    "    dit: 9/56 (16%) — 6v + 2r + 1rt",
+    "    dit: 11/56 (20%) — 8v + 2r + 1rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
     "[2026-05-31T02:37:18] [info] === Unified Scheduler ===",
@@ -18297,7 +18398,8 @@
     "[2026-05-31T03:29:50] [info] [dit] visit x4 OK",
     "[2026-05-31T03:38:11] [error] [mulerun] register x1 FAILED: exit 1",
     "[2026-05-31T03:50:58] [info] [dit] return x1 OK",
-    "[2026-05-31T03:53:34] [info] [mulerun] visit x4 OK"
+    "[2026-05-31T03:53:34] [info] [mulerun] visit x4 OK",
+    "[2026-05-31T04:10:29] [info] [dit] visit x2 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
