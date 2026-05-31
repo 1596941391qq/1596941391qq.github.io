@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T11:28:58.880Z",
+  "updatedAt": "2026-05-31T11:54:32.889Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -45,8 +45,8 @@
           "returns": 5
         },
         "2026-05-31": {
-          "visits": 24,
-          "regs": 9,
+          "visits": 26,
+          "regs": 10,
           "returns": 4
         }
       },
@@ -64,7 +64,7 @@
         "2026-05-31": {
           "visits": 36,
           "regs": 12,
-          "returns": 2
+          "returns": 3
         }
       }
     },
@@ -93,8 +93,8 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 101,
-    "myclaw": 182,
-    "ditai": 102,
+    "myclaw": 183,
+    "ditai": 104,
     "total": 492,
     "accounts": [
       {
@@ -1751,6 +1751,11 @@
           {
             "name": "ditai",
             "registeredAt": "2026-05-30T15:23:07.689Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T11:37:57.384Z",
             "status": "active"
           }
         ],
@@ -3855,6 +3860,23 @@
             "name": "myclaw",
             "registeredAt": "2026-05-31T06:43:39.620Z",
             "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T11:45:31.521Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "OkimotoKielman617@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T11:53:16.898Z",
+            "status": "active"
           }
         ],
         "visits": []
@@ -3970,8 +3992,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 515,
-    "visitTotal": 515,
+    "visitSuccess": 517,
+    "visitTotal": 517,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 40,
@@ -11936,6 +11958,36 @@
         "actions": 20,
         "pages": 3,
         "maxScroll": 71,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T11:32:09.801Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d2c33v",
+        "region": "BR",
+        "ip": "152.249.191.102",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 49,
+        "actions": 10,
+        "pages": 0,
+        "maxScroll": 37,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T11:33:48.231Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1d2c4kk",
+        "region": "US",
+        "ip": "97.241.44.28",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 14,
+        "actions": 4,
+        "pages": 0,
+        "maxScroll": 3,
         "success": true
       },
       {
@@ -20407,22 +20459,38 @@
         "returnTotal": 40
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T11:54:32.889Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 101,
+        "mc": 183,
+        "dt": 104
+      },
+      "counters": {
+        "visitSuccess": 517,
+        "visitTotal": 517,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 40,
+        "returnTotal": 40
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 11:28:",
+    "[状态总结] 截至 2026-05-31 11:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 577 次行为 (匿名访问 515 + 首次使用 22 + 回访 40)",
-    "  品牌注册: MuleRun=101 MyClaw=182 dit.ai=102",
-    "  今日进度: 136/168 任务完成 (81%)",
+    "  历史累计完成: 579 次行为 (匿名访问 517 + 首次使用 22 + 回访 40)",
+    "  品牌注册: MuleRun=101 MyClaw=183 dit.ai=104",
+    "  今日进度: 140/168 任务完成 (83%)",
     "    mulerun: 49/56 (88%) — 38v + 7r + 4rt",
-    "    myclaw: 37/56 (66%) — 24v + 9r + 4rt",
-    "    dit: 50/56 (89%) — 36v + 12r + 2rt",
+    "    myclaw: 40/56 (71%) — 26v + 10r + 4rt",
+    "    dit: 51/56 (91%) — 36v + 12r + 3rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-31T06:57:30] [info] [myclaw] visit x1 OK",
-    "[2026-05-31T07:00:11] [info] [dit] register x1 OK",
-    "[2026-05-31T07:14:43] [info] [mulerun] register x3 OK",
     "[2026-05-31T07:17:52] [info] [myclaw] register x1 OK",
     "[2026-05-31T07:21:37] [info] [myclaw] visit x1 OK",
     "[2026-05-31T07:32:13] [info] [mulerun] visit x5 OK",
@@ -20459,7 +20527,10 @@
     "[2026-05-31T10:50:47] [info] [mulerun] register x2 OK",
     "[2026-05-31T11:12:40] [info] [mulerun] visit x5 OK",
     "[2026-05-31T11:19:40] [info] [dit] visit x4 OK",
-    "[2026-05-31T11:23:18] [info] [myclaw] register x2 OK"
+    "[2026-05-31T11:23:18] [info] [myclaw] register x2 OK",
+    "[2026-05-31T11:33:51] [info] [myclaw] visit x2 OK",
+    "[2026-05-31T11:38:58] [info] [myclaw] register x1 OK",
+    "[2026-05-31T11:41:27] [info] [dit] return x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
