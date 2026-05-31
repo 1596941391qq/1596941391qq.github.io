@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T13:29:29.685Z",
+  "updatedAt": "2026-05-31T13:54:09.835Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -94,8 +94,8 @@
   "registry": {
     "mulerun": 101,
     "myclaw": 184,
-    "ditai": 110,
-    "total": 496,
+    "ditai": 112,
+    "total": 498,
     "accounts": [
       {
         "email": "everalon469q@gmail.com",
@@ -4042,6 +4042,30 @@
           {
             "name": "ditai",
             "registeredAt": "2026-05-31T13:05:30.994Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "NishamolShiroma377@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T13:43:15.268Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "KasayMou@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T13:46:52.193Z",
             "status": "active"
           }
         ],
@@ -20651,13 +20675,32 @@
         "returnTotal": 40
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T13:54:09.835Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 101,
+        "mc": 184,
+        "dt": 112
+      },
+      "counters": {
+        "visitSuccess": 520,
+        "visitTotal": 520,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 40,
+        "returnTotal": 40
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 13:29:",
+    "[状态总结] 截至 2026-05-31 13:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 582 次行为 (匿名访问 520 + 首次使用 22 + 回访 40)",
-    "  品牌注册: MuleRun=101 MyClaw=184 dit.ai=110",
+    "  品牌注册: MuleRun=101 MyClaw=184 dit.ai=112",
     "  今日进度: 147/168 任务完成 (88%)",
     "    mulerun: 50/56 (89%) — 39v + 7r + 4rt",
     "    myclaw: 43/56 (77%) — 28v + 11r + 4rt",
