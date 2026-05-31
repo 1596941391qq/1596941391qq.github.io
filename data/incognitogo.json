@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T08:54:08.206Z",
+  "updatedAt": "2026-05-31T09:29:24.596Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -45,9 +45,9 @@
           "returns": 5
         },
         "2026-05-31": {
-          "visits": 17,
-          "regs": 6,
-          "returns": 3
+          "visits": 23,
+          "regs": 7,
+          "returns": 4
         }
       },
       "dit": {
@@ -93,9 +93,9 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 99,
-    "myclaw": 174,
-    "ditai": 90,
-    "total": 487,
+    "myclaw": 179,
+    "ditai": 93,
+    "total": 491,
     "accounts": [
       {
         "email": "everalon469q@gmail.com",
@@ -130,7 +130,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-31T07:50:25.189Z",
+            "registeredAt": "2026-05-31T09:14:36.546Z",
             "status": "active"
           },
           {
@@ -152,7 +152,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-30T09:36:31.805Z",
+            "registeredAt": "2026-05-31T09:16:50.777Z",
             "status": "active"
           },
           {
@@ -235,7 +235,7 @@
         "brands": [
           {
             "name": "ditai",
-            "registeredAt": "2026-05-30T10:18:23.562Z",
+            "registeredAt": "2026-05-31T09:28:40.914Z",
             "status": "active"
           },
           {
@@ -1668,6 +1668,11 @@
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T00:20:28.843Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T09:07:19.148Z",
             "status": "active"
           }
         ],
@@ -3511,6 +3516,18 @@
         "visits": []
       },
       {
+        "email": "furslandsheida@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T08:57:43.055Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "CenknerMomirka@gmail.com",
         "region": "BR",
         "brands": [
@@ -3529,6 +3546,30 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-31T04:12:34.728Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MalejaSogo@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T09:14:00.146Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "TacimPeyronel@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T09:26:22.653Z",
             "status": "active"
           }
         ],
@@ -3725,6 +3766,54 @@
           }
         ],
         "visits": []
+      },
+      {
+        "email": "DikraCoulomb@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T09:00:51.913Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "PalsmarkTiago@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T09:03:53.768Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "AlaeddineEnsch458@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T09:14:27.213Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "CilMbengue83@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T09:24:49.917Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
       }
     ]
   },
@@ -3741,12 +3830,12 @@
     }
   },
   "counters": {
-    "visitSuccess": 495,
-    "visitTotal": 495,
+    "visitSuccess": 501,
+    "visitTotal": 501,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
-    "returnSuccess": 39,
-    "returnTotal": 39
+    "returnSuccess": 40,
+    "returnTotal": 40
   },
   "activities": {
     "anonymous": [
@@ -11397,6 +11486,96 @@
         "success": true
       },
       {
+        "ts": "2026-05-31T09:01:52.140Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d28mdh",
+        "region": "DE",
+        "ip": "212.37.166.250",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 58,
+        "actions": 11,
+        "pages": 1,
+        "maxScroll": 30,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T09:09:18.404Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d28sxg",
+        "region": "GB",
+        "ip": "91.196.223.54",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 32,
+        "actions": 9,
+        "pages": 0,
+        "maxScroll": 20,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T09:10:38.760Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1d28u99",
+        "region": "DE",
+        "ip": "88.130.220.176",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 6,
+        "actions": 1,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T09:12:11.766Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1d28vex",
+        "region": "JP",
+        "ip": "182.249.29.246",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 17,
+        "actions": 4,
+        "pages": 3,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T09:14:22.780Z",
+        "brand": "myclaw",
+        "visitNum": 4,
+        "profileId": "k1d28wtt",
+        "region": "IN",
+        "ip": "106.222.158.79",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 39,
+        "actions": 9,
+        "pages": 1,
+        "maxScroll": 96,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T09:18:37.456Z",
+        "brand": "myclaw",
+        "visitNum": 5,
+        "profileId": "k1d28yi8",
+        "region": "GB",
+        "ip": "146.199.50.222",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 14,
+        "actions": 0,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:19:43.567Z",
         "brand": "ditai",
         "type": "anonymous",
@@ -12432,6 +12611,21 @@
         "duration": 33,
         "actions": 8,
         "pages": 2,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T08:55:02.115Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d28ff8",
+        "region": "GB",
+        "ip": "81.78.255.134",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 10,
+        "actions": 2,
+        "pages": 0,
         "maxScroll": 0,
         "success": true
       }
@@ -19774,24 +19968,38 @@
         "returnTotal": 39
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T09:29:24.596Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 99,
+        "mc": 179,
+        "dt": 93
+      },
+      "counters": {
+        "visitSuccess": 501,
+        "visitTotal": 501,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 40,
+        "returnTotal": 40
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 08:54:",
+    "[状态总结] 截至 2026-05-31 09:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 556 次行为 (匿名访问 495 + 首次使用 22 + 回访 39)",
-    "  品牌注册: MuleRun=99 MyClaw=174 dit.ai=90",
-    "  今日进度: 89/168 任务完成 (53%)",
+    "  历史累计完成: 563 次行为 (匿名访问 501 + 首次使用 22 + 回访 40)",
+    "  品牌注册: MuleRun=99 MyClaw=179 dit.ai=93",
+    "  今日进度: 97/168 任务完成 (58%)",
     "    mulerun: 32/56 (57%) — 25v + 3r + 4rt",
-    "    myclaw: 26/56 (46%) — 17v + 6r + 3rt",
+    "    myclaw: 34/56 (61%) — 23v + 7r + 4rt",
     "    dit: 31/56 (55%) — 21v + 8r + 2rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-31T03:29:50] [info] [dit] visit x4 OK",
-    "[2026-05-31T03:38:11] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-05-31T03:50:58] [info] [dit] return x1 OK",
-    "[2026-05-31T03:53:34] [info] [mulerun] visit x4 OK",
-    "[2026-05-31T04:10:29] [info] [dit] visit x2 OK",
     "[2026-05-31T04:43:43] [info] [myclaw] visit x5 OK",
     "[2026-05-31T04:46:33] [error] [mulerun] register x1 FAILED: exit 1",
     "[2026-05-31T05:00:31] [info] [dit] register x1 OK",
@@ -19826,7 +20034,12 @@
     "[2026-05-31T08:28:51] [info] [dit] register x1 OK",
     "[2026-05-31T08:34:12] [info] [dit] visit x1 OK",
     "[2026-05-31T08:39:41] [info] [mulerun] visit x1 OK",
-    "[2026-05-31T08:46:39] [info] [myclaw] register x2 OK"
+    "[2026-05-31T08:46:39] [info] [myclaw] register x2 OK",
+    "[2026-05-31T08:55:05] [info] [myclaw] return x1 OK",
+    "[2026-05-31T09:01:55] [info] [myclaw] visit x1 OK",
+    "[2026-05-31T09:07:22] [info] [myclaw] register x1 OK",
+    "[2026-05-31T09:17:17] [error] [mulerun] register x1 FAILED: exit 1",
+    "[2026-05-31T09:18:40] [info] [myclaw] visit x5 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
