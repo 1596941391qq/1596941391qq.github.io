@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T12:28:59.313Z",
+  "updatedAt": "2026-05-31T12:54:09.784Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -46,7 +46,7 @@
         },
         "2026-05-31": {
           "visits": 27,
-          "regs": 10,
+          "regs": 11,
           "returns": 4
         }
       },
@@ -62,8 +62,8 @@
           "returns": 5
         },
         "2026-05-31": {
-          "visits": 36,
-          "regs": 12,
+          "visits": 37,
+          "regs": 13,
           "returns": 3
         }
       }
@@ -93,9 +93,9 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 101,
-    "myclaw": 183,
-    "ditai": 104,
-    "total": 492,
+    "myclaw": 184,
+    "ditai": 108,
+    "total": 495,
     "accounts": [
       {
         "email": "everalon469q@gmail.com",
@@ -108,7 +108,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-05-31T10:09:11.322Z",
+            "registeredAt": "2026-05-31T12:47:42.951Z",
             "status": "active"
           },
           {
@@ -1843,6 +1843,18 @@
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T00:58:46.878Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "nguyenngoctho2017vl@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T12:46:35.571Z",
             "status": "active"
           }
         ],
@@ -3901,6 +3913,11 @@
             "name": "myclaw",
             "registeredAt": "2026-05-31T07:46:10.833Z",
             "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T12:50:59.283Z",
+            "status": "active"
           }
         ],
         "visits": []
@@ -3972,6 +3989,42 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-31T09:48:31.980Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "KareemKwaku757@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T12:29:50.514Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "BorundaAnbar@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T12:33:28.599Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "NinivaggiFuego@gmail.com",
+        "region": "?",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T12:36:36.915Z",
             "status": "active"
           }
         ],
@@ -20528,22 +20581,38 @@
         "returnTotal": 40
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T12:54:09.784Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 101,
+        "mc": 184,
+        "dt": 108
+      },
+      "counters": {
+        "visitSuccess": 519,
+        "visitTotal": 519,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 40,
+        "returnTotal": 40
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 12:28:",
+    "[状态总结] 截至 2026-05-31 12:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 581 次行为 (匿名访问 519 + 首次使用 22 + 回访 40)",
-    "  品牌注册: MuleRun=101 MyClaw=183 dit.ai=104",
-    "  今日进度: 142/168 任务完成 (85%)",
+    "  品牌注册: MuleRun=101 MyClaw=184 dit.ai=108",
+    "  今日进度: 145/168 任务完成 (86%)",
     "    mulerun: 50/56 (89%) — 39v + 7r + 4rt",
-    "    myclaw: 41/56 (73%) — 27v + 10r + 4rt",
-    "    dit: 51/56 (91%) — 36v + 12r + 3rt",
+    "    myclaw: 42/56 (75%) — 27v + 11r + 4rt",
+    "    dit: 53/56 (95%) — 37v + 13r + 3rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-31T07:38:39] [info] [dit] visit x2 OK",
-    "[2026-05-31T07:43:14] [info] [mulerun] visit x1 OK",
-    "[2026-05-31T07:45:05] [info] [mulerun] return x1 OK",
     "[2026-05-31T07:45:43] [info] [myclaw] return x2 OK",
     "[2026-05-31T07:52:00] [info] [dit] register x1 OK",
     "[2026-05-31T07:54:53] [info] [dit] return x1 OK",
@@ -20580,7 +20649,10 @@
     "[2026-05-31T11:41:27] [info] [dit] return x1 OK",
     "[2026-05-31T12:00:55] [info] [myclaw] visit x1 OK",
     "[2026-05-31T12:13:12] [info] [mulerun] visit x1 OK",
-    "[2026-05-31T12:13:12] [info] [mulerun] Worker loop complete for today"
+    "[2026-05-31T12:13:12] [info] [mulerun] Worker loop complete for today",
+    "[2026-05-31T12:31:27] [info] [dit] visit x1 OK",
+    "[2026-05-31T12:47:32] [info] [myclaw] register x1 OK",
+    "[2026-05-31T12:49:20] [info] [dit] register x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
