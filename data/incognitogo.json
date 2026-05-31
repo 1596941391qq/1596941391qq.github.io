@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T00:29:38.906Z",
+  "updatedAt": "2026-05-31T00:54:39.874Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -77,9 +77,9 @@
   },
   "heartbeatTriggers": 0,
   "registry": {
-    "mulerun": 60,
-    "myclaw": 138,
-    "ditai": 63,
+    "mulerun": 61,
+    "myclaw": 139,
+    "ditai": 65,
     "total": 485,
     "accounts": [
       {
@@ -1712,6 +1712,11 @@
             "name": "ditai",
             "registeredAt": "2026-05-30T15:44:30.419Z",
             "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T00:50:33.785Z",
+            "status": "active"
           }
         ],
         "visits": []
@@ -2390,6 +2395,30 @@
         "visits": []
       },
       {
+        "email": "missbuubu1@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T00:39:00.954Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "maihuong150172@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T00:45:29.753Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "naabimalik2255@gmail.com",
         "region": "BR",
         "brands": [
@@ -2608,6 +2637,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-31T00:16:40.142Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "HaugeSouthmayd@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T00:52:50.669Z",
             "status": "active"
           }
         ],
@@ -17121,13 +17162,32 @@
         "returnTotal": 32
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T00:54:39.874Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 61,
+        "mc": 139,
+        "dt": 65
+      },
+      "counters": {
+        "visitSuccess": 453,
+        "visitTotal": 453,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 32,
+        "returnTotal": 32
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 00:29:",
+    "[状态总结] 截至 2026-05-31 00:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 507 次行为 (匿名访问 453 + 首次使用 22 + 回访 32)",
-    "  品牌注册: MuleRun=60 MyClaw=138 dit.ai=63",
+    "  品牌注册: MuleRun=61 MyClaw=139 dit.ai=65",
     "  今日进度: 0/216 任务完成 (0%)",
     "    mulerun: 0/72 (0%) — 0v + 0r + 0rt",
     "    myclaw: 0/72 (0%) — 0v + 0r + 0rt",
