@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T23:28:55.647Z",
+  "updatedAt": "2026-05-31T23:54:02.331Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -22698,10 +22698,29 @@
         "returnTotal": 43
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T23:54:02.331Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 192,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 576,
+        "visitTotal": 576,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 43,
+        "returnTotal": 43
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 23:28:",
+    "[状态总结] 截至 2026-05-31 23:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 641 次行为 (匿名访问 576 + 首次使用 22 + 回访 43)",
     "  品牌注册: MuleRun=102 MyClaw=192 dit.ai=115",
@@ -22711,7 +22730,6 @@
     "    dit: 56/78 (72%) — 39v + 13r + 4rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-31T16:35:07] [info] [dit] visit x3 OK",
     "[2026-05-31T16:43:14] [info] [myclaw] register x2 OK",
     "[2026-05-31T16:55:05] [info] [dit] register x1 OK",
     "[2026-05-31T17:00:48] [info] [mulerun] visit x4 OK",
@@ -22750,7 +22768,8 @@
     "[2026-05-31T22:23:38] [info] [myclaw] visit x5 OK",
     "[2026-05-31T22:38:51] [info] [dit] visit x5 OK",
     "[2026-05-31T22:57:47] [info] [myclaw] visit x5 OK",
-    "[2026-05-31T23:11:05] [info] [myclaw] visit x4 OK"
+    "[2026-05-31T23:11:05] [info] [myclaw] visit x4 OK",
+    "[2026-05-31T23:43:52] [error] [mulerun] register x1 FAILED: exit 1"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
