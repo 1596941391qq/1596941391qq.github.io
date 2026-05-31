@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T01:54:54.214Z",
+  "updatedAt": "2026-05-31T02:55:34.665Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -38,6 +38,11 @@
           "visits": 50,
           "regs": 17,
           "returns": 5
+        },
+        "2026-05-31": {
+          "visits": 2,
+          "regs": 0,
+          "returns": 0
         }
       },
       "dit": {
@@ -50,6 +55,11 @@
           "visits": 50,
           "regs": 17,
           "returns": 5
+        },
+        "2026-05-31": {
+          "visits": 2,
+          "regs": 0,
+          "returns": 0
         }
       }
     },
@@ -57,29 +67,29 @@
   },
   "todayPlan": {
     "mulerun": {
-      "visits": 50,
-      "regs": 17,
-      "returns": 5,
-      "total": 72
+      "visits": 39,
+      "regs": 13,
+      "returns": 4,
+      "total": 56
     },
     "myclaw": {
-      "visits": 50,
-      "regs": 17,
-      "returns": 5,
-      "total": 72
+      "visits": 39,
+      "regs": 13,
+      "returns": 4,
+      "total": 56
     },
     "dit": {
-      "visits": 50,
-      "regs": 17,
-      "returns": 5,
-      "total": 72
+      "visits": 39,
+      "regs": 13,
+      "returns": 4,
+      "total": 56
     }
   },
   "heartbeatTriggers": 0,
   "registry": {
-    "mulerun": 65,
-    "myclaw": 145,
-    "ditai": 65,
+    "mulerun": 68,
+    "myclaw": 147,
+    "ditai": 72,
     "total": 485,
     "accounts": [
       {
@@ -1847,6 +1857,23 @@
             "name": "myclaw",
             "registeredAt": "2026-05-30T13:06:47.980Z",
             "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T02:08:47.701Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "RumpfingerBernd92@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T02:16:01.305Z",
+            "status": "active"
           }
         ],
         "visits": []
@@ -1875,6 +1902,11 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-30T13:31:44.345Z",
+            "status": "active"
+          },
+          {
+            "name": "mulerun",
+            "registeredAt": "2026-05-31T02:37:42.597Z",
             "status": "active"
           }
         ],
@@ -2533,12 +2565,48 @@
         ]
       },
       {
+        "email": "sahabih123@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T01:56:39.996Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "obulesuandhra@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T01:59:47.862Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "diegogil43@gmail.com",
         "region": "BR",
         "brands": [
           {
             "name": "myclaw",
             "registeredAt": "2026-05-30T21:31:17.960Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "leemama059@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T02:14:36.402Z",
             "status": "active"
           }
         ],
@@ -2557,12 +2625,36 @@
         "visits": []
       },
       {
+        "email": "HincksMilks@gmail.com",
+        "region": "DE",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T02:38:43.677Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "AlbertineJentzsch@gmail.com",
         "region": "US",
         "brands": [
           {
             "name": "myclaw",
             "registeredAt": "2026-05-30T21:58:24.893Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "StumbaughBatista@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T02:48:58.590Z",
             "status": "active"
           }
         ],
@@ -2576,6 +2668,11 @@
             "name": "myclaw",
             "registeredAt": "2026-05-30T22:09:01.383Z",
             "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T02:51:51.718Z",
+            "status": "active"
           }
         ],
         "visits": []
@@ -2587,6 +2684,11 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-30T22:12:31.284Z",
+            "status": "active"
+          },
+          {
+            "name": "ditai",
+            "registeredAt": "2026-05-31T02:54:24.801Z",
             "status": "active"
           }
         ],
@@ -2759,6 +2861,30 @@
           }
         ],
         "visits": []
+      },
+      {
+        "email": "garingerbeachampyurrz7841@gmail.com",
+        "region": "GB",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T02:44:40.682Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "MehrzadSalom784@gmail.com",
+        "region": "JP",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-05-31T02:47:57.481Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
       }
     ]
   },
@@ -2775,8 +2901,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 453,
-    "visitTotal": 453,
+    "visitSuccess": 455,
+    "visitTotal": 455,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 32,
@@ -9776,6 +9902,36 @@
         "success": true
       },
       {
+        "ts": "2026-05-31T02:42:32.879Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d1ywwt",
+        "region": "JP",
+        "ip": "114.170.70.153",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 118,
+        "actions": 20,
+        "pages": 0,
+        "maxScroll": 98,
+        "success": true
+      },
+      {
+        "ts": "2026-05-31T02:44:00.392Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1d201c6",
+        "region": "IN",
+        "ip": "223.188.50.111",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 13,
+        "actions": 3,
+        "pages": 1,
+        "maxScroll": 6,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:19:43.567Z",
         "brand": "ditai",
         "type": "anonymous",
@@ -11141,7 +11297,7 @@
     }
   ],
   "conversationPlans": {
-    "planned": 124,
+    "planned": 136,
     "consumed": 3,
     "fallback": 0,
     "sessions": [
@@ -13214,6 +13370,31 @@
         "generatedAt": "2026-05-28T21:52:07.361Z"
       },
       {
+        "email": "siricaviolina@gmail.com",
+        "brand": "ditai",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me plan a workout split for building muscle",
+            "expectedTopic": "workout programming and muscle-building strategies"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual workout schedule showing my weekly routine",
+            "expectedTopic": "visual representation of fitness plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "What nutrition changes should I make to support this routine?",
+            "expectedTopic": "diet and nutrition recommendations for muscle gain"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:25.674Z"
+      },
+      {
         "email": "melanierodriguez39866@gmail.com",
         "brand": "myclaw",
         "rounds": 2,
@@ -13417,6 +13598,21 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-27T18:47:23.401Z"
+      },
+      {
+        "email": "emoryhines306@gmail.com",
+        "brand": "mulerun",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I organize my photo shoots by location and date?",
+            "expectedTopic": "workflow organization for photography projects"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:24.852Z"
       },
       {
         "email": "OrtizmarinGenner@gmail.com",
@@ -14064,6 +14260,46 @@
         "generatedAt": "2026-05-28T21:52:31.872Z"
       },
       {
+        "email": "vrieoslcneupsxl@gmail.com",
+        "brand": "ditai",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Best mobile games to play right now in India?",
+            "expectedTopic": "Popular mobile games available in Indian app stores with recommendations"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which ones have good monetization without being pay-to-win?",
+            "expectedTopic": "Analysis of fair monetization models in mobile games"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a comparison chart of top 5 Indian mobile games by player count and ratings",
+            "expectedTopic": "Visual comparison of mobile game popularity metrics"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do gaming stocks perform in Indian market right now?",
+            "expectedTopic": "Stock market performance of gaming and tech companies listed in India"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Set up weekly tracker for gaming stocks and new mobile game releases",
+            "expectedTopic": "Creating a structured tracking system for gaming investments and releases"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show my previous conversations about mobile gaming trends",
+            "expectedTopic": "Retrieving past chat history related to gaming discussions"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:28.827Z"
+      },
+      {
         "email": "qha15419@gmail.com",
         "brand": "myclaw",
         "rounds": 5,
@@ -14137,6 +14373,121 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-28T21:55:20.712Z"
+      },
+      {
+        "email": "MeaveEwen572@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Quero criar conteúdo sobre rotina de skincare para o verão",
+            "expectedTopic": "skincare routine recommendations for summer"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Gera uma imagem de uma mulher aplicando protetor solar na praia",
+            "expectedTopic": "beach-themed skincare visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Como posso adaptar isso para pele oleosa?",
+            "expectedTopic": "skincare adjustments for oily skin types"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Criar um guia completo de proteção solar para o verão",
+            "expectedTopic": "structured sunscreen guide creation"
+          },
+          {
+            "type": "chat",
+            "prompt": "Que ingredientes naturais funcionam bem com protetor solar?",
+            "expectedTopic": "natural ingredients compatible with sunscreen"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explorar templates de conteúdo para beleza e skincare",
+            "expectedTopic": "available beauty content templates"
+          },
+          {
+            "type": "chat",
+            "prompt": "Posso usar esses templates para criar posts no Instagram?",
+            "expectedTopic": "social media content adaptation and sharing"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Ver minhas criações anteriores sobre cuidados com a pele",
+            "expectedTopic": "previous skincare content and generation history"
+          },
+          {
+            "type": "chat",
+            "prompt": "Como melhorar a qualidade das imagens para um e-book sobre beleza?",
+            "expectedTopic": "image quality optimization for digital publications"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:32.961Z"
+      },
+      {
+        "email": "bacikkinlocklj977@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a recipe for sourdough bread?",
+            "expectedTopic": "sourdough recipe writing and baking guidance"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I know when the dough has fermented enough?",
+            "expectedTopic": "fermentation timing and visual cues for sourdough"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a step-by-step diagram showing sourdough folding technique",
+            "expectedTopic": "visual guide for proper dough handling"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the best way to score the loaf before baking?",
+            "expectedTopic": "scoring patterns and techniques for oven spring"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a baking schedule for my weekly sourdough routine",
+            "expectedTopic": "structured timeline for starter maintenance and baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest flavour variations I could try?",
+            "expectedTopic": "sourdough add-ins and flavour combinations"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Design a rustic bread label for homemade sourdough gifts",
+            "expectedTopic": "custom label artwork for packaging"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Look at templates for baking content and recipe cards",
+            "expectedTopic": "available templates for food content creation"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I troubleshoot a dense crumb in my loaves?",
+            "expectedTopic": "common sourdough problems and solutions"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Check my previous baking projects and generated images",
+            "expectedTopic": "past conversations and visual creations from this session"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:37.235Z"
       },
       {
         "email": "PalmaAlessandra548@gmail.com",
@@ -15184,6 +15535,26 @@
         "generatedAt": "2026-05-30T11:16:40.583Z"
       },
       {
+        "email": "hypatiawatson74140@gmail.com",
+        "brand": "mulerun",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me organize my photography portfolio by theme?",
+            "expectedTopic": "portfolio organization strategies and categorization methods"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project to catalog my best shots from last month's hiking trip",
+            "expectedTopic": "setting up a structured task for photo curation and metadata tagging"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:22.677Z"
+      },
+      {
         "email": "mmuralis24067@gmail.com",
         "brand": "myclaw",
         "rounds": 2,
@@ -15202,6 +15573,91 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-27T18:47:27.538Z"
+      },
+      {
+        "email": "mmuralis24067@gmail.com",
+        "brand": "ditai",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me plan a 2-week trip to Japan in spring",
+            "expectedTopic": "Japan spring travel itinerary planning"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the best way to get around Tokyo and Kyoto?",
+            "expectedTopic": "Transportation options in Japan"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual map of a Tokyo to Kyoto travel route with stops",
+            "expectedTopic": "Visual representation of Japan travel itinerary"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I organize all these travel details and bookings?",
+            "expectedTopic": "Travel planning organization and productivity tips"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a Japan trip checklist with packing, bookings, and activities",
+            "expectedTopic": "Structured travel planning document"
+          },
+          {
+            "type": "chat",
+            "prompt": "Any tips for staying productive while traveling?",
+            "expectedTopic": "Remote work and productivity while traveling"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:23.441Z"
+      },
+      {
+        "email": "mmuralis24067@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me plan a 2-week road trip through the Southwest",
+            "expectedTopic": "Road trip planning advice, route suggestions, Southwest destinations"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project for my Southwest road trip with daily itineraries",
+            "expectedTopic": "Task/project creation for organizing trip details"
+          },
+          {
+            "type": "chat",
+            "prompt": "What are the best budget-friendly accommodations along Route 66?",
+            "expectedTopic": "Budget lodging recommendations, Route 66 stops, cost-saving tips"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual map showing my Southwest road trip route with key stops",
+            "expectedTopic": "Visual representation of travel route and destinations"
+          },
+          {
+            "type": "chat",
+            "prompt": "How should I pack for desert heat and high altitude changes?",
+            "expectedTopic": "Packing advice for varying climates and elevations"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check out available travel planning templates in the Mule templates library",
+            "expectedTopic": "Discovering pre-built templates for travel organization"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous travel planning conversations and saved itineraries",
+            "expectedTopic": "Accessing past travel research and planning work"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:28.494Z"
       },
       {
         "email": "hothitranghn295@gmail.com",
@@ -15252,6 +15708,61 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-27T18:47:32.787Z"
+      },
+      {
+        "email": "hothitranghn295@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Como usar MuleRun pra organizar meu treino de musculação?",
+            "expectedTopic": "MuleRun capabilities for fitness planning and workout organization"
+          },
+          {
+            "type": "chat",
+            "prompt": "Posso criar um plano de hipertrofia de 12 semanas aqui?",
+            "expectedTopic": "Creating structured fitness plans and periodization in MuleRun"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Criar projeto: Ciclo Hipertrofia - Upper/Lower Split com progressão de carga",
+            "expectedTopic": "Task creation for workout program structure"
+          },
+          {
+            "type": "chat",
+            "prompt": "E pra rastrear meu progresso nos lifts? Tem como integrar com apps de treino?",
+            "expectedTopic": "Progress tracking features and potential integrations"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Gera um diagrama do meu split: Segunda/Quinta Upper, Terça/Sexta Lower",
+            "expectedTopic": "Visual representation of workout split schedule"
+          },
+          {
+            "type": "chat",
+            "prompt": "Dá pra usar MuleRun pra pesquisar sobre suplementação e crypto ao mesmo tempo?",
+            "expectedTopic": "Multi-topic research and task management capabilities"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explorar templates prontos de treino e nutrição",
+            "expectedTopic": "Available templates and pre-built fitness resources"
+          },
+          {
+            "type": "chat",
+            "prompt": "Qual é a melhor forma de documentar meus gains e compartilhar com meu personal?",
+            "expectedTopic": "Sharing results and collaboration features"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Ver meus projetos anteriores de fitness que criei",
+            "expectedTopic": "Access to previous conversations and task history"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:33.629Z"
       },
       {
         "email": "meclarke38@gmail.com",
@@ -15834,6 +16345,46 @@
         "generatedAt": "2026-05-30T11:16:31.928Z"
       },
       {
+        "email": "etiennezelaya@gmail.com",
+        "brand": "ditai",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me validate a startup idea for a chai subscription service",
+            "expectedTopic": "Startup validation framework and market analysis for chai business"
+          },
+          {
+            "type": "chat",
+            "prompt": "What are the key metrics I should track for unit economics?",
+            "expectedTopic": "Unit economics, CAC, LTV, and profitability metrics for subscription models"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual breakdown of chai subscription business model canvas",
+            "expectedTopic": "Business model visualization showing revenue streams and customer segments"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I differentiate from existing chai brands in India?",
+            "expectedTopic": "Competitive positioning and unique value propositions for chai startups"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a 90-day launch plan for my chai subscription MVP",
+            "expectedTopic": "Structured project timeline with milestones for product launch"
+          },
+          {
+            "type": "chat",
+            "prompt": "What funding strategy should I consider at this stage?",
+            "expectedTopic": "Startup funding options, bootstrapping vs investor capital, and pitch preparatio"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:32.032Z"
+      },
+      {
         "email": "mataiwigar@gmail.com",
         "brand": "myclaw",
         "rounds": 1,
@@ -15897,6 +16448,121 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-30T11:16:37.853Z"
+      },
+      {
+        "email": "dermotfrye71708@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me write a workout routine for cycling",
+            "expectedTopic": "Fitness training plans for cyclists"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you focus on Royal Enfield riders specifically?",
+            "expectedTopic": "Fitness routines tailored for motorcycle riders"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual workout guide for motorcycle riders",
+            "expectedTopic": "Visual fitness content for bikers"
+          },
+          {
+            "type": "chat",
+            "prompt": "What nutrition should I pair with this routine?",
+            "expectedTopic": "Diet and nutrition for fitness and endurance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Any chai-based recovery drinks I can make?",
+            "expectedTopic": "Chai recipes for post-workout recovery"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a 4-week fitness plan for long-distance riding",
+            "expectedTopic": "Structured fitness project for endurance training"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check templates for fitness content creation",
+            "expectedTopic": "Available templates for workout and fitness posts"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I format this for Instagram posts?",
+            "expectedTopic": "Social media content formatting and tips"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show my previous fitness content I've created",
+            "expectedTopic": "Past generations and conversations about fitness"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:24.085Z"
+      },
+      {
+        "email": "DehaquizJonatann990@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a recipe for homemade pasta carbonara?",
+            "expectedTopic": "Recipe writing and cooking instructions"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a beautiful photo of finished carbonara pasta on a plate",
+            "expectedTopic": "Food photography and plating visualization"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I make the sauce creamier without using cream?",
+            "expectedTopic": "Cooking techniques and ingredient substitutions"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the best way to photograph food for a cooking blog?",
+            "expectedTopic": "Food photography tips and lighting techniques"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a content plan for weekly cooking posts with photography",
+            "expectedTopic": "Content calendar and editorial planning"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest Italian dishes that photograph well?",
+            "expectedTopic": "Cuisine recommendations with visual appeal"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Design a food blog header with Italian cooking theme",
+            "expectedTopic": "Visual branding and graphic design"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check my previous cooking content and image generations",
+            "expectedTopic": "History and past creations review"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I write engaging captions for food photos on social media?",
+            "expectedTopic": "Social media copywriting and engagement strategies"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me adapt this recipe for a German audience?",
+            "expectedTopic": "Recipe localization and cultural food adaptation"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-05-31T02:37:28.007Z"
       }
     ]
   },
@@ -17325,59 +17991,58 @@
         "returnTotal": 32
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-05-31T02:55:34.665Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 68,
+        "mc": 147,
+        "dt": 72
+      },
+      "counters": {
+        "visitSuccess": 455,
+        "visitTotal": 455,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 32,
+        "returnTotal": 32
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-05-31 01:54:",
+    "[状态总结] 截至 2026-05-31 02:55:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 507 次行为 (匿名访问 453 + 首次使用 22 + 回访 32)",
-    "  品牌注册: MuleRun=65 MyClaw=145 dit.ai=65",
-    "  今日进度: 0/216 任务完成 (0%)",
-    "    mulerun: 0/72 (0%) — 0v + 0r + 0rt",
-    "    myclaw: 0/72 (0%) — 0v + 0r + 0rt",
-    "    dit: 0/72 (0%) — 0v + 0r + 0rt",
+    "  历史累计完成: 509 次行为 (匿名访问 455 + 首次使用 22 + 回访 32)",
+    "  品牌注册: MuleRun=68 MyClaw=147 dit.ai=72",
+    "  今日进度: 4/168 任务完成 (2%)",
+    "    mulerun: 0/56 (0%) — 0v + 0r + 0rt",
+    "    myclaw: 2/56 (4%) — 2v + 0r + 0rt",
+    "    dit: 2/56 (4%) — 2v + 0r + 0rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-30T17:36:24] [info] [mulerun] visit x4 OK",
-    "[2026-05-30T17:42:04] [info] [dit] return x2 OK",
-    "[2026-05-30T17:54:39] [info] [myclaw] register x1 OK",
-    "[2026-05-30T18:00:19] [info] [mulerun] register x2 OK",
-    "[2026-05-30T18:05:37] [info] [myclaw] visit x4 OK",
-    "[2026-05-30T18:15:54] [info] [myclaw] register x1 OK",
-    "[2026-05-30T18:22:03] [info] [myclaw] visit x1 OK",
-    "[2026-05-30T18:29:34] [info] [mulerun] visit x5 OK",
-    "[2026-05-30T18:31:40] [info] [mulerun] visit x1 OK",
-    "[2026-05-30T18:36:08] [info] [dit] register x2 OK",
-    "[2026-05-30T18:41:15] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-05-30T18:43:17] [info] [mulerun] return x1 OK",
-    "[2026-05-30T18:59:56] [info] [dit] visit x3 OK",
-    "[2026-05-30T19:23:26] [info] [mulerun] visit x5 OK",
-    "[2026-05-30T19:40:12] [info] [myclaw] register x1 OK",
-    "[2026-05-30T19:46:40] [info] [myclaw] visit x2 OK",
-    "[2026-05-30T19:50:11] [info] [myclaw] register x1 OK",
-    "[2026-05-30T20:05:14] [info] [myclaw] visit x5 OK",
-    "[2026-05-30T20:38:15] [info] [myclaw] register x1 OK",
-    "[2026-05-30T20:56:55] [info] [myclaw] visit x5 OK",
-    "[2026-05-30T21:10:15] [info] [mulerun] register x2 OK",
-    "[2026-05-30T21:10:15] [info] [mulerun] Worker loop complete for today",
-    "[2026-05-30T21:28:50] [info] [dit] register x3 OK",
-    "[2026-05-30T21:39:02] [info] [dit] visit x2 OK",
-    "[2026-05-30T21:42:46] [info] [myclaw] visit x2 OK",
-    "[2026-05-30T21:55:56] [info] [dit] register x1 OK",
-    "[2026-05-30T22:03:13] [info] [dit] visit x2 OK",
-    "[2026-05-30T22:26:20] [info] [myclaw] register x1 OK",
-    "[2026-05-30T22:30:38] [info] [dit] register x1 OK",
-    "[2026-05-30T22:58:36] [info] [myclaw] visit x2 OK",
-    "[2026-05-30T23:00:30] [info] [myclaw] return x1 OK",
-    "[2026-05-30T23:10:06] [info] [myclaw] visit x3 OK",
-    "[2026-05-30T23:20:49] [info] [myclaw] return x1 OK",
-    "[2026-05-30T23:30:12] [info] [myclaw] visit x1 OK",
-    "[2026-05-30T23:34:35] [info] [myclaw] return x1 OK",
-    "[2026-05-30T23:52:42] [info] [dit] visit x2 OK",
-    "[2026-05-30T23:52:42] [info] [dit] Worker loop complete for today",
-    "[2026-05-31T01:43:17] [info] [myclaw] register x1 OK",
-    "[2026-05-31T01:43:17] [info] [myclaw] Worker loop complete for today",
-    "[2026-05-31T01:43:17] [info] All workers done. Sleeping 1337 min until midnight..."
+    "[2026-05-31T02:37:18] [info] === Unified Scheduler ===",
+    "[2026-05-31T02:37:18] [info] Brands: mulerun, myclaw, dit | Days: 90",
+    "[2026-05-31T02:37:18] [info] Mode: PRODUCTION",
+    "[2026-05-31T02:37:18] [info] [mulerun] Today target: 39v + 13r + 4rt",
+    "[2026-05-31T02:37:18] [info] [myclaw] Today target: 39v + 13r + 4rt",
+    "[2026-05-31T02:37:18] [info] [dit] Today target: 39v + 13r + 4rt",
+    "[2026-05-31T02:37:18] [info] Starting parallel workers for 2026-05-31...",
+    "[2026-05-31T02:37:18] [info] [mulerun] Today's queue: 39v + 13r + 4rt = 56 tasks",
+    "[2026-05-31T02:37:19] [info] [mulerun] Pre-generating 4 conversation plans...",
+    "[2026-05-31T02:37:19] [info] [myclaw] Today's queue: 39v + 13r + 4rt = 56 tasks",
+    "[2026-05-31T02:37:19] [info] [myclaw] Pre-generating 4 conversation plans...",
+    "[2026-05-31T02:37:19] [info] [dit] Today's queue: 39v + 13r + 4rt = 56 tasks",
+    "[2026-05-31T02:37:19] [info] [dit] Pre-generating 4 conversation plans...",
+    "[2026-05-31T02:37:19] [info] Panel: http://0.0.0.0:9090",
+    "[2026-05-31T02:37:32] [info] [dit] Pre-generated 4 plans OK",
+    "[2026-05-31T02:37:33] [info] [mulerun] Pre-generated 4 plans OK",
+    "[2026-05-31T02:37:37] [info] [myclaw] Pre-generated 4 plans OK",
+    "[2026-05-31T02:39:47] [error] [mulerun] register x1 FAILED: exit 1",
+    "[2026-05-31T02:40:29] [info] [dit] visit x2 OK",
+    "[2026-05-31T02:44:03] [info] [myclaw] visit x2 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
