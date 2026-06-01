@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T07:28:55.754Z",
+  "updatedAt": "2026-06-01T07:54:02.060Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -28,9 +28,9 @@
           "returns": 4
         },
         "2026-06-01": {
-          "visits": 43,
+          "visits": 44,
           "regs": 3,
-          "returns": 2
+          "returns": 3
         }
       },
       "myclaw": {
@@ -56,7 +56,7 @@
         },
         "2026-06-01": {
           "visits": 35,
-          "regs": 13,
+          "regs": 15,
           "returns": 2
         }
       },
@@ -108,7 +108,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 200,
+    "myclaw": 201,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -123,7 +123,7 @@
           },
           {
             "name": "ditai",
-            "registeredAt": "2026-06-01T06:23:15.708Z",
+            "registeredAt": "2026-06-01T07:53:50.013Z",
             "status": "active"
           },
           {
@@ -2212,6 +2212,18 @@
         "visits": []
       },
       {
+        "email": "JaegerInderpreet154@gmail.com",
+        "region": "BR",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-01T07:41:24.129Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "AttanasioPita@gmail.com",
         "region": "GB",
         "brands": [
@@ -4278,12 +4290,12 @@
     }
   },
   "counters": {
-    "visitSuccess": 608,
-    "visitTotal": 608,
+    "visitSuccess": 609,
+    "visitTotal": 609,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
-    "returnSuccess": 44,
-    "returnTotal": 44
+    "returnSuccess": 45,
+    "returnTotal": 45
   },
   "activities": {
     "anonymous": [
@@ -9040,6 +9052,22 @@
         "mode": "adaptive",
         "duration": 7,
         "actions": 2,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T07:38:45.531Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1d33ao5",
+        "region": "US",
+        "ip": "184.52.46.150",
+        "target": "mule.page",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 6,
+        "actions": 1,
         "pages": 0,
         "maxScroll": 0,
         "success": true
@@ -14399,6 +14427,22 @@
         "mode": "adaptive",
         "duration": 40,
         "actions": 9,
+        "pages": 0,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T07:35:52.201Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1d337eg",
+        "region": "US",
+        "ip": "24.159.145.0",
+        "target": "mule.page",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 9,
+        "actions": 3,
         "pages": 0,
         "maxScroll": 100,
         "success": true
@@ -23584,22 +23628,38 @@
         "returnTotal": 44
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T07:54:02.060Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 201,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 609,
+        "visitTotal": 609,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 45,
+        "returnTotal": 45
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 07:28:",
+    "[状态总结] 截至 2026-06-01 07:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 674 次行为 (匿名访问 608 + 首次使用 22 + 回访 44)",
-    "  品牌注册: MuleRun=102 MyClaw=200 dit.ai=115",
-    "  今日进度: 153/234 任务完成 (65%)",
-    "    mulerun: 48/78 (62%) — 43v + 3r + 2rt",
-    "    myclaw: 50/78 (64%) — 35v + 13r + 2rt",
+    "  历史累计完成: 676 次行为 (匿名访问 609 + 首次使用 22 + 回访 45)",
+    "  品牌注册: MuleRun=102 MyClaw=201 dit.ai=115",
+    "  今日进度: 157/234 任务完成 (67%)",
+    "    mulerun: 50/78 (64%) — 44v + 3r + 3rt",
+    "    myclaw: 52/78 (67%) — 35v + 15r + 2rt",
     "    dit: 55/78 (71%) — 38v + 12r + 5rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T00:28:23] [info] [myclaw] register x2 OK",
-    "[2026-06-01T00:28:23] [info] [myclaw] Off-peak hour (weight=0.19), sleeping 32min",
-    "[2026-06-01T00:38:28] [info] [mulerun] visit x4 OK",
     "[2026-06-01T00:38:28] [info] [mulerun] Off-peak hour (weight=0.17), sleeping 22min",
     "[2026-06-01T00:38:44] [info] [dit] register x1 OK",
     "[2026-06-01T00:38:44] [info] [dit] Off-peak hour (weight=0.19), sleeping 22min",
@@ -23636,7 +23696,10 @@
     "[2026-06-01T06:51:15] [info] [dit] return x1 OK",
     "[2026-06-01T07:12:06] [error] [mulerun] register x1 FAILED: exit 1",
     "[2026-06-01T07:17:59] [info] [dit] visit x5 OK",
-    "[2026-06-01T07:25:27] [info] [dit] visit x1 OK"
+    "[2026-06-01T07:25:27] [info] [dit] visit x1 OK",
+    "[2026-06-01T07:35:55] [info] [mulerun] return x1 OK",
+    "[2026-06-01T07:38:48] [info] [mulerun] visit x1 OK",
+    "[2026-06-01T07:42:00] [info] [myclaw] register x2 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
