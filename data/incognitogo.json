@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T04:28:56.902Z",
+  "updatedAt": "2026-06-01T04:54:01.278Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -55,7 +55,7 @@
           "returns": 4
         },
         "2026-06-01": {
-          "visits": 27,
+          "visits": 32,
           "regs": 10,
           "returns": 2
         }
@@ -4244,8 +4244,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 590,
-    "visitTotal": 590,
+    "visitSuccess": 593,
+    "visitTotal": 593,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 43,
@@ -13374,6 +13374,51 @@
         "actions": 11,
         "pages": 0,
         "maxScroll": 69,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T04:30:19.780Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1d2wyfn",
+        "region": "IN",
+        "ip": "106.222.213.28",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 19,
+        "actions": 5,
+        "pages": 1,
+        "maxScroll": 14,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T04:33:05.170Z",
+        "brand": "myclaw",
+        "visitNum": 4,
+        "profileId": "k1d2x15m",
+        "region": "IN",
+        "ip": "49.47.128.118",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 68,
+        "actions": 15,
+        "pages": 4,
+        "maxScroll": 10,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T04:34:41.883Z",
+        "brand": "myclaw",
+        "visitNum": 5,
+        "profileId": "k1d2x3fv",
+        "region": "IN",
+        "ip": "183.87.237.90",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 5,
+        "actions": 2,
+        "pages": 0,
+        "maxScroll": 5,
         "success": true
       },
       {
@@ -23138,21 +23183,38 @@
         "returnTotal": 43
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T04:54:01.278Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 196,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 593,
+        "visitTotal": 593,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 43,
+        "returnTotal": 43
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 04:28:",
+    "[状态总结] 截至 2026-06-01 04:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 655 次行为 (匿名访问 590 + 首次使用 22 + 回访 43)",
+    "  历史累计完成: 658 次行为 (匿名访问 593 + 首次使用 22 + 回访 43)",
     "  品牌注册: MuleRun=102 MyClaw=196 dit.ai=115",
-    "  今日进度: 110/234 任务完成 (47%)",
+    "  今日进度: 115/234 任务完成 (49%)",
     "    mulerun: 35/78 (45%) — 31v + 3r + 1rt",
-    "    myclaw: 39/78 (50%) — 27v + 10r + 2rt",
+    "    myclaw: 44/78 (56%) — 32v + 10r + 2rt",
     "    dit: 36/78 (46%) — 24v + 10r + 2rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-31T19:46:58] [info] [dit] register x2 OK",
-    "[2026-05-31T19:58:36] [info] [dit] visit x1 OK",
     "[2026-05-31T20:07:15] [info] [mulerun] visit x3 OK",
     "[2026-05-31T20:10:51] [info] [dit] register x1 OK",
     "[2026-05-31T20:24:14] [info] [myclaw] register x2 OK",
@@ -23190,7 +23252,9 @@
     "[2026-06-01T02:56:21] [info] [myclaw] visit x3 OK",
     "[2026-06-01T04:06:13] [error] [mulerun] register x1 FAILED: exit 1",
     "[2026-06-01T04:08:34] [info] [myclaw] register x1 OK",
-    "[2026-06-01T04:18:09] [info] [mulerun] visit x1 OK"
+    "[2026-06-01T04:18:09] [info] [mulerun] visit x1 OK",
+    "[2026-06-01T04:34:45] [info] [myclaw] visit x5 OK",
+    "[2026-06-01T04:51:07] [error] [mulerun] register x2 FAILED: exit 1"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
