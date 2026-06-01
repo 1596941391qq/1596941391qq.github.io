@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T22:54:34.484Z",
+  "updatedAt": "2026-06-01T23:29:30.754Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -65,9 +65,9 @@
           "returns": 5
         },
         "2026-06-02": {
-          "visits": 21,
+          "visits": 24,
           "regs": 9,
-          "returns": 2
+          "returns": 3
         }
       },
       "dit": {
@@ -92,7 +92,7 @@
           "returns": 5
         },
         "2026-06-02": {
-          "visits": 38,
+          "visits": 40,
           "regs": 8,
           "returns": 4
         }
@@ -4414,12 +4414,12 @@
     }
   },
   "counters": {
-    "visitSuccess": 704,
-    "visitTotal": 704,
+    "visitSuccess": 707,
+    "visitTotal": 707,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
-    "returnSuccess": 56,
-    "returnTotal": 56
+    "returnSuccess": 57,
+    "returnTotal": 57
   },
   "activities": {
     "anonymous": [
@@ -15332,6 +15332,51 @@
         "success": true
       },
       {
+        "ts": "2026-06-01T23:06:54.376Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d3rqcy",
+        "region": "JP",
+        "ip": "60.91.4.84",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 21,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 14,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T23:11:30.543Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1d3rrky",
+        "region": "US",
+        "ip": "47.157.59.94",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 8,
+        "actions": 0,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T23:13:07.016Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1d3ruif",
+        "region": "BR",
+        "ip": "189.0.73.195",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 10,
+        "actions": 4,
+        "pages": 0,
+        "maxScroll": 20,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:19:43.567Z",
         "brand": "ditai",
         "type": "anonymous",
@@ -16632,6 +16677,21 @@
         "actions": 8,
         "pages": 0,
         "maxScroll": 13,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T23:04:25.154Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d3ro58",
+        "region": "US",
+        "ip": "99.76.234.217",
+        "type": "return",
+        "mode": "adaptive",
+        "duration": 70,
+        "actions": 19,
+        "pages": 1,
+        "maxScroll": 69,
         "success": true
       }
     ]
@@ -27575,12 +27635,31 @@
         "returnTotal": 56
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T23:29:30.754Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 213,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 707,
+        "visitTotal": 707,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 57,
+        "returnTotal": 57
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 22:54:",
+    "[状态总结] 截至 2026-06-01 23:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 782 次行为 (匿名访问 704 + 首次使用 22 + 回访 56)",
+    "  历史累计完成: 786 次行为 (匿名访问 707 + 首次使用 22 + 回访 57)",
     "  品牌注册: MuleRun=102 MyClaw=213 dit.ai=115",
     "  今日进度: 219/448 任务完成 (49%)",
     "    mulerun: 63/147 (43%) — 55v + 3r + 5rt",
@@ -27588,10 +27667,6 @@
     "    dit: 78/147 (53%) — 55v + 18r + 5rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T19:20:54] [info] [mulerun] return x1 OK",
-    "[2026-06-01T19:26:05] [info] [dit] visit x5 OK",
-    "[2026-06-01T19:30:47] [info] [mulerun] visit x5 OK",
-    "[2026-06-01T19:34:57] [info] [mulerun] visit x1 OK",
     "[2026-06-01T19:37:32] [info] [myclaw] visit x3 OK",
     "[2026-06-01T19:38:20] [info] [dit] visit x3 OK",
     "[2026-06-01T19:39:25] [error] [mulerun] register x1 FAILED: exit 1",
@@ -27627,7 +27702,11 @@
     "[2026-06-01T22:17:37] [info] [myclaw] register x1 OK",
     "[2026-06-01T22:26:09] [info] [dit] register x1 OK",
     "[2026-06-01T22:34:03] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-01T22:52:45] [info] [mulerun] visit x3 OK"
+    "[2026-06-01T22:52:45] [info] [mulerun] visit x3 OK",
+    "[2026-06-01T23:04:28] [info] [myclaw] return x1 OK",
+    "[2026-06-01T23:12:50] [info] [dit] visit x2 OK",
+    "[2026-06-01T23:13:10] [info] [myclaw] visit x3 OK",
+    "[2026-06-01T23:16:36] [error] [mulerun] register x1 FAILED: exit 1"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
