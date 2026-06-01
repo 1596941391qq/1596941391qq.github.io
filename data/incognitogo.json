@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T14:39:00.738Z",
+  "updatedAt": "2026-06-01T14:54:10.853Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -56,7 +56,7 @@
         },
         "2026-06-01": {
           "visits": 52,
-          "regs": 17,
+          "regs": 18,
           "returns": 5
         }
       },
@@ -108,7 +108,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 203,
+    "myclaw": 204,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -2003,6 +2003,11 @@
           {
             "name": "mulerun",
             "registeredAt": "2026-05-30T20:34:54.688Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-01T14:45:10.535Z",
             "status": "active"
           }
         ],
@@ -24399,20 +24404,38 @@
         "returnTotal": 50
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T14:54:10.853Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 204,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 636,
+        "visitTotal": 636,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 50,
+        "returnTotal": 50
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 14:39:",
+    "[状态总结] 截至 2026-06-01 14:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 708 次行为 (匿名访问 636 + 首次使用 22 + 回访 50)",
-    "  品牌注册: MuleRun=102 MyClaw=203 dit.ai=115",
-    "  今日进度: 215/234 任务完成 (92%)",
+    "  品牌注册: MuleRun=102 MyClaw=204 dit.ai=115",
+    "  今日进度: 216/234 任务完成 (92%)",
     "    mulerun: 63/78 (81%) — 55v + 3r + 5rt",
-    "    myclaw: 74/78 (95%) — 52v + 17r + 5rt",
+    "    myclaw: 75/78 (96%) — 52v + 18r + 5rt",
     "    dit: 78/78 (100%) — 55v + 18r + 5rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T06:51:15] [info] [dit] return x1 OK",
     "[2026-06-01T07:12:06] [error] [mulerun] register x1 FAILED: exit 1",
     "[2026-06-01T07:17:59] [info] [dit] visit x5 OK",
     "[2026-06-01T07:25:27] [info] [dit] visit x1 OK",
@@ -24451,7 +24474,8 @@
     "[2026-06-01T12:17:17] [info] [myclaw] visit x3 OK",
     "[2026-06-01T13:17:29] [info] [myclaw] register x1 OK",
     "[2026-06-01T13:34:43] [info] [myclaw] return x1 OK",
-    "[2026-06-01T13:56:29] [info] [myclaw] visit x3 OK"
+    "[2026-06-01T13:56:29] [info] [myclaw] visit x3 OK",
+    "[2026-06-01T14:45:47] [info] [myclaw] register x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
