@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T12:54:06.308Z",
+  "updatedAt": "2026-06-01T13:28:58.203Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -56,7 +56,7 @@
         },
         "2026-06-01": {
           "visits": 49,
-          "regs": 16,
+          "regs": 17,
           "returns": 4
         }
       },
@@ -108,7 +108,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 202,
+    "myclaw": 203,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -2254,6 +2254,18 @@
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T03:17:18.844Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "choatesberkovitzwh329@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-01T13:16:52.323Z",
             "status": "active"
           }
         ],
@@ -24289,20 +24301,38 @@
         "returnTotal": 49
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T13:28:58.203Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 203,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 633,
+        "visitTotal": 633,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 49,
+        "returnTotal": 49
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 12:54:",
+    "[状态总结] 截至 2026-06-01 13:28:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 704 次行为 (匿名访问 633 + 首次使用 22 + 回访 49)",
-    "  品牌注册: MuleRun=102 MyClaw=202 dit.ai=115",
-    "  今日进度: 210/234 任务完成 (90%)",
+    "  品牌注册: MuleRun=102 MyClaw=203 dit.ai=115",
+    "  今日进度: 211/234 任务完成 (90%)",
     "    mulerun: 63/78 (81%) — 55v + 3r + 5rt",
-    "    myclaw: 69/78 (88%) — 49v + 16r + 4rt",
+    "    myclaw: 70/78 (90%) — 49v + 17r + 4rt",
     "    dit: 78/78 (100%) — 55v + 18r + 5rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T06:35:15] [info] [myclaw] visit x2 OK",
     "[2026-06-01T06:35:27] [info] [dit] visit x2 OK",
     "[2026-06-01T06:49:27] [info] [dit] register x1 OK",
     "[2026-06-01T06:51:15] [info] [dit] return x1 OK",
@@ -24341,7 +24371,8 @@
     "[2026-06-01T11:45:00] [error] [mulerun] register x2 FAILED: exit 1",
     "[2026-06-01T12:08:41] [info] [mulerun] visit x3 OK",
     "[2026-06-01T12:08:41] [info] [mulerun] Worker loop complete for today",
-    "[2026-06-01T12:17:17] [info] [myclaw] visit x3 OK"
+    "[2026-06-01T12:17:17] [info] [myclaw] visit x3 OK",
+    "[2026-06-01T13:17:29] [info] [myclaw] register x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
