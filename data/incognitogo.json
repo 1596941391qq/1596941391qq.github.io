@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T00:54:03.345Z",
+  "updatedAt": "2026-06-01T01:28:55.436Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -55,7 +55,7 @@
           "returns": 4
         },
         "2026-06-01": {
-          "visits": 21,
+          "visits": 24,
           "regs": 8,
           "returns": 2
         }
@@ -79,7 +79,7 @@
         "2026-06-01": {
           "visits": 23,
           "regs": 9,
-          "returns": 1
+          "returns": 2
         }
       }
     },
@@ -4220,8 +4220,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 580,
-    "visitTotal": 580,
+    "visitSuccess": 583,
+    "visitTotal": 583,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 43,
@@ -13198,6 +13198,51 @@
         "actions": 2,
         "pages": 0,
         "maxScroll": 2,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T01:01:28.812Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d2ruj8",
+        "region": "BR",
+        "ip": "186.219.65.212",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 23,
+        "actions": 5,
+        "pages": 1,
+        "maxScroll": 11,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T01:05:55.279Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1d2rvwi",
+        "region": "BR",
+        "ip": "45.182.150.196",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 23,
+        "actions": 0,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T01:08:14.629Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1d2s01f",
+        "region": "JP",
+        "ip": "133.106.179.138",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 60,
+        "actions": 13,
+        "pages": 2,
+        "maxScroll": 27,
         "success": true
       },
       {
@@ -22829,25 +22874,38 @@
         "returnTotal": 43
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T01:28:55.436Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 194,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 583,
+        "visitTotal": 583,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 43,
+        "returnTotal": 43
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 00:54:",
+    "[状态总结] 截至 2026-06-01 01:28:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 645 次行为 (匿名访问 580 + 首次使用 22 + 回访 43)",
+    "  历史累计完成: 648 次行为 (匿名访问 583 + 首次使用 22 + 回访 43)",
     "  品牌注册: MuleRun=102 MyClaw=194 dit.ai=115",
-    "  今日进度: 97/234 任务完成 (41%)",
+    "  今日进度: 101/234 任务完成 (43%)",
     "    mulerun: 33/78 (42%) — 29v + 3r + 1rt",
-    "    myclaw: 31/78 (40%) — 21v + 8r + 2rt",
-    "    dit: 33/78 (42%) — 23v + 9r + 1rt",
+    "    myclaw: 34/78 (44%) — 24v + 8r + 2rt",
+    "    dit: 34/78 (44%) — 23v + 9r + 2rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-05-31T18:00:02] [info] [dit] visit x5 OK",
-    "[2026-05-31T18:01:37] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-05-31T18:06:07] [info] [myclaw] register x1 OK",
-    "[2026-05-31T18:08:54] [info] [dit] visit x1 OK",
-    "[2026-05-31T18:14:01] [info] [myclaw] return x1 OK",
-    "[2026-05-31T18:14:30] [info] [dit] return x1 OK",
     "[2026-05-31T18:26:21] [info] [mulerun] visit x5 OK",
     "[2026-05-31T18:40:40] [info] [myclaw] register x1 OK",
     "[2026-05-31T18:42:59] [info] [mulerun] visit x4 OK",
@@ -22881,7 +22939,13 @@
     "[2026-06-01T00:38:28] [info] [mulerun] visit x4 OK",
     "[2026-06-01T00:38:28] [info] [mulerun] Off-peak hour (weight=0.17), sleeping 22min",
     "[2026-06-01T00:38:44] [info] [dit] register x1 OK",
-    "[2026-06-01T00:38:44] [info] [dit] Off-peak hour (weight=0.19), sleeping 22min"
+    "[2026-06-01T00:38:44] [info] [dit] Off-peak hour (weight=0.19), sleeping 22min",
+    "[2026-06-01T01:01:34] [info] [dit] return x1 OK",
+    "[2026-06-01T01:01:34] [info] [dit] Off-peak hour (weight=0.19), sleeping 59min",
+    "[2026-06-01T01:02:43] [error] [mulerun] register x1 FAILED: exit 1",
+    "[2026-06-01T01:02:43] [info] [mulerun] Off-peak hour (weight=0.17), sleeping 58min",
+    "[2026-06-01T01:08:17] [info] [myclaw] visit x3 OK",
+    "[2026-06-01T01:08:17] [info] [myclaw] Off-peak hour (weight=0.19), sleeping 52min"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
