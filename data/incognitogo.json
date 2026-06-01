@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T10:54:01.796Z",
+  "updatedAt": "2026-06-01T11:29:01.704Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -55,8 +55,8 @@
           "returns": 4
         },
         "2026-06-01": {
-          "visits": 43,
-          "regs": 15,
+          "visits": 46,
+          "regs": 16,
           "returns": 4
         }
       },
@@ -77,7 +77,7 @@
           "returns": 4
         },
         "2026-06-01": {
-          "visits": 49,
+          "visits": 55,
           "regs": 18,
           "returns": 5
         }
@@ -108,7 +108,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 201,
+    "myclaw": 202,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -2085,6 +2085,18 @@
           {
             "name": "myclaw",
             "registeredAt": "2026-05-31T16:42:35.526Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "ReginaldWong939@gmail.com",
+        "region": "IN",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-01T11:06:52.003Z",
             "status": "active"
           }
         ],
@@ -4290,8 +4302,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 626,
-    "visitTotal": 626,
+    "visitSuccess": 627,
+    "visitTotal": 627,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 49,
@@ -13988,6 +14000,21 @@
         "actions": 2,
         "pages": 1,
         "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T10:54:59.284Z",
+        "brand": "myclaw",
+        "visitNum": 3,
+        "profileId": "k1d39d45",
+        "region": "BR",
+        "ip": "187.33.58.193",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 13,
+        "actions": 4,
+        "pages": 0,
+        "maxScroll": 8,
         "success": true
       },
       {
@@ -24093,24 +24120,38 @@
         "returnTotal": 49
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T11:29:01.704Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 202,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 627,
+        "visitTotal": 627,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 49,
+        "returnTotal": 49
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 10:54:",
+    "[状态总结] 截至 2026-06-01 11:29:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 697 次行为 (匿名访问 626 + 首次使用 22 + 回访 49)",
-    "  品牌注册: MuleRun=102 MyClaw=201 dit.ai=115",
-    "  今日进度: 194/234 任务完成 (83%)",
+    "  历史累计完成: 698 次行为 (匿名访问 627 + 首次使用 22 + 回访 49)",
+    "  品牌注册: MuleRun=102 MyClaw=202 dit.ai=115",
+    "  今日进度: 204/234 任务完成 (87%)",
     "    mulerun: 60/78 (77%) — 52v + 3r + 5rt",
-    "    myclaw: 62/78 (79%) — 43v + 15r + 4rt",
-    "    dit: 72/78 (92%) — 49v + 18r + 5rt",
+    "    myclaw: 66/78 (85%) — 46v + 16r + 4rt",
+    "    dit: 78/78 (100%) — 55v + 18r + 5rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T05:31:00] [info] [myclaw] visit x1 OK",
-    "[2026-06-01T05:36:13] [info] [dit] visit x3 OK",
-    "[2026-06-01T05:40:50] [info] [dit] return x2 OK",
-    "[2026-06-01T05:42:49] [info] [mulerun] visit x3 OK",
-    "[2026-06-01T06:10:51] [info] [dit] visit x3 OK",
     "[2026-06-01T06:24:49] [info] [dit] register x1 OK",
     "[2026-06-01T06:28:21] [info] [mulerun] return x1 OK",
     "[2026-06-01T06:30:06] [info] [myclaw] register x2 OK",
@@ -24145,7 +24186,12 @@
     "[2026-06-01T10:03:06] [info] [myclaw] return x1 OK",
     "[2026-06-01T10:34:48] [info] [dit] visit x1 OK",
     "[2026-06-01T10:37:56] [info] [mulerun] visit x1 OK",
-    "[2026-06-01T10:51:25] [info] [dit] register x1 OK"
+    "[2026-06-01T10:51:25] [info] [dit] register x1 OK",
+    "[2026-06-01T10:55:02] [info] [myclaw] visit x3 OK",
+    "[2026-06-01T11:07:19] [info] [myclaw] register x1 OK",
+    "[2026-06-01T11:14:44] [info] [dit] visit x5 OK",
+    "[2026-06-01T11:20:14] [info] [dit] visit x1 OK",
+    "[2026-06-01T11:20:14] [info] [dit] Worker loop complete for today"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
