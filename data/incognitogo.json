@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T15:29:06.224Z",
+  "updatedAt": "2026-06-01T16:04:09.295Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -80,6 +80,11 @@
           "visits": 55,
           "regs": 18,
           "returns": 5
+        },
+        "2026-06-02": {
+          "visits": 1,
+          "regs": 0,
+          "returns": 0
         }
       }
     },
@@ -87,22 +92,22 @@
   },
   "todayPlan": {
     "mulerun": {
-      "visits": 55,
-      "regs": 18,
-      "returns": 5,
-      "total": 78
+      "visits": 103,
+      "regs": 34,
+      "returns": 10,
+      "total": 147
     },
     "myclaw": {
-      "visits": 55,
-      "regs": 18,
-      "returns": 5,
-      "total": 78
+      "visits": 103,
+      "regs": 34,
+      "returns": 17,
+      "total": 154
     },
     "dit": {
-      "visits": 55,
-      "regs": 18,
-      "returns": 5,
-      "total": 78
+      "visits": 103,
+      "regs": 34,
+      "returns": 10,
+      "total": 147
     }
   },
   "heartbeatTriggers": 0,
@@ -4319,8 +4324,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 639,
-    "visitTotal": 639,
+    "visitSuccess": 640,
+    "visitTotal": 640,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 50,
@@ -9274,6 +9279,22 @@
         "duration": 10,
         "actions": 3,
         "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T16:02:48.599Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1d3hqnp",
+        "region": "US",
+        "ip": "71.226.242.80",
+        "target": "invitation",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 40,
+        "actions": 9,
+        "pages": 1,
         "maxScroll": 0,
         "success": true
       },
@@ -15862,7 +15883,7 @@
     }
   ],
   "conversationPlans": {
-    "planned": 151,
+    "planned": 188,
     "consumed": 3,
     "fallback": 0,
     "sessions": [
@@ -17180,6 +17201,101 @@
         "generatedAt": "2026-05-26T14:15:57.386Z"
       },
       {
+        "email": "WeijieDearman@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a sustainability report for my company?",
+            "expectedTopic": "sustainability reporting frameworks and content structure"
+          },
+          {
+            "type": "chat",
+            "prompt": "What sections should I include for a mid-size brewery's environmental impact?",
+            "expectedTopic": "brewery-specific sustainability metrics and reporting sections"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create an infographic showing water usage reduction in beer production",
+            "expectedTopic": "visual representation of brewery sustainability data"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I make this report more engaging for stakeholders?",
+            "expectedTopic": "communication strategies and storytelling for sustainability reports"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a content calendar for monthly sustainability updates",
+            "expectedTopic": "structured planning for ongoing sustainability communications"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous sustainability projects",
+            "expectedTopic": "user's past creations and generation history"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:16.773Z"
+      },
+      {
+        "email": "WeijieDearman@gmail.com",
+        "brand": "ditai",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I reduce my carbon footprint when buying wine?",
+            "expectedTopic": "sustainable wine sourcing, local producers, packaging impact"
+          },
+          {
+            "type": "chat",
+            "prompt": "What German wine regions are most eco-friendly?",
+            "expectedTopic": "sustainable German vineyards, regional certifications, organic practices"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual guide showing sustainable wine packaging options",
+            "expectedTopic": "comparison of glass, natural cork, and alternative closures"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I find certified organic beers in Germany?",
+            "expectedTopic": "German organic beer breweries, certifications, sustainability standards"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Build a checklist for sustainable beverage shopping",
+            "expectedTopic": "structured guide for eco-conscious wine and beer purchases"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do breweries reduce water waste in production?",
+            "expectedTopic": "beer production sustainability, water conservation techniques"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explore the AI model options for detailed sustainability analysis",
+            "expectedTopic": "different AI models available for in-depth research"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the environmental impact of shipping wine internationally vs local?",
+            "expectedTopic": "carbon emissions from logistics, local sourcing benefits"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Check my previous sustainability conversations",
+            "expectedTopic": "past discussions about eco-friendly practices and recommendations"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:22.438Z"
+      },
+      {
         "email": "ShuklaShternie346@gmail.com",
         "brand": "mulerun",
         "rounds": 7,
@@ -17225,6 +17341,71 @@
         "generatedAt": "2026-05-26T14:16:01.418Z"
       },
       {
+        "email": "ShuklaShternie346@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Create a funny IPL meme about Bumrah's yorkers",
+            "expectedTopic": "Meme creation ideas featuring IPL bowlers and cricket humor"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Generate the meme with Bumrah's face and a yorker ball",
+            "expectedTopic": "Visual meme generation with cricket player imagery"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Save this as a template for future IPL meme series",
+            "expectedTopic": "Creating reusable content templates for cricket-related memes"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:19.501Z"
+      },
+      {
+        "email": "ShuklaShternie346@gmail.com",
+        "brand": "ditai",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "IPL 2024 predictions - who'll win?",
+            "expectedTopic": "IPL 2024 teams, player analysis, championship predictions"
+          },
+          {
+            "type": "chat",
+            "prompt": "Why is Bumrah so good this season?",
+            "expectedTopic": "Jasprit Bumrah's performance, bowling statistics, impact on matches"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a funny meme about MI losing to CSK",
+            "expectedTopic": "Cricket meme with humorous take on Mumbai Indians vs Chennai Super Kings rivalry"
+          },
+          {
+            "type": "chat",
+            "prompt": "Best IPL meme templates I can use?",
+            "expectedTopic": "Popular cricket meme formats, funny IPL moments, meme creation ideas"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Track IPL match schedule and my favorite team's games",
+            "expectedTopic": "Creating a structured task list for IPL matches, reminders, team performance tra"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which player has the funniest celebration?",
+            "expectedTopic": "IPL player celebrations, entertaining moments, personality-driven cricket conten"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:26.505Z"
+      },
+      {
         "email": "MariaYt314@gmail.com",
         "brand": "mulerun",
         "rounds": 4,
@@ -17253,6 +17434,46 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-26T14:16:05.178Z"
+      },
+      {
+        "email": "MariaYt314@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "写真の背景をAIで生成できますか？",
+            "expectedTopic": "AI background generation capabilities for photography"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "京都の古い駅舎の背景を作ってください",
+            "expectedTopic": "Generated image of traditional Kyoto train station background"
+          },
+          {
+            "type": "chat",
+            "prompt": "この背景、もっと朝日が入るようにできますか？",
+            "expectedTopic": "Image editing and lighting adjustment options"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "過去の生成画像を確認する",
+            "expectedTopic": "Access to generation history and previous creations"
+          },
+          {
+            "type": "create_task",
+            "prompt": "鉄道写真シリーズ用に5枚の駅背景を作成",
+            "expectedTopic": "Batch creation project for train photography backgrounds"
+          },
+          {
+            "type": "chat",
+            "prompt": "これらの画像を高品質で書き出すにはどうしたらいい？",
+            "expectedTopic": "Export and quality settings for final image output"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:51.970Z"
       },
       {
         "email": "nguyenlan25a@gmail.com",
@@ -17323,6 +17544,36 @@
         "fallback": false,
         "consumed": true,
         "generatedAt": "2026-05-26T14:16:08.861Z"
+      },
+      {
+        "email": "nguyenlan25a@gmail.com",
+        "brand": "ditai",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I improve my landscape photography composition?",
+            "expectedTopic": "composition techniques for landscape photography"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual guide showing the rule of thirds applied to a mountain landscape",
+            "expectedTopic": "visual demonstration of composition principles"
+          },
+          {
+            "type": "chat",
+            "prompt": "What camera settings work best for golden hour shots?",
+            "expectedTopic": "camera settings and technical advice for golden hour photography"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a photography project plan for a week-long national park trip",
+            "expectedTopic": "structured planning for a photography expedition"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:43.327Z"
       },
       {
         "email": "KrossBeaton@gmail.com",
@@ -17788,6 +18039,61 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-27T18:47:58.396Z"
+      },
+      {
+        "email": "trieuthigaman771@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can MuleRun help me research the best mobile games for 2024?",
+            "expectedTopic": "MuleRun's research and information gathering capabilities"
+          },
+          {
+            "type": "chat",
+            "prompt": "What about games optimized for Indian servers with low ping?",
+            "expectedTopic": "Region-specific gaming recommendations and server optimization"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a comparison chart of top 5 multiplayer games for India",
+            "expectedTopic": "Visual comparison of gaming options"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me track my gaming progress across multiple games?",
+            "expectedTopic": "Task automation and progress tracking features"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Set up a daily reminder to check new mobile game releases",
+            "expectedTopic": "Task creation and automation workflows"
+          },
+          {
+            "type": "chat",
+            "prompt": "I'm planning a Royal Enfield trip next month - can you help organize it?",
+            "expectedTopic": "Project planning and itinerary organization"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Show me the templates available for travel planning and logistics",
+            "expectedTopic": "Exploring pre-built templates for bike trips"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I combine my gaming schedule with my bike trip planning?",
+            "expectedTopic": "Multi-project management and integration"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous gaming research and tasks from last month",
+            "expectedTopic": "Accessing past conversations and completed projects"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:18.274Z"
       },
       {
         "email": "clydeiojpasqualec8@gmail.com",
@@ -18318,6 +18624,46 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-28T21:52:26.641Z"
+      },
+      {
+        "email": "lyndafiona1@gmail.com",
+        "brand": "mulerun",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me analyze IPL 2024 team performance stats?",
+            "expectedTopic": "IPL team statistics and performance analysis"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a comparison chart of top IPL batsmen this season",
+            "expectedTopic": "Visual representation of IPL player statistics"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which teams have the best bowling attack this year?",
+            "expectedTopic": "IPL bowling performance and team comparisons"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Set up weekly IPL match analysis reports for my portfolio",
+            "expectedTopic": "Task creation for recurring cricket analysis work"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I track stock prices of IPL team sponsors?",
+            "expectedTopic": "Integration of stock market data with cricket interests"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explore templates for sports analytics and financial tracking",
+            "expectedTopic": "Discovery of pre-built templates for cricket and market analysis"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:23.950Z"
       },
       {
         "email": "ChristineHassan858@gmail.com",
@@ -18930,6 +19276,56 @@
         "generatedAt": "2026-05-28T21:56:06.237Z"
       },
       {
+        "email": "NoraJulia840@gmail.com",
+        "brand": "ditai",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Quero planejar uma viagem pro Nordeste em julho. Por onde começo?",
+            "expectedTopic": "travel planning advice for Northeast Brazil in July"
+          },
+          {
+            "type": "chat",
+            "prompt": "Qual é o melhor custo-benefício entre Recife e Fortaleza?",
+            "expectedTopic": "comparison of costs and attractions in Recife vs Fortaleza"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Cria um mapa visual dos principais pontos turísticos de Fortaleza",
+            "expectedTopic": "visual map or diagram of Fortaleza tourist attractions"
+          },
+          {
+            "type": "chat",
+            "prompt": "Posso levar meu cachorro? Quais praias são pet-friendly?",
+            "expectedTopic": "pet-friendly beaches and travel tips for dogs in Fortaleza"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Cria uma checklist de preparação pra viagem com o cachorro",
+            "expectedTopic": "structured task list for preparing dog for travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Vale a pena alugar carro lá ou usar Uber?",
+            "expectedTopic": "transportation options and cost comparison in Fortaleza"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explorar templates de documentos para itinerário de viagem",
+            "expectedTopic": "available document templates for travel planning"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Ver minhas conversas anteriores sobre viagens pro Nordeste",
+            "expectedTopic": "previous travel planning conversations and saved recommendations"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:07.297Z"
+      },
+      {
         "email": "vrieoslcneupsxl@gmail.com",
         "brand": "myclaw",
         "rounds": 5,
@@ -19003,6 +19399,36 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-31T02:37:28.827Z"
+      },
+      {
+        "email": "vrieoslcneupsxl@gmail.com",
+        "brand": "mulerun",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me find the best mobile games launching this month?",
+            "expectedTopic": "Mobile game releases and recommendations for current month"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which ones have the best monetization model - not too pay-to-win?",
+            "expectedTopic": "Game monetization systems and fair pricing models"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a task to track these games and check reviews weekly",
+            "expectedTopic": "Setting up automated game review tracking and monitoring"
+          },
+          {
+            "type": "chat",
+            "prompt": "Also, which gaming stocks should I watch alongside these releases?",
+            "expectedTopic": "Gaming industry stocks and market opportunities related to mobile gaming"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:27.173Z"
       },
       {
         "email": "qha15419@gmail.com",
@@ -19230,6 +19656,61 @@
         "generatedAt": "2026-05-31T16:04:44.771Z"
       },
       {
+        "email": "ShanthiNarro@gmail.com",
+        "brand": "ditai",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How do I grow tomatoes in a UK greenhouse?",
+            "expectedTopic": "Greenhouse tomato growing techniques for British climate"
+          },
+          {
+            "type": "chat",
+            "prompt": "What about feeding schedule during fruiting?",
+            "expectedTopic": "Tomato fertiliser and nutrient requirements during fruit production"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a diagram showing tomato plant training methods",
+            "expectedTopic": "Visual guide to pruning and supporting tomato plants"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I use craft beer dregs as compost?",
+            "expectedTopic": "Using brewery byproducts and spent grain in gardening"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Make a monthly garden maintenance checklist for spring",
+            "expectedTopic": "Structured gardening task list and seasonal planning"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which herbs pair well with IPA brewing?",
+            "expectedTopic": "Growing herbs for craft beer brewing and flavouring"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explore the document creation feature for garden planning",
+            "expectedTopic": "Creating and saving garden design documents"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I preserve my harvest for winter storage?",
+            "expectedTopic": "Food preservation techniques for homegrown vegetables"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Check my previous gardening conversations",
+            "expectedTopic": "Reviewing past advice and tracking gardening progress"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:12.438Z"
+      },
+      {
         "email": "DaniyelAndrees@gmail.com",
         "brand": "myclaw",
         "rounds": 5,
@@ -19358,6 +19839,51 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-28T21:56:13.926Z"
+      },
+      {
+        "email": "PaygeVela@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write lyrics for an indie rock song about hiking in the Lake District?",
+            "expectedTopic": "songwriting assistance and lyrical themes combining music and hiking interests"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create album artwork inspired by misty mountains and moody indie rock vibes",
+            "expectedTopic": "visual representation of indie rock aesthetic with natural landscape elements"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I make the chorus catchier without losing the melancholic feel?",
+            "expectedTopic": "songwriting techniques for balancing melody with emotional tone"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Start a project for my DIY home recording setup guide",
+            "expectedTopic": "organizing content creation workflow for music production documentation"
+          },
+          {
+            "type": "chat",
+            "prompt": "What equipment would you recommend for recording acoustic guitar at home on a budget?",
+            "expectedTopic": "affordable home recording gear recommendations for indie musicians"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check my generation history to find that mountain landscape image from last week",
+            "expectedTopic": "reviewing previous creative outputs and managing saved content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest some UK indie bands with similar vibes to what I'm creating?",
+            "expectedTopic": "music recommendations and inspiration from British indie rock scene"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:07.275Z"
       },
       {
         "email": "heanghoch0@gmail.com",
@@ -20970,6 +21496,51 @@
         "generatedAt": "2026-05-28T21:51:54.794Z"
       },
       {
+        "email": "mustaphamanje@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I track my monthly spending better?",
+            "expectedTopic": "budgeting strategies and expense tracking methods"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me set up a budget for groceries and gardening supplies?",
+            "expectedTopic": "creating category-based budgets with specific spending limits"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a monthly budget tracker project with categories for food, gardening, and utilities",
+            "expectedTopic": "structured task creation for ongoing budget management"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's a realistic monthly budget for someone who gardens as a hobby?",
+            "expectedTopic": "typical gardening expenses and cost-saving tips"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a pie chart showing a sample monthly budget breakdown for US household with gardening hobby",
+            "expectedTopic": "visual representation of budget allocation"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I automate tracking my garden expenses separately from regular spending?",
+            "expectedTopic": "automation strategies for categorized expense tracking"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous finance-related tasks and conversations",
+            "expectedTopic": "past budgeting work and financial planning history"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:07.013Z"
+      },
+      {
         "email": "quyn8quyn@gmail.com",
         "brand": "myclaw",
         "rounds": 7,
@@ -21013,6 +21584,66 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-28T21:51:59.394Z"
+      },
+      {
+        "email": "quyn8quyn@gmail.com",
+        "brand": "mulerun",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me plan a pub crawl route in Manchester",
+            "expectedTopic": "pub crawl planning and Manchester venues"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which of those pubs have the best real ales?",
+            "expectedTopic": "real ale recommendations at Manchester pubs"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a map showing the pub crawl route with stops marked",
+            "expectedTopic": "visual map of pub locations and walking route"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I combine this with a hiking trip nearby?",
+            "expectedTopic": "hiking trails near Manchester and pub accessibility"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a weekend itinerary: Saturday hike in Peak District, Sunday pub crawl in Manchester",
+            "expectedTopic": "structured weekend plan with both activities"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the best pub for food after a long hike?",
+            "expectedTopic": "pub recommendations with good food and hearty meals"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Look for MuleRun templates for trip planning and itineraries",
+            "expectedTopic": "available templates for organizing multi-day trips"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest pubs with outdoor seating for summer visits?",
+            "expectedTopic": "outdoor pub venues in GB with garden or terrace areas"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous pub research and saved recommendations",
+            "expectedTopic": "past conversations and saved pub lists from earlier sessions"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Set up a monthly pub discovery project to explore new venues",
+            "expectedTopic": "recurring task for ongoing pub exploration and reviews"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:13.425Z"
       },
       {
         "email": "maanansar69@gmail.com",
@@ -21073,6 +21704,21 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-28T21:52:12.135Z"
+      },
+      {
+        "email": "maanansar69@gmail.com",
+        "brand": "mulerun",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Quero planejar uma viagem para a praia em janeiro. Como você pode me ajudar?",
+            "expectedTopic": "Travel planning assistance, beach destination recommendations, and how MuleRun c"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:20.344Z"
       },
       {
         "email": "RodicaApetrii425@gmail.com",
@@ -21455,6 +22101,46 @@
         "generatedAt": "2026-05-31T02:37:32.032Z"
       },
       {
+        "email": "etiennezelaya@gmail.com",
+        "brand": "mulerun",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I use MuleRun to research startup funding trends in India?",
+            "expectedTopic": "Using AI chat to research startup ecosystem and funding landscape"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project to track top 10 Indian startups in my sector",
+            "expectedTopic": "Organizing startup research into structured tasks and projects"
+          },
+          {
+            "type": "chat",
+            "prompt": "What metrics should I monitor for these startups?",
+            "expectedTopic": "Key performance indicators and metrics for startup analysis"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a comparison chart of funding rounds for Indian startups",
+            "expectedTopic": "Visual representation of startup funding data and trends"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me identify gaps in the market for a chai-related startup?",
+            "expectedTopic": "Market analysis and business opportunity identification"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous startup research conversations",
+            "expectedTopic": "Accessing past analysis and research from earlier sessions"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:30.887Z"
+      },
+      {
         "email": "mataiwigar@gmail.com",
         "brand": "myclaw",
         "rounds": 1,
@@ -21720,6 +22406,51 @@
         "generatedAt": "2026-05-31T16:04:56.384Z"
       },
       {
+        "email": "NaokoWeinmar@gmail.com",
+        "brand": "ditai",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Oi! Quero aprender mais sobre produção de música sertaneja",
+            "expectedTopic": "Basics of sertanejo music production, instruments, and style characteristics"
+          },
+          {
+            "type": "chat",
+            "prompt": "Como faço pra criar um beat autêntico de sertanejo?",
+            "expectedTopic": "Sertanejo beat structure, rhythm patterns, and production techniques"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Cria uma imagem de um estúdio de música com instrumentos tradicionais sertanejos",
+            "expectedTopic": "Visual representation of a sertanejo music studio with acoustic guitars, drums, "
+          },
+          {
+            "type": "chat",
+            "prompt": "E se eu misturasse sertanejo com funk? Que tipo de vibe sairia?",
+            "expectedTopic": "Fusion possibilities between sertanejo and funk, contemporary trends in Brazilia"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Criar um projeto: 'Composição Sertanejo-Funk' com estrutura de verso, pré-refrão e refrão",
+            "expectedTopic": "Structured songwriting project combining both genres with clear sections"
+          },
+          {
+            "type": "chat",
+            "prompt": "Como a fé e espiritualidade aparecem nas letras de sertanejo moderno?",
+            "expectedTopic": "Religious and spiritual themes in contemporary sertanejo lyrics and cultural sig"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Ver minhas conversas anteriores sobre música brasileira",
+            "expectedTopic": "Previous chat history related to Brazilian music, production tips, and past proj"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:18.196Z"
+      },
+      {
         "email": "TiiaObeng177@gmail.com",
         "brand": "myclaw",
         "rounds": 4,
@@ -21748,6 +22479,891 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-05-31T16:04:59.357Z"
+      },
+      {
+        "email": "SkilaNeuville346@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me brainstorm a sci-fi board game mechanic involving AI players?",
+            "expectedTopic": "board game design and AI-driven gameplay mechanics"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual concept for an AI opponent character in a futuristic board game",
+            "expectedTopic": "visual representation of AI game character design"
+          },
+          {
+            "type": "chat",
+            "prompt": "How could I use this character design in marketing materials for the game?",
+            "expectedTopic": "content strategy and marketing applications for game assets"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Start a project to develop a complete board game ruleset with AI opponent system",
+            "expectedTopic": "structured project management for game development"
+          },
+          {
+            "type": "chat",
+            "prompt": "What woodworking elements could I incorporate into the physical game board design?",
+            "expectedTopic": "integration of woodworking craftsmanship with board game components"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Check my previous AI and gaming-related conversations",
+            "expectedTopic": "access to past creative work and project continuity"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:11.980Z"
+      },
+      {
+        "email": "MatMentari980@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a product description for a limited edition BMW M440i?",
+            "expectedTopic": "Writing assistance for automotive product descriptions"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a sleek BMW M440i in midnight blue, parked at a modern wine estate",
+            "expectedTopic": "Visual generation combining user's automotive and wine interests"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I make this description sound more premium and appeal to German car enthusiasts?",
+            "expectedTopic": "Refining automotive marketing copy for target audience"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Start a content series: 'Porsche Heritage & Craft Beer Pairings'",
+            "expectedTopic": "Organizing a multi-part creative project combining automotive and beverage inter"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous BMW content and image generations",
+            "expectedTopic": "Accessing past automotive-related creations and conversations"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:23.694Z"
+      },
+      {
+        "email": "MatMentari980@gmail.com",
+        "brand": "ditai",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me compare BMW M440i vs Porsche 911 Carrera?",
+            "expectedTopic": "Performance specs and driving characteristics comparison"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which one has better handling on the Nürburgring?",
+            "expectedTopic": "Track performance and cornering dynamics"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a side-by-side visual comparison of BMW M440i and Porsche 911 Carrera",
+            "expectedTopic": "Visual design and styling differences"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the maintenance cost difference between these two?",
+            "expectedTopic": "Long-term ownership costs and service intervals"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a buying decision checklist for choosing between M440i and 911",
+            "expectedTopic": "Structured comparison framework"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which pairs better with a German Riesling or Pinot Noir for weekend drives?",
+            "expectedTopic": "Lifestyle and pairing recommendations"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous automotive comparisons from last month",
+            "expectedTopic": "Past conversations and analysis results"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:29.978Z"
+      },
+      {
+        "email": "SuhuriVirjean@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me plan a week-long backpacking trip to the Rockies",
+            "expectedTopic": "backpacking trip planning advice and itinerary suggestions"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a map showing a scenic hiking route through mountain passes",
+            "expectedTopic": "visual representation of a mountain hiking route"
+          },
+          {
+            "type": "chat",
+            "prompt": "What gear should I pack for high altitude camping in cold weather?",
+            "expectedTopic": "essential gear recommendations for alpine camping"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Make a packing checklist for my Rocky Mountain backpacking trip",
+            "expectedTopic": "structured packing list organized by category"
+          },
+          {
+            "type": "chat",
+            "prompt": "Any tips for staying productive while working remotely from a cabin?",
+            "expectedTopic": "productivity strategies for remote work in outdoor settings"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check my previous adventure planning conversations and images",
+            "expectedTopic": "review history of past outdoor content and ideas"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you write a blog post about my backpacking experiences?",
+            "expectedTopic": "draft blog content about outdoor adventures"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Design a social media graphic promoting my hiking blog",
+            "expectedTopic": "promotional visual for outdoor adventure content"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I share these images and blog post on Instagram?",
+            "expectedTopic": "guidance on exporting and sharing content across platforms"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:28.776Z"
+      },
+      {
+        "email": "BarreraaExelina@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write about the English Civil War?",
+            "expectedTopic": "Overview of the English Civil War and writing approach"
+          },
+          {
+            "type": "chat",
+            "prompt": "What were the main causes that led to the conflict?",
+            "expectedTopic": "Political, religious, and economic causes of the English Civil War"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a map showing the key battle locations during the English Civil War",
+            "expectedTopic": "Visual representation of major battle sites and territorial control"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me about Oliver Cromwell's role and impact",
+            "expectedTopic": "Cromwell's military leadership and political influence"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Start a project comparing Royalist vs Parliamentarian perspectives",
+            "expectedTopic": "Structured content creation for comparative historical analysis"
+          },
+          {
+            "type": "chat",
+            "prompt": "How did this conflict influence modern British democracy?",
+            "expectedTopic": "Legacy of the English Civil War on constitutional governance"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check my previous history articles to see what I've written before",
+            "expectedTopic": "Review of past content and generation history"
+          },
+          {
+            "type": "chat",
+            "prompt": "Could you suggest some lesser-known figures from this period worth exploring?",
+            "expectedTopic": "Recommendations for interesting historical personalities and stories"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:34.054Z"
+      },
+      {
+        "email": "GunesCeco19@gmail.com",
+        "brand": "ditai",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How do I help my 7-year-old with reading comprehension?",
+            "expectedTopic": "Reading strategies and techniques for elementary school children"
+          },
+          {
+            "type": "chat",
+            "prompt": "What about making it fun so he actually wants to read?",
+            "expectedTopic": "Engaging reading activities and motivation techniques for kids"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a colorful reading corner setup for a kid's bedroom",
+            "expectedTopic": "Visual inspiration for designing an inviting reading space"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I build a reading nook from wood? I have basic tools",
+            "expectedTopic": "DIY woodworking projects for creating reading furniture"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project plan for building a wooden book shelf with my son",
+            "expectedTopic": "Structured woodworking project with steps and materials list"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's a good first woodworking project to do together with a kid?",
+            "expectedTopic": "Child-friendly woodworking projects and safety considerations"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Look at the document templates for project planning",
+            "expectedTopic": "Available templates for organizing DIY and parenting projects"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I teach him woodworking safety without scaring him?",
+            "expectedTopic": "Age-appropriate safety education for kids in workshops"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Check my previous conversations about parenting tips",
+            "expectedTopic": "Past discussions and advice on child development and activities"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest a weekend project combining reading and woodworking?",
+            "expectedTopic": "Creative project ideas blending both interests for family bonding"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:36.333Z"
+      },
+      {
+        "email": "GunesCeco19@gmail.com",
+        "brand": "mulerun",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I organize my kids' summer activities and schedules?",
+            "expectedTopic": "parenting organization and scheduling strategies"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me create a weekly checklist for summer activities?",
+            "expectedTopic": "creating structured schedules and checklists for children"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a summer activity planner project with weekly templates",
+            "expectedTopic": "setting up a reusable project structure for seasonal planning"
+          },
+          {
+            "type": "chat",
+            "prompt": "What are some budget-friendly outdoor activities for kids this summer?",
+            "expectedTopic": "affordable parenting ideas and activity suggestions"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual weekly schedule template for kids' summer activities",
+            "expectedTopic": "visual planning tools and calendar layouts"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I balance screen time with outdoor activities for my kids?",
+            "expectedTopic": "parenting advice on healthy habits and screen time management"
+          },
+          {
+            "type": "chat",
+            "prompt": "Could I build a simple wooden activity station in my backyard?",
+            "expectedTopic": "woodworking projects that combine parenting and DIY skills"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Look at available templates for family project planning",
+            "expectedTopic": "exploring pre-built templates to save setup time"
+          },
+          {
+            "type": "chat",
+            "prompt": "What materials and tools do I need to build a kids' outdoor play structure?",
+            "expectedTopic": "woodworking materials and construction planning for family projects"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous parenting and woodworking project notes",
+            "expectedTopic": "accessing past conversations and task results for reference"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:42.546Z"
+      },
+      {
+        "email": "GunesCeco19@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me write a bedtime story for my 5-year-old about a brave little fox",
+            "expectedTopic": "bedtime story writing for young children"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create an illustration of a cute fox character for the story",
+            "expectedTopic": "children's book illustration style"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make the story a bit longer and add more adventure?",
+            "expectedTopic": "expanding narrative with plot elements"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Save this as a project so I can add more stories to it later",
+            "expectedTopic": "organizing content into a story collection"
+          },
+          {
+            "type": "chat",
+            "prompt": "I'm building a wooden toy box for my kids. What design would work well?",
+            "expectedTopic": "woodworking project ideas and design considerations"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Show me a sketch of a simple wooden toy box with rounded corners",
+            "expectedTopic": "woodworking design visualization"
+          },
+          {
+            "type": "chat",
+            "prompt": "What wood stain colors would look good and be safe for kids?",
+            "expectedTopic": "child-safe finishing materials for woodworking"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Look at templates for parenting content and craft projects",
+            "expectedTopic": "discovering pre-made templates for future use"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me plan a birthday party activity guide for 6-year-olds?",
+            "expectedTopic": "parenting event planning and activity ideas"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me all my previous parenting content and stories",
+            "expectedTopic": "accessing past creations and projects"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:47.669Z"
+      },
+      {
+        "email": "StellLolli77@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me plan a week of South Indian meals",
+            "expectedTopic": "South Indian cuisine planning and recipes"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest dosa variations I haven't tried?",
+            "expectedTopic": "Regional dosa varieties and preparation methods"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual guide for dosa batter fermentation stages",
+            "expectedTopic": "Visual representation of fermentation process"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's the best way to store fermented batter?",
+            "expectedTopic": "Food storage and preservation techniques"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a weekly meal prep checklist for South Indian breakfasts",
+            "expectedTopic": "Structured task for meal planning organization"
+          },
+          {
+            "type": "chat",
+            "prompt": "How does yoga help with digestion after heavy meals?",
+            "expectedTopic": "Connection between yoga and digestive health"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explore MuleRun templates for meal planning workflows",
+            "expectedTopic": "Available templates for cooking and meal organization"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I track cooking time investments like stock market returns?",
+            "expectedTopic": "Productivity tracking and time management analytics"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous cooking experiments and results",
+            "expectedTopic": "Past conversations and cooking projects completed"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:35.275Z"
+      },
+      {
+        "email": "StellLolli77@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a recipe for butter chicken?",
+            "expectedTopic": "Regional Indian cooking, butter chicken recipe"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I make the gravy less spicy for kids?",
+            "expectedTopic": "Adjusting spice levels in Indian curries"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a food photo of butter chicken with naan and rice",
+            "expectedTopic": "Visual representation of the finished dish"
+          },
+          {
+            "type": "chat",
+            "prompt": "What's a good wine pairing for this meal?",
+            "expectedTopic": "Beverage recommendations for Indian cuisine"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Save this recipe as a cooking project for weekend meal prep",
+            "expectedTopic": "Organizing recipes and meal planning"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest 3 other North Indian curries I should try?",
+            "expectedTopic": "Regional Indian cooking recommendations"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check the cooking templates section for more regional recipes",
+            "expectedTopic": "Exploring available recipe templates and collections"
+          },
+          {
+            "type": "chat",
+            "prompt": "How can yoga help with digestion after heavy meals?",
+            "expectedTopic": "Connection between yoga practice and digestive health"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me all my previous cooking conversations and generated images",
+            "expectedTopic": "Reviewing past recipe work and content creation history"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:39.119Z"
+      },
+      {
+        "email": "HoudaBatie@gmail.com",
+        "brand": "mulerun",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "How can I track my ISA contributions across multiple providers?",
+            "expectedTopic": "ISA management strategies and multi-provider tracking tools"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Set up a monthly ISA review checklist",
+            "expectedTopic": "Creating a structured task for regular ISA portfolio monitoring"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:37.684Z"
+      },
+      {
+        "email": "HoudaBatie@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a blog post about ISA investment strategies for 2025?",
+            "expectedTopic": "ISA investment strategies and blog post structure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Should I focus on Stocks & Shares ISA or Lifetime ISA for FIRE planning?",
+            "expectedTopic": "Comparison of ISA types and their role in FIRE goals"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual flowchart showing ISA investment decision tree",
+            "expectedTopic": "Visual representation of ISA selection criteria"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you draft some social media captions about my DIY home brewery setup?",
+            "expectedTopic": "Social media content for craft beer and DIY projects"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a content calendar for my investing and craft beer blog",
+            "expectedTopic": "Structured content planning across multiple topics"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous ISA comparison images",
+            "expectedTopic": "Past generated content and creation history"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explore templates for financial infographics",
+            "expectedTopic": "Available templates for investment-related visual content"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:42.986Z"
+      },
+      {
+        "email": "krzeminskituitttw827@gmail.com",
+        "brand": "ditai",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me prepare for a senior software engineer interview?",
+            "expectedTopic": "Interview preparation strategies and common technical questions"
+          },
+          {
+            "type": "chat",
+            "prompt": "What about system design questions? Any tips for those?",
+            "expectedTopic": "System design interview approach and frameworks"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a diagram showing microservices architecture with load balancing",
+            "expectedTopic": "Visual representation of distributed system components"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you explain this architecture to a non-technical stakeholder?",
+            "expectedTopic": "Communication strategies for technical concepts"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a study plan for mastering distributed systems over 6 weeks",
+            "expectedTopic": "Structured learning roadmap with milestones"
+          },
+          {
+            "type": "chat",
+            "prompt": "Any good resources for learning about railway systems and automation?",
+            "expectedTopic": "Information about train technology and control systems"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Explore the different AI models available for technical writing",
+            "expectedTopic": "Overview of model options and their strengths"
+          },
+          {
+            "type": "chat",
+            "prompt": "Which model would be best for writing detailed technical documentation?",
+            "expectedTopic": "Model recommendations based on documentation quality and clarity"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:40.625Z"
+      },
+      {
+        "email": "krzeminskituitttw827@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a CV for a junior software engineer role?",
+            "expectedTopic": "CV writing tips and structure for tech roles"
+          },
+          {
+            "type": "chat",
+            "prompt": "Should I include my personal projects and GitHub link?",
+            "expectedTopic": "Advice on showcasing technical projects and portfolios"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual timeline showing my career progression from bootcamp to first dev job",
+            "expectedTopic": "Career milestone visualization"
+          },
+          {
+            "type": "chat",
+            "prompt": "How do I explain a career gap in my cover letter?",
+            "expectedTopic": "Cover letter strategies for addressing employment gaps"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project: prepare application materials for 5 tech companies this month",
+            "expectedTopic": "Job application tracking and deadline management"
+          },
+          {
+            "type": "chat",
+            "prompt": "What technical skills should I highlight for backend roles specifically?",
+            "expectedTopic": "Backend development skills and technologies employers want"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Look at templates for tech industry cover letters",
+            "expectedTopic": "Template library for professional documents"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest some DIY projects I could build to strengthen my portfolio?",
+            "expectedTopic": "Portfolio project ideas combining tech with practical interests"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Check my previous CVs and cover letters I've created",
+            "expectedTopic": "Access to past documents and revision history"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:02:03.272Z"
+      },
+      {
+        "email": "honglethi1269@gmail.com",
+        "brand": "ditai",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to write a short story about a sneaker collector. Where should I start?",
+            "expectedTopic": "Creative writing structure and storytelling techniques for fiction"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you help me develop the main character's backstory and motivation?",
+            "expectedTopic": "Character development and narrative depth for the sneaker collector protagonist"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual of a vintage sneaker collection displayed on shelves in a minimalist room",
+            "expectedTopic": "Visual reference for the story's setting and atmosphere"
+          },
+          {
+            "type": "chat",
+            "prompt": "This is great! Now how do I build tension around a rare sneaker drop in the plot?",
+            "expectedTopic": "Plot development and conflict creation in creative writing"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Start a writing project for my sneaker collector short story with character notes and outline",
+            "expectedTopic": "Organizing and structuring the creative writing project for future reference"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:46.786Z"
+      },
+      {
+        "email": "AmanNdzimande398@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write lyrics for an indie rock song about tea?",
+            "expectedTopic": "songwriting assistance and lyrical themes combining indie rock style with tea im"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create album artwork for a song called 'Steep & Solitude'",
+            "expectedTopic": "visual design for music album cover incorporating tea and contemplative mood"
+          },
+          {
+            "type": "chat",
+            "prompt": "The artwork is great. Can you suggest some chord progressions that would fit this vibe?",
+            "expectedTopic": "music theory and chord suggestions for indie rock with melancholic atmosphere"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Start a project for my DIY home recording setup guide",
+            "expectedTopic": "organizing content creation workflow for a structured DIY music production guide"
+          },
+          {
+            "type": "chat",
+            "prompt": "What equipment would you recommend for recording indie rock at home on a budget?",
+            "expectedTopic": "affordable home recording gear recommendations and setup tips"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Check my generation history to find previous music artwork I created",
+            "expectedTopic": "reviewing past image generations and creative outputs from earlier sessions"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can I use that old tea shop photo I generated before as inspiration for new cover art?",
+            "expectedTopic": "referencing previous creations and building upon existing visual concepts"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Design a poster for my DIY indie band's first local gig",
+            "expectedTopic": "creating promotional artwork combining band aesthetic with local venue appeal"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:01:58.097Z"
+      },
+      {
+        "email": "SabDami377@gmail.com",
+        "brand": "myclaw",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you write a match preview for Bayern vs Dortmund this weekend?",
+            "expectedTopic": "Bundesliga match analysis and preview writing"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:02:05.689Z"
+      },
+      {
+        "email": "ReyesPapu772@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me write a fantasy football recap for this week's NFL games?",
+            "expectedTopic": "Fantasy football analysis and game recaps"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create an image of an epic NBA playoff moment with dramatic lighting",
+            "expectedTopic": "Sports artwork and visual creation"
+          },
+          {
+            "type": "chat",
+            "prompt": "That looks great! Can you write a caption for this image for my social media?",
+            "expectedTopic": "Social media content writing for sports"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Set up a weekly sports content calendar for my blog posts and social updates",
+            "expectedTopic": "Content planning and organization"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous NFL analysis pieces from last month",
+            "expectedTopic": "Past conversations and generated content"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:02:09.091Z"
+      },
+      {
+        "email": "SezerCleaveland@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Help me write a recipe for homemade pasta carbonara",
+            "expectedTopic": "Recipe writing and cooking instructions"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a photo-realistic image of a plated carbonara dish",
+            "expectedTopic": "Visual representation of the finished dish"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you suggest wine pairings for this carbonara dinner?",
+            "expectedTopic": "Wine recommendations and food pairing advice"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Save this as a dinner party menu with carbonara as the main course",
+            "expectedTopic": "Creating a structured content project for meal planning"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:02:12.127Z"
+      },
+      {
+        "email": "hovanrang2019@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me create a mood board for a minimalist fashion shoot?",
+            "expectedTopic": "Discussion of minimalist aesthetic, color palettes, and composition ideas for fa"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Generate a mood board with neutral tones, clean lines, and modern fashion elements",
+            "expectedTopic": "Visual reference showing minimalist design elements, color schemes, and styling "
+          },
+          {
+            "type": "chat",
+            "prompt": "How can I adapt this aesthetic for outdoor photography in natural lighting?",
+            "expectedTopic": "Tips on using natural light, outdoor locations, and maintaining minimalist style"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a shot list for my minimalist fashion photoshoot next weekend",
+            "expectedTopic": "Structured project with specific shots, angles, styling notes, and timing for th"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me my previous fashion photography projects",
+            "expectedTopic": "Gallery of past creations, mood boards, and generated images from earlier sessio"
+          }
+        ],
+        "fallback": false,
+        "consumed": false,
+        "generatedAt": "2026-06-01T16:02:15.734Z"
       }
     ]
   },
@@ -24487,33 +26103,38 @@
         "returnTotal": 50
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T16:04:09.295Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 204,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 640,
+        "visitTotal": 640,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 50,
+        "returnTotal": 50
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 15:29:",
+    "[状态总结] 截至 2026-06-01 16:04:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 711 次行为 (匿名访问 639 + 首次使用 22 + 回访 50)",
+    "  历史累计完成: 712 次行为 (匿名访问 640 + 首次使用 22 + 回访 50)",
     "  品牌注册: MuleRun=102 MyClaw=204 dit.ai=115",
-    "  今日进度: 219/234 任务完成 (94%)",
-    "    mulerun: 63/78 (81%) — 55v + 3r + 5rt",
-    "    myclaw: 78/78 (100%) — 55v + 18r + 5rt",
-    "    dit: 78/78 (100%) — 55v + 18r + 5rt",
+    "  今日进度: 219/448 任务完成 (49%)",
+    "    mulerun: 63/147 (43%) — 55v + 3r + 5rt",
+    "    myclaw: 78/154 (51%) — 55v + 18r + 5rt",
+    "    dit: 78/147 (53%) — 55v + 18r + 5rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T07:35:55] [info] [mulerun] return x1 OK",
-    "[2026-06-01T07:38:48] [info] [mulerun] visit x1 OK",
-    "[2026-06-01T07:42:00] [info] [myclaw] register x2 OK",
-    "[2026-06-01T07:55:24] [info] [dit] register x1 OK",
-    "[2026-06-01T08:07:41] [info] [mulerun] return x2 OK",
-    "[2026-06-01T08:13:15] [info] [dit] visit x3 OK",
-    "[2026-06-01T08:15:27] [info] [myclaw] visit x1 OK",
-    "[2026-06-01T08:23:14] [info] [dit] register x1 OK",
-    "[2026-06-01T08:25:33] [info] [dit] visit x1 OK",
-    "[2026-06-01T08:27:03] [info] [mulerun] visit x2 OK",
-    "[2026-06-01T08:37:26] [info] [myclaw] return x1 OK",
-    "[2026-06-01T08:43:42] [info] [dit] register x1 OK",
-    "[2026-06-01T08:45:54] [error] [mulerun] register x2 FAILED: exit 1",
-    "[2026-06-01T09:00:15] [info] [dit] visit x1 OK",
     "[2026-06-01T09:02:56] [info] [mulerun] visit x5 OK",
     "[2026-06-01T09:13:12] [info] [dit] register x2 OK",
     "[2026-06-01T09:18:54] [info] [myclaw] visit x5 OK",
@@ -24539,7 +26160,21 @@
     "[2026-06-01T14:45:47] [info] [myclaw] register x1 OK",
     "[2026-06-01T15:12:52] [info] [myclaw] visit x3 OK",
     "[2026-06-01T15:12:52] [info] [myclaw] Worker loop complete for today",
-    "[2026-06-01T15:12:52] [info] All workers done. Sleeping 47 min until midnight..."
+    "[2026-06-01T15:12:52] [info] All workers done. Sleeping 47 min until midnight...",
+    "[2026-06-01T16:01:00] [info] [mulerun] Today target: 103v + 34r + 10rt",
+    "[2026-06-01T16:01:00] [info] [myclaw] Today target: 103v + 34r + 17rt",
+    "[2026-06-01T16:01:00] [info] [dit] Today target: 103v + 34r + 10rt",
+    "[2026-06-01T16:01:00] [info] Starting parallel workers for 2026-06-02...",
+    "[2026-06-01T16:01:00] [info] [mulerun] Today's queue: 103v + 34r + 10rt = 147 tasks",
+    "[2026-06-01T16:01:00] [info] [mulerun] Pre-generating 10 conversation plans...",
+    "[2026-06-01T16:01:00] [info] [myclaw] Today's queue: 103v + 34r + 17rt = 154 tasks",
+    "[2026-06-01T16:01:00] [info] [myclaw] Pre-generating 17 conversation plans...",
+    "[2026-06-01T16:01:00] [info] [dit] Today's queue: 103v + 34r + 10rt = 147 tasks",
+    "[2026-06-01T16:01:01] [info] [dit] Pre-generating 10 conversation plans...",
+    "[2026-06-01T16:01:42] [info] [mulerun] Pre-generated 10 plans OK",
+    "[2026-06-01T16:01:46] [info] [dit] Pre-generated 10 plans OK",
+    "[2026-06-01T16:02:15] [info] [myclaw] Pre-generated 17 plans OK",
+    "[2026-06-01T16:03:32] [info] [dit] visit x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
