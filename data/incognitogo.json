@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T02:28:56.291Z",
+  "updatedAt": "2026-06-01T02:54:02.297Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -4232,8 +4232,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 584,
-    "visitTotal": 584,
+    "visitSuccess": 585,
+    "visitTotal": 585,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 43,
@@ -13271,6 +13271,21 @@
         "actions": 13,
         "pages": 2,
         "maxScroll": 27,
+        "success": true
+      },
+      {
+        "ts": "2026-06-01T02:52:00.171Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d2ujhl",
+        "region": "IN",
+        "ip": "103.187.97.165",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 14,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 16,
         "success": true
       },
       {
@@ -22959,12 +22974,31 @@
         "returnTotal": 43
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-01T02:54:02.297Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 195,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 585,
+        "visitTotal": 585,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 43,
+        "returnTotal": 43
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-01 02:28:",
+    "[状态总结] 截至 2026-06-01 02:54:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 649 次行为 (匿名访问 584 + 首次使用 22 + 回访 43)",
+    "  历史累计完成: 650 次行为 (匿名访问 585 + 首次使用 22 + 回访 43)",
     "  品牌注册: MuleRun=102 MyClaw=195 dit.ai=115",
     "  今日进度: 105/234 任务完成 (45%)",
     "    mulerun: 34/78 (44%) — 30v + 3r + 1rt",
