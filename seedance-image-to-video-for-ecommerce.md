@@ -5,7 +5,7 @@ permalink: /seedance-image-to-video-for-ecommerce/
 ---
 # Seedance image to video for ecommerce: Complete Guide 2026
 
-**Published:** 2026-05-31  
+**Published:** 2026-06-01  
 **Keywords:** Seedance image to video for ecommerce
 
 ---
