@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-06-02T00:55:01.678Z",
+  "updatedAt": "2026-06-02T01:31:24.935Z",
   "status": {
     "round": 4,
     "phase": "registrations",
     "errors": 0,
     "updatedAt": "2026-05-27T03:56:09.085Z"
   },
-  "processAlive": true,
-  "activeScheduler": "unified-scheduler",
+  "processAlive": false,
+  "activeScheduler": "none",
   "schedulerWarning": null,
   "unifiedState": {
     "daily": {
@@ -33,7 +33,7 @@
           "returns": 5
         },
         "2026-06-02": {
-          "visits": 45,
+          "visits": 47,
           "regs": 0,
           "returns": 4
         }
@@ -65,7 +65,7 @@
           "returns": 5
         },
         "2026-06-02": {
-          "visits": 29,
+          "visits": 31,
           "regs": 10,
           "returns": 3
         }
@@ -92,7 +92,7 @@
           "returns": 5
         },
         "2026-06-02": {
-          "visits": 40,
+          "visits": 42,
           "regs": 9,
           "returns": 4
         }
@@ -4419,8 +4419,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 713,
-    "visitTotal": 713,
+    "visitSuccess": 717,
+    "visitTotal": 717,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 57,
@@ -10098,6 +10098,38 @@
         "success": true
       },
       {
+        "ts": "2026-06-02T01:04:26.356Z",
+        "brand": "mulerun",
+        "visitNum": 1,
+        "profileId": "k1d3twux",
+        "region": "US",
+        "ip": "172.59.153.78",
+        "target": "invitation",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 73,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 0,
+        "success": true
+      },
+      {
+        "ts": "2026-06-02T01:06:39.034Z",
+        "brand": "mulerun",
+        "visitNum": 2,
+        "profileId": "k1d3u1tt",
+        "region": "US",
+        "ip": "99.69.44.13",
+        "target": "mule.page",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 76,
+        "actions": 13,
+        "pages": 0,
+        "maxScroll": 100,
+        "success": true
+      },
+      {
         "ts": "2026-05-26T13:17:18.359Z",
         "brand": "myclaw",
         "type": "anonymous",
@@ -15470,6 +15502,36 @@
         "actions": 3,
         "pages": 0,
         "maxScroll": 16,
+        "success": true
+      },
+      {
+        "ts": "2026-06-02T01:01:23.691Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d3twp3",
+        "region": "US",
+        "ip": "99.1.197.224",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 6,
+        "actions": 2,
+        "pages": 0,
+        "maxScroll": 5,
+        "success": true
+      },
+      {
+        "ts": "2026-06-02T01:03:26.035Z",
+        "brand": "myclaw",
+        "visitNum": 2,
+        "profileId": "k1d3tyj7",
+        "region": "US",
+        "ip": "70.18.52.216",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 27,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 15,
         "success": true
       },
       {
@@ -27807,59 +27869,78 @@
         "returnTotal": 57
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-02T01:31:24.935Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 214,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 717,
+        "visitTotal": 717,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 57,
+        "returnTotal": 57
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-02 00:55:",
-    "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 792 次行为 (匿名访问 713 + 首次使用 22 + 回访 57)",
+    "[状态总结] 截至 2026-06-02 01:31:",
+    "  调度器: none (混合模式，visit/register/return 随机交错)",
+    "  历史累计完成: 796 次行为 (匿名访问 717 + 首次使用 22 + 回访 57)",
     "  品牌注册: MuleRun=102 MyClaw=214 dit.ai=115",
-    "  今日进度: 144/448 任务完成 (32%)",
-    "    mulerun: 49/147 (33%) — 45v + 0r + 4rt",
-    "    myclaw: 42/154 (27%) — 29v + 10r + 3rt",
-    "    dit: 53/147 (36%) — 40v + 9r + 4rt",
+    "  今日进度: 150/448 任务完成 (33%)",
+    "    mulerun: 51/147 (35%) — 47v + 0r + 4rt",
+    "    myclaw: 44/154 (29%) — 31v + 10r + 3rt",
+    "    dit: 55/147 (37%) — 42v + 9r + 4rt",
+    "  [警告] 进程已停止！需要重启。",
     "",
-    "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T20:02:28] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-01T20:04:46] [info] [dit] return x1 OK",
-    "[2026-06-01T20:07:39] [info] [mulerun] visit x1 OK",
-    "[2026-06-01T20:14:38] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-01T20:15:57] [info] [dit] visit x5 OK",
-    "[2026-06-01T20:25:43] [info] [dit] visit x2 OK",
-    "[2026-06-01T20:30:10] [info] [dit] register x1 OK",
-    "[2026-06-01T20:32:56] [info] [myclaw] register x2 OK",
-    "[2026-06-01T20:40:12] [info] [myclaw] visit x1 OK",
-    "[2026-06-01T20:44:41] [info] [dit] visit x1 OK",
-    "[2026-06-01T20:46:25] [info] [mulerun] visit x5 OK",
-    "[2026-06-01T20:46:37] [info] [dit] return x1 OK",
-    "[2026-06-01T20:52:52] [info] [myclaw] return x1 OK",
-    "[2026-06-01T21:05:47] [info] [dit] visit x5 OK",
-    "[2026-06-01T21:09:53] [error] [mulerun] register x3 FAILED: exit 1",
-    "[2026-06-01T21:18:41] [info] [mulerun] visit x2 OK",
-    "[2026-06-01T21:31:21] [info] [myclaw] register x2 OK",
-    "[2026-06-01T21:37:52] [info] [dit] visit x1 OK",
-    "[2026-06-01T21:42:50] [info] [dit] return x1 OK",
-    "[2026-06-01T21:48:38] [info] [dit] visit x1 OK",
-    "[2026-06-01T21:52:01] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-01T21:53:10] [info] [myclaw] visit x5 OK",
-    "[2026-06-01T22:06:15] [info] [myclaw] visit x4 OK",
-    "[2026-06-01T22:08:44] [info] [mulerun] visit x1 OK",
-    "[2026-06-01T22:13:40] [info] [mulerun] return x1 OK",
-    "[2026-06-01T22:17:37] [info] [myclaw] register x1 OK",
-    "[2026-06-01T22:26:09] [info] [dit] register x1 OK",
-    "[2026-06-01T22:34:03] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-01T22:52:45] [info] [mulerun] visit x3 OK",
-    "[2026-06-01T23:04:28] [info] [myclaw] return x1 OK",
-    "[2026-06-01T23:12:50] [info] [dit] visit x2 OK",
-    "[2026-06-01T23:13:10] [info] [myclaw] visit x3 OK",
-    "[2026-06-01T23:16:36] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-01T23:31:09] [info] [mulerun] visit x1 OK",
-    "[2026-06-01T23:39:20] [info] [dit] register x1 OK",
-    "[2026-06-01T23:51:38] [info] [myclaw] register x1 OK",
-    "[2026-06-02T00:23:36] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-02T00:23:36] [info] [mulerun] Off-peak hour (weight=0.17), sleeping 37min",
-    "[2026-06-02T00:31:29] [info] [myclaw] visit x5 OK",
-    "[2026-06-02T00:31:29] [info] [myclaw] Off-peak hour (weight=0.19), sleeping 29min"
+    "[04:35:14] [error] [5] attempt 1 FAILED: Create profile: AggregateError",
+    "[04:35:14] [info] Will retry with new profile...",
+    "[04:35:28] [info] [5] Phase 1: Embedded Google login...",
+    "[04:35:28] [info] === Embedded Login: ellieparry75@gmail.com ===",
+    "[04:35:35] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S-803908728:1779856530035784",
+    "[04:35:35] [info] Typing email (human-like)...",
+    "[04:35:48] [info] Typing password (human-like)...",
+    "[04:36:03] [info] 2FA detected, entering TOTP...",
+    "[04:36:21] [info] Verifying Google session...",
+    "[04:36:27] [info] Google session valid: true",
+    "[04:36:27] [info] [5] Phase 2: dit.ai OAuth...",
+    "[04:36:27] [info] === dit.ai OAuth (with existing Google session) ===",
+    "[04:36:36] [info] Looking for login/signup button...",
+    "[04:36:36] [info] No login button found, trying /login...",
+    "[04:36:40] [info] Looking for Google OAuth button...",
+    "[04:36:40] [info] Clicked Google OAuth, waiting for redirect...",
+    "[04:36:48] [info] After OAuth click: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S235830764%3A1779856602713219&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=3d938ad6-17a2-4add-9b61-2e310896d995&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMVxZ1GPQcy4KFXhjAWLw51Sgp1oIYRgQ597EnfoOIC0gj_DOn1gVZjCl9yYMYNbWgoahQH-3DQi_1yKzr7FmtYZyWRTgcqLd_XEWGRtJWPC7Qu6Jr1_EsQQnSwi6NtjuDKZgfq5iYZ3uKliOzag2ss4d7zYY1z8wf6qqMwbpJGFhBqXVBl1YHSJPNIgKKWP-3OdzucQbSGMCQ_BBBvzOSN0YWMWM8Xk6hXOIkPl9BN536mffD2lasJX-cOVxs5EBTnpJdRPCUq_dGeBl50avqL7iOj5E5T6HN3TTxCTEEOpswrNmwlWqkf2DzblXQrO5EEaaJSQ2a0xu9tvOaHGL9AJtHlnAEYT4NJiimy9zKhwrgBcIJCQPSfXclGgzjd84UNQ0zcWMwT00vFJ5dtSngl4T6Wnyop1lMSoprMoaV3Av9yX1u02DOeGZIaUb0I-9iX2DB-TXK63PK0Xa0SfwwSiyrwNw%26flowName%3DGeneralOAuthFlow%26as%3DS235830764%253A1779856602713219%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcduqIv7_z_S7czHnEeUy2AOf_rk2RPTjmpwDJD5XEAcrhqZssmo6LDsrALAQF40-Z_Vsg8S4J2pHeGWyHOQbW15j-ImfCmUI5Pm8MUGpfo9-nGAK3Y",
+    "[04:36:48] [info] Google page state: email=true, pwd=true, chooser=false",
+    "[04:36:48] [info] Identifier page — typing email (human-like)...",
+    "[04:37:02] [info] Password page — typing password (human-like)...",
+    "[04:37:28] [info] Consent check — path: /v3/signin/identifier, text: Loading",
+    "Sign in with Google",
+    "Sign in",
+    "to continue to DIT",
+    "Email or phone",
+    "Forgot email?",
+    "Before using this app, you can review DIT’s Privacy Policy and Ter",
+    "[04:37:28] [info] OAuth confirmation/consent screen — clicking Continue/Allow...",
+    "[04:37:29] [info] Consent click result: clicked:next",
+    "[04:37:37] [info] Still on Google after consent click, retrying...",
+    "[04:37:50] [warn] Unclear state. URL: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S235830764%3A1779856602713219&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=3d938ad6-17a2-4add-9b61-2e310896d995&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMVxZ1GPQcy4KFXhjAWLw51Sgp1oIYRgQ597EnfoOIC0gj_DOn1gVZjCl9yYMYNbWgoahQH-3DQi_1yKzr7FmtYZyWRTgcqLd_XEWGRtJWPC7Qu6Jr1_EsQQnSwi6NtjuDKZgfq5iYZ3uKliOzag2ss4d7zYY1z8wf6qqMwbpJGFhBqXVBl1YHSJPNIgKKWP-3OdzucQbSGMCQ_BBBvzOSN0YWMWM8Xk6hXOIkPl9BN536mffD2lasJX-cOVxs5EBTnpJdRPCUq_dGeBl50avqL7iOj5E5T6HN3TTxCTEEOpswrNmwlWqkf2DzblXQrO5EEaaJSQ2a0xu9tvOaHGL9AJtHlnAEYT4NJiimy9zKhwrgBcIJCQPSfXclGgzjd84UNQ0zcWMwT00vFJ5dtSngl4T6Wnyop1lMSoprMoaV3Av9yX1u02DOeGZIaUb0I-9iX2DB-TXK63PK0Xa0SfwwSiyrwNw%26flowName%3DGeneralOAuthFlow%26as%3DS235830764%253A1779856602713219%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcduqIv7_z_S7czHnEeUy2AOf_rk2RPTjmpwDJD5XEAcrhqZssmo6LDsrALAQF40-Z_Vsg8S4J2pHeGWyHOQbW15j-ImfCmUI5Pm8MUGpfo9-nGAK3Y",
+    "[04:37:53] [info] [5] Final URL: https://accounts.google.com/v3/signin/identifier?opparams=%253Fredirect_to%253Dhttps%25253A%25252F%25252Fdit.ai%25252Fauth%25252Fcallback%25253Fnext%25253D%2525252Fdashboard%252526error_redirect_to%25253D%2525252Flogin%252526user_type%25253Dbuyer%252526auth_mode%25253Dlogin&dsh=S235830764%3A1779856602713219&access_type=offline&client_id=435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com&o2v=2&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.dit.ai%2Fauth%2Fv1%2Fcallback&response_type=code&scope=email+profile&service=lso&state=3d938ad6-17a2-4add-9b61-2e310896d995&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMVxZ1GPQcy4KFXhjAWLw51Sgp1oIYRgQ597EnfoOIC0gj_DOn1gVZjCl9yYMYNbWgoahQH-3DQi_1yKzr7FmtYZyWRTgcqLd_XEWGRtJWPC7Qu6Jr1_EsQQnSwi6NtjuDKZgfq5iYZ3uKliOzag2ss4d7zYY1z8wf6qqMwbpJGFhBqXVBl1YHSJPNIgKKWP-3OdzucQbSGMCQ_BBBvzOSN0YWMWM8Xk6hXOIkPl9BN536mffD2lasJX-cOVxs5EBTnpJdRPCUq_dGeBl50avqL7iOj5E5T6HN3TTxCTEEOpswrNmwlWqkf2DzblXQrO5EEaaJSQ2a0xu9tvOaHGL9AJtHlnAEYT4NJiimy9zKhwrgBcIJCQPSfXclGgzjd84UNQ0zcWMwT00vFJ5dtSngl4T6Wnyop1lMSoprMoaV3Av9yX1u02DOeGZIaUb0I-9iX2DB-TXK63PK0Xa0SfwwSiyrwNw%26flowName%3DGeneralOAuthFlow%26as%3DS235830764%253A1779856602713219%26client_id%3D435388677014-kk6pi4i2f7rj46qss9pvheic3gis87fn.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fauth.dit.ai&rart=ANgoxcduqIv7_z_S7czHnEeUy2AOf_rk2RPTjmpwDJD5XEAcrhqZssmo6LDsrALAQF40-Z_Vsg8S4J2pHeGWyHOQbW15j-ImfCmUI5Pm8MUGpfo9-nGAK3Y",
+    "[04:37:53] [warn] [5] INCOMPLETE: ellieparry75@gmail.com (UNCLEAR)",
+    "[04:37:58] [warn] Skipping ellieparry75@gmail.com (OAuth result: UNCLEAR), trying next...",
+    "[04:37:58] [info] Waiting 43s before next...",
+    "[04:38:56] [info] [5] Phase 1: Embedded Google login...",
+    "[04:38:56] [info] === Embedded Login: thihangnguyen612@gmail.com ===",
+    "[04:39:03] [info] Landed on: https://accounts.google.com/v3/signin/identifier?flowName=GlifSetupChromeOs&continue=http://accounts.google.com/programmatic_auth_chromeos?hl%3Den-US%26scope%3Dhttps://www.google.com/accounts/OAuthLogin%26client_id%3D77185425430.apps.googleusercontent.com%26access_type%3Doffline&dsh=S1580687237:1779856737570567",
+    "[04:39:03] [info] Typing email (human-like)...",
+    "[04:39:18] [info] Typing password (human-like)..."
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
