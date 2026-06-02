@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T00:29:32.276Z",
+  "updatedAt": "2026-06-02T00:55:01.678Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -65,7 +65,7 @@
           "returns": 5
         },
         "2026-06-02": {
-          "visits": 24,
+          "visits": 29,
           "regs": 10,
           "returns": 3
         }
@@ -4419,8 +4419,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 712,
-    "visitTotal": 712,
+    "visitSuccess": 713,
+    "visitTotal": 713,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 57,
@@ -15455,6 +15455,21 @@
         "actions": 3,
         "pages": 0,
         "maxScroll": 14,
+        "success": true
+      },
+      {
+        "ts": "2026-06-02T00:31:26.560Z",
+        "brand": "myclaw",
+        "visitNum": 5,
+        "profileId": "k1d3t845",
+        "region": "BR",
+        "ip": "170.233.158.253",
+        "type": "anonymous",
+        "mode": "adaptive",
+        "duration": 17,
+        "actions": 3,
+        "pages": 0,
+        "maxScroll": 16,
         "success": true
       },
       {
@@ -27773,21 +27788,38 @@
         "returnTotal": 57
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-02T00:55:01.678Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 214,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 713,
+        "visitTotal": 713,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 57,
+        "returnTotal": 57
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-02 00:29:",
+    "[状态总结] 截至 2026-06-02 00:55:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 791 次行为 (匿名访问 712 + 首次使用 22 + 回访 57)",
+    "  历史累计完成: 792 次行为 (匿名访问 713 + 首次使用 22 + 回访 57)",
     "  品牌注册: MuleRun=102 MyClaw=214 dit.ai=115",
-    "  今日进度: 139/448 任务完成 (31%)",
+    "  今日进度: 144/448 任务完成 (32%)",
     "    mulerun: 49/147 (33%) — 45v + 0r + 4rt",
-    "    myclaw: 37/154 (24%) — 24v + 10r + 3rt",
+    "    myclaw: 42/154 (27%) — 29v + 10r + 3rt",
     "    dit: 53/147 (36%) — 40v + 9r + 4rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-01T19:56:09] [info] [mulerun] visit x4 OK",
-    "[2026-06-01T19:57:56] [info] [dit] register x1 OK",
     "[2026-06-01T20:02:28] [error] [mulerun] register x1 FAILED: exit 1",
     "[2026-06-01T20:04:46] [info] [dit] return x1 OK",
     "[2026-06-01T20:07:39] [info] [mulerun] visit x1 OK",
@@ -27825,7 +27857,9 @@
     "[2026-06-01T23:39:20] [info] [dit] register x1 OK",
     "[2026-06-01T23:51:38] [info] [myclaw] register x1 OK",
     "[2026-06-02T00:23:36] [error] [mulerun] register x1 FAILED: exit 1",
-    "[2026-06-02T00:23:36] [info] [mulerun] Off-peak hour (weight=0.17), sleeping 37min"
+    "[2026-06-02T00:23:36] [info] [mulerun] Off-peak hour (weight=0.17), sleeping 37min",
+    "[2026-06-02T00:31:29] [info] [myclaw] visit x5 OK",
+    "[2026-06-02T00:31:29] [info] [myclaw] Off-peak hour (weight=0.19), sleeping 29min"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
