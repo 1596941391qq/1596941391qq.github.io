@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T15:29:33.856Z",
+  "updatedAt": "2026-06-02T16:16:55.511Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -102,22 +102,16 @@
   },
   "todayPlan": {
     "mulerun": {
-      "visits": 103,
-      "regs": 34,
-      "returns": 10,
-      "total": 147
+      "visits": 86,
+      "regs": 17,
+      "returns": 25,
+      "total": 128
     },
     "myclaw": {
-      "visits": 103,
-      "regs": 34,
-      "returns": 17,
-      "total": 154
-    },
-    "dit": {
-      "visits": 103,
-      "regs": 34,
-      "returns": 10,
-      "total": 147
+      "visits": 86,
+      "regs": 14,
+      "returns": 60,
+      "total": 160
     }
   },
   "heartbeatTriggers": 0,
@@ -4419,8 +4413,8 @@
     }
   },
   "counters": {
-    "visitSuccess": 717,
-    "visitTotal": 717,
+    "visitSuccess": 710,
+    "visitTotal": 710,
     "firstUseSuccess": 22,
     "firstUseTotal": 22,
     "returnSuccess": 57,
@@ -15535,75 +15529,18 @@
         "success": true
       },
       {
-        "ts": "2026-05-26T13:19:43.567Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 127837,
-        "pages": 1,
-        "region": "JP",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:24:46.017Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 113650,
-        "pages": 8,
+        "ts": "2026-06-02T16:13:54.260Z",
+        "brand": "myclaw",
+        "visitNum": 1,
+        "profileId": "k1d4ntvw",
         "region": "IN",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:35:05.751Z",
-        "brand": "ditai",
+        "ip": "49.43.115.102",
         "type": "anonymous",
-        "duration": 371837,
-        "pages": 1,
-        "region": "GB",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:44:27.594Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 98155,
-        "pages": 1,
-        "region": "JP",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:49:36.584Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 39802,
-        "pages": 1,
-        "region": "GB",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T13:58:00.559Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 195132,
-        "pages": 1,
-        "region": "DE",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:05:11.385Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 114512,
-        "pages": 1,
-        "region": "BR",
-        "success": true
-      },
-      {
-        "ts": "2026-05-26T14:10:10.176Z",
-        "brand": "ditai",
-        "type": "anonymous",
-        "duration": 115301,
-        "pages": 1,
-        "region": "GB",
+        "mode": "adaptive",
+        "duration": 26,
+        "actions": 5,
+        "pages": 0,
+        "maxScroll": 18,
         "success": true
       },
       {
@@ -17288,9 +17225,9 @@
     }
   ],
   "conversationPlans": {
-    "planned": 188,
+    "planned": 273,
     "consumed": 3,
-    "fallback": 0,
+    "fallback": 85,
     "sessions": [
       {
         "email": "wrrnikhngphul@gmail.com",
@@ -18981,6 +18918,36 @@
         "generatedAt": "2026-06-01T16:01:43.327Z"
       },
       {
+        "email": "nguyenlan25a@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in photography, what can you help me with?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:09.363Z"
+      },
+      {
         "email": "KrossBeaton@gmail.com",
         "brand": "mulerun",
         "rounds": 1,
@@ -19507,7 +19474,7 @@
         "actions": [
           {
             "type": "chat",
-            "prompt": "最新のストリートウェアトレンド、2024年冬はどんな感じ？",
+            "prompt": "最���のストリートウェアトレンド、2024年冬はどんな感じ？",
             "expectedTopic": "2024年冬のストリートウェアトレンド、色合い、素材、スタイルについてのアドバイス"
           },
           {
@@ -24606,6 +24573,81 @@
         "generatedAt": "2026-06-01T16:01:46.786Z"
       },
       {
+        "email": "honglethi1269@gmail.com",
+        "brand": "mulerun",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in creative writing, what can you help me with?",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about creative writing",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:13.398Z"
+      },
+      {
+        "email": "honglethi1269@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in creative writing, what can you help me with?",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the creative writing aspect you just mentioned",
+            "expectedTopic": "creative writing"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:14.733Z"
+      },
+      {
         "email": "AmanNdzimande398@gmail.com",
         "brand": "myclaw",
         "rounds": 8,
@@ -24669,6 +24711,31 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-06-01T16:02:05.689Z"
+      },
+      {
+        "email": "SabDami377@gmail.com",
+        "brand": "mulerun",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in football (Bundesliga), what can you help me with?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the football (Bundesliga) aspect you just mentioned",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the football (Bundesliga) aspect you just mentioned",
+            "expectedTopic": "football (Bundesliga)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:04.157Z"
       },
       {
         "email": "ReyesPapu772@gmail.com",
@@ -24736,6 +24803,56 @@
         "generatedAt": "2026-06-01T16:02:12.127Z"
       },
       {
+        "email": "SezerCleaveland@gmail.com",
+        "brand": "mulerun",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cooking, what can you help me with?",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about cooking",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:06.082Z"
+      },
+      {
         "email": "hovanrang2019@gmail.com",
         "brand": "myclaw",
         "rounds": 5,
@@ -24769,6 +24886,3461 @@
         "fallback": false,
         "consumed": false,
         "generatedAt": "2026-06-01T16:02:15.734Z"
+      },
+      {
+        "email": "hovanrang2019@gmail.com",
+        "brand": "mulerun",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in photography, what can you help me with?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about photography",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:07.871Z"
+      },
+      {
+        "email": "aftajraza786aftajraza@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in investing (ISA/FIRE), what can you help me with?",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about investing (ISA/FIRE)",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:04.405Z"
+      },
+      {
+        "email": "dhonushill@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (sertanejo/funk), what can you help me with?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (sertanejo/funk)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:06.254Z"
+      },
+      {
+        "email": "nth0377205969@gmail.com",
+        "brand": "mulerun",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in baking, what can you help me with?",
+            "expectedTopic": "baking"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:09.703Z"
+      },
+      {
+        "email": "nth0377205969@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in baking, what can you help me with?",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the baking aspect you just mentioned",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the baking aspect you just mentioned",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the baking aspect you just mentioned",
+            "expectedTopic": "baking"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:11.233Z"
+      },
+      {
+        "email": "thuongvinh112@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in gardening, what can you help me with?",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about gardening",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:11.479Z"
+      },
+      {
+        "email": "thuongvinh112@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in gardening, what can you help me with?",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:13.022Z"
+      },
+      {
+        "email": "juliusoundo263@gmail.com",
+        "brand": "mulerun",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in investing (ETF), what can you help me with?",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about investing (ETF)",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:15.093Z"
+      },
+      {
+        "email": "juliusoundo263@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in investing (ETF), what can you help me with?",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about investing (ETF)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:16.458Z"
+      },
+      {
+        "email": "f0971228431@gmail.com",
+        "brand": "mulerun",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (J-pop/Vocaloid), what can you help me with?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (J-pop/Vocaloid)",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:16.782Z"
+      },
+      {
+        "email": "f0971228431@gmail.com",
+        "brand": "myclaw",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (J-pop/Vocaloid), what can you help me with?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:31.713Z"
+      },
+      {
+        "email": "sadeepahasi2001@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in tech & programming, what can you help me with?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech & programming aspect you just mentioned",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech & programming aspect you just mentioned",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech & programming aspect you just mentioned",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech & programming aspect you just mentioned",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about tech & programming",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech & programming aspect you just mentioned",
+            "expectedTopic": "tech & programming"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:18.302Z"
+      },
+      {
+        "email": "congtinh205@gmail.com",
+        "brand": "mulerun",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cooking (churrasco), what can you help me with?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:18.544Z"
+      },
+      {
+        "email": "congtinh205@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cooking (churrasco), what can you help me with?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about cooking (churrasco)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking (churrasco) aspect you just mentioned",
+            "expectedTopic": "cooking (churrasco)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:33.355Z"
+      },
+      {
+        "email": "nguyenthanhminh090594@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in pub culture, what can you help me with?",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:20.165Z"
+      },
+      {
+        "email": "hoduong09021987@gmail.com",
+        "brand": "mulerun",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in outdoor adventure, what can you help me with?",
+            "expectedTopic": "outdoor adventure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the outdoor adventure aspect you just mentioned",
+            "expectedTopic": "outdoor adventure"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:20.309Z"
+      },
+      {
+        "email": "hoduong09021987@gmail.com",
+        "brand": "myclaw",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in outdoor adventure, what can you help me with?",
+            "expectedTopic": "outdoor adventure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the outdoor adventure aspect you just mentioned",
+            "expectedTopic": "outdoor adventure"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:38.666Z"
+      },
+      {
+        "email": "huyennguyen21101988@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cycling, what can you help me with?",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about cycling",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:22.495Z"
+      },
+      {
+        "email": "hientran301083@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cycling, what can you help me with?",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about cycling",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:22.213Z"
+      },
+      {
+        "email": "hientran301083@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cycling, what can you help me with?",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cycling aspect you just mentioned",
+            "expectedTopic": "cycling"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:44.238Z"
+      },
+      {
+        "email": "nguyenthianhhongqn1@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in Bollywood, what can you help me with?",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about Bollywood",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:24.077Z"
+      },
+      {
+        "email": "nguyenthianhhongqn1@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in Bollywood, what can you help me with?",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about Bollywood",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:45.958Z"
+      },
+      {
+        "email": "eooeoo1234567890@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in pub culture, what can you help me with?",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about pub culture",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the pub culture aspect you just mentioned",
+            "expectedTopic": "pub culture"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:24.291Z"
+      },
+      {
+        "email": "titamniccely3342@gmail.com",
+        "brand": "mulerun",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in gardening, what can you help me with?",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:25.835Z"
+      },
+      {
+        "email": "titamniccely3342@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in gardening, what can you help me with?",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about gardening",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:49.538Z"
+      },
+      {
+        "email": "quynh12061984@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in e-commerce, what can you help me with?",
+            "expectedTopic": "e-commerce"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the e-commerce aspect you just mentioned",
+            "expectedTopic": "e-commerce"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the e-commerce aspect you just mentioned",
+            "expectedTopic": "e-commerce"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the e-commerce aspect you just mentioned",
+            "expectedTopic": "e-commerce"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the e-commerce aspect you just mentioned",
+            "expectedTopic": "e-commerce"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about e-commerce",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the e-commerce aspect you just mentioned",
+            "expectedTopic": "e-commerce"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the e-commerce aspect you just mentioned",
+            "expectedTopic": "e-commerce"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:26.222Z"
+      },
+      {
+        "email": "SinghEr464@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in coding & DSA, what can you help me with?",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about coding & DSA",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:27.563Z"
+      },
+      {
+        "email": "SinghEr464@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in coding & DSA, what can you help me with?",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about coding & DSA",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the coding & DSA aspect you just mentioned",
+            "expectedTopic": "coding & DSA"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:53.358Z"
+      },
+      {
+        "email": "phamvanthuy270584@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in futebol, what can you help me with?",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about futebol",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the futebol aspect you just mentioned",
+            "expectedTopic": "futebol"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:28.032Z"
+      },
+      {
+        "email": "SawagedJosafat732@gmail.com",
+        "brand": "mulerun",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music production, what can you help me with?",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:29.497Z"
+      },
+      {
+        "email": "SawagedJosafat732@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music production, what can you help me with?",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:55.118Z"
+      },
+      {
+        "email": "balakisa342@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in sustainability, what can you help me with?",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sustainability aspect you just mentioned",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sustainability aspect you just mentioned",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sustainability aspect you just mentioned",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sustainability aspect you just mentioned",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about sustainability",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:29.945Z"
+      },
+      {
+        "email": "MulgadoAngelus@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in tech career, what can you help me with?",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about tech career",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:31.458Z"
+      },
+      {
+        "email": "MulgadoAngelus@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in tech career, what can you help me with?",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the tech career aspect you just mentioned",
+            "expectedTopic": "tech career"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about tech career",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:05.756Z"
+      },
+      {
+        "email": "RumpfingerBernd92@gmail.com",
+        "brand": "mulerun",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (indie/rock), what can you help me with?",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (indie/rock)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:33.311Z"
+      },
+      {
+        "email": "RumpfingerBernd92@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (indie/rock), what can you help me with?",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (indie/rock)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:07.649Z"
+      },
+      {
+        "email": "RuesgaRolas@gmail.com",
+        "brand": "mulerun",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in entrepreneurship, what can you help me with?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about entrepreneurship",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:35.391Z"
+      },
+      {
+        "email": "RuesgaRolas@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in entrepreneurship, what can you help me with?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about entrepreneurship",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:16.866Z"
+      },
+      {
+        "email": "thai06051996@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in automotive (BMW/Porsche), what can you help me with?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about automotive (BMW/Porsche)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the automotive (BMW/Porsche) aspect you just mentioned",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:35.028Z"
+      },
+      {
+        "email": "nguyenngoctho2017vl@gmail.com",
+        "brand": "myclaw",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in tech & programming, what can you help me with?",
+            "expectedTopic": "tech & programming"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:36.953Z"
+      },
+      {
+        "email": "GerowRodolfo123@gmail.com",
+        "brand": "mulerun",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music production, what can you help me with?",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music production",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:37.052Z"
+      },
+      {
+        "email": "GerowRodolfo123@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music production, what can you help me with?",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:24.260Z"
+      },
+      {
+        "email": "VallonPhichi@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in fitness & bodybuilding, what can you help me with?",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about fitness & bodybuilding",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:38.790Z"
+      },
+      {
+        "email": "VallonPhichi@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in fitness & bodybuilding, what can you help me with?",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about fitness & bodybuilding",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:29.795Z"
+      },
+      {
+        "email": "nguyendat17021999@gmail.com",
+        "brand": "myclaw",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cooking (churrasco), what can you help me with?",
+            "expectedTopic": "cooking (churrasco)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:40.596Z"
+      },
+      {
+        "email": "winninghamsimienay673@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in personal finance, what can you help me with?",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about personal finance",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:40.744Z"
+      },
+      {
+        "email": "winninghamsimienay673@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in personal finance, what can you help me with?",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about personal finance",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:37.144Z"
+      },
+      {
+        "email": "hieule29111986@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in startups, what can you help me with?",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about startups",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:42.352Z"
+      },
+      {
+        "email": "StarrPalau@gmail.com",
+        "brand": "mulerun",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (sertanejo/funk), what can you help me with?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (sertanejo/funk)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:42.521Z"
+      },
+      {
+        "email": "SanchezrojasMartinn@gmail.com",
+        "brand": "mulerun",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in personal finance, what can you help me with?",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about personal finance",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:44.294Z"
+      },
+      {
+        "email": "SanchezrojasMartinn@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in personal finance, what can you help me with?",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:38.979Z"
+      },
+      {
+        "email": "SagradoDadey@gmail.com",
+        "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in parenting, what can you help me with?",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about parenting",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:46.011Z"
+      },
+      {
+        "email": "SagradoDadey@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in parenting, what can you help me with?",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about parenting",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the parenting aspect you just mentioned",
+            "expectedTopic": "parenting"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:40.667Z"
+      },
+      {
+        "email": "lelam12011984@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in personal finance, what can you help me with?",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:47.726Z"
+      },
+      {
+        "email": "HesseCeferina875@gmail.com",
+        "brand": "mulerun",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (sertanejo/funk), what can you help me with?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (sertanejo/funk)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (sertanejo/funk) aspect you just mentioned",
+            "expectedTopic": "music (sertanejo/funk)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:47.871Z"
+      },
+      {
+        "email": "phankiennga@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in photography, what can you help me with?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about photography",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the photography aspect you just mentioned",
+            "expectedTopic": "photography"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:51.452Z"
+      },
+      {
+        "email": "TogawaGoro367@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in AI & tech, what can you help me with?",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the AI & tech aspect you just mentioned",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the AI & tech aspect you just mentioned",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the AI & tech aspect you just mentioned",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the AI & tech aspect you just mentioned",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about AI & tech",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the AI & tech aspect you just mentioned",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the AI & tech aspect you just mentioned",
+            "expectedTopic": "AI & tech"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:56.928Z"
+      },
+      {
+        "email": "CartyJade36@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in fitness & bodybuilding, what can you help me with?",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness & bodybuilding aspect you just mentioned",
+            "expectedTopic": "fitness & bodybuilding"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:11:58.777Z"
+      },
+      {
+        "email": "KopkasCube@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in beauty & skincare, what can you help me with?",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the beauty & skincare aspect you just mentioned",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the beauty & skincare aspect you just mentioned",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the beauty & skincare aspect you just mentioned",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the beauty & skincare aspect you just mentioned",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about beauty & skincare",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:00.576Z"
+      },
+      {
+        "email": "ReginaldWong939@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in entrepreneurship, what can you help me with?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the entrepreneurship aspect you just mentioned",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about entrepreneurship",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:02.338Z"
+      },
+      {
+        "email": "RosidiRafiq748@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in Bollywood, what can you help me with?",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about Bollywood",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Bollywood aspect you just mentioned",
+            "expectedTopic": "Bollywood"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:04.034Z"
+      },
+      {
+        "email": "JessenHeike670@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in sports (NFL/NBA), what can you help me with?",
+            "expectedTopic": "sports (NFL/NBA)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sports (NFL/NBA) aspect you just mentioned",
+            "expectedTopic": "sports (NFL/NBA)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sports (NFL/NBA) aspect you just mentioned",
+            "expectedTopic": "sports (NFL/NBA)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sports (NFL/NBA) aspect you just mentioned",
+            "expectedTopic": "sports (NFL/NBA)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sports (NFL/NBA) aspect you just mentioned",
+            "expectedTopic": "sports (NFL/NBA)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about sports (NFL/NBA)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sports (NFL/NBA) aspect you just mentioned",
+            "expectedTopic": "sports (NFL/NBA)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the sports (NFL/NBA) aspect you just mentioned",
+            "expectedTopic": "sports (NFL/NBA)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:09.565Z"
+      },
+      {
+        "email": "MiichaelTata333@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in education & exams, what can you help me with?",
+            "expectedTopic": "education & exams"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the education & exams aspect you just mentioned",
+            "expectedTopic": "education & exams"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the education & exams aspect you just mentioned",
+            "expectedTopic": "education & exams"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the education & exams aspect you just mentioned",
+            "expectedTopic": "education & exams"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the education & exams aspect you just mentioned",
+            "expectedTopic": "education & exams"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about education & exams",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the education & exams aspect you just mentioned",
+            "expectedTopic": "education & exams"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:11.519Z"
+      },
+      {
+        "email": "CesariaLyvie256@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in personal finance, what can you help me with?",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about personal finance",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the personal finance aspect you just mentioned",
+            "expectedTopic": "personal finance"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:13.350Z"
+      },
+      {
+        "email": "YurinaMarites760@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in investing (ISA/FIRE), what can you help me with?",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about investing (ISA/FIRE)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:15.061Z"
+      },
+      {
+        "email": "layogayleneac115@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in outdoor adventure, what can you help me with?",
+            "expectedTopic": "outdoor adventure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the outdoor adventure aspect you just mentioned",
+            "expectedTopic": "outdoor adventure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the outdoor adventure aspect you just mentioned",
+            "expectedTopic": "outdoor adventure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the outdoor adventure aspect you just mentioned",
+            "expectedTopic": "outdoor adventure"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the outdoor adventure aspect you just mentioned",
+            "expectedTopic": "outdoor adventure"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:18.799Z"
+      },
+      {
+        "email": "HeinerHetnandez@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in startups, what can you help me with?",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about startups",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the startups aspect you just mentioned",
+            "expectedTopic": "startups"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:20.568Z"
+      },
+      {
+        "email": "IvanaAbles106@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in gaming, what can you help me with?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gaming aspect you just mentioned",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gaming aspect you just mentioned",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gaming aspect you just mentioned",
+            "expectedTopic": "gaming"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:22.392Z"
+      },
+      {
+        "email": "JaegerInderpreet154@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in fitness, what can you help me with?",
+            "expectedTopic": "fitness"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness aspect you just mentioned",
+            "expectedTopic": "fitness"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness aspect you just mentioned",
+            "expectedTopic": "fitness"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness aspect you just mentioned",
+            "expectedTopic": "fitness"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fitness aspect you just mentioned",
+            "expectedTopic": "fitness"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:26.208Z"
+      },
+      {
+        "email": "AttanasioPita@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in travel (domestic), what can you help me with?",
+            "expectedTopic": "travel (domestic)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel (domestic) aspect you just mentioned",
+            "expectedTopic": "travel (domestic)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel (domestic) aspect you just mentioned",
+            "expectedTopic": "travel (domestic)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel (domestic) aspect you just mentioned",
+            "expectedTopic": "travel (domestic)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel (domestic) aspect you just mentioned",
+            "expectedTopic": "travel (domestic)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about travel (domestic)",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:28.123Z"
+      },
+      {
+        "email": "choatesberkovitzwh329@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (J-pop/Vocaloid), what can you help me with?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (J-pop/Vocaloid) aspect you just mentioned",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (J-pop/Vocaloid)",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:31.647Z"
+      },
+      {
+        "email": "JirkaAmir939@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in travel, what can you help me with?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel aspect you just mentioned",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel aspect you just mentioned",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel aspect you just mentioned",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the travel aspect you just mentioned",
+            "expectedTopic": "travel"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:33.513Z"
+      },
+      {
+        "email": "NieperSyker@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music (indie/rock), what can you help me with?",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music (indie/rock)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music (indie/rock) aspect you just mentioned",
+            "expectedTopic": "music (indie/rock)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:35.314Z"
+      },
+      {
+        "email": "GurRramos@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in gardening, what can you help me with?",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the gardening aspect you just mentioned",
+            "expectedTopic": "gardening"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about gardening",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:42.560Z"
+      },
+      {
+        "email": "ChinyamaKamomiya697@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in investing (ISA/FIRE), what can you help me with?",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about investing (ISA/FIRE)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ISA/FIRE) aspect you just mentioned",
+            "expectedTopic": "investing (ISA/FIRE)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:44.490Z"
+      },
+      {
+        "email": "KirkinoWorsop@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in music production, what can you help me with?",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about music production",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the music production aspect you just mentioned",
+            "expectedTopic": "music production"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:46.446Z"
+      },
+      {
+        "email": "CarlaTonbaktepe585@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in Premier League, what can you help me with?",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about Premier League",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the Premier League aspect you just mentioned",
+            "expectedTopic": "Premier League"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:48.402Z"
+      },
+      {
+        "email": "CarloszDosmil220@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in fashion (streetwear), what can you help me with?",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fashion (streetwear) aspect you just mentioned",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fashion (streetwear) aspect you just mentioned",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fashion (streetwear) aspect you just mentioned",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the fashion (streetwear) aspect you just mentioned",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about fashion (streetwear)",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:50.076Z"
+      },
+      {
+        "email": "PenalozaDeyli@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in cooking, what can you help me with?",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the cooking aspect you just mentioned",
+            "expectedTopic": "cooking"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about cooking",
+            "expectedTopic": "visual content"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:51.916Z"
+      },
+      {
+        "email": "SymMujieem253@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm interested in investing (ETF), what can you help me with?",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual summary about investing (ETF)",
+            "expectedTopic": "visual content"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Tell me more about the investing (ETF) aspect you just mentioned",
+            "expectedTopic": "investing (ETF)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-02T16:12:53.914Z"
       }
     ]
   },
@@ -28211,17 +31783,36 @@
         "returnTotal": 57
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-02T16:16:55.511Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 214,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 710,
+        "visitTotal": 710,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 57,
+        "returnTotal": 57
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-02 15:29:",
+    "[状态总结] 截至 2026-06-02 16:16:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 796 次行为 (匿名访问 717 + 首次使用 22 + 回访 57)",
+    "  历史累计完成: 789 次行为 (匿名访问 710 + 首次使用 22 + 回访 57)",
     "  品牌注册: MuleRun=102 MyClaw=214 dit.ai=115",
-    "  今日进度: 150/448 任务完成 (33%)",
-    "    mulerun: 51/147 (35%) — 47v + 0r + 4rt",
-    "    myclaw: 44/154 (29%) — 31v + 10r + 3rt",
-    "    dit: 55/147 (37%) — 42v + 9r + 4rt",
+    "  今日进度: 150/288 任务完成 (52%)",
+    "    mulerun: 51/128 (40%) — 47v + 0r + 4rt",
+    "    myclaw: 44/160 (28%) — 31v + 10r + 3rt",
+    "    dit: 55/0 (0%) — 42v + 9r + 4rt",
     "  [警告] 进程已停止！需要重启。",
     "",
     "[04:35:14] [error] [5] attempt 1 FAILED: Create profile: AggregateError",
