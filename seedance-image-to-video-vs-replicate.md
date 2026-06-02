@@ -5,7 +5,7 @@ permalink: /seedance-image-to-video-vs-replicate/
 ---
 # Seedance image to video vs Replicate: Complete Guide 2026
 
-**Published:** 2026-06-01  
+**Published:** 2026-06-02  
 **Keywords:** Seedance image to video vs Replicate
 
 ---
