@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T17:54:04.602Z",
+  "updatedAt": "2026-06-03T16:03:02.867Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -31878,17 +31878,36 @@
         "returnTotal": 57
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-03T16:03:02.867Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 214,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 710,
+        "visitTotal": 710,
+        "firstUseSuccess": 22,
+        "firstUseTotal": 22,
+        "returnSuccess": 57,
+        "returnTotal": 57
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-02 17:54:",
+    "[状态总结] 截至 2026-06-03 16:03:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 789 次行为 (匿名访问 710 + 首次使用 22 + 回访 57)",
     "  品牌注册: MuleRun=102 MyClaw=214 dit.ai=115",
-    "  今日进度: 150/288 任务完成 (52%)",
-    "    mulerun: 51/128 (40%) — 47v + 0r + 4rt",
-    "    myclaw: 44/160 (28%) — 31v + 10r + 3rt",
-    "    dit: 55/0 (0%) — 42v + 9r + 4rt",
+    "  今日进度: 0/288 任务完成 (0%)",
+    "    mulerun: 0/128 (0%) — 0v + 0r + 0rt",
+    "    myclaw: 0/160 (0%) — 0v + 0r + 0rt",
+    "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
     "[04:35:14] [error] [5] attempt 1 FAILED: Create profile: AggregateError",
