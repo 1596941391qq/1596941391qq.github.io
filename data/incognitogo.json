@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T21:01:07.457Z",
+  "updatedAt": "2026-06-05T21:28:32.437Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -48,7 +48,7 @@
           "returns": 17
         },
         "2026-06-06": {
-          "visits": 42,
+          "visits": 46,
           "regs": 0,
           "returns": 3
         }
@@ -95,9 +95,9 @@
           "returns": 49
         },
         "2026-06-06": {
-          "visits": 14,
+          "visits": 17,
           "regs": 3,
-          "returns": 9
+          "returns": 11
         }
       },
       "dit": {
@@ -1532,6 +1532,12 @@
             "type": "return",
             "duration": 34577,
             "ts": "2026-06-04T12:25:45.106Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 100211,
+            "ts": "2026-06-05T21:24:18.449Z"
           }
         ]
       },
@@ -2725,7 +2731,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 60952,
+            "ts": "2026-06-05T21:04:38.187Z"
+          }
+        ]
       },
       {
         "email": "CesariaLyvie256@gmail.com",
@@ -5385,8 +5398,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 199,
-    "returnTotal": 331
+    "returnSuccess": 201,
+    "returnTotal": 335
   },
   "activities": {
     "anonymous": [
@@ -15384,6 +15397,26 @@
         "pages": 1,
         "region": "DE",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T21:04:38.184Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "MiichaelTata333@gmail.com",
+        "duration": 60952,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:24:18.446Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "bacikkinlocklj977@gmail.com",
+        "duration": 100211,
+        "pages": 1,
+        "region": "GB",
+        "success": true
       }
     ],
     "new": [
@@ -19408,6 +19441,46 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T21:04:58.621Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 40192,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:05:55.849Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 10436,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:08:16.344Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 91255,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:23:15.589Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 74150,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -22676,6 +22749,26 @@
         "pages": 1,
         "region": "BR",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T21:09:09.245Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 189363,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:11:26.398Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 91069,
+        "pages": 1,
+        "region": "GB",
+        "success": true
       }
     ],
     "registration_verify": [
@@ -22765,6 +22858,24 @@
         "brand": "myclaw",
         "type": "registration_verify",
         "account": "WeijieDearman@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T21:05:02.269Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "MiichaelTata333@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T21:24:43.620Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "bacikkinlocklj977@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -41692,12 +41803,31 @@
         "returnTotal": 331
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-05T21:28:32.437Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 217,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 201,
+        "returnTotal": 335
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-05 21:01:",
+    "[状态总结] 截至 2026-06-05 21:28:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 692 次行为 (匿名访问 492 + 首次使用 1 + 回访 199)",
+    "  历史累计完成: 694 次行为 (匿名访问 492 + 首次使用 1 + 回访 201)",
     "  品牌注册: MuleRun=102 MyClaw=217 dit.ai=115",
     "  今日进度: 510/356 任务完成 (143%)",
     "    mulerun: 242/163 (148%) — 225v + 0r + 17rt",
