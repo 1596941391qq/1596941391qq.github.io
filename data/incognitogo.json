@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T15:18:46.075Z",
+  "updatedAt": "2026-06-05T15:50:09.884Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -43,7 +43,7 @@
           "returns": 22
         },
         "2026-06-05": {
-          "visits": 224,
+          "visits": 225,
           "regs": 0,
           "returns": 17
         }
@@ -85,9 +85,9 @@
           "returns": 60
         },
         "2026-06-05": {
-          "visits": 215,
+          "visits": 218,
           "regs": 0,
-          "returns": 44
+          "returns": 47
         }
       },
       "dit": {
@@ -2137,7 +2137,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 34931,
+            "ts": "2026-06-05T15:31:23.453Z"
+          }
+        ]
       },
       {
         "email": "nguyenthanhminh090594@gmail.com",
@@ -3449,7 +3456,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 33850,
+            "ts": "2026-06-05T15:44:05.762Z"
+          }
+        ]
       },
       {
         "email": "KrossBeaton@gmail.com",
@@ -4408,7 +4422,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 34491,
+            "ts": "2026-06-05T15:26:40.998Z"
+          }
+        ]
       },
       {
         "email": "HungLuella511@gmail.com",
@@ -5232,8 +5253,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 182,
-    "returnTotal": 297
+    "returnSuccess": 185,
+    "returnTotal": 303
   },
   "activities": {
     "anonymous": [
@@ -15061,6 +15082,36 @@
         "pages": 1,
         "region": "IN",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T15:26:40.995Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "RiggansHagene@gmail.com",
+        "duration": 34491,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T15:31:23.451Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "sadeepahasi2001@gmail.com",
+        "duration": 34931,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T15:44:05.760Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "MaryahFludd@gmail.com",
+        "duration": 33850,
+        "pages": 1,
+        "region": "GB",
+        "success": true
       }
     ],
     "new": [
@@ -18635,6 +18686,16 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T15:36:04.614Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 102486,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -21692,6 +21753,36 @@
         "duration": 52107,
         "pages": 1,
         "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T15:25:26.387Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 120891,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T15:29:24.547Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 107131,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T15:39:38.653Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184365,
+        "pages": 1,
+        "region": "BR",
         "success": true
       }
     ]
@@ -40236,38 +40327,51 @@
         "returnTotal": 297
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-05T15:50:09.884Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 214,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 185,
+        "returnTotal": 303
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-05 15:18:",
+    "[状态总结] 截至 2026-06-05 15:50:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 675 次行为 (匿名访问 492 + 首次使用 1 + 回访 182)",
+    "  历史累计完成: 678 次行为 (匿名访问 492 + 首次使用 1 + 回访 185)",
     "  品牌注册: MuleRun=102 MyClaw=214 dit.ai=115",
-    "  今日进度: 500/41 任务完成 (1220%)",
-    "    mulerun: 241/14 (1721%) — 224v + 0r + 17rt",
-    "    myclaw: 259/27 (959%) — 215v + 0r + 44rt",
+    "  今日进度: 507/41 任务完成 (1237%)",
+    "    mulerun: 242/14 (1729%) — 225v + 0r + 17rt",
+    "    myclaw: 265/27 (981%) — 218v + 0r + 47rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[2026-06-05T15:03:18] [info] [myclaw] new visit done: 1 pages, 52s",
-    "[2026-06-05T15:03:21] [info] [myclaw] visit x1 OK",
+    "[google-session] embedded/setup failed, checking proxy health...",
+    "[google-session] Proxy health check: chrome-error://chromewebdata/",
+    "[google-session] Retrying embedded/setup with longer wait...",
+    "[google-session] Retry URL: chrome-error://chromewebdata/",
+    "[google-session] Trying accounts.google.com/signin...",
+    "[google-session] Signin URL: chrome-error://chromewebdata/",
+    "[2026-06-05T15:26:40] [info] [myclaw] return visit done: 1 pages, 34s",
+    "[2026-06-05T15:26:44] [info] [myclaw] return x1 OK",
+    "[2026-06-05T15:29:24] [info] [myclaw] new visit done: 1 pages, 107s",
+    "[2026-06-05T15:29:27] [info] [myclaw] visit x1 OK",
     "[myclaw] Establishing Google session via embedded/setup...",
-    "[google-session] Establishing session for AlbertineJentzsch@gmail.com...",
-    "[google-session] Pre-navigate URL: https://start.adspower.net/?id=k1d86aka&host=127.0.0.1:20725",
-    "[google-session] Landing URL: chrome-error://chromewebdata/",
-    "[google-session] embedded/setup failed, checking proxy health...",
-    "[google-session] Proxy health check: chrome-error://chromewebdata/",
-    "[google-session] Retrying embedded/setup with longer wait...",
-    "[2026-06-05T15:05:18] [info] [mulerun] new visit done: 1 pages, 54s",
-    "[2026-06-05T15:05:21] [info] [mulerun] visit x1 OK",
-    "[google-session] Retry URL: chrome-error://chromewebdata/",
-    "[google-session] Trying accounts.google.com/signin...",
-    "[google-session] Signin URL: chrome-error://chromewebdata/",
-    "[2026-06-05T15:05:33] [info] [myclaw] return visit done: 1 pages, 34s",
-    "[2026-06-05T15:05:36] [info] [myclaw] return x1 OK",
-    "[mulerun] Establishing Google session via embedded/setup...",
-    "[google-session] Establishing session for NugoDimitris566@gmail.com...",
-    "[google-session] Pre-navigate URL: https://start.adspower.net/?id=k1d86bnu&host=127.0.0.1:20725",
+    "[google-session] Establishing session for sadeepahasi2001@gmail.com...",
+    "[google-session] Pre-navigate URL: https://start.adspower.net/?id=k1d874dc&host=127.0.0.1:20725",
     "[google-session] Landing URL: chrome-error://chromewebdata/",
     "[google-session] embedded/setup failed, checking proxy health...",
     "[google-session] Proxy health check: chrome-error://chromewebdata/",
@@ -40275,20 +40379,26 @@
     "[google-session] Retry URL: chrome-error://chromewebdata/",
     "[google-session] Trying accounts.google.com/signin...",
     "[google-session] Signin URL: chrome-error://chromewebdata/",
-    "[mulerun] OAuth failed, trying email/password...",
-    "[15:06:33] [brand-login] [info] Logging into https://mulerun.com/login as NugoDimitris566@gmail.com",
-    "[15:06:59] [brand-login] [info] Ambiguous state, assuming logged in: chrome-error://chromewebdata/",
-    "[plan-executor] Executing 1-action plan for NugoDimitris566@gmail.com",
-    "[plan-executor] Action 1/1: [chat] I want to explore cooking (churrasco) in a more pr",
-    "[plan-executor] No input field found, skipping chat action",
-    "[2026-06-05T15:07:25] [info] [mulerun] return visit done: 1 pages, 87s",
-    "[2026-06-05T15:07:28] [info] [mulerun] return x1 OK",
-    "[2026-06-05T15:13:36] [error] [myclaw] return visit failed: Profile does not exist",
-    "[2026-06-05T15:13:41] [error] [myclaw] return x1 FAILED: Profile does not exist",
-    "[2026-06-05T15:16:43] [error] [mulerun] return visit failed: Profile does not exist",
-    "[2026-06-05T15:16:48] [error] [mulerun] return x1 FAILED: Profile does not exist",
-    "[2026-06-05T15:18:02] [error] [myclaw] return visit failed: Profile does not exist",
-    "[2026-06-05T15:18:07] [error] [myclaw] return x1 FAILED: Profile does not exist"
+    "[2026-06-05T15:31:23] [info] [myclaw] return visit done: 1 pages, 35s",
+    "[2026-06-05T15:31:26] [info] [myclaw] return x1 OK",
+    "[2026-06-05T15:36:04] [info] [mulerun] new visit done: 1 pages, 102s",
+    "[2026-06-05T15:36:07] [info] [mulerun] visit x1 OK",
+    "[2026-06-05T15:39:38] [info] [myclaw] new visit done: 1 pages, 184s",
+    "[2026-06-05T15:39:41] [info] [myclaw] visit x1 OK",
+    "[2026-06-05T15:41:43] [error] [mulerun] return visit failed: Profile does not exist",
+    "[2026-06-05T15:41:48] [error] [mulerun] return x1 FAILED: Profile does not exist",
+    "[myclaw] Establishing Google session via embedded/setup...",
+    "[google-session] Establishing session for MaryahFludd@gmail.com...",
+    "[google-session] Pre-navigate URL: https://start.adspower.net/?id=k1d87h4q&host=127.0.0.1:20725",
+    "[google-session] Landing URL: chrome-error://chromewebdata/",
+    "[google-session] embedded/setup failed, checking proxy health...",
+    "[google-session] Proxy health check: chrome-error://chromewebdata/",
+    "[google-session] Retrying embedded/setup with longer wait...",
+    "[google-session] Retry URL: chrome-error://chromewebdata/",
+    "[google-session] Trying accounts.google.com/signin...",
+    "[google-session] Signin URL: chrome-error://chromewebdata/",
+    "[2026-06-05T15:44:05] [info] [myclaw] return visit done: 1 pages, 34s",
+    "[2026-06-05T15:44:08] [info] [myclaw] return x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
