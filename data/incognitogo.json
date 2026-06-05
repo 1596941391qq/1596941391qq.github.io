@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T20:28:52.806Z",
+  "updatedAt": "2026-06-05T20:30:09.609Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -95,7 +95,7 @@
           "returns": 49
         },
         "2026-06-06": {
-          "visits": 12,
+          "visits": 14,
           "regs": 3,
           "returns": 9
         }
@@ -22589,6 +22589,16 @@
         "pages": 1,
         "region": "GB",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T20:29:10.762Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 109839,
+        "pages": 1,
+        "region": "US",
+        "success": true
       }
     ],
     "registration_verify": [
@@ -41520,10 +41530,29 @@
         "returnTotal": 329
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-05T20:30:09.609Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 217,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 198,
+        "returnTotal": 329
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-05 20:28:",
+    "[状态总结] 截至 2026-06-05 20:30:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 691 次行为 (匿名访问 492 + 首次使用 1 + 回访 198)",
     "  品牌注册: MuleRun=102 MyClaw=217 dit.ai=115",
