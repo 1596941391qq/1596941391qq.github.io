@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T15:50:09.884Z",
+  "updatedAt": "2026-06-05T17:50:01.362Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -46,6 +46,11 @@
           "visits": 225,
           "regs": 0,
           "returns": 17
+        },
+        "2026-06-06": {
+          "visits": 20,
+          "regs": 0,
+          "returns": 0
         }
       },
       "myclaw": {
@@ -85,9 +90,14 @@
           "returns": 60
         },
         "2026-06-05": {
-          "visits": 218,
+          "visits": 219,
           "regs": 0,
-          "returns": 47
+          "returns": 49
+        },
+        "2026-06-06": {
+          "visits": 5,
+          "regs": 1,
+          "returns": 6
         }
       },
       "dit": {
@@ -122,22 +132,22 @@
   },
   "todayPlan": {
     "mulerun": {
-      "visits": 5,
-      "regs": 0,
-      "returns": 9,
-      "total": 14
+      "visits": 121,
+      "regs": 19,
+      "returns": 24,
+      "total": 164
     },
     "myclaw": {
-      "visits": 13,
-      "regs": 0,
-      "returns": 14,
-      "total": 27
+      "visits": 131,
+      "regs": 26,
+      "returns": 46,
+      "total": 203
     }
   },
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 214,
+    "myclaw": 215,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -798,7 +808,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 183322,
+            "ts": "2026-06-05T17:03:33.480Z"
+          }
+        ]
       },
       {
         "email": "amirajenkins2860@gmail.com",
@@ -931,7 +948,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 367716,
+            "ts": "2026-06-05T17:45:47.692Z"
+          }
+        ]
       },
       {
         "email": "siricaviolina@gmail.com",
@@ -1316,7 +1340,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 33205,
+            "ts": "2026-06-05T15:51:20.013Z"
+          }
+        ]
       },
       {
         "email": "tiffnerarmenteroswt17@gmail.com",
@@ -2056,6 +2087,12 @@
             "type": "return",
             "duration": 33574,
             "ts": "2026-06-04T11:42:47.360Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 21795,
+            "ts": "2026-06-05T17:24:42.333Z"
           }
         ]
       },
@@ -2333,6 +2370,12 @@
             "type": "return",
             "duration": 114650,
             "ts": "2026-06-05T07:17:44.020Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 34944,
+            "ts": "2026-06-05T16:28:43.481Z"
           }
         ]
       },
@@ -2677,6 +2720,18 @@
         "visits": []
       },
       {
+        "email": "MckensieHix@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-05T17:09:58.897Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "RuesgaRolas@gmail.com",
         "region": "DE",
         "brands": [
@@ -2722,7 +2777,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 34581,
+            "ts": "2026-06-05T16:17:47.460Z"
+          }
+        ]
       },
       {
         "email": "IvanaAbles106@gmail.com",
@@ -3135,7 +3197,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 33707,
+            "ts": "2026-06-05T16:00:09.089Z"
+          }
+        ]
       },
       {
         "email": "NugoDimitris566@gmail.com",
@@ -4802,7 +4871,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 33740,
+            "ts": "2026-06-05T16:08:32.320Z"
+          }
+        ]
       },
       {
         "email": "SemlerHadejia@gmail.com",
@@ -5253,8 +5329,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 185,
-    "returnTotal": 303
+    "returnSuccess": 193,
+    "returnTotal": 319
   },
   "activities": {
     "anonymous": [
@@ -15112,6 +15188,86 @@
         "pages": 1,
         "region": "GB",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T15:51:20.011Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "bloodworthdossrv967@gmail.com",
+        "duration": 33205,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:00:09.087Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "CarlaTonbaktepe585@gmail.com",
+        "duration": 33707,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:08:32.317Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "BagoCastellon@gmail.com",
+        "duration": 33740,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:17:47.457Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "HeinerHetnandez@gmail.com",
+        "duration": 34581,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:28:43.479Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "hoduong09021987@gmail.com",
+        "duration": 34944,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:03:33.475Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "meclarke38@gmail.com",
+        "duration": 183322,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:24:42.328Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "nth0377205969@gmail.com",
+        "duration": 21795,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:45:47.686Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "trieuthigaman771@gmail.com",
+        "duration": 367716,
+        "pages": 1,
+        "region": "IN",
+        "success": true
       }
     ],
     "new": [
@@ -18696,6 +18852,216 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T16:09:19.777Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 75301,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:09:47.027Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 14228,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:10:12.487Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 12463,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:10:33.317Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 7399,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:24:57.488Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 30534,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:37:30.528Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 78443,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:39:41.624Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86220,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:41:57.610Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 91732,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:44:11.603Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 88682,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:45:10.640Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 13015,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:00:32.358Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38356,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:15:53.914Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 76459,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:16:55.781Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9976,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:18:03.921Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83797,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:28:37.480Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 73044,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:30:48.465Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86851,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:31:51.466Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 18889,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:33:16.047Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 36538,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:39:44.901Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 72827,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:41:28.019Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 57277,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:43:32.171Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 78978,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -21784,14 +22150,122 @@
         "pages": 1,
         "region": "BR",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T15:57:41.901Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 183837,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:26:14.844Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 104713,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:35:33.313Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 118858,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:36:29.841Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 14949,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T16:40:58.100Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 220350,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:29:31.248Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 123890,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T17:32:11.237Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 115254,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      }
+    ],
+    "registration_verify": [
+      {
+        "ts": "2026-06-05T16:29:06.394Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "hoduong09021987@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T17:03:57.618Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "meclarke38@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T17:25:07.627Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "nth0377205969@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T17:46:11.575Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "trieuthigaman771@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
       }
     ]
   },
   "aiConversations": [],
   "conversationPlans": {
-    "planned": 370,
+    "planned": 373,
     "consumed": 19,
-    "fallback": 182,
+    "fallback": 185,
     "sessions": [
       {
         "email": "wrrnikhngphul@gmail.com",
@@ -30141,6 +30615,51 @@
       {
         "email": "f0971228431@gmail.com",
         "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me think through a realistic plan for music (J-pop/Vocaloid) this month?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try music (J-pop/Vocaloid)?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "I want to browse features that could help with music (J-pop/Vocaloid) and stationery",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach feature discovery?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Make a simple diagram showing the workflow for music (J-pop/Vocaloid)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare visual output with the most common alternative people choose?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make music (J-pop/Vocaloid) more concrete with a few realistic examples?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-05T16:07:54.417Z"
+      },
+      {
+        "email": "f0971228431@gmail.com",
+        "brand": "mulerun",
         "rounds": 6,
         "actions": [
           {
@@ -33996,6 +34515,51 @@
       {
         "email": "NugoDimitris566@gmail.com",
         "brand": "mulerun",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore cooking (churrasco) in a more practical way. What should I focus on first?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn cooking (churrasco) into something I could explain to a friend?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try cooking (churrasco)?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach cooking (churrasco)?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Point me to the part of the product that fits cooking (churrasco) best",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify feature discovery into a step-by-step approach?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare cooking (churrasco) with the most common alternative people choose?",
+            "expectedTopic": "cooking (churrasco)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-05T16:07:57.001Z"
+      },
+      {
+        "email": "NugoDimitris566@gmail.com",
+        "brand": "mulerun",
         "rounds": 1,
         "actions": [
           {
@@ -36752,6 +37316,51 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-04T08:11:51.397Z"
+      },
+      {
+        "email": "MckensieHix@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore beauty & skincare in a more practical way. What should I focus on first?",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify beauty & skincare into a step-by-step approach?",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach beauty & skincare?",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Turn beauty & skincare into a task list I could start this week",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare structured plan with the most common alternative people choose?",
+            "expectedTopic": "beauty & skincare"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Let me review past results so I can improve my beauty & skincare process",
+            "expectedTopic": "previous results"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make previous results more concrete with a few realistic examples?",
+            "expectedTopic": "beauty & skincare"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-05T17:27:12.096Z"
       }
     ]
   },
@@ -40346,32 +40955,57 @@
         "returnTotal": 303
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-05T17:50:01.362Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 215,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 193,
+        "returnTotal": 319
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-05 15:50:",
+    "[状态总结] 截至 2026-06-05 17:50:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 678 次行为 (匿名访问 492 + 首次使用 1 + 回访 185)",
-    "  品牌注册: MuleRun=102 MyClaw=214 dit.ai=115",
-    "  今日进度: 507/41 任务完成 (1237%)",
-    "    mulerun: 242/14 (1729%) — 225v + 0r + 17rt",
-    "    myclaw: 265/27 (981%) — 218v + 0r + 47rt",
+    "  历史累计完成: 686 次行为 (匿名访问 492 + 首次使用 1 + 回访 193)",
+    "  品牌注册: MuleRun=102 MyClaw=215 dit.ai=115",
+    "  今日进度: 510/367 任务完成 (139%)",
+    "    mulerun: 242/164 (148%) — 225v + 0r + 17rt",
+    "    myclaw: 268/203 (132%) — 219v + 0r + 49rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
-    "[google-session] embedded/setup failed, checking proxy health...",
-    "[google-session] Proxy health check: chrome-error://chromewebdata/",
-    "[google-session] Retrying embedded/setup with longer wait...",
-    "[google-session] Retry URL: chrome-error://chromewebdata/",
-    "[google-session] Trying accounts.google.com/signin...",
-    "[google-session] Signin URL: chrome-error://chromewebdata/",
-    "[2026-06-05T15:26:40] [info] [myclaw] return visit done: 1 pages, 34s",
-    "[2026-06-05T15:26:44] [info] [myclaw] return x1 OK",
-    "[2026-06-05T15:29:24] [info] [myclaw] new visit done: 1 pages, 107s",
-    "[2026-06-05T15:29:27] [info] [myclaw] visit x1 OK",
+    "[2026-06-05T17:30:15] [warn] [myclaw] Warmup proxy check failed, proceeding anyway",
+    "[2026-06-05T17:30:48] [info] [mulerun] new visit done: 1 pages, 87s",
+    "[credit-monitor] No credit info found for mulerun",
+    "[2026-06-05T17:31:32] [warn] [mulerun] Warmup proxy check failed, proceeding anyway",
+    "[2026-06-05T17:31:51] [info] [mulerun] new visit done: 1 pages, 19s",
+    "[2026-06-05T17:32:11] [info] [myclaw] new visit done: 1 pages, 115s",
+    "[credit-monitor] No credit info found for mulerun",
+    "[credit-monitor] No credit info found for myclaw",
+    "[2026-06-05T17:32:39] [info] [myclaw] visit x2 OK",
+    "[2026-06-05T17:32:39] [warn] [mulerun] Warmup proxy check failed, proceeding anyway",
+    "[2026-06-05T17:33:16] [info] [mulerun] new visit done: 1 pages, 37s",
+    "[credit-monitor] No credit info found for mulerun",
+    "[2026-06-05T17:33:43] [info] [mulerun] visit x4 OK",
+    "[2026-06-05T17:36:11] [error] [mulerun] register x2 FAILED: exit 1",
+    "[2026-06-05T17:38:32] [warn] [mulerun] Warmup proxy check failed, proceeding anyway",
+    "[2026-06-05T17:39:05] [warn] [myclaw] Warmup proxy check failed, proceeding anyway",
     "[myclaw] Establishing Google session via embedded/setup...",
-    "[google-session] Establishing session for sadeepahasi2001@gmail.com...",
-    "[google-session] Pre-navigate URL: https://start.adspower.net/?id=k1d874dc&host=127.0.0.1:20725",
+    "[google-session] Establishing session for trieuthigaman771@gmail.com...",
+    "[google-session] Pre-navigate URL: chrome-error://chromewebdata/",
     "[google-session] Landing URL: chrome-error://chromewebdata/",
     "[google-session] embedded/setup failed, checking proxy health...",
     "[google-session] Proxy health check: chrome-error://chromewebdata/",
@@ -40379,26 +41013,20 @@
     "[google-session] Retry URL: chrome-error://chromewebdata/",
     "[google-session] Trying accounts.google.com/signin...",
     "[google-session] Signin URL: chrome-error://chromewebdata/",
-    "[2026-06-05T15:31:23] [info] [myclaw] return visit done: 1 pages, 35s",
-    "[2026-06-05T15:31:26] [info] [myclaw] return x1 OK",
-    "[2026-06-05T15:36:04] [info] [mulerun] new visit done: 1 pages, 102s",
-    "[2026-06-05T15:36:07] [info] [mulerun] visit x1 OK",
-    "[2026-06-05T15:39:38] [info] [myclaw] new visit done: 1 pages, 184s",
-    "[2026-06-05T15:39:41] [info] [myclaw] visit x1 OK",
-    "[2026-06-05T15:41:43] [error] [mulerun] return visit failed: Profile does not exist",
-    "[2026-06-05T15:41:48] [error] [mulerun] return x1 FAILED: Profile does not exist",
-    "[myclaw] Establishing Google session via embedded/setup...",
-    "[google-session] Establishing session for MaryahFludd@gmail.com...",
-    "[google-session] Pre-navigate URL: https://start.adspower.net/?id=k1d87h4q&host=127.0.0.1:20725",
-    "[google-session] Landing URL: chrome-error://chromewebdata/",
-    "[google-session] embedded/setup failed, checking proxy health...",
-    "[google-session] Proxy health check: chrome-error://chromewebdata/",
-    "[google-session] Retrying embedded/setup with longer wait...",
-    "[google-session] Retry URL: chrome-error://chromewebdata/",
-    "[google-session] Trying accounts.google.com/signin...",
-    "[google-session] Signin URL: chrome-error://chromewebdata/",
-    "[2026-06-05T15:44:05] [info] [myclaw] return visit done: 1 pages, 34s",
-    "[2026-06-05T15:44:08] [info] [myclaw] return x1 OK"
+    "[2026-06-05T17:39:39] [warn] [myclaw] returnVisit login failed, falling back to anonymous browse",
+    "[2026-06-05T17:39:44] [info] [mulerun] new visit done: 1 pages, 73s",
+    "[credit-monitor] No credit info found for mulerun",
+    "[2026-06-05T17:40:30] [warn] [mulerun] Warmup proxy check failed, proceeding anyway",
+    "[2026-06-05T17:41:28] [info] [mulerun] new visit done: 1 pages, 57s",
+    "[credit-monitor] No credit info found for mulerun",
+    "[2026-06-05T17:42:13] [warn] [mulerun] Warmup proxy check failed, proceeding anyway",
+    "[2026-06-05T17:43:32] [info] [mulerun] new visit done: 1 pages, 79s",
+    "[credit-monitor] No credit info found for mulerun",
+    "[2026-06-05T17:44:00] [info] [mulerun] visit x3 OK",
+    "[2026-06-05T17:45:47] [info] [myclaw] return visit done: 1 pages, 368s",
+    "[credit-monitor] No credit info found for myclaw",
+    "[2026-06-05T17:46:11] [info] [myclaw] Registration verify: UNCONFIRMED via no_signals",
+    "[2026-06-05T17:46:14] [info] [myclaw] return x1 OK"
   ],
   "registrationLog": [
     "[03:57:02] [info] Registry updated: everalon469q@gmail.com → mulerun registered (pwd stored)",
