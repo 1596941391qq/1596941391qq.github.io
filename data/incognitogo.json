@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T20:30:38.857Z",
+  "updatedAt": "2026-06-05T20:59:47.652Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -48,9 +48,9 @@
           "returns": 17
         },
         "2026-06-06": {
-          "visits": 38,
+          "visits": 42,
           "regs": 0,
-          "returns": 2
+          "returns": 3
         }
       },
       "myclaw": {
@@ -2152,7 +2152,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 60716,
+            "ts": "2026-06-05T20:36:11.000Z"
+          }
+        ]
       },
       {
         "email": "juliusoundo263@gmail.com",
@@ -5378,8 +5385,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 198,
-    "returnTotal": 329
+    "returnSuccess": 199,
+    "returnTotal": 331
   },
   "activities": {
     "anonymous": [
@@ -13734,6 +13741,16 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T20:36:10.998Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "honglethi1269@gmail.com",
+        "duration": 60716,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
         "ts": "2026-05-28T02:21:38.682Z",
         "brand": "myclaw",
         "visitNum": 1,
@@ -19341,6 +19358,56 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T20:38:40.591Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38481,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T20:39:57.344Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 30660,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T20:42:02.763Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 78374,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T20:43:29.173Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38626,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T20:57:46.975Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 6028,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -22616,6 +22683,15 @@
         "brand": "mulerun",
         "type": "registration_verify",
         "account": "thaban868@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T20:36:35.386Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "honglethi1269@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -41568,12 +41644,31 @@
         "returnTotal": 329
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-05T20:59:47.652Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 217,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 199,
+        "returnTotal": 331
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-05 20:30:",
+    "[状态总结] 截至 2026-06-05 20:59:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 691 次行为 (匿名访问 492 + 首次使用 1 + 回访 198)",
+    "  历史累计完成: 692 次行为 (匿名访问 492 + 首次使用 1 + 回访 199)",
     "  品牌注册: MuleRun=102 MyClaw=217 dit.ai=115",
     "  今日进度: 510/356 任务完成 (143%)",
     "    mulerun: 242/163 (148%) — 225v + 0r + 17rt",
