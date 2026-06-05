@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T20:30:09.609Z",
+  "updatedAt": "2026-06-05T20:30:38.857Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -41533,6 +41533,25 @@
     },
     {
       "ts": "2026-06-05T20:30:09.609Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 217,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 198,
+        "returnTotal": 329
+      },
+      "errors": 0
+    },
+    {
+      "ts": "2026-06-05T20:30:38.857Z",
       "round": 4,
       "phase": "registrations",
       "registry": {
