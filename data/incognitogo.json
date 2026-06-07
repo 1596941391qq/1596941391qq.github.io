@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T21:28:32.437Z",
+  "updatedAt": "2026-06-07T18:19:35.650Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -48,9 +48,14 @@
           "returns": 17
         },
         "2026-06-06": {
-          "visits": 46,
+          "visits": 134,
           "regs": 0,
-          "returns": 3
+          "returns": 19
+        },
+        "2026-06-07": {
+          "visits": 31,
+          "regs": 0,
+          "returns": 15
         }
       },
       "myclaw": {
@@ -95,9 +100,14 @@
           "returns": 49
         },
         "2026-06-06": {
-          "visits": 17,
+          "visits": 134,
+          "regs": 26,
+          "returns": 55
+        },
+        "2026-06-07": {
+          "visits": 18,
           "regs": 3,
-          "returns": 11
+          "returns": 12
         }
       },
       "dit": {
@@ -147,7 +157,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 217,
+    "myclaw": 243,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -177,6 +187,12 @@
             "type": "return",
             "duration": 34140,
             "ts": "2026-06-04T21:36:13.515Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 220610,
+            "ts": "2026-06-06T13:28:49.046Z"
           }
         ]
       },
@@ -241,6 +257,18 @@
             "type": "return",
             "duration": 33139,
             "ts": "2026-06-04T10:00:05.083Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 44239,
+            "ts": "2026-06-06T00:31:13.278Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 196043,
+            "ts": "2026-06-06T15:47:38.335Z"
           }
         ]
       },
@@ -305,6 +333,12 @@
             "type": "return",
             "duration": 34057,
             "ts": "2026-06-04T10:37:18.294Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 196645,
+            "ts": "2026-06-06T14:41:22.223Z"
           }
         ]
       },
@@ -357,7 +391,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 93371,
+            "ts": "2026-06-07T14:12:34.480Z"
+          }
+        ]
       },
       {
         "email": "elizabethcarteri2raikvn@gmail.com",
@@ -385,6 +426,12 @@
             "type": "return",
             "duration": 34460,
             "ts": "2026-06-04T11:16:08.485Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 195878,
+            "ts": "2026-06-06T11:28:29.743Z"
           }
         ]
       },
@@ -516,6 +563,18 @@
             "type": "return",
             "duration": 33901,
             "ts": "2026-06-04T11:52:51.615Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 83196,
+            "ts": "2026-06-07T14:09:53.576Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 110383,
+            "ts": "2026-06-07T15:45:27.746Z"
           }
         ]
       },
@@ -540,6 +599,12 @@
             "type": "return",
             "duration": 34586,
             "ts": "2026-06-04T08:35:45.171Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 76002,
+            "ts": "2026-06-07T15:43:05.734Z"
           }
         ]
       },
@@ -569,6 +634,12 @@
             "type": "return",
             "duration": 34350,
             "ts": "2026-06-04T13:54:06.987Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 386178,
+            "ts": "2026-06-05T21:38:23.517Z"
           }
         ]
       },
@@ -592,7 +663,20 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 184660,
+            "ts": "2026-06-06T19:56:16.249Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 96810,
+            "ts": "2026-06-07T16:52:44.739Z"
+          }
+        ]
       },
       {
         "email": "clydeiojpasqualec8@gmail.com",
@@ -672,6 +756,12 @@
             "type": "return",
             "duration": 203537,
             "ts": "2026-06-05T04:55:05.810Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 287934,
+            "ts": "2026-06-07T15:51:10.683Z"
           }
         ]
       },
@@ -713,6 +803,18 @@
             "type": "return",
             "duration": 34993,
             "ts": "2026-06-04T09:24:11.130Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 83393,
+            "ts": "2026-06-07T14:53:30.354Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 196356,
+            "ts": "2026-06-07T15:51:05.413Z"
           }
         ]
       },
@@ -737,6 +839,12 @@
             "type": "return",
             "duration": 33666,
             "ts": "2026-06-05T10:22:18.780Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 38098,
+            "ts": "2026-06-06T13:10:31.093Z"
           }
         ]
       },
@@ -766,6 +874,12 @@
             "type": "return",
             "duration": 33552,
             "ts": "2026-06-04T19:15:42.895Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 71708,
+            "ts": "2026-06-05T22:37:50.105Z"
           }
         ]
       },
@@ -832,7 +946,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 192919,
+            "ts": "2026-06-07T15:36:41.288Z"
+          }
+        ]
       },
       {
         "email": "thaban868@gmail.com",
@@ -896,7 +1017,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 181777,
+            "ts": "2026-06-05T23:19:00.563Z"
+          }
+        ]
       },
       {
         "email": "mustaphamanje@gmail.com",
@@ -937,7 +1065,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 118272,
+            "ts": "2026-06-07T09:04:35.997Z"
+          }
+        ]
       },
       {
         "email": "trieuthigaman771@gmail.com",
@@ -960,6 +1095,12 @@
             "type": "return",
             "duration": 367716,
             "ts": "2026-06-05T17:45:47.692Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 94297,
+            "ts": "2026-06-06T04:13:37.566Z"
           }
         ]
       },
@@ -1144,7 +1285,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 9717,
+            "ts": "2026-06-06T11:33:02.235Z"
+          }
+        ]
       },
       {
         "email": "etiennezelaya@gmail.com",
@@ -1166,7 +1314,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 57645,
+            "ts": "2026-06-06T07:56:14.156Z"
+          }
+        ]
       },
       {
         "email": "mataiwigar@gmail.com",
@@ -1245,7 +1400,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 582774,
+            "ts": "2026-06-06T03:42:06.514Z"
+          }
+        ]
       },
       {
         "email": "ChristineHassan858@gmail.com",
@@ -1415,7 +1577,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 93818,
+            "ts": "2026-06-06T11:52:29.488Z"
+          }
+        ]
       },
       {
         "email": "MorandoCrhis@gmail.com",
@@ -1427,7 +1596,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 110909,
+            "ts": "2026-06-06T13:25:05.928Z"
+          }
+        ]
       },
       {
         "email": "OswaldoNevarez781@gmail.com",
@@ -1478,7 +1654,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 117394,
+            "ts": "2026-06-06T02:13:04.256Z"
+          }
+        ]
       },
       {
         "email": "NoraJulia840@gmail.com",
@@ -1495,7 +1678,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 108998,
+            "ts": "2026-06-07T14:17:56.267Z"
+          }
+        ]
       },
       {
         "email": "MeaveEwen572@gmail.com",
@@ -1581,6 +1771,12 @@
             "type": "return",
             "duration": 33708,
             "ts": "2026-06-05T12:12:31.929Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 111236,
+            "ts": "2026-06-06T11:23:28.652Z"
           }
         ]
       },
@@ -1625,7 +1821,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 124446,
+            "ts": "2026-06-06T06:55:52.554Z"
+          }
+        ]
       },
       {
         "email": "NaokoWeinmar@gmail.com",
@@ -1745,6 +1948,12 @@
             "type": "return",
             "duration": 105861,
             "ts": "2026-06-05T20:25:13.663Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 79205,
+            "ts": "2026-06-06T09:39:35.889Z"
           }
         ]
       },
@@ -1768,7 +1977,20 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 90995,
+            "ts": "2026-06-05T21:55:54.697Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 61130,
+            "ts": "2026-06-06T10:29:20.447Z"
+          }
+        ]
       },
       {
         "email": "MatMentari980@gmail.com",
@@ -1840,7 +2062,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 110433,
+            "ts": "2026-06-06T17:18:44.486Z"
+          }
+        ]
       },
       {
         "email": "HoudaBatie@gmail.com",
@@ -1886,7 +2115,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 109636,
+            "ts": "2026-06-06T13:14:11.852Z"
+          }
+        ]
       },
       {
         "email": "MariaYt314@gmail.com",
@@ -1915,6 +2151,12 @@
             "type": "return",
             "duration": 34743,
             "ts": "2026-06-05T09:01:59.873Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 89774,
+            "ts": "2026-06-07T14:43:15.454Z"
           }
         ]
       },
@@ -1969,7 +2211,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 119976,
+            "ts": "2026-06-07T13:55:42.262Z"
+          }
+        ]
       },
       {
         "email": "ReyesPapu772@gmail.com",
@@ -2028,6 +2277,12 @@
             "type": "return",
             "duration": 34756,
             "ts": "2026-06-04T09:47:55.404Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 91096,
+            "ts": "2026-06-05T23:29:12.145Z"
           }
         ]
       },
@@ -2088,6 +2343,12 @@
             "type": "return",
             "duration": 33415,
             "ts": "2026-06-04T09:57:02.233Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 193953,
+            "ts": "2026-06-07T05:30:52.345Z"
           }
         ]
       },
@@ -2212,6 +2473,12 @@
             "type": "return",
             "duration": 34931,
             "ts": "2026-06-05T15:31:23.453Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 27315,
+            "ts": "2026-06-06T13:35:41.343Z"
           }
         ]
       },
@@ -2290,7 +2557,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 86352,
+            "ts": "2026-06-06T05:57:06.832Z"
+          }
+        ]
       },
       {
         "email": "balakisa342@gmail.com",
@@ -2330,6 +2604,18 @@
             "type": "return",
             "duration": 203270,
             "ts": "2026-06-05T14:49:03.220Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 206540,
+            "ts": "2026-06-07T15:07:30.130Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 107509,
+            "ts": "2026-06-07T15:20:25.162Z"
           }
         ]
       },
@@ -2348,7 +2634,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 185539,
+            "ts": "2026-06-06T14:15:26.870Z"
+          }
+        ]
       },
       {
         "email": "thai06051996@gmail.com",
@@ -2360,7 +2653,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 122608,
+            "ts": "2026-06-06T10:58:33.977Z"
+          }
+        ]
       },
       {
         "email": "nguyenngoctho2017vl@gmail.com",
@@ -2512,7 +2812,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 37764,
+            "ts": "2026-06-07T08:40:56.773Z"
+          }
+        ]
       },
       {
         "email": "titamniccely3342@gmail.com",
@@ -2563,7 +2870,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 112731,
+            "ts": "2026-06-06T07:52:56.541Z"
+          }
+        ]
       },
       {
         "email": "SawagedJosafat732@gmail.com",
@@ -2604,7 +2918,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 376371,
+            "ts": "2026-06-06T11:49:10.211Z"
+          }
+        ]
       },
       {
         "email": "KopkasCube@gmail.com",
@@ -2622,6 +2943,12 @@
             "type": "return",
             "duration": 34735,
             "ts": "2026-06-05T05:34:28.070Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 37551,
+            "ts": "2026-06-07T15:24:39.455Z"
           }
         ]
       },
@@ -2635,7 +2962,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 108200,
+            "ts": "2026-06-07T15:55:05.337Z"
+          }
+        ]
       },
       {
         "email": "RosidiRafiq748@gmail.com",
@@ -2670,6 +3004,18 @@
             "type": "return",
             "duration": 35044,
             "ts": "2026-06-04T08:48:19.350Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 182303,
+            "ts": "2026-06-06T07:03:03.184Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 183506,
+            "ts": "2026-06-06T20:30:38.279Z"
           }
         ]
       },
@@ -2713,6 +3059,12 @@
             "type": "return",
             "duration": 33197,
             "ts": "2026-06-05T12:28:32.649Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 100868,
+            "ts": "2026-06-06T13:45:57.144Z"
           }
         ]
       },
@@ -2797,6 +3149,18 @@
             "type": "return",
             "duration": 250453,
             "ts": "2026-06-04T16:58:55.039Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 169975,
+            "ts": "2026-06-06T02:35:28.932Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 15234,
+            "ts": "2026-06-06T14:05:25.746Z"
           }
         ]
       },
@@ -2810,7 +3174,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 109747,
+            "ts": "2026-06-07T14:05:08.200Z"
+          }
+        ]
       },
       {
         "email": "HeinerHetnandez@gmail.com",
@@ -2828,6 +3199,25 @@
             "type": "return",
             "duration": 34581,
             "ts": "2026-06-05T16:17:47.460Z"
+          }
+        ]
+      },
+      {
+        "email": "YulisaMarroquin555@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T04:47:03.276Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 96090,
+            "ts": "2026-06-06T04:51:59.863Z"
           }
         ]
       },
@@ -2875,6 +3265,12 @@
             "type": "return",
             "duration": 34106,
             "ts": "2026-06-05T07:58:40.572Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 201117,
+            "ts": "2026-06-06T12:56:46.821Z"
           }
         ]
       },
@@ -2930,6 +3326,12 @@
             "type": "return",
             "duration": 34713,
             "ts": "2026-06-04T13:45:01.065Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 143094,
+            "ts": "2026-06-05T21:49:12.283Z"
           }
         ]
       },
@@ -2984,6 +3386,11 @@
             "name": "ditai",
             "registeredAt": "2026-05-30T17:54:00.422Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T01:06:43.860Z",
+            "status": "active"
           }
         ],
         "visits": []
@@ -2998,7 +3405,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 383341,
+            "ts": "2026-06-06T09:54:29.943Z"
+          }
+        ]
       },
       {
         "email": "AmiltonWeishaupt@gmail.com",
@@ -3007,6 +3421,11 @@
           {
             "name": "ditai",
             "registeredAt": "2026-05-30T17:59:14.756Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T04:21:29.194Z",
             "status": "active"
           }
         ],
@@ -3019,6 +3438,30 @@
           {
             "name": "ditai",
             "registeredAt": "2026-05-30T18:02:22.619Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T06:31:41.653Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 193254,
+            "ts": "2026-06-07T14:01:30.518Z"
+          }
+        ]
+      },
+      {
+        "email": "ClaunchNathalia@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T09:05:12.092Z",
             "status": "active"
           }
         ],
@@ -3045,16 +3488,27 @@
             "type": "return",
             "duration": 33760,
             "ts": "2026-06-04T11:16:35.208Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 103339,
+            "ts": "2026-06-05T21:47:11.302Z"
           }
         ]
       },
       {
         "email": "StarrPalau@gmail.com",
-        "region": "GB",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T03:58:44.108Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-05T22:11:55.467Z",
             "status": "active"
           }
         ],
@@ -3141,6 +3595,25 @@
             "status": "active"
           }
         ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 210117,
+            "ts": "2026-06-07T14:19:54.502Z"
+          }
+        ]
+      },
+      {
+        "email": "YamamotoThiago724@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T22:14:43.378Z",
+            "status": "active"
+          }
+        ],
         "visits": []
       },
       {
@@ -3153,7 +3626,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 104087,
+            "ts": "2026-06-06T14:54:49.436Z"
+          }
+        ]
       },
       {
         "email": "ChinyamaKamomiya697@gmail.com",
@@ -3175,9 +3655,21 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T04:35:07.594Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T12:05:44.959Z",
+            "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 140087,
+            "ts": "2026-06-06T09:12:53.148Z"
+          }
+        ]
       },
       {
         "email": "HardeepLasko516@gmail.com",
@@ -3187,9 +3679,21 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T04:40:00.156Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T10:50:38.752Z",
+            "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 139540,
+            "ts": "2026-06-06T03:31:05.983Z"
+          }
+        ]
       },
       {
         "email": "KirkinoWorsop@gmail.com",
@@ -3216,17 +3720,27 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T04:51:45.823Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T05:30:43.958Z",
+            "status": "active"
           }
         ],
         "visits": []
       },
       {
         "email": "SinghCharlie100@gmail.com",
-        "region": "DE",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T04:58:17.749Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T12:44:22.495Z",
             "status": "active"
           }
         ],
@@ -3234,11 +3748,47 @@
       },
       {
         "email": "TotoVantyghem454@gmail.com",
-        "region": "JP",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T05:03:37.914Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T08:54:48.714Z",
+            "status": "active"
+          }
+        ],
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 74145,
+            "ts": "2026-06-07T13:46:54.836Z"
+          }
+        ]
+      },
+      {
+        "email": "IbuneChan358@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-05T23:20:43.295Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
+        "email": "AlnabulsiMarcelina@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T14:24:35.423Z",
             "status": "active"
           }
         ],
@@ -3269,12 +3819,29 @@
         ]
       },
       {
+        "email": "MaximePauly649@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T15:33:51.574Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "NugoDimitris566@gmail.com",
-        "region": "GB",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T05:38:35.069Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T07:45:38.069Z",
             "status": "active"
           }
         ],
@@ -3284,16 +3851,27 @@
             "type": "return",
             "duration": 87131,
             "ts": "2026-06-05T15:07:25.710Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 93137,
+            "ts": "2026-06-07T15:16:14.535Z"
           }
         ]
       },
       {
         "email": "KsyAtedgi@gmail.com",
-        "region": "IN",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T05:44:53.989Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-05T23:35:56.536Z",
             "status": "active"
           }
         ],
@@ -3338,6 +3916,11 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T06:07:54.465Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T14:31:27.432Z",
+            "status": "active"
           }
         ],
         "visits": [
@@ -3350,12 +3933,29 @@
         ]
       },
       {
+        "email": "KillingerAles34@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-07T10:34:52.966Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "MunirJuicey@gmail.com",
-        "region": "DE",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T06:16:08.542Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-07T13:45:03.219Z",
             "status": "active"
           }
         ],
@@ -3371,15 +3971,27 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 23854,
+            "ts": "2026-06-07T15:53:24.093Z"
+          }
+        ]
       },
       {
         "email": "NadiaLaing541@gmail.com",
-        "region": "BR",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T06:23:40.399Z",
+            "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T09:46:20.677Z",
             "status": "active"
           }
         ],
@@ -3393,21 +4005,38 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T06:29:56.046Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-07T14:37:39.555Z",
+            "status": "active"
           }
         ],
         "visits": []
       },
       {
         "email": "SarmadiFatima615@gmail.com",
-        "region": "GB",
+        "region": "US",
         "brands": [
           {
             "name": "mulerun",
             "registeredAt": "2026-05-31T06:33:37.373Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-07T15:02:27.912Z",
+            "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 12839,
+            "ts": "2026-06-07T14:59:10.761Z"
+          }
+        ]
       },
       {
         "email": "RgJohannes906@gmail.com",
@@ -3417,6 +4046,11 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T06:35:15.050Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-07T17:00:41.008Z",
+            "status": "active"
           }
         ],
         "visits": [
@@ -3425,6 +4059,12 @@
             "type": "return",
             "duration": 34177,
             "ts": "2026-06-04T21:07:27.964Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 13778,
+            "ts": "2026-06-07T14:14:24.793Z"
           }
         ]
       },
@@ -3490,6 +4130,18 @@
         ]
       },
       {
+        "email": "NenkinYulia289@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-06T16:34:15.092Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "GislerData@gmail.com",
         "region": "GB",
         "brands": [
@@ -3528,6 +4180,11 @@
             "name": "mulerun",
             "registeredAt": "2026-05-31T07:09:43.374Z",
             "status": "active"
+          },
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-07T01:25:16.214Z",
+            "status": "active"
           }
         ],
         "visits": [
@@ -3555,6 +4212,12 @@
             "type": "return",
             "duration": 33865,
             "ts": "2026-06-04T14:43:05.566Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 72785,
+            "ts": "2026-06-05T22:40:51.727Z"
           }
         ]
       },
@@ -3623,6 +4286,12 @@
             "type": "return",
             "duration": 34015,
             "ts": "2026-06-04T12:09:34.176Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 122956,
+            "ts": "2026-06-07T16:03:04.447Z"
           }
         ]
       },
@@ -3678,6 +4347,12 @@
             "type": "return",
             "duration": 34796,
             "ts": "2026-06-04T10:11:10.696Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 37219,
+            "ts": "2026-06-06T15:50:56.648Z"
           }
         ]
       },
@@ -3751,7 +4426,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 47752,
+            "ts": "2026-06-07T03:33:28.477Z"
+          }
+        ]
       },
       {
         "email": "TeresaPopczyk666@gmail.com",
@@ -3787,7 +4469,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 100811,
+            "ts": "2026-06-06T11:12:53.923Z"
+          }
+        ]
       },
       {
         "email": "sxmobay815@gmail.com",
@@ -3805,6 +4494,12 @@
             "type": "return",
             "duration": 33949,
             "ts": "2026-06-04T21:07:25.025Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 369904,
+            "ts": "2026-06-07T15:36:15.562Z"
           }
         ]
       },
@@ -3866,7 +4561,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 66323,
+            "ts": "2026-06-06T02:02:40.381Z"
+          }
+        ]
       },
       {
         "email": "chriskilm22@gmail.com",
@@ -4291,6 +4993,12 @@
             "type": "return",
             "duration": 34181,
             "ts": "2026-06-05T09:58:13.643Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 58501,
+            "ts": "2026-06-06T03:26:07.353Z"
           }
         ]
       },
@@ -4390,7 +5098,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 184989,
+            "ts": "2026-06-06T15:42:34.403Z"
+          }
+        ]
       },
       {
         "email": "CefaloBossert@gmail.com",
@@ -4663,7 +5378,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 106463,
+            "ts": "2026-06-07T12:49:07.958Z"
+          }
+        ]
       },
       {
         "email": "MehrzadSalom784@gmail.com",
@@ -4755,6 +5477,12 @@
             "type": "return",
             "duration": 34571,
             "ts": "2026-06-05T13:26:36.188Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 98799,
+            "ts": "2026-06-07T18:15:00.810Z"
           }
         ]
       },
@@ -4927,6 +5655,12 @@
             "type": "return",
             "duration": 34403,
             "ts": "2026-06-04T10:34:16.685Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 390752,
+            "ts": "2026-06-06T14:50:41.366Z"
           }
         ]
       },
@@ -5036,7 +5770,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 124737,
+            "ts": "2026-06-06T13:04:55.149Z"
+          }
+        ]
       },
       {
         "email": "EionHabek109@gmail.com",
@@ -5084,7 +5825,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 115221,
+            "ts": "2026-06-07T06:52:41.393Z"
+          }
+        ]
       },
       {
         "email": "JoonBoykin@gmail.com",
@@ -5192,7 +5940,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 50984,
+            "ts": "2026-06-06T20:41:17.342Z"
+          }
+        ]
       },
       {
         "email": "ApsAmandeep9@gmail.com",
@@ -5293,7 +6048,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 118135,
+            "ts": "2026-06-06T04:35:59.070Z"
+          }
+        ]
       },
       {
         "email": "KareemKwaku757@gmail.com",
@@ -5398,8 +6160,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 201,
-    "returnTotal": 335
+    "returnSuccess": 289,
+    "returnTotal": 511
   },
   "activities": {
     "anonymous": [
@@ -13764,6 +14526,316 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T21:49:12.279Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "VallonPhichi@gmail.com",
+        "duration": 143094,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:55:54.693Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "ShuklaShternie346@gmail.com",
+        "duration": 90995,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:37:50.103Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "mmuralis24067@gmail.com",
+        "duration": 71708,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:40:51.724Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "SpandisGiannousakis@gmail.com",
+        "duration": 72785,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T23:19:00.560Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "dangthitohop2267@gmail.com",
+        "duration": 181777,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T23:29:12.141Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "hovanrang2019@gmail.com",
+        "duration": 91096,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T00:31:13.275Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "nashbertina83@gmail.com",
+        "duration": 44239,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:02:40.377Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "nguyenvanbinh210454@gmail.com",
+        "duration": 66323,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:35:28.929Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "RuesgaRolas@gmail.com",
+        "duration": 169975,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:31:05.980Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "HardeepLasko516@gmail.com",
+        "duration": 139540,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:13:37.563Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "trieuthigaman771@gmail.com",
+        "duration": 94297,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:03:03.181Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "MulgadoAngelus@gmail.com",
+        "duration": 182303,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:52:56.538Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "SinghEr464@gmail.com",
+        "duration": 112731,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T09:12:53.145Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "AprillSalaz5@gmail.com",
+        "duration": 140087,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T09:39:35.886Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "WeijieDearman@gmail.com",
+        "duration": 79205,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:28:49.040Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "everalon469q@gmail.com",
+        "duration": 220610,
+        "pages": 2,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T13:46:54.833Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "TotoVantyghem454@gmail.com",
+        "duration": 74145,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T13:55:42.258Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "SabDami377@gmail.com",
+        "duration": 119976,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:09:53.572Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "ellieparry75@gmail.com",
+        "duration": 83196,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:14:24.790Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "RgJohannes906@gmail.com",
+        "duration": 13778,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:19:54.499Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "HesseCeferina875@gmail.com",
+        "duration": 210117,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:43:15.450Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "MariaYt314@gmail.com",
+        "duration": 89774,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:53:30.351Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "hypatiawatson74140@gmail.com",
+        "duration": 83393,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:59:10.759Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "SarmadiFatima615@gmail.com",
+        "duration": 12839,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:07:30.127Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "f0971228431@gmail.com",
+        "duration": 206540,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:16:14.533Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "NugoDimitris566@gmail.com",
+        "duration": 93137,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:36:41.284Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "amirajenkins2860@gmail.com",
+        "duration": 192919,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:43:05.731Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "thihangnguyen612@gmail.com",
+        "duration": 76002,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:51:10.677Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "chihieudo96@gmail.com",
+        "duration": 287934,
+        "pages": 5,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:53:24.089Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "NausadPiccirillo30@gmail.com",
+        "duration": 23854,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T16:52:44.736Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "anhphuctran16@gmail.com",
+        "duration": 96810,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
         "ts": "2026-05-28T02:21:38.682Z",
         "brand": "myclaw",
         "visitNum": 1,
@@ -15416,6 +16488,576 @@
         "duration": 100211,
         "pages": 1,
         "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:38:23.513Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "nguyenngocquyendn1996@gmail.com",
+        "duration": 386178,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:47:11.300Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "winninghamsimienay673@gmail.com",
+        "duration": 103339,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:13:04.252Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "LucreGio47@gmail.com",
+        "duration": 117394,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:26:07.349Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "PalmerFrancois780@gmail.com",
+        "duration": 58501,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:42:06.511Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "OrtizmarinGenner@gmail.com",
+        "duration": 582774,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:35:59.067Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "RajendraPei115@gmail.com",
+        "duration": 118135,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:51:59.859Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "YulisaMarroquin555@gmail.com",
+        "duration": 96090,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:57:06.828Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "phamvanthuy270584@gmail.com",
+        "duration": 86352,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:55:52.551Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "PalmaAlessandra548@gmail.com",
+        "duration": 124446,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:56:14.151Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "etiennezelaya@gmail.com",
+        "duration": 57645,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T09:54:29.935Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "NieperSyker@gmail.com",
+        "duration": 383341,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:29:20.445Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "ShuklaShternie346@gmail.com",
+        "duration": 61130,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:58:33.974Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "thai06051996@gmail.com",
+        "duration": 122608,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:12:53.915Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "gstylish649@gmail.com",
+        "duration": 100811,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:23:28.650Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "ShanthiNarro@gmail.com",
+        "duration": 111236,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:28:29.738Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "elizabethcarteri2raikvn@gmail.com",
+        "duration": 195878,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:33:02.232Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "angelynapessanha@gmail.com",
+        "duration": 9717,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:49:10.204Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "CartyJade36@gmail.com",
+        "duration": 376371,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:52:29.484Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "barlettaniolfm654@gmail.com",
+        "duration": 93818,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:56:46.817Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "GerowRodolfo123@gmail.com",
+        "duration": 201117,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:04:55.145Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "MaryanaBivona994@gmail.com",
+        "duration": 124737,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:10:31.088Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "emoryhines306@gmail.com",
+        "duration": 38098,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:14:11.849Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "GunesCeco19@gmail.com",
+        "duration": 109636,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:25:05.925Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "MorandoCrhis@gmail.com",
+        "duration": 110909,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:35:41.340Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "sadeepahasi2001@gmail.com",
+        "duration": 27315,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:45:57.139Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "JessenHeike670@gmail.com",
+        "duration": 100868,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:05:25.743Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "RuesgaRolas@gmail.com",
+        "duration": 15234,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:15:26.866Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "congtinh205@gmail.com",
+        "duration": 185539,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:41:22.216Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "heanghoch0@gmail.com",
+        "duration": 196645,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:50:41.360Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "SasTiffa@gmail.com",
+        "duration": 390752,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:54:49.433Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "GurRramos@gmail.com",
+        "duration": 104087,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:42:34.400Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "BlimkaPabelick@gmail.com",
+        "duration": 184989,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:47:38.332Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "nashbertina83@gmail.com",
+        "duration": 196043,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:50:56.645Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "garietyshaveret406@gmail.com",
+        "duration": 37219,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T17:18:44.482Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "StellLolli77@gmail.com",
+        "duration": 110433,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T19:56:16.243Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "anhphuctran16@gmail.com",
+        "duration": 184660,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:30:38.275Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "MulgadoAngelus@gmail.com",
+        "duration": 183506,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:41:17.339Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "ScrivenShirin@gmail.com",
+        "duration": 50984,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T03:33:28.474Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "destimehovingtm38@gmail.com",
+        "duration": 47752,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T05:30:52.341Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "nguyenlan25a@gmail.com",
+        "duration": 193953,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T06:52:41.388Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "KrizianRigs@gmail.com",
+        "duration": 115221,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T08:40:56.770Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "lelam12011984@gmail.com",
+        "duration": 37764,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T09:04:35.995Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "quyn8quyn@gmail.com",
+        "duration": 118272,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T12:49:07.955Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "garingerbeachampyurrz7841@gmail.com",
+        "duration": 106463,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:01:30.514Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "LopesNoah521@gmail.com",
+        "duration": 193254,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:05:08.197Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "layogayleneac115@gmail.com",
+        "duration": 109747,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:12:34.476Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "evekoo24@gmail.com",
+        "duration": 93371,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:17:56.265Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "NoraJulia840@gmail.com",
+        "duration": 108998,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:20:25.159Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "f0971228431@gmail.com",
+        "duration": 107509,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:24:39.453Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "KopkasCube@gmail.com",
+        "duration": 37551,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:36:15.560Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "sxmobay815@gmail.com",
+        "duration": 369904,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:45:27.742Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "ellieparry75@gmail.com",
+        "duration": 110383,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:51:05.409Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "hypatiawatson74140@gmail.com",
+        "duration": 196356,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:55:05.333Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "ReginaldWong939@gmail.com",
+        "duration": 108200,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T16:03:04.444Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "KrossBeaton@gmail.com",
+        "duration": 122956,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T18:15:00.808Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "hhaanh980@gmail.com",
+        "duration": 98799,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T18:19:22.905Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "nguyendat17021999@gmail.com",
+        "duration": 56510,
+        "pages": 1,
+        "region": "BR",
         "success": true
       }
     ],
@@ -19481,6 +21123,1196 @@
         "success": true
       },
       {
+        "ts": "2026-06-05T22:20:09.242Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 44855,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:21:09.052Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 14094,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:22:27.727Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 31265,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:24:38.695Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83504,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:25:40.668Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 13913,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:32:26.909Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 72307,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:34:26.283Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70963,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:51:01.542Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70015,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:53:13.051Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 85005,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:54:08.460Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 7769,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:55:55.110Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 61334,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:58:10.565Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 89901,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T23:09:07.086Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 8888,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:12:15.402Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84705,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:13:59.511Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 58333,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:15:35.581Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 48435,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:17:51.059Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86538,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:17:19.970Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 62002,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:34:03.295Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70708,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:35:11.082Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 21798,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:37:23.485Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 82591,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:39:39.814Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 88586,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:41:21.676Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 56625,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:40:04.603Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84391,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:41:07.150Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 15631,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:42:36.535Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38507,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:44:01.499Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 40900,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:45:55.226Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 67560,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:54:18.739Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 65396,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:56:16.605Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70830,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:57:12.350Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9413,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:44:45.959Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 41755,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:46:59.533Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 85967,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:28:28.825Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 48510,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:29:48.693Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 31486,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:31:08.956Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 33857,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:33:24.150Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86926,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:35:29.326Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 77761,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:53:54.063Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 13306,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:55:51.770Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 71584,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:12:13.489Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 49880,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:13:13.721Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 14629,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:15:26.810Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 88241,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:16:43.487Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 29455,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:18:00.260Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 30622,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:24:09.998Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 77728,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:25:04.793Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 8732,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:26:07.771Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 17812,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:27:45.216Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 50972,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:29:54.498Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84143,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:48:51.725Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 22368,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:04:15.542Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70516,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:05:13.155Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 12933,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:06:21.485Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 21558,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:08:32.378Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 85288,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:32:11.691Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 72577,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:34:21.615Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83024,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:35:35.238Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 28616,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:37:54.300Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 92895,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:40:10.422Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 89492,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:44:38.092Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 79154,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T09:36:19.552Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 79505,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T09:45:17.273Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 75135,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T09:46:42.065Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38918,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:28:06.003Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 88385,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:30:07.616Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 75367,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:16:48.034Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 33061,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:34:56.145Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 79183,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:36:15.499Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 31597,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:38:25.780Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84517,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:23:28.164Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 17354,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:25:41.788Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 85952,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:27:45.008Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 79266,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:29:30.647Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 55931,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:31:35.855Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 76728,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:44:32.585Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 100672,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:46:39.323Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 78605,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:48:16.556Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 50010,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:50:36.983Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 90682,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:52:29.776Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 65715,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:36:37.643Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 64383,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:38:52.680Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 88320,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:52:58.683Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83694,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:54:30.935Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 46260,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:28:03.539Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 85850,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T17:27:15.043Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 23003,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T17:28:31.434Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 27686,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T17:30:45.239Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86066,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T13:48:22.192Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 15045,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T13:59:05.277Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70432,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:00:40.409Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 47456,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:04:28.932Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38799,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:06:42.205Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86413,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:11:57.572Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 50928,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:23:27.092Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84755,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:25:06.949Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 52302,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:34:19.306Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 74549,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:36:19.989Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 74369,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:38:33.348Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86627,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:46:05.335Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 70803,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:48:16.985Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84594,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:50:18.603Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 75255,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:02:50.249Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 80129,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:10:50.128Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 68226,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:12:56.457Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 81302,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:19:00.716Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 90342,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:21:04.368Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 79070,
+        "pages": 1,
+        "region": "KR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:23:32.092Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 100001,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:24:51.487Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 31200,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:26:01.559Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 23624,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:28:55.186Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 49638,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:29:55.252Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 12124,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:32:04.147Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 82063,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:56:21.964Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 96625,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T16:01:14.117Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83884,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T16:02:55.309Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 53196,
+        "pages": 1,
+        "region": "MX",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T17:55:15.124Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 58014,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T17:57:21.651Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 82748,
+        "pages": 1,
+        "region": "HK",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T17:59:33.378Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86344,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -22769,6 +25601,1356 @@
         "pages": 1,
         "region": "GB",
         "success": true
+      },
+      {
+        "ts": "2026-06-05T21:43:37.239Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 25018,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T21:51:34.370Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 189872,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T22:25:55.624Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 114255,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-05T23:58:28.482Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 117153,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T00:06:17.827Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 419941,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:02:32.938Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 105496,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T02:56:33.370Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9905,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:29:04.072Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 104814,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T03:58:30.438Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9756,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:00:15.938Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 59533,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:37:36.021Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 23921,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:38:36.012Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 12624,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:39:46.131Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 24389,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:41:04.215Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 31760,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T04:42:05.176Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9984,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:05:10.158Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 553400,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:07:45.095Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 107075,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:36:30.877Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 101859,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:40:22.887Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184953,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:42:56.467Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 108441,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:44:21.221Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 36841,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:46:28.408Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 78993,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:49:11.248Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 53671,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T05:50:36.685Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 39011,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:02:20.218Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 116710,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:04:55.644Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 108775,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:07:35.091Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 112463,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:18:38.690Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 615963,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:19:38.526Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 14161,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:26:00.360Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 100385,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:39:03.285Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 191661,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:46:06.204Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 375821,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T06:48:51.162Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 118977,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:08:31.407Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 74293,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T07:58:05.068Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9061,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:00:46.961Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 114036,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:02:01.657Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 28727,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:09:21.833Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 395712,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:12:01.375Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 112146,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:21:00.609Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 195782,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:31:00.491Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 553566,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:33:38.227Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 111054,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T08:57:53.900Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 112180,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:00:42.955Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 129528,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:03:13.296Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 105272,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:07:12.448Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 192552,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:18:23.909Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 183491,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:20:59.301Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 108221,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:22:13.368Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 26514,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:26:04.418Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 186558,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:35:14.128Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 114189,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:37:14.000Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 73852,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T10:54:43.342Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 112066,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:03:54.926Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 37692,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:15:58.363Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 14588,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T11:37:24.986Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 8310,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:09:33.530Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 122263,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:12:09.769Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 108799,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:16:08.497Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 193522,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:20:22.334Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 206099,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:23:05.502Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 116687,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:36:17.939Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 367749,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T12:49:32.804Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184749,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:19:54.888Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 192633,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:31:29.847Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 198405,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:37:49.420Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 55720,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:40:36.381Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 120247,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:42:12.459Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 49048,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:55:25.867Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184878,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:56:29.536Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 15622,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T13:59:06.993Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 110844,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:03:19.692Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 202397,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:10:12.188Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 102444,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T14:35:12.097Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 69071,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:01:25.620Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184127,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:04:13.450Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 120218,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:05:22.551Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 21386,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:06:21.271Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9214,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:08:59.183Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 111557,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:10:42.823Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 28008,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:11:42.294Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 12715,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:14:17.532Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 107662,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:18:10.543Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184357,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:20:59.766Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 122139,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:24:21.166Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 11758,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T15:37:40.409Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 110398,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T19:26:36.914Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 50488,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:07:00.083Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184625,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:14:32.697Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 403923,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:17:08.426Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 107412,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:21:00.588Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 184498,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:23:20.851Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 89180,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T20:34:10.384Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 94266,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-06T22:33:08.574Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 189142,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T02:03:42.015Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 192169,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T02:04:38.890Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 9848,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T02:07:20.344Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 116256,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T04:21:17.795Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 199824,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T04:23:58.346Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 114821,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T05:44:56.582Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 41567,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T05:47:36.622Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 111817,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T05:49:47.228Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83780,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T05:52:34.426Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 118944,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T05:55:01.301Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 98976,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T06:03:14.501Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 110863,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T06:07:07.630Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 187686,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T06:10:05.056Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 129665,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T06:14:08.509Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 195305,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T07:24:52.259Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 51019,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T07:28:48.765Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 191478,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T07:30:19.629Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 43186,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T08:54:35.758Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 554346,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T08:58:26.722Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 185185,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T09:32:44.995Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 123155,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T09:35:37.347Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 125369,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T09:38:15.463Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 111320,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T11:03:45.234Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 109335,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T13:50:38.722Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 242414,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T13:53:12.863Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 107437,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:08:09.188Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 108736,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:20:56.930Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 30459,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T14:39:49.614Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 27998,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:05:47.043Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 117862,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:08:19.917Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 106709,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:09:29.821Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 23706,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:11:19.718Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 62829,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:13:19.178Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 73005,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:16:23.368Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 108794,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:21:53.596Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 15345,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:28:17.467Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 102216,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:41:47.466Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 189003,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T15:58:57.810Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 85562,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T16:08:56.661Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 38613,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T17:16:49.700Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 102075,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-07T17:18:34.397Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 59722,
+        "pages": 1,
+        "region": "JP",
+        "success": true
       }
     ],
     "registration_verify": [
@@ -22795,6 +26977,285 @@
         "brand": "mulerun",
         "type": "registration_verify",
         "account": "honglethi1269@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T21:49:38.093Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "VallonPhichi@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T21:56:19.522Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "ShuklaShternie346@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T22:38:15.321Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "mmuralis24067@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T22:41:17.713Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "SpandisGiannousakis@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T23:19:25.364Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "dangthitohop2267@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T23:29:34.964Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "hovanrang2019@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T00:31:39.270Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "nashbertina83@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T02:03:05.460Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "nguyenvanbinh210454@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T02:35:52.771Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "RuesgaRolas@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T03:31:31.198Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "HardeepLasko516@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T04:14:02.987Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "trieuthigaman771@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T07:03:29.124Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "MulgadoAngelus@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T07:53:22.505Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "SinghEr464@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T09:13:17.325Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "AprillSalaz5@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T09:40:00.666Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "WeijieDearman@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:29:13.671Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "everalon469q@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T13:47:18.846Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "TotoVantyghem454@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T13:56:06.949Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "SabDami377@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:10:18.181Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "ellieparry75@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:14:48.718Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "RgJohannes906@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:20:20.287Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "HesseCeferina875@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:43:42.465Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "MariaYt314@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:53:53.195Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "hypatiawatson74140@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:59:35.417Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "SarmadiFatima615@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:07:56.205Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "f0971228431@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:16:41.335Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "NugoDimitris566@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:37:07.348Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "amirajenkins2860@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:43:30.782Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "thihangnguyen612@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:51:37.110Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "chihieudo96@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:53:50.253Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "NausadPiccirillo30@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T16:53:08.676Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "anhphuctran16@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -22879,14 +27340,518 @@
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T21:38:47.011Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "nguyenngocquyendn1996@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-05T21:47:34.898Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "winninghamsimienay673@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T02:13:31.051Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "LucreGio47@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T03:26:31.011Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "PalmerFrancois780@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T03:42:31.141Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "OrtizmarinGenner@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T04:36:23.791Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "RajendraPei115@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T04:52:26.463Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "YulisaMarroquin555@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T05:57:32.836Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "phamvanthuy270584@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T06:56:19.279Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "PalmaAlessandra548@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T07:56:36.777Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "etiennezelaya@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T09:54:55.469Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "NieperSyker@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T10:29:45.836Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "ShuklaShternie346@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T10:59:01.281Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "thai06051996@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T11:13:18.238Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "gstylish649@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T11:23:52.135Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "ShanthiNarro@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T11:28:54.379Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "elizabethcarteri2raikvn@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T11:33:27.925Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "angelynapessanha@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T11:49:33.780Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "CartyJade36@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T11:52:52.352Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "barlettaniolfm654@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T12:57:12.145Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "GerowRodolfo123@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:05:22.423Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "MaryanaBivona994@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:10:57.204Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "emoryhines306@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:14:37.585Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "GunesCeco19@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:25:31.975Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "MorandoCrhis@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:36:05.517Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "sadeepahasi2001@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T13:46:22.887Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "JessenHeike670@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T14:05:50.296Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "RuesgaRolas@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T14:15:53.504Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "congtinh205@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T14:41:47.043Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "heanghoch0@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T14:51:05.776Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "SasTiffa@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T14:55:15.498Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "GurRramos@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T15:42:58.479Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "BlimkaPabelick@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T15:48:01.286Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "nashbertina83@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T15:51:20.655Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "garietyshaveret406@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T17:19:10.429Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "StellLolli77@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T19:56:39.067Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "anhphuctran16@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T20:31:03.401Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "MulgadoAngelus@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-06T20:41:43.676Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "ScrivenShirin@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T03:33:51.629Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "destimehovingtm38@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T05:31:15.875Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "nguyenlan25a@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T06:53:06.425Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "KrizianRigs@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T08:41:22.991Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "lelam12011984@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T09:05:00.513Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "quyn8quyn@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T12:49:34.754Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "garingerbeachampyurrz7841@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:01:55.850Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "LopesNoah521@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:05:32.164Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "layogayleneac115@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:12:58.492Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "evekoo24@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T14:18:20.522Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "NoraJulia840@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:20:50.106Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "f0971228431@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:25:01.772Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "KopkasCube@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:36:41.910Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "sxmobay815@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:45:53.498Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "ellieparry75@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:51:30.471Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "hypatiawatson74140@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T15:55:29.554Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "ReginaldWong939@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T16:03:32.175Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "KrossBeaton@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-07T18:15:25.768Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "hhaanh980@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
       }
     ]
   },
   "aiConversations": [],
   "conversationPlans": {
-    "planned": 375,
+    "planned": 398,
     "consumed": 19,
-    "fallback": 187,
+    "fallback": 210,
     "sessions": [
       {
         "email": "wrrnikhngphul@gmail.com",
@@ -33104,6 +38069,51 @@
         "generatedAt": "2026-06-02T16:11:42.521Z"
       },
       {
+        "email": "StarrPalau@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between music (sertanejo/funk) and beach lifestyle. How would you structure that?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify music (sertanejo/funk) into a step-by-step approach?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn music (sertanejo/funk) into something I could explain to a friend?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "I want to browse features that could help with music (sertanejo/funk) and beach lifestyle",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try feature discovery?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare music (sertanejo/funk) with the most common alternative people choose?",
+            "expectedTopic": "music (sertanejo/funk)"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach music (sertanejo/funk)?",
+            "expectedTopic": "music (sertanejo/funk)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:41.176Z"
+      },
+      {
         "email": "SanchezrojasMartinn@gmail.com",
         "brand": "mulerun",
         "rounds": 4,
@@ -34919,6 +39929,41 @@
         "generatedAt": "2026-06-03T16:40:35.990Z"
       },
       {
+        "email": "HardeepLasko516@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me think through a realistic plan for AI & tech this month?",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach AI & tech?",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify AI & tech into a step-by-step approach?",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try AI & tech?",
+            "expectedTopic": "AI & tech"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare AI & tech with the most common alternative people choose?",
+            "expectedTopic": "AI & tech"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:46.458Z"
+      },
+      {
         "email": "MaryahFludd@gmail.com",
         "brand": "myclaw",
         "rounds": 1,
@@ -34984,6 +40029,46 @@
         "generatedAt": "2026-06-04T07:24:08.869Z"
       },
       {
+        "email": "AlyceSchuelke@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "What's the smartest way to use this product for sustainability without overcomplicating it?",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make sustainability more concrete with a few realistic examples?",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try sustainability?",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Show me which feature or template would be most useful for sustainability",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach feature discovery?",
+            "expectedTopic": "sustainability"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare sustainability with the most common alternative people choose?",
+            "expectedTopic": "sustainability"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:50.317Z"
+      },
+      {
         "email": "SinghCharlie100@gmail.com",
         "brand": "mulerun",
         "rounds": 7,
@@ -35027,6 +40112,41 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-04T07:24:10.702Z"
+      },
+      {
+        "email": "SinghCharlie100@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "What's the smartest way to use this product for entrepreneurship without overcomplicating it?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify entrepreneurship into a step-by-step approach?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try entrepreneurship?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Let me review past results so I can improve my entrepreneurship process",
+            "expectedTopic": "previous results"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare previous results with the most common alternative people choose?",
+            "expectedTopic": "entrepreneurship"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:53.249Z"
       },
       {
         "email": "garietyshaveret406@gmail.com",
@@ -35082,6 +40202,31 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-03T16:40:43.596Z"
+      },
+      {
+        "email": "TotoVantyghem454@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "What's the smartest way to use this product for futebol without overcomplicating it?",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach futebol?",
+            "expectedTopic": "futebol"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn futebol into something I could explain to a friend?",
+            "expectedTopic": "futebol"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:55.169Z"
       },
       {
         "email": "ThoSaintil@gmail.com",
@@ -35229,6 +40374,61 @@
         "generatedAt": "2026-06-04T07:24:16.376Z"
       },
       {
+        "email": "NugoDimitris566@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between cooking (churrasco) and crypto. How would you structure that?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify cooking (churrasco) into a step-by-step approach?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project plan for improving my cooking (churrasco) workflow",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try structured plan?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me previous work or history related to cooking (churrasco)",
+            "expectedTopic": "previous results"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach previous results?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn cooking (churrasco) into something I could explain to a friend?",
+            "expectedTopic": "cooking (churrasco)"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Let me review past results so I can improve my cooking (churrasco) process",
+            "expectedTopic": "previous results"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make previous results more concrete with a few realistic examples?",
+            "expectedTopic": "cooking (churrasco)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:05.173Z"
+      },
+      {
         "email": "KsyAtedgi@gmail.com",
         "brand": "mulerun",
         "rounds": 7,
@@ -35297,6 +40497,46 @@
         "fallback": true,
         "consumed": true,
         "generatedAt": "2026-06-04T07:24:18.193Z"
+      },
+      {
+        "email": "KsyAtedgi@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore fashion (streetwear) in a more practical way. What should I focus on first?",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try fashion (streetwear)?",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Show me which feature or template would be most useful for fashion (streetwear)",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach feature discovery?",
+            "expectedTopic": "fashion (streetwear)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Point me to the part of the product that fits fashion (streetwear) best",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn feature discovery into something I could explain to a friend?",
+            "expectedTopic": "fashion (streetwear)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:06.815Z"
       },
       {
         "email": "gstylish649@gmail.com",
@@ -35489,6 +40729,41 @@
         "generatedAt": "2026-06-04T07:24:21.985Z"
       },
       {
+        "email": "JarissaCherie@gmail.com",
+        "brand": "myclaw",
+        "rounds": 5,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between creative writing and meditation. How would you structure that?",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try creative writing?",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify creative writing into a step-by-step approach?",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn creative writing into something I could explain to a friend?",
+            "expectedTopic": "creative writing"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach creative writing?",
+            "expectedTopic": "creative writing"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:08.724Z"
+      },
+      {
         "email": "MunirJuicey@gmail.com",
         "brand": "mulerun",
         "rounds": 3,
@@ -35512,6 +40787,66 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-04T07:24:25.986Z"
+      },
+      {
+        "email": "MunirJuicey@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm trying to get better at football (Bundesliga). Where would you start if you were me?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare football (Bundesliga) with the most common alternative people choose?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try football (Bundesliga)?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Turn football (Bundesliga) into a task list I could start this week",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify structured plan into a step-by-step approach?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Help me organize football (Bundesliga) into milestones with priorities",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn structured plan into something I could explain to a friend?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make football (Bundesliga) more concrete with a few realistic examples?",
+            "expectedTopic": "football (Bundesliga)"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project plan for improving my football (Bundesliga) workflow",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach structured plan?",
+            "expectedTopic": "football (Bundesliga)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:14.498Z"
       },
       {
         "email": "atienoloisa20@gmail.com",
@@ -35667,6 +41002,56 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-04T07:24:30.054Z"
+      },
+      {
+        "email": "NadiaLaing541@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between music (J-pop/Vocaloid) and trains. How would you structure that?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual roadmap for music (J-pop/Vocaloid)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare visual output with the most common alternative people choose?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try music (J-pop/Vocaloid)?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a chart or visual summary comparing options in music (J-pop/Vocaloid)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn visual output into something I could explain to a friend?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make music (J-pop/Vocaloid) more concrete with a few realistic examples?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify music (J-pop/Vocaloid) into a step-by-step approach?",
+            "expectedTopic": "music (J-pop/Vocaloid)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:17.377Z"
       },
       {
         "email": "naabimalik2255@gmail.com",
@@ -36232,6 +41617,51 @@
         "fallback": true,
         "consumed": true,
         "generatedAt": "2026-06-04T07:24:44.328Z"
+      },
+      {
+        "email": "FaulandDelila@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore photography in a more practical way. What should I focus on first?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach photography?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify photography into a step-by-step approach?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make photography more concrete with a few realistic examples?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a chart or visual summary comparing options in photography",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try visual output?",
+            "expectedTopic": "photography"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn photography into something I could explain to a friend?",
+            "expectedTopic": "photography"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:21.255Z"
       },
       {
         "email": "PalmerFrancois780@gmail.com",
@@ -37724,6 +43154,61 @@
         "generatedAt": "2026-06-04T07:24:05.124Z"
       },
       {
+        "email": "AprillSalaz5@gmail.com",
+        "brand": "myclaw",
+        "rounds": 9,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore automotive (BMW/Porsche) in a more practical way. What should I focus on first?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach automotive (BMW/Porsche)?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual roadmap for automotive (BMW/Porsche)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make visual output more concrete with a few realistic examples?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Make a simple diagram showing the workflow for automotive (BMW/Porsche)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try visual output?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn automotive (BMW/Porsche) into something I could explain to a friend?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify automotive (BMW/Porsche) into a step-by-step approach?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare automotive (BMW/Porsche) with the most common alternative people choose?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:44.657Z"
+      },
+      {
         "email": "DikraCoulomb@gmail.com",
         "brand": "myclaw",
         "rounds": 8,
@@ -38057,6 +43542,456 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-05T17:56:52.405Z"
+      },
+      {
+        "email": "YulisaMarroquin555@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore tech & programming in a more practical way. What should I focus on first?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify tech & programming into a step-by-step approach?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn tech & programming into something I could explain to a friend?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Show me previous work or history related to tech & programming",
+            "expectedTopic": "previous results"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach previous results?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make tech & programming more concrete with a few realistic examples?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Create a project plan for improving my tech & programming workflow",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try structured plan?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare tech & programming with the most common alternative people choose?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify tech & programming into a step-by-step approach?",
+            "expectedTopic": "tech & programming"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:28.501Z"
+      },
+      {
+        "email": "GrigorasIrina585@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm trying to get better at entrepreneurship. Where would you start if you were me?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn entrepreneurship into something I could explain to a friend?",
+            "expectedTopic": "entrepreneurship"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach entrepreneurship?",
+            "expectedTopic": "entrepreneurship"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:30.997Z"
+      },
+      {
+        "email": "AmiltonWeishaupt@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "What's the smartest way to use this product for automotive (BMW/Porsche) without overcomplicating it",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn automotive (BMW/Porsche) into something I could explain to a friend?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make automotive (BMW/Porsche) more concrete with a few realistic examples?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try automotive (BMW/Porsche)?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a chart or visual summary comparing options in automotive (BMW/Porsche)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify visual output into a step-by-step approach?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Make a simple diagram showing the workflow for automotive (BMW/Porsche)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare visual output with the most common alternative people choose?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach automotive (BMW/Porsche)?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn automotive (BMW/Porsche) into something I could explain to a friend?",
+            "expectedTopic": "automotive (BMW/Porsche)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:33.031Z"
+      },
+      {
+        "email": "LopesNoah521@gmail.com",
+        "brand": "myclaw",
+        "rounds": 1,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore fashion (streetwear) in a more practical way. What should I focus on first?",
+            "expectedTopic": "fashion (streetwear)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:35.021Z"
+      },
+      {
+        "email": "ClaunchNathalia@gmail.com",
+        "brand": "myclaw",
+        "rounds": 7,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between baking and comedy. How would you structure that?",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach baking?",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make baking more concrete with a few realistic examples?",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "create_task",
+            "prompt": "Turn baking into a task list I could start this week",
+            "expectedTopic": "structured plan"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify structured plan into a step-by-step approach?",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare baking with the most common alternative people choose?",
+            "expectedTopic": "baking"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try baking?",
+            "expectedTopic": "baking"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:38.780Z"
+      },
+      {
+        "email": "YamamotoThiago724@gmail.com",
+        "brand": "myclaw",
+        "rounds": 4,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between music (indie/rock) and comedy. How would you structure that?",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a chart or visual summary comparing options in music (indie/rock)",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare visual output with the most common alternative people choose?",
+            "expectedTopic": "music (indie/rock)"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try music (indie/rock)?",
+            "expectedTopic": "music (indie/rock)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:42.931Z"
+      },
+      {
+        "email": "IbuneChan358@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me think through a realistic plan for gaming this month?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try gaming?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify gaming into a step-by-step approach?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make gaming more concrete with a few realistic examples?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach gaming?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Make a simple diagram showing the workflow for gaming",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn visual output into something I could explain to a friend?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual roadmap for gaming",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare visual output with the most common alternative people choose?",
+            "expectedTopic": "gaming"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try gaming?",
+            "expectedTopic": "gaming"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:56.934Z"
+      },
+      {
+        "email": "AlnabulsiMarcelina@gmail.com",
+        "brand": "myclaw",
+        "rounds": 3,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between travel and meditation. How would you structure that?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach travel?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn travel into something I could explain to a friend?",
+            "expectedTopic": "travel"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:45:58.877Z"
+      },
+      {
+        "email": "MaximePauly649@gmail.com",
+        "brand": "myclaw",
+        "rounds": 10,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I'm trying to get better at cricket (IPL). Where would you start if you were me?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach cricket (IPL)?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify cricket (IPL) into a step-by-step approach?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Point me to the part of the product that fits cricket (IPL) best",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn feature discovery into something I could explain to a friend?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "browse_feature",
+            "prompt": "Show me which feature or template would be most useful for cricket (IPL)",
+            "expectedTopic": "feature discovery"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try feature discovery?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare cricket (IPL) with the most common alternative people choose?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make cricket (IPL) more concrete with a few realistic examples?",
+            "expectedTopic": "cricket (IPL)"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach cricket (IPL)?",
+            "expectedTopic": "cricket (IPL)"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:02.629Z"
+      },
+      {
+        "email": "KillingerAles34@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I've been bouncing between engineering and classical music. How would you structure that?",
+            "expectedTopic": "engineering"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you compare engineering with the most common alternative people choose?",
+            "expectedTopic": "engineering"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Generate an illustration that captures the main idea behind engineering",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach visual output?",
+            "expectedTopic": "engineering"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual roadmap for engineering",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify visual output into a step-by-step approach?",
+            "expectedTopic": "engineering"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a chart or visual summary comparing options in engineering",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make visual output more concrete with a few realistic examples?",
+            "expectedTopic": "engineering"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:10.497Z"
+      },
+      {
+        "email": "NenkinYulia289@gmail.com",
+        "brand": "myclaw",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore pets in a more practical way. What should I focus on first?",
+            "expectedTopic": "pets"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify pets into a step-by-step approach?",
+            "expectedTopic": "pets"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-07T13:46:19.401Z"
       }
     ]
   },
@@ -41822,16 +47757,35 @@
         "returnTotal": 335
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-07T18:19:35.650Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 243,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 289,
+        "returnTotal": 511
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-05 21:28:",
+    "[状态总结] 截至 2026-06-07 18:19:",
     "  调度器: unified-scheduler (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 694 次行为 (匿名访问 492 + 首次使用 1 + 回访 201)",
-    "  品牌注册: MuleRun=102 MyClaw=217 dit.ai=115",
-    "  今日进度: 510/356 任务完成 (143%)",
-    "    mulerun: 242/163 (148%) — 225v + 0r + 17rt",
-    "    myclaw: 268/193 (139%) — 219v + 0r + 49rt",
+    "  历史累计完成: 782 次行为 (匿名访问 492 + 首次使用 1 + 回访 289)",
+    "  品牌注册: MuleRun=102 MyClaw=243 dit.ai=115",
+    "  今日进度: 79/356 任务完成 (22%)",
+    "    mulerun: 46/163 (28%) — 31v + 0r + 15rt",
+    "    myclaw: 33/193 (17%) — 18v + 3r + 12rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "",
     "[SCHEDULER] unified-scheduler (混合调度模式)",
