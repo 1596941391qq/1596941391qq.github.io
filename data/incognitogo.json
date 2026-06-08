@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T23:51:17.289Z",
+  "updatedAt": "2026-06-08T00:50:13.730Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -44013,25 +44013,6 @@
   },
   "timeline": [
     {
-      "ts": "2026-05-28T12:54:14.565Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 35,
-        "mc": 47,
-        "dt": 8
-      },
-      "counters": {
-        "visitSuccess": 308,
-        "visitTotal": 308,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 21,
-        "returnTotal": 21
-      },
-      "errors": 0
-    },
-    {
       "ts": "2026-05-28T13:29:00.313Z",
       "round": 4,
       "phase": "registrations",
@@ -47811,16 +47792,35 @@
         "returnTotal": 511
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-08T00:50:13.730Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 243,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 289,
+        "returnTotal": 511
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-07 23:51:",
+    "[状态总结] 截至 2026-06-08 00:50:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 782 次行为 (匿名访问 492 + 首次使用 1 + 回访 289)",
     "  品牌注册: MuleRun=102 MyClaw=243 dit.ai=115",
-    "  今日进度: 80/356 任务完成 (22%)",
-    "    mulerun: 46/163 (28%) — 31v + 0r + 15rt",
-    "    myclaw: 34/193 (18%) — 18v + 3r + 13rt",
+    "  今日进度: 0/356 任务完成 (0%)",
+    "    mulerun: 0/163 (0%) — 0v + 0r + 0rt",
+    "    myclaw: 0/193 (0%) — 0v + 0r + 0rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
