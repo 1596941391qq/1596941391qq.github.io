@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T19:17:41.947Z",
+  "updatedAt": "2026-06-08T19:49:45.259Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -115,9 +115,9 @@
           "returns": 13
         },
         "2026-06-08": {
-          "visits": 6,
+          "visits": 7,
           "regs": 1,
-          "returns": 5
+          "returns": 6
         }
       },
       "dit": {
@@ -166,10 +166,10 @@
   },
   "heartbeatTriggers": 0,
   "registry": {
-    "mulerun": 104,
+    "mulerun": 103,
     "myclaw": 244,
     "ditai": 115,
-    "total": 501,
+    "total": 502,
     "accounts": [
       {
         "email": "everalon469q@gmail.com",
@@ -2343,6 +2343,12 @@
             "type": "return",
             "duration": 34706,
             "ts": "2026-06-04T13:47:13.712Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 198652,
+            "ts": "2026-06-08T19:21:08.767Z"
           }
         ]
       },
@@ -6251,18 +6257,6 @@
           }
         ],
         "visits": []
-      },
-      {
-        "email": "banhmiquadauxing17@gmail.com",
-        "region": "US",
-        "brands": [
-          {
-            "name": "mulerun",
-            "registeredAt": "2026-06-08T19:12:22.547Z",
-            "status": "active"
-          }
-        ],
-        "visits": []
       }
     ]
   },
@@ -6283,8 +6277,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 300,
-    "returnTotal": 533
+    "returnSuccess": 301,
+    "returnTotal": 535
   },
   "activities": {
     "anonymous": [
@@ -17292,6 +17286,16 @@
         "pages": 1,
         "region": "US",
         "success": true
+      },
+      {
+        "ts": "2026-06-08T19:21:08.762Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "dhonushill@gmail.com",
+        "duration": 198652,
+        "pages": 1,
+        "region": "BR",
+        "success": true
       }
     ],
     "new": [
@@ -27404,6 +27408,16 @@
         "pages": 1,
         "region": "BR",
         "success": true
+      },
+      {
+        "ts": "2026-06-08T19:25:18.418Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 116218,
+        "pages": 1,
+        "region": "US",
+        "success": true
       }
     ],
     "registration_verify": [
@@ -28402,6 +28416,15 @@
         "brand": "myclaw",
         "type": "registration_verify",
         "account": "bonnsward@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T19:21:34.102Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "dhonushill@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -44668,25 +44691,6 @@
   },
   "timeline": [
     {
-      "ts": "2026-05-29T03:29:00.626Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 35,
-        "mc": 57,
-        "dt": 8
-      },
-      "counters": {
-        "visitSuccess": 352,
-        "visitTotal": 352,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 23,
-        "returnTotal": 23
-      },
-      "errors": 0
-    },
-    {
       "ts": "2026-05-29T03:54:31.031Z",
       "round": 4,
       "phase": "registrations",
@@ -48466,16 +48470,35 @@
         "returnTotal": 533
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-08T19:49:45.259Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 103,
+        "mc": 244,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 301,
+        "returnTotal": 535
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-08 19:17:",
+    "[状态总结] 截至 2026-06-08 19:49:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 793 次行为 (匿名访问 492 + 首次使用 1 + 回访 300)",
-    "  品牌注册: MuleRun=104 MyClaw=244 dit.ai=115",
-    "  今日进度: 34/356 任务完成 (10%)",
+    "  历史累计完成: 794 次行为 (匿名访问 492 + 首次使用 1 + 回访 301)",
+    "  品牌注册: MuleRun=103 MyClaw=244 dit.ai=115",
+    "  今日进度: 36/356 任务完成 (10%)",
     "    mulerun: 22/163 (13%) — 16v + 0r + 6rt",
-    "    myclaw: 12/193 (6%) — 6v + 1r + 5rt",
+    "    myclaw: 14/193 (7%) — 7v + 1r + 6rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
