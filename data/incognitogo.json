@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T17:50:24.197Z",
+  "updatedAt": "2026-06-08T18:18:10.445Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -117,7 +117,7 @@
         "2026-06-08": {
           "visits": 4,
           "regs": 1,
-          "returns": 2
+          "returns": 3
         }
       },
       "dit": {
@@ -3375,6 +3375,12 @@
             "type": "return",
             "duration": 34195,
             "ts": "2026-06-05T14:22:38.827Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 73161,
+            "ts": "2026-06-08T18:05:27.190Z"
           }
         ]
       },
@@ -6228,8 +6234,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 295,
-    "returnTotal": 523
+    "returnSuccess": 296,
+    "returnTotal": 525
   },
   "activities": {
     "anonymous": [
@@ -17186,6 +17192,16 @@
         "duration": 112086,
         "pages": 1,
         "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T18:05:27.185Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "choatesberkovitzwh329@gmail.com",
+        "duration": 73161,
+        "pages": 1,
+        "region": "JP",
         "success": true
       }
     ],
@@ -28192,6 +28208,15 @@
         "brand": "myclaw",
         "type": "registration_verify",
         "account": "AmiltonWeishaupt@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T18:05:51.450Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "choatesberkovitzwh329@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -44458,25 +44483,6 @@
   },
   "timeline": [
     {
-      "ts": "2026-05-29T02:29:00.933Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 35,
-        "mc": 57,
-        "dt": 8
-      },
-      "counters": {
-        "visitSuccess": 352,
-        "visitTotal": 352,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 23,
-        "returnTotal": 23
-      },
-      "errors": 0
-    },
-    {
       "ts": "2026-05-29T02:54:13.235Z",
       "round": 4,
       "phase": "registrations",
@@ -48256,16 +48262,35 @@
         "returnTotal": 523
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-08T18:18:10.445Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 244,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 296,
+        "returnTotal": 525
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-08 17:50:",
+    "[状态总结] 截至 2026-06-08 18:18:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 788 次行为 (匿名访问 492 + 首次使用 1 + 回访 295)",
+    "  历史累计完成: 789 次行为 (匿名访问 492 + 首次使用 1 + 回访 296)",
     "  品牌注册: MuleRun=102 MyClaw=244 dit.ai=115",
-    "  今日进度: 23/356 任务完成 (6%)",
+    "  今日进度: 24/356 任务完成 (7%)",
     "    mulerun: 16/163 (10%) — 12v + 0r + 4rt",
-    "    myclaw: 7/193 (4%) — 4v + 1r + 2rt",
+    "    myclaw: 8/193 (4%) — 4v + 1r + 3rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
