@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T15:20:08.986Z",
+  "updatedAt": "2026-06-08T17:50:24.197Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -56,6 +56,11 @@
           "visits": 31,
           "regs": 0,
           "returns": 15
+        },
+        "2026-06-08": {
+          "visits": 12,
+          "regs": 0,
+          "returns": 4
         }
       },
       "myclaw": {
@@ -108,6 +113,11 @@
           "visits": 18,
           "regs": 3,
           "returns": 13
+        },
+        "2026-06-08": {
+          "visits": 4,
+          "regs": 1,
+          "returns": 2
         }
       },
       "dit": {
@@ -157,7 +167,7 @@
   "heartbeatTriggers": 0,
   "registry": {
     "mulerun": 102,
-    "myclaw": 243,
+    "myclaw": 244,
     "ditai": 115,
     "total": 499,
     "accounts": [
@@ -2901,7 +2911,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 74839,
+            "ts": "2026-06-08T16:01:07.933Z"
+          }
+        ]
       },
       {
         "email": "TogawaGoro367@gmail.com",
@@ -3436,7 +3453,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 112086,
+            "ts": "2026-06-08T17:30:41.524Z"
+          }
+        ]
       },
       {
         "email": "LopesNoah521@gmail.com",
@@ -4248,6 +4272,18 @@
         ]
       },
       {
+        "email": "XiqueYobani679@gmail.com",
+        "region": "US",
+        "brands": [
+          {
+            "name": "myclaw",
+            "registeredAt": "2026-06-08T16:07:00.076Z",
+            "status": "active"
+          }
+        ],
+        "visits": []
+      },
+      {
         "email": "MaryahFludd@gmail.com",
         "region": "US",
         "brands": [
@@ -4299,6 +4335,12 @@
             "type": "return",
             "duration": 122956,
             "ts": "2026-06-07T16:03:04.447Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 90207,
+            "ts": "2026-06-08T16:38:01.167Z"
           }
         ]
       },
@@ -4323,6 +4365,12 @@
             "type": "return",
             "duration": 34684,
             "ts": "2026-06-05T05:18:48.276Z"
+          },
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 78959,
+            "ts": "2026-06-08T15:32:34.122Z"
           }
         ]
       },
@@ -4520,7 +4568,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "mulerun",
+            "type": "return",
+            "duration": 30032,
+            "ts": "2026-06-08T17:22:25.558Z"
+          }
+        ]
       },
       {
         "email": "atienoloisa20@gmail.com",
@@ -5324,6 +5379,12 @@
             "type": "return",
             "duration": 33684,
             "ts": "2026-06-05T10:01:49.538Z"
+          },
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 35897,
+            "ts": "2026-06-08T16:56:08.052Z"
           }
         ]
       },
@@ -6167,8 +6228,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 289,
-    "returnTotal": 511
+    "returnSuccess": 295,
+    "returnTotal": 523
   },
   "activities": {
     "anonymous": [
@@ -14843,6 +14904,46 @@
         "success": true
       },
       {
+        "ts": "2026-06-08T15:32:34.118Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "MohamedKarl926@gmail.com",
+        "duration": 78959,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T16:01:07.929Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "SawagedJosafat732@gmail.com",
+        "duration": 74839,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T16:38:01.164Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "KrossBeaton@gmail.com",
+        "duration": 90207,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:22:25.554Z",
+        "brand": "mulerun",
+        "type": "return",
+        "account": "jira45666@gmail.com",
+        "duration": 30032,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
         "ts": "2026-05-28T02:21:38.682Z",
         "brand": "myclaw",
         "visitNum": 1,
@@ -17065,6 +17166,26 @@
         "duration": 56510,
         "pages": 1,
         "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T16:56:08.047Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "GansburgPartenope@gmail.com",
+        "duration": 35897,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:30:41.520Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "AmiltonWeishaupt@gmail.com",
+        "duration": 112086,
+        "pages": 1,
+        "region": "DE",
         "success": true
       }
     ],
@@ -22320,6 +22441,126 @@
         "success": true
       },
       {
+        "ts": "2026-06-08T15:35:13.521Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84656,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T15:48:43.836Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 39964,
+        "pages": 1,
+        "region": "CA",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T15:50:53.598Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 84148,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T15:51:50.729Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 8402,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T15:54:01.694Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 82280,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T15:58:22.641Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83656,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T16:13:40.000Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 44163,
+        "pages": 1,
+        "region": "FR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:05:17.797Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 86171,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:06:51.726Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 47045,
+        "pages": 1,
+        "region": "GB",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:08:52.879Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 73163,
+        "pages": 1,
+        "region": "AU",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:39:16.026Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 79474,
+        "pages": 1,
+        "region": "IN",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:40:56.854Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 55054,
+        "pages": 1,
+        "region": "US",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -26958,6 +27199,46 @@
         "pages": 1,
         "region": "JP",
         "success": true
+      },
+      {
+        "ts": "2026-06-08T15:34:03.707Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 194111,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T16:39:48.894Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 15825,
+        "pages": 1,
+        "region": "JP",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:11:31.237Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 89141,
+        "pages": 1,
+        "region": "BR",
+        "success": true
+      },
+      {
+        "ts": "2026-06-08T17:36:06.765Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 109601,
+        "pages": 1,
+        "region": "GB",
+        "success": true
       }
     ],
     "registration_verify": [
@@ -27263,6 +27544,42 @@
         "brand": "mulerun",
         "type": "registration_verify",
         "account": "anhphuctran16@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T15:32:59.402Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "MohamedKarl926@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T16:01:32.021Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "SawagedJosafat732@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T16:38:25.409Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "KrossBeaton@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T17:22:52.330Z",
+        "brand": "mulerun",
+        "type": "registration_verify",
+        "account": "jira45666@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -27860,14 +28177,32 @@
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T16:56:34.701Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "GansburgPartenope@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-08T17:31:05.263Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "AmiltonWeishaupt@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
       }
     ]
   },
   "aiConversations": [],
   "conversationPlans": {
-    "planned": 398,
+    "planned": 401,
     "consumed": 19,
-    "fallback": 210,
+    "fallback": 213,
     "sessions": [
       {
         "email": "wrrnikhngphul@gmail.com",
@@ -41145,6 +41480,26 @@
         "generatedAt": "2026-06-04T07:24:32.004Z"
       },
       {
+        "email": "DiegoPagliari820@gmail.com",
+        "brand": "myclaw",
+        "rounds": 2,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore tech & programming in a more practical way. What should I focus on first?",
+            "expectedTopic": "tech & programming"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify tech & programming into a step-by-step approach?",
+            "expectedTopic": "tech & programming"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-08T15:30:28.367Z"
+      },
+      {
         "email": "tamlovefew290160@gmail.com",
         "brand": "myclaw",
         "rounds": 9,
@@ -41260,6 +41615,46 @@
         "generatedAt": "2026-06-04T07:24:33.942Z"
       },
       {
+        "email": "SarmadiFatima615@gmail.com",
+        "brand": "myclaw",
+        "rounds": 6,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "Can you help me think through a realistic plan for history this month?",
+            "expectedTopic": "history"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify history into a step-by-step approach?",
+            "expectedTopic": "history"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Generate an illustration that captures the main idea behind history",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try visual output?",
+            "expectedTopic": "history"
+          },
+          {
+            "type": "review_history",
+            "prompt": "Let me review past results so I can improve my history process",
+            "expectedTopic": "previous results"
+          },
+          {
+            "type": "chat",
+            "prompt": "If I only had a small budget or limited time, how should I approach previous results?",
+            "expectedTopic": "history"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-08T15:30:31.506Z"
+      },
+      {
         "email": "diegogil43@gmail.com",
         "brand": "myclaw",
         "rounds": 5,
@@ -41308,6 +41703,56 @@
         "fallback": true,
         "consumed": false,
         "generatedAt": "2026-06-03T16:41:03.500Z"
+      },
+      {
+        "email": "RgJohannes906@gmail.com",
+        "brand": "myclaw",
+        "rounds": 8,
+        "actions": [
+          {
+            "type": "chat",
+            "prompt": "I want to explore travel in a more practical way. What should I focus on first?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Create a visual roadmap for travel",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "What would be the biggest mistakes to avoid if I actually try visual output?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Make a simple diagram showing the workflow for travel",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "How would you simplify visual output into a step-by-step approach?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you turn travel into something I could explain to a friend?",
+            "expectedTopic": "travel"
+          },
+          {
+            "type": "generate_image",
+            "prompt": "Generate an illustration that captures the main idea behind travel",
+            "expectedTopic": "visual output"
+          },
+          {
+            "type": "chat",
+            "prompt": "Can you make visual output more concrete with a few realistic examples?",
+            "expectedTopic": "travel"
+          }
+        ],
+        "fallback": true,
+        "consumed": false,
+        "generatedAt": "2026-06-08T15:30:33.442Z"
       },
       {
         "email": "lorainedania14530@gmail.com",
@@ -44012,25 +44457,6 @@
     ]
   },
   "timeline": [
-    {
-      "ts": "2026-05-29T01:54:01.982Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 35,
-        "mc": 57,
-        "dt": 8
-      },
-      "counters": {
-        "visitSuccess": 352,
-        "visitTotal": 352,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 23,
-        "returnTotal": 23
-      },
-      "errors": 0
-    },
     {
       "ts": "2026-05-29T02:29:00.933Z",
       "round": 4,
@@ -47811,16 +48237,35 @@
         "returnTotal": 511
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-08T17:50:24.197Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 244,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 295,
+        "returnTotal": 523
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-08 15:20:",
+    "[状态总结] 截至 2026-06-08 17:50:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 782 次行为 (匿名访问 492 + 首次使用 1 + 回访 289)",
-    "  品牌注册: MuleRun=102 MyClaw=243 dit.ai=115",
-    "  今日进度: 0/356 任务完成 (0%)",
-    "    mulerun: 0/163 (0%) — 0v + 0r + 0rt",
-    "    myclaw: 0/193 (0%) — 0v + 0r + 0rt",
+    "  历史累计完成: 788 次行为 (匿名访问 492 + 首次使用 1 + 回访 295)",
+    "  品牌注册: MuleRun=102 MyClaw=244 dit.ai=115",
+    "  今日进度: 23/356 任务完成 (6%)",
+    "    mulerun: 16/163 (10%) — 12v + 0r + 4rt",
+    "    myclaw: 7/193 (4%) — 4v + 1r + 2rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
