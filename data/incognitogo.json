@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T18:53:31.222Z",
+  "updatedAt": "2026-06-09T19:30:09.494Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -10,12 +10,12 @@
   "activeScheduler": "none",
   "schedulerWarning": null,
   "serverHealth": {
-    "memPct": 34.9,
-    "load1": 0.1,
+    "memPct": 19.9,
+    "load1": 0.38,
     "cores": 4,
-    "loadPerCore": 0.025,
+    "loadPerCore": 0.095,
     "diskPct": 58,
-    "chromeProcs": 66
+    "chromeProcs": 17
   },
   "healthWarning": null,
   "unifiedState": {
@@ -75,6 +75,11 @@
           "visits": 0,
           "regs": 0,
           "returns": 1
+        },
+        "2026-06-10": {
+          "visits": 1,
+          "regs": 0,
+          "returns": 0
         }
       },
       "myclaw": {
@@ -132,6 +137,11 @@
           "visits": 7,
           "regs": 1,
           "returns": 6
+        },
+        "2026-06-10": {
+          "visits": 0,
+          "regs": 0,
+          "returns": 1
         }
       },
       "dit": {
@@ -2582,7 +2592,14 @@
             "status": "active"
           }
         ],
-        "visits": []
+        "visits": [
+          {
+            "brand": "myclaw",
+            "type": "return",
+            "duration": 82037,
+            "ts": "2026-06-09T18:59:46.478Z"
+          }
+        ]
       },
       {
         "email": "quynh12061984@gmail.com",
@@ -6297,8 +6314,8 @@
     "visitTotal": 492,
     "firstUseSuccess": 1,
     "firstUseTotal": 1,
-    "returnSuccess": 304,
-    "returnTotal": 541
+    "returnSuccess": 305,
+    "returnTotal": 543
   },
   "activities": {
     "anonymous": [
@@ -17346,6 +17363,16 @@
         "pages": 1,
         "region": "BR",
         "success": true
+      },
+      {
+        "ts": "2026-06-09T18:59:46.473Z",
+        "brand": "myclaw",
+        "type": "return",
+        "account": "eooeoo1234567890@gmail.com",
+        "duration": 82037,
+        "pages": 1,
+        "region": "GB",
+        "success": true
       }
     ],
     "new": [
@@ -22790,6 +22817,16 @@
         "success": true
       },
       {
+        "ts": "2026-06-09T19:00:02.800Z",
+        "brand": "mulerun",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 132333,
+        "pages": 1,
+        "region": "DE",
+        "success": true
+      },
+      {
         "ts": "2026-06-04T07:31:49.324Z",
         "brand": "myclaw",
         "type": "new",
@@ -27508,6 +27545,16 @@
         "pages": 1,
         "region": "US",
         "success": true
+      },
+      {
+        "ts": "2026-06-09T19:04:06.614Z",
+        "brand": "myclaw",
+        "type": "new",
+        "account": "anonymous",
+        "duration": 83167,
+        "pages": 1,
+        "region": "BR",
+        "success": true
       }
     ],
     "registration_verify": [
@@ -28524,6 +28571,15 @@
         "brand": "myclaw",
         "type": "registration_verify",
         "account": "dhonushill@gmail.com",
+        "verified": false,
+        "method": "no_signals",
+        "details": "No login/logout indicators found on page"
+      },
+      {
+        "ts": "2026-06-09T19:00:11.204Z",
+        "brand": "myclaw",
+        "type": "registration_verify",
+        "account": "eooeoo1234567890@gmail.com",
         "verified": false,
         "method": "no_signals",
         "details": "No login/logout indicators found on page"
@@ -44815,25 +44871,6 @@
   },
   "timeline": [
     {
-      "ts": "2026-05-31T08:54:08.206Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 99,
-        "mc": 174,
-        "dt": 90
-      },
-      "counters": {
-        "visitSuccess": 495,
-        "visitTotal": 495,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 39,
-        "returnTotal": 39
-      },
-      "errors": 0
-    },
-    {
       "ts": "2026-05-31T09:29:24.596Z",
       "round": 4,
       "phase": "registrations",
@@ -48613,12 +48650,31 @@
         "returnTotal": 541
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-09T19:30:09.494Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 244,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 305,
+        "returnTotal": 543
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-09 18:53:",
+    "[状态总结] 截至 2026-06-09 19:30:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
-    "  历史累计完成: 797 次行为 (匿名访问 492 + 首次使用 1 + 回访 304)",
+    "  历史累计完成: 798 次行为 (匿名访问 492 + 首次使用 1 + 回访 305)",
     "  品牌注册: MuleRun=102 MyClaw=244 dit.ai=115",
     "  今日进度: 1/356 任务完成 (0%)",
     "    mulerun: 1/163 (1%) — 0v + 0r + 1rt",
