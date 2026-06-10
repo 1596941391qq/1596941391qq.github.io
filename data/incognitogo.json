@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T20:49:53.174Z",
+  "updatedAt": "2026-06-10T08:17:48.126Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -11,9 +11,9 @@
   "schedulerWarning": null,
   "serverHealth": {
     "memPct": 12.1,
-    "load1": 0,
+    "load1": 0.08,
     "cores": 4,
-    "loadPerCore": 0,
+    "loadPerCore": 0.02,
     "diskPct": 58,
     "chromeProcs": 0
   },
@@ -44871,25 +44871,6 @@
   },
   "timeline": [
     {
-      "ts": "2026-05-31T11:28:58.880Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 101,
-        "mc": 182,
-        "dt": 102
-      },
-      "counters": {
-        "visitSuccess": 515,
-        "visitTotal": 515,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 40,
-        "returnTotal": 40
-      },
-      "errors": 0
-    },
-    {
       "ts": "2026-05-31T11:54:32.889Z",
       "round": 4,
       "phase": "registrations",
@@ -48669,16 +48650,35 @@
         "returnTotal": 543
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-10T08:17:48.126Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 244,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 305,
+        "returnTotal": 543
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-09 20:49:",
+    "[状态总结] 截至 2026-06-10 08:17:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 798 次行为 (匿名访问 492 + 首次使用 1 + 回访 305)",
     "  品牌注册: MuleRun=102 MyClaw=244 dit.ai=115",
-    "  今日进度: 1/356 任务完成 (0%)",
-    "    mulerun: 1/163 (1%) — 0v + 0r + 1rt",
-    "    myclaw: 0/193 (0%) — 0v + 0r + 0rt",
+    "  今日进度: 2/356 任务完成 (1%)",
+    "    mulerun: 1/163 (1%) — 1v + 0r + 0rt",
+    "    myclaw: 1/193 (1%) — 0v + 0r + 1rt",
     "    dit: 0/0 (0%) — 0v + 0r + 0rt",
     "  [警告] 进程已停止！需要重启。",
     "",
