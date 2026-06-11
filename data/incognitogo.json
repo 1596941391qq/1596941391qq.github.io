@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-11T09:49:58.439Z",
+  "updatedAt": "2026-06-11T10:17:53.995Z",
   "status": {
     "round": 4,
     "phase": "registrations",
@@ -11,9 +11,9 @@
   "schedulerWarning": null,
   "serverHealth": {
     "memPct": 12.2,
-    "load1": 0,
+    "load1": 0.01,
     "cores": 4,
-    "loadPerCore": 0,
+    "loadPerCore": 0.0025,
     "diskPct": 58,
     "chromeProcs": 0
   },
@@ -44871,25 +44871,6 @@
   },
   "timeline": [
     {
-      "ts": "2026-05-31T16:54:08.295Z",
-      "round": 4,
-      "phase": "registrations",
-      "registry": {
-        "mr": 101,
-        "mc": 188,
-        "dt": 115
-      },
-      "counters": {
-        "visitSuccess": 535,
-        "visitTotal": 535,
-        "firstUseSuccess": 22,
-        "firstUseTotal": 22,
-        "returnSuccess": 40,
-        "returnTotal": 40
-      },
-      "errors": 0
-    },
-    {
       "ts": "2026-05-31T17:29:26.089Z",
       "round": 4,
       "phase": "registrations",
@@ -48669,10 +48650,29 @@
         "returnTotal": 543
       },
       "errors": 0
+    },
+    {
+      "ts": "2026-06-11T10:17:53.995Z",
+      "round": 4,
+      "phase": "registrations",
+      "registry": {
+        "mr": 102,
+        "mc": 244,
+        "dt": 115
+      },
+      "counters": {
+        "visitSuccess": 492,
+        "visitTotal": 492,
+        "firstUseSuccess": 1,
+        "firstUseTotal": 1,
+        "returnSuccess": 305,
+        "returnTotal": 543
+      },
+      "errors": 0
     }
   ],
   "recentLogs": [
-    "[状态总结] 截至 2026-06-11 09:49:",
+    "[状态总结] 截至 2026-06-11 10:17:",
     "  调度器: none (混合模式，visit/register/return 随机交错)",
     "  历史累计完成: 798 次行为 (匿名访问 492 + 首次使用 1 + 回访 305)",
     "  品牌注册: MuleRun=102 MyClaw=244 dit.ai=115",
